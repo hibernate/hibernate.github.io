@@ -3035,7 +3035,7 @@ function renderTabzilla( projectName , projectId ) {
 
     /* THIS PART OF CODE IS TEMPORARILY DISABLED TILL THE SERVICE WILL BE IN PRODUCTION.  
     // Getting information in what products the project is supported in.
-    var data = $.ajax({url:"http://rysiek.apiary.io/v1/rest/products/supported/",
+    var data = $.ajax({url:"http://rysiek.apiary.io/v1/rest/products/supported/#{site.project_name}",
       dataType:'json'
     });
     */
