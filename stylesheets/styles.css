@@ -329,3 +329,29 @@ pre .comment .conum {
 .feedback-button {
   margin-top: 1em;
   margin-bottom: 1em; }
+
+/* line 360, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+.quoteblock {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #656565; }
+/* line 362, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+.quoteblock .paragraph p {
+  margin-bottom: 20px; }
+/* line 369, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+.quoteblock blockquote {
+  position: relative;
+  margin-left: 20px;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px; }
+/* line 375, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+.quoteblock blockquote:before {
+  color: #ccc;
+  font-size: 6em;
+  margin-top: 30px;
+  display: block;
+  content: "\201C"; }
+/* line 382, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+.quoteblock .attribution {
+  text-align: right;
+  color: #656565; }
