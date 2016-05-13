@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.58 seconds (files took 3.26 seconds to load)
+Finished in 3.2 seconds (files took 19.99 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -188,6 +188,8 @@ Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/4.2.0.Final/hibernate-ogm-parent-4.2.0.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.0.0.CR1/hibernate-ogm-core-5.0.0.CR1.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.0.0.CR1/hibernate-ogm-parent-5.0.0.CR1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.0.0.Final/hibernate-ogm-core-5.0.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.0.0.Final/hibernate-ogm-parent-5.0.0.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/4.1.3.Final/hibernate-ogm-core-4.1.3.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/4.1.3.Final/hibernate-ogm-parent-4.1.3.Final.pom
 Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/404.html
