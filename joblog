@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.01 seconds (files took 7.93 seconds to load)
+Finished in 1.4 seconds (files took 1.88 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -162,12 +162,12 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/validator/hibernate-validator-metadata.properties[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-configuration/hibernate-configuration-4.0.xsd[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd[0m
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.6.0.Alpha3/hibernate-search-5.6.0.Alpha3.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.6.0.Alpha3/hibernate-search-parent-5.6.0.Alpha3.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.4.0.Final/hibernate-search-5.4.0.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.4.0.Final/hibernate-search-parent-5.4.0.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.5.3.Final/hibernate-search-5.5.3.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.5.3.Final/hibernate-search-parent-5.5.3.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.6.0.Beta1/hibernate-search-5.6.0.Beta1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.6.0.Beta1/hibernate-search-parent-5.6.0.Beta1.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator-parent/5.2.4.Final/hibernate-validator-parent-5.2.4.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/4.3.2.Final/hibernate-validator-4.3.2.Final.pom
