@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.4 seconds (files took 1.88 seconds to load)
+Finished in 0.88946 seconds (files took 1.83 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -178,6 +178,7 @@ Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.9.Final/hibernate-core-5.0.9.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.0.Final/hibernate-core-5.2.0.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.0.0.Beta1/hibernate-ogm-core-5.0.0.Beta1.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.0.0.Beta1/hibernate-ogm-parent-5.0.0.Beta1.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/4.0.0.Beta4/hibernate-ogm-core-4.0.0.Beta4.pom
