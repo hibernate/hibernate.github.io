@@ -35,7 +35,7 @@ Using redcarpet 3.2.2
 Using ref 1.0.5
 Using rspec-support 3.2.2
 Using yajl-ruby 1.2.1
-Using bundler 1.11.2
+Using bundler 1.12.5
 Using bootstrap-sass 3.1.1.1
 Using zurb-foundation 4.3.2
 Using compass 0.12.7
@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 6.33 seconds (files took 4.66 seconds to load)
+Finished in 7.17 seconds (files took 3 minutes 34.3 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -178,7 +178,9 @@ Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.9.Final/hibernate-core-5.0.9.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.0.Final/hibernate-core-5.1.0.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.0.Final/hibernate-core-5.2.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.1.Final/hibernate-core-5.2.1.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.0.1.Final/hibernate-ogm-core-5.0.1.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.0.1.Final/hibernate-ogm-parent-5.0.1.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/4.0.0.Beta4/hibernate-ogm-core-4.0.0.Beta4.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/4.0.0.Beta4/hibernate-ogm-parent-4.0.0.Beta4.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/4.2.0.Final/hibernate-ogm-core-4.2.0.Final.pom
