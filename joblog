@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.12 seconds (files took 3 seconds to load)
+Finished in 1.13 seconds (files took 11.11 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -166,8 +166,8 @@ Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.5.4.Final/hibernate-search-parent-5.5.4.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.4.0.Final/hibernate-search-5.4.0.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.4.0.Final/hibernate-search-parent-5.4.0.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.6.0.Beta1/hibernate-search-5.6.0.Beta1.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.6.0.Beta1/hibernate-search-parent-5.6.0.Beta1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.6.0.Beta2/hibernate-search-5.6.0.Beta2.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.6.0.Beta2/hibernate-search-parent-5.6.0.Beta2.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/5.3.0.CR1/hibernate-validator-5.3.0.CR1.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator-parent/5.3.0.CR1/hibernate-validator-parent-5.3.0.CR1.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.pom
