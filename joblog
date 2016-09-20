@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.13 seconds (files took 11.11 seconds to load)
+Finished in 0.85779 seconds (files took 2.75 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -176,9 +176,9 @@ Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator-parent/4.3.2.Final/hibernate-validator-parent-4.3.2.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.2.Final/hibernate-core-5.1.2.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.2.Final/hibernate-core-5.2.2.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.1.Final/hibernate-core-5.1.1.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.10.Final/hibernate-core-5.0.10.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.11.Final/hibernate-core-5.0.11.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.0.1.Final/hibernate-ogm-core-5.0.1.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.0.1.Final/hibernate-ogm-parent-5.0.1.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/4.0.0.Beta4/hibernate-ogm-core-4.0.0.Beta4.pom
