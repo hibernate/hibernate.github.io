@@ -1,9 +1,17 @@
-<!DOCTYPE HTML> <head> <title>Page Redirection</title> <meta charset="UTF-8"> <script src="orm-doc-version.js" type="text/javascript"></script> %{google_analytics_universal} </head> <body> <p>Looks like you used an old link.</p> <p>We will teleport you to the <a id="teleporter" href="">right place</a> in a second.</p> </body> <script>
-    var latestVersionPath = ormVersions[0] + "/";
-    document.getElementById("teleporter").href = latestVersionPath;
-    var meta = document.createElement('meta');
-    meta.httpEquiv = "refresh";
-    meta.content = "5; url=" + latestVersionPath;
-    document.getElementsByTagName('head')[0].appendChild(meta);
-    window.location.href = latestVersionPath;
-</script>
+<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <script>
+      var stable_releases = [];
+      stable_releases.push('5.2.3.Final');
+      stable_releases.push('5.1.2.Final');
+      stable_releases.push('5.0.11.Final');
+      stable_releases.push('4.3.11.Final');
+      stable_releases.push('4.2.21.Final');
+    </script> </head> <p>Looks like you used an old link.</p> <p>We will teleport you to the <a id="teleporter" href="">right place</a> in a second.</p> <script>
+      var versionTokens = stable_releases[0].split(".");
+      var latestVersionPath = versionTokens[0] + "." + versionTokens[1] + "/";
+      document.getElementById("teleporter").href = latestVersionPath;
+      var meta = document.createElement('meta');
+      meta.httpEquiv = "refresh";
+      meta.content = "5; url=" + latestVersionPath;
+      document.getElementsByTagName('head')[0].appendChild(meta);
+      window.location.href = latestVersionPath;
+  </script> </html>
