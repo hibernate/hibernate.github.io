@@ -5,13 +5,14 @@
       stable_releases.push('5.0.11.Final');
       stable_releases.push('4.3.11.Final');
       stable_releases.push('4.2.21.Final');
-    </script> </head> <p>Looks like you used an old link.</p> <p>We will teleport you to the <a id="teleporter" href="">right place</a> in a second.</p> <script>
+    </script> </head> <script>
       var versionTokens = stable_releases[0].split(".");
       var latestVersionPath = versionTokens[0] + "." + versionTokens[1] + "/";
-      document.getElementById("teleporter").href = latestVersionPath;
+  
       var meta = document.createElement('meta');
       meta.httpEquiv = "refresh";
       meta.content = "5; url=" + latestVersionPath;
       document.getElementsByTagName('head')[0].appendChild(meta);
-      window.location.href = latestVersionPath;
+  
+      window.location = latestVersionPath;
   </script> </html>
