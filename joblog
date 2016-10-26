@@ -35,7 +35,7 @@ Using redcarpet 3.2.2
 Using ref 1.0.5
 Using rspec-support 3.2.2
 Using yajl-ruby 1.2.1
-Using bundler 1.13.2
+Using bundler 1.13.3
 Using bootstrap-sass 3.1.1.1
 Using zurb-foundation 4.3.2
 Using compass 0.12.7
@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 15.87 seconds (files took 0.72394 seconds to load)
+Finished in 0.7652 seconds (files took 1.84 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -162,3 +162,67 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/validator/hibernate-validator-metadata.properties[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-configuration/hibernate-configuration-4.0.xsd[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd[0m
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.6.0.Beta3/hibernate-search-5.6.0.Beta3.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.6.0.Beta3/hibernate-search-parent-5.6.0.Beta3.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.5.5.Final/hibernate-search-5.5.5.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.5.5.Final/hibernate-search-parent-5.5.5.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.7.0.Alpha1/hibernate-search-5.7.0.Alpha1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.7.0.Alpha1/hibernate-search-parent-5.7.0.Alpha1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.4.0.Final/hibernate-search-5.4.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.4.0.Final/hibernate-search-parent-5.4.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator-parent/5.2.4.Final/hibernate-validator-parent-5.2.4.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/5.3.0.Final/hibernate-validator-5.3.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator-parent/5.3.0.Final/hibernate-validator-parent-5.3.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/4.3.2.Final/hibernate-validator-4.3.2.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator-parent/4.3.2.Final/hibernate-validator-parent-4.3.2.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.2.Final/hibernate-core-5.1.2.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.4.Final/hibernate-core-5.2.4.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.3.Final/hibernate-core-5.2.3.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.11.Final/hibernate-core-5.0.11.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.1.0.Alpha1/hibernate-ogm-core-5.1.0.Alpha1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.1.0.Alpha1/hibernate-ogm-parent-5.1.0.Alpha1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.0.1.Final/hibernate-ogm-core-5.0.1.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.0.1.Final/hibernate-ogm-parent-5.0.1.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.0.2.Final/hibernate-ogm-core-5.0.2.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.0.2.Final/hibernate-ogm-parent-5.0.2.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/4.2.0.Final/hibernate-ogm-core-4.2.0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/4.2.0.Final/hibernate-ogm-parent-4.2.0.Final.pom
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/404.html
+Minifying html /404.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/CNAME
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/README/index.html
+Minifying html /README/index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/community/governance/index.html
+Minifying html /community/governance/index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/community/index.html
+Minifying html /community/index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/community/license/index.html
+Minifying html /community/license/index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/community/we-lost-that-content/index.html
+Minifying html /community/we-lost-that-content/index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/docker/Dockerfile
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/docker/README/index.html
+Minifying html /docker/README/index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-configuration-2.0.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-configuration-3.0.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-configuration.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-generic.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-mapping-1.1.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-mapping-2.0.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-mapping-3.0.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-mapping.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/hibernate-reverse-engineering-3.0.dtd
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/dtd/index.html
+Minifying html /dtd/index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/google3584525ea82891db.html
+Minifying html /google3584525ea82891db.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/google9616cdec3070007c.html
+Minifying html /google9616cdec3070007c.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/images/hv-maven-import-options-idea.png
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/images/tck-jsr-349-setup.png
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/index.html
+Minifying html /index.html 
+Generating: /mnt/jenkins-workdir/workspace/www.hibernate.org/_site/joblog
