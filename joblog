@@ -35,7 +35,7 @@ Using redcarpet 3.2.2
 Using ref 1.0.5
 Using rspec-support 3.2.2
 Using yajl-ruby 1.2.1
-Using bundler 1.13.6
+Using bundler 1.13.7
 Using bootstrap-sass 3.1.1.1
 Using zurb-foundation 4.3.2
 Using compass 0.12.7
@@ -95,7 +95,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.79678 seconds (files took 9.12 seconds to load)
+Finished in 0.76029 seconds (files took 2.17 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
