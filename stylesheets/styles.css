@@ -71,27 +71,28 @@ pre > code {
   width: 100%;
   margin-bottom: 0;
   min-height: 23px;
-  overflow: hidden; }
-/* line 98, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  overflow: hidden;
+  line-height: 1.3em; }
+/* line 99, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 #myCarousel ol {
   display: none; }
 
-/* line 104, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 105, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .project-menu {
   overflow: hidden; }
 
-/* line 107, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 108, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .project-menu-title {
   font-size: 200%;
   margin-bottom: .5em; }
 
-/* line 112, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 113, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .hero-button {
   margin-top: 1em;
   margin-left: 1em;
   margin-right: 1em; }
 
-/* line 118, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 119, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .hero-unit {
   padding-left: 60px;
   padding-right: 60px;
@@ -99,99 +100,99 @@ pre > code {
   padding-bottom: 50px; }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  /* line 126, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 127, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .menu-icon {
     display: none !important; } }
-/* line 132, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 133, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .nav-list > li > a, .nav-list .nav-header {
   color: #656565; }
 
-/* line 136, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 137, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
   background-color: #656565; }
 
-/* line 142, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 143, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .feature-block h2, .feature-block h3 {
   margin-top: .5em; }
 
-/* line 149, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 150, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .news-sidebar h2 {
   margin-top: 0em; }
 
 @media (min-width: 768px) {
-  /* line 156, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 157, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .release-bottons {
     margin-bottom: 2em; } }
 @media (max-width: 767px) {
-  /* line 162, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 163, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .release-buttons {
     margin-bottom: 1em;
     margin-top: 1em; } }
 @media (max-width: 470px) {
-  /* line 170, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 171, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .hero-unit h1 {
     font-size: 2em; } }
 @media (max-width: 447px) {
-  /* line 177, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 178, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   #logobar > a {
     padding-left: 0px;
     float: none; }
 
-  /* line 181, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 182, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .dropup {
     float: none; }
 
-  /* line 184, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 185, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .navbar {
     margin-top: 0px; } }
 @media (max-width: 365px) {
-  /* line 190, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 191, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .hero-unit {
     padding: 25px 30px; }
-  /* line 192, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 193, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .hero-unit h1 {
     font-size: 1.5em; } }
 @media (max-width: 270px) {
-  /* line 199, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 200, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .hero-unit {
     padding: 25px 30px; }
-  /* line 201, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 202, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   .hero-unit h1 {
     font-size: 1em; } }
-/* line 209, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 210, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 footer.container {
   padding-top: .3em;
   padding-bottom: .3em;
   font-size: 90%;
   line-height: 80%; }
-/* line 215, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 216, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 footer.container h4 {
   font-size: 110%;
   margin-top: 5px;
   margin-bottom: 5px; }
-/* line 220, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 221, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 footer.container ul {
   margin-left: 0; }
-/* line 223, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 224, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 footer.container li {
   line-height: 120%; }
 
-/* line 232, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 233, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 #toc {
   background-color: #efefef;
   padding: 1em; }
-/* line 235, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 236, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 #toc > ol {
   margin: .5em 0 .5em .5em; }
-/* line 238, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 239, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 #toc ol {
   list-style-type: none; }
-/* line 241, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 242, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 #toc a {
   text-decoration: none; }
 
 @media (min-width: 980px) {
-  /* line 247, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 248, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   #toc {
     width: 30%;
     position: static;
@@ -201,64 +202,64 @@ footer.container li {
     margin-bottom: 1em;
     margin-top: 1em; } }
 @media (max-width: 979px) {
-  /* line 259, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 260, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   #toc {
     margin: 1em; } }
-/* line 265, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 266, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 #toctitle {
   padding-left: 3%;
   margin-bottom: 1em;
   font-size: 120%; }
 
-/* line 271, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 272, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .sectlevel1 {
   font-size: 85%; }
-/* line 274, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 275, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .sectlevel1 li {
   margin-left: 0;
   margin-right: 10%;
   margin-top: .5em;
   margin-bottom: .5em; }
-/* line 280, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 281, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .sectlevel1 code {
   font-size: 100%; }
 
-/* line 285, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 286, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .sectlevel2 {
   font-size: 90%; }
 
-/* line 290, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 291, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .sectlevel3 {
   font-size: 90%; }
 
-/* line 298, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 299, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 #preamble {
   font-size: 130%; }
 
-/* line 305, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 306, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .admonitionblock > table {
   border: 0;
   margin-bottom: 1.25em;
   background: none; }
-/* line 310, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 311, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .admonitionblock > table td.icon {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   width: 80px; }
-/* line 315, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 316, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .admonitionblock > table td.icon img {
   max-width: none; }
-/* line 320, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 321, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .admonitionblock > table td.content {
   padding-left: 2em;
   border-left: 1px solid #dddddd;
   color: #6f6f6f; }
-/* line 327, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 328, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .admonitionblock > table td.content > div:last-child p, .admonitionblock > table td.content > div:last-child ol, .admonitionblock > table td.content > div:last-child ul, .admonitionblock > table td.content > div:last-child dl, .admonitionblock > table td.content > div:last-child dl dd:last-child {
   margin-bottom: 0; }
 
-/* line 336, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 337, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .listingblock > .title {
   margin-left: 10%;
   margin-right: 10%;
@@ -325,33 +326,33 @@ footer.container li {
 pre .comment .conum {
   left: -20px; }
 
-/* line 352, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 353, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .feedback-button {
   margin-top: 1em;
   margin-bottom: 1em; }
 
-/* line 360, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 361, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .quoteblock {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #656565; }
-/* line 362, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 363, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .quoteblock .paragraph p {
   margin-bottom: 20px; }
-/* line 369, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 370, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .quoteblock blockquote {
   position: relative;
   margin-left: 20px;
   margin: 1.5em 10px;
   padding: 0.5em 10px; }
-/* line 375, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 376, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .quoteblock blockquote:before {
   color: #ccc;
   font-size: 6em;
   margin-top: 30px;
   display: block;
   content: "\201C"; }
-/* line 382, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 383, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .quoteblock .attribution {
   text-align: right;
   color: #656565; }
