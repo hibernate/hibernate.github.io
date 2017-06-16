@@ -1,5 +1,5 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Fetching gem metadata from https://rubygems.org/............
+Fetching gem metadata from https://rubygems.org/...........
 Fetching version metadata from https://rubygems.org/...
 Fetching dependency metadata from https://rubygems.org/..
 Installing asciidoctor 1.5.2
@@ -114,7 +114,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 2.02 seconds (files took 2.29 seconds to load)
+Finished in 2.16 seconds (files took 1.47 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -138,6 +138,43 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/joblog[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/ogm/hibernate-ogm-metadata.properties[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/orm/hibernate-orm-metadata.properties[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/images/desktop_hibernate_1920x1200 copy.jpg[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/images/desktop_hibernate_1920x1200b.jpg[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/LICENSE[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/print/paper.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/print/pdf.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/reveal.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/beige.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/black.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/blood.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/league.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/moon.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/night.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/serif.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/simple.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/sky.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/solarized.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/white.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/css/zenburn.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/LICENSE[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.css[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.eot[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.ttf[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.woff[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/LICENSE[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.eot[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.ttf[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.woff[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.eot[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.ttf[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.woff[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.eot[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.ttf[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.woff[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.eot[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.ttf[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.woff[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro.css[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/images/desktop_hibernate_1920x1200.jpg[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/LICENSE[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/print/paper.css[0m
@@ -181,3 +218,18 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/validator/hibernate-validator-metadata.properties[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-configuration/hibernate-configuration-4.0.xsd[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd[0m
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.5.7.Final/hibernate-search-5.5.7.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.5.7.Final/hibernate-search-parent-5.5.7.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.6.2.Final/hibernate-search-5.6.2.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.6.2.Final/hibernate-search-parent-5.6.2.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.7.1.Final/hibernate-search-5.7.1.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.7.1.Final/hibernate-search-parent-5.7.1.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.8.0.Beta3/hibernate-search-5.8.0.Beta3.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.8.0.Beta3/hibernate-search-parent-5.8.0.Beta3.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.7.Final/hibernate-core-5.1.7.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.10.Final/hibernate-core-5.2.10.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/6.0.0.Beta2/hibernate-validator-6.0.0.Beta2.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/validator/hibernate-validator-relocation/6.0.0.Beta2/hibernate-validator-relocation-6.0.0.Beta2.pom
