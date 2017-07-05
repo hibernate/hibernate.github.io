@@ -1,5 +1,5 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Fetching gem metadata from https://rubygems.org/........
+Fetching gem metadata from https://rubygems.org/...........
 Fetching version metadata from https://rubygems.org/...
 Fetching dependency metadata from https://rubygems.org/..
 Fetching asciidoctor 1.5.2
@@ -174,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 2.78 seconds (files took 1.32 seconds to load)
+Finished in 2.03 seconds (files took 2.2 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -291,5 +291,5 @@ Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/6.0.0.CR1/hibernate-validator-6.0.0.CR1.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/validator/hibernate-validator-relocation/6.0.0.CR1/hibernate-validator-relocation-6.0.0.CR1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-validator/6.0.0.CR2/hibernate-validator-6.0.0.CR2.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/validator/hibernate-validator-relocation/6.0.0.CR2/hibernate-validator-relocation-6.0.0.CR2.pom
