@@ -62,7 +62,7 @@ Using guard-livereload 2.1.3
 Using awestruct 0.5.5
 Bundle complete! 14 Gemfile dependencies, 61 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
-The latest bundler is 1.15.2, but you are currently running 1.15.1.
+The latest bundler is 1.15.3, but you are currently running 1.15.1.
 To update, run `gem install bundler`
 [33mBundle installed[0m
 
@@ -97,12 +97,12 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 2.04 seconds (files took 0.79303 seconds to load)
+Finished in 2.13 seconds (files took 0.78721 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
 The Gemfile's dependencies are satisfied
-The latest bundler is 1.15.2, but you are currently running 1.15.1.
+The latest bundler is 1.15.3, but you are currently running 1.15.1.
 To update, run `gem install bundler`
 [33mbundle exec awestruct -P production -g --force [0m
 Using profile: production
@@ -211,8 +211,8 @@ Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.7.1.Final/hibernate-search-parent-5.7.1.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.8.0.Beta4/hibernate-search-5.8.0.Beta4.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.8.0.Beta4/hibernate-search-parent-5.8.0.Beta4.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.9.Final/hibernate-core-5.1.9.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.10.Final/hibernate-core-5.2.10.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.8.Final/hibernate-core-5.1.8.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
