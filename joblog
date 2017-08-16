@@ -1,146 +1,67 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Fetching gem metadata from https://rubygems.org/......
-Fetching version metadata from https://rubygems.org/..
-Fetching dependency metadata from https://rubygems.org/.
-Fetching asciidoctor 1.5.2
-Installing asciidoctor 1.5.2
-Fetching sass 3.2.19
-Installing sass 3.2.19
-Fetching colorize 0.7.5
-Installing colorize 0.7.5
-Fetching chunky_png 1.3.4
-Installing chunky_png 1.3.4
-Fetching fssm 0.2.10
-Installing fssm 0.2.10
-Fetching git 1.2.9.1
-Installing git 1.2.9.1
-Fetching eventmachine 1.0.7
-Installing eventmachine 1.0.7 with native extensions
-Fetching http_parser.rb 0.6.0
-Installing http_parser.rb 0.6.0 with native extensions
-Fetching formatador 0.2.5
-Installing formatador 0.2.5
-Fetching hitimes 1.2.2
-Installing hitimes 1.2.2 with native extensions
-Fetching rb-fsevent 0.9.4
-Installing rb-fsevent 0.9.4
-Fetching ffi 1.9.8
-Installing ffi 1.9.8 with native extensions
-Fetching lumberjack 1.0.9
-Installing lumberjack 1.0.9
-Fetching nenv 0.2.0
-Installing nenv 0.2.0
-Fetching shellany 0.0.1
-Installing shellany 0.0.1
-Fetching coderay 1.1.0
-Installing coderay 1.1.0
-Fetching method_source 0.8.2
-Installing method_source 0.8.2
-Fetching slop 3.6.0
-Installing slop 3.6.0
-Fetching thor 0.19.1
-Installing thor 0.19.1
-Fetching multi_json 1.11.0
-Installing multi_json 1.11.0
-Fetching tilt 2.0.1
-Installing tilt 2.0.1
-Fetching mime-types 2.4.3
-Installing mime-types 2.4.3
-Fetching nokogiri 1.5.11
-Installing nokogiri 1.5.11 with native extensions
-Fetching rack 1.5.2
-Installing rack 1.5.2
-Fetching ruby-s3cmd 0.1.5
-Installing ruby-s3cmd 0.1.5
-Fetching execjs 2.4.0
-Installing execjs 2.4.0
-Fetching json 1.8.2
-Installing json 1.8.2 with native extensions
-Fetching cssminify 1.0.2
-Installing cssminify 1.0.2
-Fetching htmlcompressor 0.1.2
-Installing htmlcompressor 0.1.2
-Fetching redcarpet 3.2.2
-Installing redcarpet 3.2.2 with native extensions
-Fetching libv8 3.16.14.7 (x86_64-linux)
-Installing libv8 3.16.14.7 (x86_64-linux)
-Fetching ref 1.0.5
-Installing ref 1.0.5
-Fetching rspec-support 3.2.2
-Installing rspec-support 3.2.2
-Fetching diff-lcs 1.2.5
-Installing diff-lcs 1.2.5
-Fetching yajl-ruby 1.2.1
-Installing yajl-ruby 1.2.1 with native extensions
-Fetching columnize 0.9.0
-Installing columnize 0.9.0
+Using asciidoctor 1.5.2
+Using sass 3.2.19
+Using colorize 0.7.5
+Using chunky_png 1.3.4
+Using fssm 0.2.10
+Using git 1.2.9.1
+Using eventmachine 1.0.7
+Using http_parser.rb 0.6.0
+Using formatador 0.2.5
+Using hitimes 1.2.2
+Using rb-fsevent 0.9.4
+Using ffi 1.9.8
+Using lumberjack 1.0.9
+Using nenv 0.2.0
+Using shellany 0.0.1
+Using coderay 1.1.0
+Using method_source 0.8.2
+Using slop 3.6.0
+Using thor 0.19.1
+Using multi_json 1.11.0
+Using tilt 2.0.1
+Using mime-types 2.4.3
+Using nokogiri 1.5.11
+Using rack 1.5.2
+Using ruby-s3cmd 0.1.5
+Using execjs 2.4.0
+Using json 1.8.2
+Using cssminify 1.0.2
+Using htmlcompressor 0.1.2
+Using redcarpet 3.2.2
+Using libv8 3.16.14.7 (x86_64-linux)
+Using ref 1.0.5
+Using rspec-support 3.2.2
+Using diff-lcs 1.2.5
+Using yajl-ruby 1.2.1
+Using columnize 0.9.0
 Using bundler 1.15.1
-Fetching bootstrap-sass 3.1.1.1
-Installing bootstrap-sass 3.1.1.1
-Fetching zurb-foundation 4.3.2
-Installing zurb-foundation 4.3.2
-Fetching compass 0.12.7
-Installing compass 0.12.7
-Fetching em-websocket 0.5.1
-Installing em-websocket 0.5.1
-Fetching timers 4.0.1
-Installing timers 4.0.1
-Fetching rb-inotify 0.9.5
-Installing rb-inotify 0.9.5
-Fetching notiffany 0.0.6
-Installing notiffany 0.0.6
-Fetching pry 0.10.1
-Installing pry 0.10.1
-Fetching haml 4.0.6
-Installing haml 4.0.6
-Fetching rest-client 1.6.7
-Installing rest-client 1.6.7
-Fetching uglifier 2.7.1
-Installing uglifier 2.7.1
-Fetching therubyracer 0.12.1
-Installing therubyracer 0.12.1 with native extensions
-Fetching rspec-core 3.2.2
-Installing rspec-core 3.2.2
-Fetching rspec-expectations 3.2.0
-Installing rspec-expectations 3.2.0
-Fetching rspec-mocks 3.2.1
-Installing rspec-mocks 3.2.1
-Fetching byebug 4.0.5
-Installing byebug 4.0.5 with native extensions
-Fetching compass-960-plugin 0.10.4
-Installing compass-960-plugin 0.10.4
-Fetching celluloid 0.16.0
-Installing celluloid 0.16.0
-Fetching rspec 3.2.0
-Installing rspec 3.2.0
-Fetching pry-byebug 3.1.0
-Installing pry-byebug 3.1.0
-Fetching listen 2.7.12
-Installing listen 2.7.12
-Fetching guard 2.12.5
-Installing guard 2.12.5
-Fetching guard-livereload 2.1.3
-Installing guard-livereload 2.1.3
-Fetching awestruct 0.5.5
-Installing awestruct 0.5.5
+Using bootstrap-sass 3.1.1.1
+Using zurb-foundation 4.3.2
+Using compass 0.12.7
+Using em-websocket 0.5.1
+Using timers 4.0.1
+Using rb-inotify 0.9.5
+Using notiffany 0.0.6
+Using pry 0.10.1
+Using haml 4.0.6
+Using rest-client 1.6.7
+Using uglifier 2.7.1
+Using therubyracer 0.12.1
+Using rspec-core 3.2.2
+Using rspec-expectations 3.2.0
+Using rspec-mocks 3.2.1
+Using byebug 4.0.5
+Using compass-960-plugin 0.10.4
+Using celluloid 0.16.0
+Using rspec 3.2.0
+Using pry-byebug 3.1.0
+Using listen 2.7.12
+Using guard 2.12.5
+Using guard-livereload 2.1.3
+Using awestruct 0.5.5
 Bundle complete! 14 Gemfile dependencies, 61 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
-Post-install message from haml:
-
-HEADS UP! Haml 4.0 has many improvements, but also has changes that may break
-your application:
-
-* Support for Ruby 1.8.6 dropped
-* Support for Rails 2 dropped
-* Sass filter now always outputs <style> tags
-* Data attributes are now hyphenated, not underscored
-* html2haml utility moved to the html2haml gem
-* Textile and Maruku filters moved to the haml-contrib gem
-
-For more info see:
-
-http://rubydoc.info/github/haml/haml/file/CHANGELOG.md
-
 The latest bundler is 1.15.3, but you are currently running 1.15.1.
 To update, run `gem install bundler`
 [33mBundle installed[0m
@@ -176,7 +97,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 2.08 seconds (files took 1.59 seconds to load)
+Finished in 2.26 seconds (files took 0.99735 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -284,12 +205,12 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd[0m
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.5.7.Final/hibernate-search-5.5.7.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.5.7.Final/hibernate-search-parent-5.5.7.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.8.0.CR1/hibernate-search-5.8.0.CR1.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.8.0.CR1/hibernate-search-parent-5.8.0.CR1.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.6.2.Final/hibernate-search-5.6.2.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.6.2.Final/hibernate-search-parent-5.6.2.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.7.1.Final/hibernate-search-5.7.1.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.7.1.Final/hibernate-search-parent-5.7.1.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search/5.8.0.Beta4/hibernate-search-5.8.0.Beta4.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-search-parent/5.8.0.Beta4/hibernate-search-parent-5.8.0.Beta4.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.9.Final/hibernate-core-5.1.9.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.10.Final/hibernate-core-5.2.10.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.pom
