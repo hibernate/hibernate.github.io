@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1506601389" media="screen" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1506601804" media="screen" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
     <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -536,6 +536,11 @@
                 </div>
                 <ul>
                   <li>
+                    <a class="item" href="#compatibility">
+                      Compatibility
+                    </a>
+                  </li>
+                  <li>
                     <a class="item" href="#documentation">
                       Documentation
                     </a>
@@ -562,6 +567,35 @@
                   </li>
                 </ul>
               </div>
+              <h2 id="compatibility">Compatibility</h2>
+              <table class="ui collapsing table striped celled unstackable">
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+                      Java
+                    </a>
+                  </td>
+                  <td>
+                    6
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://beanvalidation.org/">
+                      Bean Validation
+                    </a>
+                  </td>
+                  <td>
+                    1.1
+                  </td>
+                </tr>
+              </table>
+              <p>
+                Not compatible with your requirements? Have a look at the
+                <a href="../">
+                  other series.
+                </a>
+              </p>
               <h2 id="documentation">Documentation</h2>
               <p>
                 Documentation for this specific series can be accessed through the links below:
@@ -588,6 +622,47 @@
               </p>
               <h2 id="get-it">How to get it</h2>
               <div class="ui grid equal height stackable download-options">
+                <div class="eleven wide column">
+                  <h3>Maven, Gradle...</h3>
+                  <p>
+                    Maven artifacts of Hibernate Validator are published to Maven Central and to the
+                    <a href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate*~hibernate-validator*~5.3.*~~">
+                      JBoss Maven Repository.
+                    </a>
+                    Refer to the
+                    <a href="http://community.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+                    on the Jboss Wiki for more information on how to configure Maven.
+                  </p>
+                  <p>
+                    Below are the Maven coordinates of the main artifacts.
+                  </p>
+                  <dl class="sparse">
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator~5.3.4.Final~~">
+                        org.hibernate:hibernate-validator:5.3.4.Final
+                      </a>
+                    </dt>
+                    <dd>Core implementation</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-cdi~5.3.4.Final~~">
+                        org.hibernate:hibernate-validator-cdi:5.3.4.Final
+                      </a>
+                    </dt>
+                    <dd>CDI integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-osgi~5.3.4.Final~~">
+                        org.hibernate:hibernate-validator-osgi:5.3.4.Final
+                      </a>
+                    </dt>
+                    <dd>OSGi integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-annotation-processor~5.3.4.Final~~">
+                        org.hibernate:hibernate-validator-annotation-processor:5.3.4.Final
+                      </a>
+                    </dt>
+                    <dd>Annotation processor</dd>
+                  </dl>
+                </div>
                 <div class="five wide column divided">
                   <h3>Zip archive</h3>
                   <p>
