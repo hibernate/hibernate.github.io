@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1506603824" media="screen" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1506604284" media="screen" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
     <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -22,8 +22,8 @@
     <!-- Tabzilla does not support minification -->
     <script src="https://static.jboss.org/js/_jbossorg-tabzilla.js"></script>
   </head>
-  <body>
-    <div class="ui vertical inverted sidebar left overlay" id="mobile-menu">
+  <body class="pushable">
+    <div class="ui vertical inverted sidebar left" id="mobile-menu">
       <div class="ui vertical fluid inverted text menu accordion">
         <div class="item">
           <a class="title">
@@ -933,7 +933,7 @@
 <script>
   $(function() {
     $('#mobile-menu').sidebar('setting', {
-      transition: 'overlay'
+      transition: 'push'
     });
     $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
   
