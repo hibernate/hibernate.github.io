@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
-    <link href="../../stylesheets/styles.min.css?t=1506590936" media="screen" rel="stylesheet">
+    <link href="../../stylesheets/styles.min.css?t=1506598239" media="screen" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
     <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -606,10 +606,197 @@
                 </div>
               </div>
               <p>
-                Documentation for older versions can be found
-                <a href="https://docs.jboss.org/hibernate/validator/">on the reference documentation site</a>
-                .
+                <a class="ui button right labeled icon" href="javascript: void(0)" id="older-series-button">
+                  <i class="icon snowflake"></i>
+                  <span>See older series</span>
+                </a>
               </p>
+              <script>
+                $(document).ready(function() {
+                  $('#older-series-button').click(function() {
+                    $('#older-series').slideToggle(400, function() {
+                    });
+                    var buttonText = $('#older-series-button span');
+                    buttonText.text() == 'See older series' ?
+                      buttonText.text("Hide older series") :
+                      buttonText.text("See older series");
+                  });
+                });
+              </script>
+              <div id="older-series">
+                <div class="ui grid documentation-versions">
+                  <div class="ui row">
+                    <div class="three wide column">
+                      <span class="ui label series">5.3</span>
+                    </div>
+                    <div class="thirteen wide column">
+                      <p>
+                        <span class="ui label large">
+                          <strong>5.3.4.Final</strong>
+                          <span class="detail">2016-12-08</span>
+                        </span>
+                        <span class="green label tag ui">stable</span>
+                      </p>
+                      <p>
+                        dynamic constraint payload, parameter relaxation, new api for programmatic constraint definition, new translations
+                      </p>
+                      <p>
+                        <span class="ui button disabled">
+                          Documentation
+                        </span>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/">
+                          <i class="icon file text outline"></i>
+                          HTML
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/pdf/hibernate_validator_reference.pdf">
+                          <i class="icon file pdf outline"></i>
+                          PDF
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.3/api/">
+                          <i class="icon code outline"></i>
+                          API (JavaDoc)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui row">
+                    <div class="three wide column">
+                      <span class="ui label series">5.2</span>
+                    </div>
+                    <div class="thirteen wide column">
+                      <p>
+                        <span class="ui label large">
+                          <strong>5.2.4.Final</strong>
+                          <span class="detail">2016-02-17</span>
+                        </span>
+                        <span class="green label tag ui">stable</span>
+                      </p>
+                      <p>
+                        Java 8 support and more
+                      </p>
+                      <p>
+                        <span class="ui button disabled">
+                          Documentation
+                        </span>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html_single/">
+                          <i class="icon file text outline"></i>
+                          HTML
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.2/reference/en-US/pdf/hibernate_validator_reference.pdf">
+                          <i class="icon file pdf outline"></i>
+                          PDF
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.2/api/">
+                          <i class="icon code outline"></i>
+                          API (JavaDoc)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui row">
+                    <div class="three wide column">
+                      <span class="ui label series">5.1</span>
+                    </div>
+                    <div class="thirteen wide column">
+                      <p>
+                        <span class="ui label large">
+                          <strong>5.1.3.Final</strong>
+                          <span class="detail">2014-10-22</span>
+                        </span>
+                        <span class="green label tag ui">stable</span>
+                      </p>
+                      <p>
+                        Final 5.1 release!
+                      </p>
+                      <p>
+                        <span class="ui button disabled">
+                          Documentation
+                        </span>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.1/reference/en-US/html_single/">
+                          <i class="icon file text outline"></i>
+                          HTML
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.1/reference/en-US/pdf/hibernate_validator_reference.pdf">
+                          <i class="icon file pdf outline"></i>
+                          PDF
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.1/api/">
+                          <i class="icon code outline"></i>
+                          API (JavaDoc)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui row">
+                    <div class="three wide column">
+                      <span class="ui label series">5.0</span>
+                    </div>
+                    <div class="thirteen wide column">
+                      <p>
+                        <span class="ui label large">
+                          <strong>5.0.3.Final</strong>
+                          <span class="detail">2014-01-28</span>
+                        </span>
+                        <span class="green label tag ui">stable</span>
+                      </p>
+                      <p>
+                        Reference implementation for Bean Validation 1.1 (maintenance release)
+                      </p>
+                      <p>
+                        <span class="ui button disabled">
+                          Documentation
+                        </span>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html_single/">
+                          <i class="icon file text outline"></i>
+                          HTML
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/pdf/hibernate_validator_reference.pdf">
+                          <i class="icon file pdf outline"></i>
+                          PDF
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/5.0/api/">
+                          <i class="icon code outline"></i>
+                          API (JavaDoc)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui row">
+                    <div class="three wide column">
+                      <span class="ui label series">4.3</span>
+                    </div>
+                    <div class="thirteen wide column">
+                      <p>
+                        <span class="ui label large">
+                          <strong>4.3.2.Final</strong>
+                          <span class="detail">2014-07-25</span>
+                        </span>
+                        <span class="green label tag ui">stable</span>
+                      </p>
+                      <p>
+                        Last Bean Validation 1.0 compatible version
+                      </p>
+                      <p>
+                        <span class="ui button disabled">
+                          Documentation
+                        </span>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/4.3/reference/en-US/html_single/">
+                          <i class="icon file text outline"></i>
+                          HTML
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/4.3/reference/en-US/pdf/hibernate_validator_reference.pdf">
+                          <i class="icon file pdf outline"></i>
+                          PDF
+                        </a>
+                        <a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/4.3/api/">
+                          <i class="icon code outline"></i>
+                          API (JavaDoc)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="sect1">
               <h2 id="other-documentation"><a class="anchor" href="#other-documentation"></a>Other documentation</h2>
               <div class="sectionbody">

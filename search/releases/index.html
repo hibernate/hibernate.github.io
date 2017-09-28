@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
-    <link href="../../stylesheets/styles.min.css?t=1506590935" media="screen" rel="stylesheet">
+    <link href="../../stylesheets/styles.min.css?t=1506598238" media="screen" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
     <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -550,7 +550,7 @@
                 </div>
               </div>
               <h2>Series</h2>
-              <div class="ui three column doubling grid series stackable">
+              <div class="ui three column doubling grid series active-series stackable">
                 <div class="column">
                   <div class="ui raised segment version">
                     <span class="ui right ribbon label green">
@@ -633,13 +633,168 @@
                 </div>
               </div>
               <p>
-                Older series can be found
-                <a href="https://sourceforge.net/projects/hibernate/files/hibernate-search/">
-                  on SourceForge
+                <a class="ui button right labeled icon" href="javascript: void(0)" id="older-series-button">
+                  <i class="icon snowflake"></i>
+                  <span>See older series</span>
                 </a>
-                or in JBoss's
-                <a href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-*~~~">Maven repository.</a>
               </p>
+              <script>
+                $(document).ready(function() {
+                  $('#older-series-button').click(function() {
+                    $('#older-series').slideToggle(400, function() {
+                    });
+                    var buttonText = $('#older-series-button span');
+                    buttonText.text() == 'See older series' ?
+                      buttonText.text("Hide older series") :
+                      buttonText.text("See older series");
+                  });
+                });
+              </script>
+              <div id="older-series">
+                <h2>Older series</h2>
+                <div class="ui three column doubling grid series older-series stackable">
+                  <div class="column">
+                    <div class="ui raised segment version">
+                      <span class="ui right ribbon label green">
+                        stable
+                      </span>
+                      <h3 class="ui header">
+                        5.4
+                        <small>
+                          2015-09-03
+                        </small>
+                      </h3>
+                      <p>Requires Hibernate ORM 5.0.0.Final; Last version compatible with Apache Lucene 4.x</p>
+                      <div class="ui right aligned basic segment">
+                        <a class="ui right labeled icon button primary" href="./5.4/">
+                          <i class="right arrow icon"></i>
+                          More info
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="ui raised segment version">
+                      <span class="ui right ribbon label green">
+                        stable
+                      </span>
+                      <h3 class="ui header">
+                        5.3
+                        <small>
+                          2015-06-10
+                        </small>
+                      </h3>
+                      <p>Improved Faceting</p>
+                      <div class="ui right aligned basic segment">
+                        <a class="ui right labeled icon button primary" href="./5.3/">
+                          <i class="right arrow icon"></i>
+                          More info
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="ui raised segment version">
+                      <span class="ui right ribbon label green">
+                        stable
+                      </span>
+                      <h3 class="ui header">
+                        5.2
+                        <small>
+                          2015-05-06
+                        </small>
+                      </h3>
+                      <p>Multi-tenancy, optimisations in criteria based loaders</p>
+                      <div class="ui right aligned basic segment">
+                        <a class="ui right labeled icon button primary" href="./5.2/">
+                          <i class="right arrow icon"></i>
+                          More info
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="ui raised segment version">
+                      <span class="ui right ribbon label green">
+                        stable
+                      </span>
+                      <h3 class="ui header">
+                        5.1
+                        <small>
+                          2015-03-13
+                        </small>
+                      </h3>
+                      <p>Upgrade to Lucene 4 and much much more ...</p>
+                      <div class="ui right aligned basic segment">
+                        <a class="ui right labeled icon button primary" href="./5.1/">
+                          <i class="right arrow icon"></i>
+                          More info
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="ui raised segment version">
+                      <span class="ui right ribbon label green">
+                        stable
+                      </span>
+                      <h3 class="ui header">
+                        5.0
+                        <small>
+                          2015-01-12
+                        </small>
+                      </h3>
+                      <p>Upgrade to Lucene 4 and much much more ...</p>
+                      <div class="ui right aligned basic segment">
+                        <a class="ui right labeled icon button primary" href="./5.0/">
+                          <i class="right arrow icon"></i>
+                          More info
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="ui raised segment version">
+                      <span class="ui right ribbon label green">
+                        stable
+                      </span>
+                      <h3 class="ui header">
+                        4.5
+                        <small>
+                          2015-01-12
+                        </small>
+                      </h3>
+                      <p>Performance, WildFly 8 compatibility, JPA 2.1 / Hibernate ORM 4.3 compatibility</p>
+                      <div class="ui right aligned basic segment">
+                        <a class="ui right labeled icon button primary" href="./4.5/">
+                          <i class="right arrow icon"></i>
+                          More info
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="ui raised segment version">
+                      <span class="ui right ribbon label green">
+                        stable
+                      </span>
+                      <h3 class="ui header">
+                        4.4
+                        <small>
+                          2014-12-02
+                        </small>
+                      </h3>
+                      <p>Dynamic index sharding, new Metadata API, Hibernate ORM 4.2.x compatible</p>
+                      <div class="ui right aligned basic segment">
+                        <a class="ui right labeled icon button primary" href="./4.4/">
+                          <i class="right arrow icon"></i>
+                          More info
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <h2 id="compatibility-matrix">Compatibility matrix</h2>
               <table class="ui table stackable celled striped">
                 <thead>
@@ -758,7 +913,8 @@
               <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
               <script>
                 $(document).ready(function() {
-                  $('.series .segment.version').matchHeight({ byRow: false });
+                  $('.active-series .segment.version').matchHeight({ byRow: false });
+                  $('.older-series .segment.version').matchHeight({ byRow: false });
                 });
               </script>
             </div>
