@@ -1,4 +1,8 @@
-<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script>
       var stable_releases = [];
       stable_releases.push('5.2.11.Final');
       stable_releases.push('5.2.10.Final');
@@ -68,7 +72,9 @@
       stable_releases.push('4.2.2.Final');
       stable_releases.push('4.2.1.Final');
       stable_releases.push('4.2.0.Final');
-    </script> </head> <script>
+    </script>
+  </head>
+  <script>
       var versionTokens = stable_releases[0].split(".");
       var latestVersionPath = versionTokens[0] + "." + versionTokens[1] + "/";
   
@@ -78,4 +84,5 @@
       document.getElementsByTagName('head')[0].appendChild(meta);
   
       window.location = latestVersionPath;
-  </script> </html>
+  </script>
+</html>

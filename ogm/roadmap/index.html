@@ -1,12 +1,1257 @@
-<!DOCTYPE html> <html lang="en"> <head> <title>Roadmap - Hibernate OGM</title> <meta charset="utf-8"> <meta content="width=device-width, initial-scale=1.0" name="viewport"> <meta content="" name="description"> <meta content="Davide D'Alto" name="author"> <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet"> <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet"> <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet"> <link href="../../stylesheets/styles.css?new" media="screen" rel="stylesheet"> <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"> <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script> <script src="https://static.jboss.org/js/_jbossorg-tabzilla.js"></script> </head> <body> <div class="ui vertical inverted sidebar left overlay" id="mobile-menu"> <div class="ui vertical fluid inverted text menu accordion"> <div class="item"> <a class="title"> <i class="database grid icon"></i> <i class="dropdown icon"></i> <strong>ORM</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/orm/"> <i class="grid home icon"></i> About </a> <a class="item" href="/orm/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/orm/documentation/"> <i class="folder grid icon open"></i> Documentation </a> <a class="item" href="/orm/books/"> <i class="book grid icon"></i> Books </a> <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides"> <i class="grid icon share"></i> Migration guides </a> <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/orm/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/orm/envers/"> <i class="grid icon time"></i> Envers </a> <a class="item" href="/orm/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/orm/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/orm/certification/"> <i class="certificate grid icon"></i> Get Certified </a> <a class="item" href="/orm/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="grid icon search"></i> <i class="dropdown icon"></i> <strong>Search</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/search/"> <i class="grid home icon"></i> About </a> <a class="item" href="/search/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/search/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/search/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/search/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/search/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/search/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/search/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="box checkmark grid icon"></i> <i class="dropdown icon"></i> <strong>Validator</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/validator/"> <i class="grid home icon"></i> About </a> <a class="item" href="/validator/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/validator/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/validator/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/validator/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/validator/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/validator/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/validator/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="active title"> <i class="grid icon sitemap"></i> <i class="dropdown icon"></i> <strong>OGM</strong> </a> <div class="active content"> <div class="menu internal-links"> <a class="item" href="/ogm/"> <i class="grid home icon"></i> About </a> <a class="item" href="/ogm/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/ogm/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="active item" href="/ogm/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/ogm/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/ogm/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/ogm/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="grid icon wrench"></i> <i class="dropdown icon"></i> <strong>Tools</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/tools/"> <i class="grid home icon"></i> About </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <a class="item" href="/others/"> Others </a> <a class="item" href="http://in.relation.to/"> Blog </a> <a class="item" href="https://twitter.com/hibernate/"> <i class="icon twitter"></i> Follow us </a> </div> </div> <div class="pusher"> <div class="mobile-menu-button-bar mobile only"> <a class="item" id="mobile-menu-toggle"> <i class="sidebar icon"></i> Menu </a> </div> <ul class="sr-only"> <li> <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a> </li> <li> <a accesskey="c" href="#content" title="Skip to content">Skip to content</a> </li> </ul> <div class="ui container banner"> <div class="logo"> <a href="/"> <img height="50" src="https://static.jboss.org/hibernate/images/hibernate_logo_whitebkg_200px.png" width="200"> </a> </div> <div class="dropup mobile hidden" id="redhat-button"> <div class="tabnav-closed" href="#" id="tab">Red Hat</div> </div> <div class="clearfix"></div> <div class="ui stackable menu mobile hidden" id="nav"> <a class="item" href="/orm/">ORM</a> <a class="item" href="/search/">Search</a> <a class="item" href="/validator/">Validator</a> <a class="active item" href="/ogm/">OGM</a> <a class="item" href="/tools/">Tools</a> <a class="item" href="/others/">Others</a> <div class="right menu"> <a class="item" href="http://in.relation.to/">Blog</a> <a class="item" href="/community/">Community</a> <a class="item" href="https://twitter.com/hibernate"> <i class="twitter icon"></i> Follow us </a> </div> </div> </div> <script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Roadmap - Hibernate OGM</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="Davide D'Alto" name="author">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
+    <link href="../../stylesheets/styles.min.css?new" media="screen" rel="stylesheet">
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+    <!-- Tabzilla does not support minification -->
+    <script src="https://static.jboss.org/js/_jbossorg-tabzilla.js"></script>
+  </head>
+  <body>
+    <div class="ui vertical inverted sidebar left overlay" id="mobile-menu">
+      <div class="ui vertical fluid inverted text menu accordion">
+        <div class="item">
+          <a class="title">
+            <i class="database grid icon"></i>
+            <i class="dropdown icon"></i>
+            <strong>ORM</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/orm/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/orm/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/orm/documentation/">
+                <i class="folder grid icon open"></i>
+                Documentation
+              </a>
+              <a class="item" href="/orm/books/">
+                <i class="book grid icon"></i>
+                Books
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                <i class="grid icon share"></i>
+                Migration guides
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/orm/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/orm/envers/">
+                <i class="grid icon time"></i>
+                Envers
+              </a>
+              <a class="item" href="/orm/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/orm/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/orm/certification/">
+                <i class="certificate grid icon"></i>
+                Get Certified
+              </a>
+              <a class="item" href="/orm/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="grid icon search"></i>
+            <i class="dropdown icon"></i>
+            <strong>Search</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/search/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/search/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/search/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/search/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/search/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/search/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/search/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/search/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="box checkmark grid icon"></i>
+            <i class="dropdown icon"></i>
+            <strong>Validator</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/validator/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/validator/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/validator/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/validator/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/validator/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/validator/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/validator/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/validator/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="active title">
+            <i class="grid icon sitemap"></i>
+            <i class="dropdown icon"></i>
+            <strong>OGM</strong>
+          </a>
+          <div class="active content">
+            <div class="menu internal-links">
+              <a class="item" href="/ogm/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/ogm/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/ogm/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="active item" href="/ogm/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/ogm/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/ogm/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/ogm/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="grid icon wrench"></i>
+            <i class="dropdown icon"></i>
+            <strong>Tools</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/tools/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="item" href="/others/">
+          Others
+        </a>
+        <a class="item" href="http://in.relation.to/">
+          Blog
+        </a>
+        <a class="item" href="https://twitter.com/hibernate/">
+          <i class="icon twitter"></i>
+          Follow us
+        </a>
+      </div>
+    </div>
+    <div class="pusher">
+      <div class="mobile-menu-button-bar mobile only">
+        <a class="item" id="mobile-menu-toggle">
+          <i class="sidebar icon"></i>
+          Menu
+        </a>
+      </div>
+      <!-- begin accesibility skip to top -->
+      <ul class="sr-only">
+        <li>
+          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+        </li>
+        <li>
+          <a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+        </li>
+      </ul>
+      <div class="ui container banner">
+        <div class="logo">
+          <a href="/">
+            <img height="50" src="https://static.jboss.org/hibernate/images/hibernate_logo_whitebkg_200px.png" width="200">
+          </a>
+        </div>
+        <!-- Red Hat link at the top -->
+        <div class="dropup mobile hidden" id="redhat-button">
+          <div class="tabnav-closed" href="#" id="tab">Red Hat</div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="ui stackable menu mobile hidden" id="nav">
+          <a class="item" href="/orm/">ORM</a>
+          <a class="item" href="/search/">Search</a>
+          <a class="item" href="/validator/">Validator</a>
+          <a class="active item" href="/ogm/">OGM</a>
+          <a class="item" href="/tools/">Tools</a>
+          <a class="item" href="/others/">Others</a>
+          <div class="right menu">
+            <a class="item" href="http://in.relation.to/">Blog</a>
+            <a class="item" href="/community/">Community</a>
+            <a class="item" href="https://twitter.com/hibernate">
+              <i class="twitter icon"></i>
+              Follow us
+            </a>
+          </div>
+        </div>
+      </div>
+      <script>
         var displayed_series = [];
         displayed_series.push('5.2');
         displayed_series.push('5.1');
-      </script> <div class="ui container-fluid"> <div class="jumbotron small"> <div class="ui container"> <div class="ui grid stackable"> <div class="column row"> <div class="column twelve wide middle aligned"> <h1> <span> Hibernate OGM </span> </h1> <h2> <span> Roadmap </span> </h2> </div> <div class="column four wide middle aligned"> </div> </div> </div> </div> </div> </div> <div class="ui container page-content"> <div class="ui stackable grid"> <div class="column three wide computer only"> <div class="ui fluid vertical menu"> <a class="item" href=".."> <i class="grid home icon"></i> About </a> <div class="dropdown item link ui"> Releases <i class="icon dropdown"></i> <div class="menu"> <a class="item" href="../releases"> Overview </a> <a class="item" href="../releases/5.2"> 5.2 </a> <a class="item" href="../releases/5.1"> 5.1 </a> </div> </div> <a class="item" href="../documentation"> <i class="book grid icon"></i> Documentation </a> <a class="item selected" href="."> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="../contribute"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="../support"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="../faq"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="ui fluid vertical menu"> <a class="item" href="https://github.com/hibernate/hibernate-ogm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/OGM"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org/viewforum.php?f=31"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="http://ci.hibernate.org/job/hibernate-ogm-master/"> <i class="grid icon treatment"></i> CI </a> <a class="item" href="https://community.jboss.org/en/hibernate/ogm"> <i class="edit grid icon"></i> Wiki </a> </div> <hr> <div class="license"> Released under the <a href="http://www.gnu.org/licenses/lgpl.html">LGPL</a> </div> </div> <div class="column thirteen wide computer sixteen wide mobile"> <div class="content" id="content"> <div id="preamble"> <div class="sectionbody"> <div class="paragraph"> <p>Hibernate OGM is community driven. As such the roadmap constantly evolves to reflect the users needs. You can find a finer grained roadmap in our <a href="https://hibernate.atlassian.net/browse/OGM">issue tracker</a> but this page is a good and concise view of where we are going. Dates are generally omitted, we release when we are ready.</p> </div> </div> <div id="toc" class="toc"> <div id="toctitle">Releases</div> <ul class="sectlevel1"> <li><a href="#future-releases">Future releases</a> <ul class="sectlevel2"> <li><a href="#hibernate-ogm-5-2">Hibernate OGM 5.2</a></li> <li><a href="#hibernate-ogm-next">Hibernate OGM Next</a></li> </ul> </li> <li><a href="#past-releases">Past releases</a> <ul class="sectlevel2"> <li><a href="#hibernate-ogm-5-2-0-alpha1">Hibernate OGM 5.2.0.Alpha1</a></li> <li><a href="#hibernate-ogm-5-1-0-final">Hibernate OGM 5.1.0.Final</a></li> <li><a href="#hibernate-ogm-5-1-0-cr1">Hibernate OGM 5.1.0.CR1</a></li> <li><a href="#hibernate-ogm-5-1-0-beta3">Hibernate OGM 5.1.0.Beta3</a></li> <li><a href="#hibernate-ogm-5-1-0-beta1">Hibernate OGM 5.1.0.Beta1</a></li> <li><a href="#hibernate-ogm-5-1-0-alpha1">Hibernate OGM 5.1.0.Alpha1</a></li> <li><a href="#hibernate-ogm-5-0">Hibernate OGM 5.0</a></li> <li><a href="#hibernate-ogm-5-0-0-cr1">Hibernate OGM 5.0.0.CR1</a></li> <li><a href="#hibernate-ogm-5-0-0-alpha1">Hibernate OGM 5.0.0.Alpha1</a></li> <li><a href="#hibernate-ogm-4-2-final">Hibernate OGM 4.2 Final</a></li> <li><a href="#hibernate-ogm-4-2-cr1">Hibernate OGM 4.2 CR1</a></li> <li><a href="#hibernate-ogm-4-2-beta1">Hibernate OGM 4.2 Beta1</a></li> <li><a href="#hibernate-ogm-4-1">Hibernate OGM 4.1</a> <ul class="sectlevel3"> <li><a href="#additional-query-support">Additional query support</a></li> </ul> </li> <li><a href="#hibernate-ogm-4-1-beta-cr1">Hibernate OGM 4.1 Beta CR1</a></li> <li><a href="#hibernate-ogm-4-1-beta-8">Hibernate OGM 4.1 Beta 8</a></li> <li><a href="#hibernate-ogm-4-1-beta-7">Hibernate OGM 4.1 Beta 7</a></li> <li><a href="#hibernate-ogm-4-1-beta-6">Hibernate OGM 4.1 Beta 6</a></li> <li><a href="#hibernate-ogm-4-1-beta-5">Hibernate OGM 4.1 Beta 5</a></li> <li><a href="#hibernate-ogm-4-1-beta-4">Hibernate OGM 4.1 Beta 4</a></li> <li><a href="#hibernate-ogm-4-1-beta-3">Hibernate OGM 4.1 Beta 3</a></li> <li><a href="#hibernate-ogm-4-1-beta-2">Hibernate OGM 4.1 Beta 2</a></li> <li><a href="#hibernate-ogm-4-1-beta-1">Hibernate OGM 4.1 Beta 1</a></li> <li><a href="#hibernate-ogm-4-0-beta4">Hibernate OGM 4.0 Beta4</a></li> <li><a href="#hibernate-ogm-4-0-beta3">Hibernate OGM 4.0 Beta3</a></li> </ul> </li> </ul> </div> </div> <div class="sect1"> <h2 id="future-releases"><a class="anchor" href="#future-releases"></a>Future releases</h2> <div class="sectionbody"> <div class="paragraph"> <p>Describe plans for future releases.</p> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-2"><a class="anchor" href="#hibernate-ogm-5-2"></a>Hibernate OGM 5.2</h3> <div class="dlist"> <dl> <dt class="hdlist1">Mapping strategies</dt> <dd> <p>Rethink the default values for the mapping approaches after more user feedback. A backward compatible mode will be kept however.</p> </dd> <dt class="hdlist1">Custom types</dt> <dd> <p>Offer custom types like Hibernate ORM&#8217;s user type.</p> </dd> <dt class="hdlist1">Polish of Infinispan Remote dialect</dt> <dd> <p>This dialect needs some love before being promoted.</p> </dd> <dt class="hdlist1">Offer per session and per statement option customization</dt> <dd> <p>e.g. for a given call, influence the quorum factor</p> </dd> <dt class="hdlist1">General NoSQL and query depth and breath improvements</dt> <dd> <p>Continue mapping of query engine on other NoSQL Continue coverage of breath of supported queries</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-next"><a class="anchor" href="#hibernate-ogm-next"></a>Hibernate OGM Next</h3> <div class="dlist"> <dl> <dt class="hdlist1">Denormalization engine</dt> <dd> <p>Offer ability to store data in different structures denormalized. Let loading and queries use these denormalized versions for faster retrieval. The goal is to offer a declarative approach instead of the imperative approach used usually in the NoSQL land.</p> </dd> <dt class="hdlist1">Migration engine</dt> <dd> <p>Offer options to support transparent migrations when (non)schema has migrated. Annotation based or API based.<br> For example, one would rename a property from a to b, the migration engine will know that, read the old value if present, and migrate to the new schema.</p> </dd> <dt class="hdlist1">Polyglot persistence</dt> <dd> <p>Offer ability to store entities into different backends. Entities could be in either backends.</p> </dd> <dt class="hdlist1">Write-behind cross-backends</dt> <dd> <p>Offer ability to store into two backends. In particular, store data in a NoSQL backend and a relational database.</p> </dd> </dl> </div> </div> </div> </div> <div class="sect1"> <h2 id="past-releases"><a class="anchor" href="#past-releases"></a>Past releases</h2> <div class="sectionbody"> <div class="paragraph"> <p>An aggregated changelog of what has happened. We are too lazy to go back down to the history of time so we will start at 4.0 Beta 3.</p> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-2-0-alpha1"><a class="anchor" href="#hibernate-ogm-5-2-0-alpha1"></a>Hibernate OGM 5.2.0.Alpha1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Move dialects</dt> <dd> <p>Couchdb, Redis, Cassandra and Ehcache are now in separated repositories</p> </dd> <dt class="hdlist1">Infinispan</dt> <dd> <p>Support for grouping operations</p> </dd> <dt class="hdlist1">MongoDB</dt> <dd> <p>Support distinct operation in native queries Support map-reduce operation in native queries Remove Fongo dialect</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-1-0-final"><a class="anchor" href="#hibernate-ogm-5-1-0-final"></a>Hibernate OGM 5.1.0.Final</h3> <div class="dlist"> <dl> <dt class="hdlist1">Minor improvements over 5.1.0.CR1</dt> <dd> <p>Expands documentation about WildFly configuration</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-1-0-cr1"><a class="anchor" href="#hibernate-ogm-5-1-0-cr1"></a>Hibernate OGM 5.1.0.CR1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Upgrade to Hibernate Search 5.5.6</dt> <dd> <p>Supports indexing and fulltext search with Elasticsearch.</p> </dd> <dt class="hdlist1">MongoDB aggregation</dt> <dd> <p>Suuports aggregate operation for MongoDB native queries.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-1-0-beta3"><a class="anchor" href="#hibernate-ogm-5-1-0-beta3"></a>Hibernate OGM 5.1.0.Beta3</h3> <div class="dlist"> <dl> <dt class="hdlist1">Sequence generation</dt> <dd> <p>Before this release the generation of sequences wasn&#8217;t thred-safe on some dialects.</p> </dd> <dt class="hdlist1">Queries on entities using single table inheritance</dt> <dd> <p>Hibernate OGM will now append the right discriminator check on HQL queries.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-1-0-beta1"><a class="anchor" href="#hibernate-ogm-5-1-0-beta1"></a>Hibernate OGM 5.1.0.Beta1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Hot Rod integration</dt> <dd> <p>Offer ability to store data in Infinispan using the Hot Rod protocol.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-1-0-alpha1"><a class="anchor" href="#hibernate-ogm-5-1-0-alpha1"></a>Hibernate OGM 5.1.0.Alpha1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Neo4j remote integration</dt> <dd> <p>Offer ability to store data in Neo4j using the HTTP interface or the Bolt protocol.</p> </dd> <dt class="hdlist1">Group operations</dt> <dd> <p>Starts the re-work about grouping operations before executing them on the datastore.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-0"><a class="anchor" href="#hibernate-ogm-5-0"></a>Hibernate OGM 5.0</h3> <div class="dlist"> <dl> <dt class="hdlist1">Cassandra</dt> <dd> <p>Store <code>java.math.BigDecimal</code> using native <code>decimal</code> type.</p> </dd> <dt class="hdlist1">MongoDB</dt> <dd> <p>Support functions with MongoDB CLI native queries.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-0-0-cr1"><a class="anchor" href="#hibernate-ogm-5-0-0-cr1"></a>Hibernate OGM 5.0.0.CR1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Redis improvements</dt> <dd> <p>Redis Cluster support<br> New hash mapping dialect</p> </dd> <dt class="hdlist1">MongoDB improvements</dt> <dd> <p>Run findOne, findOne, findAndModify, insert, remove and update native queries using the experimental MongoDB CLI syntax</p> </dd> <dt class="hdlist1">Cassandra improvements</dt> <dd> <p>Store <code>java.util.UUID</code> using native <code>uuid</code> type</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-5-0-0-alpha1"><a class="anchor" href="#hibernate-ogm-5-0-0-alpha1"></a>Hibernate OGM 5.0.0.Alpha1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Migrate to Hibernate ORM 5</dt> <dd> <p>Migrated to Hibernate ORM 5.0</p> </dd> <dt class="hdlist1">Redis support</dt> <dd> <p>New experimental backend for Redis K/V store</p> </dd> <dt class="hdlist1">MongoDB improvements</dt> <dd> <p>Update to MongoDB driver 3.0<br> Map-typed properties are stored more naturally in MongoDB</p> </dd> <dt class="hdlist1">Multi-get</dt> <dd> <p>New dialect facet MultigetGridDialect for batch fetching lazy entities</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-2-final"><a class="anchor" href="#hibernate-ogm-4-2-final"></a>Hibernate OGM 4.2 Final</h3> <div class="dlist"> <dl> <dt class="hdlist1">JP-QL Improvements</dt> <dd> <p>Support filters on embedded id for Neo4j and MongoDB</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-2-cr1"><a class="anchor" href="#hibernate-ogm-4-2-cr1"></a>Hibernate OGM 4.2 CR1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Exploration of Cassandra</dt> <dd> <p>Implement the Cassandra datastore and its CQL query backend.</p> </dd> <dt class="hdlist1">Support for MongoDB 3 (SCRAM-SHA-1) and MongoDB replica sets</dt> <dd> <p>Extended syntax for "host" setting for specifying several hosts</p> </dd> <dt class="hdlist1">New built-in types for boolean mapping</dt> <dd> <p>Map booleans as "Y"/"N", "T"/"F", 1/0</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-2-beta1"><a class="anchor" href="#hibernate-ogm-4-2-beta1"></a>Hibernate OGM 4.2 Beta1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Error report and compensation API</dt> <dd> <p>Offer the ability to collect errors on partially executed "transactions". Offer ability to react to these errors.</p> </dd> <dt class="hdlist1">Various query improvements</dt> <dd> <div class="ulist"> <ul> <li> <p>Support for collection of embeddables</p> </li> </ul> </div> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1"><a class="anchor" href="#hibernate-ogm-4-1"></a>Hibernate OGM 4.1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Performance and stabilization</dt> <dd> <p>Review performance and overall choices before going final. In particular, database round trips and query execution speed (see below). Reuse of the data loaded between an entity and its association lookup.</p> </dd> <dt class="hdlist1">Improved Neo4j navigation</dt> <dd> <p>Explore label (Neo4j 2).<br> Support Neo4j with ability to keep node reference for cheap navigation when resolving proxies thus avoiding unnecessary lookups.</p> <div class="ulist"> <ul> <li> <p>Store tuple as data snapshot via IdentityMap or enhanced entity</p> </li> <li> <p>Use stored tuples as navigation tools instead of fetching (graph databases)</p> </li> </ul> </div> </dd> <dt class="hdlist1">Stable mapping model</dt> <dd> <p>The way data is stored is now stable. We have ironed out the last details.</p> </dd> <dt class="hdlist1">Set benchmark solution and reusable test suite with automated test</dt> <dd> <p>Start exploring benchmark solution with regular tests in a CI. Add reusable TCK for both CRUD and query support.</p> </dd> </dl> </div> <div class="sect3"> <h4 id="additional-query-support"><a class="anchor" href="#additional-query-support"></a>Additional query support</h4> <div class="dlist"> <dl> <dt class="hdlist1">Query support for Neo4j</dt> <dd> <p>Support JP-QL and native queries.</p> </dd> <dt class="hdlist1">Query support for CouchDB</dt> <dd> <p>Support JP-QL and native queries.</p> </dd> <dt class="hdlist1">Move to proper OgmLoader implementations</dt> <dd> <p>Discuss how to properly load objects via the OgmLoader approach.</p> </dd> <dt class="hdlist1">Cache query plans</dt> <dd> <p>Look at Hibernate ORM&#8217;s HQLQueryPlan which essentially caches results of a query translator which in term calls the entity loader. A similar design or even interface result is probably possible</p> </dd> <dt class="hdlist1">Various query improvements</dt> <dd> <div class="ulist"> <ul> <li> <p>Make sure flush is executed before a query.</p> </li> <li> <p>Support for projection</p> </li> </ul> </div> </dd> </dl> </div> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-cr1"><a class="anchor" href="#hibernate-ogm-4-1-beta-cr1"></a>Hibernate OGM 4.1 Beta CR1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Additional key/value cache structure</dt> <dd> <p>Store each entity type and association in a dedicated cache. Use this strategy as default since it is more eficient and it has more natural mapping.</p> </dd> <dt class="hdlist1">Improve mapping of emebedded objects, embedded ids and properties</dt> <dd> <p>Represent embedded nodes as individual nodes in Neo4j. Store emebedded id foreign keys as nested document in MongoDB.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-8"><a class="anchor" href="#hibernate-ogm-4-1-beta-8"></a>Hibernate OGM 4.1 Beta 8</h3> <div class="dlist"> <dl> <dt class="hdlist1">Optimistic locking detection</dt> <dd> <p>Support optimistic locking detection for datastores which provide atomic find-and-update operations.</p> </dd> <dt class="hdlist1">Performance improvements</dt> <dd> <p>Reduce the amount fo round trips to the datastore.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-7"><a class="anchor" href="#hibernate-ogm-4-1-beta-7"></a>Hibernate OGM 4.1 Beta 7</h3> <div class="dlist"> <dl> <dt class="hdlist1">Support ObjectId in MongoDB</dt> <dd> <p>Map object ids either directly via MongoDB’s <span class="classname">org.bson.types.ObjectId</span> type or using a String.</p> </dd> <dt class="hdlist1">API/SPI internal split</dt> <dd> <p>Clear separation among API, SPI and internal packages in preparation for the final release.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-6"><a class="anchor" href="#hibernate-ogm-4-1-beta-6"></a>Hibernate OGM 4.1 Beta 6</h3> <div class="dlist"> <dl> <dt class="hdlist1">Query improvements</dt> <dd> <div class="ulist"> <ul> <li> <p>Support polymorphic queries on datastores that don&#8217;t use Hibernate Search (Neo4j and MongoDB).</p> </li> <li> <p>All pending changes to entities of the effected types will be flushed to the datastore in order to ensure queries don&#8217;t return any stale data.</p> </li> <li> <p>Cache native queries derived from JP-QL queries.</p> </li> </ul> </div> </dd> <dt class="hdlist1">Improve associations mapping in Neo4j</dt> <dd> <p>Remove redundant properties from relationships when mapping associations in Neo4j.</p> </dd> <dt class="hdlist1">Simplified version management</dt> <dd> <p>Provide a BOM (Bill of Materials) for maven users.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-5"><a class="anchor" href="#hibernate-ogm-4-1-beta-5"></a>Hibernate OGM 4.1 Beta 5</h3> <div class="dlist"> <dl> <dt class="hdlist1">Conversion from JP-QL to Cypher</dt> <dd> <p>Convert JP-QL queries in Cypher queris when working with Neo4j.</p> </dd> <dt class="hdlist1">More natural mapping for associations in MongoDB and CouchDB</dt> <dd> <p>Use a more concise representation when storing associations.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-4"><a class="anchor" href="#hibernate-ogm-4-1-beta-4"></a>Hibernate OGM 4.1 Beta 4</h3> <div class="dlist"> <dl> <dt class="hdlist1">Support for MongoDB CLI syntax</dt> <dd> <p>Express native queries in MongoDB using the CLI syntax.</p> </dd> <dt class="hdlist1">Improve mapping of associations in Neo4j</dt> <dd> <p>In Neo4j, a bi-directional association is now mapped using a single relationship.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-3"><a class="anchor" href="#hibernate-ogm-4-1-beta-3"></a>Hibernate OGM 4.1 Beta 3</h3> <div class="dlist"> <dl> <dt class="hdlist1">Improve query support around projection and operators</dt> <dd> <div class="ulist"> <ul> <li> <p>operators =, &lt;, &#8656;, &gt;, =, IN, LIKE, BETWEEN</p> </li> <li> <p>boolean combinations: AND, OR, NOT</p> </li> <li> <p>Support for simple property projections</p> </li> </ul> </div> </dd> <dt class="hdlist1">JP-QL query support for MongoDB</dt> <dd> <p>Convert JP-QL queries into MongoQL queries and run them to retrieve entities.</p> </dd> <dt class="hdlist1">Discriminator based hierarchy</dt> <dd> <p>When using the single table per class strategy for the mapping of hierachies, a column will be added to differentiate between entity types in a hierarchy.</p> </dd> <dt class="hdlist1">Support for Hibernate Search mass indexing</dt> <dd> <p>When using Hibernate Search in conjunction with Hibernate OGM, you can now index entities using the MassIndexer</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-2"><a class="anchor" href="#hibernate-ogm-4-1-beta-2"></a>Hibernate OGM 4.1 Beta 2</h3> <div class="dlist"> <dl> <dt class="hdlist1">New integration modules</dt> <dd> <p>Add integration modules for Wildfly (ex-JBoss AS) and EAP.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-1-beta-1"><a class="anchor" href="#hibernate-ogm-4-1-beta-1"></a>Hibernate OGM 4.1 Beta 1</h3> <div class="dlist"> <dl> <dt class="hdlist1">Annotation based option system</dt> <dd> <p>Each datastore can use specific annotations to customize its behavior. The user can use either annotations or a programmatic API</p> <div class="ulist"> <ul> <li> <p>offer ability for each dialect to react to metadata specific information</p> </li> <li> <p>programmatic and annotation based</p> </li> <li> <p>for different scopes: generic, type and properties</p> </li> <li> <p>retrofit this for MongoDB&#8217;s options</p> </li> </ul> </div> </dd> <dt class="hdlist1">CRUD support for CouchDB</dt> <dd> <p>Support the CouchDB document DB to read and store entities and associations.</p> </dd> <dt class="hdlist1">JPA related improvements</dt> <dd> <p>Compatibility with JPA 2.1 and Hibernate ORM 4.3.<br> Support for the various EntityManager.createQuery methods including named queries.</p> </dd> <dt class="hdlist1">Batch changes per transactions</dt> <dd> <p>Offer the <span class="classname">GridDialect</span> the option to receive a batch of operations to execute. Some drivers are better that way and can increase the isolation level. MongoDB is the first dialect benefiting from that support.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-0-beta4"><a class="anchor" href="#hibernate-ogm-4-0-beta4"></a>Hibernate OGM 4.0 Beta4</h3> <div class="dlist"> <dl> <dt class="hdlist1">CRUD support for Neo4j</dt> <dd> <p>Support the Neo4j Graph DB to read and store entities and associations.</p> </dd> <dt class="hdlist1">Native query</dt> <dd> <p>Offer the ability to pass a native backend query and bind the result to an entity. All flexibility of the native underlying query system is available at the cost of portability.</p> </dd> <dt class="hdlist1">Use immutable metadata info to lower memory pressure</dt> <dd> <p>Data passed to the <span class="classname">GridDialect</span> are made of:</p> <div class="ulist"> <ul> <li> <p>an object specific data (id etc)</p> </li> <li> <p>an object type generic data (table name, column name etc)</p> </li> </ul> </div> <div class="paragraph"> <p>The object type information could be shared to lower memory consumption and avoid the object creation cost.</p> </div> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="hibernate-ogm-4-0-beta3"><a class="anchor" href="#hibernate-ogm-4-0-beta3"></a>Hibernate OGM 4.0 Beta3</h3> <div class="dlist"> <dl> <dt class="hdlist1">Improved query support around projection and operators</dt> <dd> <p>Supported operators =, &lt;, &lt;=, &gt;, =&gt;, IN, LIKE, BETWEEN.<br> Supported boolean combinations: AND, OR, NOT.<br> Support for simple property projections and embedded objects.</p> </dd> <dt class="hdlist1">JP-QL query support for MongoDB</dt> <dd> <p>Execute JP-QL queries as MongoDB queries.</p> </dd> <dt class="hdlist1">Discriminator based hierarchy</dt> <dd> <p>Support for hierarchy of classes using a discriminator column as defined by JPA.</p> </dd> <dt class="hdlist1">JBoss AS 7 integration module</dt> <dd> <p>Add Hibernate OGM support by copying the module in the JBoss AS module repository.</p> </dd> <dt class="hdlist1">Support for Hibernate Search mass indexing</dt> <dd> <p>Mass indexing now works out of the box when using Hibernate OGM.</p> </dd> <dt class="hdlist1">Upgrade to Hibernate ORM 4.2 and JPA 2.1</dt> </dl> </div> </div> </div> </div> </div> </div> </div> </div> <script>
+      </script>
+      <div class="ui container-fluid">
+        <div class="jumbotron small">
+          <div class="ui container">
+            <div class="ui grid stackable">
+              <div class="column row">
+                <div class="column twelve wide middle aligned">
+                  <h1>
+                    <span>
+                      Hibernate OGM
+                    </span>
+                  </h1>
+                  <h2>
+                    <span>
+                      Roadmap
+                    </span>
+                  </h2>
+                </div>
+                <div class="column four wide middle aligned">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ui container page-content">
+        <div class="ui stackable grid">
+          <div class="column three wide computer only">
+            <div class="ui fluid vertical menu">
+              <a class="item" href="..">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <div class="dropdown item link ui">
+                Releases
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="../releases">
+                    Overview
+                  </a>
+                  <a class="item" href="../releases/5.2">
+                    5.2
+                  </a>
+                  <a class="item" href="../releases/5.1">
+                    5.1
+                  </a>
+                </div>
+              </div>
+              <a class="item" href="../documentation">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item selected" href=".">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="../contribute">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="../support">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="../faq">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="ui fluid vertical menu">
+              <a class="item" href="https://github.com/hibernate/hibernate-ogm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/OGM">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org/viewforum.php?f=31">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="http://ci.hibernate.org/job/hibernate-ogm-master/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate/ogm">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+            </div>
+            <hr>
+            <div class="license">
+              Released under the
+              <a href="http://www.gnu.org/licenses/lgpl.html">LGPL</a>
+            </div>
+          </div>
+          <div class="column thirteen wide computer sixteen wide mobile">
+            <div class="content" id="content">
+              <div id="preamble">
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>Hibernate OGM is community driven.
+              As such the roadmap constantly evolves to reflect the users needs.
+              You can find a finer grained roadmap in our <a href="https://hibernate.atlassian.net/browse/OGM">issue tracker</a>
+              but this page is a good and concise view of where we are going.
+              Dates are generally omitted, we release when we are ready.</p>
+              </div>
+              </div>
+              <div id="toc" class="toc">
+              <div id="toctitle">Releases</div>
+              <ul class="sectlevel1">
+              <li><a href="#future-releases">Future releases</a>
+              <ul class="sectlevel2">
+              <li><a href="#hibernate-ogm-5-2">Hibernate OGM 5.2</a></li>
+              <li><a href="#hibernate-ogm-next">Hibernate OGM Next</a></li>
+              </ul>
+              </li>
+              <li><a href="#past-releases">Past releases</a>
+              <ul class="sectlevel2">
+              <li><a href="#hibernate-ogm-5-2-0-alpha1">Hibernate OGM 5.2.0.Alpha1</a></li>
+              <li><a href="#hibernate-ogm-5-1-0-final">Hibernate OGM 5.1.0.Final</a></li>
+              <li><a href="#hibernate-ogm-5-1-0-cr1">Hibernate OGM 5.1.0.CR1</a></li>
+              <li><a href="#hibernate-ogm-5-1-0-beta3">Hibernate OGM 5.1.0.Beta3</a></li>
+              <li><a href="#hibernate-ogm-5-1-0-beta1">Hibernate OGM 5.1.0.Beta1</a></li>
+              <li><a href="#hibernate-ogm-5-1-0-alpha1">Hibernate OGM 5.1.0.Alpha1</a></li>
+              <li><a href="#hibernate-ogm-5-0">Hibernate OGM 5.0</a></li>
+              <li><a href="#hibernate-ogm-5-0-0-cr1">Hibernate OGM 5.0.0.CR1</a></li>
+              <li><a href="#hibernate-ogm-5-0-0-alpha1">Hibernate OGM 5.0.0.Alpha1</a></li>
+              <li><a href="#hibernate-ogm-4-2-final">Hibernate OGM 4.2 Final</a></li>
+              <li><a href="#hibernate-ogm-4-2-cr1">Hibernate OGM 4.2 CR1</a></li>
+              <li><a href="#hibernate-ogm-4-2-beta1">Hibernate OGM 4.2 Beta1</a></li>
+              <li><a href="#hibernate-ogm-4-1">Hibernate OGM 4.1</a>
+              <ul class="sectlevel3">
+              <li><a href="#additional-query-support">Additional query support</a></li>
+              </ul>
+              </li>
+              <li><a href="#hibernate-ogm-4-1-beta-cr1">Hibernate OGM 4.1 Beta CR1</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-8">Hibernate OGM 4.1 Beta 8</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-7">Hibernate OGM 4.1 Beta 7</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-6">Hibernate OGM 4.1 Beta 6</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-5">Hibernate OGM 4.1 Beta 5</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-4">Hibernate OGM 4.1 Beta 4</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-3">Hibernate OGM 4.1 Beta 3</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-2">Hibernate OGM 4.1 Beta 2</a></li>
+              <li><a href="#hibernate-ogm-4-1-beta-1">Hibernate OGM 4.1 Beta 1</a></li>
+              <li><a href="#hibernate-ogm-4-0-beta4">Hibernate OGM 4.0 Beta4</a></li>
+              <li><a href="#hibernate-ogm-4-0-beta3">Hibernate OGM 4.0 Beta3</a></li>
+              </ul>
+              </li>
+              </ul>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="future-releases"><a class="anchor" href="#future-releases"></a>Future releases</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>Describe plans for future releases.</p>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-2"><a class="anchor" href="#hibernate-ogm-5-2"></a>Hibernate OGM 5.2</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Mapping strategies</dt>
+              <dd>
+              <p>Rethink the default values for the mapping approaches after more user feedback.
+              A backward compatible mode will be kept however.</p>
+              </dd>
+              <dt class="hdlist1">Custom types</dt>
+              <dd>
+              <p>Offer custom types like Hibernate ORM&#8217;s user type.</p>
+              </dd>
+              <dt class="hdlist1">Polish of Infinispan Remote dialect</dt>
+              <dd>
+              <p>This dialect needs some love before being promoted.</p>
+              </dd>
+              <dt class="hdlist1">Offer per session and per statement option customization</dt>
+              <dd>
+              <p>e.g. for a given call, influence the quorum factor</p>
+              </dd>
+              <dt class="hdlist1">General NoSQL and query depth and breath improvements</dt>
+              <dd>
+              <p>Continue mapping of query engine on other NoSQL
+              Continue coverage of breath of supported queries</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-next"><a class="anchor" href="#hibernate-ogm-next"></a>Hibernate OGM Next</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Denormalization engine</dt>
+              <dd>
+              <p>Offer ability to store data in different structures denormalized.
+              Let loading and queries use these denormalized versions for faster retrieval.
+              The goal is to offer a declarative approach
+              instead of the imperative approach used usually in the NoSQL land.</p>
+              </dd>
+              <dt class="hdlist1">Migration engine</dt>
+              <dd>
+              <p>Offer options to support transparent migrations when (non)schema has migrated.
+              Annotation based or API based.<br>
+              For example, one would rename a property from a to b,
+              the migration engine will know that, read the old value if present,
+              and migrate to the new schema.</p>
+              </dd>
+              <dt class="hdlist1">Polyglot persistence</dt>
+              <dd>
+              <p>Offer ability to store entities into different backends.
+              Entities could be in either backends.</p>
+              </dd>
+              <dt class="hdlist1">Write-behind cross-backends</dt>
+              <dd>
+              <p>Offer ability to store into two backends.
+              In particular, store data in a NoSQL backend and a relational database.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="past-releases"><a class="anchor" href="#past-releases"></a>Past releases</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>An aggregated changelog of what has happened.
+              We are too lazy to go back down to the history of time
+              so we will start at 4.0 Beta 3.</p>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-2-0-alpha1"><a class="anchor" href="#hibernate-ogm-5-2-0-alpha1"></a>Hibernate OGM 5.2.0.Alpha1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Move dialects</dt>
+              <dd>
+              <p>Couchdb, Redis, Cassandra and Ehcache are now in separated repositories</p>
+              </dd>
+              <dt class="hdlist1">Infinispan</dt>
+              <dd>
+              <p>Support for grouping operations</p>
+              </dd>
+              <dt class="hdlist1">MongoDB</dt>
+              <dd>
+              <p>Support distinct operation in native queries
+              Support map-reduce operation in native queries
+              Remove Fongo dialect</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-1-0-final"><a class="anchor" href="#hibernate-ogm-5-1-0-final"></a>Hibernate OGM 5.1.0.Final</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Minor improvements over 5.1.0.CR1</dt>
+              <dd>
+              <p>Expands documentation about WildFly configuration</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-1-0-cr1"><a class="anchor" href="#hibernate-ogm-5-1-0-cr1"></a>Hibernate OGM 5.1.0.CR1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Upgrade to Hibernate Search 5.5.6</dt>
+              <dd>
+              <p>Supports indexing and fulltext search with Elasticsearch.</p>
+              </dd>
+              <dt class="hdlist1">MongoDB aggregation</dt>
+              <dd>
+              <p>Suuports aggregate operation for MongoDB native queries.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-1-0-beta3"><a class="anchor" href="#hibernate-ogm-5-1-0-beta3"></a>Hibernate OGM 5.1.0.Beta3</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Sequence generation</dt>
+              <dd>
+              <p>Before this release the generation of sequences wasn&#8217;t thred-safe on some dialects.</p>
+              </dd>
+              <dt class="hdlist1">Queries on entities using single table inheritance</dt>
+              <dd>
+              <p>Hibernate OGM will now append the right discriminator check on HQL queries.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-1-0-beta1"><a class="anchor" href="#hibernate-ogm-5-1-0-beta1"></a>Hibernate OGM 5.1.0.Beta1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Hot Rod integration</dt>
+              <dd>
+              <p>Offer ability to store data in Infinispan using the Hot Rod protocol.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-1-0-alpha1"><a class="anchor" href="#hibernate-ogm-5-1-0-alpha1"></a>Hibernate OGM 5.1.0.Alpha1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Neo4j remote integration</dt>
+              <dd>
+              <p>Offer ability to store data in Neo4j using the HTTP interface or the Bolt protocol.</p>
+              </dd>
+              <dt class="hdlist1">Group operations</dt>
+              <dd>
+              <p>Starts the re-work about grouping operations before executing them on the datastore.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-0"><a class="anchor" href="#hibernate-ogm-5-0"></a>Hibernate OGM 5.0</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Cassandra</dt>
+              <dd>
+              <p>Store <code>java.math.BigDecimal</code> using native <code>decimal</code> type.</p>
+              </dd>
+              <dt class="hdlist1">MongoDB</dt>
+              <dd>
+              <p>Support functions with MongoDB CLI native queries.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-0-0-cr1"><a class="anchor" href="#hibernate-ogm-5-0-0-cr1"></a>Hibernate OGM 5.0.0.CR1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Redis improvements</dt>
+              <dd>
+              <p>Redis Cluster support<br>
+              New hash mapping dialect</p>
+              </dd>
+              <dt class="hdlist1">MongoDB improvements</dt>
+              <dd>
+              <p>Run findOne, findOne, findAndModify, insert, remove and update native queries using the
+              experimental MongoDB CLI syntax</p>
+              </dd>
+              <dt class="hdlist1">Cassandra improvements</dt>
+              <dd>
+              <p>Store <code>java.util.UUID</code> using native <code>uuid</code> type</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-5-0-0-alpha1"><a class="anchor" href="#hibernate-ogm-5-0-0-alpha1"></a>Hibernate OGM 5.0.0.Alpha1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Migrate to Hibernate ORM 5</dt>
+              <dd>
+              <p>Migrated to Hibernate ORM 5.0</p>
+              </dd>
+              <dt class="hdlist1">Redis support</dt>
+              <dd>
+              <p>New experimental backend for Redis K/V store</p>
+              </dd>
+              <dt class="hdlist1">MongoDB improvements</dt>
+              <dd>
+              <p>Update to MongoDB driver 3.0<br>
+              Map-typed properties are stored more naturally in MongoDB</p>
+              </dd>
+              <dt class="hdlist1">Multi-get</dt>
+              <dd>
+              <p>New dialect facet MultigetGridDialect for batch fetching lazy entities</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-2-final"><a class="anchor" href="#hibernate-ogm-4-2-final"></a>Hibernate OGM 4.2 Final</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">JP-QL Improvements</dt>
+              <dd>
+              <p>Support filters on embedded id for Neo4j and MongoDB</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-2-cr1"><a class="anchor" href="#hibernate-ogm-4-2-cr1"></a>Hibernate OGM 4.2 CR1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Exploration of Cassandra</dt>
+              <dd>
+              <p>Implement the Cassandra datastore and its CQL query backend.</p>
+              </dd>
+              <dt class="hdlist1">Support for MongoDB 3 (SCRAM-SHA-1) and MongoDB replica sets</dt>
+              <dd>
+              <p>Extended syntax for "host" setting for specifying several hosts</p>
+              </dd>
+              <dt class="hdlist1">New built-in types for boolean mapping</dt>
+              <dd>
+              <p>Map booleans as "Y"/"N", "T"/"F", 1/0</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-2-beta1"><a class="anchor" href="#hibernate-ogm-4-2-beta1"></a>Hibernate OGM 4.2 Beta1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Error report and compensation API</dt>
+              <dd>
+              <p>Offer the ability to collect errors on partially executed "transactions".
+              Offer ability to react to these errors.</p>
+              </dd>
+              <dt class="hdlist1">Various query improvements</dt>
+              <dd>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Support for collection of embeddables</p>
+              </li>
+              </ul>
+              </div>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1"><a class="anchor" href="#hibernate-ogm-4-1"></a>Hibernate OGM 4.1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Performance and stabilization</dt>
+              <dd>
+              <p>Review performance and overall choices before going final.
+              In particular, database round trips and query execution speed (see below).
+              Reuse of the data loaded between an entity and its association lookup.</p>
+              </dd>
+              <dt class="hdlist1">Improved Neo4j navigation</dt>
+              <dd>
+              <p>Explore label (Neo4j 2).<br>
+              Support Neo4j with ability to keep node reference for cheap navigation when resolving proxies
+              thus avoiding unnecessary lookups.</p>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Store tuple as data snapshot via IdentityMap or enhanced entity</p>
+              </li>
+              <li>
+              <p>Use stored tuples as navigation tools instead of fetching (graph databases)</p>
+              </li>
+              </ul>
+              </div>
+              </dd>
+              <dt class="hdlist1">Stable mapping model</dt>
+              <dd>
+              <p>The way data is stored is now stable.
+              We have ironed out the last details.</p>
+              </dd>
+              <dt class="hdlist1">Set benchmark solution and reusable test suite with automated test</dt>
+              <dd>
+              <p>Start exploring benchmark solution with regular tests in a CI.
+              Add reusable TCK for both CRUD and query support.</p>
+              </dd>
+              </dl>
+              </div>
+              <div class="sect3">
+              <h4 id="additional-query-support"><a class="anchor" href="#additional-query-support"></a>Additional query support</h4>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Query support for Neo4j</dt>
+              <dd>
+              <p>Support JP-QL and native queries.</p>
+              </dd>
+              <dt class="hdlist1">Query support for CouchDB</dt>
+              <dd>
+              <p>Support JP-QL and native queries.</p>
+              </dd>
+              <dt class="hdlist1">Move to proper OgmLoader implementations</dt>
+              <dd>
+              <p>Discuss how to properly load objects via the OgmLoader approach.</p>
+              </dd>
+              <dt class="hdlist1">Cache query plans</dt>
+              <dd>
+              <p>Look at Hibernate ORM&#8217;s HQLQueryPlan which essentially caches results
+              of a query translator which in term calls the entity loader.
+              A similar design or even interface result is probably possible</p>
+              </dd>
+              <dt class="hdlist1">Various query improvements</dt>
+              <dd>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Make sure flush is executed before a query.</p>
+              </li>
+              <li>
+              <p>Support for projection</p>
+              </li>
+              </ul>
+              </div>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-cr1"><a class="anchor" href="#hibernate-ogm-4-1-beta-cr1"></a>Hibernate OGM 4.1 Beta CR1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Additional key/value cache structure</dt>
+              <dd>
+              <p>Store each entity type and association in a dedicated cache.
+              Use this strategy as default since it is more eficient and it has more natural mapping.</p>
+              </dd>
+              <dt class="hdlist1">Improve mapping of emebedded objects, embedded ids and properties</dt>
+              <dd>
+              <p>Represent embedded nodes as individual nodes in Neo4j.
+              Store emebedded id foreign keys as nested document in MongoDB.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-8"><a class="anchor" href="#hibernate-ogm-4-1-beta-8"></a>Hibernate OGM 4.1 Beta 8</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Optimistic locking detection</dt>
+              <dd>
+              <p>Support optimistic locking detection for datastores which provide atomic find-and-update operations.</p>
+              </dd>
+              <dt class="hdlist1">Performance improvements</dt>
+              <dd>
+              <p>Reduce the amount fo round trips to the datastore.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-7"><a class="anchor" href="#hibernate-ogm-4-1-beta-7"></a>Hibernate OGM 4.1 Beta 7</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Support ObjectId in MongoDB</dt>
+              <dd>
+              <p>Map object ids either directly via MongoDB’s <span class="classname">org.bson.types.ObjectId</span> type or using a String.</p>
+              </dd>
+              <dt class="hdlist1">API/SPI internal split</dt>
+              <dd>
+              <p>Clear separation among API, SPI and internal packages in preparation for the final release.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-6"><a class="anchor" href="#hibernate-ogm-4-1-beta-6"></a>Hibernate OGM 4.1 Beta 6</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Query improvements</dt>
+              <dd>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Support polymorphic queries on datastores that don&#8217;t use Hibernate Search (Neo4j and MongoDB).</p>
+              </li>
+              <li>
+              <p>All pending changes to entities of the effected types will be flushed to the datastore in order
+              to ensure queries don&#8217;t return any stale data.</p>
+              </li>
+              <li>
+              <p>Cache native queries derived from JP-QL queries.</p>
+              </li>
+              </ul>
+              </div>
+              </dd>
+              <dt class="hdlist1">Improve associations mapping in Neo4j</dt>
+              <dd>
+              <p>Remove redundant properties from relationships when mapping associations in Neo4j.</p>
+              </dd>
+              <dt class="hdlist1">Simplified version management</dt>
+              <dd>
+              <p>Provide a BOM (Bill of Materials) for maven users.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-5"><a class="anchor" href="#hibernate-ogm-4-1-beta-5"></a>Hibernate OGM 4.1 Beta 5</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Conversion from JP-QL to Cypher</dt>
+              <dd>
+              <p>Convert JP-QL queries in Cypher queris when working with Neo4j.</p>
+              </dd>
+              <dt class="hdlist1">More natural mapping for associations in MongoDB and CouchDB</dt>
+              <dd>
+              <p>Use a more concise representation when storing associations.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-4"><a class="anchor" href="#hibernate-ogm-4-1-beta-4"></a>Hibernate OGM 4.1 Beta 4</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Support for MongoDB CLI syntax</dt>
+              <dd>
+              <p>Express native queries in MongoDB using the CLI syntax.</p>
+              </dd>
+              <dt class="hdlist1">Improve mapping of associations in Neo4j</dt>
+              <dd>
+              <p>In Neo4j, a bi-directional association is now mapped using a single relationship.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-3"><a class="anchor" href="#hibernate-ogm-4-1-beta-3"></a>Hibernate OGM 4.1 Beta 3</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Improve query support around projection and operators</dt>
+              <dd>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>operators =, &lt;, &#8656;, &gt;, =, IN, LIKE, BETWEEN</p>
+              </li>
+              <li>
+              <p>boolean combinations: AND, OR, NOT</p>
+              </li>
+              <li>
+              <p>Support for simple property projections</p>
+              </li>
+              </ul>
+              </div>
+              </dd>
+              <dt class="hdlist1">JP-QL query support for MongoDB</dt>
+              <dd>
+              <p>Convert JP-QL queries into MongoQL queries and run them to retrieve entities.</p>
+              </dd>
+              <dt class="hdlist1">Discriminator based hierarchy</dt>
+              <dd>
+              <p>When using the single table per class strategy for the mapping of hierachies,
+              a column will be added to differentiate between entity types in a hierarchy.</p>
+              </dd>
+              <dt class="hdlist1">Support for Hibernate Search mass indexing</dt>
+              <dd>
+              <p>When using Hibernate Search in conjunction with Hibernate OGM,
+              you can now index entities using the MassIndexer</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-2"><a class="anchor" href="#hibernate-ogm-4-1-beta-2"></a>Hibernate OGM 4.1 Beta 2</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">New integration modules</dt>
+              <dd>
+              <p>Add integration modules for Wildfly (ex-JBoss AS) and EAP.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-1-beta-1"><a class="anchor" href="#hibernate-ogm-4-1-beta-1"></a>Hibernate OGM 4.1 Beta 1</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Annotation based option system</dt>
+              <dd>
+              <p>Each datastore can use specific annotations to customize its behavior.
+              The user can use either annotations or a programmatic API</p>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>offer ability for each dialect to react to metadata specific information</p>
+              </li>
+              <li>
+              <p>programmatic and annotation based</p>
+              </li>
+              <li>
+              <p>for different scopes: generic, type and properties</p>
+              </li>
+              <li>
+              <p>retrofit this for MongoDB&#8217;s options</p>
+              </li>
+              </ul>
+              </div>
+              </dd>
+              <dt class="hdlist1">CRUD support for CouchDB</dt>
+              <dd>
+              <p>Support the CouchDB document DB to read and store entities and associations.</p>
+              </dd>
+              <dt class="hdlist1">JPA related improvements</dt>
+              <dd>
+              <p>Compatibility with JPA 2.1 and Hibernate ORM 4.3.<br>
+              Support for the various EntityManager.createQuery methods including named queries.</p>
+              </dd>
+              <dt class="hdlist1">Batch changes per transactions</dt>
+              <dd>
+              <p>Offer the <span class="classname">GridDialect</span> the option to receive a batch of operations
+              to execute. Some drivers are better that way and can increase the isolation level.
+              MongoDB is the first dialect benefiting from that support.</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-0-beta4"><a class="anchor" href="#hibernate-ogm-4-0-beta4"></a>Hibernate OGM 4.0 Beta4</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">CRUD support for Neo4j</dt>
+              <dd>
+              <p>Support the Neo4j Graph DB to read and store entities and associations.</p>
+              </dd>
+              <dt class="hdlist1">Native query</dt>
+              <dd>
+              <p>Offer the ability to pass a native backend query and bind the result to an entity.
+              All flexibility of the native underlying query system is available
+              at the cost of portability.</p>
+              </dd>
+              <dt class="hdlist1">Use immutable metadata info to lower memory pressure</dt>
+              <dd>
+              <p>Data passed to the <span class="classname">GridDialect</span> are made of:</p>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>an object specific data (id etc)</p>
+              </li>
+              <li>
+              <p>an object type generic data (table name, column name etc)</p>
+              </li>
+              </ul>
+              </div>
+              <div class="paragraph">
+              <p>The object type information could be shared to lower memory consumption
+              and avoid the object creation cost.</p>
+              </div>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hibernate-ogm-4-0-beta3"><a class="anchor" href="#hibernate-ogm-4-0-beta3"></a>Hibernate OGM 4.0 Beta3</h3>
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Improved query support around projection and operators</dt>
+              <dd>
+              <p>Supported operators =, &lt;, &lt;=, &gt;, =&gt;, IN, LIKE, BETWEEN.<br>
+              Supported boolean combinations: AND, OR, NOT.<br>
+              Support for simple property projections and embedded objects.</p>
+              </dd>
+              <dt class="hdlist1">JP-QL query support for MongoDB</dt>
+              <dd>
+              <p>Execute JP-QL queries as MongoDB queries.</p>
+              </dd>
+              <dt class="hdlist1">Discriminator based hierarchy</dt>
+              <dd>
+              <p>Support for hierarchy of classes using a discriminator column as defined by JPA.</p>
+              </dd>
+              <dt class="hdlist1">JBoss AS 7 integration module</dt>
+              <dd>
+              <p>Add Hibernate OGM support by copying the module in the JBoss AS module repository.</p>
+              </dd>
+              <dt class="hdlist1">Support for Hibernate Search mass indexing</dt>
+              <dd>
+              <p>Mass indexing now works out of the box when using Hibernate OGM.</p>
+              </dd>
+              <dt class="hdlist1">Upgrade to Hibernate ORM 4.2 and JPA 2.1</dt>
+              </dl>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
         $(document).ready(function() {
           $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
         });
-      </script> <div class="ui inverted vertical footer segment"> <div class="ui container"> <div class="ui stackable inverted divided equal height stackable grid"> <div class="three wide column"> <h4 class="ui inverted header">Projects</h4> <div class="ui inverted link list"> <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a> <a class="item" href="../../search" title="Search">Hibernate Search</a> <a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a> <a class="item" href=".." title="Hibernate OGM">Hibernate OGM</a> <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a> <a class="item" href="../../others" title="Other projects">Other projects</a> </div> </div> <div class="three wide column"> <h4 class="ui inverted header">Follow us</h4> <div class="ui inverted link list"> <a class="item" href="http://in.relation.to" title="Blog">Blog</a> <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a> <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a> </div> </div> <div class="five wide column"> <h4 class="ui inverted header">Contribute and community</h4> <div class="ui inverted link list"> <a class="item" href="../../community" title="Community resources">Community resources</a> <a class="item" href="https://hibernate.atlassian.net" title="Submit a bug">Submit a bug</a> <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a> </div> </div> <div class="five wide column sponsor"> <div class="logo"> <a href="https://www.redhat.com/"> <img height="48" src="../../images/redhat.png" title="Red Hat" width="216"> </a> </div> <div class="logo"> <a href="https://developers.redhat.com/"> <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216"> </a> </div> </div> </div> </div> </div> <span class="back-to-top computer only"> <a href="javascript: void(0)">Back to top</a> </span> <script>
+      </script>
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">Projects</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href=".." title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../others" title="Other projects">Other projects</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Follow us</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="http://in.relation.to" title="Blog">Blog</a>
+                <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+                <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
+              </div>
+            </div>
+            <div class="five wide column">
+              <h4 class="ui inverted header">Contribute and community</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="../../community" title="Community resources">Community resources</a>
+                <a class="item" href="https://hibernate.atlassian.net" title="Submit a bug">Submit a bug</a>
+                <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+              </div>
+            </div>
+            <div class="five wide column sponsor">
+              <div class="logo">
+                <a href="https://www.redhat.com/">
+                  <img height="48" src="../../images/redhat.png" title="Red Hat" width="216">
+                </a>
+              </div>
+              <div class="logo">
+                <a href="https://developers.redhat.com/">
+                  <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="back-to-top computer only">
+        <a href="javascript: void(0)">Back to top</a>
+      </span>
+      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       
                           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,7 +1263,11 @@
       ga('create', 'UA-45270411-1', 'auto');
       ga('send', 'pageview');
       
-      </script> </div> </body> </html> <script>
+      </script>
+    </div>
+  </body>
+</html>
+<script>
   $(function() {
     $('#mobile-menu').sidebar('setting', {
       transition: 'overlay'

@@ -1,12 +1,983 @@
-<!DOCTYPE html> <html lang="en"> <head> <title>Contribute - Hibernate OGM</title> <meta charset="utf-8"> <meta content="width=device-width, initial-scale=1.0" name="viewport"> <meta content="" name="description"> <meta content="Emmanuel Bernard" name="author"> <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet"> <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet"> <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet"> <link href="../../stylesheets/styles.css?new" media="screen" rel="stylesheet"> <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"> <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script> <script src="https://static.jboss.org/js/_jbossorg-tabzilla.js"></script> </head> <body> <div class="ui vertical inverted sidebar left overlay" id="mobile-menu"> <div class="ui vertical fluid inverted text menu accordion"> <div class="item"> <a class="title"> <i class="database grid icon"></i> <i class="dropdown icon"></i> <strong>ORM</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/orm/"> <i class="grid home icon"></i> About </a> <a class="item" href="/orm/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/orm/documentation/"> <i class="folder grid icon open"></i> Documentation </a> <a class="item" href="/orm/books/"> <i class="book grid icon"></i> Books </a> <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides"> <i class="grid icon share"></i> Migration guides </a> <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/orm/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/orm/envers/"> <i class="grid icon time"></i> Envers </a> <a class="item" href="/orm/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/orm/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/orm/certification/"> <i class="certificate grid icon"></i> Get Certified </a> <a class="item" href="/orm/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="grid icon search"></i> <i class="dropdown icon"></i> <strong>Search</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/search/"> <i class="grid home icon"></i> About </a> <a class="item" href="/search/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/search/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/search/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/search/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/search/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/search/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/search/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="box checkmark grid icon"></i> <i class="dropdown icon"></i> <strong>Validator</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/validator/"> <i class="grid home icon"></i> About </a> <a class="item" href="/validator/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/validator/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/validator/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/validator/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/validator/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/validator/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/validator/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="active title"> <i class="grid icon sitemap"></i> <i class="dropdown icon"></i> <strong>OGM</strong> </a> <div class="active content"> <div class="menu internal-links"> <a class="item" href="/ogm/"> <i class="grid home icon"></i> About </a> <a class="item" href="/ogm/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/ogm/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/ogm/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="active item" href="/ogm/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/ogm/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/ogm/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="grid icon wrench"></i> <i class="dropdown icon"></i> <strong>Tools</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/tools/"> <i class="grid home icon"></i> About </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <a class="item" href="/others/"> Others </a> <a class="item" href="http://in.relation.to/"> Blog </a> <a class="item" href="https://twitter.com/hibernate/"> <i class="icon twitter"></i> Follow us </a> </div> </div> <div class="pusher"> <div class="mobile-menu-button-bar mobile only"> <a class="item" id="mobile-menu-toggle"> <i class="sidebar icon"></i> Menu </a> </div> <ul class="sr-only"> <li> <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a> </li> <li> <a accesskey="c" href="#content" title="Skip to content">Skip to content</a> </li> </ul> <div class="ui container banner"> <div class="logo"> <a href="/"> <img height="50" src="https://static.jboss.org/hibernate/images/hibernate_logo_whitebkg_200px.png" width="200"> </a> </div> <div class="dropup mobile hidden" id="redhat-button"> <div class="tabnav-closed" href="#" id="tab">Red Hat</div> </div> <div class="clearfix"></div> <div class="ui stackable menu mobile hidden" id="nav"> <a class="item" href="/orm/">ORM</a> <a class="item" href="/search/">Search</a> <a class="item" href="/validator/">Validator</a> <a class="active item" href="/ogm/">OGM</a> <a class="item" href="/tools/">Tools</a> <a class="item" href="/others/">Others</a> <div class="right menu"> <a class="item" href="http://in.relation.to/">Blog</a> <a class="item" href="/community/">Community</a> <a class="item" href="https://twitter.com/hibernate"> <i class="twitter icon"></i> Follow us </a> </div> </div> </div> <script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contribute - Hibernate OGM</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="Emmanuel Bernard" name="author">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
+    <link href="../../stylesheets/styles.min.css?new" media="screen" rel="stylesheet">
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+    <!-- Tabzilla does not support minification -->
+    <script src="https://static.jboss.org/js/_jbossorg-tabzilla.js"></script>
+  </head>
+  <body>
+    <div class="ui vertical inverted sidebar left overlay" id="mobile-menu">
+      <div class="ui vertical fluid inverted text menu accordion">
+        <div class="item">
+          <a class="title">
+            <i class="database grid icon"></i>
+            <i class="dropdown icon"></i>
+            <strong>ORM</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/orm/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/orm/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/orm/documentation/">
+                <i class="folder grid icon open"></i>
+                Documentation
+              </a>
+              <a class="item" href="/orm/books/">
+                <i class="book grid icon"></i>
+                Books
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                <i class="grid icon share"></i>
+                Migration guides
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/orm/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/orm/envers/">
+                <i class="grid icon time"></i>
+                Envers
+              </a>
+              <a class="item" href="/orm/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/orm/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/orm/certification/">
+                <i class="certificate grid icon"></i>
+                Get Certified
+              </a>
+              <a class="item" href="/orm/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="grid icon search"></i>
+            <i class="dropdown icon"></i>
+            <strong>Search</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/search/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/search/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/search/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/search/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/search/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/search/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/search/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/search/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="box checkmark grid icon"></i>
+            <i class="dropdown icon"></i>
+            <strong>Validator</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/validator/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/validator/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/validator/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/validator/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/validator/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/validator/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/validator/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/validator/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="active title">
+            <i class="grid icon sitemap"></i>
+            <i class="dropdown icon"></i>
+            <strong>OGM</strong>
+          </a>
+          <div class="active content">
+            <div class="menu internal-links">
+              <a class="item" href="/ogm/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/ogm/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/ogm/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/ogm/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="active item" href="/ogm/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/ogm/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/ogm/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="grid icon wrench"></i>
+            <i class="dropdown icon"></i>
+            <strong>Tools</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/tools/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="item" href="/others/">
+          Others
+        </a>
+        <a class="item" href="http://in.relation.to/">
+          Blog
+        </a>
+        <a class="item" href="https://twitter.com/hibernate/">
+          <i class="icon twitter"></i>
+          Follow us
+        </a>
+      </div>
+    </div>
+    <div class="pusher">
+      <div class="mobile-menu-button-bar mobile only">
+        <a class="item" id="mobile-menu-toggle">
+          <i class="sidebar icon"></i>
+          Menu
+        </a>
+      </div>
+      <!-- begin accesibility skip to top -->
+      <ul class="sr-only">
+        <li>
+          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+        </li>
+        <li>
+          <a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+        </li>
+      </ul>
+      <div class="ui container banner">
+        <div class="logo">
+          <a href="/">
+            <img height="50" src="https://static.jboss.org/hibernate/images/hibernate_logo_whitebkg_200px.png" width="200">
+          </a>
+        </div>
+        <!-- Red Hat link at the top -->
+        <div class="dropup mobile hidden" id="redhat-button">
+          <div class="tabnav-closed" href="#" id="tab">Red Hat</div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="ui stackable menu mobile hidden" id="nav">
+          <a class="item" href="/orm/">ORM</a>
+          <a class="item" href="/search/">Search</a>
+          <a class="item" href="/validator/">Validator</a>
+          <a class="active item" href="/ogm/">OGM</a>
+          <a class="item" href="/tools/">Tools</a>
+          <a class="item" href="/others/">Others</a>
+          <div class="right menu">
+            <a class="item" href="http://in.relation.to/">Blog</a>
+            <a class="item" href="/community/">Community</a>
+            <a class="item" href="https://twitter.com/hibernate">
+              <i class="twitter icon"></i>
+              Follow us
+            </a>
+          </div>
+        </div>
+      </div>
+      <script>
         var displayed_series = [];
         displayed_series.push('5.2');
         displayed_series.push('5.1');
-      </script> <div class="ui container-fluid"> <div class="jumbotron small"> <div class="ui container"> <div class="ui grid stackable"> <div class="column row"> <div class="column twelve wide middle aligned"> <h1> <span> Hibernate OGM </span> </h1> <h2> <span> Contribute </span> </h2> </div> <div class="column four wide middle aligned"> <div class="jumbotron-button"> <a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-ogm/"> <i class="github icon"></i> Project on GitHub </a> </div> <div class="jumbotron-button"> <a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/OGM"> <i class="bug icon"></i> Issue tracker </a> </div> </div> </div> </div> </div> </div> </div> <div class="ui container page-content"> <div class="ui stackable grid"> <div class="column three wide computer only"> <div class="ui fluid vertical menu"> <a class="item" href=".."> <i class="grid home icon"></i> About </a> <div class="dropdown item link ui"> Releases <i class="icon dropdown"></i> <div class="menu"> <a class="item" href="../releases"> Overview </a> <a class="item" href="../releases/5.2"> 5.2 </a> <a class="item" href="../releases/5.1"> 5.1 </a> </div> </div> <a class="item" href="../documentation"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="../roadmap"> <i class="grid icon road"></i> Roadmap </a> <a class="item selected" href="."> <i class="grid icon users"></i> Contribute </a> <a class="item" href="../support"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="../faq"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="ui fluid vertical menu"> <a class="item" href="https://github.com/hibernate/hibernate-ogm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/OGM"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org/viewforum.php?f=31"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="http://ci.hibernate.org/job/hibernate-ogm-master/"> <i class="grid icon treatment"></i> CI </a> <a class="item" href="https://community.jboss.org/en/hibernate/ogm"> <i class="edit grid icon"></i> Wiki </a> </div> <hr> <div class="license"> Released under the <a href="http://www.gnu.org/licenses/lgpl.html">LGPL</a> </div> </div> <div class="column thirteen wide computer sixteen wide mobile"> <div class="content" id="content"> <div id="preamble"> <div class="sectionbody"> <div id="ogm-howtocontribute" class="paragraph"> <p>Hibernate OGM is a young project. The code, the direction and the documentation are all in flux and being built by the community. Join and help us shape it!</p> </div> </div> <div id="toc" class="toc"> <div id="toctitle">Table of Contents</div> <ul class="sectlevel1"> <li><a href="#ogm-howtocontribute-help">How to get help</a></li> <li><a href="#ogm-howtocontribute-contribute">How to contribute</a> <ul class="sectlevel2"> <li><a href="#how-to-build-hibernate-ogm">How to build Hibernate OGM</a> <ul class="sectlevel3"> <li><a href="#integration-tests">Integration tests</a></li> <li><a href="#documentation">Documentation</a></li> <li><a href="#distribution">Distribution</a></li> </ul> </li> <li><a href="#how-are-the-tests-structured">How are the tests structured?</a> <ul class="sectlevel3"> <li><a href="#core-tests">Core tests</a></li> <li><a href="#tests-specific-to-a-dialect">Tests specific to a dialect</a></li> </ul> </li> <li><a href="#code-organization">Code organization</a></li> <li><a href="#how-to-contribute-code-effectively">How to contribute code effectively</a></li> </ul> </li> </ul> </div> </div> <div class="sect1"> <h2 id="ogm-howtocontribute-help"><a class="anchor" href="#ogm-howtocontribute-help"></a>How to get help</h2> <div class="sectionbody"> <div class="paragraph"> <p>First of all, make sure to read this reference documentation. This is the most comprehensive formal source of information. Of course, it is not perfect: feel free to come and ask for help, comment or propose improvements in our <a href="https://forum.hibernate.org/viewforum.php?f=31">Hibernate OGM forum</a>.</p> </div> <div class="paragraph"> <p>You can also:</p> </div> <div class="ulist"> <ul> <li> <p>open bug reports in <a href="https://hibernate.atlassian.net/browse/OGM">JIRA</a></p> </li> <li> <p>propose improvements on the <a href="http://www.hibernate.org/community/mailinglists">development mailing list</a></p> </li> <li> <p>join us on IRC to discuss developments and improvements (#hibernate-dev on freenode.net; you need to be registered on freenode: the room does not accept "anonymous" users).</p> </li> </ul> </div> </div> </div> <div class="sect1"> <h2 id="ogm-howtocontribute-contribute"><a class="anchor" href="#ogm-howtocontribute-contribute"></a>How to contribute</h2> <div class="sectionbody"> <div class="paragraph"> <p>Welcome!</p> </div> <div class="paragraph"> <p>There are many ways to contribute:</p> </div> <div class="ulist"> <ul> <li> <p>report bugs in <a href="https://hibernate.atlassian.net/browse/OGM">JIRA</a></p> </li> <li> <p>give feedback in the forum, IRC or the development mailing list</p> </li> <li> <p>improve the documentation</p> </li> <li> <p>fix bugs or contribute new features</p> </li> <li> <p>propose and code a datastore dialect for your favorite NoSQL engine</p> </li> </ul> </div> <div class="paragraph"> <p>Hibernate OGM&#8217;s code is available on GitHub at <a href="https://github.com/hibernate/hibernate-ogm" class="bare">https://github.com/hibernate/hibernate-ogm</a>.</p> </div> <div class="sect2"> <h3 id="how-to-build-hibernate-ogm"><a class="anchor" href="#how-to-build-hibernate-ogm"></a>How to build Hibernate OGM</h3> <div class="paragraph"> <p>Hibernate OGM uses Git and Maven 3, make sure to have both installed on your system.</p> </div> <div class="paragraph"> <p>Clone the git repository from GitHub:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>git clone https://github.com/hibernate/hibernate-ogm&#x000A;cd hibernate-ogm</code></pre> </div> </div> <div class="paragraph"> <p>Run maven</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml</code></pre> </div> </div> <div class="admonitionblock note"> <table> <tr> <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> <td class="content"> <div class="paragraph"> <p>Note that Hibernate OGM uses artifacts from the Maven repository hosted by JBoss. Make sure to either use the <span class="code">-s settings-example.xml</span> option or adjust your <span class="filename">~/.m2/settings.xml</span> according to the descriptions available <a href="http://community.jboss.org/wiki/MavenGettingStarted-Users">on this jboss.org wiki page</a>.</p> </div> </td> </tr> </table> </div> <div class="admonitionblock note"> <table> <tr> <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> <td class="content"> <div class="paragraph"> <p>Note that for running the test suite against separately installed MongoDB and CouchDB servers their host name must be specified via an environment variable. See the sections below for the details.</p> </div> </td> </tr> </table> </div> <div class="paragraph"> <p>To speed things up, there are several options for skipping parts of the build. To run the minimum project build without integration tests, documentation and distribution execute:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -DskipITs -DskipDocs -DskipDistro -s settings-example.xml</code></pre> </div> </div> <div class="paragraph"> <p>The following sections describe these options in more detail.</p> </div> <div class="sect3"> <h4 id="integration-tests"><a class="anchor" href="#integration-tests"></a>Integration tests</h4> <div class="paragraph"> <p>Integration tests per default download the WildFly application server, unpack the modules in it and run the tests using Arquillian. You can skip integration tests by specifying the <code>skipITs</code> property:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -DskipITs -s settings-example.xml</code></pre> </div> </div> <div class="sect4"> <h5 id="mongodb"><a class="anchor" href="#mongodb"></a>MongoDB</h5> <div class="paragraph"> <p>For executing the tests in the <em>mongodb</em> and <em>integrationtest/mongodb</em> modules, the <a href="https://github.com/joelittlejohn/embedmongo-maven-plugin">embedmongo-maven-plugin</a> is used. It downloads the MongoDB distribution, extracts it, starts a <em>mongod</em> process and shuts it down after test execution.</p> </div> <div class="paragraph"> <p>If required, you can configure the port to which the MongoDB instance binds to (by default 27018) and the target directory for the extracted binary (defaults to <em>${project.build.directory}/embeddedMongoDb/extracted</em>) like this:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml -DembeddedMongoDbTempDir=&lt;my-temp-dir&gt; -DembeddedMongoDbPort=&lt;my-port&gt;</code></pre> </div> </div> <div class="paragraph"> <p>To work with a separately installed MongoDB instance instead, specify the <code>useExternalMongoDb</code> property:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml -DuseExternalMongoDb</code></pre> </div> </div> <div class="paragraph"> <p>This assumes MongoDB to be installed on <code>localhost</code>, using the default port and no authentication. If you work with different settings, configure the required properties in hibernate.properties (for the tests in <em>mongodb</em>) and/or the environment variables <code>MONGODB_HOSTNAME</code> <code>MONGODB_PORT</code> <code>MONGODB_USERNAME</code> <code>MONGODB_PASSWORD</code> (for the tests in <em>integrationtest/mongodb</em>) prior to running the tests:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>export MONGODB_HOSTNAME=mongodb-machine&#x000A;export MONGODB_PORT=1234&#x000A;export MONGODB_USERNAME=someUsername&#x000A;export MONGODB_PASSWORD=someP@ssw0rd&#x000A;mvn clean install -s settings-example.xml</code></pre> </div> </div> </div> <div class="sect4"> <h5 id="couchdb"><a class="anchor" href="#couchdb"></a>CouchDB</h5> <div class="paragraph"> <p>For running the tests in the <em>couchdb</em> module an installed CouchDB server is required. Specify its host name by setting the environment variable <code>COUCHDB_HOSTNAME</code> prior to running the test suite:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>export COUCHDB_HOSTNAME=couchdb-machine</code></pre> </div> </div> <div class="paragraph"> <p>If this variable is not set, the <em>couchdb</em> module still will be compiled and packaged but the tests will be skipped.</p> </div> </div> </div> <div class="sect3"> <h4 id="documentation"><a class="anchor" href="#documentation"></a>Documentation</h4> <div class="paragraph"> <p>The documentation is built by default as part of the project build. You can skip it by specifying the <code>skipDocs</code> property:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -DskipDocs -s settings-example.xml</code></pre> </div> </div> <div class="paragraph"> <p>If you just want to build the documentation, run it from the <em>documentation/manual</em> subdirectory.</p> </div> <div class="paragraph"> <p>For rapid documentation testing, you can limit the generated format to html to speed up the process</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -f documentation/manual/pom.xml -s settings-example.xml -Djdocbook.format=html_single</code></pre> </div> </div> </div> <div class="sect3"> <h4 id="distribution"><a class="anchor" href="#distribution"></a>Distribution</h4> <div class="paragraph"> <p>The distribution bundle is built by default as part of the project build. You can skip it by specifying the <code>skipDistro</code> property:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>mvn clean install -DskipDistro -s settings-example.xml</code></pre> </div> </div> <div class="admonitionblock tip"> <table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> <div class="paragraph"> <p>Make sure to check the <a href="https://github.com/hibernate/hibernate-ogm/blob/master/readme.md">readme.md</a> in the source root directory for further build options.</p> </div> </td> </tr> </table> </div> </div> </div> <div class="sect2"> <h3 id="how-are-the-tests-structured"><a class="anchor" href="#how-are-the-tests-structured"></a>How are the tests structured?</h3> <div class="sect3"> <h4 id="core-tests"><a class="anchor" href="#core-tests"></a>Core tests</h4> <div class="paragraph"> <p>There are two types of tests in core:</p> </div> <div class="olist arabic"> <ol class="arabic"> <li> <p>Unit tests for stuff in core itself</p> </li> <li> <p>And the "backendtck" which are high-level (i.e. Session/EM-level) tests and which are executed for all backends. This is our backend TCK.</p> </li> </ol> </div> <div class="paragraph"> <p>To run a specific test against a specific store in Eclipse, simplest is to use the <code>&lt;StoreName&gt;BackendTckHelper</code> class to run the test.</p> </div> <div class="paragraph"> <p>For instance, if you want to run the <code>BuiltInTypeTest</code> test for Neo4j, open the <code>Neo4JBackendTckHelper</code> class in your IDE and make the <code>@ClasspathSuite.ClassnameFilters</code> annotation look like:</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>@ClasspathSuite.ClassnameFilters({ ".*BuiltInTypeTest" })</code></pre> </div> </div> <div class="paragraph"> <p>Then simply run <code>Neo4JBackendTckHelper</code> as a JUnit test in your IDE.</p> </div> </div> <div class="sect3"> <h4 id="tests-specific-to-a-dialect"><a class="anchor" href="#tests-specific-to-a-dialect"></a>Tests specific to a dialect</h4> <div class="paragraph"> <p>As for the unit tests specific to a dialect, you can just run the test as a JUnit test in your IDE.</p> </div> </div> </div> <div class="sect2"> <h3 id="code-organization"><a class="anchor" href="#code-organization"></a>Code organization</h3> <div class="paragraph"> <p>Packages are organized with the SPI/impl split at the lowest level. SPI is geared towards grid dialect implementors. The split is not complete yet, as some parts of "our" dialects refer to "impl" classes from core. Anything not "spi" or "impl" is public API.</p> </div> </div> <div class="sect2"> <h3 id="how-to-contribute-code-effectively"><a class="anchor" href="#how-to-contribute-code-effectively"></a>How to contribute code effectively</h3> <div class="paragraph"> <p>The best way to share code is to fork the Hibernate OGM repository on GitHub, create a branch and open a pull request when you are ready. Make sure to rebase your pull request on the latest version of the master branch before offering it.</p> </div> <div class="paragraph"> <p>Here are a couple of approaches the team follows:</p> </div> <div class="ulist"> <ul> <li> <p>We do small independent commits for each code change. In particular, we do not mix stylistic code changes (import, typos, etc) and new features in the same commit.</p> </li> <li> <p>Commit messages follow this convention: the JIRA issue number, a short commit summary, an empty line, a longer description if needed. Make sure to limit line length to 80 characters, even at this day and age it makes for more readable commit comments.</p> </li> </ul> </div> <div class="listingblock"> <div class="content"> <pre>OGM-123 Summary of commit operation&#x000A;&#x000A;Optional details on the commit&#x000A;and a longer description can be&#x000A;added here.</pre> </div> </div> <div class="ulist"> <ul> <li> <p>A pull request can contain several commits but should be self contained: include the implementation, its unit tests, its documentation and javadoc changes if needed.</p> </li> <li> <p>All commits are proposed via pull requests and reviewed by another member of the team before being pushed to the reference repository. That&#8217;s right, we never commit directly upstream without code review.</p> </li> </ul> </div> </div> </div> </div> </div> </div> </div> </div> <script>
+      </script>
+      <div class="ui container-fluid">
+        <div class="jumbotron small">
+          <div class="ui container">
+            <div class="ui grid stackable">
+              <div class="column row">
+                <div class="column twelve wide middle aligned">
+                  <h1>
+                    <span>
+                      Hibernate OGM
+                    </span>
+                  </h1>
+                  <h2>
+                    <span>
+                      Contribute
+                    </span>
+                  </h2>
+                </div>
+                <div class="column four wide middle aligned">
+                  <div class="jumbotron-button">
+                    <a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-ogm/">
+                      <i class="github icon"></i>
+                      Project on GitHub
+                    </a>
+                  </div>
+                  <div class="jumbotron-button">
+                    <a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/OGM">
+                      <i class="bug icon"></i>
+                      Issue tracker
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ui container page-content">
+        <div class="ui stackable grid">
+          <div class="column three wide computer only">
+            <div class="ui fluid vertical menu">
+              <a class="item" href="..">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <div class="dropdown item link ui">
+                Releases
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="../releases">
+                    Overview
+                  </a>
+                  <a class="item" href="../releases/5.2">
+                    5.2
+                  </a>
+                  <a class="item" href="../releases/5.1">
+                    5.1
+                  </a>
+                </div>
+              </div>
+              <a class="item" href="../documentation">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="../roadmap">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item selected" href=".">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="../support">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="../faq">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="ui fluid vertical menu">
+              <a class="item" href="https://github.com/hibernate/hibernate-ogm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/OGM">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org/viewforum.php?f=31">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="http://ci.hibernate.org/job/hibernate-ogm-master/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate/ogm">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+            </div>
+            <hr>
+            <div class="license">
+              Released under the
+              <a href="http://www.gnu.org/licenses/lgpl.html">LGPL</a>
+            </div>
+          </div>
+          <div class="column thirteen wide computer sixteen wide mobile">
+            <div class="content" id="content">
+              <div id="preamble">
+              <div class="sectionbody">
+              <div id="ogm-howtocontribute" class="paragraph">
+              <p>Hibernate OGM is a young project.
+              The code, the direction and the documentation are all in flux
+              and being built by the community.
+              Join and help us shape it!</p>
+              </div>
+              </div>
+              <div id="toc" class="toc">
+              <div id="toctitle">Table of Contents</div>
+              <ul class="sectlevel1">
+              <li><a href="#ogm-howtocontribute-help">How to get help</a></li>
+              <li><a href="#ogm-howtocontribute-contribute">How to contribute</a>
+              <ul class="sectlevel2">
+              <li><a href="#how-to-build-hibernate-ogm">How to build Hibernate OGM</a>
+              <ul class="sectlevel3">
+              <li><a href="#integration-tests">Integration tests</a></li>
+              <li><a href="#documentation">Documentation</a></li>
+              <li><a href="#distribution">Distribution</a></li>
+              </ul>
+              </li>
+              <li><a href="#how-are-the-tests-structured">How are the tests structured?</a>
+              <ul class="sectlevel3">
+              <li><a href="#core-tests">Core tests</a></li>
+              <li><a href="#tests-specific-to-a-dialect">Tests specific to a dialect</a></li>
+              </ul>
+              </li>
+              <li><a href="#code-organization">Code organization</a></li>
+              <li><a href="#how-to-contribute-code-effectively">How to contribute code effectively</a></li>
+              </ul>
+              </li>
+              </ul>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="ogm-howtocontribute-help"><a class="anchor" href="#ogm-howtocontribute-help"></a>How to get help</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>First of all, make sure to read this reference documentation.
+              This is the most comprehensive formal source of information.
+              Of course, it is not perfect:
+              feel free to come and ask for help,
+              comment or propose improvements in our
+              <a href="https://forum.hibernate.org/viewforum.php?f=31">Hibernate OGM forum</a>.</p>
+              </div>
+              <div class="paragraph">
+              <p>You can also:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>open bug reports in <a href="https://hibernate.atlassian.net/browse/OGM">JIRA</a></p>
+              </li>
+              <li>
+              <p>propose improvements on the
+              <a href="http://www.hibernate.org/community/mailinglists">development mailing list</a></p>
+              </li>
+              <li>
+              <p>join us on IRC to discuss developments and improvements
+              (#hibernate-dev on freenode.net;
+              you need to be registered on freenode:
+              the room does not accept "anonymous" users).</p>
+              </li>
+              </ul>
+              </div>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="ogm-howtocontribute-contribute"><a class="anchor" href="#ogm-howtocontribute-contribute"></a>How to contribute</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>Welcome!</p>
+              </div>
+              <div class="paragraph">
+              <p>There are many ways to contribute:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>report bugs in <a href="https://hibernate.atlassian.net/browse/OGM">JIRA</a></p>
+              </li>
+              <li>
+              <p>give feedback in the forum, IRC or the development mailing list</p>
+              </li>
+              <li>
+              <p>improve the documentation</p>
+              </li>
+              <li>
+              <p>fix bugs or contribute new features</p>
+              </li>
+              <li>
+              <p>propose and code a datastore dialect for your favorite NoSQL engine</p>
+              </li>
+              </ul>
+              </div>
+              <div class="paragraph">
+              <p>Hibernate OGM&#8217;s code is available on GitHub at
+              <a href="https://github.com/hibernate/hibernate-ogm" class="bare">https://github.com/hibernate/hibernate-ogm</a>.</p>
+              </div>
+              <div class="sect2">
+              <h3 id="how-to-build-hibernate-ogm"><a class="anchor" href="#how-to-build-hibernate-ogm"></a>How to build Hibernate OGM</h3>
+              <div class="paragraph">
+              <p>Hibernate OGM uses Git and Maven 3,
+              make sure to have both installed on your system.</p>
+              </div>
+              <div class="paragraph">
+              <p>Clone the git repository from GitHub:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>git clone https://github.com/hibernate/hibernate-ogm&#x000A;cd hibernate-ogm</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>Run maven</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml</code></pre>
+              </div>
+              </div>
+              <div class="admonitionblock note">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>Note that Hibernate OGM uses artifacts from the Maven repository hosted by JBoss.
+              Make sure to either use the <span class="code">-s settings-example.xml</span> option
+              or adjust your <span class="filename">~/.m2/settings.xml</span>
+              according to the descriptions available
+              <a href="http://community.jboss.org/wiki/MavenGettingStarted-Users">on this jboss.org wiki page</a>.</p>
+              </div>
+              </td>
+              </tr>
+              </table>
+              </div>
+              <div class="admonitionblock note">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>Note that for running the test suite against separately installed MongoDB and CouchDB servers
+              their host name must be specified via an environment variable.
+              See the sections below for the details.</p>
+              </div>
+              </td>
+              </tr>
+              </table>
+              </div>
+              <div class="paragraph">
+              <p>To speed things up, there are several options for skipping parts of the build.
+              To run the minimum project build without integration tests, documentation and distribution execute:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -DskipITs -DskipDocs -DskipDistro -s settings-example.xml</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>The following sections describe these options in more detail.</p>
+              </div>
+              <div class="sect3">
+              <h4 id="integration-tests"><a class="anchor" href="#integration-tests"></a>Integration tests</h4>
+              <div class="paragraph">
+              <p>Integration tests per default download the WildFly application server,
+              unpack the modules in it and run the tests using Arquillian.
+              You can skip integration tests by specifying the <code>skipITs</code> property:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -DskipITs -s settings-example.xml</code></pre>
+              </div>
+              </div>
+              <div class="sect4">
+              <h5 id="mongodb"><a class="anchor" href="#mongodb"></a>MongoDB</h5>
+              <div class="paragraph">
+              <p>For executing the tests in the <em>mongodb</em> and <em>integrationtest/mongodb</em> modules, the
+              <a href="https://github.com/joelittlejohn/embedmongo-maven-plugin">embedmongo-maven-plugin</a> is used.
+              It downloads the MongoDB distribution, extracts it, starts a <em>mongod</em> process and shuts it down
+              after test execution.</p>
+              </div>
+              <div class="paragraph">
+              <p>If required, you can configure the port to which the MongoDB instance binds to (by default 27018)
+              and the target directory for the extracted binary (defaults to
+              <em>${project.build.directory}/embeddedMongoDb/extracted</em>) like this:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml -DembeddedMongoDbTempDir=&lt;my-temp-dir&gt; -DembeddedMongoDbPort=&lt;my-port&gt;</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>To work with a separately installed MongoDB instance instead, specify the <code>useExternalMongoDb</code> property:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml -DuseExternalMongoDb</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>This assumes MongoDB to be installed on <code>localhost</code>, using the default port and no authentication.
+              If you work with different settings, configure the required properties in hibernate.properties
+              (for the tests in <em>mongodb</em>)
+              and/or the environment variables <code>MONGODB_HOSTNAME</code> <code>MONGODB_PORT</code> <code>MONGODB_USERNAME</code>
+              <code>MONGODB_PASSWORD</code> (for the tests in <em>integrationtest/mongodb</em>)
+              prior to running the tests:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>export MONGODB_HOSTNAME=mongodb-machine&#x000A;export MONGODB_PORT=1234&#x000A;export MONGODB_USERNAME=someUsername&#x000A;export MONGODB_PASSWORD=someP@ssw0rd&#x000A;mvn clean install -s settings-example.xml</code></pre>
+              </div>
+              </div>
+              </div>
+              <div class="sect4">
+              <h5 id="couchdb"><a class="anchor" href="#couchdb"></a>CouchDB</h5>
+              <div class="paragraph">
+              <p>For running the tests in the <em>couchdb</em> module an installed CouchDB server is required.
+              Specify its host name by setting the environment variable <code>COUCHDB_HOSTNAME</code> prior to running
+              the test suite:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>export COUCHDB_HOSTNAME=couchdb-machine</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>If this variable is not set, the <em>couchdb</em> module still will be compiled and packaged but the
+              tests will be skipped.</p>
+              </div>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="documentation"><a class="anchor" href="#documentation"></a>Documentation</h4>
+              <div class="paragraph">
+              <p>The documentation is built by default as part of the project build. You can skip it by specifying
+              the <code>skipDocs</code> property:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -DskipDocs -s settings-example.xml</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>If you just want to build the documentation, run it from the <em>documentation/manual</em> subdirectory.</p>
+              </div>
+              <div class="paragraph">
+              <p>For rapid documentation testing, you can limit the generated format to html to speed up the process</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -f documentation/manual/pom.xml -s settings-example.xml -Djdocbook.format=html_single</code></pre>
+              </div>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="distribution"><a class="anchor" href="#distribution"></a>Distribution</h4>
+              <div class="paragraph">
+              <p>The distribution bundle is built by default as part of the project build. You can skip it by
+              specifying the <code>skipDistro</code> property:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>mvn clean install -DskipDistro -s settings-example.xml</code></pre>
+              </div>
+              </div>
+              <div class="admonitionblock tip">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-tip" title="Tip"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>Make sure to check the <a href="https://github.com/hibernate/hibernate-ogm/blob/master/readme.md">readme.md</a>
+              in the source root directory for further build options.</p>
+              </div>
+              </td>
+              </tr>
+              </table>
+              </div>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="how-are-the-tests-structured"><a class="anchor" href="#how-are-the-tests-structured"></a>How are the tests structured?</h3>
+              <div class="sect3">
+              <h4 id="core-tests"><a class="anchor" href="#core-tests"></a>Core tests</h4>
+              <div class="paragraph">
+              <p>There are two types of tests in core:</p>
+              </div>
+              <div class="olist arabic">
+              <ol class="arabic">
+              <li>
+              <p>Unit tests for stuff in core itself</p>
+              </li>
+              <li>
+              <p>And the "backendtck" which are high-level (i.e. Session/EM-level) tests and which are executed
+              for all backends. This is our backend TCK.</p>
+              </li>
+              </ol>
+              </div>
+              <div class="paragraph">
+              <p>To run a specific test against a specific store in Eclipse, simplest is to use the
+              <code>&lt;StoreName&gt;BackendTckHelper</code> class to run the test.</p>
+              </div>
+              <div class="paragraph">
+              <p>For instance, if you want to run the <code>BuiltInTypeTest</code> test for Neo4j, open the <code>Neo4JBackendTckHelper</code>
+              class in your IDE and make the <code>@ClasspathSuite.ClassnameFilters</code> annotation look like:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code>@ClasspathSuite.ClassnameFilters({ ".*BuiltInTypeTest" })</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>Then simply run <code>Neo4JBackendTckHelper</code> as a JUnit test in your IDE.</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="tests-specific-to-a-dialect"><a class="anchor" href="#tests-specific-to-a-dialect"></a>Tests specific to a dialect</h4>
+              <div class="paragraph">
+              <p>As for the unit tests specific to a dialect, you can just run the test as a JUnit test in your IDE.</p>
+              </div>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="code-organization"><a class="anchor" href="#code-organization"></a>Code organization</h3>
+              <div class="paragraph">
+              <p>Packages are organized with the SPI/impl split at the lowest level.
+              SPI is geared towards grid dialect implementors.
+              The split is not complete yet, as some parts of "our" dialects refer to "impl" classes from core.
+              Anything not "spi" or "impl" is public API.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="how-to-contribute-code-effectively"><a class="anchor" href="#how-to-contribute-code-effectively"></a>How to contribute code effectively</h3>
+              <div class="paragraph">
+              <p>The best way to share code is to fork the Hibernate OGM repository on GitHub,
+              create a branch and open a pull request when you are ready.
+              Make sure to rebase your pull request
+              on the latest version of the master branch before offering it.</p>
+              </div>
+              <div class="paragraph">
+              <p>Here are a couple of approaches the team follows:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>We do small independent commits for each code change.
+              In particular, we do not mix stylistic code changes (import, typos, etc)
+              and new features in the same commit.</p>
+              </li>
+              <li>
+              <p>Commit messages follow this convention:
+              the JIRA issue number, a short commit summary, an empty line,
+              a longer description if needed.
+              Make sure to limit line length to 80 characters, even at this day and age
+              it makes for more readable commit comments.</p>
+              </li>
+              </ul>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre>OGM-123 Summary of commit operation&#x000A;&#x000A;Optional details on the commit&#x000A;and a longer description can be&#x000A;added here.</pre>
+              </div>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>A pull request can contain several commits but should be self contained:
+              include the implementation, its unit tests, its documentation
+              and javadoc changes if needed.</p>
+              </li>
+              <li>
+              <p>All commits are proposed via pull requests
+              and reviewed by another member of the team
+              before being pushed to the reference repository.
+              That&#8217;s right, we never commit directly upstream without code review.</p>
+              </li>
+              </ul>
+              </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
         $(document).ready(function() {
           $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
         });
-      </script> <div class="ui inverted vertical footer segment"> <div class="ui container"> <div class="ui stackable inverted divided equal height stackable grid"> <div class="three wide column"> <h4 class="ui inverted header">Projects</h4> <div class="ui inverted link list"> <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a> <a class="item" href="../../search" title="Search">Hibernate Search</a> <a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a> <a class="item" href=".." title="Hibernate OGM">Hibernate OGM</a> <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a> <a class="item" href="../../others" title="Other projects">Other projects</a> </div> </div> <div class="three wide column"> <h4 class="ui inverted header">Follow us</h4> <div class="ui inverted link list"> <a class="item" href="http://in.relation.to" title="Blog">Blog</a> <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a> <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a> </div> </div> <div class="five wide column"> <h4 class="ui inverted header">Contribute and community</h4> <div class="ui inverted link list"> <a class="item" href="../../community" title="Community resources">Community resources</a> <a class="item" href="https://hibernate.atlassian.net" title="Submit a bug">Submit a bug</a> <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a> </div> </div> <div class="five wide column sponsor"> <div class="logo"> <a href="https://www.redhat.com/"> <img height="48" src="../../images/redhat.png" title="Red Hat" width="216"> </a> </div> <div class="logo"> <a href="https://developers.redhat.com/"> <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216"> </a> </div> </div> </div> </div> </div> <span class="back-to-top computer only"> <a href="javascript: void(0)">Back to top</a> </span> <script>
+      </script>
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">Projects</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href=".." title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../others" title="Other projects">Other projects</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Follow us</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="http://in.relation.to" title="Blog">Blog</a>
+                <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+                <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
+              </div>
+            </div>
+            <div class="five wide column">
+              <h4 class="ui inverted header">Contribute and community</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="../../community" title="Community resources">Community resources</a>
+                <a class="item" href="https://hibernate.atlassian.net" title="Submit a bug">Submit a bug</a>
+                <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+              </div>
+            </div>
+            <div class="five wide column sponsor">
+              <div class="logo">
+                <a href="https://www.redhat.com/">
+                  <img height="48" src="../../images/redhat.png" title="Red Hat" width="216">
+                </a>
+              </div>
+              <div class="logo">
+                <a href="https://developers.redhat.com/">
+                  <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="back-to-top computer only">
+        <a href="javascript: void(0)">Back to top</a>
+      </span>
+      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       
                           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,7 +989,11 @@
       ga('create', 'UA-45270411-1', 'auto');
       ga('send', 'pageview');
       
-      </script> </div> </body> </html> <script>
+      </script>
+    </div>
+  </body>
+</html>
+<script>
   $(function() {
     $('#mobile-menu').sidebar('setting', {
       transition: 'overlay'

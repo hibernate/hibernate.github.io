@@ -1,4 +1,10 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="author" content="Emmanuel Bernard"><title>Hibernate tu connais&#8230;&#8203; mais en fait tu connais pas</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme"><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section><h1>Hibernate tu connais&#8230;&#8203; mais en fait tu connais pas</h1><p><small>Emmanuel Bernard</small></p></section><section id="_hibernate_tu_connais_mais_en_fait_tu_connais_pas" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate tu connais&#8230;&#8203; mais en fait tu connais pas</h2><div class="paragraph"><p>Emmanuel Bernard<br> Red Hat</p></div></section> <section id="_qu_est_ce_qu_en_retirer" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Qu’est-ce qu’en retirer ?</h2><div class="ulist"><ul><li><p>Tour d&#8217;horizon des projets Hibernate</p></li><li><p>Des nouvelles fonctionnalités de la version 5</p><div class="ulist"><ul><li><p>Comment utiliser ces fonctionnalités</p></li></ul></div></li><li><p>Sortir avec des idées pour vos applications</p></li></ul></div></section> <section id="_emmanuel_bernard" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Emmanuel Bernard</h2><div class="ulist"><ul><li><p>Mr Data chez JBoss</p></li><li><p>Hibernate, Infinispan, Teiid, Modeshape</p></li><li><p>Podcast <a href="http://asylum.jboss.org" class="bare">http://asylum.jboss.org</a> &amp; <a href="https://lescastcodeurs.com" class="bare">https://lescastcodeurs.com</a></p></li><li><p>Le reste <a href="https://emmanuelbernard.com" class="bare">https://emmanuelbernard.com</a></p></li><li><p><a href="https://twitter.com/emmanuelbernard">@emmanuelbernard</a></p></li></ul></div></section> <section id="_hibernate_orm_5" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate ORM 5</h2></section> <section id="_un_bootstrap_plus_propre" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Un bootstrap plus propre</h2><div class="ulist"><ul><li><p>Modularité</p><div class="ulist"><ul><li><p>Wildfly</p></li><li><p>OSGi</p></li></ul></div></li><li><p>Pourquoi on modularise ?</p></li><li><p>Pleins de problèmes</p><div class="ulist"><ul><li><p>extension</p></li><li><p>intégration avec ORM</p></li></ul></div></li></ul></div></section> <section id="_bootstrap" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Bootstrap</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="author" content="Emmanuel Bernard"><title>Hibernate tu connais&#8230;&#8203; mais en fait tu connais pas</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme"><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section><h1>Hibernate tu connais&#8230;&#8203; mais en fait tu connais pas</h1><p><small>Emmanuel Bernard</small></p></section><section id="_hibernate_tu_connais_mais_en_fait_tu_connais_pas" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate tu connais&#8230;&#8203; mais en fait tu connais pas</h2><div class="paragraph"><p>Emmanuel Bernard<br>
+Red Hat</p></div></section>
+<section id="_qu_est_ce_qu_en_retirer" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Qu’est-ce qu’en retirer ?</h2><div class="ulist"><ul><li><p>Tour d&#8217;horizon des projets Hibernate</p></li><li><p>Des nouvelles fonctionnalités de la version 5</p><div class="ulist"><ul><li><p>Comment utiliser ces fonctionnalités</p></li></ul></div></li><li><p>Sortir avec des idées pour vos applications</p></li></ul></div></section>
+<section id="_emmanuel_bernard" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Emmanuel Bernard</h2><div class="ulist"><ul><li><p>Mr Data chez JBoss</p></li><li><p>Hibernate, Infinispan, Teiid, Modeshape</p></li><li><p>Podcast <a href="http://asylum.jboss.org" class="bare">http://asylum.jboss.org</a> &amp; <a href="https://lescastcodeurs.com" class="bare">https://lescastcodeurs.com</a></p></li><li><p>Le reste <a href="https://emmanuelbernard.com" class="bare">https://emmanuelbernard.com</a></p></li><li><p><a href="https://twitter.com/emmanuelbernard">@emmanuelbernard</a></p></li></ul></div></section>
+<section id="_hibernate_orm_5" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate ORM 5</h2></section>
+<section id="_un_bootstrap_plus_propre" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Un bootstrap plus propre</h2><div class="ulist"><ul><li><p>Modularité</p><div class="ulist"><ul><li><p>Wildfly</p></li><li><p>OSGi</p></li></ul></div></li><li><p>Pourquoi on modularise ?</p></li><li><p>Pleins de problèmes</p><div class="ulist"><ul><li><p>extension</p></li><li><p>intégration avec ORM</p></li></ul></div></li></ul></div></section>
+<section id="_bootstrap" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Bootstrap</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
          .configure( "org/hibernate/example/MyCfg.xml" )
          .build();
 
@@ -14,14 +20,21 @@ Metadata metadata = new MetadataSources( standardRegistry )
 SessionFactory sessionFactory = metadata.getSessionFactoryBuilder()
         .applyBeanManager( getBeanManagerFromSomewhere() )
         //CDI BeanManager to the SessionFactory being built
-        .build();</code></pre></div></div></section> <section id="_java_8" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Java 8</h2><div class="ulist"><ul><li><p>Nouveaux types</p><div class="ulist"><ul><li><p>Date et Time</p></li></ul></div></li><li><p>Java 5, 6, 7</p><div class="ulist"><ul><li><p>Generics</p></li><li><p>Blocks autoclose</p></li></ul></div></li></ul></div></section> <section id="_date_and_time" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Date and Time</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;dependency&gt;
+        .build();</code></pre></div></div></section>
+<section id="_java_8" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Java 8</h2><div class="ulist"><ul><li><p>Nouveaux types</p><div class="ulist"><ul><li><p>Date et Time</p></li></ul></div></li><li><p>Java 5, 6, 7</p><div class="ulist"><ul><li><p>Generics</p></li><li><p>Blocks autoclose</p></li></ul></div></li></ul></div></section>
+<section id="_date_and_time" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Date and Time</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;dependency&gt;
     &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
     &lt;artifactId&gt;hibernate-java8&lt;/artifactId&gt;
     &lt;version&gt;${hibernate.version}&lt;/version&gt;
-&lt;/dependency&gt;</code></pre></div></div> <div class="ulist"><ul><li><p>DATE: <code>java.time.LocalDate</code></p></li><li><p>TIME: <code>java.time.LocalTime</code>, <code>java.time.OffsetTime</code></p></li><li><p>TIMESTAMP: <code>java.time.Instant</code>, <code>java.time.LocalDateTime</code>, <code>java.time.OffsetDateTime</code> and <code>java.time.ZonedDateTime</code></p></li></ul></div></section> <section id="_generics_et_autoclosable" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Generics et AutoClosable</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">try ( Session session = sessionFactory.openSession() ) {
+&lt;/dependency&gt;</code></pre></div></div>
+<div class="ulist"><ul><li><p>DATE: <code>java.time.LocalDate</code></p></li><li><p>TIME: <code>java.time.LocalTime</code>, <code>java.time.OffsetTime</code></p></li><li><p>TIMESTAMP: <code>java.time.Instant</code>, <code>java.time.LocalDateTime</code>, <code>java.time.OffsetDateTime</code> and <code>java.time.ZonedDateTime</code></p></li></ul></div></section>
+<section id="_generics_et_autoclosable" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Generics et AutoClosable</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">try ( Session session = sessionFactory.openSession() ) {
     Address address = session.get(Address.class, id);
     return address.getCity();
-}</code></pre></div></div> <div class="ulist"><ul><li><p>Resources <code>AutoClosable</code></p><div class="ulist"><ul><li><p><code>Session</code> / <code>StatelessSession</code></p></li><li><p><code>SessionFactory</code></p></li><li><p><code>ScrollableResults</code></p></li></ul></div></li></ul></div></section> <section id="_augmentation_par_bytecode" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Augmentation par Bytecode</h2><div class="ulist"><ul><li><p>Détection de changements plus intelligents</p></li><li><p>Meilleur support Maven et Gradle</p></li><li><p>Chargements tardifs des propriétés</p><div class="ulist"><ul><li><p>Sous groupes</p></li></ul></div></li><li><p>Gestion bidirectionnelle automatique</p></li></ul></div></section> <section id="_maven" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Maven</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;plugin&gt;
+}</code></pre></div></div>
+<div class="ulist"><ul><li><p>Resources <code>AutoClosable</code></p><div class="ulist"><ul><li><p><code>Session</code> / <code>StatelessSession</code></p></li><li><p><code>SessionFactory</code></p></li><li><p><code>ScrollableResults</code></p></li></ul></div></li></ul></div></section>
+<section id="_augmentation_par_bytecode" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Augmentation par Bytecode</h2><div class="ulist"><ul><li><p>Détection de changements plus intelligents</p></li><li><p>Meilleur support Maven et Gradle</p></li><li><p>Chargements tardifs des propriétés</p><div class="ulist"><ul><li><p>Sous groupes</p></li></ul></div></li><li><p>Gestion bidirectionnelle automatique</p></li></ul></div></section>
+<section id="_maven" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Maven</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;plugin&gt;
     &lt;groupId&gt;org.hibernate.orm.tooling&lt;/groupId&gt;
     &lt;artifactId&gt;hibernate-enhance-maven-plugin&lt;/artifactId&gt;
     &lt;version&gt;${currentHibernateVersion}&lt;/version&gt;
@@ -38,7 +51,8 @@ SessionFactory sessionFactory = metadata.getSessionFactoryBuilder()
             &lt;/goals&gt;
         &lt;/execution&gt;
     &lt;/executions&gt;
-&lt;/plugin&gt;</code></pre></div></div></section> <section id="_gradle" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Gradle</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">ext {
+&lt;/plugin&gt;</code></pre></div></div></section>
+<section id="_gradle" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Gradle</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">ext {
     hibernateVersion = 'hibernate-version-you-want'
 }
 
@@ -52,7 +66,8 @@ hibernate {
     enhance {
         // any configuration goes here
     }
-}</code></pre></div></div></section> <section id="_propriétés_lazy" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Propriétés lazy</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity
+}</code></pre></div></div></section>
+<section id="_propriétés_lazy" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Propriétés lazy</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity
  public class Customer {
     @Id
     private Integer id;
@@ -66,18 +81,23 @@ hibernate {
     @LazyGroup( "lobs" )
     private Blob image;
     ...
-}</code></pre></div></div></section> <section id="_management_des_associations_avant" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Management des associations - avant</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">Order order = new Order();
+}</code></pre></div></div></section>
+<section id="_management_des_associations_avant" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Management des associations - avant</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">Order order = new Order();
 LineItem lineItem = new LineItem();
 order.getLineItems().add( lineItem );
 lineItem.setOrder( order );
 
-lineItem.getOrder.getName();</code></pre></div></div></section> <section id="_management_des_associations_après" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Management des associations - après</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">Order order = new Order();
+lineItem.getOrder.getName();</code></pre></div></div></section>
+<section id="_management_des_associations_après" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Management des associations - après</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">Order order = new Order();
 LineItem lineItem = new LineItem();
 order.getLineItems().add( lineItem );
 
 lineItem.getOrder.getName();
 // Without byte code enhancement this would
-// throw a NPE in normal Java usage</code></pre></div></div></section> <section id="_cache_second_niveau" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Cache second niveau</h2><div class="ulist"><ul><li><p>Moins d’objets créés (key)</p></li><li><p>Cache par référence</p></li></ul></div> <div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;property name="hibernate.cache.use_reference_entries" values=“true"/&gt;</code></pre></div></div> <div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity @Proxy( lazy = false )
+// throw a NPE in normal Java usage</code></pre></div></div></section>
+<section id="_cache_second_niveau" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Cache second niveau</h2><div class="ulist"><ul><li><p>Moins d’objets créés (key)</p></li><li><p>Cache par référence</p></li></ul></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;property name="hibernate.cache.use_reference_entries" values=“true"/&gt;</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity @Proxy( lazy = false )
 @Immutable
 @Cacheable @Cache( usage = CacheConcurrencyStrategy.READ_ONLY )
 public class MyReferenceData {
@@ -86,7 +106,12 @@ public class MyReferenceData {
     private String name;
     private String theValue;
     ....
-}</code></pre></div></div></section> <section id="_various" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Various</h2><div class="ulist"><ul><li><p><code>@GeneratedValue(strategy=AUTO)</code></p><div class="ulist"><ul><li><p>UUID, custom strategy</p></li></ul></div></li><li><p>Naming strategy</p><div class="ulist"><ul><li><p>physical and implicit</p></li></ul></div></li><li><p><strong>Documentation</strong></p></li><li><p>Blog</p></li></ul></div></section> <section id="_hibernate_search" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate Search</h2></section> <section id="_requête_full_text" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Requête full-text</h2><div class="ulist"><ul><li><p>Index inversé</p></li><li><p>Lucene 5</p></li><li><p>Niveau objet</p></li><li><p>Clusterisé</p><div class="ulist"><ul><li><p>Master / slaves</p></li></ul></div></li></ul></div></section> <section id="_ce_qui_est_récent" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Ce qui est récent</h2><div class="ulist"><ul><li><p>Lucene 5</p></li><li><p>Améliorations de perf significatives</p><div class="ulist"><ul><li><p>approche micro batch, proche des perfs NRT</p></li></ul></div></li><li><p>Backend Elasticsearch</p></li></ul></div></section> <section id="_un_exemple_macroservice" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Un exemple "macroservice"</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity @Indexed @Spatial
+}</code></pre></div></div></section>
+<section id="_various" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Various</h2><div class="ulist"><ul><li><p><code>@GeneratedValue(strategy=AUTO)</code></p><div class="ulist"><ul><li><p>UUID, custom strategy</p></li></ul></div></li><li><p>Naming strategy</p><div class="ulist"><ul><li><p>physical and implicit</p></li></ul></div></li><li><p><strong>Documentation</strong></p></li><li><p>Blog</p></li></ul></div></section>
+<section id="_hibernate_search" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate Search</h2></section>
+<section id="_requête_full_text" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Requête full-text</h2><div class="ulist"><ul><li><p>Index inversé</p></li><li><p>Lucene 5</p></li><li><p>Niveau objet</p></li><li><p>Clusterisé</p><div class="ulist"><ul><li><p>Master / slaves</p></li></ul></div></li></ul></div></section>
+<section id="_ce_qui_est_récent" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Ce qui est récent</h2><div class="ulist"><ul><li><p>Lucene 5</p></li><li><p>Améliorations de perf significatives</p><div class="ulist"><ul><li><p>approche micro batch, proche des perfs NRT</p></li></ul></div></li><li><p>Backend Elasticsearch</p></li></ul></div></section>
+<section id="_un_exemple_macroservice" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Un exemple "macroservice"</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">@Entity @Indexed @Spatial
 public class Address {
     @Id Integer id;
 
@@ -103,7 +128,8 @@ public class Address {
     @IndexedEmbedded Country country;
 
     ...
-}</code></pre></div></div></section> <section data-background="images/desktop_hibernate_1920x1200.jpg"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">QueryBuilder b = fullTextSession.getSearchFactory()
+}</code></pre></div></div></section>
+<section data-background="images/desktop_hibernate_1920x1200.jpg"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">QueryBuilder b = fullTextSession.getSearchFactory()
         .buildQueryBuilder().forEntity( Address.class ).get();
 
 org.apache.lucene.search.Query luceneQuery = b
@@ -123,7 +149,8 @@ org.apache.lucene.search.Query luceneQuery = b
                 .onField("floor").boostedTo(3)
                 .above(2).excludeLimit().createQuery()
         )
-        .createQuery();</code></pre></div></div></section> <section data-background="images/desktop_hibernate_1920x1200.jpg"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">FacetingRequest cityFacetRequest = b
+        .createQuery();</code></pre></div></div></section>
+<section data-background="images/desktop_hibernate_1920x1200.jpg"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">FacetingRequest cityFacetRequest = b
     .facet()
         .name("cities")
         .onField("city")
@@ -141,7 +168,8 @@ FacetingRequest floorFacetRequest = builder
             .below(0).excludeLimit()
             .from(0).to(2).excludeLimit()
             .above(2)
-        .createFacetingRequest();</code></pre></div></div></section> <section data-background="images/desktop_hibernate_1920x1200.jpg"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">// create the query
+        .createFacetingRequest();</code></pre></div></div></section>
+<section data-background="images/desktop_hibernate_1920x1200.jpg"><div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">// create the query
 org.hibernate.Query hibQuery = fullTextSession
         .createFullTextQuery( luceneQuery, Address.class );
 
@@ -154,7 +182,10 @@ facetManager.enableFaceting(floorFacetRequest);
 List results = hibQuery.list();
 
 // retrieve the faceting results
-List&lt;Facet&gt; facets = facetManager.getFacets("floors");</code></pre></div></div></section> <section id="_hibernate_ogm" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate OGM</h2></section> <section id="_jpa_pour_nosql" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>JPA pour NoSQL</h2><div class="ulist"><ul><li><p>MongoDB (Fongo)</p></li><li><p>Infinispan</p></li><li><p>Neo4J (remote et embedded)</p></li><li><p>Redis</p></li><li><p>EhCache</p></li><li><p>Cassandra</p></li><li><p>CouchDB</p></li></ul></div></section> <section id="_les_premiers_pas_pour_commencer" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Les premiers pas pour commencer</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;dependencies&gt;
+List&lt;Facet&gt; facets = facetManager.getFacets("floors");</code></pre></div></div></section>
+<section id="_hibernate_ogm" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate OGM</h2></section>
+<section id="_jpa_pour_nosql" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>JPA pour NoSQL</h2><div class="ulist"><ul><li><p>MongoDB (Fongo)</p></li><li><p>Infinispan</p></li><li><p>Neo4J (remote et embedded)</p></li><li><p>Redis</p></li><li><p>EhCache</p></li><li><p>Cassandra</p></li><li><p>CouchDB</p></li></ul></div></section>
+<section id="_les_premiers_pas_pour_commencer" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Les premiers pas pour commencer</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="xml language-xml">&lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;org.hibernate.ogm&lt;/groupId&gt;
         &lt;artifactId&gt;hibernate-ogm-neo4j&lt;/artifactId&gt;
@@ -169,7 +200,9 @@ List&lt;Facet&gt; facets = facetManager.getFacets("floors");</code></pre></div><
             &lt;property name="hibernate.ogm.datastore.provider" value="neo4j"/&gt;
         &lt;/properties&gt;
     &lt;/persistence-unit&gt;
-&lt;/persistence&gt;</code></pre></div></div></section> <section id="_hibernate_envers" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate Envers</h2></section> <section id="_q_a" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Q&amp;A</h2><div class="ulist"><ul><li><p>Essayer Hibernate *, c’est l’adopter</p></li><li><p>Contribuer (retours, doc, code, haine/amour)</p></li><li><p><a href="http://hibernate.org/" class="bare">http://hibernate.org/</a></p></li><li><p>Vous en avez retiré quoi ?</p></li></ul></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+&lt;/persistence&gt;</code></pre></div></div></section>
+<section id="_hibernate_envers" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Hibernate Envers</h2></section>
+<section id="_q_a" data-background="images/desktop_hibernate_1920x1200.jpg"><h2>Q&amp;A</h2><div class="ulist"><ul><li><p>Essayer Hibernate *, c’est l’adopter</p></li><li><p>Contribuer (retours, doc, code, haine/amour)</p></li><li><p><a href="http://hibernate.org/" class="bare">http://hibernate.org/</a></p></li><li><p>Vous en avez retiré quoi ?</p></li></ul></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
 Reveal.initialize({
   // Display controls in the bottom right corner
   controls: false,

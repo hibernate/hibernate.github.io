@@ -1,4 +1,1026 @@
-<!DOCTYPE html> <html lang="en"> <head> <title>Survival guide to website editing - Hibernate</title> <meta charset="utf-8"> <meta content="width=device-width, initial-scale=1.0" name="viewport"> <meta content="" name="description"> <meta content="Emmanuel Bernard" name="author"> <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet"> <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet"> <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet"> <link href="../stylesheets/styles.css?new" media="screen" rel="stylesheet"> <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72"> <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"> <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script> <script src="https://static.jboss.org/js/_jbossorg-tabzilla.js"></script> </head> <body> <div class="ui vertical inverted sidebar left overlay" id="mobile-menu"> <div class="ui vertical fluid inverted text menu accordion"> <div class="item"> <a class="title"> <i class="database grid icon"></i> <i class="dropdown icon"></i> <strong>ORM</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/orm/"> <i class="grid home icon"></i> About </a> <a class="item" href="/orm/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/orm/documentation/"> <i class="folder grid icon open"></i> Documentation </a> <a class="item" href="/orm/books/"> <i class="book grid icon"></i> Books </a> <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides"> <i class="grid icon share"></i> Migration guides </a> <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/orm/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/orm/envers/"> <i class="grid icon time"></i> Envers </a> <a class="item" href="/orm/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/orm/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/orm/certification/"> <i class="certificate grid icon"></i> Get Certified </a> <a class="item" href="/orm/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="grid icon search"></i> <i class="dropdown icon"></i> <strong>Search</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/search/"> <i class="grid home icon"></i> About </a> <a class="item" href="/search/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/search/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/search/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/search/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/search/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/search/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/search/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="box checkmark grid icon"></i> <i class="dropdown icon"></i> <strong>Validator</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/validator/"> <i class="grid home icon"></i> About </a> <a class="item" href="/validator/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/validator/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/validator/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/validator/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/validator/tooling/"> <i class="grid icon wrench"></i> Tooling </a> <a class="item" href="/validator/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/validator/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="grid icon sitemap"></i> <i class="dropdown icon"></i> <strong>OGM</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/ogm/"> <i class="grid home icon"></i> About </a> <a class="item" href="/ogm/releases/"> <i class="grid icon tags"></i> Releases </a> <a class="item" href="/ogm/documentation/"> <i class="book grid icon"></i> Documentation </a> <a class="item" href="/ogm/roadmap/"> <i class="grid icon road"></i> Roadmap </a> <a class="item" href="/ogm/contribute/"> <i class="grid icon users"></i> Contribute </a> <a class="item" href="/ogm/support/"> <i class="doctor grid icon"></i> Paid support </a> <a class="item" href="/ogm/faq/"> <i class="circle grid help icon"></i> FAQ </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <div class="item"> <a class="title"> <i class="grid icon wrench"></i> <i class="dropdown icon"></i> <strong>Tools</strong> </a> <div class="content"> <div class="menu internal-links"> <a class="item" href="/tools/"> <i class="grid home icon"></i> About </a> </div> <div class="menu external-links"> <a class="item" href="https://github.com/hibernate/hibernate-orm"> <i class="code grid icon"></i> Source code </a> <a class="item" href="https://hibernate.atlassian.net/browse/HHH"> <i class="bug grid icon"></i> Issue tracker </a> <a class="item" href="https://access.redhat.com/security/team/contact/"> <i class="grid icon lock"></i> Security issue </a> <a class="item" href="https://forum.hibernate.org"> <i class="comments grid icon"></i> Forum </a> <a class="item" href="https://community.jboss.org/en/hibernate"> <i class="edit grid icon"></i> Wiki </a> <a class="item" href="http://ci.hibernate.org/"> <i class="grid icon treatment"></i> CI </a> </div> </div> </div> <a class="item" href="/others/"> Others </a> <a class="item" href="http://in.relation.to/"> Blog </a> <a class="item" href="https://twitter.com/hibernate/"> <i class="icon twitter"></i> Follow us </a> </div> </div> <div class="pusher"> <div class="mobile-menu-button-bar mobile only"> <a class="item" id="mobile-menu-toggle"> <i class="sidebar icon"></i> Menu </a> </div> <ul class="sr-only"> <li> <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a> </li> <li> <a accesskey="c" href="#content" title="Skip to content">Skip to content</a> </li> </ul> <div class="ui container banner"> <div class="logo"> <a href="/"> <img height="50" src="https://static.jboss.org/hibernate/images/hibernate_logo_whitebkg_200px.png" width="200"> </a> </div> <div class="dropup mobile hidden" id="redhat-button"> <div class="tabnav-closed" href="#" id="tab">Red Hat</div> </div> <div class="clearfix"></div> <div class="ui stackable menu mobile hidden" id="nav"> <a class="item" href="/orm/">ORM</a> <a class="item" href="/search/">Search</a> <a class="item" href="/validator/">Validator</a> <a class="item" href="/ogm/">OGM</a> <a class="item" href="/tools/">Tools</a> <a class="item" href="/others/">Others</a> <div class="right menu"> <a class="item" href="http://in.relation.to/">Blog</a> <a class="item" href="/community/">Community</a> <a class="item" href="https://twitter.com/hibernate"> <i class="twitter icon"></i> Follow us </a> </div> </div> </div> <div class="ui container-fluid"> <div class="jumbotron small"> <div class="ui container"> <h1> <span>Survival guide to website editing</span> </h1> </div> </div> </div> <div class="ui container page-content"> <div class="content" id="content"> <div id="preamble"> <div class="sectionbody"> <div class="paragraph"> <p>This document will guide you through the ways of website edition.</p> </div> </div> <div id="toc" class="toc"> <div id="toctitle">Table of Contents</div> <ul class="sectlevel1"> <li><a href="#tl-dr">1. TL;DR</a></li> <li><a href="#prerequisites">2. Prerequisites</a></li> <li><a href="#how-to-edit">3. How to edit</a> <ul class="sectlevel2"> <li><a href="#live-reload-optional">3.1. Live reload (optional)</a></li> </ul> </li> <li><a href="#add-a-page">4. Add a page</a> <ul class="sectlevel2"> <li><a href="#page-attributes">4.1. Page attributes</a></li> <li><a href="#list-of-layouts">4.2. List of layouts</a></li> <li><a href="#partials">4.3. Partials</a></li> </ul> </li> <li><a href="#update-releases">5. Update releases</a> <ul class="sectlevel2"> <li><a href="#add-a-new-release">5.1. Add a new release</a></li> <li><a href="#hide-an-older-series">5.2. Hide an older series</a></li> </ul> </li> <li><a href="#data">6. Data</a> <ul class="sectlevel2"> <li><a href="#code-_config-site-yml-code">6.1. <code>_config/site.yml</code></a></li> <li><a href="#data_directory">6.2. <code>_data</code></a></li> </ul> </li> <li><a href="#staging">7. Preview changes on staging.hibernate.org</a></li> <li><a href="#publishing">8. Publish changes to hibernate.org</a></li> </ul> </div> </div> <div class="sect1"> <h2 id="tl-dr"><a class="anchor" href="#tl-dr"></a>1. TL;DR</h2> <div class="sectionbody"> <div class="paragraph"> <p>Wanna start hacking right away? This section is for you.</p> </div> <div class="paragraph"> <p>Look at the <code>search</code> directory for inspiration in content, structure and markup examples.</p> </div> <div class="paragraph"> <p>To start a new project, for example ORM, do the following:</p> </div> <div class="olist arabic"> <ol class="arabic"> <li> <p>create the project directory <code>mkdir orm</code></p> </li> <li> <p>copy the pages from search <code>cp -R search/ orm</code></p> </li> <li> <p>create a project section in <code>_config/site.yml</code> under <code>projects</code>.</p> <div class="olist loweralpha"> <ol class="loweralpha" type="a"> <li> <p>best is to simply copy the search subsection and update the data</p> </li> <li> <p>the project section name is lowercase and corresponds to the URL path (<code>search</code> and not <code>hibernate-search</code>)</p> </li> </ol> </div> </li> <li> <p>edit the pages (*.haml, *.adoc) under <code>orm/</code> and replace the <code>project</code> or <code>awestruct-project</code> attribute to the lowercase project name</p> </li> </ol> </div> </div> </div> <div class="sect1"> <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>2. Prerequisites</h2> <div class="sectionbody"> <div class="paragraph"> <p>Follow the <a href="/README/">README</a> instructions to get Awestruct and its dependencies up and running.</p> </div> </div> </div> <div class="sect1"> <h2 id="how-to-edit"><a class="anchor" href="#how-to-edit"></a>3. How to edit</h2> <div class="sectionbody"> <div class="paragraph"> <p>Use your favorite editor, for example vim. All pages are using text based markups with various degrees of flexibility and readability. Indentation is two spaces.</p> </div> <div class="admonitionblock caution"> <table> <tr> <td class="icon"> <i class="fa icon-caution" title="Caution"></i> </td> <td class="content"> In Ruby indentation matters, be careful. </td> </tr> </table> </div> <div class="sect2"> <h3 id="live-reload-optional"><a class="anchor" href="#live-reload-optional"></a>3.1. Live reload (optional)</h3> <div class="paragraph"> <p>You can make the editing/reviewing work-flow faster by using the livereload plugin in your browser.</p> </div> <div class="olist arabic"> <ol class="arabic"> <li> <p>Install the appropriate <a href="http://livereload.com/extensions/">live reload plugin</a>.</p> </li> <li> <p>Start <code>guard</code> (in separate terminal from the root of the repository checkout)</p> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>bundle exec guard</code></pre> </div> </div> </li> </ol> </div> <div class="paragraph"> <p>Every time you save a file, the web page will be automatically reloaded assuming you have activated the browser plugin.</p> </div> </div> </div> </div> <div class="sect1"> <h2 id="add-a-page"><a class="anchor" href="#add-a-page"></a>4. Add a page</h2> <div class="sectionbody"> <div class="paragraph"> <p>There are two types of pages, <a href="http://haml.info">HAML</a> based (<code>*.html.haml</code>) and <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/">Asciidoc</a> (<code>*.adoc</code>).</p> </div> <div class="dlist"> <dl> <dt class="hdlist1">HAML</dt> <dd> <p>HAML is close to HTML and let&#8217;s you use Ruby. Use this when you need special layouts in your page or use the site metadata. In general, only super users should use them.</p> </dd> <dt class="hdlist1">Asciidoc</dt> <dd> <p>Asciidoc is a markup language close to Markdown but more powerful. When you start a page, prefer this format. The best resource to learn the Asciidoc syntax are <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/">the writer guide</a> and <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">the syntax quick reference</a>.</p> </dd> </dl> </div> <div class="admonitionblock tip"> <table> <tr> <td class="icon"> <i class="fa icon-tip" title="Tip"></i> </td> <td class="content"> <div class="title">Best of both worlds?</div> <div class="paragraph"> <p>You can embed Asciidoc fragments inside a haml page.</p> </div> <div class="listingblock"> <div class="content"> <pre class="CodeRay highlight"><code>.row-fluid&#x000A;  .span6&#x000A;    :asciidoc&#x000A;      == Some header&#x000A;&#x000A;      And now I'm back in plain Asciidoc with http://example.com[links] and all.&#x000A;  -# Back in HAML, notice the indentation&#x000A;  .span6</code></pre> </div> </div> </td> </tr> </table> </div> <div class="paragraph"> <p>A file named <code>downloads.html.haml</code> or <code>downloads.adoc</code> in the <code>search</code> directory will generate <code>/search/downloads/index.html</code> that we reference as <code>/search/downloads/</code> at it makes for nicer URLs. If you plan to create several pages under the <code>download/</code> path, create the <code>download</code> directory and add <code>search/downloads/index.html.haml</code> or <code>search/downloads/index.adoc</code>.</p> </div> <div class="sect2"> <h3 id="page-attributes"><a class="anchor" href="#page-attributes"></a>4.1. Page attributes</h3> <div class="paragraph"> <p>Each page has some metadata attributes associated and put at the top of the file.</p> </div> <div class="listingblock"> <div class="title">An haml example</div> <div class="content"> <pre class="CodeRay highlight"><code data-lang="haml">----&#x000A;# note that the first block in haml should be surrounded by `---` and not `----`&#x000A;# but a rending bug prevents the listing to properly show it&#x000A;layout: project-frame&#x000A;title: About Hibernate Search&#x000A;project: search&#x000A;title_partial: project/title-about.html.haml&#x000A;----&#x000A;&#x000A;-<span style="color:#777"># Center body</span>&#x000A;<span style="color:#B06;font-weight:bold">.row-fluid</span>&#x000A;  <span style="color:#B06;font-weight:bold">.span8</span>&#x000A;    <span style="color:#B06;font-weight:bold">.feature-block</span>&#x000A;<span style="color:#777">      :asciidoc</span><span style="color:#777">&#x000A;        === Full-text search for entities&#x000A;&#x000A;        Offers full-text search support for objects stored by Hibernate ORM, Infinispan and other sources.&#x000A;        Think of it as Google(tm) for your entities:&#x000A;&#x000A;        * search words with text&#x000A;        * order results by relevance&#x000A;        * find by approximation (fuzzy search)</span></code></pre> </div> </div> <div class="listingblock"> <div class="title">An Asciidoc file</div> <div class="content"> <pre class="CodeRay highlight"><code>= Hibernate Search FAQ&#x000A;Emmanuel Bernard&#x000A;:awestruct-layout: project-frame&#x000A;:awestruct-project: search&#x000A;:toc:&#x000A;:toc-placement: preamble&#x000A;:toc-title: Questions&#x000A;&#x000A;You've got a question burning you? We might have the answer for you.&#x000A;&#x000A;== Indexes&#x000A;&#x000A;=== No file created in index directory&#x000A;&#x000A;Hibernate Search won't create a new index in existing directories.</code></pre> </div> </div> <div class="paragraph"> <p>Here is a list of the most useful attributes.</p> </div> <div class="dlist"> <dl> <dt class="hdlist1">layout (or awestruct-layout in Asciidoc)</dt> <dd> <p>Represents the layout the page will use. Layouts are present in the <code>_layout</code> directory</p> </dd> <dt class="hdlist1">title</dt> <dd> <p>The page title.</p> <div class="admonitionblock note"> <table> <tr> <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> <td class="content"> <div class="paragraph"> <p>The page title of an Asciidoc file is the text in the first line following <code>=</code>.</p> </div> <div class="listingblock"> <div class="content"> <pre>= Some title&#x000A;:some-attribute: value&#x000A;&#x000A;Preamble (usually bigger)&#x000A;&#x000A;== First section&#x000A;&#x000A;Some text.</pre> </div> </div> </td> </tr> </table> </div> </dd> <dt class="hdlist1">project (or awestruct-project)</dt> <dd> <p>Optional. Represents the project the page descrcibes. Used to properly compute navigation. Mandatory if the page is under the project subdirectory.</p> </dd> <dt class="hdlist1">toc (Asciidoc only)</dt> <dd> <p>Optional. Enable the rendering of the table of content in Asciidoc documents</p> </dd> <dt class="hdlist1">toc-placement (Asciidoc only)</dt> <dd> <p>Mandatory if <code>toc</code> is used. On this website, the table of content position is imposed and defined in css. Just set the value to <em>preamble</em>.</p> </dd> <dt class="hdlist1">toc-title (Asciidoc only)</dt> <dd> <p>Optional. Defines the table of content title. Defaults to <em>Table of content</em>.</p> </dd> <dt class="hdlist1">numbered (Asciidoc only)</dt> <dd> <p>Number the sections and the ToC.</p> </dd> </dl> </div> </div> <div class="sect2"> <h3 id="list-of-layouts"><a class="anchor" href="#list-of-layouts"></a>4.2. List of layouts</h3> <div class="paragraph"> <p>Layouts are used to share the same site structure. They can be nested. All are in the <code>_layouts</code> directory. There are a few important layouts:</p> </div> <div class="ulist"> <ul> <li> <p><code>project</code> (<code>project.html.haml</code>): structure of a generic page (we will change the name in a little while)</p> </li> <li> <p><code>project-frame</code> (<code>project/project-frame.html.haml</code>): structure of a project specific page. All files under <code>search</code>, <code>orm</code>, <code>validator</code> etc. use this layout</p> </li> <li> <p><code>title-nocol</code> (<code>common/title-nocol.html.haml</code>): structure of a generic page with a title and no column. Useful for generic Asciidoc pages like this one.</p> </li> <li> <p><code>project-releases</code> (<code>project/project-releases.html.haml</code>): structure of the <code>/releases/</code> page of each project.</p> </li> <li> <p><code>project-releases-series</code> (<code>project/project-releases-series.html.haml</code>): structure of series-specific pages of each project (e.g. <code>/search/5.8/</code>).</p> </li> <li> <p><code>project-documentation</code> (<code>project/project-documentation.html.haml</code>): structure of the <code>/documentation/</code> page of each project (except ORM).</p> </li> </ul> </div> </div> <div class="sect2"> <h3 id="partials"><a class="anchor" href="#partials"></a>4.3. Partials</h3> <div class="paragraph"> <p>Partials (in the <code>_partials</code> directory) are page fragments that can be reused from within a haml page or layout.</p> </div> <div class="admonitionblock caution"> <table> <tr> <td class="icon"> <i class="fa icon-caution" title="Caution"></i> </td> <td class="content"> Partials do not get automatically refreshed when change. You need to stop, clean and restart Awestruct <code>rake clean preview</code>. </td> </tr> </table> </div> </div> </div> </div> <div class="sect1"> <h2 id="update-releases"><a class="anchor" href="#update-releases"></a>5. Update releases</h2> <div class="sectionbody"> <div class="sect2"> <h3 id="add-a-new-release"><a class="anchor" href="#add-a-new-release"></a>5.1. Add a new release</h3> <div class="paragraph"> <p>To add a release, you will need to add a release file in the <code>_data</code> directory. The file will have to be named <code>&lt;full version number&gt;.yml</code> (for example <code>5.8.0.Final.yml</code>) and be located in <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;/</code>.</p> </div> <div class="admonitionblock caution"> <table> <tr> <td class="icon"> <i class="fa icon-caution" title="Caution"></i> </td> <td class="content"> You should never remove the files related to previous releases: they are used to generate links to all JIRA tickets of a given series, for instance. </td> </tr> </table> </div> <div class="paragraph"> <p>If your release is the first one of a new series, you will also have to create a new <code>series.yml</code> file in the <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;</code> directory.</p> </div> <div class="paragraph"> <p>For information about the content of each file, see <a href="#data_directory">here</a>.</p> </div> </div> <div class="sect2"> <h3 id="hide-an-older-series"><a class="anchor" href="#hide-an-older-series"></a>5.2. Hide an older series</h3> <div class="paragraph"> <p>To hide an older series, edit the <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;/series.yml</code> file to set the <code>displayed</code> attribute to <code>false</code> (just add the attribute if it is missing).</p> </div> </div> </div> </div> <div class="sect1"> <h2 id="data"><a class="anchor" href="#data"></a>6. Data</h2> <div class="sectionbody"> <div class="sect2"> <h3 id="code-_config-site-yml-code"><a class="anchor" href="#code-_config-site-yml-code"></a>6.1. <code>_config/site.yml</code></h3> <div class="paragraph"> <p>The <code>site.yml</code> file contains site-related, YAML-formatted data.</p> </div> <div class="paragraph"> <p>This includes some project-related data.</p> </div> <div class="paragraph"> <p>See the file for more information about available attributes.</p> </div> </div> <div class="sect2"> <h3 id="data_directory"><a class="anchor" href="#data_directory"></a>6.2. <code>_data</code></h3> <div class="paragraph"> <p>The <code>_data</code> directory contains YAML-formatted data for the releases of each project.</p> </div> <div class="paragraph"> <p>The structure of this directory is as follows:</p> </div> <div class="ulist"> <ul> <li> <p>&lt;project ID, e.g. <code>search</code>&gt;</p> <div class="ulist"> <ul> <li> <p><code>releases</code></p> <div class="ulist"> <ul> <li> <p>&lt;series version, e.g. <code>5.8</code>&gt;</p> <div class="ulist"> <ul> <li> <p><code>series.yml</code> (data about the series)</p> </li> <li> <p>&lt;one file for each release in this series, e.g. <code>5.8.0.Final.yml</code>&gt;</p> </li> </ul> </div> </li> </ul> </div> </li> </ul> </div> </li> </ul> </div> <div class="paragraph"> <p>The <code>series.yml</code> file may contain the following attributes:</p> </div> <div class="ulist"> <ul> <li> <p>Mandatory:</p> <div class="ulist"> <ul> <li> <p><code>summary</code>: a short text (one or two sentences) summarizing the specifics of this series.</p> </li> </ul> </div> </li> <li> <p>Optional:</p> <div class="ulist"> <ul> <li> <p><code>displayed</code>: <code>true</code> to display the series on hibernate.org, <code>false</code> to hide it. Defaults to <code>false</code>.</p> </li> <li> <p><code>displayed</code>: whether this series should be displayed. Defaults to false.</p> </li> <li> <p><code>artifacts</code>: an array of objects, one object for each Maven artifact . Each object has the following attributes:</p> <div class="ulist"> <ul> <li> <p><code>artifact_id</code>: the Maven artifact ID</p> </li> <li> <p><code>group_id</code>: the Maven group ID. Optional: defaults to the group ID defined on the series, or on the project.</p> </li> <li> <p><code>summary</code>: a short text (6/7 words at most) summarizing the purpose of this artifact</p> </li> </ul> </div> </li> <li> <p><code>integration_constraints</code>: a map, with keys being the integration IDs defined in <code>site.yml</code>, and values being objects with a <code>version</code> attribute describing the version constraints summarily (about a dozen characters).</p> </li> </ul> </div> </li> </ul> </div> <div class="paragraph"> <p>The <code>&lt;release&gt;.yml</code> files must be named after the release version (e.g. <code>5.6.0.Final.yml</code>) and may contain the following attributes:</p> </div> <div class="ulist"> <ul> <li> <p>Mandatory:</p> <div class="ulist"> <ul> <li> <p><code>date</code>: the date of the release. Format is yyyy-mm-dd</p> </li> <li> <p><code>stable</code>: <code>true</code> for stable releases (<code>*.Final</code>), <code>false</code> for development releases (alpha, betas, CRs, &#8230;&#8203;)</p> </li> </ul> </div> </li> <li> <p>Optional:</p> <div class="ulist"> <ul> <li> <p><code>announcement_url</code>: the URL of the blog post announcing the release</p> </li> <li> <p><code>summary</code>: a one-sentence summary of the content of the release</p> </li> <li> <p><code>displayed</code>: <code>true</code> to display the release on hibernate.org, <code>false</code> to hide it. Defaults to <code>true</code>. Note that a release will only be displayed if its series is displayed.</p> </li> </ul> </div> </li> </ul> </div> </div> </div> </div> <div class="sect1"> <h2 id="staging"><a class="anchor" href="#staging"></a>7. Preview changes on staging.hibernate.org</h2> <div class="sectionbody"> <div class="paragraph"> <p>Use git to push your changes to the <a href="https://github.com/hibernate/hibernate.org/tree/staging">staging branch</a> on <a href="https://github.com/hibernate/hibernate.org">GitHub</a>.</p> </div> <div class="paragraph"> <p>The staging site can be used for various experiments with the site L&amp;F and content. For this reason, ou might need to use <code>git push --force</code> to overwrite previous experiments.</p> </div> <div class="paragraph"> <p>Pushing changes to the <a href="https://github.com/hibernate/hibernate.org/tree/staging">staging branch</a> will trigger the <a href="http://ci.hibernate.org/view/Website/job/staging.hibernate.org/">staging.hibernate.org</a> job on the Hibernate <a href="http://ci.hibernate.org">CI Server</a>. The content of staging.hibernate.org will be automatically updated as part of a successful build.</p> </div> </div> </div> <div class="sect1"> <h2 id="publishing"><a class="anchor" href="#publishing"></a>8. Publish changes to hibernate.org</h2> <div class="sectionbody"> <div class="paragraph"> <p>Use git to push your changes to the <a href="https://github.com/hibernate/hibernate.org/tree/production">production branch</a> of the repository on <a href="https://github.com/hibernate/hibernate.org">GitHub</a>.</p> </div> <div class="admonitionblock note"> <table> <tr> <td class="icon"> <i class="fa icon-note" title="Note"></i> </td> <td class="content"> <div class="paragraph"> <p>When adding a new release to the site, one needs to make sure that the release artifacts are already published. Part of the site generation is to parse the release metadata from the release POM. If the artifact is not yet published an error will occur!</p> </div> </td> </tr> </table> </div> <div class="paragraph"> <p>Your changes need to be a fast forward of the <a href="https://github.com/hibernate/hibernate.org/tree/production">production branch</a>. Never use the <code>--force</code> option in this case! If you have a push error, rebase first and possibly repeat the <a href="#staging">staging</a> phase.</p> </div> <div class="paragraph"> <p>Pushing changes to the <a href="https://github.com/hibernate/hibernate.org/tree/production">production branch</a> will trigger the <a href="http://ci.hibernate.org/view/Website/job/www.hibernate.org/">www.hibernate.org</a> job on the Hibernate <a href="http://ci.hibernate.org">CI Server</a>. The content of <a href="http://hibernate.org">hibernate.org</a> will be automatically updated as a result of a successful build.</p> </div> </div> </div> </div> </div> <div class="ui inverted vertical footer segment"> <div class="ui container"> <div class="ui stackable inverted divided equal height stackable grid"> <div class="three wide column"> <h4 class="ui inverted header">Projects</h4> <div class="ui inverted link list"> <a class="item" href="../orm" title="Hibernate ORM">Hibernate ORM</a> <a class="item" href="../search" title="Search">Hibernate Search</a> <a class="item" href="../validator" title="Hibernate Validator">Hibernate Validator</a> <a class="item" href="../ogm" title="Hibernate OGM">Hibernate OGM</a> <a class="item" href="../tools" title="Hibernate Tools">Hibernate Tools</a> <a class="item" href="../others" title="Other projects">Other projects</a> </div> </div> <div class="three wide column"> <h4 class="ui inverted header">Follow us</h4> <div class="ui inverted link list"> <a class="item" href="http://in.relation.to" title="Blog">Blog</a> <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a> <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a> </div> </div> <div class="five wide column"> <h4 class="ui inverted header">Contribute and community</h4> <div class="ui inverted link list"> <a class="item" href="../community" title="Community resources">Community resources</a> <a class="item" href="https://hibernate.atlassian.net" title="Submit a bug">Submit a bug</a> <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a> </div> </div> <div class="five wide column sponsor"> <div class="logo"> <a href="https://www.redhat.com/"> <img height="48" src="../images/redhat.png" title="Red Hat" width="216"> </a> </div> <div class="logo"> <a href="https://developers.redhat.com/"> <img height="48" src="../images/redhat-developers.png" title="Red Hat Developers" width="216"> </a> </div> </div> </div> </div> </div> <span class="back-to-top computer only"> <a href="javascript: void(0)">Back to top</a> </span> <script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survival guide to website editing - Hibernate</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="Emmanuel Bernard" name="author">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
+    <link href="../stylesheets/styles.min.css?new" media="screen" rel="stylesheet">
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+    <!-- Tabzilla does not support minification -->
+    <script src="https://static.jboss.org/js/_jbossorg-tabzilla.js"></script>
+  </head>
+  <body>
+    <div class="ui vertical inverted sidebar left overlay" id="mobile-menu">
+      <div class="ui vertical fluid inverted text menu accordion">
+        <div class="item">
+          <a class="title">
+            <i class="database grid icon"></i>
+            <i class="dropdown icon"></i>
+            <strong>ORM</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/orm/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/orm/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/orm/documentation/">
+                <i class="folder grid icon open"></i>
+                Documentation
+              </a>
+              <a class="item" href="/orm/books/">
+                <i class="book grid icon"></i>
+                Books
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                <i class="grid icon share"></i>
+                Migration guides
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/orm/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/orm/envers/">
+                <i class="grid icon time"></i>
+                Envers
+              </a>
+              <a class="item" href="/orm/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/orm/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/orm/certification/">
+                <i class="certificate grid icon"></i>
+                Get Certified
+              </a>
+              <a class="item" href="/orm/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="grid icon search"></i>
+            <i class="dropdown icon"></i>
+            <strong>Search</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/search/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/search/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/search/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/search/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/search/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/search/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/search/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/search/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="box checkmark grid icon"></i>
+            <i class="dropdown icon"></i>
+            <strong>Validator</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/validator/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/validator/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/validator/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/validator/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/validator/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/validator/tooling/">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="/validator/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/validator/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="grid icon sitemap"></i>
+            <i class="dropdown icon"></i>
+            <strong>OGM</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/ogm/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <a class="item" href="/ogm/releases/">
+                <i class="grid icon tags"></i>
+                Releases
+              </a>
+              <a class="item" href="/ogm/documentation/">
+                <i class="book grid icon"></i>
+                Documentation
+              </a>
+              <a class="item" href="/ogm/roadmap/">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="/ogm/contribute/">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="/ogm/support/">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="/ogm/faq/">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a class="title">
+            <i class="grid icon wrench"></i>
+            <i class="dropdown icon"></i>
+            <strong>Tools</strong>
+          </a>
+          <div class="content">
+            <div class="menu internal-links">
+              <a class="item" href="/tools/">
+                <i class="grid home icon"></i>
+                About
+              </a>
+            </div>
+            <div class="menu external-links">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://forum.hibernate.org">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="item" href="/others/">
+          Others
+        </a>
+        <a class="item" href="http://in.relation.to/">
+          Blog
+        </a>
+        <a class="item" href="https://twitter.com/hibernate/">
+          <i class="icon twitter"></i>
+          Follow us
+        </a>
+      </div>
+    </div>
+    <div class="pusher">
+      <div class="mobile-menu-button-bar mobile only">
+        <a class="item" id="mobile-menu-toggle">
+          <i class="sidebar icon"></i>
+          Menu
+        </a>
+      </div>
+      <!-- begin accesibility skip to top -->
+      <ul class="sr-only">
+        <li>
+          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+        </li>
+        <li>
+          <a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+        </li>
+      </ul>
+      <div class="ui container banner">
+        <div class="logo">
+          <a href="/">
+            <img height="50" src="https://static.jboss.org/hibernate/images/hibernate_logo_whitebkg_200px.png" width="200">
+          </a>
+        </div>
+        <!-- Red Hat link at the top -->
+        <div class="dropup mobile hidden" id="redhat-button">
+          <div class="tabnav-closed" href="#" id="tab">Red Hat</div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="ui stackable menu mobile hidden" id="nav">
+          <a class="item" href="/orm/">ORM</a>
+          <a class="item" href="/search/">Search</a>
+          <a class="item" href="/validator/">Validator</a>
+          <a class="item" href="/ogm/">OGM</a>
+          <a class="item" href="/tools/">Tools</a>
+          <a class="item" href="/others/">Others</a>
+          <div class="right menu">
+            <a class="item" href="http://in.relation.to/">Blog</a>
+            <a class="item" href="/community/">Community</a>
+            <a class="item" href="https://twitter.com/hibernate">
+              <i class="twitter icon"></i>
+              Follow us
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ui container-fluid">
+        <div class="jumbotron small">
+          <div class="ui container">
+            <h1>
+              <span>Survival guide to website editing</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="ui container page-content">
+        <div class="content" id="content">
+          <div id="preamble">
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>This document will guide you through the ways of website edition.</p>
+          </div>
+          </div>
+          <div id="toc" class="toc">
+          <div id="toctitle">Table of Contents</div>
+          <ul class="sectlevel1">
+          <li><a href="#tl-dr">1. TL;DR</a></li>
+          <li><a href="#prerequisites">2. Prerequisites</a></li>
+          <li><a href="#how-to-edit">3. How to edit</a>
+          <ul class="sectlevel2">
+          <li><a href="#live-reload-optional">3.1. Live reload (optional)</a></li>
+          </ul>
+          </li>
+          <li><a href="#add-a-page">4. Add a page</a>
+          <ul class="sectlevel2">
+          <li><a href="#page-attributes">4.1. Page attributes</a></li>
+          <li><a href="#list-of-layouts">4.2. List of layouts</a></li>
+          <li><a href="#partials">4.3. Partials</a></li>
+          </ul>
+          </li>
+          <li><a href="#update-releases">5. Update releases</a>
+          <ul class="sectlevel2">
+          <li><a href="#add-a-new-release">5.1. Add a new release</a></li>
+          <li><a href="#hide-an-older-series">5.2. Hide an older series</a></li>
+          </ul>
+          </li>
+          <li><a href="#data">6. Data</a>
+          <ul class="sectlevel2">
+          <li><a href="#code-_config-site-yml-code">6.1. <code>_config/site.yml</code></a></li>
+          <li><a href="#data_directory">6.2. <code>_data</code></a></li>
+          </ul>
+          </li>
+          <li><a href="#staging">7. Preview changes on staging.hibernate.org</a></li>
+          <li><a href="#publishing">8. Publish changes to hibernate.org</a></li>
+          </ul>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="tl-dr"><a class="anchor" href="#tl-dr"></a>1. TL;DR</h2>
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>Wanna start hacking right away? This section is for you.</p>
+          </div>
+          <div class="paragraph">
+          <p>Look at the <code>search</code> directory for inspiration in content, structure and markup examples.</p>
+          </div>
+          <div class="paragraph">
+          <p>To start a new project, for example ORM, do the following:</p>
+          </div>
+          <div class="olist arabic">
+          <ol class="arabic">
+          <li>
+          <p>create the project directory <code>mkdir orm</code></p>
+          </li>
+          <li>
+          <p>copy the pages from search <code>cp -R search/ orm</code></p>
+          </li>
+          <li>
+          <p>create a project section in <code>_config/site.yml</code> under <code>projects</code>.</p>
+          <div class="olist loweralpha">
+          <ol class="loweralpha" type="a">
+          <li>
+          <p>best is to simply copy the search subsection and update the data</p>
+          </li>
+          <li>
+          <p>the project section name is lowercase and corresponds to the URL path (<code>search</code> and not <code>hibernate-search</code>)</p>
+          </li>
+          </ol>
+          </div>
+          </li>
+          <li>
+          <p>edit the pages (*.haml, *.adoc) under <code>orm/</code> and replace the <code>project</code> or <code>awestruct-project</code> attribute to the lowercase project name</p>
+          </li>
+          </ol>
+          </div>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>2. Prerequisites</h2>
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>Follow the <a href="/README/">README</a> instructions to get Awestruct and its dependencies up and running.</p>
+          </div>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="how-to-edit"><a class="anchor" href="#how-to-edit"></a>3. How to edit</h2>
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>Use your favorite editor, for example vim.
+          All pages are using text based markups with various degrees of flexibility and readability.
+          Indentation is two spaces.</p>
+          </div>
+          <div class="admonitionblock caution">
+          <table>
+          <tr>
+          <td class="icon">
+          <i class="fa icon-caution" title="Caution"></i>
+          </td>
+          <td class="content">
+          In Ruby indentation matters, be careful.
+          </td>
+          </tr>
+          </table>
+          </div>
+          <div class="sect2">
+          <h3 id="live-reload-optional"><a class="anchor" href="#live-reload-optional"></a>3.1. Live reload (optional)</h3>
+          <div class="paragraph">
+          <p>You can make the editing/reviewing work-flow faster by using the
+          livereload plugin in your browser.</p>
+          </div>
+          <div class="olist arabic">
+          <ol class="arabic">
+          <li>
+          <p>Install the appropriate <a href="http://livereload.com/extensions/">live reload plugin</a>.</p>
+          </li>
+          <li>
+          <p>Start <code>guard</code> (in separate terminal from the root of the repository checkout)</p>
+          <div class="listingblock">
+          <div class="content">
+          <pre class="CodeRay highlight"><code>bundle exec guard</code></pre>
+          </div>
+          </div>
+          </li>
+          </ol>
+          </div>
+          <div class="paragraph">
+          <p>Every time you save a file, the web page will be automatically reloaded assuming you have activated the browser plugin.</p>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="add-a-page"><a class="anchor" href="#add-a-page"></a>4. Add a page</h2>
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>There are two types of pages, <a href="http://haml.info">HAML</a> based (<code>*.html.haml</code>) and <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/">Asciidoc</a> (<code>*.adoc</code>).</p>
+          </div>
+          <div class="dlist">
+          <dl>
+          <dt class="hdlist1">HAML</dt>
+          <dd>
+          <p>HAML is close to HTML and let&#8217;s you use Ruby. Use this when you need special layouts in your page or use the site metadata.
+          In general, only super users should use them.</p>
+          </dd>
+          <dt class="hdlist1">Asciidoc</dt>
+          <dd>
+          <p>Asciidoc is a markup language close to Markdown but more powerful. When you start a page, prefer this format.
+          The best resource to learn the Asciidoc syntax are <a href="http://asciidoctor.org/docs/asciidoc-writers-guide/">the writer guide</a> and <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/">the syntax quick reference</a>.</p>
+          </dd>
+          </dl>
+          </div>
+          <div class="admonitionblock tip">
+          <table>
+          <tr>
+          <td class="icon">
+          <i class="fa icon-tip" title="Tip"></i>
+          </td>
+          <td class="content">
+          <div class="title">Best of both worlds?</div>
+          <div class="paragraph">
+          <p>You can embed Asciidoc fragments inside a haml page.</p>
+          </div>
+          <div class="listingblock">
+          <div class="content">
+          <pre class="CodeRay highlight"><code>.row-fluid&#x000A;  .span6&#x000A;    :asciidoc&#x000A;      == Some header&#x000A;&#x000A;      And now I'm back in plain Asciidoc with http://example.com[links] and all.&#x000A;  -# Back in HAML, notice the indentation&#x000A;  .span6</code></pre>
+          </div>
+          </div>
+          </td>
+          </tr>
+          </table>
+          </div>
+          <div class="paragraph">
+          <p>A file named <code>downloads.html.haml</code> or <code>downloads.adoc</code> in the <code>search</code> directory will generate <code>/search/downloads/index.html</code> that we reference as <code>/search/downloads/</code> at it makes for nicer URLs. If you plan to create several pages under the <code>download/</code> path, create the <code>download</code> directory and add <code>search/downloads/index.html.haml</code> or <code>search/downloads/index.adoc</code>.</p>
+          </div>
+          <div class="sect2">
+          <h3 id="page-attributes"><a class="anchor" href="#page-attributes"></a>4.1. Page attributes</h3>
+          <div class="paragraph">
+          <p>Each page has some metadata attributes associated and put at the top of the file.</p>
+          </div>
+          <div class="listingblock">
+          <div class="title">An haml example</div>
+          <div class="content">
+          <pre class="CodeRay highlight"><code data-lang="haml">----&#x000A;# note that the first block in haml should be surrounded by `---` and not `----`&#x000A;# but a rending bug prevents the listing to properly show it&#x000A;layout: project-frame&#x000A;title: About Hibernate Search&#x000A;project: search&#x000A;title_partial: project/title-about.html.haml&#x000A;----&#x000A;&#x000A;-<span style="color:#777"># Center body</span>&#x000A;<span style="color:#B06;font-weight:bold">.row-fluid</span>&#x000A;  <span style="color:#B06;font-weight:bold">.span8</span>&#x000A;    <span style="color:#B06;font-weight:bold">.feature-block</span>&#x000A;<span style="color:#777">      :asciidoc</span><span style="color:#777">&#x000A;        === Full-text search for entities&#x000A;&#x000A;        Offers full-text search support for objects stored by Hibernate ORM, Infinispan and other sources.&#x000A;        Think of it as Google(tm) for your entities:&#x000A;&#x000A;        * search words with text&#x000A;        * order results by relevance&#x000A;        * find by approximation (fuzzy search)</span></code></pre>
+          </div>
+          </div>
+          <div class="listingblock">
+          <div class="title">An Asciidoc file</div>
+          <div class="content">
+          <pre class="CodeRay highlight"><code>= Hibernate Search FAQ&#x000A;Emmanuel Bernard&#x000A;:awestruct-layout: project-frame&#x000A;:awestruct-project: search&#x000A;:toc:&#x000A;:toc-placement: preamble&#x000A;:toc-title: Questions&#x000A;&#x000A;You've got a question burning you? We might have the answer for you.&#x000A;&#x000A;== Indexes&#x000A;&#x000A;=== No file created in index directory&#x000A;&#x000A;Hibernate Search won't create a new index in existing directories.</code></pre>
+          </div>
+          </div>
+          <div class="paragraph">
+          <p>Here is a list of the most useful attributes.</p>
+          </div>
+          <div class="dlist">
+          <dl>
+          <dt class="hdlist1">layout (or awestruct-layout in Asciidoc)</dt>
+          <dd>
+          <p>Represents the layout the page will use. Layouts are present in the <code>_layout</code> directory</p>
+          </dd>
+          <dt class="hdlist1">title</dt>
+          <dd>
+          <p>The page title.</p>
+          <div class="admonitionblock note">
+          <table>
+          <tr>
+          <td class="icon">
+          <i class="fa icon-note" title="Note"></i>
+          </td>
+          <td class="content">
+          <div class="paragraph">
+          <p>The page title of an Asciidoc file is the text in the first line following <code>=</code>.</p>
+          </div>
+          <div class="listingblock">
+          <div class="content">
+          <pre>= Some title&#x000A;:some-attribute: value&#x000A;&#x000A;Preamble (usually bigger)&#x000A;&#x000A;== First section&#x000A;&#x000A;Some text.</pre>
+          </div>
+          </div>
+          </td>
+          </tr>
+          </table>
+          </div>
+          </dd>
+          <dt class="hdlist1">project (or awestruct-project)</dt>
+          <dd>
+          <p>Optional. Represents the project the page descrcibes. Used to properly compute navigation.
+          Mandatory if the page is under the project subdirectory.</p>
+          </dd>
+          <dt class="hdlist1">toc (Asciidoc only)</dt>
+          <dd>
+          <p>Optional. Enable the rendering of the table of content in Asciidoc documents</p>
+          </dd>
+          <dt class="hdlist1">toc-placement (Asciidoc only)</dt>
+          <dd>
+          <p>Mandatory if <code>toc</code> is used. On this website, the table of content position is imposed and defined in css.
+          Just set the value to <em>preamble</em>.</p>
+          </dd>
+          <dt class="hdlist1">toc-title (Asciidoc only)</dt>
+          <dd>
+          <p>Optional. Defines the table of content title. Defaults to <em>Table of content</em>.</p>
+          </dd>
+          <dt class="hdlist1">numbered (Asciidoc only)</dt>
+          <dd>
+          <p>Number the sections and the ToC.</p>
+          </dd>
+          </dl>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="list-of-layouts"><a class="anchor" href="#list-of-layouts"></a>4.2. List of layouts</h3>
+          <div class="paragraph">
+          <p>Layouts are used to share the same site structure. They can be nested.
+          All are in the <code>_layouts</code> directory.
+          There are a few important layouts:</p>
+          </div>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>project</code> (<code>project.html.haml</code>): structure of a generic page (we will change the name in a little while)</p>
+          </li>
+          <li>
+          <p><code>project-frame</code> (<code>project/project-frame.html.haml</code>): structure of a project specific page. All files under <code>search</code>, <code>orm</code>, <code>validator</code> etc. use this layout</p>
+          </li>
+          <li>
+          <p><code>title-nocol</code> (<code>common/title-nocol.html.haml</code>): structure of a generic page with a title and no column. Useful for generic Asciidoc pages like this one.</p>
+          </li>
+          <li>
+          <p><code>project-releases</code> (<code>project/project-releases.html.haml</code>): structure of the <code>/releases/</code> page of each project.</p>
+          </li>
+          <li>
+          <p><code>project-releases-series</code> (<code>project/project-releases-series.html.haml</code>): structure of series-specific pages of each project (e.g. <code>/search/5.8/</code>).</p>
+          </li>
+          <li>
+          <p><code>project-documentation</code> (<code>project/project-documentation.html.haml</code>): structure of the <code>/documentation/</code> page of each project (except ORM).</p>
+          </li>
+          </ul>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="partials"><a class="anchor" href="#partials"></a>4.3. Partials</h3>
+          <div class="paragraph">
+          <p>Partials (in the <code>_partials</code> directory) are page fragments that can be reused from within a haml page or layout.</p>
+          </div>
+          <div class="admonitionblock caution">
+          <table>
+          <tr>
+          <td class="icon">
+          <i class="fa icon-caution" title="Caution"></i>
+          </td>
+          <td class="content">
+          Partials do not get automatically refreshed when change. You need to stop, clean and restart Awestruct <code>rake clean preview</code>.
+          </td>
+          </tr>
+          </table>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="update-releases"><a class="anchor" href="#update-releases"></a>5. Update releases</h2>
+          <div class="sectionbody">
+          <div class="sect2">
+          <h3 id="add-a-new-release"><a class="anchor" href="#add-a-new-release"></a>5.1. Add a new release</h3>
+          <div class="paragraph">
+          <p>To add a release, you will need to add a release file in the <code>_data</code> directory.
+          The file will have to be named <code>&lt;full version number&gt;.yml</code> (for example <code>5.8.0.Final.yml</code>)
+          and be located in <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;/</code>.</p>
+          </div>
+          <div class="admonitionblock caution">
+          <table>
+          <tr>
+          <td class="icon">
+          <i class="fa icon-caution" title="Caution"></i>
+          </td>
+          <td class="content">
+          You should never remove the files related to previous releases:
+          they are used to generate links to all JIRA tickets of a given series, for instance.
+          </td>
+          </tr>
+          </table>
+          </div>
+          <div class="paragraph">
+          <p>If your release is the first one of a new series, you will also have to create a new <code>series.yml</code> file
+          in the <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;</code> directory.</p>
+          </div>
+          <div class="paragraph">
+          <p>For information about the content of each file, see <a href="#data_directory">here</a>.</p>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="hide-an-older-series"><a class="anchor" href="#hide-an-older-series"></a>5.2. Hide an older series</h3>
+          <div class="paragraph">
+          <p>To hide an older series, edit the <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;/series.yml</code> file
+          to set the <code>displayed</code> attribute to <code>false</code> (just add the attribute if it is missing).</p>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="data"><a class="anchor" href="#data"></a>6. Data</h2>
+          <div class="sectionbody">
+          <div class="sect2">
+          <h3 id="code-_config-site-yml-code"><a class="anchor" href="#code-_config-site-yml-code"></a>6.1. <code>_config/site.yml</code></h3>
+          <div class="paragraph">
+          <p>The <code>site.yml</code> file contains site-related, YAML-formatted data.</p>
+          </div>
+          <div class="paragraph">
+          <p>This includes some project-related data.</p>
+          </div>
+          <div class="paragraph">
+          <p>See the file for more information about available attributes.</p>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="data_directory"><a class="anchor" href="#data_directory"></a>6.2. <code>_data</code></h3>
+          <div class="paragraph">
+          <p>The <code>_data</code> directory contains YAML-formatted data for the releases of each project.</p>
+          </div>
+          <div class="paragraph">
+          <p>The structure of this directory is as follows:</p>
+          </div>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>&lt;project ID, e.g. <code>search</code>&gt;</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>releases</code></p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>&lt;series version, e.g. <code>5.8</code>&gt;</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>series.yml</code> (data about the series)</p>
+          </li>
+          <li>
+          <p>&lt;one file for each release in this series, e.g. <code>5.8.0.Final.yml</code>&gt;</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          </ul>
+          </div>
+          </li>
+          </ul>
+          </div>
+          </li>
+          </ul>
+          </div>
+          <div class="paragraph">
+          <p>The <code>series.yml</code> file may contain the following attributes:</p>
+          </div>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>Mandatory:</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>summary</code>: a short text (one or two sentences) summarizing the specifics of this series.</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          <li>
+          <p>Optional:</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>displayed</code>: <code>true</code> to display the series on hibernate.org, <code>false</code> to hide it.
+          Defaults to <code>false</code>.</p>
+          </li>
+          <li>
+          <p><code>displayed</code>: whether this series should be displayed. Defaults to false.</p>
+          </li>
+          <li>
+          <p><code>artifacts</code>: an array of objects, one object for each Maven artifact	. Each object has the following attributes:</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>artifact_id</code>: the Maven artifact ID</p>
+          </li>
+          <li>
+          <p><code>group_id</code>: the Maven group ID. Optional: defaults to the group ID defined on the series, or on the project.</p>
+          </li>
+          <li>
+          <p><code>summary</code>: a short text (6/7 words at most) summarizing the purpose of this artifact</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          <li>
+          <p><code>integration_constraints</code>: a map, with keys being the integration IDs defined in <code>site.yml</code>,
+          and values being objects with a <code>version</code> attribute describing the version constraints summarily (about a dozen characters).</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          </ul>
+          </div>
+          <div class="paragraph">
+          <p>The <code>&lt;release&gt;.yml</code> files must be named after the release version (e.g. <code>5.6.0.Final.yml</code>)
+          and may contain the following attributes:</p>
+          </div>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p>Mandatory:</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>date</code>: the date of the release. Format is yyyy-mm-dd</p>
+          </li>
+          <li>
+          <p><code>stable</code>: <code>true</code> for stable releases (<code>*.Final</code>),
+          <code>false</code> for development releases (alpha, betas, CRs, &#8230;&#8203;)</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          <li>
+          <p>Optional:</p>
+          <div class="ulist">
+          <ul>
+          <li>
+          <p><code>announcement_url</code>: the URL of the blog post announcing the release</p>
+          </li>
+          <li>
+          <p><code>summary</code>: a one-sentence summary of the content of the release</p>
+          </li>
+          <li>
+          <p><code>displayed</code>: <code>true</code> to display the release on hibernate.org, <code>false</code> to hide it.
+          Defaults to <code>true</code>. Note that a release will only be displayed if its series is displayed.</p>
+          </li>
+          </ul>
+          </div>
+          </li>
+          </ul>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="staging"><a class="anchor" href="#staging"></a>7. Preview changes on staging.hibernate.org</h2>
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>Use git to push your changes to the
+          <a href="https://github.com/hibernate/hibernate.org/tree/staging">staging branch</a>
+          on <a href="https://github.com/hibernate/hibernate.org">GitHub</a>.</p>
+          </div>
+          <div class="paragraph">
+          <p>The staging site can be used for various experiments with the site L&amp;F and content.
+          For this reason, ou might need to use <code>git push --force</code> to overwrite previous experiments.</p>
+          </div>
+          <div class="paragraph">
+          <p>Pushing changes to the
+          <a href="https://github.com/hibernate/hibernate.org/tree/staging">staging branch</a>
+          will trigger the <a href="http://ci.hibernate.org/view/Website/job/staging.hibernate.org/">staging.hibernate.org</a>
+          job on the Hibernate <a href="http://ci.hibernate.org">CI Server</a>. The content of
+          staging.hibernate.org will be automatically updated as part of a successful
+          build.</p>
+          </div>
+          </div>
+          </div>
+          <div class="sect1">
+          <h2 id="publishing"><a class="anchor" href="#publishing"></a>8. Publish changes to hibernate.org</h2>
+          <div class="sectionbody">
+          <div class="paragraph">
+          <p>Use git to push your changes to the
+          <a href="https://github.com/hibernate/hibernate.org/tree/production">production branch</a> of the
+          repository on <a href="https://github.com/hibernate/hibernate.org">GitHub</a>.</p>
+          </div>
+          <div class="admonitionblock note">
+          <table>
+          <tr>
+          <td class="icon">
+          <i class="fa icon-note" title="Note"></i>
+          </td>
+          <td class="content">
+          <div class="paragraph">
+          <p>When adding a new release to the site, one needs to make sure that the release artifacts
+          are already published. Part of the site generation is to parse the release metadata from
+          the release POM. If the artifact is not yet published an error will occur!</p>
+          </div>
+          </td>
+          </tr>
+          </table>
+          </div>
+          <div class="paragraph">
+          <p>Your changes need to be a fast forward of the <a href="https://github.com/hibernate/hibernate.org/tree/production">production branch</a>. Never use the <code>--force</code> option in this case!
+          If you have a push error, rebase first and possibly repeat the <a href="#staging">staging</a> phase.</p>
+          </div>
+          <div class="paragraph">
+          <p>Pushing changes to the
+          <a href="https://github.com/hibernate/hibernate.org/tree/production">production branch</a>
+          will trigger the <a href="http://ci.hibernate.org/view/Website/job/www.hibernate.org/">www.hibernate.org</a>
+          job on the Hibernate <a href="http://ci.hibernate.org">CI Server</a>. The content of
+          <a href="http://hibernate.org">hibernate.org</a> will be automatically updated as a result
+          of a successful build.</p>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">Projects</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../others" title="Other projects">Other projects</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Follow us</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="http://in.relation.to" title="Blog">Blog</a>
+                <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+                <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
+              </div>
+            </div>
+            <div class="five wide column">
+              <h4 class="ui inverted header">Contribute and community</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="../community" title="Community resources">Community resources</a>
+                <a class="item" href="https://hibernate.atlassian.net" title="Submit a bug">Submit a bug</a>
+                <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+              </div>
+            </div>
+            <div class="five wide column sponsor">
+              <div class="logo">
+                <a href="https://www.redhat.com/">
+                  <img height="48" src="../images/redhat.png" title="Red Hat" width="216">
+                </a>
+              </div>
+              <div class="logo">
+                <a href="https://developers.redhat.com/">
+                  <img height="48" src="../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="back-to-top computer only">
+        <a href="javascript: void(0)">Back to top</a>
+      </span>
+      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       
                           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -10,7 +1032,11 @@
       ga('create', 'UA-45270411-1', 'auto');
       ga('send', 'pageview');
       
-      </script> </div> </body> </html> <script>
+      </script>
+    </div>
+  </body>
+</html>
+<script>
   $(function() {
     $('#mobile-menu').sidebar('setting', {
       transition: 'overlay'
