@@ -564,7 +564,7 @@
                 </div>
               </div>
               <div class="span4">
-                <div class="ui segment raised news">
+                <div class="ui segment raised news" id="latest-news" style="display:none">
                   <h3>Latest news</h3>
                   <div id="feed"></div>
                   <a class="ui right labeled icon button" href="http://in.relation.to/hibernate-orm/">
@@ -604,6 +604,7 @@
                             )
                           );
                         }
+                        $('#latest-news').fadeIn();
                       }
                     });
                   });
