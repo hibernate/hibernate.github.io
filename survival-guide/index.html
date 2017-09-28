@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" media="screen" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" media="screen" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1506604283" media="screen" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1506604548" media="screen" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="http://static.jboss.org/images/hibernate/favicon.ico" rel="shortcut icon">
     <link href="http://static.jboss.org/images/hibernate/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -448,6 +448,7 @@
           <ul class="sectlevel2">
           <li><a href="#add-a-new-release">5.1. Add a new release</a></li>
           <li><a href="#hide-an-older-series">5.2. Hide an older series</a></li>
+          <li><a href="#hide-a-specific-release">5.3. Hide a specific release</a></li>
           </ul>
           </li>
           <li><a href="#data">6. Data</a>
@@ -759,6 +760,17 @@
           <div class="paragraph">
           <p>To hide an older series, edit the <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;/series.yml</code> file
           to set the <code>displayed</code> attribute to <code>false</code> (just add the attribute if it is missing).</p>
+          </div>
+          </div>
+          <div class="sect2">
+          <h3 id="hide-a-specific-release"><a class="anchor" href="#hide-a-specific-release"></a>5.3. Hide a specific release</h3>
+          <div class="paragraph">
+          <p>To hide an older series, edit the <code>_data/&lt;project ID&gt;/releases/&lt;series version&gt;/&lt;release version&gt;.yml</code> file
+          to set the <code>displayed</code> attribute to <code>false</code> (just add the attribute if it is missing).</p>
+          </div>
+          <div class="paragraph">
+          <p>To only hide download links and Maven coordinates,
+          set the <code>available</code> attribute to <code>false</code> (just add the attribute if it is missing).</p>
           </div>
           </div>
           </div>
