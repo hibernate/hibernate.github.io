@@ -97,7 +97,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.15 seconds (files took 0.95077 seconds to load)
+Finished in 0.86355 seconds (files took 0.74461 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -119,6 +119,8 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-mapping.dtd[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/hv-maven-import-options-idea.png[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/redhat-developers.png[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/redhat.png[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/tck-jsr-349-setup.png[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/joblog[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/ogm/hibernate-ogm-metadata.properties[0m
@@ -212,12 +214,10 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.6.3.Final/hibernate-search-parent-5.6.3.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.10.Final/hibernate-core-5.1.10.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/4.3.11.Final/hibernate-core-4.3.11.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/4.2.21.Final/hibernate-core-4.2.21.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.11.Final/hibernate-core-5.2.11.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/4.3.2.Final/hibernate-validator-4.3.2.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/4.3.2.Final/hibernate-validator-parent-4.3.2.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.4.1.Final/hibernate-validator-5.4.1.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/5.4.1.Final/hibernate-validator-parent-5.4.1.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.2.Final/hibernate-validator-6.0.2.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.2.Final/hibernate-validator-parent-6.0.2.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.1.0.Final/hibernate-ogm-core-5.1.0.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.1.0.Final/hibernate-ogm-parent-5.1.0.Final.pom
