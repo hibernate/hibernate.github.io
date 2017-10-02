@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1506958549" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1506959314" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -433,7 +433,18 @@
                 </h2>
               </div>
               <div class="column four wide middle aligned">
-                
+                <div class="jumbotron-button">
+                  <a class="ui small right labeled icon button" href="../getting-started">
+                    <i class="right arrow icon"></i>
+                    Getting started
+                  </a>
+                </div>
+                <div class="jumbotron-button">
+                  <a class="ui small right labeled icon button green" href="./releases/5.2/">
+                    <i class="right arrow icon"></i>
+                    Latest stable (5.2)
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -540,28 +551,30 @@
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
-            <div class="row-fluid">
-              <div class="span8">
-                <div class="feature-block">
-                  <div class="paragraph">
-                  <p>You tried to access:</p>
-                  </div>
-                  <script>
-                    document.write(document.referrer + "<br><br>");
-                  </script>
-                  <div class="paragraph">
-                  <p>Unfortunately, the documentation you are looking for is no longer available
-                  under this URL. Maybe you used an old bookmark or followed a link from an
-                  obsolete tutorial?</p>
-                  </div>
-                  <div class="paragraph">
-                  <p>If you know the ORM version, try to find what you are looking for
-                  on the <a href="http://docs.jboss.org/hibernate/orm/">reference documentation site</a>.
-                  Otherwise, check the latest <a href="/orm/documentation/">documentation</a>.</p>
+            <div class="ui stackable grid">
+              <div class="column eleven wide">
+                <div class="content" id="content">
+                  <div class="feature-block">
+                    <div class="paragraph">
+                    <p>You tried to access:</p>
+                    </div>
+                    <script>
+                      document.write(document.referrer + "<br><br>");
+                    </script>
+                    <div class="paragraph">
+                    <p>Unfortunately, the documentation you are looking for is no longer available
+                    under this URL. Maybe you used an old bookmark or followed a link from an
+                    obsolete tutorial?</p>
+                    </div>
+                    <div class="paragraph">
+                    <p>If you know the ORM version, try to find what you are looking for
+                    on the <a href="http://docs.jboss.org/hibernate/orm/">reference documentation site</a>.
+                    Otherwise, check the latest <a href="/orm/documentation/">documentation</a>.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="span4">
+              <div class="column five wide">
                 <div class="ui segment raised news" id="latest-news" style="display:none">
                   <h3>Latest news</h3>
                   <div id="feed"></div>
