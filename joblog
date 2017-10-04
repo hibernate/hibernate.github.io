@@ -97,7 +97,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.92649 seconds (files took 0.80423 seconds to load)
+Finished in 0.82154 seconds (files took 0.83928 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -204,8 +204,8 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/validator/hibernate-validator-metadata.properties[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-configuration/hibernate-configuration-4.0.xsd[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd[0m
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.8.0.Final/hibernate-search-orm-5.8.0.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.8.0.Final/hibernate-search-parent-5.8.0.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.8.1.Final/hibernate-search-orm-5.8.1.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.8.1.Final/hibernate-search-parent-5.8.1.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.5.8.Final/hibernate-search-orm-5.5.8.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.5.8.Final/hibernate-search-parent-5.5.8.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.6.3.Final/hibernate-search-orm-5.6.3.Final.pom
