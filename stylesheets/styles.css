@@ -566,19 +566,19 @@ pre .comment .conum {
 
 /* line 713, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .text-center {
-  text-align: center; }
+  text-align: center !important; }
 
 /* line 717, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .text-right {
-  text-align: right; }
+  text-align: right !important; }
 
 /* line 721, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .text-left {
-  text-align: left; }
+  text-align: left !important; }
 
 /* line 725, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .text-justify {
-  text-align: justify; }
+  text-align: justify !important; }
 
 /* line 730, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .clearfix::after {
