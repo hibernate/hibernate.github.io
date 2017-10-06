@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1507210826" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1507287802" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -689,7 +689,43 @@
                   on our JIRA instance.
                 </a>
               </p>
-              
+              <div class="sect2">
+              <h3 id="bean-validation-2-0"><a class="anchor" href="#bean-validation-2-0"></a>Bean Validation 2.0</h3>
+              <div class="paragraph">
+              <p>Hibernate Validator 6.0 is the Reference Implementation of the Bean Validation 2.0 specification so it comes with all its new features:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>First class support of container element constraints and cascaded validation (think <code>private Map&lt;@Valid @NotNull OrderCategory, List&lt;@Valid @NotNull Order&gt;&gt; orderByCategories;</code>);</p>
+              </li>
+              <li>
+              <p>Support for the new JSR 310 date/time data types for <code>@Past</code> and <code>@Future</code>;</p>
+              </li>
+              <li>
+              <p>New built-in constraints: <code>@Positive</code>, <code>@PositiveOrZero</code>, <code>@Negative</code>, <code>@NegativeOrZero</code>, <code>@PastOrPresent</code> and <code>@FutureOrPresent</code></p>
+              </li>
+              </ul>
+              </div>
+              <div class="paragraph">
+              <p>We also have leveraged the new features of JDK 8 (built-in constraints are marked repeatable, parameter names are retrieved via reflection) as it is now the minimal version required.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="performance-improvements"><a class="anchor" href="#performance-improvements"></a>Performance improvements</h3>
+              <div class="paragraph">
+              <p>We have done quite a lot of benchmarking and have significantly improved the performances of Hibernate Validator.</p>
+              </div>
+              <div class="paragraph">
+              <p>It can be up to two times faster than Hibernate Validator 5.4.1.Final in some cases.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="memory-footprint-improvements"><a class="anchor" href="#memory-footprint-improvements"></a>Memory footprint improvements</h3>
+              <div class="paragraph">
+              <p>Hibernate Validator collects a lot of metadata on the constrained beans. We reduced significantly the memory used by these metadata.</p>
+              </div>
+              </div>
               <h2 id="migrate">Migrate</h2>
               <p>
                 If you need to upgrade from a previous series, please refer to the
@@ -810,6 +846,10 @@
                       <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(6.0.0.CR3)%20ORDER%20BY%20updated">
                         <i class="icon bug"></i>
                         Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2017/07/11/hibernate-validator-600-cr3-out/">
+                        <i class="icon announcement"></i>
+                        Release announcement
                       </a>
                     </p>
                   </div>

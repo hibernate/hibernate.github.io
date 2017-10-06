@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1507210826" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1507287802" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -632,26 +632,26 @@
                   </p>
                   <dl class="sparse">
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator~5.3.4.Final~~">
-                        org.hibernate:hibernate-validator:5.3.4.Final
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator~5.3.5.Final~~">
+                        org.hibernate:hibernate-validator:5.3.5.Final
                       </a>
                     </dt>
                     <dd>Core implementation</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-cdi~5.3.4.Final~~">
-                        org.hibernate:hibernate-validator-cdi:5.3.4.Final
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-cdi~5.3.5.Final~~">
+                        org.hibernate:hibernate-validator-cdi:5.3.5.Final
                       </a>
                     </dt>
                     <dd>CDI integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-osgi~5.3.4.Final~~">
-                        org.hibernate:hibernate-validator-osgi:5.3.4.Final
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-osgi~5.3.5.Final~~">
+                        org.hibernate:hibernate-validator-osgi:5.3.5.Final
                       </a>
                     </dt>
                     <dd>OSGi integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-annotation-processor~5.3.4.Final~~">
-                        org.hibernate:hibernate-validator-annotation-processor:5.3.4.Final
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator-annotation-processor~5.3.5.Final~~">
+                        org.hibernate:hibernate-validator-annotation-processor:5.3.5.Final
                       </a>
                     </dt>
                     <dd>Annotation processor</dd>
@@ -663,7 +663,7 @@
                     Direct download is available from SourceForge:
                   </p>
                   <p>
-                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.4.Final/hibernate-validator-5.3.4.Final-dist.zip/download" title="Download">
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.5.Final/hibernate-validator-5.3.5.Final-dist.zip/download" title="Download">
                       <i class="icon cloud download"></i>
                       Download Zip archive
                     </a>
@@ -678,18 +678,57 @@
               </p>
               <h2 id="whats-new">What's new</h2>
               <p>
-                Latest release announcement (2016-12-08):
-                <a href="http://in.relation.to/2016/12/08/hibernate-validator-540-beta1-and-534-final-out/">
-                  5.3.4.Final.
-                </a>
-              </p>
-              <p>
                 A detailed list of new features, improvements and fixes in this series can be found
-                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.4.Final%2C%205.3.3.Final%2C%205.3.2.Final%2C%205.3.1.Final%2C%205.3.0.Final%2C%205.3.0.CR1%2C%205.3.0.Alpha1)%20ORDER%20BY%20updated">
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.5.Final%2C%205.3.4.Final%2C%205.3.3.Final%2C%205.3.2.Final%2C%205.3.1.Final%2C%205.3.0.Final%2C%205.3.0.CR1%2C%205.3.0.Alpha1)%20ORDER%20BY%20updated">
                   on our JIRA instance.
                 </a>
               </p>
-              
+              <div class="sect2">
+              <h3 id="dynamic-payloads-for-constraints"><a class="anchor" href="#dynamic-payloads-for-constraints"></a>Dynamic payloads for constraints</h3>
+              <div class="paragraph">
+              <p>Hibernate Validator 5.3 allows you to enrich custom constraint violations with additional context data.</p>
+              </div>
+              <div class="paragraph">
+              <p>Code examining constraint violations can access and interpret this data in a safer way than by parsing string-based constraint violation messages.</p>
+              </div>
+              <div class="paragraph">
+              <p>You can find more information about this feature in the <a href="http://in.relation.to/2016/01/18/hibernate-validator-530-alpha1-out/">5.3.0.Alpha1 release announcement</a>.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="relaxation-of-requirements-for-method-validation-in-class-hierarchies"><a class="anchor" href="#relaxation-of-requirements-for-method-validation-in-class-hierarchies"></a>Relaxation of requirements for method validation in class hierarchies</h3>
+              <div class="paragraph">
+              <p>The Bean Validation specification defines a set of rules which apply when defining constraints on methods within class hierarchies.</p>
+              </div>
+              <div class="paragraph">
+              <p>As per specification a Bean Validation provider is allowed to relax these preconditions.</p>
+              </div>
+              <div class="paragraph">
+              <p>Starting with 5.3, it is now possible to do so as explained in <a href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#section-method-validation-prerequisite-relaxation">our documentation</a>.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="programmatic-api-improvements"><a class="anchor" href="#programmatic-api-improvements"></a>Programmatic API improvements</h3>
+              <div class="paragraph">
+              <p>Until now, it was only possible to alter the list of <code>ConstraintValidator</code> of a given constraint via the XML configuration. 5.3 brings the ability to do it <a href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#section-programmatic-constraint-definition">via the programmatic API</a>.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="jdk-9-support"><a class="anchor" href="#jdk-9-support"></a>JDK 9 support</h3>
+              <div class="paragraph">
+              <p>5.3 is the first version compatible with JDK 9.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="other-improvements"><a class="anchor" href="#other-improvements"></a>Other improvements</h3>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Arabic, Russian and Slovak translations</p>
+              </li>
+              </ul>
+              </div>
+              </div>
               <h2 id="migrate">Migrate</h2>
               <p>
                 If you need to upgrade from a previous series, please refer to the
@@ -699,6 +738,35 @@
               </p>
               <h2 id="releases">Releases in this series</h2>
               <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <span class="green label ui version">
+                      5.3.5.Final
+                    </span>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      <small>2017-03-15</small>
+                      -
+                      bug fixes, JDK 9 support improvements
+                    </p>
+                    <p>
+                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-validator~5.3.5.Final~~">
+                        org.hibernate:hibernate-validator:5.3.5.Final
+                      </a>
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.5.Final/hibernate-validator-5.3.5.Final-dist.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.5.Final)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                    </p>
+                  </div>
+                </div>
                 <div class="ui row">
                   <div class="three wide column">
                     <span class="green label ui version">
