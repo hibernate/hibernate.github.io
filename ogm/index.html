@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1507554999" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1507556068" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -540,7 +540,7 @@
                 <div class="content" id="content">
                   <div class="feature-block">
                     <div class="sect1">
-                    <h2 id="many-nosql-stores-one-standard-way-to-access-them"><a class="anchor" href="#many-nosql-stores-one-standard-way-to-access-them"></a>Many NoSQL stores, one standard way to access them</h2>
+                    <h2 id="many-nosql-stores-one-api-to-access-them"><a class="anchor" href="#many-nosql-stores-one-api-to-access-them"></a>Many NoSQL stores, one API to access them</h2>
                     <div class="sectionbody">
                     <div class="paragraph">
                     <p>Hibernate OGM provides Java Persistence (JPA) support for NoSQL solutions.
@@ -555,24 +555,45 @@
                     <h2 id="wide-range-of-backends"><a class="anchor" href="#wide-range-of-backends"></a>Wide range of backends</h2>
                     <div class="sectionbody">
                     <div class="paragraph">
-                    <p>OGM talks to NoSQL backends via store-specific dialects. Currently there is support for</p>
+                    <p>OGM talks to NoSQL backends via store-specific dialects. The main repository includes the following dialects:</p>
                     </div>
                     <div class="ulist">
                     <ul>
                     <li>
-                    <p><em>Key/Value</em>: Infinispan; Ehcache</p>
+                    <p><em>Key/Value</em>: <strong>Infinispan</strong> (embedded and remote)</p>
                     </li>
                     <li>
-                    <p><em>Document</em>: MongoDB</p>
+                    <p><em>Document</em>: <strong>MongoDB</strong></p>
                     </li>
                     <li>
-                    <p><em>Graph</em>: Neo4j</p>
+                    <p><em>Graph</em>: <strong>Neo4j</strong> (embedded and remote)</p>
                     </li>
                     </ul>
                     </div>
                     <div class="paragraph">
-                    <p>And more are in progress: Redis, CouchDB and Cassandra.
-                    Your favorite NoSQL store isn&#8217;t listed here? We&#8217;d love to get <a href="/ogm/contribute">your help</a> for adding it.</p>
+                    <p>Dialects for other NoSQL datastores are maintained by the community:</p>
+                    </div>
+                    <div class="ulist">
+                    <ul>
+                    <li>
+                    <p><a href="https://github.com/hibernate/hibernate-ogm-cassandra">Cassandra</a></p>
+                    </li>
+                    <li>
+                    <p><a href="https://github.com/hibernate/hibernate-ogm-couchdb">CouchDB</a></p>
+                    </li>
+                    <li>
+                    <p><a href="https://github.com/hibernate/hibernate-ogm-ehcache">EhCache</a></p>
+                    </li>
+                    <li>
+                    <p><a href="https://github.com/hibernate/hibernate-ogm-ignite">Apache Ignite</a></p>
+                    </li>
+                    <li>
+                    <p><a href="https://github.com/hibernate/hibernate-ogm-redis">Redis</a></p>
+                    </li>
+                    </ul>
+                    </div>
+                    <div class="paragraph">
+                    <p>Your favorite NoSQL store isn&#8217;t listed here? We&#8217;d love to get <a href="/ogm/contribute">your help</a> for adding it.</p>
                     </div>
                     </div>
                     </div>
@@ -585,7 +606,7 @@
                     <div class="ulist">
                     <ul>
                     <li>
-                    <p><em>JP-QL queries</em> (we convert them into a native backend query)</p>
+                    <p><em>JPQL queries</em> (we convert them into a native backend query)</p>
                     </li>
                     <li>
                     <p>datastore specific <em>native queries</em></p>
