@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1507287900" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1507555007" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -517,51 +517,93 @@
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
+              <div class="ui icon message">
+                <i class="icon hourglass half"></i>
+                <div class="content">
+                  <div class="header">
+                    Interested in our past releases?
+                  </div>
+                  <p>
+                    To learn more about what we introduced in our past releases, please consult the
+                    <a href="/validator/releases/">"What's new" section of a given series</a>
+                    .
+                  </p>
+                </div>
+              </div>
               <div id="preamble">
               <div class="sectionbody">
               <div class="paragraph">
               <p>Hibernate Validator is community driven and as such the roadmap constantly evolves to reflect the
-              users needs.
-              You can find a fine grained roadmap in our <a href="https://hibernate.atlassian.net/browse/HV">issue tracker</a>,
+              users needs and contributions.</p>
+              </div>
+              <div class="paragraph">
+              <p>You can find a fine grained roadmap in our <a href="https://hibernate.atlassian.net/browse/HV">issue tracker</a>,
               but this page is a good starting point to see where we are going.</p>
               </div>
               </div>
               <div id="toc" class="toc">
               <div id="toctitle">Releases</div>
               <ul class="sectlevel1">
-              <li><a href="#hibernate-validator-5-3">Hibernate Validator 5.3</a></li>
+              <li><a href="#hibernate-validator-6-0-x">Hibernate Validator 6.0.x</a></li>
+              <li><a href="#hibernate-validator-6-1">Hibernate Validator 6.1</a></li>
+              <li><a href="#future-versions">Future versions</a></li>
               </ul>
               </div>
               </div>
               <div class="sect1">
-              <h2 id="hibernate-validator-5-3"><a class="anchor" href="#hibernate-validator-5-3"></a>Hibernate Validator 5.3</h2>
+              <h2 id="hibernate-validator-6-0-x"><a class="anchor" href="#hibernate-validator-6-0-x"></a>Hibernate Validator 6.0.x</h2>
               <div class="sectionbody">
               <div class="dlist">
               <dl>
-              <dt class="hdlist1">OSGi</dt>
+              <dt class="hdlist1">Engine</dt>
               <dd>
-              <p>Expose Validator as OSGi service (<a href="https://hibernate.atlassian.net/browse/HV-570">HV-570</a>)</p>
+              <p>Explore message interpolators receiving several locales (<a href="https://hibernate.atlassian.net/browse/HV-1436">HV-1436</a>)<br>
+              Support custom field/getter selection strategy (<a href="https://hibernate.atlassian.net/browse/HV-1363">HV-1363</a>)<br>
+              Improve the performances and reduce the memory footprint</p>
               </dd>
               <dt class="hdlist1">Annotation processor improvements</dt>
               <dd>
-              <p>Taking into account XML configuration (<a href="https://hibernate.atlassian.net/browse/HV-308">HV-308</a>)<br>
-              Verify group sequences (<a href="https://hibernate.atlassian.net/browse/HV-455">HV-455</a>)<br>
-              Verify the validity of constraint declarations (e.g. min &lt; max for @Size) (<a href="https://hibernate.atlassian.net/browse/HV-270">HV-270</a>)</p>
+              <p>Taking into account new places where constraint annotations can be placed (<a href="https://hibernate.atlassian.net/browse/HV-879">HV-879</a>)<br>
+              Taking into account XML configuration (<a href="https://hibernate.atlassian.net/browse/HV-308">HV-308</a>)</p>
               </dd>
-              <dt class="hdlist1">Misc</dt>
+              </dl>
+              </div>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="hibernate-validator-6-1"><a class="anchor" href="#hibernate-validator-6-1"></a>Hibernate Validator 6.1</h2>
+              <div class="sectionbody">
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Engine</dt>
               <dd>
-              <p>Integration with JavaFX (<a href="https://hibernate.atlassian.net/browse/HV-653">HV-653</a>)<br>
-              Introduce mechanism to order constraints (<a href="https://hibernate.atlassian.net/browse/HV-462">HV-462</a>)<br>
-              Better integration with ORM, especially DDL constraint generation (<a href="https://hibernate.atlassian.net/browse/HV-830">HV-830</a>)<br>
-              New range of Hibernate Validator specific constraints and potential dedicated
-              constraint module (<a href="https://hibernate.atlassian.net/browse/HV-553">HV-553</a>)<br>
-              Create standalone method interceptor using Byteman (<a href="https://hibernate.atlassian.net/browse/HV-432">HV-432</a>)</p>
+              <p>Explore taking some distance from the reflection API (e.g. dealing with <code>Type</code> is rather confusing, replace some of the types with memory-friendly counterparts (<code>Method</code>?), do not rely on <code>TypeVariable</code>). Note that it might also help with the future usage of Jandex for annotation discovery.</p>
               </dd>
-              <dt class="hdlist1">Internal</dt>
+              <dt class="hdlist1">Programmatic API</dt>
               <dd>
-              <p>Provide ability to retrieve metadata from Jandex index (<a href="https://hibernate.atlassian.net/browse/HV-644">HV-644</a>)<br>
-              Further unification of bean and method validation (<a href="https://hibernate.atlassian.net/browse/HV-467">HV-467</a>)<br>
-              Switch to Gradle as build tool (<a href="https://hibernate.atlassian.net/browse/HV-641">HV-641</a>)</p>
+              <p>Be able to define constraint on properties using lambdas (ie without constraint annotations)</p>
+              </dd>
+              <dt class="hdlist1">Java 9</dt>
+              <dd>
+              <p>Usage of method handles for accessing bean states (<a href="https://hibernate.atlassian.net/browse/HV-1226">HV-1226</a>)<br>
+              Explore usage of <a href="http://download.java.net/java/jdk9/docs/api/java/util/spi/ResourceBundleProvider.html">ResourceBundleProvider</a> for obtaining validation error messages from other modules<br>
+              Providing Hibernate Validator with JDK 9 module descriptors</p>
+              </dd>
+              </dl>
+              </div>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="future-versions"><a class="anchor" href="#future-versions"></a>Future versions</h2>
+              <div class="sectionbody">
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Engine</dt>
+              <dd>
+              <p>Explore the ability to validate an object and a list of changes (<a href="https://hibernate.atlassian.net/browse/BVAL-214">BVAL-214</a>)<br>
+              Explore support for constraint ordering (<a href="http://beanvalidation.org/proposals/BVAL-248/">BVAL-248</a>)<br>
+              Explore support for other models than JavaBeans (<a href="https://hibernate.atlassian.net/browse/HV-1000">HV-1000</a>)<br>
+              Explore the usage of <a href="https://github.com/wildfly/jandex">Jandex</a> (a Java annotation indexer and offline reflection library) to build the metadata (<a href="https://hibernate.atlassian.net/browse/HV-644">HV-644</a>)</p>
               </dd>
               </dl>
               </div>
