@@ -192,7 +192,7 @@
 #content .sect3:not(:last-child) {
   margin-bottom: 20px; }
 /* line 235, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
-#content code {
+#content :not(pre) > code {
   font-size: 0.9em;
   background-color: #F4F4F4;
   padding: .1em .5ex;
