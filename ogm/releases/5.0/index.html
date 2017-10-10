@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1507641265" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1507643363" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -723,7 +723,55 @@
                   on our JIRA instance.
                 </a>
               </p>
-              
+              <div class="sect2">
+              <h3 id="core"><a class="anchor" href="#core"></a>Core</h3>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Upgrade to Hibernate ORM 5 and Hibernate Search 5: OGM can be used with WildFly 10</p>
+              </li>
+              <li>
+              <p>Support for the JPA <code>@PostLoad</code> annotation</p>
+              </li>
+              <li>
+              <p>Support for <code>@Lob</code> mapping</p>
+              </li>
+              <li>
+              <p>Support for multiget</p>
+              </li>
+              </ul>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="datastores"><a class="anchor" href="#datastores"></a>Datastores</h3>
+              <div class="sect3">
+              <h4 id="infinispan"><a class="anchor" href="#infinispan"></a>Infinispan</h4>
+              <div class="paragraph">
+              <p>Upgrade to Infinispan 8.</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="mongodb"><a class="anchor" href="#mongodb"></a>MongoDB</h4>
+              <div class="paragraph">
+              <p>The MongoDB CLI syntax now supports additional operations (<code>findOne</code>, <code>findAndModify</code>, <code>insert</code>, <code>remove</code> and <code>update</code>) and functions.</p>
+              </div>
+              <div class="paragraph">
+              <p>The MongoDB driver has been upgraded to version 3.</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="cassandra"><a class="anchor" href="#cassandra"></a>Cassandra</h4>
+              <div class="paragraph">
+              <p>Support for the new datatypes introduced in Cassandra 2.2.</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="redis"><a class="anchor" href="#redis"></a>Redis</h4>
+              <div class="paragraph">
+              <p>Redis support is included as a tech preview including Redis cluster support and hash mapping.</p>
+              </div>
+              </div>
+              </div>
               <h2 id="migrate">Migrate</h2>
               <p>
                 If you need to upgrade from a previous series, please refer to the

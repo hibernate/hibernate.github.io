@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1507641265" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1507643363" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -729,7 +729,48 @@
                   on our JIRA instance.
                 </a>
               </p>
-              
+              <div class="sect2">
+              <h3 id="core"><a class="anchor" href="#core"></a>Core</h3>
+              <div class="sect3">
+              <h4 id="hibernate-orm-5-1-support"><a class="anchor" href="#hibernate-orm-5-1-support"></a>Hibernate ORM 5.1 support</h4>
+              <div class="paragraph">
+              <p>As of Hibernate OGM 5.1, the version of ORM to use with OGM is 5.1 (use the latest micro version).</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="hibernate-search-5-6-support"><a class="anchor" href="#hibernate-search-5-6-support"></a>Hibernate Search 5.6 support</h4>
+              <div class="paragraph">
+              <p>OGM now can integrate with Hibernate Search 5.6 which supports Elasticsearch. So you can index your NoSQL data into Elasticsearch just by adding a few annotations to your entities.</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="operation-grouping"><a class="anchor" href="#operation-grouping"></a>Operation grouping</h4>
+              <div class="paragraph">
+              <p>Due to the nature of OGM, it is possible to optimize some operations by grouping them (for instance the creation of a document and the additional updates). OGM 5.1 introduces a grouping infrastructure that will be generalized to all the dialects in future versions.</p>
+              </div>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="datastores"><a class="anchor" href="#datastores"></a>Datastores</h3>
+              <div class="sect3">
+              <h4 id="infinispan"><a class="anchor" href="#infinispan"></a>Infinispan</h4>
+              <div class="paragraph">
+              <p>OGM can now talk with a remote Infinispan cluster via <a href="http://infinispan.org/docs/stable/user_guide/user_guide.html#using_hot_rod_server">the Hot Rod protocol</a> (previously, it only supported Infinispan in embedded mode).</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="neo4j"><a class="anchor" href="#neo4j"></a>Neo4j</h4>
+              <div class="paragraph">
+              <p>OGM can now talk with a remote Neo4j cluster via both the <a href="http://boltprotocol.org">Bolt</a> protocol and the <a href="http://neo4j.com/docs/rest-docs/current">HTTP interface</a> (previously, it only supported Neo4j in embedded mode).</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="mongodb"><a class="anchor" href="#mongodb"></a>MongoDB</h4>
+              <div class="paragraph">
+              <p>OGM 5.1 supports <a href="https://docs.mongodb.com/manual/aggregation/#aggregation-pipeline">aggregation</a> in MongoDB native queries using the <a href="https://docs.jboss.org/hibernate/stable/ogm/reference/en-US/html_single/#ogm-mongodb-cli-syntax">CLI syntax</a>.</p>
+              </div>
+              </div>
+              </div>
               <h2 id="migrate">Migrate</h2>
               <p>
                 If you need to upgrade from a previous series, please refer to the
