@@ -97,7 +97,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.90229 seconds (files took 0.79948 seconds to load)
+Finished in 0.58327 seconds (files took 0.77415 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -219,5 +219,5 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibern
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.2.Final/hibernate-validator-parent-6.0.2.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.1.0.Final/hibernate-ogm-core-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.1.0.Final/hibernate-ogm-parent-5.1.0.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Alpha1/hibernate-ogm-core-5.2.0.Alpha1.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Alpha1/hibernate-ogm-parent-5.2.0.Alpha1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Beta1/hibernate-ogm-core-5.2.0.Beta1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Beta1/hibernate-ogm-parent-5.2.0.Beta1.pom
