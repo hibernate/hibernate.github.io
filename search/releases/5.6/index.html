@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1508495848" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1508496124" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -713,7 +713,76 @@
                   on our JIRA instance.
                 </a>
               </p>
-              
+              <div class="sect2">
+              <h3 id="experimental-elasticsearch-integration"><a class="anchor" href="#experimental-elasticsearch-integration"></a>Experimental Elasticsearch integration</h3>
+              <div class="paragraph">
+              <p>A new, experimental Elasticsearch integration was introduced in this series.</p>
+              </div>
+              <div class="paragraph">
+              <p>With the Elasticsearch integration, rather than indexing your entities directly by managing the Lucene resources,
+              Hibernate Search will be sending RPCs to an Elasticsearch cluster to achieve a very similar purpose:
+              after all it is also Lucene based, so the feature match is extremely close!</p>
+              </div>
+              <div class="paragraph">
+              <p>Since Hibernate Search will transparently map all the current features to this new alternative backend,
+              you will be able to switch to a new architecture with only minimal changes in your applications.
+              For most users the differences will be mostly in configuration details.</p>
+              </div>
+              <div class="paragraph">
+              <p>When using Elasticsearch, Hibernate Search will need to send RPCs over the network
+              to run queries and index updates,
+              but on the other hand you benefit from <em>Microservices</em> - style decoupling and all the nice features
+              that Elasticsearch can provide in terms of running and managing an horizontally scalable cluster.</p>
+              </div>
+              <div class="paragraph">
+              <p>To know more about this integration, check out the
+              <a href="http://docs.jboss.org/hibernate/search/5.6/reference/en-US/html_single/#elasticsearch-integration">Elasticsearch chapter</a>
+              in the documentation.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="sort-dsl"><a class="anchor" href="#sort-dsl"></a>Sort DSL</h3>
+              <div class="paragraph">
+              <p>The QueryBuilder interface now has an additional <code>sort()</code> method,
+              allowing to easily build sort definitions regardless of the underlying technology
+              (raw Lucene or Elasticsearch),
+              and without worrying about numeric field types:</p>
+              </div>
+              <div class="listingblock">
+              <div class="content">
+              <pre class="CodeRay highlight"><code data-lang="JAVA">QueryBuilder builder = fullTextSession.getSearchFactory()&#x000A;  .buildQueryBuilder().forEntity(<span style="color:#0a8;font-weight:bold">Book</span>.class).get();&#x000A;<span style="color:#0a8;font-weight:bold">Query</span> luceneQuery = builder.all().createQuery();&#x000A;FullTextQuery query = fullTextSession.createFullTextQuery( luceneQuery, <span style="color:#0a8;font-weight:bold">Book</span>.class );&#x000A;Sort sort = builder&#x000A;  .sort()&#x000A;    .byField(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">author</span><span style="color:#710">&quot;</span></span>).desc() <span style="color:#777">// Descending order</span>&#x000A;    .andByField(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">title</span><span style="color:#710">&quot;</span></span>) <span style="color:#777">// Default order (ascending)</span>&#x000A;  .createSort();&#x000A;query.setSort(sort);&#x000A;<span style="color:#0a8;font-weight:bold">List</span> results = query.list();</code></pre>
+              </div>
+              </div>
+              <div class="paragraph">
+              <p>You can find more information in
+              <a href="http://in.relation.to/2016/10/10/introducing-hibernate-search-sort-dsl/">this blog post</a>
+              and in
+              <a href="http://docs.jboss.org/hibernate/search/5.6/reference/en-US/html_single/#query-sorting">the documentation</a></p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="lucene-upgrade"><a class="anchor" href="#lucene-upgrade"></a>Lucene upgrade</h3>
+              <div class="paragraph">
+              <p>The Lucene dependency was upgraded to 5.5.</p>
+              </div>
+              <div class="paragraph">
+              <p>Also, do not think Lucene was forgotten in this series,
+              since there were several bug fixes and performance improvements.
+              See the release notes for details.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="async-reader-strategy"><a class="anchor" href="#async-reader-strategy"></a>Async reader strategy</h3>
+              <div class="paragraph">
+              <p>A new <code>async</code> reader strategy has been added for the Lucene integration,
+              bringing performance boosts when you are okay with your queries being run
+              on an out-of-date index (how much out-of-date is configurable).</p>
+              </div>
+              <div class="paragraph">
+              <p>Refer to <a href="http://docs.jboss.org/hibernate/search/5.6/reference/en-US/html_single/#search-architecture-readerstrategy">the documentation</a>
+              for more information.</p>
+              </div>
+              </div>
               <h2 id="migrate">Migrate</h2>
               <p>
                 If you need to upgrade from a previous series, please refer to the
