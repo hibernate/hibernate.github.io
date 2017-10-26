@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1508941627" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1509021920" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -566,12 +566,12 @@
             <dl>
             <dt class="hdlist1">Java Runtime</dt>
             <dd>
-            <p>To use the latest Hibernate Search version (5.8.1.Final) you&#8217;ll need Java version 8 or greater.
+            <p>To use the latest Hibernate Search version (5.8.2.Final) you&#8217;ll need Java version 8 or greater.
             You can download a Java Runtime for Windows/Linux/Solaris <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>.</p>
             </dd>
             <dt class="hdlist1">Hibernate Search</dt>
             <dd>
-            <p>hibernate-search-5.8.1.Final.jar and all runtime dependencies. You can get the jar artifacts either from the <em>dist/lib</em> directory of the Hibernate Search distribution or you can download them from the Maven central repository.</p>
+            <p>hibernate-search-5.8.2.Final.jar and all runtime dependencies. You can get the jar artifacts either from the <em>dist/lib</em> directory of the Hibernate Search distribution or you can download them from the Maven central repository.</p>
             </dd>
             <dt class="hdlist1">Hibernate ORM</dt>
             <dd>
@@ -606,19 +606,19 @@
             <div class="listingblock">
             <div class="title">Maven artifact identifier for Hibernate Search</div>
             <div class="content">
-            <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-orm<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.8.1.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+            <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-orm<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.8.2.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
             </div>
             </div>
             <div class="listingblock">
             <div class="title">Optional: to store indexes in Infinispan</div>
             <div class="content">
-            <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-infinispan<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.8.1.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+            <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-infinispan<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.8.2.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
             </div>
             </div>
             <div class="listingblock">
             <div class="title">Optional: to store indexes in Elasticsearch</div>
             <div class="content">
-            <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-elasticsearch<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.8.1.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+            <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-elasticsearch<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.8.2.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
             </div>
             </div>
             <div class="paragraph">
