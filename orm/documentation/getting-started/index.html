@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1509021918" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1509022873" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -532,108 +532,110 @@
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
-            <div id="preamble">
-            <div class="sectionbody">
-            <div class="paragraph">
-            <p>This page lists just the basic information needed to get up and running with the latest version of Hibernate ORM.</p>
-            </div>
-            <div class="paragraph">
-            <p>If you are approaching Hibernate for the first time, the <a href="http://docs.jboss.org/hibernate/orm/current/quickstart/html_single/">Getting Started Guide</a> is the best place to start.</p>
-            </div>
-            <div class="paragraph">
-            <p>More thorough information is presented in the <a href="https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html">User Guide</a>.</p>
-            </div>
-            </div>
-            <div id="toc" class="toc">
-            <div id="toctitle">Table of Contents</div>
-            <ul class="sectlevel1">
-            <li><a href="#system-requirements">System Requirements</a></li>
-            <li><a href="#dependency-management">Dependency Management</a></li>
-            </ul>
-            </div>
-            </div>
-            <div class="sect1">
-            <h2 id="system-requirements"><a class="anchor" href="#system-requirements"></a>System Requirements</h2>
-            <div class="sectionbody">
-            <div class="paragraph">
-            <p>Hibernate 5.2 and later versions require at least Java 1.8 and JDBC 4.2.</p>
-            </div>
-            <div class="paragraph">
-            <p>Hibernate 5.1 and older versions require at least Java 1.6 and JDBC 4.0.</p>
-            </div>
-            <div class="admonitionblock tip">
-            <table>
-            <tr>
-            <td class="icon">
-            <i class="fa icon-tip" title="Tip"></i>
-            </td>
-            <td class="content">
-            <div class="paragraph">
-            <p>When building Hibernate 5.1 or older from sources, you need Java 1.7 due to a bug in the JDK 1.6 compiler.</p>
-            </div>
-            </td>
-            </tr>
-            </table>
-            </div>
-            </div>
-            </div>
-            <div class="sect1">
-            <h2 id="dependency-management"><a class="anchor" href="#dependency-management"></a>Dependency Management</h2>
-            <div class="sectionbody">
-            <div class="paragraph">
-            <p>It is highly recommended to consume Hibernate ORM artifacts through a dependency management tool.
-            The artifacts can be found in Maven&#8217;s central repository but are released first in the
-            <a href="https://community.jboss.org/wiki/MavenRepository">JBoss maven repository</a>.</p>
-            </div>
-            <div class="admonitionblock note">
-            <table>
-            <tr>
-            <td class="icon">
-            <i class="fa icon-note" title="Note"></i>
-            </td>
-            <td class="content">
-            <div class="paragraph">
-            <p>Snapshots are only pushed to the JBoss snapshot repository,
-            so if you want to use SNAPSHOT versions be sure to add the <a href="https://repository.jboss.org/nexus/content/repositories/snapshots/org/hibernate/">JBoss snapshot repository</a> properly according to your build tool of choice.</p>
-            </div>
-            </td>
-            </tr>
-            </table>
-            </div>
-            <div class="paragraph">
-            <p>The main Hibernate ORM artifact is named <strong>hibernate-core</strong>.</p>
-            </div>
-            <div class="admonitionblock tip">
-            <table>
-            <tr>
-            <td class="icon">
-            <i class="fa icon-tip" title="Tip"></i>
-            </td>
-            <td class="content">
-            <div class="paragraph">
-            <p>There are also a number of optional artifacts based on what specific features you wish to use.
-            These are discussed in the <a href="http://docs.jboss.org/hibernate/orm/current/quickstart/html_single/">Getting Started Guide</a>.</p>
-            </div>
-            </td>
-            </tr>
-            </table>
-            </div>
-            <div class="paragraph">
-            <p>To use Hibernate ORM in your own project you just need to name a dependency on it in your project.</p>
-            </div>
-            <div class="listingblock">
-            <div class="title">From Maven</div>
-            <div class="content">
-            <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-core<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.2.12.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
-            </div>
-            </div>
-            <div class="listingblock">
-            <div class="title">From Gradle</div>
-            <div class="content">
-            <pre class="CodeRay highlight"><code>org.hibernate:hibernate-core:5.2.12.Final</code></pre>
-            </div>
-            </div>
-            </div>
+            <div class="content" id="content">
+              <div id="preamble">
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>This page lists just the basic information needed to get up and running with the latest version of Hibernate ORM.</p>
+              </div>
+              <div class="paragraph">
+              <p>If you are approaching Hibernate for the first time, the <a href="http://docs.jboss.org/hibernate/orm/current/quickstart/html_single/">Getting Started Guide</a> is the best place to start.</p>
+              </div>
+              <div class="paragraph">
+              <p>More thorough information is presented in the <a href="https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html">User Guide</a>.</p>
+              </div>
+              </div>
+              <div id="toc" class="toc">
+              <div id="toctitle">Table of Contents</div>
+              <ul class="sectlevel1">
+              <li><a href="#system-requirements">System Requirements</a></li>
+              <li><a href="#dependency-management">Dependency Management</a></li>
+              </ul>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="system-requirements"><a class="anchor" href="#system-requirements"></a>System Requirements</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>Hibernate 5.2 and later versions require at least Java 1.8 and JDBC 4.2.</p>
+              </div>
+              <div class="paragraph">
+              <p>Hibernate 5.1 and older versions require at least Java 1.6 and JDBC 4.0.</p>
+              </div>
+              <div class="admonitionblock tip">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-tip" title="Tip"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>When building Hibernate 5.1 or older from sources, you need Java 1.7 due to a bug in the JDK 1.6 compiler.</p>
+              </div>
+              </td>
+              </tr>
+              </table>
+              </div>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="dependency-management"><a class="anchor" href="#dependency-management"></a>Dependency Management</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>It is highly recommended to consume Hibernate ORM artifacts through a dependency management tool.
+              The artifacts can be found in Maven&#8217;s central repository but are released first in the
+              <a href="https://community.jboss.org/wiki/MavenRepository">JBoss maven repository</a>.</p>
+              </div>
+              <div class="admonitionblock note">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>Snapshots are only pushed to the JBoss snapshot repository,
+              so if you want to use SNAPSHOT versions be sure to add the <a href="https://repository.jboss.org/nexus/content/repositories/snapshots/org/hibernate/">JBoss snapshot repository</a> properly according to your build tool of choice.</p>
+              </div>
+              </td>
+              </tr>
+              </table>
+              </div>
+              <div class="paragraph">
+              <p>The main Hibernate ORM artifact is named <strong>hibernate-core</strong>.</p>
+              </div>
+              <div class="admonitionblock tip">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-tip" title="Tip"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>There are also a number of optional artifacts based on what specific features you wish to use.
+              These are discussed in the <a href="http://docs.jboss.org/hibernate/orm/current/quickstart/html_single/">Getting Started Guide</a>.</p>
+              </div>
+              </td>
+              </tr>
+              </table>
+              </div>
+              <div class="paragraph">
+              <p>To use Hibernate ORM in your own project you just need to name a dependency on it in your project.</p>
+              </div>
+              <div class="listingblock">
+              <div class="title">From Maven</div>
+              <div class="content">
+              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-core<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.2.12.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+              </div>
+              </div>
+              <div class="listingblock">
+              <div class="title">From Gradle</div>
+              <div class="content">
+              <pre class="CodeRay highlight"><code>org.hibernate:hibernate-core:5.2.12.Final</code></pre>
+              </div>
+              </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
