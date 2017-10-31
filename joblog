@@ -97,7 +97,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.88185 seconds (files took 1.21 seconds to load)
+Finished in 0.67382 seconds (files took 1.11 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -207,8 +207,6 @@ Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd[0m
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.8.2.Final/hibernate-search-orm-5.8.2.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.8.2.Final/hibernate-search-parent-5.8.2.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.5.8.Final/hibernate-search-orm-5.5.8.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.5.8.Final/hibernate-search-parent-5.5.8.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.6.4.Final/hibernate-search-orm-5.6.4.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.6.4.Final/hibernate-search-parent-5.6.4.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.10.Final/hibernate-core-5.1.10.Final.pom
@@ -221,3 +219,6 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibern
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.1.0.Final/hibernate-ogm-core-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.1.0.Final/hibernate-ogm-parent-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Beta1/hibernate-ogm-core-5.2.0.Beta1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Beta1/hibernate-ogm-parent-5.2.0.Beta1.pom
+WgetWrapper extension is not properly configured in site.yml.
+FileMerger extension is not properly configured in site.yml.
