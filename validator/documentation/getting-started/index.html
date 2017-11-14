@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1510673648" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1510673771" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -520,8 +520,10 @@
               <div id="preamble">
               <div class="sectionbody">
               <div class="paragraph">
-              <p>Welcome to Hibernate Validator.
-              The following paragraphs will guide you through the initial steps required to integrate
+              <p>Welcome to Hibernate Validator.</p>
+              </div>
+              <div class="paragraph">
+              <p>The following paragraphs will guide you through the initial steps required to integrate
               Hibernate Validator into your application.</p>
               </div>
               </div>
@@ -581,11 +583,15 @@
               <div class="paragraph">
               <p>Hibernate Validator also requires an implementation of the Unified Expression Language
               (<a href="http://jcp.org/en/jsr/detail?id=341">JSR 341</a>) for evaluating dynamic expressions in constraint
-              violation messages.
-              When your application runs in a Java EE container such as <a href="http://wildfly.org/">WildFly</a>, an EL implementation is already
-              provided by the container.
-              In a Java SE environment, however, you have to add an implementation as dependency to your POM file.
-              For instance, you can add the following two dependencies to use the JSR 341 reference implementation:</p>
+              violation messages.</p>
+              </div>
+              <div class="paragraph">
+              <p>When your application runs in a Java EE container such as <a href="http://wildfly.org/">WildFly</a>, an EL implementation is already
+              provided by the container.</p>
+              </div>
+              <div class="paragraph">
+              <p>In a Java SE environment, however, you have to add an implementation as dependency to your POM file.
+              For instance, you can add the following dependency to use the JSR 341 reference implementation:</p>
               </div>
               <div class="exampleblock">
               <div class="content">
