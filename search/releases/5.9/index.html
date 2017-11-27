@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Contribute - Hibernate ORM</title>
+    <title>5.9 series - Hibernate Search</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1511786942" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1511786947" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -26,12 +26,12 @@
     <div class="ui vertical inverted sidebar left" id="mobile-menu">
       <div class="ui vertical fluid inverted text menu accordion">
         <div class="item">
-          <a class="active title">
+          <a class="title">
             <i class="database grid icon"></i>
             <i class="dropdown icon"></i>
             <strong>ORM</strong>
           </a>
-          <div class="active content">
+          <div class="content">
             <div class="menu internal-links">
               <a class="item" href="/orm/">
                 <i class="grid home icon"></i>
@@ -65,7 +65,7 @@
                 <i class="grid icon time"></i>
                 Envers
               </a>
-              <a class="active item" href="/orm/contribute/">
+              <a class="item" href="/orm/contribute/">
                 <i class="grid icon users"></i>
                 Contribute
               </a>
@@ -107,18 +107,18 @@
           </div>
         </div>
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="grid icon search"></i>
             <i class="dropdown icon"></i>
             <strong>Search</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/search/">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="item" href="/search/releases/">
+              <a class="active item" href="/search/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
@@ -390,8 +390,8 @@
         </div>
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
-          <a class="active item" href="/orm/">ORM</a>
-          <a class="item" href="/search/">Search</a>
+          <a class="item" href="/orm/">ORM</a>
+          <a class="active item" href="/search/">Search</a>
           <a class="item" href="/validator/">Validator</a>
           <a class="item" href="/ogm/">OGM</a>
           <a class="item" href="/tools/">Tools</a>
@@ -408,9 +408,9 @@
       </div>
       <script>
         var displayed_series = [];
-        displayed_series.push('5.2');
-        displayed_series.push('5.1');
-        displayed_series.push('5.0');
+        displayed_series.push('5.9');
+        displayed_series.push('5.8');
+        displayed_series.push('5.6');
       </script>
       <div class="jumbotron small">
         <div class="ui container">
@@ -419,103 +419,87 @@
               <div class="column twelve wide middle aligned">
                 <h1>
                   <span>
-                    Hibernate ORM
+                    Hibernate Search
                   </span>
                 </h1>
                 <h2>
                   <span>
-                    Contribute
+                    5.9 series
                   </span>
+                  <span class="label orange tag ui">development</span>
                 </h2>
               </div>
               <div class="column four wide middle aligned">
-                <div class="jumbotron-button">
-                  <a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-orm/">
-                    <i class="github icon"></i>
-                    Project on GitHub
-                  </a>
-                </div>
-                <div class="jumbotron-button">
-                  <a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/HHH">
-                    <i class="bug icon"></i>
-                    Issue tracker
-                  </a>
-                </div>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+      <div class="page-title small">
+        <div class="ui container">
+          <h4>
+            JSR 352 (Batch for Java) mass indexing job, improvements and deprecations paving the road to Search 6
+          </h4>
+        </div>
+      </div>
       <div class="ui container page-content">
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
             <div class="ui fluid vertical menu">
-              <a class="item" href="..">
+              <a class="item" href="../..">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <div class="dropdown item link ui">
+              <div class="dropdown item link selected ui">
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="../releases">
+                  <a class="item" href="..">
                     Overview
                   </a>
-                  <a class="item" href="../releases/5.2">
-                    5.2
+                  <a class="item selected" href=".">
+                    5.9
                   </a>
-                  <a class="item" href="../releases/5.1">
-                    5.1
+                  <a class="item" href="../5.8">
+                    5.8
                   </a>
-                  <a class="item" href="../releases/5.0">
-                    5.0
+                  <a class="item" href="../5.6">
+                    5.6
                   </a>
                 </div>
               </div>
-              <a class="item" href="../documentation">
-                <i class="folder grid icon open"></i>
+              <a class="item" href="../../documentation">
+                <i class="book grid icon"></i>
                 Documentation
               </a>
-              <a class="item" href="../books">
-                <i class="book grid icon"></i>
-                Books
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-                <i class="grid icon share"></i>
-                Migration guides
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+              <a class="item" href="../../roadmap">
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
-              <a class="item" href="../tooling">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="../envers">
-                <i class="grid icon time"></i>
-                Envers
-              </a>
-              <a class="item selected" href=".">
+              <a class="item" href="../../contribute">
                 <i class="grid icon users"></i>
                 Contribute
               </a>
-              <a class="item" href="../support">
+              <a class="item" href="../../tooling">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="../../support">
                 <i class="doctor grid icon"></i>
                 Paid support
               </a>
-              <a class="item" href="../faq">
+              <a class="item" href="../../faq">
                 <i class="circle grid help icon"></i>
                 FAQ
               </a>
             </div>
             <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+              <a class="item" href="https://github.com/hibernate/hibernate-search">
                 <i class="code grid icon"></i>
                 Source code
               </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
                 <i class="bug grid icon"></i>
                 Issue tracker
               </a>
@@ -523,15 +507,15 @@
                 <i class="grid icon lock"></i>
                 Security issue
               </a>
-              <a class="item" href="https://forum.hibernate.org">
+              <a class="item" href="https://forum.hibernate.org/viewforum.php?f=9">
                 <i class="comments grid icon"></i>
                 Forum
               </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
+              <a class="item" href="https://community.jboss.org/en/hibernate/search">
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/">
+              <a class="item" href="http://ci.hibernate.org/job/hibernate-search-master/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -539,106 +523,255 @@
             <hr>
             <div class="license">
               Released under the
-              <a href="http://hibernate.org/license/">LGPL V2.1</a>
+              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
-              <div id="preamble">
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Thanks for your interest! Hibernate ORM is an open source project and community.  Contributions, of any type or any
-              scope, drive the project forward!</p>
+              <div id="toc">
+                <div id="toctitle">
+                  Quick links
+                </div>
+                <ul>
+                  <li>
+                    <a class="item" href="#compatibility">
+                      Compatibility
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#documentation">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#get-it">
+                      How to get it
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#whats-new">
+                      What's new
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#releases">
+                      Releases in this series
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <div class="paragraph">
-              <p>There are lots of ways to become part of the community and contribute, not just writing/fixing code&#8230;&#8203;</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="help-other-users"><a class="anchor" href="#help-other-users"></a>Help Other Users</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>The <a href="/community/">community</a> page lists a few places for users to find help such as IRC and forums.  Not to mention
-              that users often look for help in other places such as StackOverflow or JBoss forums.  A great way to get involved in the
-              community is to share your knowledge with others who need it.</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="improve-documentation"><a class="anchor" href="#improve-documentation"></a>Improve Documentation</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>An extension of helping other users is to contribute documentation.  Its the help that keeps on giving!</p>
-              </div>
-              <div class="paragraph">
-              <p>Whether you simply fix a typo, re-word an unclear section or add a whole new section/topic, improving the documentation
-              helps everyone.</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="discuss-development"><a class="anchor" href="#discuss-development"></a>Discuss Development</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>As the development team discusses design of new features or tries to prioritize work it is great to have input from
-              users.  As the saying goes, it is better to measure twice and cut once; and the more eyes we have on theses designs
-              and the more voices in the discussions, the better measurements we get.  The best places to get involved in
-              discussing development are the <a href="https://hibernate.hipchat.com/chat/room/1238636">ORM dev</a> HipChat channel, the #hibernate-dev IRC channel and the hibernate-dev mailing list.</p>
-              </div>
-              <div class="paragraph">
-              <p><em>Note: the #hibernate-dev IRC channel is visited very infrequently.  Prefer HipChat for real-time chat</em></p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="report-investigate-bugs"><a class="anchor" href="#report-investigate-bugs"></a>Report/Investigate Bugs</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Trying out releases and reporting/fixing problems is in many ways the cornerstone of open source development.  It is
-              especially critical in the case of early releases (Alphas and Betas) as we are trying to solidify APIs and contracts.</p>
-              </div>
-              <div class="paragraph">
-              <p>When creating a bug report, please have a test case available that can be 1.) used to reproduce the issue and 2.)
-              used as a long-term regression test.
-              Please see <a href="https://github.com/hibernate/hibernate-test-case-templates">Hibernate Test Case Templates</a> for an easy
-              way to start!</p>
-              </div>
-              <div class="paragraph">
-              <p>Even if you cannot help code the fix for a bug, submitting test cases for reported
-              <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20status%20%3D%20%22Awaiting%20Test%20Case%22">bugs that did not provide tests</a>
-              is a great help get these bugs resolved.</p>
-              </div>
-              <div class="paragraph">
-              <p>Speaking of JIRA, helping us identify issues that duplicate other issues or that are out of date is a great help as well.  And voting
-              for issues that are important to you is important in terms of how the development team sets priorities.</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="contribute-code"><a class="anchor" href="#contribute-code"></a>Contribute code</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Details on contribiuting code (and documentation) are covered in the CONTRIBUTING.md file available in the repository&#8217;s root directory (<a href="https://github.com/hibernate/hibernate-orm/blob/master/CONTRIBUTING.md" class="bare">https://github.com/hibernate/hibernate-orm/blob/master/CONTRIBUTING.md</a>).</p>
-              </div>
-              <div class="paragraph">
-              <p>Details on building the project are covered in the README.md file also available in the repository&#8217;s root directory (<a href="https://github.com/hibernate/hibernate-orm/blob/master/README.md" class="bare">https://github.com/hibernate/hibernate-orm/blob/master/README.md</a>).</p>
-              </div>
-              <div class="admonitionblock note">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-note" title="Note"></i>
-              </td>
-              <td class="content">
-              <div class="paragraph">
-              <p>CONTRIBUTING.md covers all branches.  README.md is specific to each branch, as it contains building information that varies based on the branch&#8217;s <code>javac</code> requirements, build tool (Gradle, Maven, Ant), etc.</p>
-              </div>
-              </td>
-              </tr>
+              <h2 id="compatibility">Compatibility</h2>
+              <table class="ui collapsing table striped celled unstackable">
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+                      Java
+                    </a>
+                  </td>
+                  <td>
+                    8+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="/orm/">
+                      Hibernate ORM
+                    </a>
+                  </td>
+                  <td>
+                    5.2 (>= 5.2.3.Final)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.elastic.co/products/elasticsearch">
+                      Elasticsearch
+                    </a>
+                  </td>
+                  <td>
+                    2.0 - 5.6
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://lucene.apache.org/core/">
+                      Apache Lucene
+                    </a>
+                  </td>
+                  <td>
+                    5.5
+                  </td>
+                </tr>
               </table>
+              <p>
+                Not compatible with your requirements? Have a look at the
+                <a href="../">
+                  other series.
+                </a>
+              </p>
+              <h2 id="documentation">Documentation</h2>
+              <p>
+                Documentation for this specific series can be accessed through the links below:
+              </p>
+              <p>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.9/reference/en-US/html_single/">
+                  <i class="icon file text outline"></i>
+                  HTML
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.9/reference/en-US/pdf/hibernate_search_reference.pdf">
+                  <i class="icon file pdf outline"></i>
+                  PDF
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.9/api/">
+                  <i class="icon code outline"></i>
+                  API (JavaDoc)
+                </a>
+              </p>
+              <p>
+                You can find more documentation for all series on the
+                <a href="../../documentation">
+                  documentation page.
+                </a>
+              </p>
+              <h2 id="get-it">How to get it</h2>
+              <div class="ui grid equal height stackable download-options">
+                <div class="eleven wide column">
+                  <h3>Maven, Gradle...</h3>
+                  <p>
+                    Maven artifacts of Hibernate Search are published to Maven Central and to the
+                    <a href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-*~5.9.*~~">
+                      JBoss Maven Repository.
+                    </a>
+                    Refer to the
+                    <a href="http://community.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+                    on the Jboss Wiki for more information on how to configure Maven.
+                  </p>
+                  <p>
+                    Below are the Maven coordinates of the main artifacts.
+                  </p>
+                  <dl class="sparse">
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-orm:5.9.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>Hibernate ORM integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-elasticsearch~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-elasticsearch:5.9.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>Elasticsearch integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-elasticsearch-aws~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-elasticsearch-aws:5.9.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>Amazon IAM authentication for Elasticsearch</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-backend-jgroups~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-backend-jgroups:5.9.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JGroups backend</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-backend-jms~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-backend-jms:5.9.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JMS backend</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-jsr352-core~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-jsr352-core:5.9.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JSR 352 (Batch for Java) integration - Core</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-jsr352-jberet~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-jsr352-jberet:5.9.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JSR 352 (Batch for Java) integration - JBeret specifics</dd>
+                  </dl>
+                </div>
+                <div class="five wide column divided">
+                  <h3>Zip archive</h3>
+                  <p>
+                    Direct download is available from SourceForge:
+                  </p>
+                  <p>
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.9.0.Beta1/hibernate-search-5.9.0.Beta1-dist.zip/download" title="Download">
+                      <i class="icon cloud download"></i>
+                      Download Zip archive
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p>
+                More information about specific releases (announcements, download links) can be found
+                <a href="#releases">
+                  here.
+                </a>
+              </p>
+              <h2 id="whats-new">What's new</h2>
+              <p>
+                Latest release announcement (2017-11-27):
+                <a href="http://in.relation.to/2017/11/27/hibernate-search-5-9-0-Beta1/">
+                  5.9.0.Beta1.
+                </a>
+              </p>
+              <p>
+                A detailed list of new features, improvements and fixes in this series can be found
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.9.0.Beta1)%20ORDER%20BY%20updated">
+                  on our JIRA instance.
+                </a>
+              </p>
+              <div class="sect2">
+              <h3 id="jsr352"><a class="anchor" href="#jsr352"></a>JSR 352 (Batch for Java) mass indexing job</h3>
+              <div class="paragraph">
+              <p>A JSR 352 mass indexing job was added, adding in particular the ability to restart
+              from a checkpoint when indexing fails.</p>
+              </div>
+              <div class="paragraph">
+              <p>See <a href="https://docs.jboss.org/hibernate/search/5.9/reference/en-US/html_single/#jsr352-integration">the documentation</a>
+              for more information.</p>
               </div>
               </div>
+              <h2 id="releases">Releases in this series</h2>
+              <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <span class="label orange ui version">
+                      5.9.0.Beta1
+                    </span>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      <small>2017-11-27</small>
+                      -
+                      JSR 352 mass indexing job
+                    </p>
+                    <p>
+                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.9.0.Beta1~~">
+                        org.hibernate:hibernate-search-orm:5.9.0.Beta1
+                      </a>
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.9.0.Beta1/hibernate-search-5.9.0.Beta1-dist.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.9.0.Beta1)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2017/11/27/hibernate-search-5-9-0-Beta1/">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -655,12 +788,12 @@
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href=".." title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../search" title="Search">Hibernate Search</a>
-                <a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../others" title="Other projects">Other projects</a>
+                <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../.." title="Search">Hibernate Search</a>
+                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -674,7 +807,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
@@ -683,12 +816,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>
@@ -721,7 +854,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate ORM", "orm", true);
+        renderTabzilla("Hibernate Search", "search", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
