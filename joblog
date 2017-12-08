@@ -1,19 +1,13 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Fetching gem metadata from https://rubygems.org/......
-Fetching version metadata from https://rubygems.org/..
-Fetching dependency metadata from https://rubygems.org/.
-Fetching asciidoctor 1.5.2
-Installing asciidoctor 1.5.2
-Fetching sass 3.2.19
-Installing sass 3.2.19
-Fetching colorize 0.7.5
-Installing colorize 0.7.5
-Fetching chunky_png 1.3.4
-Installing chunky_png 1.3.4
-Fetching fssm 0.2.10
-Installing fssm 0.2.10
-Fetching git 1.2.9.1
-Installing git 1.2.9.1
+Fetching gem metadata from https://rubygems.org/.......
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Using asciidoctor 1.5.2
+Using sass 3.2.19
+Using colorize 0.7.5
+Using chunky_png 1.3.4
+Using fssm 0.2.10
+Using git 1.2.9.1
 Fetching eventmachine 1.0.7
 Installing eventmachine 1.0.7 with native extensions
 Fetching http_parser.rb 0.6.0
@@ -176,7 +170,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.77653 seconds (files took 1.43 seconds to load)
+Finished in 0.85144 seconds (files took 0.90539 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -187,6 +181,7 @@ To update, run `gem install bundler`
 Using profile: production
 Generating site: http://hibernate.org
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/CNAME[0m
+[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/community/contributors/contributors-name-mapping.json[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/docker/Dockerfile[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-configuration-2.0.dtd[0m
 [0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-configuration-3.0.dtd[0m

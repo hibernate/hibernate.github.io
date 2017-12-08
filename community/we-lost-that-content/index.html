@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.min.css?t=1511786940" rel="stylesheet">
+    <link href="/stylesheets/styles.min.css?t=1512721829" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -446,6 +446,24 @@
                 <i class="grid icon users"></i>
                 Community
               </a>
+              <div class="dropdown item link ui">
+                Contributors
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="/community/contributors/orm/">
+                    Hibernate ORM
+                  </a>
+                  <a class="item" href="/community/contributors/search/">
+                    Hibernate Search
+                  </a>
+                  <a class="item" href="/community/contributors/validator/">
+                    Hibernate Validator
+                  </a>
+                  <a class="item" href="/community/contributors/ogm/">
+                    Hibernate OGM
+                  </a>
+                </div>
+              </div>
               <a class="item" href="../license">
                 <i class="grid icon legal"></i>
                 Licenses
@@ -482,6 +500,11 @@
           </div>
         </div>
       </div>
+      <script>
+        $(document).ready(function() {
+          $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+        });
+      </script>
       <div class="ui inverted vertical footer segment print hidden">
         <div class="ui container">
           <div class="ui stackable inverted divided equal height stackable grid">
