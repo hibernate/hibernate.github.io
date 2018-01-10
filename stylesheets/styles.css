@@ -505,7 +505,7 @@ pre .comment .conum {
 /* line 619, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .footer.segment {
   padding: 3em 0em; }
-/* line 624, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+/* line 623, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
 .footer .ui.inverted.divided.grid:not([class*="vertically divided"]) > .sponsor.column:not(.row), .footer .ui.inverted.divided.grid:not([class*="vertically divided"]) > .row > .sponsor.column {
   box-shadow: none;
   text-align: right; }
@@ -530,17 +530,17 @@ pre .comment .conum {
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
-  /* line 662, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 659, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   [class*="mobile hidden"], [class*="tablet only"]:not(.mobile), [class*="computer only"]:not(.mobile), [class*="or lower hidden"] {
     display: none !important; } }
 /* Tablet / iPad Portrait */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 672, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 669, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   [class*="mobile only"]:not(.tablet), [class*="tablet hidden"], [class*="computer only"]:not(.tablet), [class*="or lower hidden"]:not(.mobile) {
     display: none !important; } }
 /* Computer / Desktop / iPad Landscape */
 @media only screen and (min-width: 992px) {
-  /* line 682, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
+  /* line 679, /mnt/jenkins-workdir/workspace/www.hibernate.org/stylesheets/styles.scss */
   [class*="mobile only"]:not(.computer), [class*="tablet only"]:not(.computer), [class*="computer hidden"], [class*="or lower hidden"]:not(.tablet):not(.mobile) {
     display: none !important; } }
 /**

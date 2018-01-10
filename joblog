@@ -1,74 +1,228 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Using asciidoctor 1.5.2
-Using sass 3.2.19
-Using colorize 0.7.5
-Using chunky_png 1.3.4
-Using fssm 0.2.10
-Using git 1.2.9.1
-Using eventmachine 1.0.7
-Using http_parser.rb 0.6.0
-Using formatador 0.2.5
-Using hitimes 1.2.2
-Using rb-fsevent 0.9.4
-Using ffi 1.9.8
-Using lumberjack 1.0.9
-Using nenv 0.2.0
-Using shellany 0.0.1
-Using coderay 1.1.0
-Using method_source 0.8.2
-Using slop 3.6.0
-Using thor 0.19.1
-Using multi_json 1.11.0
-Using tilt 2.0.1
-Using mime-types 2.4.3
-Using nokogiri 1.5.11
-Using rack 1.5.2
-Using ruby-s3cmd 0.1.5
-Using execjs 2.4.0
-Using json 1.8.2
-Using cssminify 1.0.2
-Using htmlcompressor 0.1.2
-Using redcarpet 3.2.2
-Using libv8 3.16.14.7 (x86_64-linux)
-Using ref 1.0.5
-Using rspec-support 3.2.2
-Using diff-lcs 1.2.5
-Using yajl-ruby 1.2.1
-Using columnize 0.9.0
-Using bundler 1.15.1
-Using bootstrap-sass 3.1.1.1
-Using zurb-foundation 4.3.2
-Using compass 0.12.7
-Using em-websocket 0.5.1
-Using timers 4.0.1
-Using rb-inotify 0.9.5
-Using notiffany 0.0.6
-Using pry 0.10.1
-Using haml 4.0.6
-Using rest-client 1.6.7
-Using uglifier 2.7.1
-Using therubyracer 0.12.1
-Using rspec-core 3.2.2
-Using rspec-expectations 3.2.0
-Using rspec-mocks 3.2.1
-Using byebug 4.0.5
-Using compass-960-plugin 0.10.4
-Using celluloid 0.16.0
-Using rspec 3.2.0
-Using pry-byebug 3.1.0
-Using listen 2.7.12
-Using guard 2.12.5
-Using guard-livereload 2.1.3
-Using awestruct 0.5.5
-Bundle complete! 14 Gemfile dependencies, 61 gems now installed.
+Fetching gem metadata from https://rubygems.org/.......
+Fetching ansi 1.5.0
+Installing ansi 1.5.0
+Fetching asciidoctor 1.5.6.1
+Installing asciidoctor 1.5.6.1
+Fetching ast 2.3.0
+Installing ast 2.3.0
+Fetching git 1.3.0
+Installing git 1.3.0
+Fetching formatador 0.2.5
+Installing formatador 0.2.5
+Fetching rb-fsevent 0.10.2
+Installing rb-fsevent 0.10.2
+Fetching ffi 1.9.18
+Installing ffi 1.9.18 with native extensions
+Fetching rb-inotify 0.9.10
+Installing rb-inotify 0.9.10
+Fetching ruby_dep 1.5.0
+Installing ruby_dep 1.5.0
+Fetching listen 3.1.5
+Installing listen 3.1.5
+Fetching lumberjack 1.0.12
+Installing lumberjack 1.0.12
+Fetching nenv 0.3.0
+Installing nenv 0.3.0
+Fetching shellany 0.0.1
+Installing shellany 0.0.1
+Fetching notiffany 0.1.1
+Installing notiffany 0.1.1
+Fetching coderay 1.1.2
+Installing coderay 1.1.2
+Fetching method_source 0.9.0
+Installing method_source 0.9.0
+Fetching pry 0.11.3
+Installing pry 0.11.3
+Fetching thor 0.20.0
+Installing thor 0.20.0
+Fetching guard 2.14.2
+Installing guard 2.14.2
+Fetching eventmachine 1.2.5
+Installing eventmachine 1.2.5 with native extensions
+Fetching http_parser.rb 0.6.0
+Installing http_parser.rb 0.6.0 with native extensions
+Fetching em-websocket 0.5.1
+Installing em-websocket 0.5.1
+Fetching guard-compat 1.2.1
+Installing guard-compat 1.2.1
+Fetching multi_json 1.12.2
+Installing multi_json 1.12.2
+Fetching guard-livereload 2.5.2
+Installing guard-livereload 2.5.2
+Fetching tilt 2.0.8
+Installing tilt 2.0.8
+Fetching haml 4.0.7
+Installing haml 4.0.7
+Fetching little-plugger 1.1.4
+Installing little-plugger 1.1.4
+Fetching logging 2.2.2
+Installing logging 2.2.2
+Fetching mime-types 2.99.3
+Installing mime-types 2.99.3
+Fetching ruby-ll 2.1.2
+Installing ruby-ll 2.1.2 with native extensions
+Fetching oga 1.3.1
+Installing oga 1.3.1 with native extensions
+Fetching parallel 1.12.1
+Installing parallel 1.12.1
+Fetching rack 1.6.8
+Installing rack 1.6.8
+Fetching unf_ext 0.0.7.4
+Installing unf_ext 0.0.7.4 with native extensions
+Fetching unf 0.1.4
+Installing unf 0.1.4
+Fetching domain_name 0.5.20170404
+Installing domain_name 0.5.20170404
+Fetching http-cookie 1.0.3
+Installing http-cookie 1.0.3
+Fetching netrc 0.11.0
+Installing netrc 0.11.0
+Fetching rest-client 1.8.0
+Installing rest-client 1.8.0
+Fetching awestruct 0.5.7
+Installing awestruct 0.5.7
+Using bundler 1.16.1
+Fetching byebug 9.1.0
+Installing byebug 9.1.0 with native extensions
+Fetching cssminify 1.0.2
+Installing cssminify 1.0.2
+Fetching diff-lcs 1.3
+Installing diff-lcs 1.3
+Fetching execjs 2.7.0
+Installing execjs 2.7.0
+Fetching htmlcompressor 0.4.0
+Installing htmlcompressor 0.4.0
+Fetching json 2.1.0
+Installing json 2.1.0 with native extensions
+Fetching libv8 3.16.14.19 (x86_64-linux)
+Installing libv8 3.16.14.19 (x86_64-linux)
+Fetching mini_portile2 2.3.0
+Installing mini_portile2 2.3.0
+Using nokogiri 1.8.1
+Fetching pry-byebug 3.5.1
+Installing pry-byebug 3.5.1
+Fetching redcarpet 3.4.0
+Installing redcarpet 3.4.0 with native extensions
+Fetching ref 2.0.0
+Installing ref 2.0.0
+Fetching rspec-support 3.7.0
+Installing rspec-support 3.7.0
+Fetching rspec-core 3.7.1
+Installing rspec-core 3.7.1
+Fetching rspec-expectations 3.7.0
+Installing rspec-expectations 3.7.0
+Fetching rspec-mocks 3.7.0
+Installing rspec-mocks 3.7.0
+Fetching rspec 3.7.0
+Installing rspec 3.7.0
+Fetching sass-listen 4.0.0
+Installing sass-listen 4.0.0
+Fetching sass 3.5.5
+Installing sass 3.5.5
+Fetching therubyracer 0.12.3
+Installing therubyracer 0.12.3 with native extensions
+Fetching uglifier 4.1.3
+Installing uglifier 4.1.3
+Fetching yajl-ruby 1.3.1
+Installing yajl-ruby 1.3.1 with native extensions
+Bundle complete! 17 Gemfile dependencies, 64 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
-The latest bundler is 1.16.1, but you are currently running 1.15.1.
-To update, run `gem install bundler`
+Post-install message from haml:
+
+HEADS UP! Haml 4.0 has many improvements, but also has changes that may break
+your application:
+
+* Support for Ruby 1.8.6 dropped
+* Support for Rails 2 dropped
+* Sass filter now always outputs <style> tags
+* Data attributes are now hyphenated, not underscored
+* html2haml utility moved to the html2haml gem
+* Textile and Maruku filters moved to the haml-contrib gem
+
+For more info see:
+
+http://rubydoc.info/github/haml/haml/file/CHANGELOG.md
+
 [33mBundle installed[0m
 
 Awestruct::Extensions::ReleaseDependencies
 "creating /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/../_tmp"
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/4.0.0.Beta1/hibernate-core-4.0.0.Beta1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/3.4.0.Final/hibernate-search-parent-3.4.0.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search/3.4.0.Final/hibernate-search-3.4.0.Final.pom
+Cache hit: org.hibernate:hibernate-search-parent:3.4.0.Final
   #initalize
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/0.Final/hibernate-core-0.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/0.Final/hibernate-core-0.Final.pom
+Release POM org.hibernate:hibernate-core:0.Final not locally cached and unable to retrieve it either from Central or from JBoss Nexus
+404 Not Found
+ /usr/share/ruby/open-uri.rb:363:in `open_http'
+ /usr/share/ruby/open-uri.rb:741:in `buffer_open'
+ /usr/share/ruby/open-uri.rb:212:in `block in open_loop'
+ /usr/share/ruby/open-uri.rb:210:in `catch'
+ /usr/share/ruby/open-uri.rb:210:in `open_loop'
+ /usr/share/ruby/open-uri.rb:151:in `open_uri'
+ /usr/share/ruby/open-uri.rb:721:in `open'
+ /usr/share/ruby/open-uri.rb:35:in `open'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:349:in `download_pom'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:329:in `rescue in create_doc'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:323:in `create_doc'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:283:in `initialize'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_spec/release_dependencies_spec.rb:37:in `new'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_spec/release_dependencies_spec.rb:37:in `block (4 levels) in <top (required)>'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/matchers/built_in/raise_error.rb:52:in `matches?'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/handler.rb:50:in `block in handle_matcher'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/expectation_target.rb:65:in `to'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/expectations/expectation_target.rb:101:in `to'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_spec/release_dependencies_spec.rb:37:in `block (3 levels) in <top (required)>'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:254:in `instance_exec'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:254:in `block in run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:500:in `block in with_around_and_singleton_context_hooks'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:457:in `block in with_around_example_hooks'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/hooks.rb:466:in `block in run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/hooks.rb:604:in `run_around_example_hooks_for'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/hooks.rb:466:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:457:in `with_around_example_hooks'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:500:in `with_around_and_singleton_context_hooks'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example.rb:251:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:628:in `block in run_examples'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:624:in `map'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:624:in `run_examples'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:590:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:591:in `block in run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:591:in `map'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/example_group.rb:591:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:118:in `block (3 levels) in run_specs'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:118:in `map'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:118:in `block (2 levels) in run_specs'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/configuration.rb:1926:in `with_suite_hooks'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:113:in `block in run_specs'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/reporter.rb:79:in `report'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:112:in `run_specs'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:87:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:71:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/lib/rspec/core/runner.rb:45:in `invoke'
+ /home/jenkins/.gem/ruby/2.4.0/gems/rspec-core-3.7.1/exe/rspec:4:in `<top (required)>'
+ /home/jenkins/bin/rspec:23:in `load'
+ /home/jenkins/bin/rspec:23:in `<top (required)>'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `load'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:28:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/cli.rb:424:in `exec'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/cli.rb:27:in `dispatch'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/cli.rb:18:in `start'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/exe/bundle:30:in `block in <top (required)>'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ /home/jenkins/.gem/ruby/2.4.0/gems/bundler-1.16.1/exe/bundle:22:in `<top (required)>'
+ /home/jenkins/bin/bundle:23:in `load'
+ /home/jenkins/bin/bundle:23:in `<main>'
     raises error when pom cannot be accessed for production profile
   #get_value
     pom w/o properties
@@ -97,128 +251,32 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.85518 seconds (files took 1.52 seconds to load)
+Finished in 0.77432 seconds (files took 1.66 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
 The Gemfile's dependencies are satisfied
-The latest bundler is 1.16.1, but you are currently running 1.15.1.
-To update, run `gem install bundler`
 [33mbundle exec awestruct -P production -g --force [0m
 Using profile: production
 Generating site: http://hibernate.org
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/CNAME[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/community/contributors/contributors-name-mapping.json[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/docker/Dockerfile[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-configuration-2.0.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-configuration-3.0.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-configuration.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-generic.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-mapping-1.1.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-mapping-2.0.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-mapping-3.0.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-mapping.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/hibernate-logo.svg[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/hv-maven-import-options-idea.png[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/redhat-developers.png[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/redhat.png[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/images/tck-jsr-349-setup.png[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/joblog[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/ogm/hibernate-ogm-metadata.properties[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/orm/hibernate-orm-metadata.properties[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/images/desktop_hibernate_1920x1200 copy.jpg[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/images/desktop_hibernate_1920x1200b.jpg[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/LICENSE[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/print/paper.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/print/pdf.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/reveal.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/beige.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/black.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/blood.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/league.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/moon.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/night.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/serif.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/simple.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/sky.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/solarized.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/css/theme/white.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/css/zenburn.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/LICENSE[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/league-gothic/league-gothic.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/LICENSE[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5/reveal.js/lib/font/source-sans-pro/source-sans-pro.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/images/desktop_hibernate_1920x1200.jpg[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/LICENSE[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/print/paper.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/print/pdf.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/reveal.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/beige.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/black.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/blood.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/league.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/moon.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/night.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/serif.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/simple.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/sky.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/solarized.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/css/theme/white.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/css/zenburn.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/league-gothic/LICENSE[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/league-gothic/league-gothic.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/league-gothic/league-gothic.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/league-gothic/league-gothic.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/league-gothic/league-gothic.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/LICENSE[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-italic.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-regular.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibold.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.eot[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.ttf[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro-semibolditalic.woff[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/presentations/multi-projects/hibernate-5-fr/reveal.js/lib/font/source-sans-pro/source-sans-pro.css[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/search/hibernate-search-metadata.properties[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/shards/hibernate-shards-metadata.properties[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/tools/hibernate-tools-metadata.properties[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/validator/hibernate-validator-metadata.properties[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-configuration/hibernate-configuration-4.0.xsd[0m
-[0;33;49mCopying /mnt/jenkins-workdir/workspace/www.hibernate.org/xsd/hibernate-mapping/hibernate-mapping-4.0.xsd[0m
+Excecuting pipeline...
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.8.2.Final/hibernate-search-orm-5.8.2.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.8.2.Final/hibernate-search-parent-5.8.2.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.9.0.Beta1/hibernate-search-orm-5.9.0.Beta1.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.9.0.Beta1/hibernate-search-parent-5.9.0.Beta1.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.6.4.Final/hibernate-search-orm-5.6.4.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.6.4.Final/hibernate-search-parent-5.6.4.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.10.Final/hibernate-core-5.1.10.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.4.2.Final/hibernate-validator-5.4.2.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/5.4.2.Final/hibernate-validator-parent-5.4.2.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.7.Final/hibernate-validator-6.0.7.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.7.Final/hibernate-validator-parent-6.0.7.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.9.0.Beta1/hibernate-search-orm-5.9.0.Beta1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.9.0.Beta1/hibernate-search-parent-5.9.0.Beta1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Beta1/hibernate-ogm-core-5.2.0.Beta1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Beta1/hibernate-ogm-parent-5.2.0.Beta1.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.1.0.Final/hibernate-ogm-core-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.1.0.Final/hibernate-ogm-parent-5.1.0.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Beta1/hibernate-ogm-core-5.2.0.Beta1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.10.Final/hibernate-core-5.1.10.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.7.Final/hibernate-validator-6.0.7.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.7.Final/hibernate-validator-parent-6.0.7.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.4.2.Final/hibernate-validator-5.4.2.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/5.4.2.Final/hibernate-validator-parent-5.4.2.Final.pom
+WgetWrapper extension is not properly configured in site.yml.
+FileMerger extension is not properly configured in site.yml.
+Generating pages...
