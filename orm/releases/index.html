@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1516105088" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1516320963" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -408,6 +408,7 @@
       </div>
       <script>
         var displayed_series = [];
+        displayed_series.push('5.3');
         displayed_series.push('5.2');
         displayed_series.push('5.1');
         displayed_series.push('5.0');
@@ -435,6 +436,12 @@
                     Latest stable (5.2)
                   </a>
                 </div>
+                <div class="jumbotron-button">
+                  <a class="ui small right labeled icon button orange" href="./5.3/">
+                    <i class="right arrow icon"></i>
+                    Development (5.3)
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -455,6 +462,9 @@
                 <div class="menu">
                   <a class="item selected" href=".">
                     Overview
+                  </a>
+                  <a class="item" href="5.3">
+                    5.3
                   </a>
                   <a class="item" href="5.2">
                     5.2
@@ -553,6 +563,26 @@
               </div>
               <h2>Series</h2>
               <div class="ui three column doubling grid series active-series stackable">
+                <div class="column">
+                  <div class="ui raised segment version">
+                    <span class="ui right ribbon label orange">
+                      development
+                    </span>
+                    <h3 class="ui header">
+                      5.3
+                      <small>
+                        2018-01-18
+                      </small>
+                    </h3>
+                    <p>JPA 2.2, inheritance caching</p>
+                    <div class="ui right aligned basic segment">
+                      <a class="ui right labeled icon button primary" href="./5.3/">
+                        <i class="right arrow icon"></i>
+                        More info
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 <div class="column">
                   <div class="ui raised segment version">
                     <span class="ui right ribbon label green">
@@ -685,6 +715,9 @@
                       Hibernate ORM
                     </th>
                     <th>
+                      5.3
+                    </th>
+                    <th>
                       5.2
                     </th>
                     <th>
@@ -706,6 +739,9 @@
                       8+
                     </td>
                     <td>
+                      8+
+                    </td>
+                    <td>
                       6+
                     </td>
                     <td>
@@ -717,6 +753,9 @@
                       <a href="http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
                         JPA
                       </a>
+                    </td>
+                    <td>
+                      2.2
                     </td>
                     <td>
                       2.1
@@ -743,6 +782,9 @@
               </li>
               <li>
               <p>JPA 2.1: ORM 4.3+</p>
+              </li>
+              <li>
+              <p>JPA 2.2: ORM 5.3+</p>
               </li>
               </ul>
               </div>
