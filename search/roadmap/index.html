@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1516377025" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1516637135" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -586,13 +586,14 @@
               <p>You can find a finer grained roadmap in our <a href="https://hibernate.atlassian.net/browse/HSEARCH">issue tracker</a> but this page is a good and concise view of where we are going.</p>
               </div>
               <div class="paragraph">
-              <p>Dates are generally omitted: while milestones are released regularly, the Final release is tagged when it&#8217;s considered stable.</p>
+              <p>Dates are generally omitted: milestones are released regularly, the Final release is tagged when it&#8217;s considered stable.</p>
               </div>
               </div>
               <div id="toc" class="toc">
               <div id="toctitle">Releases</div>
               <ul class="sectlevel1">
               <li><a href="#hibernate-search-5-9">Hibernate Search 5.9</a></li>
+              <li><a href="#hibernate-search-5-10">Hibernate Search 5.10</a></li>
               <li><a href="#hibernate-search-6-x">Hibernate Search 6.x</a></li>
               </ul>
               </div>
@@ -602,24 +603,42 @@
               <div class="sectionbody">
               <div class="dlist">
               <dl>
-              <dt class="hdlist1">Elasticsearch performance</dt>
+              <dt class="hdlist1">JSR-352 (Batch Applications for the Java Platform) integration</dt>
               <dd>
-              <p>We applied some performance improvements in version 5.8 but there are several more interesting ideas to explore which could provide a radical boost.</p>
+              <p>Since last year, Mincong Huang worked on a JSR-352 job for Hibernate Search mass indexing.
+              We plan to do some performance testing (and optimization if necessary), then merge this work as a new module.</p>
               </dd>
-              <dt class="hdlist1">WildFly Swarm</dt>
+              <dt class="hdlist1">Feature Packs</dt>
               <dd>
-              <p><a href="http://wildfly-swarm.io/">WildFly Swarm</a> is the new fine-grained modular version of <a href="http://wildfly.org/">WildFly</a> aiming at microservices.
-              We should make sure Hibernate Search is integrated properly and the usage is documented.</p>
+              <p>Both <a href="http://wildfly.org/">WildFly</a> and <a href="http://wildfly-swarm.io/">WildFly Swarm</a> prefer consuming "WildFly Feature Packs" rather than jar files or zip bundles.
+              We plan on distributing proper feature packs to make consumption of the latest version of Hibernate Search easier on these platforms.</p>
               </dd>
               <dt class="hdlist1">Modularity related enhancements</dt>
               <dd>
               <p>Some code needs to be moved to different jars to improve the experience with OSGi, JBoss Modules and eventually Java 9 (Jigsaw) users.
               For example the integration with Apache Tika should be moved to allow loading additional extensions which haven&#8217;t been originally bundled with Hibernate Search.</p>
               </dd>
-              <dt class="hdlist1">JSR-352 (Batch Applications for the Java Platform) integration</dt>
+              </dl>
+              </div>
+              </div>
+              </div>
+              <div class="sect1">
+              <h2 id="hibernate-search-5-10"><a class="anchor" href="#hibernate-search-5-10"></a>Hibernate Search 5.10</h2>
+              <div class="sectionbody">
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1">Hibernate ORM 5.3, JPA 2.2</dt>
               <dd>
-              <p>Since last year, Mincong Huang worked on a JSR-352 job for Hibernate Search mass indexing.
-              We plan to do some performance testing (and optimization if necessary), then merge this work as a new module.</p>
+              <p>Hibernate ORM 5.3 is coming and will feature full support for <code>JPA 2.2</code>. This will require us to update several APIs.</p>
+              </dd>
+              <dt class="hdlist1">WildFly Swarm</dt>
+              <dd>
+              <p><a href="http://wildfly-swarm.io/">WildFly Swarm</a> is the new fine-grained modular version of <a href="http://wildfly.org/">WildFly</a> aiming at microservices.
+              We should make sure Hibernate Search is integrated properly and the usage is documented. Essentially continue the work started with feature packs in <code>5.9</code>.</p>
+              </dd>
+              <dt class="hdlist1">Elasticsearch performance</dt>
+              <dd>
+              <p>We applied several performance improvements in previous versions, but there are some more interesting ideas to explore.</p>
               </dd>
               </dl>
               </div>
