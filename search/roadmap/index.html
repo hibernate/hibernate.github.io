@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1516637135" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1516710161" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -648,7 +648,7 @@
               <h2 id="hibernate-search-6-x"><a class="anchor" href="#hibernate-search-6-x"></a>Hibernate Search 6.x</h2>
               <div class="sectionbody">
               <div class="paragraph">
-              <p>Compatible with Hibernate ORM 6, Apache Lucene 7.</p>
+              <p>Compatible with Hibernate ORM 6, Apache Lucene 7, Elasticsearch 6.</p>
               </div>
               <div class="dlist">
               <dl>
@@ -661,6 +661,12 @@
               <dd>
               <p>To provide the full power of some of the new features in Apache Lucene 7, some API changes are needed.
               This includes some API improvements which could have been useful since the upgrade to Lucene 5; since we only apply breaking API changes in major releases these had to wait.</p>
+              </dd>
+              <dt class="hdlist1">Upgrade to Elasticsearch 6</dt>
+              <dd>
+              <p>Elasticsearch 6 does not provide the ability to store multiple types in one index anymore.
+              Hibernate Search 6 will address this, possibly by forcing to use different indexes for different types.
+              Once this is done, we will add support for Elasticsearch 6.</p>
               </dd>
               <dt class="hdlist1">Free-form indexing</dt>
               <dd>
