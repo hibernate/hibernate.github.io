@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1517295734" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1517400716" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -525,9 +525,13 @@
                   </a>
                   <a class="item" href="../../releases/5.3">
                     5.3
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
                   </a>
                   <a class="item" href="../../releases/5.2">
                     5.2
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
                   </a>
                   <a class="item" href="../../releases/5.1">
                     5.1
@@ -537,10 +541,35 @@
                   </a>
                 </div>
               </div>
-              <a class="item selected" href="..">
-                <i class="folder grid icon open"></i>
+              <!-- / Here we want to display all the known versions -->
+              <div class="dropdown item link selected ui">
                 Documentation
-              </a>
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="/orm/documentation/5.3/">
+                    5.3
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.2/">
+                    5.2
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
+                  </a>
+                  <a class="item selected" href="/orm/documentation/5.1/">
+                    5.1
+                  </a>
+                  <a class="item" href="/orm/documentation/5.0/">
+                    5.0
+                  </a>
+                  <a class="item" href="/orm/documentation/4.3/">
+                    4.3
+                  </a>
+                  <a class="item" href="/orm/documentation/4.2/">
+                    4.2
+                  </a>
+                </div>
+              </div>
               <a class="item" href="../../books">
                 <i class="book grid icon"></i>
                 Books

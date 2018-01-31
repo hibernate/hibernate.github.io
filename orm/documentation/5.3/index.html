@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ORM. Lucene. Elasticsearch. Integrated. - Hibernate Search</title>
+    <title>Documentation - 5.3 - Hibernate ORM</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -26,12 +26,12 @@
     <div class="ui vertical inverted sidebar left" id="mobile-menu">
       <div class="ui vertical fluid inverted text menu accordion">
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="database grid icon"></i>
             <i class="dropdown icon"></i>
             <strong>ORM</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/orm/">
                 <i class="grid home icon"></i>
@@ -41,7 +41,7 @@
                 <i class="grid icon tags"></i>
                 Releases
               </a>
-              <a class="item" href="/orm/documentation/">
+              <a class="active item" href="/orm/documentation/">
                 <i class="folder grid icon open"></i>
                 Documentation
               </a>
@@ -107,14 +107,14 @@
           </div>
         </div>
         <div class="item">
-          <a class="active title">
+          <a class="title">
             <i class="grid icon search"></i>
             <i class="dropdown icon"></i>
             <strong>Search</strong>
           </a>
-          <div class="active content">
+          <div class="content">
             <div class="menu internal-links">
-              <a class="active item" href="/search/">
+              <a class="item" href="/search/">
                 <i class="grid home icon"></i>
                 About
               </a>
@@ -432,8 +432,8 @@
         </div>
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
-          <a class="item" href="/orm/">ORM</a>
-          <a class="active item" href="/search/">Search</a>
+          <a class="active item" href="/orm/">ORM</a>
+          <a class="item" href="/search/">Search</a>
           <a class="item" href="/validator/">Validator</a>
           <a class="item" href="/ogm/">OGM</a>
           <a class="item" href="/tools/">Tools</a>
@@ -451,9 +451,10 @@
       </div>
       <script>
         var displayed_series = [];
-        displayed_series.push('5.9');
-        displayed_series.push('5.8');
-        displayed_series.push('5.6');
+        displayed_series.push('5.3');
+        displayed_series.push('5.2');
+        displayed_series.push('5.1');
+        displayed_series.push('5.0');
       </script>
       <div class="jumbotron small">
         <div class="ui container">
@@ -462,53 +463,56 @@
               <div class="column twelve wide middle aligned">
                 <h1>
                   <span>
-                    Hibernate Search
+                    Hibernate ORM
                   </span>
                 </h1>
                 <h2>
                   <span>
-                    ORM. Lucene. Elasticsearch. Integrated.
+                    Documentation - 5.3
                   </span>
                 </h2>
               </div>
               <div class="column four wide middle aligned">
                 <div class="jumbotron-button">
-                  <a class="ui small right labeled icon button" href="documentation/getting-started">
-                    <i class="right arrow icon"></i>
-                    Getting started
-                  </a>
-                </div>
-                <div class="jumbotron-button">
-                  <a class="ui small right labeled icon button green" href="./releases/5.8/">
-                    <i class="right arrow icon"></i>
-                    Latest stable (5.8)
-                  </a>
-                </div>
-                <div class="jumbotron-button">
-                  <a class="ui small right labeled icon button orange" href="./releases/5.9/">
-                    <i class="right arrow icon"></i>
-                    Development (5.9)
-                  </a>
+                  <div class="ui segment raised" id="documentation-version-selector-container">
+                    <form class="ui form">
+                      <div class="field">
+                        <label>Other versions</label>
+                        <select class="ui fluid dropdown selection" onchange="location = this.options[this.selectedIndex].value;">
+                          <option selected value="/orm/documentation/5.3">
+                            5.3
+                          </option>
+                          <option value="/orm/documentation/5.2">
+                            5.2
+                          </option>
+                          <option value="/orm/documentation/5.1">
+                            5.1
+                          </option>
+                          <option value="/orm/documentation/5.0">
+                            5.0
+                          </option>
+                          <option value="/orm/documentation/4.3">
+                            4.3
+                          </option>
+                          <option value="/orm/documentation/4.2">
+                            4.2
+                          </option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="page-title small">
-        <div class="ui container">
-          <h4>
-            Hibernate Search transparently indexes your objects
-            and offers fast full-text, geolocation and data mining search capabilities.
-            Easy to use, integrates with Apache Lucene, Elasticsearch and Hibernate ORM.
-          </h4>
-        </div>
-      </div>
+      
       <div class="ui container page-content">
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
             <div class="ui fluid vertical menu">
-              <a class="item selected" href=".">
+              <a class="item" href="../..">
                 <i class="grid home icon"></i>
                 About
               </a>
@@ -516,55 +520,95 @@
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="releases">
+                  <a class="item" href="../../releases">
                     Overview
                   </a>
-                  <a class="item" href="releases/5.9">
-                    5.9
+                  <a class="item" href="../../releases/5.3">
+                    5.3
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
                   </a>
-                  <a class="item" href="releases/5.8">
-                    5.8
+                  <a class="item" href="../../releases/5.2">
+                    5.2
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="releases/5.6">
-                    5.6
+                  <a class="item" href="../../releases/5.1">
+                    5.1
+                  </a>
+                  <a class="item" href="../../releases/5.0">
+                    5.0
                   </a>
                 </div>
               </div>
-              <a class="item" href="documentation">
-                <i class="book grid icon"></i>
+              <!-- / Here we want to display all the known versions -->
+              <div class="dropdown item link selected ui">
                 Documentation
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item selected" href="/orm/documentation/5.3/">
+                    5.3
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.2/">
+                    5.2
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.1/">
+                    5.1
+                  </a>
+                  <a class="item" href="/orm/documentation/5.0/">
+                    5.0
+                  </a>
+                  <a class="item" href="/orm/documentation/4.3/">
+                    4.3
+                  </a>
+                  <a class="item" href="/orm/documentation/4.2/">
+                    4.2
+                  </a>
+                </div>
+              </div>
+              <a class="item" href="../../books">
+                <i class="book grid icon"></i>
+                Books
               </a>
-              <a class="item" href="roadmap">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                <i class="grid icon share"></i>
+                Migration guides
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
-              <a class="item" href="contribute">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="tooling">
+              <a class="item" href="../../tooling">
                 <i class="grid icon wrench"></i>
                 Tooling
               </a>
-              <a class="item" href="support">
+              <a class="item" href="../../envers">
+                <i class="grid icon time"></i>
+                Envers
+              </a>
+              <a class="item" href="../../contribute">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="../../support">
                 <i class="doctor grid icon"></i>
                 Paid support
               </a>
-              <a class="item" href="faq">
+              <a class="item" href="../../faq">
                 <i class="circle grid help icon"></i>
                 FAQ
               </a>
             </div>
             <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-search">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
                 <i class="code grid icon"></i>
                 Source code
               </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
                 <i class="bug grid icon"></i>
                 Issue tracker
               </a>
@@ -572,15 +616,15 @@
                 <i class="grid icon lock"></i>
                 Security issue
               </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
                 <i class="comments grid icon"></i>
                 Forum
               </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate/search">
+              <a class="item" href="https://community.jboss.org/en/hibernate">
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/job/hibernate-search-master/">
+              <a class="item" href="http://ci.hibernate.org/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -588,204 +632,24 @@
             <hr>
             <div class="license">
               Released under the
-              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
+              <a href="http://hibernate.org/license/">LGPL V2.1</a>
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
-            <div class="ui stackable grid">
-              <div class="column eleven wide">
-                <div class="content" id="content">
-                  <div class="feature-block">
-                    <div class="sect1">
-                    <h2 id="full-text-search-for-entities"><a class="anchor" href="#full-text-search-for-entities"></a>Full-text search for entities</h2>
-                    <div class="sectionbody">
-                    <div class="paragraph">
-                    <p>Offers full-text search support for objects stored by Hibernate ORM, <a href="http://infinispan.org/">Infinispan</a> and other sources.
-                    Think of it as Google(tm) for your entities:</p>
-                    </div>
-                    <div class="ulist">
-                    <ul>
-                    <li>
-                    <p>search words with text</p>
-                    </li>
-                    <li>
-                    <p>order results by relevance</p>
-                    </li>
-                    <li>
-                    <p>find by approximation (fuzzy search)</p>
-                    </li>
-                    </ul>
-                    </div>
-                    <div class="paragraph">
-                    <p>Under the hood it will use <a href="https://lucene.apache.org/core/">Apache Lucene</a> directly or over <a href="https://www.elastic.co/products/elasticsearch/">Elasticsearch</a>.</p>
-                    </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="feature-block">
-                    <div class="sect1">
-                    <h2 id="full-control"><a class="anchor" href="#full-control"></a>Full control</h2>
-                    <div class="sectionbody">
-                    <div class="paragraph">
-                    <p>Unlike with web search, this is your data, your domain, your application, stored wherever you decide.</p>
-                    </div>
-                    <div class="paragraph">
-                    <p>You also have far better control on how your data is processed, and how to extract what you need.</p>
-                    </div>
-                    <div class="paragraph">
-                    <p>Hibernate Search exposes all capabilities of the powerful analysis framework from Apache Lucene, so you can:</p>
-                    </div>
-                    <div class="ulist">
-                    <ul>
-                    <li>
-                    <p>tune text processing for specific languages</p>
-                    </li>
-                    <li>
-                    <p>for domain specific terminology (e.g. medical terms, custom acronyms expansion,..)</p>
-                    </li>
-                    <li>
-                    <p>control the ranking process: which results are more important</p>
-                    </li>
-                    <li>
-                    <p>advanced index encoding for analytics and signals</p>
-                    </li>
-                    </ul>
-                    </div>
-                    <div class="paragraph">
-                    <p>Additionally it allows to:</p>
-                    </div>
-                    <div class="ulist">
-                    <ul>
-                    <li>
-                    <p>partition data, apply multi-tenancy for security and performance optimisations</p>
-                    </li>
-                    <li>
-                    <p>perform declarative filtering, to control data access security via aspect based programming</p>
-                    </li>
-                    </ul>
-                    </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="feature-block">
-                    <div class="sect1">
-                    <h2 id="scalable-fault-tolerant-cloud-native"><a class="anchor" href="#scalable-fault-tolerant-cloud-native"></a>Scalable, Fault Tolerant, Cloud Native</h2>
-                    <div class="sectionbody">
-                    <div class="paragraph">
-                    <p>You&#8217;ll find that performance of a "single box" is exceptional, still it can be distributed.</p>
-                    </div>
-                    <div class="paragraph">
-                    <p>Maintaining an high performance, scalable distributed index is not simple. Hibernate Search offers several architectural solutions:</p>
-                    </div>
-                    <div class="ulist">
-                    <ul>
-                    <li>
-                    <p>Integration with <a href="https://www.elastic.co/products/elasticsearch/">Elasticsearch</a></p>
-                    </li>
-                    <li>
-                    <p>Store the Apache Lucene index in an <a href="http://infinispan.org/">Infinispan distributed data grid</a></p>
-                    </li>
-                    <li>
-                    <p>Simple filesystem based replication</p>
-                    </li>
-                    <li>
-                    <p>Replicate changes across nodes using JMS, JGroups, or plug your own service</p>
-                    </li>
-                    <li>
-                    <p>Update indexes within a JTA transaction, or as a post-transaction listener</p>
-                    </li>
-                    </ul>
-                    </div>
-                    <div class="paragraph">
-                    <p>These building blocks can be combined in various ways.</p>
-                    </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="feature-block">
-                    <div class="sect1">
-                    <h2 id="spatial-queries"><a class="anchor" href="#spatial-queries"></a>Spatial queries</h2>
-                    <div class="sectionbody">
-                    <div class="paragraph">
-                    <p>Indexing Geolocalized entities is as easy as adding the <code>@Spatial</code> annotation.</p>
-                    </div>
-                    <div class="paragraph">
-                    <p>Filter results around a certain location like the user position, and just highlight the matching pizzerias which are actually close to the user.</p>
-                    </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="feature-block">
-                    <div class="sect1">
-                    <h2 id="faceting"><a class="anchor" href="#faceting"></a>Faceting</h2>
-                    <div class="sectionbody">
-                    <div class="paragraph">
-                    <p>Get query results organized by groups and categories, having these automatically discovered from your data.</p>
-                    </div>
-                    <div class="paragraph">
-                    <p>For example webshops will want to show all results, but grouped by properties like price ranges and brand.</p>
-                    </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="feature-block">
-                    <div class="sect1">
-                    <h2 id="easy-to-use"><a class="anchor" href="#easy-to-use"></a>Easy to use</h2>
-                    <div class="sectionbody">
-                    <div class="paragraph">
-                    <p>Designed to be easy to use from the ground up. Handles indexing, datastore synchronization, clustering and infrastructure transparently while you focus on the business side of your queries.</p>
-                    </div>
-                    </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="content" id="content">
+              <div class="admonitionblock warning">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-warning" title="Warning"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>The Hibernate ORM 5.3 documentation will be available soon.</p>
               </div>
-              <div class="column five wide">
-                <div class="ui segment raised news" id="latest-news" style="display:none">
-                  <h3>Latest news</h3>
-                  <div id="feed"></div>
-                  <a class="ui right labeled icon button" href="http://in.relation.to/hibernate-search/">
-                    <i class="right arrow icon"></i>
-                    Other news
-                  </a>
-                </div>
-                <script>
-                  $(document).ready(function() {
-                    $.ajax({
-                      url: "http://in.relation.to/feeds/hibernate-search.json",
-                      jsonpCallback: "getBlogEntries",
-                      dataType: "jsonp",
-                  
-                      // Work with the response
-                      success: function( data ) {
-                        var feedDiv = $('#feed');
-                        feedDiv.empty();
-                        for (var i = 0; i < data.length; i++) {
-                          var entry = data[i];
-                          var entryDate = new Date(entry.date);
-                          var dateString =
-                              entryDate.getFullYear() + '-'
-                              + ('0' + (entryDate.getMonth()+1)).slice(-2) + '-'
-                              + ('0' + entryDate.getDate()).slice(-2);
-                          feedDiv.append(
-                            $('<div class="news-item"/>').append(
-                              $('<h4/>').append(
-                                $('<a href="' + entry.url + '" />').text(entry.title)
-                              )
-                            ).append(
-                              $('<small/>').text(dateString)
-                            ).append(
-                              $('<p/>').text(entry.snippet)
-                            ).append(
-                              '<hr/>'
-                            )
-                          );
-                        }
-                        $('#latest-news').fadeIn();
-                      }
-                    });
-                  });
-                </script>
+              </td>
+              </tr>
+              </table>
               </div>
             </div>
           </div>
@@ -802,12 +666,12 @@
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="." title="Search">Hibernate Search</a>
-                <a class="item" href="../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../others" title="Other projects">Other projects</a>
+                <a class="item" href="../.." title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -821,7 +685,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -831,12 +695,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>
@@ -866,7 +730,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate Search", "search", true);
+        renderTabzilla("Hibernate ORM", "orm", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
