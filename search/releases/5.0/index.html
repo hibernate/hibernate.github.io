@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1517566969" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1517587020" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -680,32 +680,45 @@
                 <div class="eleven wide column">
                   <h3>Maven, Gradle...</h3>
                   <p>
-                    Maven artifacts of Hibernate Search are published to Maven Central and to the
-                    <a href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-*~5.0.*~~">
-                      JBoss Maven Repository.
+                    Maven artifacts of Hibernate Search are published to
+                    <a href="https://search.maven.org">
+                      Maven Central
+                    </a>
+                    and to the
+                    <a href="https://repository.jboss.org/nexus/index.html">
+                      JBoss Maven repository.
                     </a>
                     Refer to the
-                    <a href="http://community.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
-                    on the Jboss Wiki for more information on how to configure Maven.
+                    <a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+                    on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+                  </p>
+                  <p>
+                    You can find the Maven coordinates of all artifacts through the link below:
+                    <p>
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.1.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                    </p>
                   </p>
                   <p>
                     Below are the Maven coordinates of the main artifacts.
                   </p>
                   <dl class="sparse">
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.1.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.1.Final%7C">
                         org.hibernate:hibernate-search-orm:5.0.1.Final
                       </a>
                     </dt>
                     <dd>Hibernate ORM integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-backend-jgroups~5.0.1.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jgroups%7C5.0.1.Final%7C">
                         org.hibernate:hibernate-search-backend-jgroups:5.0.1.Final
                       </a>
                     </dt>
                     <dd>JGroups backend</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-backend-jms~5.0.1.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jms%7C5.0.1.Final%7C">
                         org.hibernate:hibernate-search-backend-jms:5.0.1.Final
                       </a>
                     </dt>
@@ -756,20 +769,26 @@
               <div class="ui stackable grid series-versions">
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      5.0.1.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        5.0.1.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2015-01-12</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2015-01-12</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.1.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.1.Final%7C">
                         org.hibernate:hibernate-search-orm:5.0.1.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.1.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.1.Final/hibernate-search-5.0.1.Final-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -787,20 +806,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      5.0.0.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        5.0.0.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-12-16</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-12-16</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Final%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Final/hibernate-search-5.0.0.Final-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -818,22 +843,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.CR2
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.CR2
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-12-12</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-12-12</small>
-                      -
                       Bug fixes prior to final release
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.CR2~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.CR2%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.CR2
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.CR2">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.CR2/hibernate-search-5.0.0.CR2-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -851,22 +883,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.CR1
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.CR1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-12-09</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-12-09</small>
-                      -
                       Index numeric types and dates as NumericField by default
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.CR1~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.CR1%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.CR1
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.CR1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.CR1/hibernate-search-5.0.0.CR1-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -884,22 +923,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Beta3
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Beta3
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-11-10</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-11-10</small>
-                      -
                       API polishing, indexing performance improvements
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Beta3~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Beta3%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Beta3
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Beta3">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Beta3/hibernate-search-5.0.0.Beta3-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -917,22 +963,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Beta2
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Beta2
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-11-13</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-11-13</small>
-                      -
                       API and documentation polishing, indexing performance improvments
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Beta2~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Beta2%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Beta2
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Beta2">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Beta2/hibernate-search-5.0.0.Beta2-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -950,22 +1003,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Beta1
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Beta1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-10-31</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-10-31</small>
-                      -
                       Async backend performance, many Infinispan integration improvements
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Beta1~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Beta1%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Beta1
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Beta1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Beta1/hibernate-search-5.0.0.Beta1-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -983,22 +1043,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Alpha7
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Alpha7
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-09-26</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-09-26</small>
-                      -
                       Improvements and fixes in the Avro Serialization module
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Alpha7~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Alpha7%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Alpha7
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Alpha7">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Alpha7/hibernate-search-5.0.0.Alpha7-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1016,22 +1083,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Alpha6
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Alpha6
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-08-18</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-08-18</small>
-                      -
                       Improvements and fixes in the Avro Serialization module
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Alpha6~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Alpha6%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Alpha6
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Alpha6">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Alpha6/hibernate-search-5.0.0.Alpha6-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1049,22 +1123,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Alpha5
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Alpha5
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-07-23</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-07-23</small>
-                      -
                       Upgrade integrations for JMS, Hibernate ORM, WildFly, Karaf, Infinispan upgrades
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Alpha5~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Alpha5%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Alpha5
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Alpha5">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Alpha5/hibernate-search-5.0.0.Alpha5-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1082,22 +1163,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Alpha4
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Alpha4
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-05-20</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-05-20</small>
-                      -
                       OSGi support, Lucene 4.8.1, Infinispan 7 preview
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Alpha4~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Alpha4%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Alpha4
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Alpha4">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Alpha4/hibernate-search-5.0.0.Alpha4-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1115,22 +1203,29 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Alpha3
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Alpha3
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-04-04</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-04-04</small>
-                      -
                       Lucene 4.7.1, ClassLoader fixes, Tests polished
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Alpha3~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Alpha3%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Alpha3
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Alpha3">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Alpha3/hibernate-search-5.0.0.Alpha3-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1148,20 +1243,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Alpha2
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Alpha2
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-03-05</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-03-05</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Alpha2~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Alpha2%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Alpha2
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Alpha2">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Alpha2/hibernate-search-5.0.0.Alpha2-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1179,20 +1280,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      5.0.0.Alpha1
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        5.0.0.Alpha1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-02-14</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-02-14</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-search-orm~5.0.0.Alpha1~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.0.0.Alpha1%7C">
                         org.hibernate:hibernate-search-orm:5.0.0.Alpha1
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.0.0.Alpha1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.0.0.Alpha1/hibernate-search-5.0.0.Alpha1-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download

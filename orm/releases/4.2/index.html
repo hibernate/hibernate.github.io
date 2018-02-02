@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1517566968" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1517587020" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -707,62 +707,75 @@
                 <div class="eleven wide column">
                   <h3>Maven, Gradle...</h3>
                   <p>
-                    Maven artifacts of Hibernate ORM are published to Maven Central and to the
-                    <a href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-*~4.2.*~~">
-                      JBoss Maven Repository.
+                    Maven artifacts of Hibernate ORM are published to
+                    <a href="https://search.maven.org">
+                      Maven Central
+                    </a>
+                    and to the
+                    <a href="https://repository.jboss.org/nexus/index.html">
+                      JBoss Maven repository.
                     </a>
                     Refer to the
-                    <a href="http://community.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
-                    on the Jboss Wiki for more information on how to configure Maven.
+                    <a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+                    on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+                  </p>
+                  <p>
+                    You can find the Maven coordinates of all artifacts through the link below:
+                    <p>
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.21.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                    </p>
                   </p>
                   <p>
                     Below are the Maven coordinates of the main artifacts.
                   </p>
                   <dl class="sparse">
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-core:4.2.21.Final
                       </a>
                     </dt>
                     <dd>Core implementation</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-entitymanager~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-entitymanager%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-entitymanager:4.2.21.Final
                       </a>
                     </dt>
                     <dd>JPA support</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-osgi~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-osgi%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-osgi:4.2.21.Final
                       </a>
                     </dt>
                     <dd>OSGi integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-envers~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-envers%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-envers:4.2.21.Final
                       </a>
                     </dt>
                     <dd>Envers audit support</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-c3p0~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-c3p0%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-c3p0:4.2.21.Final
                       </a>
                     </dt>
                     <dd>c3p0 connection pooling</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-proxool~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-proxool%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-proxool:4.2.21.Final
                       </a>
                     </dt>
                     <dd>Proxool connection pooling</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-infinispan~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-infinispan%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-infinispan:4.2.21.Final
                       </a>
                     </dt>
                     <dd>Infinispan second-level caching</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-ehcache~4.2.21.Final~~">
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-ehcache%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-ehcache:4.2.21.Final
                       </a>
                     </dt>
@@ -813,20 +826,26 @@
               <div class="ui stackable grid series-versions">
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.21.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.21.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2015-10-23</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2015-10-23</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.21.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.21.Final%7C">
                         org.hibernate:hibernate-core:4.2.21.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.21.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate4/4.2.21.Final/hibernate-release-4.2.21.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -844,20 +863,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.20.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.20.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2015-07-24</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2015-07-24</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.20.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.20.Final%7C">
                         org.hibernate:hibernate-core:4.2.20.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.20.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate4/4.2.20.Final/hibernate-release-4.2.20.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -875,20 +900,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.19.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.19.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2015-04-15</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2015-04-15</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.19.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.19.Final%7C">
                         org.hibernate:hibernate-core:4.2.19.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.19.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate4/4.2.19.Final/hibernate-release-4.2.19.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -906,20 +937,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.17.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.17.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2015-01-05</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2015-01-05</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.17.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.17.Final%7C">
                         org.hibernate:hibernate-core:4.2.17.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.17.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.17.Final/hibernate-release-4.2.17.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -937,20 +974,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.16.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.16.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-10-30</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-10-30</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.16.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.16.Final%7C">
                         org.hibernate:hibernate-core:4.2.16.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.16.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.16.Final/hibernate-release-4.2.16.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -968,20 +1011,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.15.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.15.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-07-16</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-07-16</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.15.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.15.Final%7C">
                         org.hibernate:hibernate-core:4.2.15.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.15.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.15.Final/hibernate-release-4.2.15.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -999,20 +1048,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.14.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.14.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-06-25</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-06-25</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.14.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.14.Final%7C">
                         org.hibernate:hibernate-core:4.2.14.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.14.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.14.Final/hibernate-release-4.2.14.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1030,20 +1085,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.13.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.13.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-05-28</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-05-28</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.13.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.13.Final%7C">
                         org.hibernate:hibernate-core:4.2.13.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.13.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.13.Final/hibernate-release-4.2.13.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1061,20 +1122,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.12.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.12.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-04-08</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-04-08</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.12.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.12.Final%7C">
                         org.hibernate:hibernate-core:4.2.12.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.12.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.12.Final/hibernate-release-4.2.12.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1092,20 +1159,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.11.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.11.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-03-17</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-03-17</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.11.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.11.Final%7C">
                         org.hibernate:hibernate-core:4.2.11.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.11.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.11.Final/hibernate-release-4.2.11.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1123,20 +1196,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.10.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.10.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-03-03</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-03-03</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.10.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.10.Final%7C">
                         org.hibernate:hibernate-core:4.2.10.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.10.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.10.Final/hibernate-release-4.2.10.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1154,20 +1233,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.9.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.9.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2014-02-26</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2014-02-26</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.9.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.9.Final%7C">
                         org.hibernate:hibernate-core:4.2.9.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.9.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.9.Final/hibernate-release-4.2.9.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1185,20 +1270,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.8.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.8.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-12-04</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-12-04</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.8.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.8.Final%7C">
                         org.hibernate:hibernate-core:4.2.8.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.8.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.8.Final/hibernate-release-4.2.8.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1216,20 +1307,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.7.SP1
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.7.SP1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-10-23</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-10-23</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.7.SP1~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.7.SP1%7C">
                         org.hibernate:hibernate-core:4.2.7.SP1
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.7.SP1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.7.SP1/hibernate-release-4.2.7.SP1.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1247,20 +1344,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.7.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.7.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-10-23</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-10-23</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.7.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.7.Final%7C">
                         org.hibernate:hibernate-core:4.2.7.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.7.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.7.Final/hibernate-release-4.2.7.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1278,20 +1381,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.6.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.6.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-09-25</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-09-25</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.6.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.6.Final%7C">
                         org.hibernate:hibernate-core:4.2.6.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.6.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.6.Final/hibernate-release-4.2.6.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1309,20 +1418,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.5.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.5.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-08-28</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-08-28</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.5.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.5.Final%7C">
                         org.hibernate:hibernate-core:4.2.5.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.5.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.5.Final/hibernate-release-4.2.5.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1340,20 +1455,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.4.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.4.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-08-08</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-08-08</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.4.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.4.Final%7C">
                         org.hibernate:hibernate-core:4.2.4.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.4.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.4.Final/hibernate-release-4.2.4.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1371,20 +1492,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.3.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.3.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-07-03</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-07-03</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.3.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.3.Final%7C">
                         org.hibernate:hibernate-core:4.2.3.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.3.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.3.Final/hibernate-release-4.2.3.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1402,20 +1529,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.2.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.2.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-05-22</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-05-22</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.2.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.2.Final%7C">
                         org.hibernate:hibernate-core:4.2.2.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.2.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.2.Final/hibernate-release-4.2.2.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1433,20 +1566,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.1.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.1.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-04-25</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-04-25</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.1.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.1.Final%7C">
                         org.hibernate:hibernate-core:4.2.1.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.1.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.1.Final/hibernate-release-4.2.1.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1464,20 +1603,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="green label ui version">
-                      4.2.0.Final
-                    </span>
+                    <p>
+                      <span class="green label ui version">
+                        4.2.0.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-03-18</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-03-18</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.0.Final~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.0.Final%7C">
                         org.hibernate:hibernate-core:4.2.0.Final
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.0.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.0.Final/hibernate-release-4.2.0.Final.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1495,20 +1640,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      4.2.0.CR2
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        4.2.0.CR2
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-03-02</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-03-02</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.0.CR2~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.0.CR2%7C">
                         org.hibernate:hibernate-core:4.2.0.CR2
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.0.CR2">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.0.CR2/hibernate-release-4.2.0.CR2.zip/download">
                         <i class="icon cloud download"></i>
                         Download
@@ -1526,20 +1677,26 @@
                 </div>
                 <div class="ui row">
                   <div class="three wide column">
-                    <span class="label orange ui version">
-                      4.2.0.CR1
-                    </span>
+                    <p>
+                      <span class="label orange ui version">
+                        4.2.0.CR1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2013-02-01</small>
+                    </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      <small>2013-02-01</small>
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://repository.jboss.org/nexus/index.html#nexus-search;gav~org.hibernate~hibernate-core~4.2.0.CR1~~">
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-core%7C4.2.0.CR1%7C">
                         org.hibernate:hibernate-core:4.2.0.CR1
                       </a>
                     </p>
                     <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A4.2.0.CR1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
                       <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/4.2.0.CR1/hibernate-release-4.2.0.CR1.zip/download">
                         <i class="icon cloud download"></i>
                         Download

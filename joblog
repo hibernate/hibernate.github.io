@@ -76,7 +76,8 @@ Cache hit: org.hibernate:hibernate-search-parent:3.4.0.Final
   #initalize
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/0.Final/hibernate-core-0.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/0.Final/hibernate-core-0.Final.pom
-Release POM org.hibernate:hibernate-core:0.Final not locally cached and unable to retrieve it either from Central or from JBoss Nexus
+Downloading: https://dl.bintray.com/hibernate/artifacts/org/hibernate/hibernate-core/0.Final/hibernate-core-0.Final.pom
+Release POM org.hibernate:hibernate-core:0.Final not locally cached and unable to retrieve it from Central, from JBoss Nexus or from Bintray
 404 Not Found
  /usr/share/ruby/open-uri.rb:363:in `open_http'
  /usr/share/ruby/open-uri.rb:741:in `buffer_open'
@@ -86,10 +87,11 @@ Release POM org.hibernate:hibernate-core:0.Final not locally cached and unable t
  /usr/share/ruby/open-uri.rb:151:in `open_uri'
  /usr/share/ruby/open-uri.rb:721:in `open'
  /usr/share/ruby/open-uri.rb:35:in `open'
- /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:349:in `download_pom'
- /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:329:in `rescue in create_doc'
- /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:323:in `create_doc'
- /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:283:in `initialize'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:356:in `download_pom'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:335:in `rescue in rescue in create_doc'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:330:in `rescue in create_doc'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:325:in `create_doc'
+ /mnt/jenkins-workdir/workspace/www.hibernate.org/_ext/release_file_parser.rb:285:in `initialize'
  /mnt/jenkins-workdir/workspace/www.hibernate.org/_spec/release_dependencies_spec.rb:37:in `new'
  /mnt/jenkins-workdir/workspace/www.hibernate.org/_spec/release_dependencies_spec.rb:37:in `block (4 levels) in <top (required)>'
  /home/jenkins/.gem/ruby/2.4.0/gems/rspec-expectations-3.7.0/lib/rspec/matchers/built_in/raise_error.rb:52:in `matches?'
@@ -172,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.86879 seconds (files took 0.53199 seconds to load)
+Finished in 0.95533 seconds (files took 0.4978 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -192,7 +194,6 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-og
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.1.0.Final/hibernate-ogm-core-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.1.0.Final/hibernate-ogm-parent-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.3.0.Beta1/hibernate-core-5.3.0.Beta1.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.12.Final/hibernate-core-5.1.12.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.7.Final/hibernate-validator-6.0.7.Final.pom
