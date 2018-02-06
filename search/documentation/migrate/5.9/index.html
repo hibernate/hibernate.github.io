@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Roadmap - Hibernate Validator</title>
+    <title>Migration Guide from Hibernate Search 5.8 to 5.9 - Hibernate Search</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
-    <meta content="Hardy Ferentschik" name="author">
+    <meta content="Sanne Grinovero, Yoann Rodière" name="author">
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
@@ -108,12 +108,12 @@
           </div>
         </div>
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="grid icon search"></i>
             <i class="dropdown icon"></i>
             <strong>Search</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/search/">
                 <i class="grid home icon"></i>
@@ -123,7 +123,7 @@
                 <i class="grid icon tags"></i>
                 Releases
               </a>
-              <a class="item" href="/search/documentation/">
+              <a class="active item" href="/search/documentation/">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
@@ -177,12 +177,12 @@
           </div>
         </div>
         <div class="item">
-          <a class="active title">
+          <a class="title">
             <i class="box checkmark grid icon"></i>
             <i class="dropdown icon"></i>
             <strong>Validator</strong>
           </a>
-          <div class="active content">
+          <div class="content">
             <div class="menu internal-links">
               <a class="item" href="/validator/">
                 <i class="grid home icon"></i>
@@ -196,7 +196,7 @@
                 <i class="book grid icon"></i>
                 Documentation
               </a>
-              <a class="active item" href="/validator/roadmap/">
+              <a class="item" href="/validator/roadmap/">
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
@@ -434,8 +434,8 @@
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
           <a class="item" href="/orm/">ORM</a>
-          <a class="item" href="/search/">Search</a>
-          <a class="active item" href="/validator/">Validator</a>
+          <a class="active item" href="/search/">Search</a>
+          <a class="item" href="/validator/">Validator</a>
           <a class="item" href="/ogm/">OGM</a>
           <a class="item" href="/tools/">Tools</a>
           <a class="item" href="/others/">Others</a>
@@ -452,8 +452,9 @@
       </div>
       <script>
         var displayed_series = [];
-        displayed_series.push('6.0');
-        displayed_series.push('5.4');
+        displayed_series.push('5.9');
+        displayed_series.push('5.8');
+        displayed_series.push('5.6');
       </script>
       <div class="jumbotron small">
         <div class="ui container">
@@ -462,12 +463,12 @@
               <div class="column twelve wide middle aligned">
                 <h1>
                   <span>
-                    Hibernate Validator
+                    Hibernate Search
                   </span>
                 </h1>
                 <h2>
                   <span>
-                    Roadmap
+                    Migration Guide from Hibernate Search 5.8 to 5.9
                   </span>
                 </h2>
               </div>
@@ -483,7 +484,7 @@
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
             <div class="ui fluid vertical menu">
-              <a class="item" href="..">
+              <a class="item" href="../../..">
                 <i class="grid home icon"></i>
                 About
               </a>
@@ -491,50 +492,55 @@
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="../releases">
+                  <a class="item" href="../../../releases">
                     Overview
                   </a>
-                  <a class="item" href="../releases/6.0">
-                    6.0
+                  <a class="item" href="../../../releases/5.9">
+                    5.9
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="../../../releases/5.8">
+                    5.8
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="../releases/5.4">
-                    5.4
+                  <a class="item" href="../../../releases/5.6">
+                    5.6
                   </a>
                 </div>
               </div>
-              <a class="item" href="../documentation">
+              <a class="item selected" href="../..">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
-              <a class="item selected" href=".">
+              <a class="item" href="../../../roadmap">
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
-              <a class="item" href="../contribute">
+              <a class="item" href="../../../contribute">
                 <i class="grid icon users"></i>
                 Contribute
               </a>
-              <a class="item" href="../tooling">
+              <a class="item" href="../../../tooling">
                 <i class="grid icon wrench"></i>
                 Tooling
               </a>
-              <a class="item" href="../support">
+              <a class="item" href="../../../support">
                 <i class="doctor grid icon"></i>
                 Paid support
               </a>
-              <a class="item" href="../faq">
+              <a class="item" href="../../../faq">
                 <i class="circle grid help icon"></i>
                 FAQ
               </a>
             </div>
             <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-validator">
+              <a class="item" href="https://github.com/hibernate/hibernate-search">
                 <i class="code grid icon"></i>
                 Source code
               </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HV">
+              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
                 <i class="bug grid icon"></i>
                 Issue tracker
               </a>
@@ -542,15 +548,15 @@
                 <i class="grid icon lock"></i>
                 Security issue
               </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+              <a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
                 <i class="comments grid icon"></i>
                 Forum
               </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate/validator">
+              <a class="item" href="https://community.jboss.org/en/hibernate/search">
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="https://hibernate-validator.ci.cloudbees.com/">
+              <a class="item" href="http://ci.hibernate.org/job/hibernate-search-master/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -558,105 +564,92 @@
             <hr>
             <div class="license">
               Released under the
-              <a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
+              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
-              <div class="ui icon message">
-                <i class="icon hourglass half"></i>
-                <div class="content">
-                  <div class="header">
-                    Interested in our past releases?
-                  </div>
-                  <p>
-                    To learn more about what we introduced in our past releases, please consult the
-                    <a href="/validator/releases/">"What's new" section of a given series</a>
-                    .
-                  </p>
-                </div>
-              </div>
               <div id="preamble">
               <div class="sectionbody">
               <div class="paragraph">
-              <p>Hibernate Validator is community driven and as such the roadmap constantly evolves to reflect the
-              users needs and contributions.</p>
-              </div>
-              <div class="paragraph">
-              <p>You can find a fine grained roadmap in our <a href="https://hibernate.atlassian.net/browse/HV">issue tracker</a>,
-              but this page is a good starting point to see where we are going.</p>
+              <p>Here we are helping you migrate your existing Search application to the latest and greatest.</p>
               </div>
               </div>
               <div id="toc" class="toc">
-              <div id="toctitle">Releases</div>
+              <div id="toctitle">Content</div>
               <ul class="sectlevel1">
-              <li><a href="#hibernate-validator-6-0-x">Hibernate Validator 6.0.x</a></li>
-              <li><a href="#hibernate-validator-6-1">Hibernate Validator 6.1</a></li>
-              <li><a href="#future-versions">Future versions</a></li>
+              <li><a href="#upgrade-to-hibernate-search-5-9-x-from-5-8-x">Upgrade to Hibernate Search 5.9.x from 5.8.x</a>
+              <ul class="sectlevel2">
+              <li><a href="#requirements">Requirements</a></li>
+              <li><a href="#configuration-changes">Configuration changes</a></li>
+              <li><a href="#api-changes">API changes</a></li>
+              <li><a href="#spi-changes">SPI changes</a></li>
+              </ul>
+              </li>
               </ul>
               </div>
               </div>
               <div class="sect1">
-              <h2 id="hibernate-validator-6-0-x"><a class="anchor" href="#hibernate-validator-6-0-x"></a>Hibernate Validator 6.0.x</h2>
+              <h2 id="upgrade-to-hibernate-search-5-9-x-from-5-8-x"><a class="anchor" href="#upgrade-to-hibernate-search-5-9-x-from-5-8-x"></a>Upgrade to Hibernate Search 5.9.x from 5.8.x</h2>
               <div class="sectionbody">
-              <div class="dlist">
-              <dl>
-              <dt class="hdlist1">Engine</dt>
-              <dd>
-              <p>Explore message interpolators receiving several locales (<a href="https://hibernate.atlassian.net/browse/HV-1436">HV-1436</a>)<br>
-              Support custom field/getter selection strategy (<a href="https://hibernate.atlassian.net/browse/HV-1363">HV-1363</a>)<br>
-              Improve the performances and reduce the memory footprint</p>
-              </dd>
-              <dt class="hdlist1">Annotation processor improvements</dt>
-              <dd>
-              <p>Taking into account new places where constraint annotations can be placed (<a href="https://hibernate.atlassian.net/browse/HV-879">HV-879</a>)<br>
-              Taking into account XML configuration (<a href="https://hibernate.atlassian.net/browse/HV-308">HV-308</a>)</p>
-              </dd>
-              </dl>
+              <div class="paragraph">
+              <p>The aim of this guide is to assist you migrating an existing application using any version <code>5.8.x</code> of Hibernate Search to the latest of the <code>5.9.x</code> series.
+              If you&#8217;re looking to migrate different versions see <a href="/search/documentation/migrate">Hibernate Search migration guides</a>.</p>
+              </div>
+              <div class="admonitionblock note">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+              This document provides pointers for a migration.
+              It refers to Hibernate Search version <code>5.9.0.Final</code>. If you think something is missing or something does not work, please <a href="/community">contact us</a>.
+              </td>
+              </tr>
+              </table>
+              </div>
+              <div class="sect2">
+              <h3 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h3>
+              <div class="paragraph">
+              <p>The basic requirements didn&#8217;t change.</p>
               </div>
               </div>
-              </div>
-              <div class="sect1">
-              <h2 id="hibernate-validator-6-1"><a class="anchor" href="#hibernate-validator-6-1"></a>Hibernate Validator 6.1</h2>
-              <div class="sectionbody">
-              <div class="dlist">
-              <dl>
-              <dt class="hdlist1">Engine</dt>
-              <dd>
-              <p>Explore taking some distance from the reflection API (e.g. dealing with <code>Type</code> is rather confusing, replace some of the types with memory-friendly counterparts (<code>Method</code>?), do not rely on <code>TypeVariable</code>). Note that it might also help with the future usage of Jandex for annotation discovery.<br>
-              Provide an SPI for making the retrieval of bean properties more flexible, allowing to support models not following the JavaBeans conventions, e.g. types generated by <a href="http://immutables.io">Immutables</a> which will use <code>property()</code> instead of <code>getProperty()</code></p>
-              </dd>
-              <dt class="hdlist1">Remote API</dt>
-              <dd>
-              <p>Provide an HTTP endpoint which allows to validate single properties and also exposes constraint metadata via JSON (<a href="https://hibernate.atlassian.net/browse/HV-1500">HV-1500</a>). Web applications can integrate that endpoint to allow client-side validation of their models.</p>
-              </dd>
-              <dt class="hdlist1">Programmatic API</dt>
-              <dd>
-              <p>Be able to define constraint on properties using lambdas (ie without constraint annotations)</p>
-              </dd>
-              <dt class="hdlist1">Java 9</dt>
-              <dd>
-              <p>Usage of method handles for accessing bean states (<a href="https://hibernate.atlassian.net/browse/HV-1226">HV-1226</a>)<br>
-              Explore usage of <a href="http://download.java.net/java/jdk9/docs/api/java/util/spi/ResourceBundleProvider.html">ResourceBundleProvider</a> for obtaining validation error messages from other modules<br>
-              Providing Hibernate Validator with JDK 9 module descriptors</p>
-              </dd>
-              </dl>
+              <div class="sect2">
+              <h3 id="configuration-changes"><a class="anchor" href="#configuration-changes"></a>Configuration changes</h3>
+              <div class="paragraph">
+              <p>The configuration properties didn&#8217;t change.</p>
               </div>
               </div>
+              <div class="sect2">
+              <h3 id="api-changes"><a class="anchor" href="#api-changes"></a>API changes</h3>
+              <div class="paragraph">
+              <p>The APIs didn&#8217;t change.</p>
               </div>
-              <div class="sect1">
-              <h2 id="future-versions"><a class="anchor" href="#future-versions"></a>Future versions</h2>
-              <div class="sectionbody">
-              <div class="dlist">
-              <dl>
-              <dt class="hdlist1">Engine</dt>
-              <dd>
-              <p>Explore the ability to validate an object and a list of changes (<a href="https://hibernate.atlassian.net/browse/BVAL-214">BVAL-214</a>)<br>
-              Explore support for constraint ordering (<a href="http://beanvalidation.org/proposals/BVAL-248/">BVAL-248</a>)<br>
-              Explore support for other models than JavaBeans (<a href="https://hibernate.atlassian.net/browse/HV-1000">HV-1000</a>)<br>
-              Explore the usage of <a href="https://github.com/wildfly/jandex">Jandex</a> (a Java annotation indexer and offline reflection library) to build the metadata (<a href="https://hibernate.atlassian.net/browse/HV-644">HV-644</a>)</p>
-              </dd>
-              </dl>
+              <div class="paragraph">
+              <p>Note that new APIs were introduced as part of the <a href="/search/releases/5.9/#jsr352">JSR-352 integration</a>.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="spi-changes"><a class="anchor" href="#spi-changes"></a>SPI changes</h3>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p><code>org.hibernate.search.backend.impl.jms.AbstractJMSHibernateSearchController</code> is now deprecated.
+              implementors should extend <code>org.hibernate.search.backend.jms.spi.AbstractJMSHibernateSearchController</code> instead.</p>
+              </li>
+              <li>
+              <p>A new SPI, <code>org.hibernate.search.orm.spi.SearchIntegratorHelper</code>, allows to extract a <code>SearchIntegrator</code>
+              from a <code>SessionFactory</code>.
+              This should mainly be of use for implementors of <code>AbstractJMSHibernateSearchController</code>.</p>
+              </li>
+              <li>
+              <p><code>org.hibernate.search.elasticsearch.spi.DigestSelfSigningCapable</code> has been removed.
+              HTTP entities passed to the client now implement <code>writeTo(OutputStream)</code>,
+              which can be called to retrieve and process the content of the entity.</p>
+              </li>
+              </ul>
+              </div>
               </div>
               </div>
               </div>
@@ -675,12 +668,12 @@
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../search" title="Search">Hibernate Search</a>
-                <a class="item" href=".." title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../others" title="Other projects">Other projects</a>
+                <a class="item" href="../../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../.." title="Search">Hibernate Search</a>
+                <a class="item" href="../../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -694,7 +687,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -704,12 +697,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>
@@ -739,7 +732,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate Validator", "validator", true);
+        renderTabzilla("Hibernate Search", "search", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
