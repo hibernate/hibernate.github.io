@@ -1,4 +1,5 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
+Fetching gem metadata from https://rubygems.org/.......
 Using ansi 1.5.0
 Using asciidoctor 1.5.6.1
 Using ast 2.3.0
@@ -48,7 +49,8 @@ Using execjs 2.7.0
 Using htmlcompressor 0.4.0
 Using json 2.1.0
 Using libv8 3.16.14.19 (x86_64-linux)
-Using mini_portile2 2.3.0
+Fetching mini_portile2 2.3.0
+Installing mini_portile2 2.3.0
 Using nokogiri 1.8.1
 Using pry-byebug 3.5.1
 Using redcarpet 3.4.0
@@ -174,7 +176,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.92878 seconds (files took 0.54088 seconds to load)
+Finished in 2.91 seconds (files took 1.93 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -189,6 +191,8 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.9.0.Final/hibernate-search-parent-5.9.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Final/hibernate-ogm-core-5.2.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Final/hibernate-ogm-parent-5.2.0.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.3.0.CR1/hibernate-ogm-core-5.3.0.CR1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.3.0.CR1/hibernate-ogm-parent-5.3.0.CR1.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.1.0.Final/hibernate-ogm-core-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.1.0.Final/hibernate-ogm-parent-5.1.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.13.Final/hibernate-core-5.2.13.Final.pom

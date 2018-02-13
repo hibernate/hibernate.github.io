@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Contribute - Hibernate OGM</title>
+    <title>5.3 series - Hibernate OGM</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
-    <meta content="Emmanuel Bernard" name="author">
+    <meta content="" name="author">
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
@@ -257,7 +257,7 @@
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="item" href="/ogm/releases/">
+              <a class="active item" href="/ogm/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
@@ -269,7 +269,7 @@
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
-              <a class="active item" href="/ogm/contribute/">
+              <a class="item" href="/ogm/contribute/">
                 <i class="grid icon users"></i>
                 Contribute
               </a>
@@ -468,76 +468,72 @@
                 </h1>
                 <h2>
                   <span>
-                    Contribute
+                    5.3 series
                   </span>
+                  <span class="label orange tag ui">development</span>
                 </h2>
               </div>
               <div class="column four wide middle aligned">
-                <div class="jumbotron-button">
-                  <a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-ogm/">
-                    <i class="github icon"></i>
-                    Project on GitHub
-                  </a>
-                </div>
-                <div class="jumbotron-button">
-                  <a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/OGM">
-                    <i class="bug icon"></i>
-                    Issue tracker
-                  </a>
-                </div>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+      <div class="page-title small">
+        <div class="ui container">
+          <h4>
+            Upgrade to Hibernate ORM 5.2 and Hibernate Search 5.9
+          </h4>
+        </div>
+      </div>
       <div class="ui container page-content">
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
             <div class="ui fluid vertical menu">
-              <a class="item" href="..">
+              <a class="item" href="../..">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <div class="dropdown item link ui">
+              <div class="dropdown item link selected ui">
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="../releases">
+                  <a class="item" href="..">
                     Overview
                   </a>
-                  <a class="item" href="../releases/5.3">
+                  <a class="item selected" href=".">
                     5.3
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
                   </a>
-                  <a class="item" href="../releases/5.2">
+                  <a class="item" href="../5.2">
                     5.2
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="../releases/5.1">
+                  <a class="item" href="../5.1">
                     5.1
                   </a>
                 </div>
               </div>
-              <a class="item" href="../documentation">
+              <a class="item" href="../../documentation">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
-              <a class="item" href="../roadmap">
+              <a class="item" href="../../roadmap">
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
-              <a class="item selected" href=".">
+              <a class="item" href="../../contribute">
                 <i class="grid icon users"></i>
                 Contribute
               </a>
-              <a class="item" href="../support">
+              <a class="item" href="../../support">
                 <i class="doctor grid icon"></i>
                 Paid support
               </a>
-              <a class="item" href="../faq">
+              <a class="item" href="../../faq">
                 <i class="circle grid help icon"></i>
                 FAQ
               </a>
@@ -576,395 +572,282 @@
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
-              <div id="preamble">
-              <div class="sectionbody">
-              <div id="ogm-howtocontribute" class="paragraph">
-              <p>Hibernate OGM is a young project.
-              The code, the direction and the documentation are all in flux
-              and being built by the community.
-              Join and help us shape it!</p>
+              <div id="toc">
+                <div id="toctitle">
+                  Quick links
+                </div>
+                <ul>
+                  <li>
+                    <a class="item" href="#compatibility">
+                      Compatibility
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#documentation">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#get-it">
+                      How to get it
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#whats-new">
+                      What's new
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#migrate">
+                      Migrate
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#releases">
+                      Releases in this series
+                    </a>
+                  </li>
+                </ul>
               </div>
-              </div>
-              <div id="toc" class="toc">
-              <div id="toctitle">Table of Contents</div>
-              <ul class="sectlevel1">
-              <li><a href="#ogm-howtocontribute-help">How to get help</a></li>
-              <li><a href="#ogm-howtocontribute-contribute">How to contribute</a>
-              <ul class="sectlevel2">
-              <li><a href="#how-to-build-hibernate-ogm">How to build Hibernate OGM</a>
-              <ul class="sectlevel3">
-              <li><a href="#integration-tests">Integration tests</a></li>
-              <li><a href="#documentation">Documentation</a></li>
-              <li><a href="#distribution">Distribution</a></li>
-              </ul>
-              </li>
-              <li><a href="#how-are-the-tests-structured">How are the tests structured?</a>
-              <ul class="sectlevel3">
-              <li><a href="#core-tests">Core tests</a></li>
-              <li><a href="#tests-specific-to-a-dialect">Tests specific to a dialect</a></li>
-              </ul>
-              </li>
-              <li><a href="#code-organization">Code organization</a></li>
-              <li><a href="#how-to-contribute-code-effectively">How to contribute code effectively</a></li>
-              </ul>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="ogm-howtocontribute-help"><a class="anchor" href="#ogm-howtocontribute-help"></a>How to get help</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>First of all, make sure to read this reference documentation.
-              This is the most comprehensive formal source of information.
-              Of course, it is not perfect:
-              feel free to come and ask for help,
-              comment or propose improvements in our
-              <a href="https://discourse.hibernate.org/c/hibernate-ogm">Hibernate OGM forum</a>.</p>
-              </div>
-              <div class="paragraph">
-              <p>You can also:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>open bug reports in <a href="https://hibernate.atlassian.net/browse/OGM">JIRA</a></p>
-              </li>
-              <li>
-              <p>propose improvements on the
-              <a href="http://www.hibernate.org/community/mailinglists">development mailing list</a></p>
-              </li>
-              <li>
-              <p>join us on IRC to discuss developments and improvements
-              (#hibernate-dev on freenode.net;
-              you need to be registered on freenode:
-              the room does not accept "anonymous" users).</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="ogm-howtocontribute-contribute"><a class="anchor" href="#ogm-howtocontribute-contribute"></a>How to contribute</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Welcome!</p>
-              </div>
-              <div class="paragraph">
-              <p>There are many ways to contribute:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>report bugs in <a href="https://hibernate.atlassian.net/browse/OGM">JIRA</a></p>
-              </li>
-              <li>
-              <p>give feedback in the forum, IRC or the development mailing list</p>
-              </li>
-              <li>
-              <p>improve the documentation</p>
-              </li>
-              <li>
-              <p>fix bugs or contribute new features</p>
-              </li>
-              <li>
-              <p>propose and code a datastore dialect for your favorite NoSQL engine</p>
-              </li>
-              </ul>
-              </div>
-              <div class="paragraph">
-              <p>Hibernate OGM&#8217;s code is available on GitHub at
-              <a href="https://github.com/hibernate/hibernate-ogm" class="bare">https://github.com/hibernate/hibernate-ogm</a>.</p>
-              </div>
-              <div class="sect2">
-              <h3 id="how-to-build-hibernate-ogm"><a class="anchor" href="#how-to-build-hibernate-ogm"></a>How to build Hibernate OGM</h3>
-              <div class="paragraph">
-              <p>Hibernate OGM uses Git and Maven 3,
-              make sure to have both installed on your system.</p>
-              </div>
-              <div class="paragraph">
-              <p>Clone the git repository from GitHub:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>git clone https://github.com/hibernate/hibernate-ogm&#x000A;cd hibernate-ogm</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>Run maven</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml</code></pre>
-              </div>
-              </div>
-              <div class="admonitionblock note">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-note" title="Note"></i>
-              </td>
-              <td class="content">
-              <div class="paragraph">
-              <p>Note that Hibernate OGM uses artifacts from the Maven repository hosted by JBoss.
-              Make sure to either use the <span class="code">-s settings-example.xml</span> option
-              or adjust your <span class="filename">~/.m2/settings.xml</span>
-              according to the descriptions available
-              <a href="http://community.jboss.org/wiki/MavenGettingStarted-Users">on this jboss.org wiki page</a>.</p>
-              </div>
-              </td>
-              </tr>
+              <h2 id="compatibility">Compatibility</h2>
+              <table class="ui collapsing table striped celled unstackable">
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+                      Java
+                    </a>
+                  </td>
+                  <td>
+                    8+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
+                      JPA
+                    </a>
+                  </td>
+                  <td>
+                    2.1
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="/orm/">
+                      Hibernate ORM
+                    </a>
+                  </td>
+                  <td>
+                    5.2
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="/search/">
+                      Hibernate Search
+                    </a>
+                  </td>
+                  <td>
+                    5.9
+                  </td>
+                </tr>
               </table>
+              <p>
+                Not compatible with your requirements? Have a look at the
+                <a href="../">
+                  other series.
+                </a>
+              </p>
+              <h2 id="documentation">Documentation</h2>
+              <p>
+                Documentation for this specific series can be accessed through the links below:
+              </p>
+              <p>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/ogm/5.3/reference/en-US/html_single/">
+                  <i class="icon file text outline"></i>
+                  HTML
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/ogm/5.3/reference/en-US/pdf/hibernate_ogm_reference.pdf">
+                  <i class="icon file pdf outline"></i>
+                  PDF
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/ogm/5.3/api/">
+                  <i class="icon code outline"></i>
+                  API (JavaDoc)
+                </a>
+              </p>
+              <p>
+                You can find more documentation for all series on the
+                <a href="../../documentation">
+                  documentation page.
+                </a>
+              </p>
+              <h2 id="get-it">How to get it</h2>
+              <div class="ui grid equal height stackable download-options">
+                <div class="eleven wide column">
+                  <h3>Maven, Gradle...</h3>
+                  <p>
+                    Maven artifacts of Hibernate OGM are published to
+                    <a href="https://search.maven.org">
+                      Maven Central
+                    </a>
+                    and to the
+                    <a href="https://repository.jboss.org/nexus/index.html">
+                      JBoss Maven repository.
+                    </a>
+                    Refer to the
+                    <a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+                    on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+                  </p>
+                  <p>
+                    You can find the Maven coordinates of all artifacts through the link below:
+                    <p>
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.3.0.CR1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                    </p>
+                  </p>
+                  <p>
+                    Below are the Maven coordinates of the main artifacts.
+                  </p>
+                  <dl class="sparse">
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-infinispan-embedded%7C5.3.0.CR1%7C">
+                        org.hibernate.ogm:hibernate-ogm-infinispan-embedded:5.3.0.CR1
+                      </a>
+                    </dt>
+                    <dd>Infinispan integration (embedded)</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-infinispan-remote%7C5.3.0.CR1%7C">
+                        org.hibernate.ogm:hibernate-ogm-infinispan-remote:5.3.0.CR1
+                      </a>
+                    </dt>
+                    <dd>Infinispan integration (remote)</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-mongodb%7C5.3.0.CR1%7C">
+                        org.hibernate.ogm:hibernate-ogm-mongodb:5.3.0.CR1
+                      </a>
+                    </dt>
+                    <dd>MongoDB integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-neo4j%7C5.3.0.CR1%7C">
+                        org.hibernate.ogm:hibernate-ogm-neo4j:5.3.0.CR1
+                      </a>
+                    </dt>
+                    <dd>Neo4j integration</dd>
+                  </dl>
+                </div>
+                <div class="five wide column divided">
+                  <h3>Zip archive</h3>
+                  <p>
+                    Direct download is available from SourceForge:
+                  </p>
+                  <p>
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.3.0.CR1/hibernate-ogm-5.3.0.CR1-dist.zip/download" title="Download">
+                      <i class="icon cloud download"></i>
+                      Download Zip archive
+                    </a>
+                  </p>
+                </div>
               </div>
-              <div class="admonitionblock note">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-note" title="Note"></i>
-              </td>
-              <td class="content">
-              <div class="paragraph">
-              <p>Note that for running the test suite against separately installed MongoDB and CouchDB servers
-              their host name must be specified via an environment variable.
-              See the sections below for the details.</p>
-              </div>
-              </td>
-              </tr>
-              </table>
-              </div>
-              <div class="paragraph">
-              <p>To speed things up, there are several options for skipping parts of the build.
-              To run the minimum project build without integration tests, documentation and distribution execute:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -DskipITs -DskipDocs -DskipDistro -s settings-example.xml</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>The following sections describe these options in more detail.</p>
-              </div>
-              <div class="sect3">
-              <h4 id="integration-tests"><a class="anchor" href="#integration-tests"></a>Integration tests</h4>
-              <div class="paragraph">
-              <p>Integration tests per default download the WildFly application server,
-              unpack the modules in it and run the tests using Arquillian.
-              You can skip integration tests by specifying the <code>skipITs</code> property:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -DskipITs -s settings-example.xml</code></pre>
-              </div>
-              </div>
-              <div class="sect4">
-              <h5 id="mongodb"><a class="anchor" href="#mongodb"></a>MongoDB</h5>
-              <div class="paragraph">
-              <p>For executing the tests in the <em>mongodb</em> and <em>integrationtest/mongodb</em> modules, the
-              <a href="https://github.com/joelittlejohn/embedmongo-maven-plugin">embedmongo-maven-plugin</a> is used.
-              It downloads the MongoDB distribution, extracts it, starts a <em>mongod</em> process and shuts it down
-              after test execution.</p>
-              </div>
-              <div class="paragraph">
-              <p>If required, you can configure the port to which the MongoDB instance binds to (by default 27018)
-              and the target directory for the extracted binary (defaults to
-              <em>${project.build.directory}/embeddedMongoDb/extracted</em>) like this:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml -DembeddedMongoDbTempDir=&lt;my-temp-dir&gt; -DembeddedMongoDbPort=&lt;my-port&gt;</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>To work with a separately installed MongoDB instance instead, specify the <code>useExternalMongoDb</code> property:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -s settings-example.xml -DuseExternalMongoDb</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>This assumes MongoDB to be installed on <code>localhost</code>, using the default port and no authentication.
-              If you work with different settings, configure the required properties in hibernate.properties
-              (for the tests in <em>mongodb</em>)
-              and/or the environment variables <code>MONGODB_HOSTNAME</code> <code>MONGODB_PORT</code> <code>MONGODB_USERNAME</code>
-              <code>MONGODB_PASSWORD</code> (for the tests in <em>integrationtest/mongodb</em>)
-              prior to running the tests:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>export MONGODB_HOSTNAME=mongodb-machine&#x000A;export MONGODB_PORT=1234&#x000A;export MONGODB_USERNAME=someUsername&#x000A;export MONGODB_PASSWORD=someP@ssw0rd&#x000A;mvn clean install -s settings-example.xml</code></pre>
-              </div>
-              </div>
-              </div>
-              <div class="sect4">
-              <h5 id="couchdb"><a class="anchor" href="#couchdb"></a>CouchDB</h5>
-              <div class="paragraph">
-              <p>For running the tests in the <em>couchdb</em> module an installed CouchDB server is required.
-              Specify its host name by setting the environment variable <code>COUCHDB_HOSTNAME</code> prior to running
-              the test suite:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>export COUCHDB_HOSTNAME=couchdb-machine</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>If this variable is not set, the <em>couchdb</em> module still will be compiled and packaged but the
-              tests will be skipped.</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="documentation"><a class="anchor" href="#documentation"></a>Documentation</h4>
-              <div class="paragraph">
-              <p>The documentation is built by default as part of the project build. You can skip it by specifying
-              the <code>skipDocs</code> property:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -DskipDocs -s settings-example.xml</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>If you just want to build the documentation, run it from the <em>documentation/manual</em> subdirectory.</p>
-              </div>
-              <div class="paragraph">
-              <p>For rapid documentation testing, you can limit the generated format to html to speed up the process</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -f documentation/manual/pom.xml -s settings-example.xml -Djdocbook.format=html_single</code></pre>
-              </div>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="distribution"><a class="anchor" href="#distribution"></a>Distribution</h4>
-              <div class="paragraph">
-              <p>The distribution bundle is built by default as part of the project build. You can skip it by
-              specifying the <code>skipDistro</code> property:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install -DskipDistro -s settings-example.xml</code></pre>
-              </div>
-              </div>
-              <div class="admonitionblock tip">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-tip" title="Tip"></i>
-              </td>
-              <td class="content">
-              <div class="paragraph">
-              <p>Make sure to check the <a href="https://github.com/hibernate/hibernate-ogm/blob/master/readme.md">readme.md</a>
-              in the source root directory for further build options.</p>
-              </div>
-              </td>
-              </tr>
-              </table>
-              </div>
-              </div>
-              </div>
+              <p>
+                More information about specific releases (announcements, download links) can be found
+                <a href="#releases">
+                  here.
+                </a>
+              </p>
+              <h2 id="whats-new">What's new</h2>
+              <p>
+                Latest release announcement (2018-02-13):
+                <a href="http://in.relation.to/2018/02/13/hibernate-ogm-5-3-CR1-released/">
+                  5.3.0.CR1.
+                </a>
+              </p>
+              <p>
+                A detailed list of new features, improvements and fixes in this series can be found
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.3.0.CR1)%20ORDER%20BY%20updated">
+                  on our JIRA instance.
+                </a>
+              </p>
               <div class="sect2">
-              <h3 id="how-are-the-tests-structured"><a class="anchor" href="#how-are-the-tests-structured"></a>How are the tests structured?</h3>
+              <h3 id="core"><a class="anchor" href="#core"></a>Core</h3>
               <div class="sect3">
-              <h4 id="core-tests"><a class="anchor" href="#core-tests"></a>Core tests</h4>
-              <div class="paragraph">
-              <p>There are two types of tests in core:</p>
-              </div>
-              <div class="olist arabic">
-              <ol class="arabic">
-              <li>
-              <p>Unit tests for stuff in core itself</p>
-              </li>
-              <li>
-              <p>And the "backendtck" which are high-level (i.e. Session/EM-level) tests and which are executed
-              for all backends. This is our backend TCK.</p>
-              </li>
-              </ol>
-              </div>
-              <div class="paragraph">
-              <p>To run a specific test against a specific store in Eclipse, simplest is to use the
-              <code>&lt;StoreName&gt;BackendTckHelper</code> class to run the test.</p>
-              </div>
-              <div class="paragraph">
-              <p>For instance, if you want to run the <code>BuiltInTypeTest</code> test for Neo4j, open the <code>Neo4JBackendTckHelper</code>
-              class in your IDE and make the <code>@ClasspathSuite.ClassnameFilters</code> annotation look like:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>@ClasspathSuite.ClassnameFilters({ ".*BuiltInTypeTest" })</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>Then simply run <code>Neo4JBackendTckHelper</code> as a JUnit test in your IDE.</p>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="tests-specific-to-a-dialect"><a class="anchor" href="#tests-specific-to-a-dialect"></a>Tests specific to a dialect</h4>
-              <div class="paragraph">
-              <p>As for the unit tests specific to a dialect, you can just run the test as a JUnit test in your IDE.</p>
-              </div>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="code-organization"><a class="anchor" href="#code-organization"></a>Code organization</h3>
-              <div class="paragraph">
-              <p>Packages are organized with the SPI/impl split at the lowest level.
-              SPI is geared towards grid dialect implementors.
-              The split is not complete yet, as some parts of "our" dialects refer to "impl" classes from core.
-              Anything not "spi" or "impl" is public API.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="how-to-contribute-code-effectively"><a class="anchor" href="#how-to-contribute-code-effectively"></a>How to contribute code effectively</h3>
-              <div class="paragraph">
-              <p>The best way to share code is to fork the Hibernate OGM repository on GitHub,
-              create a branch and open a pull request when you are ready.
-              Make sure to rebase your pull request
-              on the latest version of the master branch before offering it.</p>
-              </div>
-              <div class="paragraph">
-              <p>Here are a couple of approaches the team follows:</p>
-              </div>
+              <h4 id="components-upgrade"><a class="anchor" href="#components-upgrade"></a>Components upgrade</h4>
               <div class="ulist">
               <ul>
               <li>
-              <p>We do small independent commits for each code change.
-              In particular, we do not mix stylistic code changes (import, typos, etc)
-              and new features in the same commit.</p>
+              <p>Upgrade to ORM 5.2</p>
               </li>
               <li>
-              <p>Commit messages follow this convention:
-              the JIRA issue number, a short commit summary, an empty line,
-              a longer description if needed.
-              Make sure to limit line length to 80 characters, even at this day and age
-              it makes for more readable commit comments.</p>
+              <p>Upgrade to Hibernate Search 5.9</p>
               </li>
               </ul>
               </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre>OGM-123 Summary of commit operation&#x000A;&#x000A;Optional details on the commit&#x000A;and a longer description can be&#x000A;added here.</pre>
               </div>
-              </div>
+              <div class="sect3">
+              <h4 id="infinispan"><a class="anchor" href="#infinispan"></a>Infinispan</h4>
               <div class="ulist">
               <ul>
               <li>
-              <p>A pull request can contain several commits but should be self contained:
-              include the implementation, its unit tests, its documentation
-              and javadoc changes if needed.</p>
+              <p>The Infinispan Clustered Counters, used for sequence generation, are now created at startup</p>
               </li>
               <li>
-              <p>All commits are proposed via pull requests
-              and reviewed by another member of the team
-              before being pushed to the reference repository.
-              That&#8217;s right, we never commit directly upstream without code review.</p>
+              <p>When these are used for id generation their names now also contain the table name and not only the column name</p>
               </li>
               </ul>
               </div>
               </div>
               </div>
+              <h2 id="migrate">Migrate</h2>
+              <p>
+                If you need to upgrade from a previous series, please refer to the
+                <a href="https://developer.jboss.org/wiki/HibernateOGMMigrationNotes">
+                  migration guide.
+                </a>
+              </p>
+              <h2 id="releases">Releases in this series</h2>
+              <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <p>
+                      <span class="label orange ui version">
+                        5.3.0.CR1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2018-02-13</small>
+                    </p>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      Upgrade to Hibernate ORM 5.2 and Hibernate Search 5.9
+                    </p>
+                    <p>
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-core%7C5.3.0.CR1%7C">
+                        org.hibernate.ogm:hibernate-ogm-core:5.3.0.CR1
+                      </a>
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.3.0.CR1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.3.0.CR1/hibernate-ogm-5.3.0.CR1-dist.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.3.0.CR1)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/02/13/hibernate-ogm-5-3-CR1-released/">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -981,12 +864,12 @@
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../search" title="Search">Hibernate Search</a>
-                <a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href=".." title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../others" title="Other projects">Other projects</a>
+                <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../.." title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -1000,7 +883,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -1010,12 +893,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>
