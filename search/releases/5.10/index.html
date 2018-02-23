@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Contributors to Hibernate Validator - Hibernate</title>
+    <title>5.10 series - Hibernate Search</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1519376495" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1519376497" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -108,18 +108,18 @@
           </div>
         </div>
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="grid icon search"></i>
             <i class="dropdown icon"></i>
             <strong>Search</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/search/">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="item" href="/search/releases/">
+              <a class="active item" href="/search/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
@@ -355,12 +355,12 @@
           Others
         </a>
         <div class="item">
-          <a class="active title">
+          <a class="title">
             <i class="grid icon users"></i>
             <i class="dropdown icon"></i>
             <strong>Community</strong>
           </a>
-          <div class="active content">
+          <div class="content">
             <div class="menu external-links">
               <a class="item" href="/community/">
                 <i class="grid icon users"></i>
@@ -374,7 +374,7 @@
                 <i class="grid icon search"></i>
                 Contributors to Search
               </a>
-              <a class="active item" href="/community/contributors/validator/">
+              <a class="item" href="/community/contributors/validator/">
                 <i class="grid icon checkmark box"></i>
                 Contributors to Validator
               </a>
@@ -434,7 +434,7 @@
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
           <a class="item" href="/orm/">ORM</a>
-          <a class="item" href="/search/">Search</a>
+          <a class="active item" href="/search/">Search</a>
           <a class="item" href="/validator/">Validator</a>
           <a class="item" href="/ogm/">OGM</a>
           <a class="item" href="/tools/">Tools</a>
@@ -442,7 +442,7 @@
           <div class="right menu">
             <a class="item" href="http://in.relation.to/">Blog</a>
             <a class="item" href="https://discourse.hibernate.org/">Forums</a>
-            <a class="active item" href="/community/">Community</a>
+            <a class="item" href="/community/">Community</a>
             <a class="item" href="https://twitter.com/hibernate/">
               <i class="twitter icon"></i>
               Follow us
@@ -450,120 +450,434 @@
           </div>
         </div>
       </div>
-      <div class="ui container-fluid">
-        <div class="jumbotron small">
-          <div class="ui container">
-            <div class="ui grid stackable">
-              <div class="column row">
-                <div class="column twelve wide">
-                  <h1>
-                    <span>Community</span>
-                  </h1>
-                  <h2>
-                    <span>Contributors to Hibernate Validator</span>
-                  </h2>
-                </div>
-                <div class="column four wide">
-                  <div class="jumbotron-button">
-                    <a class="ui small labeled icon button" href="https://github.com/hibernate/">
-                      <i class="github icon"></i>
-                      Our GitHub organization
-                    </a>
-                  </div>
-                  <div class="jumbotron-button">
-                    <a class="ui small labeled icon button" href="https://hibernate.atlassian.net/">
-                      <i class="bug icon"></i>
-                      Our issue tracker
-                    </a>
-                  </div>
-                </div>
+      <script>
+        var displayed_series = [];
+        displayed_series.push('5.10');
+        displayed_series.push('5.9');
+        displayed_series.push('5.6');
+      </script>
+      <div class="jumbotron small">
+        <div class="ui container">
+          <div class="ui grid stackable">
+            <div class="column row">
+              <div class="column twelve wide middle aligned">
+                <h1>
+                  <span>
+                    Hibernate Search
+                  </span>
+                </h1>
+                <h2>
+                  <span>
+                    5.10 series
+                  </span>
+                  <span class="label orange tag ui">development</span>
+                </h2>
+              </div>
+              <div class="column four wide middle aligned">
+                
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="page-title small">
+        <div class="ui container">
+          <h4>
+            ORM 5.3 and JPA 2.2 compatibility
+          </h4>
+        </div>
+      </div>
       <div class="ui container page-content">
         <div class="ui stackable grid">
-          <div class="column three wide computer only">
+          <div class="column three wide computer only print hidden">
             <div class="ui fluid vertical menu">
               <a class="item" href="../..">
-                <i class="grid icon users"></i>
-                Community
+                <i class="grid home icon"></i>
+                About
               </a>
               <div class="dropdown item link selected ui">
-                Contributors
+                Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="/community/contributors/orm/">
-                    Hibernate ORM
+                  <a class="item" href="..">
+                    Overview
                   </a>
-                  <a class="item" href="/community/contributors/search/">
-                    Hibernate Search
+                  <a class="item selected" href=".">
+                    5.10
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
                   </a>
-                  <a class="item selected" href="/community/contributors/validator/">
-                    Hibernate Validator
+                  <a class="item" href="../5.9">
+                    5.9
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="/community/contributors/ogm/">
-                    Hibernate OGM
+                  <a class="item" href="../5.6">
+                    5.6
                   </a>
                 </div>
               </div>
-              <a class="item" href="../../corporate-contributors">
-                <i class="grid icon building outline"></i>
-                Corporate contributors
+              <a class="item" href="../../documentation">
+                <i class="book grid icon"></i>
+                Documentation
               </a>
-              <a class="item" href="../../license">
-                <i class="grid icon legal"></i>
-                Licenses
+              <a class="item" href="../../roadmap">
+                <i class="grid icon road"></i>
+                Roadmap
               </a>
+              <a class="item" href="../../contribute">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="../../tooling">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="../../support">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="../../faq">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="ui fluid vertical menu">
+              <a class="item" href="https://github.com/hibernate/hibernate-search">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate/search">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/job/hibernate-search-master/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+            <hr>
+            <div class="license">
+              Released under the
+              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
-              <div class="ui icon message">
-                <i class="icon users"></i>
-                <div class="content">
-                  Here is a list of the most active contributors to the Hibernate Validator project. Want the full list? Go to our
-                  <a href="https://github.com/hibernate/hibernate-validator/graphs/contributors">GitHub page</a>
-                  .
+              <div id="toc">
+                <div id="toctitle">
+                  Quick links
+                </div>
+                <ul>
+                  <li>
+                    <a class="item" href="#compatibility">
+                      Compatibility
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#documentation">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#get-it">
+                      How to get it
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#whats-new">
+                      What's new
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#releases">
+                      Releases in this series
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <h2 id="compatibility">Compatibility</h2>
+              <table class="ui collapsing table striped celled unstackable">
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+                      Java
+                    </a>
+                  </td>
+                  <td>
+                    8+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="/orm/">
+                      Hibernate ORM
+                    </a>
+                  </td>
+                  <td>
+                    5.3
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.elastic.co/products/elasticsearch">
+                      Elasticsearch
+                    </a>
+                  </td>
+                  <td>
+                    2.0 - 5.6
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://lucene.apache.org/core/">
+                      Apache Lucene
+                    </a>
+                  </td>
+                  <td>
+                    5.5
+                  </td>
+                </tr>
+              </table>
+              <p>
+                Not compatible with your requirements? Have a look at the
+                <a href="../">
+                  other series.
+                </a>
+              </p>
+              <h2 id="documentation">Documentation</h2>
+              <p>
+                Documentation for this specific series can be accessed through the links below:
+              </p>
+              <p>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.10/reference/en-US/html_single/">
+                  <i class="icon file text outline"></i>
+                  HTML
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.10/reference/en-US/pdf/hibernate_search_reference.pdf">
+                  <i class="icon file pdf outline"></i>
+                  PDF
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.10/api/">
+                  <i class="icon code outline"></i>
+                  API (JavaDoc)
+                </a>
+              </p>
+              <p>
+                You can find more documentation for all series on the
+                <a href="../../documentation">
+                  documentation page.
+                </a>
+              </p>
+              <h2 id="get-it">How to get it</h2>
+              <div class="ui grid equal height stackable download-options">
+                <div class="eleven wide column">
+                  <h3>Maven, Gradle...</h3>
+                  <p>
+                    Maven artifacts of Hibernate Search are published to
+                    <a href="https://search.maven.org">
+                      Maven Central
+                    </a>
+                    and to the
+                    <a href="https://repository.jboss.org/nexus/index.html">
+                      JBoss Maven repository.
+                    </a>
+                    Refer to the
+                    <a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+                    on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+                  </p>
+                  <p>
+                    You can find the Maven coordinates of all artifacts through the link below:
+                    <p>
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.10.0.Beta1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                    </p>
+                  </p>
+                  <p>
+                    Below are the Maven coordinates of the main artifacts.
+                  </p>
+                  <dl class="sparse">
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-orm:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>Hibernate ORM integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-elasticsearch:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>Elasticsearch integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch-aws%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-elasticsearch-aws:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>Amazon IAM authentication for Elasticsearch</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jgroups%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-backend-jgroups:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JGroups backend</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jms%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-backend-jms:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JMS backend</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-core%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-jsr352-core:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JSR 352 (Batch for Java) integration - Core</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-jberet%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-jsr352-jberet:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>JSR 352 (Batch for Java) integration - JBeret specifics</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-engine%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-engine:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Engine</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-orm%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-orm:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Hibernate ORM integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Elasticsearch integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.10.0.Beta1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Amazon IAM authentication for Elasticsearch</dd>
+                  </dl>
+                </div>
+                <div class="five wide column divided">
+                  <h3>Zip archive</h3>
+                  <p>
+                    Direct download is available from SourceForge:
+                  </p>
+                  <p>
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.10.0.Beta1/hibernate-search-5.10.0.Beta1-dist.zip/download" title="Download">
+                      <i class="icon cloud download"></i>
+                      Download Zip archive
+                    </a>
+                  </p>
                 </div>
               </div>
-              <p>&nbsp;</p>
-              <div class="text-center" id="contributor-loader">
-                <i class="notched circle loading icon massive"></i>
+              <p>
+                More information about specific releases (announcements, download links) can be found
+                <a href="#releases">
+                  here.
+                </a>
+              </p>
+              <h2 id="whats-new">What's new</h2>
+              <p>
+                Latest release announcement (2018-02-22):
+                <a href="http://in.relation.to/2018/02/23/hibernate-search-5-10-0-Beta1/">
+                  5.10.0.Beta1.
+                </a>
+              </p>
+              <p>
+                A detailed list of new features, improvements and fixes in this series can be found
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.10.0.Beta1)%20ORDER%20BY%20updated">
+                  on our JIRA instance.
+                </a>
+              </p>
+              <div class="sect2">
+              <h3 id="orm53"><a class="anchor" href="#orm53"></a>ORM 5.3 and JPA 2.2 compatibility</h3>
+              <div class="paragraph">
+              <p>Hibernate Search 5.10 is designed to work with Hibernate ORM 5.3.</p>
               </div>
-              <div class="ui four column grid stackable" id="contributor-list" style="display:none"></div>
-              <script>
-                $(document).ready(function() {
-                });
-              </script>
-              <script>
-                $(document).ready(function() {
-                  var contributorsNameMapping;
-                  $.getJSON( "/community/contributors/contributors-name-mapping.json", function( data ) {
-                    contributorsNameMapping = data;
-                  });
-                  $.getJSON( "https://api.github.com/repos/hibernate/hibernate-validator/contributors", function( data ) {
-                    var items = [];
-                    data.forEach( function( contributor ) {
-                      var contributorName = contributorsNameMapping ? (contributorsNameMapping[contributor.login] ? contributorsNameMapping[contributor.login] : contributor.login) : contributor.login;
-                      items.push( $( '<div class="column"/>' )
-                        .append(
-                          $( '<div class="ui card"/>' )
-                            .append( $( '<div class="image"/>' ).append( $('<img src="' + contributor.avatar_url + '" />' ) ) )
-                            .append( $( '<div class="content" />' ).append( $( '<div class="header" />' ).append( $( '<a href="' + contributor.html_url + '" />' ).text( contributorName ) ) ) )
-                            .append( $( '<div class="extra content" />' ).append( $( '<span class="right floated" />' ).text( contributor.contributions + ' commit' + ( contributor.contributions > 1 ? 's' : '' ) ) ) )
-                          )
-                      );
-                    });
-                
-                    $( '#contributor-list' ).append( items );
-                    $( '#contributor-list .card' ).matchHeight({ byRow: true });
-                    $( '#contributor-loader' ).hide();
-                    $( '#contributor-list' ).fadeIn();
-                  });
-                });
-              </script>
+              </div>
+              <div class="sect2">
+              <h3 id="dependency-injection"><a class="anchor" href="#dependency-injection"></a>Integration to DI frameworks through Hibernate ORM 5.3</h3>
+              <div class="paragraph">
+              <p>Hibernate Search now taps into Hibernate ORM&#8217;s integration to dependency injection frameworks.
+              If you use a dependency injection framework integrating with Hibernate ORM 5.3,
+              and you add field bridges to your dependency injection context,
+              then Hibernate Search will automatically retrieve and use field bridges from this context.</p>
+              </div>
+              <div class="paragraph">
+              <p>This allows you in particular to inject components from your DI context into your field bridges,
+              using your DI framework&#8217;s features (<code>@java.injext.Inject</code>, Spring&#8217;s <code>@Autowired</code>, &#8230;&#8203;).</p>
+              </div>
+              <div class="paragraph">
+              <p>The integration is already known to work in a CDI 2.0 environment such as WildFly 12
+              (not released yet as of February 23, 2018),
+              and the Spring team will probably make it work as soon as it adds support for JPA 2.2.</p>
+              </div>
+              </div>
+              <h2 id="releases">Releases in this series</h2>
+              <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <p>
+                      <span class="label orange ui version">
+                        5.10.0.Beta1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2018-02-22</small>
+                    </p>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      ORM 5.3 and JPA 2.2 compatibility
+                    </p>
+                    <p>
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.10.0.Beta1%7C">
+                        org.hibernate:hibernate-search-orm:5.10.0.Beta1
+                      </a>
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.10.0.Beta1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.10.0.Beta1/hibernate-search-5.10.0.Beta1-dist.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.10.0.Beta1)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/02/23/hibernate-search-5-10-0-Beta1/">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -580,7 +894,7 @@
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
                 <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../.." title="Search">Hibernate Search</a>
                 <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
                 <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
                 <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
@@ -598,7 +912,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../.." title="Community resources">Community resources</a>
+                <a class="item" href="../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -643,7 +957,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate", "hibernate", true);
+        renderTabzilla("Hibernate Search", "search", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
