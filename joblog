@@ -1,5 +1,4 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Fetching gem metadata from https://rubygems.org/.......
 Using ansi 1.5.0
 Using asciidoctor 1.5.6.1
 Using ast 2.3.0
@@ -49,8 +48,7 @@ Using execjs 2.7.0
 Using htmlcompressor 0.4.0
 Using json 2.1.0
 Using libv8 3.16.14.19 (x86_64-linux)
-Fetching mini_portile2 2.3.0
-Installing mini_portile2 2.3.0
+Using mini_portile2 2.3.0
 Using nokogiri 1.8.1
 Using pry-byebug 3.5.1
 Using redcarpet 3.4.0
@@ -176,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.12 seconds (files took 1.27 seconds to load)
+Finished in 1.11 seconds (files took 0.5211 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -199,8 +197,8 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.15.Final/hibernate-core-5.2.15.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.12.Final/hibernate-core-5.1.12.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.7.Final/hibernate-validator-6.0.7.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.7.Final/hibernate-validator-parent-6.0.7.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.8.Final/hibernate-validator-6.0.8.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.8.Final/hibernate-validator-parent-6.0.8.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.4.2.Final/hibernate-validator-5.4.2.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/5.4.2.Final/hibernate-validator-parent-5.4.2.Final.pom
 WgetWrapper extension is not properly configured in site.yml.
