@@ -174,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.90513 seconds (files took 0.55127 seconds to load)
+Finished in 1.09 seconds (files took 0.50438 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -193,7 +193,8 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-og
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Final/hibernate-ogm-parent-5.2.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.3.0.Final/hibernate-ogm-core-5.3.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.3.0.Final/hibernate-ogm-parent-5.3.0.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.15.Final/hibernate-core-5.2.15.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.16.Final/hibernate-core-5.2.16.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.2.16.Final/hibernate-core-5.2.16.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.13.Final/hibernate-core-5.1.13.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.8.Final/hibernate-validator-6.0.8.Final.pom
