@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Getting started with Hibernate Validator - Hibernate Validator</title>
+    <title>Migration Guide from Hibernate Search 5.9 to 5.10 - Hibernate Search</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
-    <meta content="" name="author">
+    <meta content="Sanne Grinovero, Yoann Rodière" name="author">
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1523364177" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1523364175" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -108,12 +108,12 @@
           </div>
         </div>
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="grid icon search"></i>
             <i class="dropdown icon"></i>
             <strong>Search</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/search/">
                 <i class="grid home icon"></i>
@@ -123,7 +123,7 @@
                 <i class="grid icon tags"></i>
                 Releases
               </a>
-              <a class="item" href="/search/documentation/">
+              <a class="active item" href="/search/documentation/">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
@@ -177,12 +177,12 @@
           </div>
         </div>
         <div class="item">
-          <a class="active title">
+          <a class="title">
             <i class="box checkmark grid icon"></i>
             <i class="dropdown icon"></i>
             <strong>Validator</strong>
           </a>
-          <div class="active content">
+          <div class="content">
             <div class="menu internal-links">
               <a class="item" href="/validator/">
                 <i class="grid home icon"></i>
@@ -192,7 +192,7 @@
                 <i class="grid icon tags"></i>
                 Releases
               </a>
-              <a class="active item" href="/validator/documentation/">
+              <a class="item" href="/validator/documentation/">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
@@ -434,8 +434,8 @@
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
           <a class="item" href="/orm/">ORM</a>
-          <a class="item" href="/search/">Search</a>
-          <a class="active item" href="/validator/">Validator</a>
+          <a class="active item" href="/search/">Search</a>
+          <a class="item" href="/validator/">Validator</a>
           <a class="item" href="/ogm/">OGM</a>
           <a class="item" href="/tools/">Tools</a>
           <a class="item" href="/others/">Others</a>
@@ -452,8 +452,9 @@
       </div>
       <script>
         var displayed_series = [];
-        displayed_series.push('6.0');
-        displayed_series.push('5.4');
+        displayed_series.push('5.10');
+        displayed_series.push('5.9');
+        displayed_series.push('5.6');
       </script>
       <div class="jumbotron small">
         <div class="ui container">
@@ -462,12 +463,12 @@
               <div class="column twelve wide middle aligned">
                 <h1>
                   <span>
-                    Hibernate Validator
+                    Hibernate Search
                   </span>
                 </h1>
                 <h2>
                   <span>
-                    Getting started with Hibernate Validator
+                    Migration Guide from Hibernate Search 5.9 to 5.10
                   </span>
                 </h2>
               </div>
@@ -483,7 +484,7 @@
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
             <div class="ui fluid vertical menu">
-              <a class="item" href="../..">
+              <a class="item" href="../../..">
                 <i class="grid home icon"></i>
                 About
               </a>
@@ -491,50 +492,55 @@
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="../../releases">
+                  <a class="item" href="../../../releases">
                     Overview
                   </a>
-                  <a class="item" href="../../releases/6.0">
-                    6.0
+                  <a class="item" href="../../../releases/5.10">
+                    5.10
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="../../../releases/5.9">
+                    5.9
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="../../releases/5.4">
-                    5.4
+                  <a class="item" href="../../../releases/5.6">
+                    5.6
                   </a>
                 </div>
               </div>
-              <a class="item selected" href="..">
+              <a class="item selected" href="../..">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
-              <a class="item" href="../../roadmap">
+              <a class="item" href="../../../roadmap">
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
-              <a class="item" href="../../contribute">
+              <a class="item" href="../../../contribute">
                 <i class="grid icon users"></i>
                 Contribute
               </a>
-              <a class="item" href="../../tooling">
+              <a class="item" href="../../../tooling">
                 <i class="grid icon wrench"></i>
                 Tooling
               </a>
-              <a class="item" href="../../support">
+              <a class="item" href="../../../support">
                 <i class="doctor grid icon"></i>
                 Paid support
               </a>
-              <a class="item" href="../../faq">
+              <a class="item" href="../../../faq">
                 <i class="circle grid help icon"></i>
                 FAQ
               </a>
             </div>
             <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-validator">
+              <a class="item" href="https://github.com/hibernate/hibernate-search">
                 <i class="code grid icon"></i>
                 Source code
               </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HV">
+              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
                 <i class="bug grid icon"></i>
                 Issue tracker
               </a>
@@ -542,15 +548,15 @@
                 <i class="grid icon lock"></i>
                 Security issue
               </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+              <a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
                 <i class="comments grid icon"></i>
                 Forum
               </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate/validator">
+              <a class="item" href="https://community.jboss.org/en/hibernate/search">
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="https://hibernate-validator.ci.cloudbees.com/">
+              <a class="item" href="http://ci.hibernate.org/job/hibernate-search-master/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -558,7 +564,7 @@
             <hr>
             <div class="license">
               Released under the
-              <a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
+              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
@@ -566,247 +572,129 @@
               <div id="preamble">
               <div class="sectionbody">
               <div class="paragraph">
-              <p>Welcome to Hibernate Validator.</p>
-              </div>
-              <div class="paragraph">
-              <p>The following paragraphs will guide you through the initial steps required to integrate
-              Hibernate Validator into your application.</p>
+              <p>Here we are helping you migrate your existing Search application to the latest and greatest.</p>
               </div>
               </div>
               <div id="toc" class="toc">
-              <div id="toctitle">Table of Contents</div>
+              <div id="toctitle">Content</div>
               <ul class="sectlevel1">
-              <li><a href="#prerequisites">Prerequisites</a></li>
-              <li><a href="#project-set-up">Project set up</a>
+              <li><a href="#upgrade-to-hibernate-search-5-10-x-from-5-9-x">Upgrade to Hibernate Search 5.10.x from 5.9.x</a>
               <ul class="sectlevel2">
-              <li><a href="#unified-expression-language-el">Unified Expression Language (EL)</a></li>
-              <li><a href="#cdi">CDI</a></li>
+              <li><a href="#requirements">Requirements</a></li>
+              <li><a href="#configuration-changes">Configuration changes</a></li>
+              <li><a href="#api-changes">API changes</a></li>
+              <li><a href="#spi-changes">SPI changes</a></li>
+              <li><a href="#behavior-changes">Behavior changes</a></li>
               </ul>
               </li>
-              <li><a href="#applying-constraints">Applying constraints</a></li>
-              <li><a href="#validating-constraints">Validating constraints</a></li>
-              <li><a href="#where-to-go-next">Where to go next?</a></li>
               </ul>
               </div>
               </div>
               <div class="sect1">
-              <h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
-              <div class="sectionbody">
-              <div class="ulist">
-              <ul>
-              <li>
-              <p><a href="http://www.oracle.com/technetwork/java/index.html">Java Runtime</a> &gt;= 8</p>
-              </li>
-              <li>
-              <p><a href="http://maven.apache.org">Apache Maven</a></p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="project-set-up"><a class="anchor" href="#project-set-up"></a>Project set up</h2>
+              <h2 id="upgrade-to-hibernate-search-5-10-x-from-5-9-x"><a class="anchor" href="#upgrade-to-hibernate-search-5-10-x-from-5-9-x"></a>Upgrade to Hibernate Search 5.10.x from 5.9.x</h2>
               <div class="sectionbody">
               <div class="paragraph">
-              <p>In order to use Hibernate Validator within a Maven project, simply add the following dependency to
-              your <code>pom.xml</code>:</p>
+              <p>The aim of this guide is to assist you migrating an existing application using any version <code>5.9.x</code> of Hibernate Search to the latest of the <code>5.10.x</code> series.
+              If you&#8217;re looking to migrate different versions see <a href="/search/documentation/migrate">Hibernate Search migration guides</a>.</p>
               </div>
-              <div class="exampleblock">
-              <div class="content">
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-validator<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>6.0.9.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>This transitively pulls in the dependency to the Bean Validation API
-              (<code>javax.validation:validation-api:2.0.1.Final</code>).</p>
+              <div class="admonitionblock note">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+              This document provides pointers for a migration.
+              It refers to Hibernate Search version <code>5.10.0.Final</code>. If you think something is missing or something does not work, please <a href="/community">contact us</a>.
+              </td>
+              </tr>
+              </table>
               </div>
               <div class="sect2">
-              <h3 id="unified-expression-language-el"><a class="anchor" href="#unified-expression-language-el"></a>Unified Expression Language (EL)</h3>
-              <div class="paragraph">
-              <p>Hibernate Validator also requires an implementation of the Unified Expression Language
-              (<a href="http://jcp.org/en/jsr/detail?id=341">JSR 341</a>) for evaluating dynamic expressions in constraint
-              violation messages.</p>
-              </div>
-              <div class="paragraph">
-              <p>When your application runs in a Java EE container such as <a href="http://wildfly.org/">WildFly</a>, an EL implementation is already
-              provided by the container.</p>
-              </div>
-              <div class="paragraph">
-              <p>In a Java SE environment, however, you have to add an implementation as dependency to your POM file.
-              For instance, you can add the following dependency to use the JSR 341 reference implementation:</p>
-              </div>
-              <div class="exampleblock">
-              <div class="content">
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.glassfish<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>javax.el<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>3.0.1-b09<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
-              </div>
-              </div>
-              </div>
+              <h3 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h3>
+              <div class="admonitionblock warning">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-warning" title="Warning"></i>
+              </td>
+              <td class="content">
+              Not determined yet. To be determined upon the CR or release.
+              </td>
+              </tr>
+              </table>
               </div>
               </div>
               <div class="sect2">
-              <h3 id="cdi"><a class="anchor" href="#cdi"></a>CDI</h3>
-              <div class="paragraph">
-              <p>Bean Validation defines integration points with CDI (Contexts and Dependency Injection,
-              <a href="http://jcp.org/en/jsr/detail?id=346">JSR 346</a>). If your application runs in
-              an environment which does not provide this integration out of the box, you may use the Hibernate
-              Validator CDI portable extension by adding the following Maven dependency to your POM:</p>
-              </div>
-              <div class="exampleblock">
-              <div class="content">
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-validator-cdi<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>6.0.9.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="admonitionblock tip">
+              <h3 id="configuration-changes"><a class="anchor" href="#configuration-changes"></a>Configuration changes</h3>
+              <div class="admonitionblock warning">
               <table>
               <tr>
               <td class="icon">
-              <i class="fa icon-tip" title="Tip"></i>
+              <i class="fa icon-warning" title="Warning"></i>
               </td>
               <td class="content">
-              <div class="paragraph">
-              <p>Adding this dependency is not required for applications running on a Java EE application server.</p>
-              </div>
+              Not determined yet. To be determined upon the CR or release.
               </td>
               </tr>
               </table>
               </div>
               </div>
+              <div class="sect2">
+              <h3 id="api-changes"><a class="anchor" href="#api-changes"></a>API changes</h3>
+              <div class="admonitionblock warning">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-warning" title="Warning"></i>
+              </td>
+              <td class="content">
+              Not determined yet. To be determined upon the CR or release.
+              </td>
+              </tr>
+              </table>
               </div>
               </div>
-              <div class="sect1">
-              <h2 id="applying-constraints"><a class="anchor" href="#applying-constraints"></a>Applying constraints</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Let&#8217;s dive into an example to see how to apply constraints:</p>
+              <div class="sect2">
+              <h3 id="spi-changes"><a class="anchor" href="#spi-changes"></a>SPI changes</h3>
+              <div class="admonitionblock warning">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-warning" title="Warning"></i>
+              </td>
+              <td class="content">
+              Not determined yet. To be determined upon the CR or release.
+              </td>
+              </tr>
+              </table>
               </div>
-              <div class="exampleblock">
-              <div class="content">
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#707;font-weight:bold">org.hibernate.validator.referenceguide.chapter01</span>;&#x000A;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">javax.validation.constraints.Min</span>;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">javax.validation.constraints.NotNull</span>;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">javax.validation.constraints.Size</span>;&#x000A;&#x000A;<span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Car</span> {&#x000A;&#x000A;   <span style="color:#007">@NotNull</span>&#x000A;   <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">String</span> manufacturer;&#x000A;&#x000A;   <span style="color:#007">@NotNull</span>&#x000A;   <span style="color:#007">@Size</span>(min = <span style="color:#00D">2</span>, max = <span style="color:#00D">14</span>)&#x000A;   <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">String</span> licensePlate;&#x000A;&#x000A;   <span style="color:#007">@Min</span>(<span style="color:#00D">2</span>)&#x000A;   <span style="color:#088;font-weight:bold">private</span> <span style="color:#339;font-weight:bold">int</span> seatCount;&#x000A;&#x000A;   <span style="color:#088;font-weight:bold">public</span> Car(<span style="color:#0a8;font-weight:bold">String</span> manufacturer, <span style="color:#0a8;font-weight:bold">String</span> licencePlate, <span style="color:#339;font-weight:bold">int</span> seatCount) {&#x000A;      <span style="color:#950">this</span>.manufacturer = manufacturer;&#x000A;      <span style="color:#950">this</span>.licensePlate = licencePlate;&#x000A;      <span style="color:#950">this</span>.seatCount = seatCount;&#x000A;   }&#x000A;&#x000A;   <span style="color:#777">// getters and setters ...</span>&#x000A;}</code></pre>
               </div>
-              </div>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>The <code>@NotNull</code>, <code>@Size</code> and <code>@Min</code> annotations are used to declare the constraints which should be
-              applied to the fields of a <code>Car</code> instance:</p>
+              <div class="sect2">
+              <h3 id="behavior-changes"><a class="anchor" href="#behavior-changes"></a>Behavior changes</h3>
+              <div class="admonitionblock warning">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-warning" title="Warning"></i>
+              </td>
+              <td class="content">
+              Not fully determined yet. To be determined upon the CR or release.
+              </td>
+              </tr>
+              </table>
               </div>
               <div class="ulist">
               <ul>
               <li>
-              <p>manufacturer must never be <code>null</code></p>
-              </li>
-              <li>
-              <p>licensePlate must never be <code>null</code> and must be between 2 and 14 characters long</p>
-              </li>
-              <li>
-              <p>seatCount must be at least 2</p>
+              <p>As of <a href="https://hibernate.atlassian.net/browse/HSEARCH-3039">HSEARCH-3039</a>,
+              Embedded IDs are no longer analyzed.
+              Embedded IDs are properties defined as <code>@DocumentId</code> (or, lacking that, JPA&#8217;s <code>@Id</code>),
+              then embedded in another document using <code>@IndexedEmbedded(includeEmbeddedObjectId = true)</code>
+              or <code>@IndexedEmbedded(includePaths = { &#8230;&#8203;, "&lt;the ID property name&gt;", &#8230;&#8203; })</code>.</p>
               </li>
               </ul>
               </div>
-              <div class="admonitionblock tip">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-tip" title="Tip"></i>
-              </td>
-              <td class="content">
-              <div class="paragraph">
-              <p>You can find the complete source code of all examples used in this getting started guide in the
-              Hibernate Validator <a href="https://github.com/hibernate/hibernate-validator/tree/master/documentation/src/test">source repository</a>
-              on GitHub.</p>
-              </div>
-              </td>
-              </tr>
-              </table>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="validating-constraints"><a class="anchor" href="#validating-constraints"></a>Validating constraints</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>To perform a validation of these constraints, you use a <code>Validator</code> instance. To demonstrate this,
-              let&#8217;s have a look at a simple unit test:</p>
-              </div>
-              <div class="exampleblock">
-              <div class="content">
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="java"><span style="color:#080;font-weight:bold">package</span> <span style="color:#707;font-weight:bold">org.hibernate.validator.referenceguide.chapter01</span>;&#x000A;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">java.util.Set</span>;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">javax.validation.ConstraintViolation</span>;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">javax.validation.Validation</span>;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">javax.validation.Validator</span>;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">javax.validation.ValidatorFactory</span>;&#x000A;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">org.junit.BeforeClass</span>;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">org.junit.Test</span>;&#x000A;&#x000A;<span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">static</span> <span style="color:#B44;font-weight:bold">org.junit.Assert.assertEquals</span>;&#x000A;&#x000A;<span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">CarTest</span> {&#x000A;&#x000A;<span style="color:#088;font-weight:bold">private</span> <span style="color:#088;font-weight:bold">static</span> <span style="color:#0a8;font-weight:bold">Validator</span> validator;&#x000A;&#x000A;   <span style="color:#007">@BeforeClass</span>&#x000A;   <span style="color:#088;font-weight:bold">public</span> <span style="color:#088;font-weight:bold">static</span> <span style="color:#339;font-weight:bold">void</span> setUp() {&#x000A;      ValidatorFactory factory = Validation.buildDefaultValidatorFactory();&#x000A;      validator = factory.getValidator();&#x000A;   }&#x000A;&#x000A;   <span style="color:#007">@Test</span>&#x000A;   <span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> manufacturerIsNull() {&#x000A;      Car car = <span style="color:#080;font-weight:bold">new</span> Car( <span style="color:#069">null</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">DD-AB-123</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">4</span> );&#x000A;&#x000A;      <span style="color:#0a8;font-weight:bold">Set</span>&lt;ConstraintViolation&lt;Car&gt;&gt; constraintViolations =&#x000A;      validator.validate( car );&#x000A;&#x000A;      assertEquals( <span style="color:#00D">1</span>, constraintViolations.size() );&#x000A;      assertEquals(&#x000A;         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">may not be null</span><span style="color:#710">&quot;</span></span>,&#x000A;         constraintViolations.iterator().next().getMessage()&#x000A;      );&#x000A;   }&#x000A;&#x000A;   <span style="color:#007">@Test</span>&#x000A;   <span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> licensePlateTooShort() {&#x000A;      Car car = <span style="color:#080;font-weight:bold">new</span> Car( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Morris</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">D</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">4</span> );&#x000A;&#x000A;      <span style="color:#0a8;font-weight:bold">Set</span>&lt;ConstraintViolation&lt;Car&gt;&gt; constraintViolations =&#x000A;      validator.validate( car );&#x000A;&#x000A;      assertEquals( <span style="color:#00D">1</span>, constraintViolations.size() );&#x000A;      assertEquals(&#x000A;         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">size must be between 2 and 14</span><span style="color:#710">&quot;</span></span>,&#x000A;         constraintViolations.iterator().next().getMessage()&#x000A;      );&#x000A;   }&#x000A;&#x000A;   <span style="color:#007">@Test</span>&#x000A;   <span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> seatCountTooLow() {&#x000A;      Car car = <span style="color:#080;font-weight:bold">new</span> Car( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Morris</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">DD-AB-123</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">1</span> );&#x000A;&#x000A;      <span style="color:#0a8;font-weight:bold">Set</span>&lt;ConstraintViolation&lt;Car&gt;&gt; constraintViolations =&#x000A;      validator.validate( car );&#x000A;&#x000A;      assertEquals( <span style="color:#00D">1</span>, constraintViolations.size() );&#x000A;      assertEquals(&#x000A;         <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">must be greater than or equal to 2</span><span style="color:#710">&quot;</span></span>,&#x000A;         constraintViolations.iterator().next().getMessage()&#x000A;      );&#x000A;   }&#x000A;&#x000A;   <span style="color:#007">@Test</span>&#x000A;   <span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">void</span> carIsValid() {&#x000A;      Car car = <span style="color:#080;font-weight:bold">new</span> Car( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Morris</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">DD-AB-123</span><span style="color:#710">&quot;</span></span>, <span style="color:#00D">2</span> );&#x000A;&#x000A;      <span style="color:#0a8;font-weight:bold">Set</span>&lt;ConstraintViolation&lt;Car&gt;&gt; constraintViolations =&#x000A;      validator.validate( car );&#x000A;&#x000A;      assertEquals( <span style="color:#00D">0</span>, constraintViolations.size() );&#x000A;   }&#x000A;}</code></pre>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>In the <code>setUp()</code> method, a <code>Validator</code> instance is retrieved from the <code>ValidatorFactory</code>. <code>Validator</code>
-              instances are thread-safe and may be reused multiple times.</p>
-              </div>
-              <div class="paragraph">
-              <p>The <code>validate()</code> method returns a set of <code>ConstraintViolation</code> instances, which you can iterate
-              in order to see which validation errors occurred.
-              The first three test methods show some expected constraint violations:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>The <code>@NotNull</code> constraint on <code>manufacturer</code> is violated in <code>manufacturerIsNull()</code></p>
-              </li>
-              <li>
-              <p>The <code>@Size</code> constraint on <code>licensePlate</code> is violated in <code>licensePlateTooShort()</code></p>
-              </li>
-              <li>
-              <p>The <code>@Min</code> constraint on <code>seatCount</code> is violated in <code>seatCountTooLow()</code></p>
-              </li>
-              </ul>
-              </div>
-              <div class="paragraph">
-              <p>If the object validates successfully, <code>validate()</code> returns an empty set as you can see in <code>carIsValid()</code>.</p>
-              </div>
-              <div class="paragraph">
-              <p>Note that only classes from the package <code>javax.validation</code> are used.
-              These are provided by the Bean Validation API.
-              No classes from Hibernate Validator are directly referenced, resulting in portable code.</p>
-              </div>
-              <div class="admonitionblock tip">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-tip" title="Tip"></i>
-              </td>
-              <td class="content">
-              <div class="paragraph">
-              <p>The above unit test makes use of the <code>Validator</code> instance directly. Many frameworks, however, offer
-              integration with Bean Validation out of the box, e.g. JPA and JSF. In this case it is enough to annotate
-              your POJOs with constraint annotations. Validation will occur automatically at the appropriate
-              life cycle phase of the used technology. Refer to the
-              <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-integration">reference guide</a>
-              for more information.</p>
-              </div>
-              </td>
-              </tr>
-              </table>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="where-to-go-next"><a class="anchor" href="#where-to-go-next"></a>Where to go next?</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>That concludes the 5 minutes tour through the world of Hibernate Validator and Bean Validation.
-              If you want a more complete introduction, it is recommended to read the Hibernate Validator
-              <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/">reference guide</a>.</p>
               </div>
               </div>
               </div>
@@ -825,12 +713,12 @@
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../../search" title="Search">Hibernate Search</a>
-                <a class="item" href="../.." title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../../others" title="Other projects">Other projects</a>
+                <a class="item" href="../../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../.." title="Search">Hibernate Search</a>
+                <a class="item" href="../../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -844,7 +732,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -854,12 +742,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../../../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>
@@ -889,7 +777,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate Validator", "validator", true);
+        renderTabzilla("Hibernate Search", "search", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
