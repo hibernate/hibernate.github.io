@@ -174,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.41 seconds (files took 0.76017 seconds to load)
+Finished in 1.43 seconds (files took 0.7123 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -183,8 +183,8 @@ The Gemfile's dependencies are satisfied
 Using profile: production
 Generating site: http://hibernate.org
 Excecuting pipeline...
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.10.0.Beta2/hibernate-search-orm-5.10.0.Beta2.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.10.0.Beta2/hibernate-search-parent-5.10.0.Beta2.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.10.0.CR1/hibernate-search-orm-5.10.0.CR1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.10.0.CR1/hibernate-search-parent-5.10.0.CR1.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.6.4.Final/hibernate-search-orm-5.6.4.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.6.4.Final/hibernate-search-parent-5.6.4.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.9.1.Final/hibernate-search-orm-5.9.1.Final.pom
