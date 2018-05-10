@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1525976448" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1525979054" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -771,18 +771,37 @@
               </div>
               </div>
               <div class="sect2">
+              <h3 id="other-new-features"><a class="anchor" href="#other-new-features"></a>Other new features</h3>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p><a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#constraint-validator-payload">Constraint validator payload</a>: ability to pass a payload to your constraint validators</p>
+              </li>
+              <li>
+              <p>Additional constraints: <code>@ISBN</code>, <code>@UniqueElements</code> and <code>@CodePointLength</code></p>
+              </li>
+              <li>
+              <p><a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-clock-provider">Temporal validation tolerance</a></p>
+              </li>
+              <li>
+              <p><code>ScriptEvaluatorFactory</code> SPI: ability to support non JSR 223 scripting languages such as Spring EL</p>
+              </li>
+              </ul>
+              </div>
+              </div>
+              <div class="sect2">
               <h3 id="performance-improvements"><a class="anchor" href="#performance-improvements"></a>Performance improvements</h3>
               <div class="paragraph">
               <p>We have done quite a lot of benchmarking and have significantly improved the performances of Hibernate Validator.</p>
               </div>
               <div class="paragraph">
-              <p>It can be up to two times faster than Hibernate Validator 5.4.1.Final in some cases.</p>
+              <p>It can be <a href="http://in.relation.to/2018/03/20/bean-validation-benchmark-rerevisited/">up to four times faster</a> than Hibernate Validator 5.4.2.Final in some cases.</p>
               </div>
               </div>
               <div class="sect2">
               <h3 id="memory-footprint-improvements"><a class="anchor" href="#memory-footprint-improvements"></a>Memory footprint improvements</h3>
               <div class="paragraph">
-              <p>Hibernate Validator collects a lot of metadata on the constrained beans. We reduced significantly the memory used by these metadata.</p>
+              <p>Hibernate Validator collects a lot of metadata on the constrained beans. We reduced significantly the memory occupied by these metadata.</p>
               </div>
               </div>
               <h2 id="migrate">Migrate</h2>
