@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1526467788" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1526541099" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -498,12 +498,10 @@
                   <a class="item" href="../../releases/5.10">
                     5.10
                     &nbsp;&nbsp;
-                    <span class="ui label orange">development</span>
+                    <span class="ui label green">latest stable</span>
                   </a>
                   <a class="item" href="../../releases/5.9">
                     5.9
-                    &nbsp;&nbsp;
-                    <span class="ui label green">latest stable</span>
                   </a>
                   <a class="item" href="../../releases/5.6">
                     5.6
@@ -615,19 +613,21 @@
               <dl>
               <dt class="hdlist1">Java Runtime</dt>
               <dd>
-              <p>To use the latest Hibernate Search version (5.9.1.Final) you&#8217;ll need Java version 8 or greater.
+              <p>To use the latest Hibernate Search version (5.10.0.Final) you&#8217;ll need Java version 8 or greater.
               You can download a Java Runtime for Windows/Linux/Solaris <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>.</p>
               </dd>
               <dt class="hdlist1">Hibernate Search</dt>
               <dd>
-              <p>hibernate-search-5.9.1.Final.jar and all runtime dependencies. You can get the jar artifacts either from the <em>dist/lib</em> directory of the Hibernate Search distribution or you can download them from the Maven central repository.</p>
+              <p>hibernate-search-orm-5.10.0.Final.jar and all runtime dependencies.
+              You can get the jar artifacts either from the <em>dist/lib</em> directory of the Hibernate Search distribution
+              or you can download them from the Maven central repository.</p>
               </dd>
               <dt class="hdlist1">Hibernate ORM</dt>
               <dd>
-              <p>You will need hibernate-core-5.2.12.Final.jar and its transitive dependencies (either from
-              <a href="http://sourceforge.net/projects/hibernate/files/hibernate4/5.2.12.Final/">Sourceforge</a> or the Maven central repository).</p>
+              <p>You will need hibernate-core-5.3.0.Final.jar and its transitive dependencies (either from
+              <a href="http://sourceforge.net/projects/hibernate/files/hibernate4/5.3.0.Final/">Sourceforge</a> or the Maven central repository).</p>
               </dd>
-              <dt class="hdlist1">JPA 2.1</dt>
+              <dt class="hdlist1">JPA 2.2</dt>
               <dd>
               <p>Even though Hibernate Search can be used without needing JPA annotations the following instructions will use them for basic entity configuration (<em>@Entity, @Id, @OneToMany,&#8230;&#8203;</em>).
               This part of the configuration could also be expressed in xml or code.
@@ -655,24 +655,19 @@
               <div class="listingblock">
               <div class="title">Maven artifact identifier for Hibernate Search</div>
               <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-orm<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.9.1.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
-              </div>
-              </div>
-              <div class="listingblock">
-              <div class="title">Optional: to store indexes in Infinispan</div>
-              <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-infinispan<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.9.1.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-orm<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.10.0.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
               </div>
               </div>
               <div class="listingblock">
               <div class="title">Optional: to store indexes in Elasticsearch</div>
               <div class="content">
-              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-elasticsearch<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.9.1.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+              <pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-search-elasticsearch<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.10.0.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
               </div>
               </div>
               <div class="paragraph">
-              <p>Some of the dependencies of <em>hibernate-search-infinispan</em> might require to enable the the JBoss Maven repository.
-              See the <a href="https://community.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started</a> on how to configure your local Maven settings.</p>
+              <p>Optionally, you may also store your indexes in an Infinispan cluster;
+              see the <a href="http://infinispan.org/docs/stable/user_guide/user_guide.html#integrations:directory-provider">Infinispan Directory Provider documentation</a>
+              for information about dependencies and how to configure it.</p>
               </div>
               </div>
               </div>

@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1526467788" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1526541099" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -470,7 +470,7 @@
                   <span>
                     5.10 series
                   </span>
-                  <span class="label orange tag ui">development</span>
+                  <span class="green label tag ui">stable</span>
                 </h2>
               </div>
               <div class="column four wide middle aligned">
@@ -483,7 +483,7 @@
       <div class="page-title small">
         <div class="ui container">
           <h4>
-            ORM 5.3 and JPA 2.2 compatibility
+            ORM 5.3 and JPA 2.2 compatibility, integration to DI frameworks through Hibernate ORM 5.3, upgrade to WildFly 12 and JGroups 4, JPMS automatic module names.
           </h4>
         </div>
       </div>
@@ -505,12 +505,10 @@
                   <a class="item selected" href=".">
                     5.10
                     &nbsp;&nbsp;
-                    <span class="ui label orange">development</span>
+                    <span class="ui label green">latest stable</span>
                   </a>
                   <a class="item" href="../5.9">
                     5.9
-                    &nbsp;&nbsp;
-                    <span class="ui label green">latest stable</span>
                   </a>
                   <a class="item" href="../5.6">
                     5.6
@@ -667,15 +665,15 @@
                 Documentation for this specific series can be accessed through the links below:
               </p>
               <p>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.10/reference/en-US/html_single/">
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/">
                   <i class="icon file text outline"></i>
                   HTML
                 </a>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.10/reference/en-US/pdf/hibernate_search_reference.pdf">
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/pdf/hibernate_search_reference.pdf">
                   <i class="icon file pdf outline"></i>
                   PDF
                 </a>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.10/api/">
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/api/">
                   <i class="icon code outline"></i>
                   API (JavaDoc)
                 </a>
@@ -706,7 +704,7 @@
                   <p>
                     You can find the Maven coordinates of all artifacts through the link below:
                     <p>
-                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.10.0.CR1">
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.10.0.Final">
                         <i class="icon cloud cubes"></i>
                         Maven artifacts
                       </a>
@@ -717,74 +715,74 @@
                   </p>
                   <dl class="sparse">
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-orm:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-orm:5.10.0.Final
                       </a>
                     </dt>
                     <dd>Hibernate ORM integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-elasticsearch:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-elasticsearch:5.10.0.Final
                       </a>
                     </dt>
                     <dd>Elasticsearch integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch-aws%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-elasticsearch-aws:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch-aws%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-elasticsearch-aws:5.10.0.Final
                       </a>
                     </dt>
                     <dd>Amazon IAM authentication for Elasticsearch</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jgroups%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-backend-jgroups:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jgroups%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-backend-jgroups:5.10.0.Final
                       </a>
                     </dt>
                     <dd>JGroups backend</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jms%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-backend-jms:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jms%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-backend-jms:5.10.0.Final
                       </a>
                     </dt>
                     <dd>JMS backend</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-core%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-jsr352-core:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-core%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-jsr352-core:5.10.0.Final
                       </a>
                     </dt>
                     <dd>JSR 352 (Batch for Java) integration - Core</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-jberet%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-jsr352-jberet:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-jberet%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-jsr352-jberet:5.10.0.Final
                       </a>
                     </dt>
                     <dd>JSR 352 (Batch for Java) integration - JBeret specifics</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-engine%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-jbossmodules-engine:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-engine%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-jbossmodules-engine:5.10.0.Final
                       </a>
                     </dt>
                     <dd>WildFly feature pack - Engine</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-orm%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-jbossmodules-orm:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-orm%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-jbossmodules-orm:5.10.0.Final
                       </a>
                     </dt>
                     <dd>WildFly feature pack - Hibernate ORM integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.10.0.Final
                       </a>
                     </dt>
                     <dd>WildFly feature pack - Elasticsearch integration</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.10.0.Final
                       </a>
                     </dt>
                     <dd>WildFly feature pack - Amazon IAM authentication for Elasticsearch</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-jgroups%7C5.10.0.CR1%7C">
-                        org.hibernate:hibernate-search-jbossmodules-jgroups:5.10.0.CR1
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-jgroups%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-jbossmodules-jgroups:5.10.0.Final
                       </a>
                     </dt>
                     <dd>WildFly feature pack - JGroups backend</dd>
@@ -796,7 +794,7 @@
                     Direct download is available from SourceForge:
                   </p>
                   <p>
-                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.10.0.CR1/hibernate-search-5.10.0.CR1-dist.zip/download" title="Download">
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.10.0.Final/hibernate-search-5.10.0.Final-dist.zip/download" title="Download">
                       <i class="icon cloud download"></i>
                       Download Zip archive
                     </a>
@@ -811,14 +809,14 @@
               </p>
               <h2 id="whats-new">What's new</h2>
               <p>
-                Latest release announcement (2018-05-04):
-                <a href="http://in.relation.to/2018/05/09/hibernate-search-5-10-0-CR1/">
-                  5.10.0.CR1.
+                Latest release announcement (2018-05-17):
+                <a href="http://in.relation.to/2018/05/17/hibernate-search-5-10-0-Final/">
+                  5.10.0.Final.
                 </a>
               </p>
               <p>
                 A detailed list of new features, improvements and fixes in this series can be found
-                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.10.0.CR1%2C%205.10.0.Beta2%2C%205.10.0.Beta1)%20ORDER%20BY%20updated">
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.10.0.Final%2C%205.10.0.CR1%2C%205.10.0.Beta2%2C%205.10.0.Beta1)%20ORDER%20BY%20updated">
                   on our JIRA instance.
                 </a>
               </p>
@@ -841,8 +839,7 @@
               using your DI framework&#8217;s features (<code>@java.inject.Inject</code>, Spring&#8217;s <code>@Autowired</code>, &#8230;&#8203;).</p>
               </div>
               <div class="paragraph">
-              <p>The integration is already known to work in a CDI 2.0 environment such as WildFly 12
-              (not released yet as of February 23, 2018),
+              <p>The integration is already known to work in a CDI 2.0 environment such as WildFly 12,
               and the Spring team will probably make it work as soon as it adds support for JPA 2.2.</p>
               </div>
               </div>
@@ -918,6 +915,46 @@
               </p>
               <h2 id="releases">Releases in this series</h2>
               <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <p>
+                      <span class="green label ui version">
+                        5.10.0.Final
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2018-05-17</small>
+                    </p>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      Upgrade to ORM 5.3.0.Final, bugfixes and improvements
+                    </p>
+                    <p>
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.10.0.Final%7C">
+                        org.hibernate:hibernate-search-orm:5.10.0.Final
+                      </a>
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.10.0.Final">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.10.0.Final/hibernate-search-5.10.0.Final-dist.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.10.0.Final)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/05/17/hibernate-search-5-10-0-Final/">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
                 <div class="ui row">
                   <div class="three wide column">
                     <p>
