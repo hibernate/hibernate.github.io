@@ -253,7 +253,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.12 seconds (files took 1.26 seconds to load)
+Finished in 1.27 seconds (files took 3.34 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -277,8 +277,10 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-og
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.17.Final/hibernate-core-5.2.17.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.15.Final/hibernate-core-5.1.15.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.10.Final/hibernate-validator-6.0.10.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.10.Final/hibernate-validator-parent-6.0.10.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.11.Final/hibernate-validator-6.0.11.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/validator/hibernate-validator/6.0.11.Final/hibernate-validator-6.0.11.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.11.Final/hibernate-validator-parent-6.0.11.Final.pom
+Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/validator/hibernate-validator-parent/6.0.11.Final/hibernate-validator-parent-6.0.11.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.4.2.Final/hibernate-validator-5.4.2.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/5.4.2.Final/hibernate-validator-parent-5.4.2.Final.pom
 WgetWrapper extension is not properly configured in site.yml.
