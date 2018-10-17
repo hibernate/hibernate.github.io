@@ -174,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 1.24 seconds (files took 0.61715 seconds to load)
+Finished in 0.95691 seconds (files took 0.51367 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
