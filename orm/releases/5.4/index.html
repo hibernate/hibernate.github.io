@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Running hibernate.org within Docker - Hibernate</title>
+    <title>5.4 series - Hibernate ORM</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1542295018" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1542295020" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -27,18 +27,18 @@
     <div class="ui vertical inverted sidebar left" id="mobile-menu">
       <div class="ui vertical fluid inverted text menu accordion">
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="database grid icon"></i>
             <i class="dropdown icon"></i>
             <strong>ORM</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/orm/">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="item" href="/orm/releases/">
+              <a class="active item" href="/orm/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
@@ -433,7 +433,7 @@
         </div>
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
-          <a class="item" href="/orm/">ORM</a>
+          <a class="active item" href="/orm/">ORM</a>
           <a class="item" href="/search/">Search</a>
           <a class="item" href="/validator/">Validator</a>
           <a class="item" href="/ogm/">OGM</a>
@@ -450,204 +450,413 @@
           </div>
         </div>
       </div>
-      <div class="ui container-fluid">
-        <div class="jumbotron small">
-          <div class="ui container">
-            <h1>
-              <span>Running hibernate.org within Docker</span>
-            </h1>
+      <script>
+        var displayed_series = [];
+        displayed_series.push('5.4');
+        displayed_series.push('5.3');
+        displayed_series.push('5.2');
+        displayed_series.push('5.1');
+        displayed_series.push('5.0');
+      </script>
+      <div class="jumbotron small">
+        <div class="ui container">
+          <div class="ui grid stackable">
+            <div class="column row">
+              <div class="column twelve wide middle aligned">
+                <h1>
+                  <span>
+                    Hibernate ORM
+                  </span>
+                </h1>
+                <h2>
+                  <span>
+                    5.4 series
+                  </span>
+                  <span class="label orange tag ui">development</span>
+                </h2>
+              </div>
+              <div class="column four wide middle aligned">
+                
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="page-title small">
+        <div class="ui container">
+          <h4>
+            EntityGraph improvements, JDK 11 support
+          </h4>
         </div>
       </div>
       <div class="ui container page-content">
-        <div class="content" id="content">
-          <div id="preamble">
-          <div class="sectionbody">
-          <div class="paragraph">
-          <p>The following instructions allow you to run hibernate.org within
-          a docker container while still being able to edit your sources locally.
-          This is not a Docker introduction. At least you will need a running
-          Docker daemon. If you want an intro into Docker - <a href="http://docs.docker.com/">start here</a>.</p>
+        <div class="ui stackable grid">
+          <div class="column three wide computer only print hidden">
+            <div class="ui fluid vertical menu">
+              <a class="item" href="../..">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <div class="dropdown item link selected ui">
+                Releases
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="..">
+                    Overview
+                  </a>
+                  <a class="item selected" href=".">
+                    5.4
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="../5.3">
+                    5.3
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
+                  </a>
+                  <a class="item" href="../5.2">
+                    5.2
+                  </a>
+                  <a class="item" href="../5.1">
+                    5.1
+                  </a>
+                  <a class="item" href="../5.0">
+                    5.0
+                  </a>
+                </div>
+              </div>
+              <!-- / Here we want to display all the known versions -->
+              <div class="dropdown item link ui">
+                Documentation
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="/orm/documentation/5.4/">
+                    5.4
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.3/">
+                    5.3
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.2/">
+                    5.2
+                  </a>
+                  <a class="item" href="/orm/documentation/5.1/">
+                    5.1
+                  </a>
+                  <a class="item" href="/orm/documentation/5.0/">
+                    5.0
+                  </a>
+                  <a class="item" href="/orm/documentation/4.3/">
+                    4.3
+                  </a>
+                  <a class="item" href="/orm/documentation/4.2/">
+                    4.2
+                  </a>
+                </div>
+              </div>
+              <a class="item" href="../../books">
+                <i class="book grid icon"></i>
+                Books
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                <i class="grid icon share"></i>
+                Migration guides
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="../../tooling">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="../../envers">
+                <i class="grid icon time"></i>
+                Envers
+              </a>
+              <a class="item" href="../../contribute">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="../../support">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="../../faq">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="ui fluid vertical menu">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+            <hr>
+            <div class="license">
+              Released under the
+              <a href="http://hibernate.org/license/">LGPL V2.1</a>
+            </div>
           </div>
-          </div>
-          <div id="toc" class="toc">
-          <div id="toctitle">Table of Contents</div>
-          <ul class="sectlevel1">
-          <li><a href="#the-short-version">The short version</a></li>
-          <li><a href="#the-long-version">The long version</a>
-          <ul class="sectlevel2">
-          <li><a href="#building-the-docker-image">Building the Docker image</a></li>
-          <li><a href="#running-the-container">Running the container</a></li>
-          </ul>
-          </li>
-          </ul>
-          </div>
-          </div>
-          <div class="sect1">
-          <h2 id="the-short-version"><a class="anchor" href="#the-short-version"></a>The short version</h2>
-          <div class="sectionbody">
-          <div class="paragraph">
-          <p>The short version. If you are lucky all you need is:</p>
-          </div>
-          <div class="listingblock">
-          <div class="content">
-          <pre class="CodeRay highlight"><code>&gt; cd docker&#x000A;&gt; docker build -t hibernate/hibernate.org .&#x000A;&gt; docker run -t -i -p 4242:4242 -v `pwd | xargs dirname`:/home/dev/hibernate.org hibernate/hibernate.org</code></pre>
-          </div>
-          </div>
-          <div class="paragraph">
-          <p>Once you have a bash into the running container you can use the various Rake task to
-          drive awestruct.</p>
-          </div>
-          <div class="admonitionblock tip">
-          <table>
-          <tr>
-          <td class="icon">
-          <i class="fa icon-tip" title="Tip"></i>
-          </td>
-          <td class="content">
-          <div class="paragraph">
-          <p>The first time you use the Docker approach make sure that you don&#8217;t have any changes
-          in your local checkout of hibernate.org, in particular temp files generated by
-          Bundler. You can for example run <code>git clean -fxd</code>, but make sure you have no
-          outstanding changes.</p>
-          </div>
-          </td>
-          </tr>
-          </table>
-          </div>
-          <div class="admonitionblock tip">
-          <table>
-          <tr>
-          <td class="icon">
-          <i class="fa icon-tip" title="Tip"></i>
-          </td>
-          <td class="content">
-          <div class="paragraph">
-          <p>On Linux you might need to use <em>sudo</em> to execute docker commands. If you want to
-          avoid that have a look at <a href="https://docs.docker.com/installation/ubuntulinux/#create-a-docker-group">create a docker group</a>.</p>
-          </div>
-          </td>
-          </tr>
-          </table>
-          </div>
-          <div class="admonitionblock note">
-          <table>
-          <tr>
-          <td class="icon">
-          <i class="fa icon-note" title="Note"></i>
-          </td>
-          <td class="content">
-          <div class="paragraph">
-          <p><code>pwd | xargs dirname</code> tries to determine the full path to the root directory of your
-          hibernate.org checkout. It assumes you are in the <em>docker</em> sub-directory when you
-          execute it. If you replace <code>pwd | xargs dirname</code> with your specific root directory
-          path, you can run this command from anywhere.</p>
-          </div>
-          </td>
-          </tr>
-          </table>
-          </div>
-          </div>
-          </div>
-          <div class="sect1">
-          <h2 id="the-long-version"><a class="anchor" href="#the-long-version"></a>The long version</h2>
-          <div class="sectionbody">
-          <div class="sect2">
-          <h3 id="building-the-docker-image"><a class="anchor" href="#building-the-docker-image"></a>Building the Docker image</h3>
-          <div class="paragraph">
-          <p>First step is to build the Docker image containing your awestruct setup.
-          This step could eventually be replaced by a automatically build image made
-          available via a Docker repository. For now, however, we build this image locally.</p>
-          </div>
-          <div class="listingblock">
-          <div class="content">
-          <pre class="CodeRay highlight"><code>&gt; docker build -t hibernate/hibernate.org .</code></pre>
-          </div>
-          </div>
-          <div class="paragraph">
-          <p>Whenever the gem dependencies change, you will need to rebuild the image to make sure
-          you get a working environment out of the box.</p>
-          </div>
-          <div class="paragraph">
-          <p>Below you see the used Dockerfile with some comments:</p>
-          </div>
-          <div class="listingblock">
-          <div class="title">Dockerfile for Awestruct setup based on Fedora 22</div>
-          <div class="content">
-          <pre class="CodeRay highlight"><code>FROM       fedora:22&#x000A;&#x000A;# install the required dependencies to complile natice extensions&#x000A;RUN        dnf -y install gcc-c++ make ruby-devel libxml2-devel libxslt-devel findutils git ruby <i class="conum" data-value="1"></i><b>(1)</b>&#x000A;&#x000A;RUN        groupadd -r dev &amp;&amp; useradd  -g dev -u 1000 dev <i class="conum" data-value="2"></i><b>(2)</b>&#x000A;RUN        mkdir -p /home/dev&#x000A;RUN        chown dev:dev /home/dev&#x000A;&#x000A;# From here we run everything as dev user&#x000A;USER       dev&#x000A;&#x000A;# Setup all the env variables needed for ruby&#x000A;ENV        HOME /home/dev&#x000A;ENV        GEM_HOME $HOME/.gems&#x000A;ENV        GEM_PATH $HOME/.gems&#x000A;ENV        PATH $PATH:$GEM_HOME/bin&#x000A;ENV        LC_ALL en_US.UTF-8&#x000A;ENV        LANG en_US.UTF-8&#x000A;RUN        mkdir $HOME/.gems&#x000A;&#x000A;# Install Rake and Bundler for driving the Awestruct build &amp; site&#x000A;RUN        gem install -N rake bundler&#x000A;&#x000A;# Clone hibernate.org in order to run the setup task&#x000A;RUN        git clone https://github.com/hibernate/in.relation.to.git <i class="conum" data-value="3"></i><b>(3)</b>&#x000A;RUN        cd $HOME/hibernate.org &amp;&amp; git checkout production &amp;&amp; rake setup&#x000A;&#x000A;# We need to patch awestruct to make auto generation work. On mounted volumes file&#x000A;# change montoring will only work with polling&#x000A;RUN        gem contents awestruct | grep auto.rb | xargs sed -i "s/^\(.*force_polling =\).*/\1 true/" <i class="conum" data-value="4"></i><b>(4)</b>&#x000A;&#x000A;EXPOSE     4242&#x000A;VOLUME     $HOME/hibernate.org&#x000A;WORKDIR    $HOME/hibernate.org&#x000A;&#x000A;CMD [ "/bin/bash" ]</code></pre>
-          </div>
-          </div>
-          <div class="colist arabic">
-          <table>
-          <tr>
-          <td><i class="conum" data-value="1"></i><b>1</b></td>
-          <td>Install all dependencies, especially the ones needed to compile native
-          extensions. After changes to the gem dependencies this might need to be updated.
-          Otherwise we rely on the default ruby version available via <em>dnf</em>.</td>
-          </tr>
-          <tr>
-          <td><i class="conum" data-value="2"></i><b>2</b></td>
-          <td>In order for the container to be able to modify files in your mounted volume,
-          we need to make sure that the created <em>dev</em> user gets the same user id as the files
-          have on the host machine. In many cases 1000 is a good guess, but in case you are
-          getting file permission errors when running <code>rake preview</code> you want to check which
-          user id the files have when mounted into the container. Use this user id as part of
-          the <code>useradd</code> command and re-build the image.</td>
-          </tr>
-          <tr>
-          <td><i class="conum" data-value="3"></i><b>3</b></td>
-          <td>If you use SELinux, Docker might refuse to give you access to some of the files
-          in your mounted volume. You can try doing it the right way (good luck), or you can
-          simply add <code>--security-opt label:disable</code> to the command below to disable SELinux in
-          that specific container.</td>
-          </tr>
-          <tr>
-          <td><i class="conum" data-value="4"></i><b>4</b></td>
-          <td>We need the checkout to setup the awestruct environment. At runtime the checkout
-          will be overridden by the mounted volume</td>
-          </tr>
-          <tr>
-          <td><i class="conum" data-value="5"></i><b>5</b></td>
-          <td>An awestruct hack. Awestruct uses live-reload to determine file changes in order
-          to trigger re-generation of pages. live-reload allows to configure how changes are
-          detected, but awestruct does not expose this option. When mounting your checkout as
-          a volume, the default detection fails (at least on Mac using boot2docker) and polling
-          needs to be used. This sed command will patch the awestruct version we use. Obviously
-          this is very fragile to changes in awestruct version</td>
-          </tr>
-          </table>
-          </div>
-          </div>
-          <div class="sect2">
-          <h3 id="running-the-container"><a class="anchor" href="#running-the-container"></a>Running the container</h3>
-          <div class="paragraph">
-          <p>Once you have your image you can run the docker container and use it to drive your
-          awestruct site. The site can be previewed under <a href="http://localhost:4242" class="bare">http://localhost:4242</a> on Linux or
-          <a href="http://&lt;docker-ip&gt;:4242" class="bare">http://&lt;docker-ip&gt;:4242</a> with boot2docker, where <em>docker-ip</em> can be retrieved via
-          <code>boot2docker ip</code>.</p>
-          </div>
-          <div class="listingblock">
-          <div class="content">
-          <pre class="CodeRay highlight"><code>&gt; docker run -t -i -p 4242:4242 -v &lt;path to root directry of hibernate.org checkout&gt;:/home/dev/hibernate.org hibernate/hibernate.org</code></pre>
-          </div>
-          </div>
-          </div>
-          </div>
+          <div class="column thirteen wide computer sixteen wide mobile">
+            <div class="content" id="content">
+              <div id="toc">
+                <div id="toctitle">
+                  Quick links
+                </div>
+                <ul>
+                  <li>
+                    <a class="item" href="#compatibility">
+                      Compatibility
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#documentation">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#get-it">
+                      How to get it
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#whats-new">
+                      What's new
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#migrate">
+                      Migrate
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#releases">
+                      Releases in this series
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <h2 id="compatibility">Compatibility</h2>
+              <table class="ui collapsing table striped celled unstackable">
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+                      Java
+                    </a>
+                  </td>
+                  <td>
+                    8+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
+                      JPA
+                    </a>
+                  </td>
+                  <td>
+                    2.2
+                  </td>
+                </tr>
+              </table>
+              <p>
+                Not compatible with your requirements? Have a look at the
+                <a href="../">
+                  other series.
+                </a>
+              </p>
+              <h2 id="documentation">Documentation</h2>
+              <p>
+                Documentation for this specific series can be accessed through the links below:
+              </p>
+              <p>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html">
+                  <i class="icon file text outline"></i>
+                  HTML
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/5.4/javadocs/">
+                  <i class="icon code outline"></i>
+                  API (JavaDoc)
+                </a>
+              </p>
+              <p>
+                You can find more documentation for all series on the
+                <a href="../../documentation">
+                  documentation page.
+                </a>
+              </p>
+              <h2 id="get-it">How to get it</h2>
+              <div class="ui grid equal height stackable download-options">
+                <div class="eleven wide column">
+                  <h3>Maven, Gradle...</h3>
+                  <p>
+                    Maven artifacts of Hibernate ORM are published to
+                    <a href="https://search.maven.org">
+                      Maven Central
+                    </a>
+                    and to
+                    <a href="https://bintray.com/hibernate">
+                      Bintray.
+                    </a>
+                  </p>
+                  <p>
+                    You can find the Maven coordinates of all artifacts through the link below:
+                    <p>
+                      <a class="ui right labeled button primary icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                    </p>
+                  </p>
+                </div>
+                <div class="five wide column divided">
+                  <h3>Zip archive</h3>
+                  <p>
+                    Direct download is available from SourceForge:
+                  </p>
+                  <p>
+                    <a class="ui right labeled button primary icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.4.0.CR1/hibernate-release-5.4.0.CR1.zip/download" title="Download">
+                      <i class="icon cloud download"></i>
+                      Download Zip archive
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p>
+                More information about specific releases (announcements, download links) can be found
+                <a href="#releases">
+                  here.
+                </a>
+              </p>
+              <h2 id="whats-new">What's new</h2>
+              <p>
+                Latest release announcement (2018-11-15):
+                <a href="http://in.relation.to/2018/11/15/hibernate-orm-540-cr1-out/">
+                  5.4.0.CR1.
+                </a>
+              </p>
+              <p>
+                A detailed list of new features, improvements and fixes in this series can be found
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.4.0.CR1)%20ORDER%20BY%20updated">
+                  on our JIRA instance.
+                </a>
+              </p>
+              <div class="sect2">
+              <h3 id="entitygraph-improvements"><a class="anchor" href="#entitygraph-improvements"></a>EntityGraph improvements</h3>
+              <div class="paragraph">
+              <p>Hibernate ORM 5.4 adds 2 new features to help make working with EntityGraphs easier:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>EntityGraph parsing</p>
+              </li>
+              <li>
+              <p>EntityGraph manipulation</p>
+              </li>
+              </ul>
+              </div>
+              <div class="paragraph">
+              <p>The entry point for these 2 features is the <code>org.hibernate.graph.EntityGraphs</code> class.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="jdk-11-support"><a class="anchor" href="#jdk-11-support"></a>JDK 11 support</h3>
+              <div class="paragraph">
+              <p>Hibernate ORM now supports JDK 11 out of the box.</p>
+              </div>
+              </div>
+              <h2 id="migrate">Migrate</h2>
+              <p>
+                If you need to upgrade from a previous series, please refer to the
+                <a href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                  migration guide.
+                </a>
+              </p>
+              <h2 id="releases">Releases in this series</h2>
+              <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <p>
+                      <span class="label orange ui version">
+                        5.4.0.CR1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2018-11-15</small>
+                    </p>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      EntityGraph improvements, JDK 11 support, bug fixes
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.4.0.CR1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.4.0.CR1/hibernate-release-5.4.0.CR1.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.4.0.CR1)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/11/15/hibernate-orm-540-cr1-out/">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <script>
+        $(document).ready(function() {
+          $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+        });
+      </script>
       <div class="ui inverted vertical footer segment print hidden">
         <div class="ui container">
           <div class="ui stackable inverted divided equal height stackable grid">
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../search" title="Search">Hibernate Search</a>
-                <a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../others" title="Other projects">Other projects</a>
+                <a class="item" href="../.." title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -661,7 +870,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -671,12 +880,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>
@@ -706,7 +915,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate", "hibernate", true);
+        renderTabzilla("Hibernate ORM", "orm", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
