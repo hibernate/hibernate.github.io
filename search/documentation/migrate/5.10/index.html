@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1542614378" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1542636137" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -610,36 +610,42 @@
               </div>
               <div class="sect2">
               <h3 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h3>
-              <div class="admonitionblock warning">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-warning" title="Warning"></i>
-              </td>
-              <td class="content">
-              Not determined yet. To be determined upon the CR or release.
-              </td>
-              </tr>
-              </table>
+              <div class="paragraph">
+              <p>This version of Hibernate Search now requires using Hibernate ORM versions from the <code>5.3.x</code> family.</p>
+              </div>
+              <div class="paragraph">
+              <p>This implies it now requires <strong>JPA 2.2</strong>, as that&#8217;s the version of JPA implemented by Hibernate ORM 5.3.</p>
               </div>
               </div>
               <div class="sect2">
               <h3 id="configuration-changes"><a class="anchor" href="#configuration-changes"></a>Configuration changes</h3>
-              <div class="admonitionblock warning">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-warning" title="Warning"></i>
-              </td>
-              <td class="content">
-              Not determined yet. To be determined upon the CR or release.
-              </td>
-              </tr>
-              </table>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>We <a href="http://hibernate.org/search/releases/5.10/#jpms-automatic-module-names">added Java module names to our JARs</a>.
+              The JVM was previously deriving the names from the JAR file names,
+              as it does with all JARs where no module name is defined.
+              If you have dependencies to Hibernate Search in your <code>module-info</code>,
+              you might need to update these dependencies.</p>
+              </li>
+              </ul>
               </div>
               </div>
               <div class="sect2">
               <h3 id="api-changes"><a class="anchor" href="#api-changes"></a>API changes</h3>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p><code>ElasticsearchEnvironment.ANALYSIS_DEFINITION_PROVIDER</code> now contains <code>elasticsearch.analysis_definition_provider</code>,
+              without the <code>hibernate.search.</code> prefix, consistently with other constants in the same class.</p>
+              </li>
+              <li>
+              <p>Binary compatibility with Hibernate Search 5.5 has been restored
+              in the few places of our API that had changed in incompatible way.
+              This is mainly of interest to Hibernate Search integrators.</p>
+              </li>
+              </ul>
+              </div>
               <div class="admonitionblock warning">
               <table>
               <tr>
@@ -655,33 +661,24 @@
               </div>
               <div class="sect2">
               <h3 id="spi-changes"><a class="anchor" href="#spi-changes"></a>SPI changes</h3>
-              <div class="admonitionblock warning">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-warning" title="Warning"></i>
-              </td>
-              <td class="content">
-              Not determined yet. To be determined upon the CR or release.
-              </td>
-              </tr>
-              </table>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Two methods have been removed from <code>org.hibernate.search.indexes.spi.IndexManagerType</code>:
+              <code>createAnalyzerStrategy</code> and <code>createMissingValueStrategy</code>.
+              To replace them, we added <code>IndexFamilyImplementor createIndexFamily(ServiceManager, SearchConfiguration)</code>,
+              which creates an intermediary "index family" which in turns provides the analyzer strategy and missing value strategy.
+              See the javadoc for <code>org.hibernate.search.indexes.spi.IndexFamilyImplementor</code> for more information.</p>
+              </li>
+              <li>
+              <p><code>org.hibernate.search.hcore.spi.EnvironmentSynchronizer</code> now exposes a
+              <code>org.hibernate.search.hcore.spi.EnvironmentSynchronizer#whenEnvironmentDestroying</code> method.</p>
+              </li>
+              </ul>
               </div>
               </div>
               <div class="sect2">
               <h3 id="behavior-changes"><a class="anchor" href="#behavior-changes"></a>Behavior changes</h3>
-              <div class="admonitionblock warning">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-warning" title="Warning"></i>
-              </td>
-              <td class="content">
-              Not fully determined yet. To be determined upon the CR or release.
-              </td>
-              </tr>
-              </table>
-              </div>
               <div class="ulist">
               <ul>
               <li>
