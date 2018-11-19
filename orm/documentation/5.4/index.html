@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>5.3 series - Hibernate ORM</title>
+    <title>Documentation - 5.4 - Hibernate ORM</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1542614378" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1542614377" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -38,11 +38,11 @@
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="active item" href="/orm/releases/">
+              <a class="item" href="/orm/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
-              <a class="item" href="/orm/documentation/">
+              <a class="active item" href="/orm/documentation/">
                 <i class="folder grid icon open"></i>
                 Documentation
               </a>
@@ -470,25 +470,49 @@
                 </h1>
                 <h2>
                   <span>
-                    5.3 series
+                    Documentation - 5.4
                   </span>
-                  <span class="green label tag ui">stable</span>
                 </h2>
               </div>
               <div class="column four wide middle aligned">
-                
+                <div class="jumbotron-button">
+                  <div class="ui segment raised" id="documentation-version-selector-container">
+                    <form class="ui form">
+                      <div class="field">
+                        <label>Other versions</label>
+                        <select class="ui fluid dropdown selection" onchange="location = this.options[this.selectedIndex].value;">
+                          <option selected value="/orm/documentation/5.4">
+                            5.4
+                          </option>
+                          <option value="/orm/documentation/5.3">
+                            5.3
+                          </option>
+                          <option value="/orm/documentation/5.2">
+                            5.2
+                          </option>
+                          <option value="/orm/documentation/5.1">
+                            5.1
+                          </option>
+                          <option value="/orm/documentation/5.0">
+                            5.0
+                          </option>
+                          <option value="/orm/documentation/4.3">
+                            4.3
+                          </option>
+                          <option value="/orm/documentation/4.2">
+                            4.2
+                          </option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="page-title small">
-        <div class="ui container">
-          <h4>
-            JPA 2.2, inheritance caching
-          </h4>
-        </div>
-      </div>
+      
       <div class="ui container page-content">
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
@@ -497,40 +521,40 @@
                 <i class="grid home icon"></i>
                 About
               </a>
-              <div class="dropdown item link selected ui">
+              <div class="dropdown item link ui">
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="..">
+                  <a class="item" href="../../releases">
                     Overview
                   </a>
-                  <a class="item" href="../5.4">
+                  <a class="item" href="../../releases/5.4">
                     5.4
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
                   </a>
-                  <a class="item selected" href=".">
+                  <a class="item" href="../../releases/5.3">
                     5.3
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="../5.2">
+                  <a class="item" href="../../releases/5.2">
                     5.2
                   </a>
-                  <a class="item" href="../5.1">
+                  <a class="item" href="../../releases/5.1">
                     5.1
                   </a>
-                  <a class="item" href="../5.0">
+                  <a class="item" href="../../releases/5.0">
                     5.0
                   </a>
                 </div>
               </div>
               <!-- / Here we want to display all the known versions -->
-              <div class="dropdown item link ui">
+              <div class="dropdown item link selected ui">
                 Documentation
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="/orm/documentation/5.4/">
+                  <a class="item selected" href="/orm/documentation/5.4/">
                     5.4
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
@@ -624,556 +648,88 @@
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
-              <div id="toc">
-                <div id="toctitle">
-                  Quick links
-                </div>
-                <ul>
-                  <li>
-                    <a class="item" href="#compatibility">
-                      Compatibility
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#documentation">
-                      Documentation
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#get-it">
-                      How to get it
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#whats-new">
-                      What's new
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#migrate">
-                      Migrate
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#releases">
-                      Releases in this series
-                    </a>
-                  </li>
-                </ul>
+              <div class="sect1">
+              <h2 id="guides-and-such"><a class="anchor" href="#guides-and-such"></a>Guides and such</h2>
+              <div class="sectionbody">
+              <div class="dlist">
+              <dl>
+              <dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/quickstart/html_single/">Getting Started Guide</a></dt>
+              <dd>
+              <p>A quickstart-style guide with tutorials.  See also the Obtaining Hibernate section discussing the Hibernate artifacts and how to obtain them.</p>
+              </dd>
+              <dt class="hdlist1"><a href="https://github.com/hibernate/hibernate-orm/blob/5.4/migration-guide.adoc">Migration Guide</a></dt>
+              <dd>
+              <p>Migration guide covering migration to 5.4 from the previous version</p>
+              </dd>
+              <dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html">User Guide</a></dt>
+              <dd>
+              <p>Guide covering most user facing concepts and APIs of Hibernate</p>
+              </dd>
+              <dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/integrationguide/html_single/Hibernate_Integration_Guide.html">Integrations Guide</a></dt>
+              <dd>
+              <p>Guide covering topics of interest for developers looking to develop integrations with Hibernate.</p>
+              </dd>
+              <dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/javadocs/">Hibernate JavaDoc</a></dt>
+              <dd>
+              <p>The Hibernate JavaDocs</p>
+              </dd>
+              <dt class="hdlist1"><a href="https://docs.jboss.org/hibernate/orm/5.4/topical/html_single/wildfly/Wildfly.html">WildFly, updating in</a></dt>
+              <dd>
+              <p>Guide to update WildFly 12 to use the latest version of Hibernate ORM 5.4</p>
+              </dd>
+              <dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/jpa/2.2/api/">JPA 2.2 JavaDoc</a></dt>
+              <dd>
+              <p>The JPA (2.2) JavaDocs</p>
+              </dd>
+              <dt class="hdlist1"><a href="/orm/faq/">FAQ</a></dt>
+              <dd>
+              <p>The FAQ</p>
+              </dd>
+              <dt class="hdlist1"><a href="https://community.jboss.org/en/hibernate">JBoss-hosted wiki</a></dt>
+              <dd>
+              <p>Wiki (older content) hosted at JBoss.org</p>
+              </dd>
+              <dt class="hdlist1"><a href="https://github.com/hibernate/hibernate-orm/wiki/_pages">GitHub-hosted wiki</a></dt>
+              <dd>
+              <p>Wiki hosted at GitHub</p>
+              </dd>
+              </dl>
               </div>
-              <h2 id="compatibility">Compatibility</h2>
-              <table class="ui collapsing table striped celled unstackable">
-                <tr>
-                  <td>
-                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
-                      Java
-                    </a>
-                  </td>
-                  <td>
-                    8+
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
-                      JPA
-                    </a>
-                  </td>
-                  <td>
-                    2.2
-                  </td>
-                </tr>
-              </table>
-              <p>
-                Not compatible with your requirements? Have a look at the
-                <a href="../">
-                  other series.
-                </a>
-              </p>
-              <h2 id="documentation">Documentation</h2>
-              <p>
-                Documentation for this specific series can be accessed through the links below:
-              </p>
-              <p>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/orm/userguide/html_single/Hibernate_User_Guide.html">
-                  <i class="icon file text outline"></i>
-                  HTML
-                </a>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/orm/javadocs/">
-                  <i class="icon code outline"></i>
-                  API (JavaDoc)
-                </a>
-              </p>
-              <p>
-                You can find more documentation for all series on the
-                <a href="../../documentation">
-                  documentation page.
-                </a>
-              </p>
-              <h2 id="get-it">How to get it</h2>
-              <div class="ui grid equal height stackable download-options">
-                <div class="eleven wide column">
-                  <h3>Maven, Gradle...</h3>
-                  <p>
-                    Maven artifacts of Hibernate ORM are published to
-                    <a href="https://search.maven.org">
-                      Maven Central
-                    </a>
-                    and to
-                    <a href="https://bintray.com/hibernate">
-                      Bintray.
-                    </a>
-                  </p>
-                  <p>
-                    You can find the Maven coordinates of all artifacts through the link below:
-                    <p>
-                      <a class="ui right labeled button primary icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                    </p>
-                  </p>
-                </div>
-                <div class="five wide column divided">
-                  <h3>Zip archive</h3>
-                  <p>
-                    Direct download is available from SourceForge:
-                  </p>
-                  <p>
-                    <a class="ui right labeled button primary icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.7.Final/hibernate-release-5.3.7.Final.zip/download" title="Download">
-                      <i class="icon cloud download"></i>
-                      Download Zip archive
-                    </a>
-                  </p>
-                </div>
               </div>
-              <p>
-                More information about specific releases (announcements, download links) can be found
-                <a href="#releases">
-                  here.
-                </a>
-              </p>
-              <h2 id="whats-new">What's new</h2>
-              <p>
-                Latest release announcement (2018-10-17):
-                <a href="http://in.relation.to/2018/10/17/hibernate-orm-537-final-out/">
-                  5.3.7.Final.
-                </a>
-              </p>
-              <p>
-                A detailed list of new features, improvements and fixes in this series can be found
-                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.7%2C%205.3.6%2C%205.3.5%2C%205.3.4%2C%205.3.3%2C%205.3.2%2C%205.3.1%2C%205.3.0%2C%205.3.0.CR2%2C%205.3.0.CR1%2C%205.3.0.Beta2%2C%205.3.0.Beta1)%20ORDER%20BY%20updated">
-                  on our JIRA instance.
-                </a>
-              </p>
-              
-              <h2 id="migrate">Migrate</h2>
-              <p>
-                If you need to upgrade from a previous series, please refer to the
-                <a href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-                  migration guide.
-                </a>
-              </p>
-              <h2 id="releases">Releases in this series</h2>
-              <div class="ui stackable grid series-versions">
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.7.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-10-17</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      bugfixes
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.7.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.7.Final/hibernate-release-5.3.7.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.7)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/10/17/hibernate-orm-537-final-out/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.6.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-08-28</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      fixes related to the security manager
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.6.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.6.Final/hibernate-release-5.3.6.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.6)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.5.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-08-14</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      bugfixes, naive limit handler for Sybase
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.5.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.5.Final/hibernate-release-5.3.5.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.5)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/08/14/hibernate-orm-535-final-out/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.4.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-08-02</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      bugfixes, security manager support
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.4.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.4.Final/hibernate-release-5.3.4.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.4)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/08/02/hibernate-orm-534-final-out/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.3.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-07-24</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      bugfixes, JDK 11 support
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.3.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.3.Final/hibernate-release-5.3.3.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.3)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/07/24/hibernate-orm-533-final-out/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.2.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-07-05</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      bugfixes, cache usability improvements
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.2.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.2.Final/hibernate-release-5.3.2.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.2)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/07/05/hibernate-orm-532-final-out/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.1.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-05-28</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.1.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.1.Final/hibernate-release-5.3.1.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.1)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/05/28/hibernate-orm-531-final-release/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="green label ui version">
-                        5.3.0.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-05-14</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.0.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.0.Final/hibernate-release-5.3.0.Final.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.0)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/05/14/hibernate-orm-530-final-release/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        5.3.0.CR2
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-04-27</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.0.CR2">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.0.CR2/hibernate-release-5.3.0.CR2.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.0.CR2)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/04/27/hibernate-orm-530-cr2-release/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        5.3.0.CR1
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-02-15</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.0.CR1">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.0.CR1/hibernate-release-5.3.0.CR1.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.0.CR1)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/02/15/hibernate-orm-530-cr1-release/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        5.3.0.Beta2
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-02-01</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/5.3.0.Beta2">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.0.Beta2/hibernate-release-5.3.0.Beta2.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.0.Beta2)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/02/07/hibernate-orm-530-beta2-release/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        5.3.0.Beta1
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-01-18</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.3.0.Beta1">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/5.3.0.Beta1/hibernate-release-5.3.0.Beta1.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.0.Beta1)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/01/18/hibernate-orm-530-beta1-release/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
+              </div>
+              <div class="sect1">
+              <h2 id="presentations"><a class="anchor" href="#presentations"></a>Presentations</h2>
+              <div class="sectionbody">
+              <div class="paragraph">
+              <p>Brett did a few interesting presentations available on Slideshare:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p><a href="http://www.slideshare.net/brmeyer/orm-jpa-hibernate-overview">Gentle introduction on ORMs and JPA</a></p>
+              </li>
+              <li>
+              <p><a href="http://www.slideshare.net/brmeyer/hibernate-orm-performance-31550150">Hibernate ORM: tips, tricks and performance techniques</a></p>
+              </li>
+              <li>
+              <p><a href="http://www.slideshare.net/brmeyer/hibernate-orm-features">Not Just ORM: Powerful Hibernate ORM Features and Capabilities</a></p>
+              </li>
+              </ul>
+              </div>
+              <div class="paragraph">
+              <p>If you are interested in <strong>Hibernate Performance Tuning</strong>, check out Vlad&#8217;s presentation:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p><a href="https://www.youtube.com/watch?v=BTdTEe9QL5k&amp;t=1s">Video</a></p>
+              </li>
+              <li>
+              <p><a href="http://www.slideshare.net/VladMihalcea/high-performance-hibernate-devoxx-france">Slides</a></p>
+              </li>
+              </ul>
+              </div>
+              </div>
               </div>
             </div>
           </div>
