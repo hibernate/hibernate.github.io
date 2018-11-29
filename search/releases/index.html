@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1543458006" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1543487406" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -452,6 +452,7 @@
       </div>
       <script>
         var displayed_series = [];
+        displayed_series.push('6.0');
         displayed_series.push('5.10');
         displayed_series.push('5.9');
         displayed_series.push('5.6');
@@ -479,6 +480,12 @@
                     Latest stable (5.10)
                   </a>
                 </div>
+                <div class="jumbotron-button">
+                  <a class="ui small right labeled icon button orange" href="./6.0/">
+                    <i class="right arrow icon"></i>
+                    Development (6.0)
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -499,6 +506,11 @@
                 <div class="menu">
                   <a class="item selected" href=".">
                     Overview
+                  </a>
+                  <a class="item" href="6.0">
+                    6.0
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
                   </a>
                   <a class="item" href="5.10">
                     5.10
@@ -587,6 +599,26 @@
               </div>
               <h2>Series</h2>
               <div class="ui three column doubling grid series active-series stackable">
+                <div class="column">
+                  <div class="ui raised segment version">
+                    <span class="ui right ribbon label orange">
+                      development
+                    </span>
+                    <h3 class="ui header">
+                      6.0
+                      <small>
+                        2018-11-29
+                      </small>
+                    </h3>
+                    <p>API refresh, Bridge 2.0, Lucene 7, Elasticsearch 6.</p>
+                    <div class="ui right aligned basic segment">
+                      <a class="ui right labeled icon button primary" href="./6.0/">
+                        <i class="right arrow icon"></i>
+                        More info
+                      </a>
+                    </div>
+                  </div>
+                </div>
                 <div class="column">
                   <div class="ui raised segment version">
                     <span class="ui right ribbon label green">
@@ -879,6 +911,9 @@
                       Hibernate Search
                     </th>
                     <th>
+                      6.0
+                    </th>
+                    <th>
                       5.10
                     </th>
                     <th>
@@ -903,6 +938,9 @@
                       8+
                     </td>
                     <td>
+                      8+
+                    </td>
+                    <td>
                       7+
                     </td>
                   </tr>
@@ -911,6 +949,9 @@
                       <a href="/orm/">
                         Hibernate ORM
                       </a>
+                    </td>
+                    <td>
+                      5.3
                     </td>
                     <td>
                       5.3
@@ -929,6 +970,9 @@
                       </a>
                     </td>
                     <td>
+                      7.5
+                    </td>
+                    <td>
                       5.5
                     </td>
                     <td>
@@ -943,6 +987,9 @@
                       <a href="https://www.elastic.co/products/elasticsearch">
                         Elasticsearch
                       </a>
+                    </td>
+                    <td>
+                      5.6 - 6.5
                     </td>
                     <td>
                       2.0 - 5.6

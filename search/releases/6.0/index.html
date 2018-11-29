@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>5.4 series - Hibernate OGM</title>
+    <title>6.0 series - Hibernate Search</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1543487404" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1543487406" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -108,18 +108,18 @@
           </div>
         </div>
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="grid icon search"></i>
             <i class="dropdown icon"></i>
             <strong>Search</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/search/">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="item" href="/search/releases/">
+              <a class="active item" href="/search/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
@@ -246,18 +246,18 @@
           </div>
         </div>
         <div class="item">
-          <a class="active title">
+          <a class="title">
             <i class="grid icon sitemap"></i>
             <i class="dropdown icon"></i>
             <strong>OGM</strong>
           </a>
-          <div class="active content">
+          <div class="content">
             <div class="menu internal-links">
               <a class="item" href="/ogm/">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="active item" href="/ogm/releases/">
+              <a class="item" href="/ogm/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
@@ -434,9 +434,9 @@
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
           <a class="item" href="/orm/">ORM</a>
-          <a class="item" href="/search/">Search</a>
+          <a class="active item" href="/search/">Search</a>
           <a class="item" href="/validator/">Validator</a>
-          <a class="active item" href="/ogm/">OGM</a>
+          <a class="item" href="/ogm/">OGM</a>
           <a class="item" href="/tools/">Tools</a>
           <a class="item" href="/others/">Others</a>
           <div class="right menu">
@@ -452,9 +452,10 @@
       </div>
       <script>
         var displayed_series = [];
-        displayed_series.push('5.4');
-        displayed_series.push('5.3');
-        displayed_series.push('5.2');
+        displayed_series.push('6.0');
+        displayed_series.push('5.10');
+        displayed_series.push('5.9');
+        displayed_series.push('5.6');
       </script>
       <div class="jumbotron small">
         <div class="ui container">
@@ -463,14 +464,14 @@
               <div class="column twelve wide middle aligned">
                 <h1>
                   <span>
-                    Hibernate OGM
+                    Hibernate Search
                   </span>
                 </h1>
                 <h2>
                   <span>
-                    5.4 series
+                    6.0 series
                   </span>
-                  <span class="green label tag ui">stable</span>
+                  <span class="label orange tag ui">development</span>
                 </h2>
               </div>
               <div class="column four wide middle aligned">
@@ -483,7 +484,7 @@
       <div class="page-title small">
         <div class="ui container">
           <h4>
-            WildFly 13 Feature Pack - JPA 2.2 - Hibernate ORM 5.3 - Infinispan 9.4
+            API refresh, Bridge 2.0, Lucene 7, Elasticsearch 6.
           </h4>
         </div>
       </div>
@@ -503,15 +504,20 @@
                     Overview
                   </a>
                   <a class="item selected" href=".">
-                    5.4
+                    6.0
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="../5.10">
+                    5.10
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="../5.3">
-                    5.3
+                  <a class="item" href="../5.9">
+                    5.9
                   </a>
-                  <a class="item" href="../5.2">
-                    5.2
+                  <a class="item" href="../5.6">
+                    5.6
                   </a>
                 </div>
               </div>
@@ -527,6 +533,10 @@
                 <i class="grid icon users"></i>
                 Contribute
               </a>
+              <a class="item" href="../../tooling">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
               <a class="item" href="../../support">
                 <i class="doctor grid icon"></i>
                 Paid support
@@ -537,11 +547,11 @@
               </a>
             </div>
             <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-ogm">
+              <a class="item" href="https://github.com/hibernate/hibernate-search">
                 <i class="code grid icon"></i>
                 Source code
               </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/OGM">
+              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
                 <i class="bug grid icon"></i>
                 Issue tracker
               </a>
@@ -549,23 +559,23 @@
                 <i class="grid icon lock"></i>
                 Security issue
               </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-ogm">
+              <a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
                 <i class="comments grid icon"></i>
                 Forum
               </a>
-              <a class="item" href="http://ci.hibernate.org/job/hibernate-ogm-master/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate/ogm">
+              <a class="item" href="https://community.jboss.org/en/hibernate/search">
                 <i class="edit grid icon"></i>
                 Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/job/hibernate-search/">
+                <i class="grid icon treatment"></i>
+                CI
               </a>
             </div>
             <hr>
             <div class="license">
               Released under the
-              <a href="http://www.gnu.org/licenses/lgpl.html">LGPL</a>
+              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
             </div>
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
@@ -621,16 +631,6 @@
                 </tr>
                 <tr>
                   <td>
-                    <a href="http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
-                      JPA
-                    </a>
-                  </td>
-                  <td>
-                    2.2
-                  </td>
-                </tr>
-                <tr>
-                  <td>
                     <a href="/orm/">
                       Hibernate ORM
                     </a>
@@ -641,12 +641,22 @@
                 </tr>
                 <tr>
                   <td>
-                    <a href="/search/">
-                      Hibernate Search
+                    <a href="https://www.elastic.co/products/elasticsearch">
+                      Elasticsearch
                     </a>
                   </td>
                   <td>
-                    5.10
+                    5.6 - 6.5
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://lucene.apache.org/core/">
+                      Apache Lucene
+                    </a>
+                  </td>
+                  <td>
+                    7.5
                   </td>
                 </tr>
               </table>
@@ -661,15 +671,15 @@
                 Documentation for this specific series can be accessed through the links below:
               </p>
               <p>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/ogm/reference/en-US/html_single/">
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/">
                   <i class="icon file text outline"></i>
                   HTML
                 </a>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/ogm/reference/en-US/pdf/hibernate_ogm_reference.pdf">
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/pdf/hibernate_search_reference.pdf">
                   <i class="icon file pdf outline"></i>
                   PDF
                 </a>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/ogm/api/">
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/api/">
                   <i class="icon code outline"></i>
                   API (JavaDoc)
                 </a>
@@ -685,7 +695,7 @@
                 <div class="eleven wide column">
                   <h3>Maven, Gradle...</h3>
                   <p>
-                    Maven artifacts of Hibernate OGM are published to
+                    Maven artifacts of Hibernate Search are published to
                     <a href="https://search.maven.org">
                       Maven Central
                     </a>
@@ -700,7 +710,7 @@
                   <p>
                     You can find the Maven coordinates of all artifacts through the link below:
                     <p>
-                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.4.0.Final">
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha1">
                         <i class="icon cloud cubes"></i>
                         Maven artifacts
                       </a>
@@ -711,29 +721,23 @@
                   </p>
                   <dl class="sparse">
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-infinispan-embedded%7C5.4.0.Final%7C">
-                        org.hibernate.ogm:hibernate-ogm-infinispan-embedded:5.4.0.Final
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha1%7C">
+                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha1
                       </a>
                     </dt>
-                    <dd>Infinispan integration (embedded)</dd>
+                    <dd>Hibernate ORM mapper</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-infinispan-remote%7C5.4.0.Final%7C">
-                        org.hibernate.ogm:hibernate-ogm-infinispan-remote:5.4.0.Final
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.0.0.Alpha1%7C">
+                        org.hibernate.search:hibernate-search-backend-elasticsearch:6.0.0.Alpha1
                       </a>
                     </dt>
-                    <dd>Infinispan integration (remote)</dd>
+                    <dd>Elasticsearch backend</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-mongodb%7C5.4.0.Final%7C">
-                        org.hibernate.ogm:hibernate-ogm-mongodb:5.4.0.Final
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.0.0.Alpha1%7C">
+                        org.hibernate.search:hibernate-search-backend-lucene:6.0.0.Alpha1
                       </a>
                     </dt>
-                    <dd>MongoDB integration</dd>
-                    <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-neo4j%7C5.4.0.Final%7C">
-                        org.hibernate.ogm:hibernate-ogm-neo4j:5.4.0.Final
-                      </a>
-                    </dt>
-                    <dd>Neo4j integration</dd>
+                    <dd>Lucene backend</dd>
                   </dl>
                 </div>
                 <div class="five wide column divided">
@@ -742,7 +746,7 @@
                     Direct download is available from SourceForge:
                   </p>
                   <p>
-                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.4.0.Final/hibernate-ogm-5.4.0.Final-dist.zip/download" title="Download">
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha1/hibernate-search-6.0.0.Alpha1-dist.zip/download" title="Download">
                       <i class="icon cloud download"></i>
                       Download Zip archive
                     </a>
@@ -757,129 +761,221 @@
               </p>
               <h2 id="whats-new">What's new</h2>
               <p>
+                Latest release announcement (2018-11-29):
+                <a href="http://in.relation.to/2018/11/29/hibernate-search-6-0-0-Alpha1">
+                  6.0.0.Alpha1.
+                </a>
+              </p>
+              <p>
                 A detailed list of new features, improvements and fixes in this series can be found
-                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.4.0.Final%2C%205.4.0.CR1%2C%205.4.0.Beta2%2C%205.4.0.Beta1%2C%205.4.0.Alpha1)%20ORDER%20BY%20updated">
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha1)%20ORDER%20BY%20updated">
                   on our JIRA instance.
                 </a>
               </p>
               <div class="sect2">
-              <h3 id="core"><a class="anchor" href="#core"></a>Core</h3>
+              <h3 id="preview-status"><a class="anchor" href="#preview-status"></a>Preview status</h3>
               <div class="paragraph">
-              <p>Hibernate OGM is now compatible with Hibernate ORM 5.3 and JPA 2.2!
-              Support java.time field types</p>
+              <p>Hibernate Search 6.0 is currently a <strong>technology preview</strong> and is not ready for production.</p>
               </div>
-              <div class="sect3">
-              <h4 id="component-upgrades"><a class="anchor" href="#component-upgrades"></a>Component upgrades</h4>
+              <div class="paragraph">
+              <p>While the core of Hibernate Search 6 is there, there are still a lot of limitations:</p>
+              </div>
               <div class="ulist">
               <ul>
               <li>
-              <p>Hibernate ORM to 5.3.6.Final</p>
+              <p>Features are partially implemented or simply missing.
+              For example, you cannot index a <code>Double</code> property yet,
+              you cannot configure custom Lucene directories,
+              you cannot ignore bridges in the predicate DSL,
+              and so on.</p>
               </li>
               <li>
-              <p>Hibernate Search to 5.10.4.Final</p>
+              <p>APIs are not considered stable yet.</p>
               </li>
               <li>
-              <p>WildFly to 13.0.0.Final</p>
+              <p>The low-level parts of Hibernate Search 5 that improve its efficiency haven&#8217;t been
+              ported to Hibernate Search 6 yet.
+              This results in obvious performance bottlenecks,
+              such as all the indexing works from a multi-threaded application being executed
+              one after another and without any form of batching.</p>
+              </li>
+              </ul>
+              </div>
+              <div class="paragraph">
+              <p>The exact features that are currently implemented and expected to work will be added to the reference documentation
+              as new Alpha versions are released, but to sum up, here is what you can start to play with:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>ORM integration:</p>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Mapping of entities using either annotation mapping or programmatic mapping.
+              However, we do not offer all the options that were available in Search 5 (yet),
+              and we do not support all the data types (yet).</p>
               </li>
               <li>
-              <p>Infinispan to 9.4.0.Final</p>
+              <p>Automatic indexing of ORM entities as they are persisted within a transaction
+              (enabled automatically if Hibernate Search is in your classpath and the entity is mapped).</p>
               </li>
               <li>
-              <p>MongoDB to 3.6.3</p>
+              <p>Search for ORM entities using their Hibernate Search index,
+              and retrieving managed entities as results.
+              However, we do not offer many options regarding how the entities are retrieved and initialized (yet).</p>
               </li>
               <li>
-              <p>Neo4J to 3.4.9</p>
+              <p>Custom, user-defined type bridges, property bridges or value bridges.
+              However, the API to retrieve information from POJOs is currently quite cumbersome:
+              we know that and will work on a lighter API
+              (see <a href="https://hibernate.atlassian.net/browse/HSEARCH-3297">HSEARCH-3297</a>,
+              <a href="https://hibernate.atlassian.net/browse/HSEARCH-3298">HSEARCH-3298</a>).</p>
+              </li>
+              </ul>
+              </div>
+              </li>
+              <li>
+              <p>Search DSL</p>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>All the predicates listed in <code>org.hibernate.search.engine.search.dsl.predicate.SearchPredicateFactoryContext</code>.
+              However, we do not offer all the options that were available in Search 5 (yet).</p>
+              </li>
+              <li>
+              <p>All the sorts listed in <code>org.hibernate.search.engine.search.dsl.sort.SearchSortContainerContext</code>.
+              However, we do not offer all the options that were available in Search 5 (yet).</p>
+              </li>
+              <li>
+              <p>All the projections listed in <code>org.hibernate.search.engine.search.dsl.projection.SearchProjectionFactoryContext</code>.
+              However, we do not offer all the options that were available in Search 5 (yet).</p>
+              </li>
+              </ul>
+              </div>
+              </li>
+              </ul>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="orm-version"><a class="anchor" href="#orm-version"></a>ORM version</h3>
+              <div class="paragraph">
+              <p>Hibernate Search 6 still relies on ORM 5.3 at the moment,
+              because it requires features that are not yet implemented in ORM 6 (still in development).</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="lucene-7"><a class="anchor" href="#lucene-7"></a>Lucene 7</h3>
+              <div class="paragraph">
+              <p>The Lucene backend now uses Lucene 7.5.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="elasticsearch-6"><a class="anchor" href="#elasticsearch-6"></a>Elasticsearch 6</h3>
+              <div class="paragraph">
+              <p>The Elasticsearch backend now works with Elasticsearch 5.6 or 6.5.
+              Support for older versions of Elasticsearch was dropped.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="api-refresh"><a class="anchor" href="#api-refresh"></a>API refresh</h3>
+              <div class="paragraph">
+              <p>A lot of APIs have been changed, for multiple reasons.</p>
+              </div>
+              <div class="sect3">
+              <h4 id="no-more-lucene-in-hibernate-search-apis"><a class="anchor" href="#no-more-lucene-in-hibernate-search-apis"></a>No more Lucene in Hibernate Search APIs</h4>
+              <div class="paragraph">
+              <p>Hibernate Search APIs now abstract from the Lucene APIs,
+              so that alternative backends such as Elasticsearch can be used without having Lucene on your classpath.</p>
+              </div>
+              <div class="paragraph">
+              <p>This should also allow us to upgrade the Lucene version more easily:
+              in Search 5, as Lucene was "part of" our APIs,
+              we were severely limited when we wanted to upgrade to a newer Lucene version,
+              because any breaking change in Lucene could mean a breaking change for our users, too.
+              Now that using Lucene APIs is no longer necessary to use Hibernate Search,
+              upgrades should be faster.</p>
+              </div>
+              </div>
+              <div class="sect3">
+              <h4 id="new-search-dsl"><a class="anchor" href="#new-search-dsl"></a>New Search DSL</h4>
+              <div class="paragraph">
+              <p>The Search DSL is brand new, with several improvements:</p>
+              </div>
+              <div class="ulist">
+              <ul>
+              <li>
+              <p>Ability to use lambdas for more concise query definition, even when queries are complex.</p>
+              </li>
+              <li>
+              <p>Type-safe projections thanks to the brand new projection DSL.</p>
+              </li>
+              <li>
+              <p>Injection of native predicates (<code>org.apache.lucene.search.Query</code>, JSON for Elasticsearch)
+              within DSL-created predicates.
+              This is not new for the Lucene integration, but it is for the Elasticsearch integration.
+              See <code>org.hibernate.search.engine.search.dsl.predicate.SearchPredicateFactoryContext.extension(SearchPredicateFactoryContextExtension&lt;T&gt;)</code>
+              <code>org.hibernate.search.backend.elasticsearch.ElasticsearchExtension.get()</code> and
+              <code>org.hibernate.search.backend.lucene.LuceneExtension.get()</code>.</p>
               </li>
               </ul>
               </div>
               </div>
               <div class="sect3">
-              <h4 id="wildfly-integrations"><a class="anchor" href="#wildfly-integrations"></a>WildFly integrations</h4>
+              <h4 id="bridge-2.0"><a class="anchor" href="#bridge-2.0"></a>Bridge 2.0</h4>
+              <div class="paragraph">
+              <p>The bridge APIs had to change as part of the API refresh,
+              so we took this opportunity to overhaul bridge APIs to make bridges more powerful.</p>
+              </div>
+              <div class="paragraph">
+              <p>The new Bridge APIs are completely different, but with a lot of improvements:</p>
+              </div>
               <div class="ulist">
               <ul>
               <li>
-              <p>WildFly modules are now available as feature packs</p>
+              <p>Custom (user-defined) bridge annotations, allowing to pass type-safe parameters, and not just strings.</p>
               </li>
               <li>
-              <p>WildFly NoSQL integration</p>
+              <p>Better support for dirty checking optimization in bridges (in <code>TypeBridge</code> in particular),
+              by allowing bridges to declare what parts of the entity they use.</p>
+              </li>
+              <li>
+              <p>Predicates on non-String fields will work without having to bypass bridges (<code>.ignoreFieldBridge()</code>) like in Search 5.</p>
+              </li>
+              <li>
+              <p>And more!</p>
               </li>
               </ul>
               </div>
               </div>
-              <div class="sect3">
-              <h4 id="infinispan"><a class="anchor" href="#infinispan"></a>Infinispan</h4>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Caches created by the dialect are now transactional by default</p>
-              </li>
-              <li>
-              <p>Caches created by the dialect can be configured using a cache configuration</p>
-              </li>
-              <li>
-              <p>Supports remote native queries with Ickle</p>
-              </li>
-              <li>
-              <p>Supports JPQL queries for Infinispan Remote dialect</p>
-              </li>
-              <li>
-              <p>Supports scripting and java tasks for Infinispan server</p>
-              </li>
-              <li>
-              <p>Supports remote transactions</p>
-              </li>
-              <li>
-              <p>Allows to define custom Protocol Buffer schema</p>
-              </li>
-              <li>
-              <p>Infinispan remote supports now all unidirectional collections</p>
-              </li>
-              <li>
-              <p>Infinispan remote sequence generation was improved</p>
-              </li>
-              </ul>
+              </div>
+              <div class="sect2">
+              <h3 id="easier-to-use-automatic-indexing"><a class="anchor" href="#easier-to-use-automatic-indexing"></a>Easier to use automatic indexing</h3>
+              <div class="paragraph">
+              <p>Automatic indexing improvements are not limited to bridges:
+              <code>@IndexedEmbedded</code> is easier to configure properly in Search 6, too.</p>
+              </div>
+              <div class="paragraph">
+              <p>To be precise, changes on indexed-embedded entities trigger reindexing of the "embedding" entity automatically,
+              and annotating the inverse side of the association with <code>@ContainedIn</code> is no longer needed in most cases.
+              A mapping error will be reported when the inverse side of the association cannot be resolved.</p>
               </div>
               </div>
-              <div class="sect3">
-              <h4 id="mongodb"><a class="anchor" href="#mongodb"></a>MongoDB</h4>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Stored procedures with positional parameters are now supported</p>
-              </li>
-              <li>
-              <p>New MongoDB CLI operations supported as native queries</p>
-              </li>
-              <li>
-              <p>Supports queries on <code>GeometryCollection</code></p>
-              </li>
-              <li>
-              <p>Supports <code>ReadConcern</code></p>
-              </li>
-              <li>
-              <p>Supports for GridFS</p>
-              </li>
-              </ul>
+              <div class="sect2">
+              <h3 id="runtime-joins"><a class="anchor" href="#runtime-joins"></a>Runtime joins</h3>
+              <div class="paragraph">
+              <p>Hibernate Search 6.0 introduces  "nested" fields and predicates,
+              similar to the feature with the same name in Elasticsearch.</p>
               </div>
-              </div>
-              <div class="sect3">
-              <h4 id="neo4j"><a class="anchor" href="#neo4j"></a>Neo4j</h4>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Server side indexes definitions</p>
-              </li>
-              <li>
-              <p>Supports calls to remote procedures using JPA</p>
-              </li>
-              </ul>
-              </div>
+              <div class="paragraph">
+              <p>See <code>org.hibernate.search.mapper.pojo.mapping.definition.annotation.IndexedEmbedded.storage</code>
+              and <code>org.hibernate.search.engine.search.dsl.predicate.SearchPredicateFactoryContext.nested()</code>.</p>
               </div>
               </div>
               <h2 id="migrate">Migrate</h2>
               <p>
                 If you need to upgrade from a previous series, please refer to the
-                <a href="https://developer.jboss.org/wiki/HibernateOGMMigrationNotes">
+                <a href="/search/documentation/migrate/6.0/">
                   migration guide.
                 </a>
               </p>
@@ -888,193 +984,37 @@
                 <div class="ui row">
                   <div class="three wide column">
                     <p>
-                      <span class="green label ui version">
-                        5.4.0.Final
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-10-29</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Infinispan remote transactions and queries - MongoDB GridFS - Support java.time field types - Neo4j remote procedures
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-core%7C5.4.0.Final%7C">
-                        org.hibernate.ogm:hibernate-ogm-core:5.4.0.Final
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.4.0.Final">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.4.0.Final/hibernate-ogm-5.4.0.Final-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.4.0.Final)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
                       <span class="label orange ui version">
-                        5.4.0.CR1
+                        6.0.0.Alpha1
                       </span>
                     </p>
                     <p>
-                      <small class="ui label">2018-10-01</small>
+                      <small class="ui label">2018-11-29</small>
                     </p>
                   </div>
                   <div class="thirteen wide column">
                     <p>
-                      Infinispan remote transactions - MongoDB ReadConcern - Support java.time field types
+                      Initial implementation: a few field types only, a few predicates/sorts/projections only, sub-optimal work orchestration, minimal documentation.
                     </p>
                     <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-core%7C5.4.0.CR1%7C">
-                        org.hibernate.ogm:hibernate-ogm-core:5.4.0.CR1
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha1%7C">
+                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha1
                       </a>
                     </p>
                     <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.4.0.CR1">
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha1">
                         <i class="icon cloud cubes"></i>
                         Maven artifacts
                       </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.4.0.CR1/hibernate-ogm-5.4.0.CR1-dist.zip/download">
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha1/hibernate-search-6.0.0.Alpha1-dist.zip/download">
                         <i class="icon cloud download"></i>
                         Download
                       </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.4.0.CR1)%20ORDER%20BY%20updated">
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha1)%20ORDER%20BY%20updated">
                         <i class="icon bug"></i>
                         Resolved issues
                       </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/10/01/hibernate-ogm-5-4-CR1-released/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        5.4.0.Beta2
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-07-05</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Neo4j server indexes - Infinispan remote tasks - WildFly NoSQL integration
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-core%7C5.4.0.Beta2%7C">
-                        org.hibernate.ogm:hibernate-ogm-core:5.4.0.Beta2
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.4.0.Beta2">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.4.0.Beta2/hibernate-ogm-5.4.0.Beta2-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.4.0.Beta2)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/07/05/hibernate-ogm-5-4-Beta2-released/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        5.4.0.Beta1
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-05-25</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Hibernate ORM 5.3.0.Final - Supports Infinispan Remote native and JPQL queries
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-core%7C5.4.0.Beta1%7C">
-                        org.hibernate.ogm:hibernate-ogm-core:5.4.0.Beta1
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.4.0.Beta1">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.4.0.Beta1/hibernate-ogm-5.4.0.Beta1-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.4.0.Beta1)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/05/25/hibernate-ogm-5-4-Beta1-released/">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        5.4.0.Alpha1
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-04-17</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      WildFly 12 Feature Pack - JPA 2.2 - Hibernate ORM 5.3 - Infinispan 9.2
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.ogm%7Chibernate-ogm-core%7C5.4.0.Alpha1%7C">
-                        org.hibernate.ogm:hibernate-ogm-core:5.4.0.Alpha1
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.ogm%20AND%20a%3Ahibernate-ogm-%2A%20AND%20v%3A5.4.0.Alpha1">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-ogm/5.4.0.Alpha1/hibernate-ogm-5.4.0.Alpha1-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20OGM%20AND%20fixVersion%20in%20(5.4.0.Alpha1)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/04/17/hibernate-ogm-5-4-Alpha1-released/">
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/11/29/hibernate-search-6-0-0-Alpha1">
                         <i class="icon announcement"></i>
                         Release announcement
                       </a>
@@ -1098,9 +1038,9 @@
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
                 <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../.." title="Search">Hibernate Search</a>
                 <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../.." title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
                 <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
                 <a class="item" href="../../../others" title="Other projects">Other projects</a>
               </div>
@@ -1161,7 +1101,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate OGM", "ogm", true);
+        renderTabzilla("Hibernate Search", "search", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
