@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hibernate Search Migration Guides - Hibernate Search</title>
+    <title>Migration Guide from Hibernate Search 5.10 to 5.11 - Hibernate Search</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
-    <meta content="" name="author">
+    <meta content="Sanne Grinovero, Yoann Rodière" name="author">
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
@@ -470,7 +470,7 @@
                 </h1>
                 <h2>
                   <span>
-                    Hibernate Search Migration Guides
+                    Migration Guide from Hibernate Search 5.10 to 5.11
                   </span>
                 </h2>
               </div>
@@ -486,7 +486,7 @@
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
             <div class="ui fluid vertical menu">
-              <a class="item" href="../..">
+              <a class="item" href="../../..">
                 <i class="grid home icon"></i>
                 About
               </a>
@@ -494,53 +494,53 @@
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="../../releases">
+                  <a class="item" href="../../../releases">
                     Overview
                   </a>
-                  <a class="item" href="../../releases/6.0">
+                  <a class="item" href="../../../releases/6.0">
                     6.0
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
                   </a>
-                  <a class="item" href="../../releases/5.11">
+                  <a class="item" href="../../../releases/5.11">
                     5.11
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
                   </a>
-                  <a class="item" href="../../releases/5.10">
+                  <a class="item" href="../../../releases/5.10">
                     5.10
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="../../releases/5.9">
+                  <a class="item" href="../../../releases/5.9">
                     5.9
                   </a>
-                  <a class="item" href="../../releases/5.6">
+                  <a class="item" href="../../../releases/5.6">
                     5.6
                   </a>
                 </div>
               </div>
-              <a class="item selected" href="..">
+              <a class="item selected" href="../..">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
-              <a class="item" href="../../roadmap">
+              <a class="item" href="../../../roadmap">
                 <i class="grid icon road"></i>
                 Roadmap
               </a>
-              <a class="item" href="../../contribute">
+              <a class="item" href="../../../contribute">
                 <i class="grid icon users"></i>
                 Contribute
               </a>
-              <a class="item" href="../../tooling">
+              <a class="item" href="../../../tooling">
                 <i class="grid icon wrench"></i>
                 Tooling
               </a>
-              <a class="item" href="../../support">
+              <a class="item" href="../../../support">
                 <i class="doctor grid icon"></i>
                 Paid support
               </a>
-              <a class="item" href="../../faq">
+              <a class="item" href="../../../faq">
                 <i class="circle grid help icon"></i>
                 FAQ
               </a>
@@ -579,78 +579,76 @@
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
-              <div class="sect1">
-              <h2 id="migration-guides"><a class="anchor" href="#migration-guides"></a>Migration Guides</h2>
+              <div id="preamble">
               <div class="sectionbody">
               <div class="paragraph">
-              <p>The following guides are meant to help you upgrading an existing application using Hibernate Search to a more recent version.
-              This content is not automatically generated, but structured to give you the high level overview.</p>
+              <p>Here we are helping you migrate your existing Search application to the latest and greatest.</p>
               </div>
-              <div class="dlist">
-              <dl>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/6.0">Migration guide to Hibernate Search 6.0</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.11</em> to <em>6.0</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.11">Migration guide to Hibernate Search 5.11</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.10</em> to <em>5.11</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.10">Migration guide to Hibernate Search 5.10</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.9</em> to <em>5.10</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.9">Migration guide to Hibernate Search 5.9</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.8</em> to <em>5.9</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.8">Migration guide to Hibernate Search 5.8</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.7</em> to <em>5.8</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.7">Migration guide to Hibernate Search 5.7</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.6</em> to <em>5.7</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.6">Migration guide to Hibernate Search 5.6</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.5</em> to <em>5.6</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.5">Migration guide to Hibernate Search 5.5</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.4</em> to <em>5.5</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.4">Migration guide to Hibernate Search 5.4</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.3</em> to <em>5.4</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.3">Migration guide to Hibernate Search 5.3</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.2</em> to <em>5.3</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.2">Migration guide to Hibernate Search 5.2</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.1</em> to <em>5.2</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.1">Migration guide to Hibernate Search 5.1</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.0</em> to <em>5.1</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.0">Migration guide for Hibernate Search 5.0</a></dt>
-              <dd>
-              <p>This is what you need when upgrading from a fairly recent version of Hibernate Search 4, such as <em>4.4.x</em> and <em>4.5.x</em>.
-              If you&#8217;re upgrading from older versions, please migrate to <em>4.5.3.Final</em> first.</p>
-              </dd>
-              </dl>
               </div>
+              <div id="toc" class="toc">
+              <div id="toctitle">Content</div>
+              <ul class="sectlevel1">
+              <li><a href="#upgrade-to-hibernate-search-5-11-x-from-5-10-x">Upgrade to Hibernate Search 5.11.x from 5.10.x</a>
+              <ul class="sectlevel2">
+              <li><a href="#requirements">Requirements</a></li>
+              <li><a href="#configuration-changes">Configuration changes</a></li>
+              <li><a href="#api-changes">API changes</a></li>
+              <li><a href="#spi-changes">SPI changes</a></li>
+              <li><a href="#behavior-changes">Behavior changes</a></li>
+              </ul>
+              </li>
+              </ul>
               </div>
               </div>
               <div class="sect1">
-              <h2 id="hibernate-search-versions-3-and-4"><a class="anchor" href="#hibernate-search-versions-3-and-4"></a>Hibernate Search versions 3 and 4</h2>
+              <h2 id="upgrade-to-hibernate-search-5-11-x-from-5-10-x"><a class="anchor" href="#upgrade-to-hibernate-search-5-11-x-from-5-10-x"></a>Upgrade to Hibernate Search 5.11.x from 5.10.x</h2>
               <div class="sectionbody">
               <div class="paragraph">
-              <p>Details to migrate from and between the various releases of Hibernate Search <em>3.x</em> and <em>4.x</em> are documented on our previous <a href="https://developer.jboss.org/wiki/HibernateSearchMigrationGuide">migration guide wiki</a>.
-              Please note these versions are no longer maintained, so migrating to a more recent <em>5.x</em> version is a very good idea.</p>
+              <p>The aim of this guide is to assist you migrating an existing application using any version <code>5.10.x</code> of Hibernate Search to the latest of the <code>5.11.x</code> series.
+              If you&#8217;re looking to migrate different versions see <a href="/search/documentation/migrate">Hibernate Search migration guides</a>.</p>
+              </div>
+              <div class="admonitionblock note">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-note" title="Note"></i>
+              </td>
+              <td class="content">
+              This document provides pointers for a migration.
+              It refers to Hibernate Search version <code>5.11.0.CR1</code>. If you think something is missing or something does not work, please <a href="/community">contact us</a>.
+              </td>
+              </tr>
+              </table>
+              </div>
+              <div class="sect2">
+              <h3 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h3>
+              <div class="paragraph">
+              <p>This version of Hibernate Search now requires using Hibernate ORM versions from the <code>5.4.x</code> family.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="configuration-changes"><a class="anchor" href="#configuration-changes"></a>Configuration changes</h3>
+              <div class="paragraph">
+              <p>The configuration properties didn&#8217;t change.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="api-changes"><a class="anchor" href="#api-changes"></a>API changes</h3>
+              <div class="paragraph">
+              <p>The APIs didn&#8217;t change.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="spi-changes"><a class="anchor" href="#spi-changes"></a>SPI changes</h3>
+              <div class="paragraph">
+              <p>The SPIs didn&#8217;t change.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="behavior-changes"><a class="anchor" href="#behavior-changes"></a>Behavior changes</h3>
+              <div class="paragraph">
+              <p>No behavior changes to report.</p>
+              </div>
               </div>
               </div>
               </div>
@@ -669,12 +667,12 @@
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../.." title="Search">Hibernate Search</a>
-                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../../others" title="Other projects">Other projects</a>
+                <a class="item" href="../../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../.." title="Search">Hibernate Search</a>
+                <a class="item" href="../../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -688,7 +686,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../../../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -698,12 +696,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../../../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>

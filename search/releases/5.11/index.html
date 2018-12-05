@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hibernate Search Migration Guides - Hibernate Search</title>
+    <title>5.11 series - Hibernate Search</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
@@ -119,11 +119,11 @@
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="item" href="/search/releases/">
+              <a class="active item" href="/search/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
-              <a class="active item" href="/search/documentation/">
+              <a class="item" href="/search/documentation/">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
@@ -470,8 +470,9 @@
                 </h1>
                 <h2>
                   <span>
-                    Hibernate Search Migration Guides
+                    5.11 series
                   </span>
+                  <span class="label orange tag ui">development</span>
                 </h2>
               </div>
               <div class="column four wide middle aligned">
@@ -481,7 +482,13 @@
           </div>
         </div>
       </div>
-      
+      <div class="page-title small">
+        <div class="ui container">
+          <h4>
+            ORM 5.4 compatibility, JDK11 compatibility, upgrade to WildFly 14.
+          </h4>
+        </div>
+      </div>
       <div class="ui container page-content">
         <div class="ui stackable grid">
           <div class="column three wide computer only print hidden">
@@ -490,37 +497,37 @@
                 <i class="grid home icon"></i>
                 About
               </a>
-              <div class="dropdown item link ui">
+              <div class="dropdown item link selected ui">
                 Releases
                 <i class="icon dropdown"></i>
                 <div class="menu">
-                  <a class="item" href="../../releases">
+                  <a class="item" href="..">
                     Overview
                   </a>
-                  <a class="item" href="../../releases/6.0">
+                  <a class="item" href="../6.0">
                     6.0
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
                   </a>
-                  <a class="item" href="../../releases/5.11">
+                  <a class="item selected" href=".">
                     5.11
                     &nbsp;&nbsp;
                     <span class="ui label orange">development</span>
                   </a>
-                  <a class="item" href="../../releases/5.10">
+                  <a class="item" href="../5.10">
                     5.10
                     &nbsp;&nbsp;
                     <span class="ui label green">latest stable</span>
                   </a>
-                  <a class="item" href="../../releases/5.9">
+                  <a class="item" href="../5.9">
                     5.9
                   </a>
-                  <a class="item" href="../../releases/5.6">
+                  <a class="item" href="../5.6">
                     5.6
                   </a>
                 </div>
               </div>
-              <a class="item selected" href="..">
+              <a class="item" href="../../documentation">
                 <i class="book grid icon"></i>
                 Documentation
               </a>
@@ -579,80 +586,319 @@
           </div>
           <div class="column thirteen wide computer sixteen wide mobile">
             <div class="content" id="content">
-              <div class="sect1">
-              <h2 id="migration-guides"><a class="anchor" href="#migration-guides"></a>Migration Guides</h2>
-              <div class="sectionbody">
+              <div id="toc">
+                <div id="toctitle">
+                  Quick links
+                </div>
+                <ul>
+                  <li>
+                    <a class="item" href="#compatibility">
+                      Compatibility
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#documentation">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#get-it">
+                      How to get it
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#whats-new">
+                      What's new
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#migrate">
+                      Migrate
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#releases">
+                      Releases in this series
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <h2 id="compatibility">Compatibility</h2>
+              <table class="ui collapsing table striped celled unstackable">
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+                      Java
+                    </a>
+                  </td>
+                  <td>
+                    8 - 11
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="/orm/">
+                      Hibernate ORM
+                    </a>
+                  </td>
+                  <td>
+                    5.4
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://www.elastic.co/products/elasticsearch">
+                      Elasticsearch
+                    </a>
+                  </td>
+                  <td>
+                    2.0 - 5.6
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://lucene.apache.org/core/">
+                      Apache Lucene
+                    </a>
+                  </td>
+                  <td>
+                    5.5
+                  </td>
+                </tr>
+              </table>
+              <p>
+                Not compatible with your requirements? Have a look at the
+                <a href="../">
+                  other series.
+                </a>
+              </p>
+              <h2 id="documentation">Documentation</h2>
+              <p>
+                Documentation for this specific series can be accessed through the links below:
+              </p>
+              <p>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.11/reference/en-US/html_single/">
+                  <i class="icon file text outline"></i>
+                  HTML
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.11/reference/en-US/pdf/hibernate_search_reference.pdf">
+                  <i class="icon file pdf outline"></i>
+                  PDF
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.11/api/">
+                  <i class="icon code outline"></i>
+                  API (JavaDoc)
+                </a>
+              </p>
+              <p>
+                You can find more documentation for all series on the
+                <a href="../../documentation">
+                  documentation page.
+                </a>
+              </p>
+              <h2 id="get-it">How to get it</h2>
+              <div class="ui grid equal height stackable download-options">
+                <div class="eleven wide column">
+                  <h3>Maven, Gradle...</h3>
+                  <p>
+                    Maven artifacts of Hibernate Search are published to
+                    <a href="https://search.maven.org">
+                      Maven Central
+                    </a>
+                    and to the
+                    <a href="https://repository.jboss.org/nexus/index.html">
+                      JBoss Maven repository.
+                    </a>
+                    Refer to the
+                    <a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+                    on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+                  </p>
+                  <p>
+                    You can find the Maven coordinates of all artifacts through the link below:
+                    <p>
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.0.CR1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                    </p>
+                  </p>
+                  <p>
+                    Below are the Maven coordinates of the main artifacts.
+                  </p>
+                  <dl class="sparse">
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-orm:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>Hibernate ORM integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-elasticsearch:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>Elasticsearch integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch-aws%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-elasticsearch-aws:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>Amazon IAM authentication for Elasticsearch</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jgroups%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-backend-jgroups:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>JGroups backend</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jms%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-backend-jms:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>JMS backend</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-core%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-jsr352-core:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>JSR 352 (Batch for Java) integration - Core</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-jberet%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-jsr352-jberet:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>JSR 352 (Batch for Java) integration - JBeret specifics</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-engine%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-engine:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Engine</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-orm%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-orm:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Hibernate ORM integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Elasticsearch integration</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - Amazon IAM authentication for Elasticsearch</dd>
+                    <dt>
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-jgroups%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-jbossmodules-jgroups:5.11.0.CR1
+                      </a>
+                    </dt>
+                    <dd>WildFly feature pack - JGroups backend</dd>
+                  </dl>
+                </div>
+                <div class="five wide column divided">
+                  <h3>Zip archive</h3>
+                  <p>
+                    Direct download is available from SourceForge:
+                  </p>
+                  <p>
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.0.CR1/hibernate-search-5.11.0.CR1-dist.zip/download" title="Download">
+                      <i class="icon cloud download"></i>
+                      Download Zip archive
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p>
+                More information about specific releases (announcements, download links) can be found
+                <a href="#releases">
+                  here.
+                </a>
+              </p>
+              <h2 id="whats-new">What's new</h2>
+              <p>
+                Latest release announcement (2018-12-05):
+                <a href="http://in.relation.to/2018/12/05/hibernate-search-5-11-0-CR1/">
+                  5.11.0.CR1.
+                </a>
+              </p>
+              <p>
+                A detailed list of new features, improvements and fixes in this series can be found
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.0.CR1)%20ORDER%20BY%20updated">
+                  on our JIRA instance.
+                </a>
+              </p>
+              <div class="sect2">
+              <h3 id="orm54"><a class="anchor" href="#orm54"></a>ORM 5.4</h3>
               <div class="paragraph">
-              <p>The following guides are meant to help you upgrading an existing application using Hibernate Search to a more recent version.
-              This content is not automatically generated, but structured to give you the high level overview.</p>
-              </div>
-              <div class="dlist">
-              <dl>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/6.0">Migration guide to Hibernate Search 6.0</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.11</em> to <em>6.0</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.11">Migration guide to Hibernate Search 5.11</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.10</em> to <em>5.11</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.10">Migration guide to Hibernate Search 5.10</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.9</em> to <em>5.10</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.9">Migration guide to Hibernate Search 5.9</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.8</em> to <em>5.9</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.8">Migration guide to Hibernate Search 5.8</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.7</em> to <em>5.8</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.7">Migration guide to Hibernate Search 5.7</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.6</em> to <em>5.7</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.6">Migration guide to Hibernate Search 5.6</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.5</em> to <em>5.6</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.5">Migration guide to Hibernate Search 5.5</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.4</em> to <em>5.5</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.4">Migration guide to Hibernate Search 5.4</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.3</em> to <em>5.4</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.3">Migration guide to Hibernate Search 5.3</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.2</em> to <em>5.3</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.2">Migration guide to Hibernate Search 5.2</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.1</em> to <em>5.2</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.1">Migration guide to Hibernate Search 5.1</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.0</em> to <em>5.1</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.0">Migration guide for Hibernate Search 5.0</a></dt>
-              <dd>
-              <p>This is what you need when upgrading from a fairly recent version of Hibernate Search 4, such as <em>4.4.x</em> and <em>4.5.x</em>.
-              If you&#8217;re upgrading from older versions, please migrate to <em>4.5.3.Final</em> first.</p>
-              </dd>
-              </dl>
+              <p>Hibernate Search 5.11 is designed to work with Hibernate ORM 5.4.</p>
               </div>
               </div>
-              </div>
-              <div class="sect1">
-              <h2 id="hibernate-search-versions-3-and-4"><a class="anchor" href="#hibernate-search-versions-3-and-4"></a>Hibernate Search versions 3 and 4</h2>
-              <div class="sectionbody">
+              <div class="sect2">
+              <h3 id="jdk11"><a class="anchor" href="#jdk11"></a>JDK11 compatibility</h3>
               <div class="paragraph">
-              <p>Details to migrate from and between the various releases of Hibernate Search <em>3.x</em> and <em>4.x</em> are documented on our previous <a href="https://developer.jboss.org/wiki/HibernateSearchMigrationGuide">migration guide wiki</a>.
-              Please note these versions are no longer maintained, so migrating to a more recent <em>5.x</em> version is a very good idea.</p>
+              <p>Hibernate Search 5.11 is designed to work with both JDK8 and JDK11.</p>
               </div>
               </div>
+              <div class="sect2">
+              <h3 id="wildfly-14"><a class="anchor" href="#wildfly-14"></a>Upgrade to WildFly 14</h3>
+              <div class="paragraph">
+              <p>Hibernate Search&#8217;s JBoss modules now target WildFly 14.</p>
+              </div>
+              </div>
+              <h2 id="migrate">Migrate</h2>
+              <p>
+                If you need to upgrade from a previous series, please refer to the
+                <a href="/search/documentation/migrate/5.11/">
+                  migration guide.
+                </a>
+              </p>
+              <h2 id="releases">Releases in this series</h2>
+              <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <p>
+                      <span class="label orange ui version">
+                        5.11.0.CR1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2018-12-05</small>
+                    </p>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      Upgrade to ORM 5.4.0.CR2, JDK11 compatibility, upgrade to WildFly 14
+                    </p>
+                    <p>
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.11.0.CR1%7C">
+                        org.hibernate:hibernate-search-orm:5.11.0.CR1
+                      </a>
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.0.CR1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.0.CR1/hibernate-search-5.11.0.CR1-dist.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.0.CR1)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/12/05/hibernate-search-5-11-0-CR1/">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
