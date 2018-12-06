@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Presentations - Hibernate</title>
+    <title>6.0 series - Hibernate ORM</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
-    <meta content="Emmanuel Bernard" name="author">
+    <meta content="" name="author">
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
@@ -27,18 +27,18 @@
     <div class="ui vertical inverted sidebar left" id="mobile-menu">
       <div class="ui vertical fluid inverted text menu accordion">
         <div class="item">
-          <a class="title">
+          <a class="active title">
             <i class="database grid icon"></i>
             <i class="dropdown icon"></i>
             <strong>ORM</strong>
           </a>
-          <div class="content">
+          <div class="active content">
             <div class="menu internal-links">
               <a class="item" href="/orm/">
                 <i class="grid home icon"></i>
                 About
               </a>
-              <a class="item" href="/orm/releases/">
+              <a class="active item" href="/orm/releases/">
                 <i class="grid icon tags"></i>
                 Releases
               </a>
@@ -433,7 +433,7 @@
         </div>
         <div class="clearfix"></div>
         <div class="ui stackable menu mobile hidden print hidden" id="nav">
-          <a class="item" href="/orm/">ORM</a>
+          <a class="active item" href="/orm/">ORM</a>
           <a class="item" href="/search/">Search</a>
           <a class="item" href="/validator/">Validator</a>
           <a class="item" href="/ogm/">OGM</a>
@@ -450,46 +450,423 @@
           </div>
         </div>
       </div>
-      <div class="ui container-fluid">
-        <div class="jumbotron small">
-          <div class="ui container">
-            <h1>
-              <span>Presentations</span>
-            </h1>
+      <script>
+        var displayed_series = [];
+        displayed_series.push('6.0');
+        displayed_series.push('5.4');
+        displayed_series.push('5.3');
+        displayed_series.push('5.2');
+        displayed_series.push('5.1');
+        displayed_series.push('5.0');
+      </script>
+      <div class="jumbotron small">
+        <div class="ui container">
+          <div class="ui grid stackable">
+            <div class="column row">
+              <div class="column twelve wide middle aligned">
+                <h1>
+                  <span>
+                    Hibernate ORM
+                  </span>
+                </h1>
+                <h2>
+                  <span>
+                    6.0 series
+                  </span>
+                  <span class="label orange tag ui">development</span>
+                </h2>
+              </div>
+              <div class="column four wide middle aligned">
+                
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="page-title small">
+        <div class="ui container">
+          <h4>
+            Performance, HQL, Criteria, Type System
+          </h4>
         </div>
       </div>
       <div class="ui container page-content">
-        <div class="content" id="content">
-          <div class="paragraph">
-          <p>This is a non complete set of presentations related to the various Hibernate projects.</p>
+        <div class="ui stackable grid">
+          <div class="column three wide computer only print hidden">
+            <div class="ui fluid vertical menu">
+              <a class="item" href="../..">
+                <i class="grid home icon"></i>
+                About
+              </a>
+              <div class="dropdown item link selected ui">
+                Releases
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="..">
+                    Overview
+                  </a>
+                  <a class="item selected" href=".">
+                    6.0
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="../5.4">
+                    5.4
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="../5.3">
+                    5.3
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
+                  </a>
+                  <a class="item" href="../5.2">
+                    5.2
+                  </a>
+                  <a class="item" href="../5.1">
+                    5.1
+                  </a>
+                  <a class="item" href="../5.0">
+                    5.0
+                  </a>
+                </div>
+              </div>
+              <!-- / Here we want to display all the known versions -->
+              <div class="dropdown item link ui">
+                Documentation
+                <i class="icon dropdown"></i>
+                <div class="menu">
+                  <a class="item" href="/orm/documentation/6.0/">
+                    6.0
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.4/">
+                    5.4
+                    &nbsp;&nbsp;
+                    <span class="ui label orange">development</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.3/">
+                    5.3
+                    &nbsp;&nbsp;
+                    <span class="ui label green">latest stable</span>
+                  </a>
+                  <a class="item" href="/orm/documentation/5.2/">
+                    5.2
+                  </a>
+                  <a class="item" href="/orm/documentation/5.1/">
+                    5.1
+                  </a>
+                  <a class="item" href="/orm/documentation/5.0/">
+                    5.0
+                  </a>
+                  <a class="item" href="/orm/documentation/4.3/">
+                    4.3
+                  </a>
+                  <a class="item" href="/orm/documentation/4.2/">
+                    4.2
+                  </a>
+                </div>
+              </div>
+              <a class="item" href="../../books">
+                <i class="book grid icon"></i>
+                Books
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                <i class="grid icon share"></i>
+                Migration guides
+              </a>
+              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+                <i class="grid icon road"></i>
+                Roadmap
+              </a>
+              <a class="item" href="../../tooling">
+                <i class="grid icon wrench"></i>
+                Tooling
+              </a>
+              <a class="item" href="../../envers">
+                <i class="grid icon time"></i>
+                Envers
+              </a>
+              <a class="item" href="../../contribute">
+                <i class="grid icon users"></i>
+                Contribute
+              </a>
+              <a class="item" href="../../support">
+                <i class="doctor grid icon"></i>
+                Paid support
+              </a>
+              <a class="item" href="../../faq">
+                <i class="circle grid help icon"></i>
+                FAQ
+              </a>
+            </div>
+            <div class="ui fluid vertical menu">
+              <a class="item" href="https://github.com/hibernate/hibernate-orm">
+                <i class="code grid icon"></i>
+                Source code
+              </a>
+              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+                <i class="bug grid icon"></i>
+                Issue tracker
+              </a>
+              <a class="item" href="https://access.redhat.com/security/team/contact/">
+                <i class="grid icon lock"></i>
+                Security issue
+              </a>
+              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+                <i class="comments grid icon"></i>
+                Forum
+              </a>
+              <a class="item" href="https://community.jboss.org/en/hibernate">
+                <i class="edit grid icon"></i>
+                Wiki
+              </a>
+              <a class="item" href="http://ci.hibernate.org/">
+                <i class="grid icon treatment"></i>
+                CI
+              </a>
+            </div>
+            <hr>
+            <div class="license">
+              Released under the
+              <a href="http://hibernate.org/license/">LGPL V2.1</a>
+            </div>
           </div>
-          <div class="dlist">
-          <dl>
-          <dt class="hdlist1"><a href="/presentations/multi-projects/hibernate-5/">Hibernate you know it&#8230;&#8203; but actually you don’t</a></dt>
-          <dd>
-          <p>Presentation on the Hibernate 5 portfolio as well as useful less known tips. First done mid 2017.</p>
-          </dd>
-          <dt class="hdlist1"><a href="/presentations/multi-projects/hibernate-5-fr/">Hibernate tu connais&#8230;&#8203; mais en fait tu connais pas (French, early 2016)</a></dt>
-          <dd>
-          <p>Presentation on the Hibernate 5 portfolio in French. First done early 2016.</p>
-          </dd>
-          </dl>
+          <div class="column thirteen wide computer sixteen wide mobile">
+            <div class="content" id="content">
+              <div id="toc">
+                <div id="toctitle">
+                  Quick links
+                </div>
+                <ul>
+                  <li>
+                    <a class="item" href="#compatibility">
+                      Compatibility
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#documentation">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#get-it">
+                      How to get it
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#whats-new">
+                      What's new
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#migrate">
+                      Migrate
+                    </a>
+                  </li>
+                  <li>
+                    <a class="item" href="#releases">
+                      Releases in this series
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <h2 id="compatibility">Compatibility</h2>
+              <table class="ui collapsing table striped celled unstackable">
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+                      Java
+                    </a>
+                  </td>
+                  <td>
+                    8+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="http://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
+                      JPA
+                    </a>
+                  </td>
+                  <td>
+                    2.2
+                  </td>
+                </tr>
+              </table>
+              <p>
+                Not compatible with your requirements? Have a look at the
+                <a href="../">
+                  other series.
+                </a>
+              </p>
+              <h2 id="documentation">Documentation</h2>
+              <p>
+                Documentation for this specific series can be accessed through the links below:
+              </p>
+              <p>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/6.0/userguide/html_single/Hibernate_User_Guide.html">
+                  <i class="icon file text outline"></i>
+                  HTML
+                </a>
+                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/6.0/javadocs/">
+                  <i class="icon code outline"></i>
+                  API (JavaDoc)
+                </a>
+              </p>
+              <p>
+                You can find more documentation for all series on the
+                <a href="../../documentation">
+                  documentation page.
+                </a>
+              </p>
+              <h2 id="get-it">How to get it</h2>
+              <div class="ui grid equal height stackable download-options">
+                <div class="eleven wide column">
+                  <h3>Maven, Gradle...</h3>
+                  <p>
+                    Maven artifacts of Hibernate ORM are published to
+                    <a href="https://search.maven.org">
+                      Maven Central
+                    </a>
+                    and to
+                    <a href="https://bintray.com/hibernate">
+                      Bintray.
+                    </a>
+                  </p>
+                  <p>
+                    You can find the Maven coordinates of all artifacts through the link below:
+                    <p>
+                      <a class="ui right labeled button primary icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                    </p>
+                  </p>
+                </div>
+                <div class="five wide column divided">
+                  <h3>Zip archive</h3>
+                  <p>
+                    Direct download is available from SourceForge:
+                  </p>
+                  <p>
+                    <a class="ui right labeled button primary icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/6.0.0.Alpha1/hibernate-release-6.0.0.Alpha1.zip/download" title="Download">
+                      <i class="icon cloud download"></i>
+                      Download Zip archive
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p>
+                More information about specific releases (announcements, download links) can be found
+                <a href="#releases">
+                  here.
+                </a>
+              </p>
+              <h2 id="whats-new">What's new</h2>
+              <p>
+                Latest release announcement (2018-12-05):
+                <a href="http://in.relation.to/2018/12/05/hibernate-orm-600-alpha1-out/">
+                  6.0.0.Alpha1.
+                </a>
+              </p>
+              <p>
+                A detailed list of new features, improvements and fixes in this series can be found
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(6.0.0.Alpha1)%20ORDER%20BY%20updated">
+                  on our JIRA instance.
+                </a>
+              </p>
+              <div class="sect2">
+              <h3 id="jdbc-performance"><a class="anchor" href="#jdbc-performance"></a>JDBC Performance</h3>
+              <div class="paragraph">
+              <p>6.0 switches reading from JDBC <code>ResultSet</code> by name to reading by position.  This
+              required significant changes to the Hibernate type system.</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="hql-translation-performance"><a class="anchor" href="#hql-translation-performance"></a>HQL Translation Performance</h3>
+              <div class="paragraph">
+              <p>6.0 switched from Antlr v2 to Antlr v4 for its HQL translation.  Antlr v4
+              itself is more performant.  Additionally we refactored the grammars to be
+              more efficient</p>
+              </div>
+              </div>
+              <div class="sect2">
+              <h3 id="criteria-translation-performance"><a class="anchor" href="#criteria-translation-performance"></a>Criteria Translation Performance</h3>
+              <div class="paragraph">
+              <p>In previous versions of Hibernate, JPA Criteria queries were translated by
+              first rendering the Criteria as an HQL query.  6.0 changes this so that
+              HQL and Criteria are both translated into the same form : the Semantic Query
+              Model (SQM).</p>
+              </div>
+              </div>
+              <h2 id="migrate">Migrate</h2>
+              <p>
+                If you need to upgrade from a previous series, please refer to the
+                <a href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+                  migration guide.
+                </a>
+              </p>
+              <h2 id="releases">Releases in this series</h2>
+              <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <p>
+                      <span class="label orange ui version">
+                        6.0.0.Alpha1
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2018-12-05</small>
+                    </p>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      First Alpha for 6.0
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://bintray.com/hibernate/artifacts/hibernate-orm/6.0.0.Alpha1">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://sourceforge.net/projects/hibernate/files/hibernate-orm/6.0.0.Alpha1/hibernate-release-6.0.0.Alpha1.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(6.0.0.Alpha1)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/12/05/hibernate-orm-600-alpha1-out/">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <script>
+        $(document).ready(function() {
+          $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+        });
+      </script>
       <div class="ui inverted vertical footer segment print hidden">
         <div class="ui container">
           <div class="ui stackable inverted divided equal height stackable grid">
             <div class="three wide column">
               <h4 class="ui inverted header">Projects</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../search" title="Search">Hibernate Search</a>
-                <a class="item" href="../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../others" title="Other projects">Other projects</a>
+                <a class="item" href="../.." title="Hibernate ORM">Hibernate ORM</a>
+                <a class="item" href="../../../search" title="Search">Hibernate Search</a>
+                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+                <a class="item" href="../../../others" title="Other projects">Other projects</a>
               </div>
             </div>
             <div class="three wide column">
@@ -503,7 +880,7 @@
             <div class="five wide column">
               <h4 class="ui inverted header">Contribute and community</h4>
               <div class="ui inverted link list">
-                <a class="item" href="../community" title="Community resources">Community resources</a>
+                <a class="item" href="../../../community" title="Community resources">Community resources</a>
                 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
                 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
                 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -513,12 +890,12 @@
             <div class="five wide column sponsor">
               <div class="logo">
                 <a href="https://www.redhat.com/">
-                  <img height="48" src="../images/redhat.png" title="Red Hat" width="216">
+                  <img height="48" src="../../../images/redhat.png" title="Red Hat" width="216">
                 </a>
               </div>
               <div class="logo">
                 <a href="https://developers.redhat.com/">
-                  <img height="48" src="../images/redhat-developers.png" title="Red Hat Developers" width="216">
+                  <img height="48" src="../../../images/redhat-developers.png" title="Red Hat Developers" width="216">
                 </a>
               </div>
             </div>
@@ -548,7 +925,7 @@
       
         $('.ui.accordion').accordion();
       
-        renderTabzilla("Hibernate", "hibernate", true);
+        renderTabzilla("Hibernate ORM", "orm", true);
       
         $(window).scroll(function(e) {
           if($(this).scrollTop()>150){
