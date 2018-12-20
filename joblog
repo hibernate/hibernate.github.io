@@ -174,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.63258 seconds (files took 0.55961 seconds to load)
+Finished in 0.79735 seconds (files took 0.67058 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -191,16 +191,14 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.9.3.Final/hibernate-search-parent-5.9.3.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/search/hibernate-search-mapper-orm/6.0.0.Alpha1/hibernate-search-mapper-orm-6.0.0.Alpha1.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/search/hibernate-search-parent/6.0.0.Alpha1/hibernate-search-parent-6.0.0.Alpha1.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.11.0.CR1/hibernate-search-orm-5.11.0.CR1.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.11.0.CR1/hibernate-search-parent-5.11.0.CR1.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.11.0.Final/hibernate-search-orm-5.11.0.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.11.0.Final/hibernate-search-parent-5.11.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Final/hibernate-ogm-core-5.2.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Final/hibernate-ogm-parent-5.2.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.3.1.Final/hibernate-ogm-core-5.3.1.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.3.1.Final/hibernate-ogm-parent-5.3.1.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.4.1.Final/hibernate-ogm-core-5.4.1.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-core/5.4.1.Final/hibernate-ogm-core-5.4.1.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.4.1.Final/hibernate-ogm-parent-5.4.1.Final.pom
-Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/ogm/hibernate-ogm-parent/5.4.1.Final/hibernate-ogm-parent-5.4.1.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.17.Final/hibernate-core-5.2.17.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.17.Final/hibernate-core-5.1.17.Final.pom
 Downloading: https://repository.jboss.org/nexus/content/repositories/public/org/hibernate/hibernate-core/5.1.17.Final/hibernate-core-5.1.17.Final.pom
