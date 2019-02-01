@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1548145873" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1549007438" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -614,7 +614,38 @@
               </td>
               <td class="content">
               This document provides pointers for a migration.
-              It refers to Hibernate Search version <code>6.0.0.Alpha1</code>. If you think something is missing or something does not work, please <a href="/community">contact us</a>.
+              It refers to Hibernate Search version <code>6.0.0.Alpha2</code>. If you think something is missing or something does not work, please <a href="/community">contact us</a>.
+              </td>
+              </tr>
+              </table>
+              </div>
+              <div class="admonitionblock important">
+              <table>
+              <tr>
+              <td class="icon">
+              <i class="fa icon-important" title="Important"></i>
+              </td>
+              <td class="content">
+              <div class="paragraph">
+              <p>Search 6 breaks many APIs, so migrating older projects will be more work than usual.
+              This migration guide will be completed as we release new versions and the APIs get more and more stable,
+              but for now we recommend to only test Search 6 on small projects.</p>
+              </div>
+              <div class="paragraph">
+              <p>Ultimately, we intend to provide additional "compatibility" modules
+              that will allow you to use the Search 5 APIs with Search 6 under the hood.
+              However, our goal is not full backward compatibility: for some features that changed dramatically,
+              it may not be possible to use the Search 5 APIs anymore.
+              The main purpose of this compatibility layer will be to spread the migration effort:
+              you will have to change your Maven dependencies, configuration and more complex mappings/queries immediately,
+              but you will be able to delay the more repetitive parts of the migration work (simple queries, simple entity mappings)
+              to later.</p>
+              </div>
+              <div class="paragraph">
+              <p>Finally, for those who cannot, or do not want to, spend the time required to migrate,
+              we intend to continue maintenance releases (= bugfixes) of Hibernate Search 5.x:
+              no end-of-life date has been set at the moment.</p>
+              </div>
               </td>
               </tr>
               </table>
@@ -636,10 +667,10 @@
               <div class="ulist">
               <ul>
               <li>
-              <p>The Elasticsearch backend now requires Elasticsearch 5.6 or 6.5.</p>
+              <p>The Elasticsearch backend now requires Elasticsearch 5.6 or 6.6.</p>
               </li>
               <li>
-              <p>The Lucene backend now requires Lucene 7.5.</p>
+              <p>The Lucene backend now requires Lucene 7.6.</p>
               </li>
               </ul>
               </div>
@@ -723,7 +754,7 @@
               </div>
               <div class="paragraph">
               <p>A lot of APIs changed. We recommend to have a look at
-              <a href="https://docs.jboss.org/hibernate/search/5.10/reference/en-US/html_single/#getting-started">the getting started guide</a> before migrating.</p>
+              <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#getting-started">the getting started guide</a> before migrating.</p>
               </div>
               </div>
               <div class="sect2">
