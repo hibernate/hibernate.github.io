@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1549454847" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1549465935" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -791,6 +791,11 @@
               <li>
               <p>It is no longer possible to map multiple entity types to the same index.
               Each index must be mapped to exactly one entity type.</p>
+              </li>
+              <li>
+              <p>There is no longer a builtin, default bridge for <code>java.util.Class</code>.
+              If you need to index a <code>Class&lt;?&gt;</code>, you will need to write a custom bridge
+              (probably from <code>Class</code> to <code>String</code>).</p>
               </li>
               </ul>
               </div>
