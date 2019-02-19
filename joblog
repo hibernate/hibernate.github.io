@@ -1,12 +1,13 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Fetching gem metadata from https://rubygems.org/.......
+Fetching gem metadata from https://rubygems.org/............
 Fetching ansi 1.5.0
 Installing ansi 1.5.0
 Fetching asciidoctor 1.5.6.1
 Installing asciidoctor 1.5.6.1
 Fetching ast 2.3.0
 Installing ast 2.3.0
-Using git 1.3.0
+Fetching git 1.3.0
+Installing git 1.3.0
 Fetching formatador 0.2.5
 Installing formatador 0.2.5
 Fetching rb-fsevent 0.10.2
@@ -92,7 +93,8 @@ Fetching execjs 2.7.0
 Installing execjs 2.7.0
 Fetching htmlcompressor 0.4.0
 Installing htmlcompressor 0.4.0
-Using json 2.1.0
+Fetching json 2.1.0
+Installing json 2.1.0 with native extensions
 Fetching libv8 3.16.14.19 (x86_64-linux)
 Installing libv8 3.16.14.19 (x86_64-linux)
 Fetching mini_portile2 2.3.0
@@ -251,7 +253,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.77566 seconds (files took 1.02 seconds to load)
+Finished in 0.87358 seconds (files took 1.16 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
