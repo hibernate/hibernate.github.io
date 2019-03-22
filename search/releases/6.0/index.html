@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1553252324" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1553258114" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -660,7 +660,7 @@
                     </a>
                   </td>
                   <td>
-                    7.6
+                    7.7
                   </td>
                 </tr>
               </table>
@@ -714,7 +714,7 @@
                   <p>
                     You can find the Maven coordinates of all artifacts through the link below:
                     <p>
-                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha2">
+                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha3">
                         <i class="icon cloud cubes"></i>
                         Maven artifacts
                       </a>
@@ -725,20 +725,20 @@
                   </p>
                   <dl class="sparse">
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha2%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha2
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha3%7C">
+                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha3
                       </a>
                     </dt>
                     <dd>Hibernate ORM mapper</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.0.0.Alpha2%7C">
-                        org.hibernate.search:hibernate-search-backend-elasticsearch:6.0.0.Alpha2
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.0.0.Alpha3%7C">
+                        org.hibernate.search:hibernate-search-backend-elasticsearch:6.0.0.Alpha3
                       </a>
                     </dt>
                     <dd>Elasticsearch backend</dd>
                     <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.0.0.Alpha2%7C">
-                        org.hibernate.search:hibernate-search-backend-lucene:6.0.0.Alpha2
+                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.0.0.Alpha3%7C">
+                        org.hibernate.search:hibernate-search-backend-lucene:6.0.0.Alpha3
                       </a>
                     </dt>
                     <dd>Lucene backend</dd>
@@ -750,7 +750,7 @@
                     Direct download is available from SourceForge:
                   </p>
                   <p>
-                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha2/hibernate-search-6.0.0.Alpha2-dist.zip/download" title="Download">
+                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha3/hibernate-search-6.0.0.Alpha3-dist.zip/download" title="Download">
                       <i class="icon cloud download"></i>
                       Download Zip archive
                     </a>
@@ -765,14 +765,14 @@
               </p>
               <h2 id="whats-new">What's new</h2>
               <p>
-                Latest release announcement (2019-01-31):
-                <a href="http://in.relation.to/2019/02/01/hibernate-search-6-0-0-Alpha2-and-5-11-1-Final">
-                  6.0.0.Alpha2.
+                Latest release announcement (2019-03-22):
+                <a href="http://in.relation.to/2019/03/22/hibernate-search-6-0-0-Alpha3">
+                  6.0.0.Alpha3.
                 </a>
               </p>
               <p>
                 A detailed list of new features, improvements and fixes in this series can be found
-                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha2%2C%206.0.0.Alpha1)%20ORDER%20BY%20updated">
+                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha3%2C%206.0.0.Alpha2%2C%206.0.0.Alpha1)%20ORDER%20BY%20updated">
                   on our JIRA instance.
                 </a>
               </p>
@@ -788,9 +788,9 @@
               <ul>
               <li>
               <p>Features are partially implemented or simply missing.
-              For example, you cannot index a <code>Double</code> property yet,
+              For example, you cannot index a <code>BigDecimal</code> property yet,
               you cannot configure custom Lucene directories,
-              you cannot ignore bridges in the predicate DSL,
+              you cannot override analyzers in the predicate DSL,
               and so on.</p>
               </li>
               <li>
@@ -800,8 +800,8 @@
               <p>The low-level parts of the Lucene backend from Hibernate Search 5
               that improve its efficiency haven&#8217;t been ported to Hibernate Search 6 yet.
               This results in obvious performance bottlenecks,
-              such as all the indexing works from a multi-threaded application being executed
-              one after another and without any form of batching.</p>
+              such as all the indexing from a multi-threaded application being executed
+              sequentially and without any kind of batching.</p>
               </li>
               </ul>
               </div>
@@ -817,8 +817,8 @@
               <ul>
               <li>
               <p>Mapping of entities using either annotation mapping or programmatic mapping.
-              However, we do not offer all the options that were available in Search 5 (yet),
-              and we do not support all the data types (yet).</p>
+              However, we do not offer all the options that were available in Search 5 (yet).
+              Most of the field types supported in Search 5 are supported in Search 6.</p>
               </li>
               <li>
               <p>Automatic indexing of ORM entities as they are persisted within a transaction
@@ -847,12 +847,12 @@
               <div class="ulist">
               <ul>
               <li>
-              <p>All the predicates listed in <code>org.hibernate.search.engine.search.dsl.predicate.SearchPredicateFactoryContext</code>.
-              However, we do not offer all the options that were available in Search 5 (yet).</p>
+              <p>All the predicates available in Search 5, except <code>facet</code> and <code>moreLikeThis</code>.
+              Additionally, the new <code>id</code> and <code>nested</code> predicates were added.
+              See <code>org.hibernate.search.engine.search.dsl.predicate.SearchPredicateFactoryContext</code>.</p>
               </li>
               <li>
-              <p>All the sorts listed in <code>org.hibernate.search.engine.search.dsl.sort.SearchSortContainerContext</code>.
-              However, we do not offer all the options that were available in Search 5 (yet).</p>
+              <p>All the predicates available in Search 5. See <code>org.hibernate.search.engine.search.dsl.sort.SearchSortContainerContext</code>.</p>
               </li>
               <li>
               <p>All the projections listed in <code>org.hibernate.search.engine.search.dsl.projection.SearchProjectionFactoryContext</code>.</p>
@@ -873,7 +873,7 @@
               <div class="sect2">
               <h3 id="lucene-7"><a class="anchor" href="#lucene-7"></a>Lucene 7</h3>
               <div class="paragraph">
-              <p>The Lucene backend now uses Lucene 7.6.</p>
+              <p>The Lucene backend now uses Lucene 7.7.</p>
               </div>
               </div>
               <div class="sect2">
@@ -887,6 +887,18 @@
               <h3 id="api-refresh"><a class="anchor" href="#api-refresh"></a>API refresh</h3>
               <div class="paragraph">
               <p>A lot of APIs have been changed, for multiple reasons.</p>
+              </div>
+              <div class="sect3">
+              <h4 id="more-consistent-api-types"><a class="anchor" href="#more-consistent-api-types"></a>More consistent API types</h4>
+              <div class="paragraph">
+              <p>The API types consistently use the <code>Search</code> prefix: no more mixing <code>FullText</code> with <code>Search</code> or simply no prefix.</p>
+              </div>
+              <div class="paragraph">
+              <p>Additionally, the <code>SearchQuery</code> type (previously <code>FullTextQuery</code>) now defines its own methods
+              instead of extending JPA&#8217;s <code>TypeQuery</code>, allowing for an API that makes more sense considering that an index,
+              not a database, is being targeted.
+              It is still possible to create an adapter that implements JPA&#8217;s <code>TypeQuery</code>.</p>
+              </div>
               </div>
               <div class="sect3">
               <h4 id="no-more-lucene-in-hibernate-search-apis"><a class="anchor" href="#no-more-lucene-in-hibernate-search-apis"></a>No more Lucene in Hibernate Search APIs</h4>
@@ -924,6 +936,12 @@
               <code>org.hibernate.search.backend.elasticsearch.ElasticsearchExtension.get()</code> and
               <code>org.hibernate.search.backend.lucene.LuceneExtension.get()</code>.</p>
               </li>
+              <li>
+              <p>Simpler syntax for predicates when tareting multiple types in a single query:
+              instantiating multiple <code>QueryBuilders</code> is no longer needed,
+              Hibernate Search takes into account that multiple types are targeted
+              and automatically understands checks that targeted fields are compatible across all targeted indexes.</p>
+              </li>
               </ul>
               </div>
               </div>
@@ -956,7 +974,7 @@
               </div>
               </div>
               <div class="sect2">
-              <h3 id="easier-to-use-automatic-indexing"><a class="anchor" href="#easier-to-use-automatic-indexing"></a>Easier to use automatic indexing</h3>
+              <h3 id="easier-to-use-safer-automatic-indexing"><a class="anchor" href="#easier-to-use-safer-automatic-indexing"></a>Easier to use, safer automatic indexing</h3>
               <div class="paragraph">
               <p>Automatic indexing improvements are not limited to bridges:
               <code>@IndexedEmbedded</code> is easier to configure properly in Search 6, too.</p>
@@ -987,6 +1005,46 @@
               </p>
               <h2 id="releases">Releases in this series</h2>
               <div class="ui stackable grid series-versions">
+                <div class="ui row">
+                  <div class="three wide column">
+                    <p>
+                      <span class="label orange ui version">
+                        6.0.0.Alpha3
+                      </span>
+                    </p>
+                    <p>
+                      <small class="ui label">2019-03-22</small>
+                    </p>
+                  </div>
+                  <div class="thirteen wide column">
+                    <p>
+                      More field types, more predicates, more consistent and less verbose API, other bugfixes and improvements.
+                    </p>
+                    <p>
+                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha3%7C">
+                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha3
+                      </a>
+                    </p>
+                    <p>
+                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha3">
+                        <i class="icon cloud cubes"></i>
+                        Maven artifacts
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha3/hibernate-search-6.0.0.Alpha3-dist.zip/download">
+                        <i class="icon cloud download"></i>
+                        Download
+                      </a>
+                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha3)%20ORDER%20BY%20updated">
+                        <i class="icon bug"></i>
+                        Resolved issues
+                      </a>
+                      <a class="ui small right labeled button icon" href="http://in.relation.to/2019/03/22/hibernate-search-6-0-0-Alpha3">
+                        <i class="icon announcement"></i>
+                        Release announcement
+                      </a>
+                    </p>
+                  </div>
+                </div>
                 <div class="ui row">
                   <div class="three wide column">
                     <p>
