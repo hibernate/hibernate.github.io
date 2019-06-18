@@ -174,7 +174,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.8961 seconds (files took 0.98794 seconds to load)
+Finished in 0.80249 seconds (files took 0.73099 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -202,8 +202,8 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-og
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.2.17.Final/hibernate-core-5.2.17.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.1.17.Final/hibernate-core-5.1.17.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/5.0.12.Final/hibernate-core-5.0.12.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.16.Final/hibernate-validator-6.0.16.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.16.Final/hibernate-validator-parent-6.0.16.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator/6.0.17.Final/hibernate-validator-6.0.17.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/validator/hibernate-validator-parent/6.0.17.Final/hibernate-validator-parent-6.0.17.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.4.3.Final/hibernate-validator-5.4.3.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/5.4.3.Final/hibernate-validator-parent-5.4.3.Final.pom
 WgetWrapper extension is not properly configured in site.yml.

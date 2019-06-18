@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
-    <meta content="Emmanuel Bernard, Sanne Grinovero" name="author">
+    <meta content="Emmanuel Bernard, Sanne Grinovero, Yoann Rodière" name="author">
     <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1559230499" rel="stylesheet">
+    <link href="/stylesheets/styles.css?t=1560838292" rel="stylesheet">
     <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
     <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
     <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -98,7 +98,7 @@
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/">
+              <a class="item" href="https://ci.hibernate.org/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -167,7 +167,7 @@
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/">
+              <a class="item" href="https://ci.hibernate.org/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -236,7 +236,7 @@
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/">
+              <a class="item" href="https://ci.hibernate.org/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -301,7 +301,7 @@
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/">
+              <a class="item" href="https://ci.hibernate.org/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -342,7 +342,7 @@
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/">
+              <a class="item" href="https://ci.hibernate.org/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -558,7 +558,7 @@
                 <i class="edit grid icon"></i>
                 Wiki
               </a>
-              <a class="item" href="http://ci.hibernate.org/job/hibernate-search/">
+              <a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
                 <i class="grid icon treatment"></i>
                 CI
               </a>
@@ -599,36 +599,16 @@
               <div id="toc" class="toc">
               <div id="toctitle">Releases</div>
               <ul class="sectlevel1">
-              <li><a href="#hibernate-search-5-11">Hibernate Search 5.11</a></li>
               <li><a href="#hibernate-search-6-0">Hibernate Search 6.0</a></li>
               <li><a href="#hibernate-search-6-x">Hibernate Search 6.x</a></li>
               </ul>
               </div>
               </div>
               <div class="sect1">
-              <h2 id="hibernate-search-5-11"><a class="anchor" href="#hibernate-search-5-11"></a>Hibernate Search 5.11</h2>
-              <div class="sectionbody">
-              <div class="dlist">
-              <dl>
-              <dt class="hdlist1">Upgrade to Hibernate ORM 5.4</dt>
-              <dd>
-              <p>The main purpose of this release will be to keep up with Hibernate ORM.</p>
-              </dd>
-              <dt class="hdlist1">Fully tested compatibility with JDK11</dt>
-              <dd>
-              <p>While Search 5.10 is very likely to be already compatible with JDK11,
-              we have not been able to run all of our tests due to building and testing tools being incompatible with JDK11.
-              In Search 5.11, we intend to upgrade all of the tools, so that Hibernate Search is fully tested against JDK11.</p>
-              </dd>
-              </dl>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
               <h2 id="hibernate-search-6-0"><a class="anchor" href="#hibernate-search-6-0"></a>Hibernate Search 6.0</h2>
               <div class="sectionbody">
               <div class="paragraph">
-              <p>Compatible with Hibernate ORM 6, Apache Lucene 7, Elasticsearch 6.</p>
+              <p>Compatible with Hibernate ORM 6, Apache Lucene 8, Elasticsearch 7.</p>
               </div>
               <div class="dlist">
               <dl>
@@ -659,16 +639,16 @@
               </ul>
               </div>
               </dd>
-              <dt class="hdlist1">Upgrade to Apache Lucene 7</dt>
+              <dt class="hdlist1">Upgrade to Apache Lucene 8</dt>
               <dd>
-              <p>To provide the full power of some of the new features in Apache Lucene 7, some API changes are needed.
+              <p>To provide the full power of some of the new features in Apache Lucene 8, some API changes are needed.
               This includes some API improvements which could have been useful since the upgrade to Lucene 5; since we only apply breaking API changes in major releases these had to wait.</p>
               </dd>
-              <dt class="hdlist1">Upgrade to Elasticsearch 6</dt>
+              <dt class="hdlist1">Upgrade to Elasticsearch 7</dt>
               <dd>
-              <p>Elasticsearch 6 does not provide the ability to store multiple types in one index anymore.
+              <p>Elasticsearch 6 and above do not provide the ability to store multiple types in one index anymore.
               Hibernate Search 6 will address this, possibly by forcing to use different indexes for different types.
-              Once this is done, we will add support for Elasticsearch 6.</p>
+              Once this is done, we will add support for Elasticsearch 7.</p>
               </dd>
               <dt class="hdlist1">Free-form indexing</dt>
               <dd>
