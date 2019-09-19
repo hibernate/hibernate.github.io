@@ -253,7 +253,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.77418 seconds (files took 0.96193 seconds to load)
+Finished in 0.80044 seconds (files took 1.11 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
@@ -270,8 +270,8 @@ Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.9.3.Final/hibernate-search-parent-5.9.3.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/search/hibernate-search-mapper-orm/6.0.0.Alpha9/hibernate-search-mapper-orm-6.0.0.Alpha9.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/search/hibernate-search-parent/6.0.0.Alpha9/hibernate-search-parent-6.0.0.Alpha9.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.11.2.Final/hibernate-search-orm-5.11.2.Final.pom
-Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.11.2.Final/hibernate-search-parent-5.11.2.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-orm/5.11.3.Final/hibernate-search-orm-5.11.3.Final.pom
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-search-parent/5.11.3.Final/hibernate-search-parent-5.11.3.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.2.0.Final/hibernate-ogm-core-5.2.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-parent/5.2.0.Final/hibernate-ogm-parent-5.2.0.Final.pom
 Downloading: https://repo.maven.apache.org/maven2/org/hibernate/ogm/hibernate-ogm-core/5.3.1.Final/hibernate-ogm-core-5.3.1.Final.pom
