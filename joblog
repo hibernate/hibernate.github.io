@@ -1,70 +1,147 @@
 [33mExecuting 'bundle install' in clean Bundler environment[0m
-Using ansi 1.5.0
-Using asciidoctor 1.5.6.1
-Using ast 2.3.0
+Fetching gem metadata from https://rubygems.org/............
+Fetching ansi 1.5.0
+Installing ansi 1.5.0
+Fetching asciidoctor 1.5.6.1
+Installing asciidoctor 1.5.6.1
+Fetching ast 2.3.0
+Installing ast 2.3.0
 Using git 1.3.0
-Using formatador 0.2.5
-Using rb-fsevent 0.10.2
-Using ffi 1.9.18
-Using rb-inotify 0.9.10
-Using ruby_dep 1.5.0
-Using listen 3.1.5
-Using lumberjack 1.0.12
-Using nenv 0.3.0
-Using shellany 0.0.1
-Using notiffany 0.1.1
-Using coderay 1.1.2
-Using method_source 0.9.0
-Using pry 0.11.3
-Using thor 0.20.0
-Using guard 2.14.2
-Using eventmachine 1.2.5
-Using http_parser.rb 0.6.0
-Using em-websocket 0.5.1
-Using guard-compat 1.2.1
-Using multi_json 1.12.2
-Using guard-livereload 2.5.2
-Using tilt 2.0.8
-Using haml 4.0.7
-Using little-plugger 1.1.4
-Using logging 2.2.2
-Using mime-types 2.99.3
-Using ruby-ll 2.1.2
-Using oga 1.3.1
-Using parallel 1.12.1
-Using rack 1.6.8
-Using unf_ext 0.0.7.4
-Using unf 0.1.4
-Using domain_name 0.5.20170404
-Using http-cookie 1.0.3
-Using netrc 0.11.0
-Using rest-client 1.8.0
-Using awestruct 0.5.7
+Fetching formatador 0.2.5
+Installing formatador 0.2.5
+Fetching rb-fsevent 0.10.2
+Installing rb-fsevent 0.10.2
+Fetching ffi 1.9.18
+Installing ffi 1.9.18 with native extensions
+Fetching rb-inotify 0.9.10
+Installing rb-inotify 0.9.10
+Fetching ruby_dep 1.5.0
+Installing ruby_dep 1.5.0
+Fetching listen 3.1.5
+Installing listen 3.1.5
+Fetching lumberjack 1.0.12
+Installing lumberjack 1.0.12
+Fetching nenv 0.3.0
+Installing nenv 0.3.0
+Fetching shellany 0.0.1
+Installing shellany 0.0.1
+Fetching notiffany 0.1.1
+Installing notiffany 0.1.1
+Fetching coderay 1.1.2
+Installing coderay 1.1.2
+Fetching method_source 0.9.0
+Installing method_source 0.9.0
+Fetching pry 0.11.3
+Installing pry 0.11.3
+Fetching thor 0.20.0
+Installing thor 0.20.0
+Fetching guard 2.14.2
+Installing guard 2.14.2
+Fetching eventmachine 1.2.5
+Installing eventmachine 1.2.5 with native extensions
+Fetching http_parser.rb 0.6.0
+Installing http_parser.rb 0.6.0 with native extensions
+Fetching em-websocket 0.5.1
+Installing em-websocket 0.5.1
+Fetching guard-compat 1.2.1
+Installing guard-compat 1.2.1
+Fetching multi_json 1.12.2
+Installing multi_json 1.12.2
+Fetching guard-livereload 2.5.2
+Installing guard-livereload 2.5.2
+Fetching tilt 2.0.8
+Installing tilt 2.0.8
+Fetching haml 4.0.7
+Installing haml 4.0.7
+Fetching little-plugger 1.1.4
+Installing little-plugger 1.1.4
+Fetching logging 2.2.2
+Installing logging 2.2.2
+Fetching mime-types 2.99.3
+Installing mime-types 2.99.3
+Fetching ruby-ll 2.1.2
+Installing ruby-ll 2.1.2 with native extensions
+Fetching oga 1.3.1
+Installing oga 1.3.1 with native extensions
+Fetching parallel 1.12.1
+Installing parallel 1.12.1
+Fetching rack 1.6.8
+Installing rack 1.6.8
+Fetching unf_ext 0.0.7.4
+Installing unf_ext 0.0.7.4 with native extensions
+Fetching unf 0.1.4
+Installing unf 0.1.4
+Fetching domain_name 0.5.20170404
+Installing domain_name 0.5.20170404
+Fetching http-cookie 1.0.3
+Installing http-cookie 1.0.3
+Fetching netrc 0.11.0
+Installing netrc 0.11.0
+Fetching rest-client 1.8.0
+Installing rest-client 1.8.0
+Fetching awestruct 0.5.7
+Installing awestruct 0.5.7
 Using bundler 1.16.1
-Using byebug 9.1.0
-Using cssminify 1.0.2
-Using diff-lcs 1.3
-Using execjs 2.7.0
-Using htmlcompressor 0.4.0
+Fetching byebug 9.1.0
+Installing byebug 9.1.0 with native extensions
+Fetching cssminify 1.0.2
+Installing cssminify 1.0.2
+Fetching diff-lcs 1.3
+Installing diff-lcs 1.3
+Fetching execjs 2.7.0
+Installing execjs 2.7.0
+Fetching htmlcompressor 0.4.0
+Installing htmlcompressor 0.4.0
 Using json 2.1.0
-Using libv8 3.16.14.19 (x86_64-linux)
-Using mini_portile2 2.3.0
+Fetching libv8 3.16.14.19 (x86_64-linux)
+Installing libv8 3.16.14.19 (x86_64-linux)
+Fetching mini_portile2 2.3.0
+Installing mini_portile2 2.3.0
 Using nokogiri 1.8.1
-Using pry-byebug 3.5.1
-Using redcarpet 3.4.0
-Using ref 2.0.0
-Using rspec-support 3.7.0
-Using rspec-core 3.7.1
-Using rspec-expectations 3.7.0
-Using rspec-mocks 3.7.0
-Using rspec 3.7.0
-Using sass-listen 4.0.0
-Using sass 3.5.5
-Using therubyracer 0.12.3
-Using uglifier 4.1.3
-Using yajl-ruby 1.3.1
+Fetching pry-byebug 3.5.1
+Installing pry-byebug 3.5.1
+Fetching redcarpet 3.4.0
+Installing redcarpet 3.4.0 with native extensions
+Fetching ref 2.0.0
+Installing ref 2.0.0
+Fetching rspec-support 3.7.0
+Installing rspec-support 3.7.0
+Fetching rspec-core 3.7.1
+Installing rspec-core 3.7.1
+Fetching rspec-expectations 3.7.0
+Installing rspec-expectations 3.7.0
+Fetching rspec-mocks 3.7.0
+Installing rspec-mocks 3.7.0
+Fetching rspec 3.7.0
+Installing rspec 3.7.0
+Fetching sass-listen 4.0.0
+Installing sass-listen 4.0.0
+Fetching sass 3.5.5
+Installing sass 3.5.5
+Fetching therubyracer 0.12.3
+Installing therubyracer 0.12.3 with native extensions
+Fetching uglifier 4.1.3
+Installing uglifier 4.1.3
+Fetching yajl-ruby 1.3.1
+Installing yajl-ruby 1.3.1 with native extensions
 Bundle complete! 17 Gemfile dependencies, 64 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
+Post-install message from haml:
+
+HEADS UP! Haml 4.0 has many improvements, but also has changes that may break
+your application:
+
+* Support for Ruby 1.8.6 dropped
+* Support for Rails 2 dropped
+* Sass filter now always outputs <style> tags
+* Data attributes are now hyphenated, not underscored
+* html2haml utility moved to the html2haml gem
+* Textile and Maruku filters moved to the haml-contrib gem
+
+For more info see:
+
+http://rubydoc.info/github/haml/haml/file/CHANGELOG.md
+
 [33mBundle installed[0m
 
 Awestruct::Extensions::ReleaseDependencies
@@ -174,7 +251,7 @@ Awestruct::Extensions::Version
   #<=>
     version array is in correct order
 
-Finished in 0.74653 seconds (files took 0.97918 seconds to load)
+Finished in 0.80529 seconds (files took 0.57549 seconds to load)
 14 examples, 0 failures
 
 [33mbundle check[0m
