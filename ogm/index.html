@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1579797978" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1579799598" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -591,7 +591,113 @@ Released under the
 <div class="column eleven wide">
 <div class="content" id="content">
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="many-nosql-stores-one-api-to-access-them"><a class="anchor" href="#many-nosql-stores-one-api-to-access-them"></a>Many NoSQL stores, one API to access them</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hibernate OGM provides Java Persistence (JPA) support for NoSQL solutions.
+It reuses Hibernate ORM&#8217;s engine but persists entities into a NoSQL datastore instead of a relational database.</p>
+</div>
+<div class="paragraph">
+<p>We know you have questions, we&#8217;ll answer them in the <a href="faq/">FAQ</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wide-range-of-backends"><a class="anchor" href="#wide-range-of-backends"></a>Wide range of backends</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OGM talks to NoSQL backends via store-specific dialects. The main repository includes the following dialects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Key/Value</em>: <strong>Infinispan</strong> (embedded and remote)</p>
+</li>
+<li>
+<p><em>Document</em>: <strong>MongoDB</strong></p>
+</li>
+<li>
+<p><em>Graph</em>: <strong>Neo4j</strong> (embedded and remote)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Dialects for other NoSQL datastores are maintained by the community:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/hibernate/hibernate-ogm-cassandra">Cassandra</a></p>
+</li>
+<li>
+<p><a href="https://github.com/hibernate/hibernate-ogm-couchdb">CouchDB</a></p>
+</li>
+<li>
+<p><a href="https://github.com/hibernate/hibernate-ogm-ehcache">EhCache</a></p>
+</li>
+<li>
+<p><a href="https://github.com/hibernate/hibernate-ogm-ignite">Apache Ignite</a></p>
+</li>
+<li>
+<p><a href="https://github.com/hibernate/hibernate-ogm-redis">Redis</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Your favorite NoSQL store isn&#8217;t listed here? We&#8217;d love to get <a href="/ogm/contribute">your help</a> for adding it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="rich-query-capabilities"><a class="anchor" href="#rich-query-capabilities"></a>Rich query capabilities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hibernate OGM supports several ways for searching entities and returning them as Hibernate <em>managed objects</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>JPQL queries</em> (we convert them into a native backend query)</p>
+</li>
+<li>
+<p>datastore specific <em>native queries</em></p>
+</li>
+<li>
+<p><em>full-text queries</em>, using Hibernate Search as indexing engine</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="and-more"><a class="anchor" href="#and-more"></a>And more&#8230;&#8203;</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>When JPA isn&#8217;t enough, Hibernate OGM extends it with family-specific and product-specific options.
+That way, the power of the backend is at your fingertips.
+All that in a type-safe way.</p>
+</li>
+<li>
+<p>Mixing several NoSQL datastores in one application, e.g. use Neo4j for your friendship graph and MongoDB for your blog posts. Or mix NoSQL and relational databases.</p>
+</li>
+<li>
+<p>Support for implicit data migrations upon data load (later)</p>
+</li>
+<li>
+<p>Denormalize data declaratively for faster retrieval (later)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Still have questions? Check our <a href="faq/">FAQ</a>.<br>
+Want to see it in action? Move on to the
+<a href="documentation/getting-started">getting started guide</a>.</p>
+</div>
+</div>
+</div>
 </div>
 
 </div>

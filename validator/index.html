@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1579797987" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1579799603" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -596,19 +596,59 @@ Released under the
 <div class="column eleven wide">
 <div class="content" id="content">
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="application-layer-agnostic-validation"><a class="anchor" href="#application-layer-agnostic-validation"></a>Application layer agnostic validation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hibernate Validator allows to express and validate application constraints. The default metadata source are annotations, with the ability to override and extend through the use of XML. It is not tied to a specific application tier or programming model and is available for both server and client application programming. But a simple example says more than 1000 words:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Car</span> {&#x000A;&#x000A;   <span style="color:#007">@NotNull</span>&#x000A;   <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">String</span> manufacturer;&#x000A;&#x000A;   <span style="color:#007">@NotNull</span>&#x000A;   <span style="color:#007">@Size</span>(min = <span style="color:#00D">2</span>, max = <span style="color:#00D">14</span>)&#x000A;   <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">String</span> licensePlate;&#x000A;&#x000A;   <span style="color:#007">@Min</span>(<span style="color:#00D">2</span>)&#x000A;   <span style="color:#088;font-weight:bold">private</span> <span style="color:#339;font-weight:bold">int</span> seatCount;&#x000A;&#x000A;   <span style="color:#777">// ...</span>&#x000A;}</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="extendable"><a class="anchor" href="#extendable"></a>Extendable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hibernate Validator offers a <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#chapter-bootstrapping">configurable bootstrap API</a> as well as a range of <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-builtin-constraints">built-in constraints</a>. The latter can easily be extended by creating <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-customconstraints">custom constraints</a>.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="rich-metadata-api"><a class="anchor" href="#rich-metadata-api"></a>Rich metadata API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hibernate Validator gives access to constraint configuration via a <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-metadata-api">metadata API</a> facilitating, for example, tooling integration.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="reference-implementation"><a class="anchor" href="#reference-implementation"></a>Reference implementation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hibernate Validator 6.x is the reference implementation <a href="http://beanvalidation.org/">Bean Validation 2.0</a>.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="added-value"><a class="anchor" href="#added-value"></a>Added value</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hibernate Validator offers additional value on top of the features required by Bean Validation. For example, a <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#section-programmatic-api">programmatic constraint configuration API</a> as well as an <a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-annotation-processor">annotation processor</a> which plugs into the build process and raises compilation errors whenever constraint annotations are incorrectly used.</p>
+</div>
+</div>
+</div>
 </div>
 
 </div>

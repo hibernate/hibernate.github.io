@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1579797984" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1579799601" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -613,22 +613,147 @@ Released under the
 <div class="column eleven wide">
 <div class="content" id="content">
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="full-text-search-for-entities"><a class="anchor" href="#full-text-search-for-entities"></a>Full-text search for entities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Offers full-text search support for objects stored by Hibernate ORM, <a href="http://infinispan.org/">Infinispan</a> and other sources.
+Think of it as Google(tm) for your entities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>search words with text</p>
+</li>
+<li>
+<p>order results by relevance</p>
+</li>
+<li>
+<p>find by approximation (fuzzy search)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Under the hood it will use <a href="https://lucene.apache.org/core/">Apache Lucene</a> directly or over <a href="https://www.elastic.co/products/elasticsearch/">Elasticsearch</a>.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="full-control"><a class="anchor" href="#full-control"></a>Full control</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unlike with web search, this is your data, your domain, your application, stored wherever you decide.</p>
+</div>
+<div class="paragraph">
+<p>You also have far better control on how your data is processed, and how to extract what you need.</p>
+</div>
+<div class="paragraph">
+<p>Hibernate Search exposes all capabilities of the powerful analysis framework from Apache Lucene, so you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>tune text processing for specific languages</p>
+</li>
+<li>
+<p>for domain specific terminology (e.g. medical terms, custom acronyms expansion,..)</p>
+</li>
+<li>
+<p>control the ranking process: which results are more important</p>
+</li>
+<li>
+<p>advanced index encoding for analytics and signals</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally it allows to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>partition data, apply multi-tenancy for security and performance optimisations</p>
+</li>
+<li>
+<p>perform declarative filtering, to control data access security via aspect based programming</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="scalable-fault-tolerant-cloud-native"><a class="anchor" href="#scalable-fault-tolerant-cloud-native"></a>Scalable, Fault Tolerant, Cloud Native</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You&#8217;ll find that performance of a "single box" is exceptional, still it can be distributed.</p>
+</div>
+<div class="paragraph">
+<p>Maintaining an high performance, scalable distributed index is not simple. Hibernate Search offers several architectural solutions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Integration with <a href="https://www.elastic.co/products/elasticsearch/">Elasticsearch</a></p>
+</li>
+<li>
+<p>Store the Apache Lucene index in an <a href="http://infinispan.org/">Infinispan distributed data grid</a></p>
+</li>
+<li>
+<p>Simple filesystem based replication</p>
+</li>
+<li>
+<p>Replicate changes across nodes using JMS, JGroups, or plug your own service</p>
+</li>
+<li>
+<p>Update indexes within a JTA transaction, or as a post-transaction listener</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These building blocks can be combined in various ways.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="spatial-queries"><a class="anchor" href="#spatial-queries"></a>Spatial queries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Indexing Geolocalized entities is as easy as adding the <code>@Spatial</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>Filter results around a certain location like the user position, and just highlight the matching pizzerias which are actually close to the user.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="faceting"><a class="anchor" href="#faceting"></a>Faceting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Get query results organized by groups and categories, having these automatically discovered from your data.</p>
+</div>
+<div class="paragraph">
+<p>For example webshops will want to show all results, but grouped by properties like price ranges and brand.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="feature-block">
-
+<div class="sect1">
+<h2 id="easy-to-use"><a class="anchor" href="#easy-to-use"></a>Easy to use</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Designed to be easy to use from the ground up. Handles indexing, datastore synchronization, clustering and infrastructure transparently while you focus on the business side of your queries.</p>
+</div>
+</div>
+</div>
 </div>
 
 </div>
