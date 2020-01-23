@@ -1,1598 +1,1613 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>6.0 series - Hibernate Search</title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="description">
-    <meta content="" name="author">
-    <meta CONTENT="default-src 'none'; font-src 'self' data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src 'self' data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri 'none'; form-action 'none'; object-src 'none'; connect-src 'self' https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
-    <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
-    <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
-    <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1578313792" rel="stylesheet">
-    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
-    <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
-    <script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
-  </head>
-  <body class="pushable">
-    <div class="ui vertical inverted sidebar left" id="mobile-menu">
-      <div class="ui vertical fluid inverted text menu accordion">
-        <div class="item">
-          <a class="title">
-            <i class="database grid icon"></i>
-            <i class="dropdown icon"></i>
-            <strong>ORM</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/orm/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/orm/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/orm/documentation/">
-                <i class="folder grid icon open"></i>
-                Documentation
-              </a>
-              <a class="item" href="/orm/books/">
-                <i class="book grid icon"></i>
-                Books
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-                <i class="grid icon share"></i>
-                Migration guides
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/orm/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/orm/envers/">
-                <i class="grid icon time"></i>
-                Envers
-              </a>
-              <a class="item" href="/orm/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/orm/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/orm/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="active title">
-            <i class="grid icon search"></i>
-            <i class="dropdown icon"></i>
-            <strong>Search</strong>
-          </a>
-          <div class="active content">
-            <div class="menu internal-links">
-              <a class="item" href="/search/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="active item" href="/search/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/search/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/search/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/search/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/search/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/search/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/search/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="box checkmark grid icon"></i>
-            <i class="dropdown icon"></i>
-            <strong>Validator</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/validator/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/validator/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/validator/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/validator/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/validator/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/validator/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/validator/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/validator/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon sitemap"></i>
-            <i class="dropdown icon"></i>
-            <strong>OGM</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/ogm/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/ogm/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/ogm/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/ogm/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/ogm/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/ogm/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/ogm/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon wrench"></i>
-            <i class="dropdown icon"></i>
-            <strong>Tools</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/tools/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="item" href="/others/">
-          Others
-        </a>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon users"></i>
-            <i class="dropdown icon"></i>
-            <strong>Community</strong>
-          </a>
-          <div class="content">
-            <div class="menu external-links">
-              <a class="item" href="/community/">
-                <i class="grid icon users"></i>
-                Community
-              </a>
-              <a class="item" href="/community/contributors/orm/">
-                <i class="grid icon database"></i>
-                Contributors to ORM
-              </a>
-              <a class="item" href="/community/contributors/search/">
-                <i class="grid icon search"></i>
-                Contributors to Search
-              </a>
-              <a class="item" href="/community/contributors/validator/">
-                <i class="grid icon checkmark box"></i>
-                Contributors to Validator
-              </a>
-              <a class="item" href="/community/contributors/ogm/">
-                <i class="grid icon sitemap"></i>
-                Contributors to OGM
-              </a>
-              <a class="item" href="/community/corporate-contributors/">
-                <i class="grid icon building outline"></i>
-                Corporate contributors
-              </a>
-              <a class="item" href="/community/license/">
-                <i class="grid icon legal"></i>
-                Licenses
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="item" href="https://in.relation.to/">
-          Blog
-        </a>
-        <a class="item" href="https://discourse.hibernate.org/">
-          Forums
-        </a>
-        <a class="item" href="https://twitter.com/hibernate/">
-          <i class="icon twitter"></i>
-          Follow us
-        </a>
-      </div>
-    </div>
-    <div class="pusher">
-      <div class="mobile-menu-button-bar mobile only print hidden">
-        <a class="item" id="mobile-menu-toggle">
-          <i class="sidebar icon"></i>
-          Menu
-        </a>
-      </div>
-      <!-- begin accesibility skip to top -->
-      <ul class="sr-only">
-        <li>
-          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
-        </li>
-        <li>
-          <a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
-        </li>
-      </ul>
-      <div class="ui container banner">
-        <div class="logo">
-          <a href="/">
-            <img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
-          </a>
-        </div>
-        <div class="clearfix"></div>
-        <div class="ui stackable menu mobile hidden print hidden" id="nav">
-          <a class="item" href="/orm/">ORM</a>
-          <a class="active item" href="/search/">Search</a>
-          <a class="item" href="/validator/">Validator</a>
-          <a class="item" href="/ogm/">OGM</a>
-          <a class="item" href="/tools/">Tools</a>
-          <a class="item" href="/others/">Others</a>
-          <div class="right menu">
-            <a class="item" href="https://in.relation.to/">Blog</a>
-            <a class="item" href="https://discourse.hibernate.org/">Forums</a>
-            <a class="item" href="/community/">Community</a>
-            <a class="item" href="https://twitter.com/hibernate/">
-              <i class="twitter icon"></i>
-              Follow us
-            </a>
-          </div>
-        </div>
-      </div>
-      <script>
-        var displayed_series = [];
-        displayed_series.push('6.0');
-        displayed_series.push('5.11');
-        displayed_series.push('5.10');
-        displayed_series.push('5.9');
-        displayed_series.push('5.6');
-      </script>
-      <div class="jumbotron small">
-        <div class="ui container">
-          <div class="ui grid stackable">
-            <div class="column row">
-              <div class="column twelve wide middle aligned">
-                <h1>
-                  <span>
-                    Hibernate Search
-                  </span>
-                </h1>
-                <h2>
-                  <span>
-                    6.0 series
-                  </span>
-                  <span class="label orange tag ui">development</span>
-                </h2>
-              </div>
-              <div class="column four wide middle aligned">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="page-title small">
-        <div class="ui container">
-          <h4>
-            API refresh, Bridge 2.0, Lucene 8, Elasticsearch 7.
-          </h4>
-        </div>
-      </div>
-      <div class="ui container page-content">
-        <div class="ui stackable grid">
-          <div class="column three wide computer only print hidden">
-            <div class="ui fluid vertical menu">
-              <a class="item" href="../..">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <div class="dropdown item link selected ui">
-                Releases
-                <i class="icon dropdown"></i>
-                <div class="menu">
-                  <a class="item" href="..">
-                    Overview
-                  </a>
-                  <a class="item selected" href=".">
-                    6.0
-                    &nbsp;&nbsp;
-                    <span class="ui label orange">development</span>
-                  </a>
-                  <a class="item" href="../5.11">
-                    5.11
-                    &nbsp;&nbsp;
-                    <span class="ui label green">latest stable</span>
-                  </a>
-                  <a class="item" href="../5.10">
-                    5.10
-                  </a>
-                  <a class="item" href="../5.9">
-                    5.9
-                  </a>
-                  <a class="item" href="../5.6">
-                    5.6
-                  </a>
-                </div>
-              </div>
-              <a class="item" href="../../documentation">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="../../roadmap">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="../../contribute">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="../../tooling">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="../../support">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="../../faq">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-search">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate/search">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-            <hr>
-            <div class="license">
-              Released under the
-              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
-            </div>
-          </div>
-          <div class="column thirteen wide computer sixteen wide mobile">
-            <div class="content" id="content">
-              <div id="toc">
-                <div id="toctitle">
-                  Quick links
-                </div>
-                <ul>
-                  <li>
-                    <a class="item" href="#compatibility">
-                      Compatibility
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#documentation">
-                      Documentation
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#get-it">
-                      How to get it
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#whats-new">
-                      What's new
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#migrate">
-                      Migrate
-                    </a>
-                  </li>
-                  <li>
-                    <a class="item" href="#releases">
-                      Releases in this series
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <h2 id="compatibility">Compatibility</h2>
-              <table class="ui collapsing table striped celled unstackable">
-                <tr>
-                  <td>
-                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
-                      Java
-                    </a>
-                  </td>
-                  <td>
-                    8, 11 or 13
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="/orm/">
-                      Hibernate ORM
-                    </a>
-                  </td>
-                  <td>
-                    5.4 (>= 5.4.4.Final)
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://www.elastic.co/products/elasticsearch">
-                      Elasticsearch
-                    </a>
-                  </td>
-                  <td>
-                    5.6 - 7.5
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="https://lucene.apache.org/core/">
-                      Apache Lucene
-                    </a>
-                  </td>
-                  <td>
-                    8.3
-                  </td>
-                </tr>
-              </table>
-              <p>
-                Not compatible with your requirements? Have a look at the
-                <a href="../">
-                  other series.
-                </a>
-              </p>
-              <h2 id="documentation">Documentation</h2>
-              <p>
-                Documentation for this specific series can be accessed through the links below:
-              </p>
-              <p>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/">
-                  <i class="icon file text outline"></i>
-                  HTML
-                </a>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/pdf/hibernate_search_reference.pdf">
-                  <i class="icon file pdf outline"></i>
-                  PDF
-                </a>
-                <a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/api/">
-                  <i class="icon code outline"></i>
-                  API (JavaDoc)
-                </a>
-              </p>
-              <p>
-                You can find more documentation for all series on the
-                <a href="../../documentation">
-                  documentation page.
-                </a>
-              </p>
-              <h2 id="get-it">How to get it</h2>
-              <div class="ui grid equal height stackable download-options">
-                <div class="eleven wide column">
-                  <h3>Maven, Gradle...</h3>
-                  <p>
-                    Maven artifacts of Hibernate Search are published to
-                    <a href="https://search.maven.org">
-                      Maven Central
-                    </a>
-                    and to the
-                    <a href="https://repository.jboss.org/nexus/index.html">
-                      JBoss Maven repository.
-                    </a>
-                    Refer to the
-                    <a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
-                    on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
-                  </p>
-                  <p>
-                    You can find the Maven coordinates of all artifacts through the link below:
-                    <p>
-                      <a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta3">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                    </p>
-                  </p>
-                  <p>
-                    Below are the Maven coordinates of the main artifacts.
-                  </p>
-                  <dl class="sparse">
-                    <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta3%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta3
-                      </a>
-                    </dt>
-                    <dd>Hibernate ORM mapper</dd>
-                    <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.0.0.Beta3%7C">
-                        org.hibernate.search:hibernate-search-backend-lucene:6.0.0.Beta3
-                      </a>
-                    </dt>
-                    <dd>Lucene backend</dd>
-                    <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.0.0.Beta3%7C">
-                        org.hibernate.search:hibernate-search-backend-elasticsearch:6.0.0.Beta3
-                      </a>
-                    </dt>
-                    <dd>Elasticsearch backend</dd>
-                    <dt>
-                      <a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch-aws%7C6.0.0.Beta3%7C">
-                        org.hibernate.search:hibernate-search-backend-elasticsearch-aws:6.0.0.Beta3
-                      </a>
-                    </dt>
-                    <dd>Amazon IAM authentication for Elasticsearch</dd>
-                  </dl>
-                </div>
-                <div class="five wide column divided">
-                  <h3>Zip archive</h3>
-                  <p>
-                    Direct download is available from SourceForge:
-                  </p>
-                  <p>
-                    <a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta3/hibernate-search-6.0.0.Beta3-dist.zip/download" title="Download">
-                      <i class="icon cloud download"></i>
-                      Download Zip archive
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <p>
-                More information about specific releases (announcements, download links) can be found
-                <a href="#releases">
-                  here.
-                </a>
-              </p>
-              <h2 id="whats-new">What's new</h2>
-              <p>
-                Latest release announcement (2019-12-16):
-                <a href="https://in.relation.to/2019/12/16/hibernate-search-6-0-0-Beta3">
-                  6.0.0.Beta3.
-                </a>
-              </p>
-              <p>
-                A detailed list of new features, improvements and fixes in this series can be found
-                <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta3%2C%206.0.0.Beta2%2C%206.0.0.Beta1%2C%206.0.0.Alpha9%2C%206.0.0.Alpha8%2C%206.0.0.Alpha7%2C%206.0.0.Alpha6%2C%206.0.0.Alpha5%2C%206.0.0.Alpha4%2C%206.0.0.Alpha3%2C%206.0.0.Alpha2%2C%206.0.0.Alpha1)%20ORDER%20BY%20updated">
-                  on our JIRA instance.
-                </a>
-              </p>
-              <div class="sect2">
-              <h3 id="preview-status"><a class="anchor" href="#preview-status"></a>Preview status</h3>
-              <div class="paragraph">
-              <p>Hibernate Search 6.0 is currently a <strong>technology preview</strong>.</p>
-              </div>
-              <div class="paragraph">
-              <p>While the core of Hibernate Search 6 is ready for use in a production environment,
-              there are still some limitations:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>APIs expected to stay stable, but may still change if major implementation issues are detected.</p>
-              </li>
-              <li>
-              <p>Some of the less frequently used features from Hibernate Search 5 are still missing.</p>
-              </li>
-              <li>
-              <p>There may still be some performance bottlenecks.</p>
-              </li>
-              </ul>
-              </div>
-              <div class="paragraph">
-              <p>If you encounter problems, be sure to <a href="https://hibernate.atlassian.net/browse/HSEARCH">report them</a>:
-              new preview versions are released regularly.</p>
-              </div>
-              <div class="paragraph">
-              <p>The exact features that are currently implemented and expected to work will be added to the reference documentation
-              as new Alpha versions are released, but to sum up, here is what you can start to play with:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>ORM integration:</p>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Mapping of entities using either annotation mapping or programmatic mapping.
-              Most of the field types supported in Search 5 are supported in Search 6.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-mapping">mapping</a>
-              in the reference documentation.</p>
-              </li>
-              <li>
-              <p>Custom, user-defined type bridges, property bridges or value bridges.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge">bridges</a>
-              in the reference documentation.</p>
-              </li>
-              <li>
-              <p>Automatic indexing of ORM entities on transaction commit or session flush (if outside of a transaction)
-              (enabled automatically if Hibernate Search is in your classpath and the entity is <code>@Indexed</code>).
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-automatic">automatic indexing</a>
-              in the reference documentation.</p>
-              </li>
-              <li>
-              <p>Mass indexing of ORM entities that are already persisted in database.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-massindexer">mass indexing</a>
-              in the reference documentation.</p>
-              </li>
-              <li>
-              <p>Searching for ORM entities using their Hibernate Search index,
-              and retrieving managed entities as results.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-query">query DSL</a>
-              in the reference documentation.</p>
-              </li>
-              </ul>
-              </div>
-              </li>
-              <li>
-              <p>Search DSL</p>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>All the predicates available in Search 5, except <code>facet</code> and <code>moreLikeThis</code>.
-              Additionally, the new <code>id</code>, <code>nested</code> and <code>exists</code> predicates were added.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate">predicate DSL</a>
-              in the reference documentation.</p>
-              </li>
-              <li>
-              <p>All the sorts available in Search 5.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-sort">sort DSL</a>
-              in the reference documentation.</p>
-              </li>
-              <li>
-              <p>All the projections available in Search 5.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-projection">projection DSL</a>
-              in the reference documentation.</p>
-              </li>
-              <li>
-              <p>Aggregations, equivalent to the "faceting" feature of Search 5.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-aggregation">aggregation DSL</a>
-              in the reference documentation.</p>
-              </li>
-              </ul>
-              </div>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="orm-version"><a class="anchor" href="#orm-version"></a>ORM version</h3>
-              <div class="paragraph">
-              <p>Hibernate Search 6 still relies on ORM 5.4 at the moment,
-              because it requires features that are not yet implemented in ORM 6 (still in development).</p>
-              </div>
-              <div class="paragraph">
-              <p>Note that only Hibernate ORM 5.4.4.Final or later will work correctly;
-              5.4.3.Final and earlier will not.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="lucene-8"><a class="anchor" href="#lucene-8"></a>Lucene 8</h3>
-              <div id="lucene-7" class="paragraph">
-              <p>The Lucene backend now uses Lucene 8.2.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="elasticsearch-7"><a class="anchor" href="#elasticsearch-7"></a>Elasticsearch 7</h3>
-              <div id="elasticsearch-6" class="paragraph">
-              <p>The Elasticsearch backend now works with Elasticsearch 5.6, 6.8 or 7.3.
-              Support for older versions of Elasticsearch was dropped.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="api-refresh"><a class="anchor" href="#api-refresh"></a>API refresh</h3>
-              <div class="paragraph">
-              <p>A lot of APIs have been changed, for multiple reasons.</p>
-              </div>
-              <div class="sect3">
-              <h4 id="more-consistent-api-types"><a class="anchor" href="#more-consistent-api-types"></a>More consistent API types</h4>
-              <div class="paragraph">
-              <p>The API types consistently use the <code>Search</code> prefix: no more mixing <code>FullText</code> with <code>Search</code> or simply no prefix.</p>
-              </div>
-              <div class="paragraph">
-              <p>Additionally, the <code>SearchQuery</code> type (previously <code>FullTextQuery</code>) now defines its own methods
-              instead of extending JPA&#8217;s <code>TypeQuery</code>, allowing for an API that makes more sense considering that an index,
-              not a database, is being targeted.
-              It is still possible to create an adapter that implements JPA&#8217;s <code>TypeQuery</code>.</p>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="no-more-lucene-in-hibernate-search-apis"><a class="anchor" href="#no-more-lucene-in-hibernate-search-apis"></a>No more Lucene in Hibernate Search APIs</h4>
-              <div class="paragraph">
-              <p>Hibernate Search APIs now abstract from the Lucene APIs,
-              so that alternative backends such as Elasticsearch can be used without having Lucene on your classpath.</p>
-              </div>
-              <div class="paragraph">
-              <p>This should also allow us to upgrade the Lucene version more easily:
-              in Search 5, as Lucene was "part of" our APIs,
-              we were severely limited when we wanted to upgrade to a newer Lucene version,
-              because any breaking change in Lucene could mean a breaking change for our users, too.
-              Now that using Lucene APIs is no longer necessary to use Hibernate Search,
-              upgrades should be faster.</p>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="new-search-dsl"><a class="anchor" href="#new-search-dsl"></a>New Search DSL</h4>
-              <div class="paragraph">
-              <p>The Search DSL is brand new, with several improvements:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Ability to use lambdas for more concise query definition, even when queries are complex.</p>
-              </li>
-              <li>
-              <p>Type-safe projections thanks to the brand new projection DSL.</p>
-              </li>
-              <li>
-              <p>Various new features and improvements such as a new <code>exists</code> predicate,
-              the ability to override analyzers on a per-predicate basis, &#8230;&#8203;</p>
-              </li>
-              <li>
-              <p>Injection of native predicates (<code>org.apache.lucene.search.Query</code> for Lucene, JSON for Elasticsearch)
-              within DSL-created predicates.
-              This is not new for the Lucene integration, but it is for the Elasticsearch integration.
-              See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions">predicate extensions</a>.</p>
-              </li>
-              <li>
-              <p>Simpler syntax for predicates when targeting multiple types in a single query:
-              instantiating multiple <code>QueryBuilders</code> is no longer needed,
-              Hibernate Search takes into account that multiple types are targeted
-              and automatically checks that targeted fields are compatible across all targeted indexes.</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="bridge-2.0"><a class="anchor" href="#bridge-2.0"></a>Bridge 2.0</h4>
-              <div class="paragraph">
-              <p>The bridge APIs had to change as part of the API refresh,
-              so we took this opportunity to overhaul bridge APIs to make bridges more powerful.</p>
-              </div>
-              <div class="paragraph">
-              <p>The new Bridge APIs are completely different, but with a lot of improvements:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Custom (user-defined) bridge annotations, allowing to pass type-safe parameters, and not just strings.</p>
-              </li>
-              <li>
-              <p>Better support for dirty checking optimization in bridges (in <code>TypeBridge</code> in particular),
-              by allowing bridges to declare what parts of the entity they use.</p>
-              </li>
-              <li>
-              <p>Predicates on non-String fields will work without having to bypass bridges (<code>.ignoreFieldBridge()</code>) like in Search 5.</p>
-              </li>
-              <li>
-              <p>And more!</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="easier-to-use-safer-automatic-indexing"><a class="anchor" href="#easier-to-use-safer-automatic-indexing"></a>Easier to use, safer automatic indexing</h3>
-              <div class="paragraph">
-              <p>Automatic indexing improvements are not limited to bridges:
-              <code>@IndexedEmbedded</code> is easier to configure properly in Search 6, too.</p>
-              </div>
-              <div class="paragraph">
-              <p>To be precise, changes on indexed-embedded entities trigger reindexing of the "embedding" entity automatically,
-              and annotating the inverse side of the association with <code>@ContainedIn</code> is no longer needed in most cases.
-              A mapping error will be reported when the inverse side of the association cannot be resolved.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="runtime-joins"><a class="anchor" href="#runtime-joins"></a>Runtime joins</h3>
-              <div class="paragraph">
-              <p>Hibernate Search 6.0 introduces  "nested" fields and predicates,
-              similar to the feature with the same name in Elasticsearch.</p>
-              </div>
-              <div class="paragraph">
-              <p>See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexedembedded-storage"><code>@IndexedEmbedded</code> storage type</a>
-              in the reference documentation.</p>
-              </div>
-              </div>
-              <h2 id="migrate">Migrate</h2>
-              <p>
-                If you need to upgrade from a previous series, please refer to the
-                <a href="/search/documentation/migrate/6.0/">
-                  migration guide.
-                </a>
-              </p>
-              <h2 id="releases">Releases in this series</h2>
-              <div class="ui stackable grid series-versions">
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Beta3
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-12-16</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Schema improvements, deep customization of Elasticsearch search requests, more powerful bridge definitions, search query timeouts, upgrades to Lucene 8.3.0, Elasticsearch 7.5 and Hibernate ORM 5.4.10.Final.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta3%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta3
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta3">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta3/hibernate-search-6.0.0.Beta3-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta3)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://in.relation.to/2019/12/16/hibernate-search-6-0-0-Beta3">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Beta2
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-10-28</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Search analyzers, improved background failure handling, upgrades to Elasticsearch 7.4 and Hibernate ORM 5.4.7.Final.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta2%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta2
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta2">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta2/hibernate-search-6.0.0.Beta2-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta2)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://in.relation.to/2019/10/28/hibernate-search-6-0-0-Beta2">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Beta1
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-09-24</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Consistent API expected to remain stable, complete documentation for major features, aggregations.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta1%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta1
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta1">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta1/hibernate-search-6.0.0.Beta1-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta1)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://in.relation.to/2019/09/24/hibernate-search-6-0-0-Beta1">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha9
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-08-26</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Correct handling of session flushing and clearing, static sharding, upgrades to Elasticsearch 7.3, Lucene 8.2 and Hibernate ORM 5.4.4.Final
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha9%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha9
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha9">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha9/hibernate-search-6.0.0.Alpha9-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha9)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://in.relation.to/2019/08/26/hibernate-search-6-0-0-Alpha9">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha8
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-07-22</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Restored configuration options for entity loading and Lucene index storage, simpler and more powerful bridge APIs, upgrades to Elasticsearch 7.2 and Lucene 8.1
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha8%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha8
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha8">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha8/hibernate-search-6.0.0.Alpha8-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha8)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://in.relation.to/2019/07/22/hibernate-search-6-0-0-Alpha8">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha7
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-06-24</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Missing index field type parameters restored, explicit indexing APIs restored, upgrade to Elasticsearch 6.8 and 7.1.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha7%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha7
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha7">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha7/hibernate-search-6.0.0.Alpha7-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha7)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2019/06/24/hibernate-search-6-0-0-Alpha7">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha6
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-05-27</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Decent performance for Lucene index access, indexing BigDecimal and BigInteger, less verbose search DSL, configuration of on-commit synchronization for automatic indexing, other bugfixes and improvements.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha6%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha6
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha6">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha6/hibernate-search-6.0.0.Alpha6-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha6)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2019/05/27/hibernate-search-6-0-0-Alpha6">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha5
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-05-02</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      "indexNullAs" feature restored, API to declare dependencies in bridges, Elasticsearch 6.7 and 7.0, other bugfixes and improvements.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha5%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha5
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha5">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha5/hibernate-search-6.0.0.Alpha5-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha5)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2019/05/02/hibernate-search-6-0-0-Alpha5">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha4
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-04-05</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      "exists" predicate, DSL converter bypass and analyzer override in predicates, upgrade to Lucene 8, Elasticsearch AWS integration restored, other bugfixes and improvements.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha4%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha4
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha4">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha4/hibernate-search-6.0.0.Alpha4-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha4)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2019/04/05/hibernate-search-6-0-0-Alpha4">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha3
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-03-22</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      More field types, more predicates, more consistent and less verbose API, other bugfixes and improvements.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha3%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha3
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha3">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha3/hibernate-search-6.0.0.Alpha3-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha3)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2019/03/22/hibernate-search-6-0-0-Alpha3">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha2
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2019-01-31</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Mass indexer, Elasticsearch index lifecycle, efficient work orchestration in Elasticsearch, more projections, shorter annotation names, settings improvements.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha2%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha2
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha2">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha2/hibernate-search-6.0.0.Alpha2-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha2)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2019/02/01/hibernate-search-6-0-0-Alpha2-and-5-11-1-Final">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-                <div class="ui row">
-                  <div class="three wide column">
-                    <p>
-                      <span class="label orange ui version">
-                        6.0.0.Alpha1
-                      </span>
-                    </p>
-                    <p>
-                      <small class="ui label">2018-11-29</small>
-                    </p>
-                  </div>
-                  <div class="thirteen wide column">
-                    <p>
-                      Initial implementation: a few field types only, a few predicates/sorts/projections only, sub-optimal work orchestration, minimal documentation.
-                    </p>
-                    <p>
-                      <a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha1%7C">
-                        org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha1
-                      </a>
-                    </p>
-                    <p>
-                      <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha1">
-                        <i class="icon cloud cubes"></i>
-                        Maven artifacts
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha1/hibernate-search-6.0.0.Alpha1-dist.zip/download">
-                        <i class="icon cloud download"></i>
-                        Download
-                      </a>
-                      <a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha1)%20ORDER%20BY%20updated">
-                        <i class="icon bug"></i>
-                        Resolved issues
-                      </a>
-                      <a class="ui small right labeled button icon" href="http://in.relation.to/2018/11/29/hibernate-search-6-0-0-Alpha1">
-                        <i class="icon announcement"></i>
-                        Release announcement
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script>
-        $(document).ready(function() {
-          $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
-        });
-      </script>
-      <div class="ui inverted vertical footer segment print hidden">
-        <div class="ui container">
-          <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="three wide column">
-              <h4 class="ui inverted header">Projects</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../.." title="Search">Hibernate Search</a>
-                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../../others" title="Other projects">Other projects</a>
-              </div>
-            </div>
-            <div class="three wide column">
-              <h4 class="ui inverted header">Follow us</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
-                <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
-                <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
-              </div>
-            </div>
-            <div class="five wide column">
-              <h4 class="ui inverted header">Contribute and community</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="../../../community" title="Community resources">Community resources</a>
-                <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
-                <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
-                <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
-                <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
-              </div>
-            </div>
-            <div class="five wide column sponsor">
-              <div class="logo">
-                <a href="https://www.redhat.com/">
-                  <img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <span class="back-to-top computer only">
-        <a href="javascript: void(0)">Back to top</a>
-      </span>
-    </div>
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-     
-    ga('create', 'UA-45270411-1', 'auto');
-    ga('send', 'pageview');
-    
-    </script>
-    <script>
-      $(function() {
-        $('#mobile-menu').sidebar('setting', {
-          transition: 'push'
-        });
-        $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
-      
-        $('.ui.accordion').accordion();
-      
-        $(window).scroll(function(e) {
-          if($(this).scrollTop()>150){
-            $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
-          }
-          else {
-            $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
-          }
-        });
-      
-          $('.back-to-top').click(function(e) {
-            $('body, html').animate({scrollTop:0}, 800);
-          });
-        });
-    </script>
-  </body>
+<head>
+<title>6.0 series - Hibernate Search</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="description">
+<meta content="" name="author">
+<meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
+<meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
+<meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
+<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1579777745" rel="stylesheet">
+<!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+<link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+<script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
+
+</head>
+<body class="pushable">
+<div class="ui vertical inverted sidebar left" id="mobile-menu">
+<div class="ui vertical fluid inverted text menu accordion">
+<div class="item">
+<a class="title">
+<i class="database grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>ORM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/orm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/orm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/orm/documentation/">
+<i class="folder grid icon open"></i>
+Documentation
+</a>
+<a class="item" href="/orm/books/">
+<i class="book grid icon"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="active title">
+<i class="grid icon search"></i>
+<i class="dropdown icon"></i>
+<strong>Search</strong>
+</a>
+<div class="active content">
+<div class="menu internal-links">
+<a class="item" href="/search/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="active item" href="/search/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/search/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="box checkmark grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>Validator</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/validator/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/validator/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/validator/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon sitemap"></i>
+<i class="dropdown icon"></i>
+<strong>OGM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/ogm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/ogm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/ogm/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/ogm/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/ogm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/ogm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/ogm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon wrench"></i>
+<i class="dropdown icon"></i>
+<strong>Tools</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/tools/">
+<i class="grid home icon"></i>
+About
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="/others/">
+Others
+</a>
+<div class="item">
+<a class="title">
+<i class="grid icon users"></i>
+<i class="dropdown icon"></i>
+<strong>Community</strong>
+</a>
+<div class="content">
+<div class="menu external-links">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<a class="item" href="/community/contributors/orm/">
+<i class="grid icon database"></i>
+Contributors to ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+<i class="grid icon search"></i>
+Contributors to Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+<i class="grid icon checkmark box"></i>
+Contributors to Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+<i class="grid icon sitemap"></i>
+Contributors to OGM
+</a>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+</div>
+</div>
+</div>
+<a class="item" href="https://in.relation.to/">
+Blog
+</a>
+<a class="item" href="https://discourse.hibernate.org/">
+Forums
+</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="icon twitter"></i>
+Follow us
+</a>
+</div>
+</div>
+
+<div class="pusher">
+<div class="mobile-menu-button-bar mobile only print hidden">
+<a class="item" id="mobile-menu-toggle">
+<i class="sidebar icon"></i>
+Menu
+</a>
+</div>
+<!-- begin accesibility skip to top -->
+<ul class="sr-only">
+<li>
+<a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+</li>
+<li>
+<a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+</li>
+</ul>
+<div class="ui container banner">
+<div class="logo">
+<a href="/">
+<img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="ui stackable menu mobile hidden print hidden" id="nav">
+<a class="item" href="/orm/">ORM</a>
+<a class="active item" href="/search/">Search</a>
+<a class="item" href="/validator/">Validator</a>
+<a class="item" href="/ogm/">OGM</a>
+<a class="item" href="/tools/">Tools</a>
+<a class="item" href="/others/">Others</a>
+<div class="right menu">
+<a class="item" href="https://in.relation.to/">Blog</a>
+<a class="item" href="https://discourse.hibernate.org/">Forums</a>
+<a class="item" href="/community/">Community</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="twitter icon"></i>
+Follow us
+</a>
+</div>
+</div>
+</div>
+
+<script>
+var displayed_series = [];
+displayed_series.push('6.0');
+displayed_series.push('5.11');
+displayed_series.push('5.10');
+displayed_series.push('5.9');
+displayed_series.push('5.6');
+</script>
+<div class="jumbotron small">
+<div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide middle aligned">
+<h1>
+<span>
+Hibernate Search
+</span>
+</h1>
+<h2>
+<span>
+6.0 series
+</span>
+<span class="label orange tag ui">development</span>
+</h2>
+</div>
+<div class="column four wide middle aligned">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="page-title small">
+<div class="ui container">
+<h4>
+API refresh, Bridge 2.0, Lucene 8, Elasticsearch 7.
+</h4>
+</div>
+</div>
+
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only print hidden">
+<div class="ui fluid vertical menu">
+<a class="item" href="../..">
+<i class="grid home icon"></i>
+About
+</a>
+<div class="dropdown item link selected ui">
+Releases
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="..">
+Overview
+</a>
+<a class="item selected" href=".">
+6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="../5.11">
+5.11
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="../5.10">
+5.10
+</a>
+<a class="item" href="../5.9">
+5.9
+</a>
+<a class="item" href="../5.6">
+5.6
+</a>
+</div>
+</div>
+<a class="item" href="../../documentation">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="../../roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="../../contribute">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="../../tooling">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="../../support">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="../../faq">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="ui fluid vertical menu">
+<a class="item" href="https://github.com/hibernate/hibernate-search">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/search">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+<hr>
+<div class="license">
+Released under the
+<a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
+</div>
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div id="toc">
+<div id="toctitle">
+Quick links
+</div>
+<ul>
+<li>
+<a class="item" href="#compatibility">
+Compatibility
+</a>
+</li>
+<li>
+<a class="item" href="#documentation">
+Documentation
+</a>
+</li>
+<li>
+<a class="item" href="#get-it">
+How to get it
+</a>
+</li>
+<li>
+<a class="item" href="#whats-new">
+What's new
+</a>
+</li>
+<li>
+<a class="item" href="#migrate">
+Migrate
+</a>
+</li>
+<li>
+<a class="item" href="#releases">
+Releases in this series
+</a>
+</li>
+</ul>
+</div>
+<h2 id="compatibility">Compatibility</h2>
+<table class="ui collapsing table striped celled unstackable">
+<tr>
+<td>
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+Java
+</a>
+</td>
+<td>
+8, 11 or 13
+</td>
+</tr>
+<tr>
+<td>
+<a href="/orm/">
+Hibernate ORM
+</a>
+</td>
+<td>
+5.4 (>= 5.4.4.Final)
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.elastic.co/products/elasticsearch">
+Elasticsearch
+</a>
+</td>
+<td>
+5.6 - 7.5
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://lucene.apache.org/core/">
+Apache Lucene
+</a>
+</td>
+<td>
+8.3
+</td>
+</tr>
+</table>
+<p>
+Not compatible with your requirements? Have a look at the
+<a href="../">
+other series.
+</a>
+</p>
+<h2 id="documentation">Documentation</h2>
+<p>
+Documentation for this specific series can be accessed through the links below:
+</p>
+<p>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/pdf/hibernate_search_reference.pdf">
+<i class="icon file pdf outline"></i>
+PDF
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/api/">
+<i class="icon code outline"></i>
+API (JavaDoc)
+</a>
+</p>
+<p>
+You can find more documentation for all series on the
+<a href="../../documentation">
+documentation page.
+</a>
+</p>
+<h2 id="get-it">How to get it</h2>
+<div class="ui grid equal height stackable download-options">
+<div class="eleven wide column">
+<h3>Maven, Gradle...</h3>
+<p>
+Maven artifacts of Hibernate Search are published to
+<a href="https://search.maven.org">
+Maven Central
+</a>
+and to the
+<a href="https://repository.jboss.org/nexus/index.html">
+JBoss Maven repository.
+</a>
+Refer to the
+<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+</p>
+<p>
+You can find the Maven coordinates of all artifacts through the link below:
+<p>
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta3">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+</p>
+</p>
+<p>
+Below are the Maven coordinates of the main artifacts.
+</p>
+<dl class="sparse">
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta3%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta3
+</a>
+</dt>
+<dd>Hibernate ORM mapper</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.0.0.Beta3%7C">
+org.hibernate.search:hibernate-search-backend-lucene:6.0.0.Beta3
+</a>
+</dt>
+<dd>Lucene backend</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.0.0.Beta3%7C">
+org.hibernate.search:hibernate-search-backend-elasticsearch:6.0.0.Beta3
+</a>
+</dt>
+<dd>Elasticsearch backend</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch-aws%7C6.0.0.Beta3%7C">
+org.hibernate.search:hibernate-search-backend-elasticsearch-aws:6.0.0.Beta3
+</a>
+</dt>
+<dd>Amazon IAM authentication for Elasticsearch</dd>
+</dl>
+</div>
+<div class="five wide column divided">
+<h3>Zip archive</h3>
+<p>
+Direct download is available from SourceForge:
+</p>
+<p>
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta3/hibernate-search-6.0.0.Beta3-dist.zip/download" title="Download">
+<i class="icon cloud download"></i>
+Download Zip archive
+</a>
+</p>
+</div>
+</div>
+<p>
+More information about specific releases (announcements, download links) can be found
+<a href="#releases">
+here.
+</a>
+</p>
+<h2 id="whats-new">What's new</h2>
+<p>
+Latest release announcement (2019-12-16):
+<a href="https://in.relation.to/2019/12/16/hibernate-search-6-0-0-Beta3">
+6.0.0.Beta3.
+</a>
+</p>
+<p>
+A detailed list of new features, improvements and fixes in this series can be found
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta3%2C%206.0.0.Beta2%2C%206.0.0.Beta1%2C%206.0.0.Alpha9%2C%206.0.0.Alpha8%2C%206.0.0.Alpha7%2C%206.0.0.Alpha6%2C%206.0.0.Alpha5%2C%206.0.0.Alpha4%2C%206.0.0.Alpha3%2C%206.0.0.Alpha2%2C%206.0.0.Alpha1)%20ORDER%20BY%20updated">
+on our JIRA instance.
+</a>
+</p>
+<div class="sect2">
+<h3 id="preview-status"><a class="anchor" href="#preview-status"></a>Preview status</h3>
+<div class="paragraph">
+<p>Hibernate Search 6.0 is currently a <strong>technology preview</strong>.</p>
+</div>
+<div class="paragraph">
+<p>While the core of Hibernate Search 6 is ready for use in a production environment,
+there are still some limitations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>APIs expected to stay stable, but may still change if major implementation issues are detected.</p>
+</li>
+<li>
+<p>Some of the less frequently used features from Hibernate Search 5 are still missing.</p>
+</li>
+<li>
+<p>There may still be some performance bottlenecks.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you encounter problems, be sure to <a href="https://hibernate.atlassian.net/browse/HSEARCH">report them</a>:
+new preview versions are released regularly.</p>
+</div>
+<div class="paragraph">
+<p>The exact features that are currently implemented and expected to work will be added to the reference documentation
+as new Alpha versions are released, but to sum up, here is what you can start to play with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ORM integration:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Mapping of entities using either annotation mapping or programmatic mapping.
+Most of the field types supported in Search 5 are supported in Search 6.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-mapping">mapping</a>
+in the reference documentation.</p>
+</li>
+<li>
+<p>Custom, user-defined type bridges, property bridges or value bridges.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge">bridges</a>
+in the reference documentation.</p>
+</li>
+<li>
+<p>Automatic indexing of ORM entities on transaction commit or session flush (if outside of a transaction)
+(enabled automatically if Hibernate Search is in your classpath and the entity is <code>@Indexed</code>).
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-automatic">automatic indexing</a>
+in the reference documentation.</p>
+</li>
+<li>
+<p>Mass indexing of ORM entities that are already persisted in database.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-massindexer">mass indexing</a>
+in the reference documentation.</p>
+</li>
+<li>
+<p>Searching for ORM entities using their Hibernate Search index,
+and retrieving managed entities as results.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-query">query DSL</a>
+in the reference documentation.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Search DSL</p>
+<div class="ulist">
+<ul>
+<li>
+<p>All the predicates available in Search 5, except <code>facet</code> and <code>moreLikeThis</code>.
+Additionally, the new <code>id</code>, <code>nested</code> and <code>exists</code> predicates were added.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate">predicate DSL</a>
+in the reference documentation.</p>
+</li>
+<li>
+<p>All the sorts available in Search 5.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-sort">sort DSL</a>
+in the reference documentation.</p>
+</li>
+<li>
+<p>All the projections available in Search 5.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-projection">projection DSL</a>
+in the reference documentation.</p>
+</li>
+<li>
+<p>Aggregations, equivalent to the "faceting" feature of Search 5.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-aggregation">aggregation DSL</a>
+in the reference documentation.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="orm-version"><a class="anchor" href="#orm-version"></a>ORM version</h3>
+<div class="paragraph">
+<p>Hibernate Search 6 still relies on ORM 5.4 at the moment,
+because it requires features that are not yet implemented in ORM 6 (still in development).</p>
+</div>
+<div class="paragraph">
+<p>Note that only Hibernate ORM 5.4.4.Final or later will work correctly;
+5.4.3.Final and earlier will not.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="lucene-8"><a class="anchor" href="#lucene-8"></a>Lucene 8</h3>
+<div id="lucene-7" class="paragraph">
+<p>The Lucene backend now uses Lucene 8.2.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="elasticsearch-7"><a class="anchor" href="#elasticsearch-7"></a>Elasticsearch 7</h3>
+<div id="elasticsearch-6" class="paragraph">
+<p>The Elasticsearch backend now works with Elasticsearch 5.6, 6.8 or 7.3.
+Support for older versions of Elasticsearch was dropped.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-refresh"><a class="anchor" href="#api-refresh"></a>API refresh</h3>
+<div class="paragraph">
+<p>A lot of APIs have been changed, for multiple reasons.</p>
+</div>
+<div class="sect3">
+<h4 id="more-consistent-api-types"><a class="anchor" href="#more-consistent-api-types"></a>More consistent API types</h4>
+<div class="paragraph">
+<p>The API types consistently use the <code>Search</code> prefix: no more mixing <code>FullText</code> with <code>Search</code> or simply no prefix.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the <code>SearchQuery</code> type (previously <code>FullTextQuery</code>) now defines its own methods
+instead of extending JPA&#8217;s <code>TypeQuery</code>, allowing for an API that makes more sense considering that an index,
+not a database, is being targeted.
+It is still possible to create an adapter that implements JPA&#8217;s <code>TypeQuery</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="no-more-lucene-in-hibernate-search-apis"><a class="anchor" href="#no-more-lucene-in-hibernate-search-apis"></a>No more Lucene in Hibernate Search APIs</h4>
+<div class="paragraph">
+<p>Hibernate Search APIs now abstract from the Lucene APIs,
+so that alternative backends such as Elasticsearch can be used without having Lucene on your classpath.</p>
+</div>
+<div class="paragraph">
+<p>This should also allow us to upgrade the Lucene version more easily:
+in Search 5, as Lucene was "part of" our APIs,
+we were severely limited when we wanted to upgrade to a newer Lucene version,
+because any breaking change in Lucene could mean a breaking change for our users, too.
+Now that using Lucene APIs is no longer necessary to use Hibernate Search,
+upgrades should be faster.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="new-search-dsl"><a class="anchor" href="#new-search-dsl"></a>New Search DSL</h4>
+<div class="paragraph">
+<p>The Search DSL is brand new, with several improvements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ability to use lambdas for more concise query definition, even when queries are complex.</p>
+</li>
+<li>
+<p>Type-safe projections thanks to the brand new projection DSL.</p>
+</li>
+<li>
+<p>Various new features and improvements such as a new <code>exists</code> predicate,
+the ability to override analyzers on a per-predicate basis, &#8230;&#8203;</p>
+</li>
+<li>
+<p>Injection of native predicates (<code>org.apache.lucene.search.Query</code> for Lucene, JSON for Elasticsearch)
+within DSL-created predicates.
+This is not new for the Lucene integration, but it is for the Elasticsearch integration.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions">predicate extensions</a>.</p>
+</li>
+<li>
+<p>Simpler syntax for predicates when targeting multiple types in a single query:
+instantiating multiple <code>QueryBuilders</code> is no longer needed,
+Hibernate Search takes into account that multiple types are targeted
+and automatically checks that targeted fields are compatible across all targeted indexes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="bridge-2.0"><a class="anchor" href="#bridge-2.0"></a>Bridge 2.0</h4>
+<div class="paragraph">
+<p>The bridge APIs had to change as part of the API refresh,
+so we took this opportunity to overhaul bridge APIs to make bridges more powerful.</p>
+</div>
+<div class="paragraph">
+<p>The new Bridge APIs are completely different, but with a lot of improvements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Custom (user-defined) bridge annotations, allowing to pass type-safe parameters, and not just strings.</p>
+</li>
+<li>
+<p>Better support for dirty checking optimization in bridges (in <code>TypeBridge</code> in particular),
+by allowing bridges to declare what parts of the entity they use.</p>
+</li>
+<li>
+<p>Predicates on non-String fields will work without having to bypass bridges (<code>.ignoreFieldBridge()</code>) like in Search 5.</p>
+</li>
+<li>
+<p>And more!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="easier-to-use-safer-automatic-indexing"><a class="anchor" href="#easier-to-use-safer-automatic-indexing"></a>Easier to use, safer automatic indexing</h3>
+<div class="paragraph">
+<p>Automatic indexing improvements are not limited to bridges:
+<code>@IndexedEmbedded</code> is easier to configure properly in Search 6, too.</p>
+</div>
+<div class="paragraph">
+<p>To be precise, changes on indexed-embedded entities trigger reindexing of the "embedding" entity automatically,
+and annotating the inverse side of the association with <code>@ContainedIn</code> is no longer needed in most cases.
+A mapping error will be reported when the inverse side of the association cannot be resolved.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="runtime-joins"><a class="anchor" href="#runtime-joins"></a>Runtime joins</h3>
+<div class="paragraph">
+<p>Hibernate Search 6.0 introduces  "nested" fields and predicates,
+similar to the feature with the same name in Elasticsearch.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexedembedded-storage"><code>@IndexedEmbedded</code> storage type</a>
+in the reference documentation.</p>
+</div>
+</div>
+<h2 id="migrate">Migrate</h2>
+<p>
+If you need to upgrade from a previous series, please refer to the
+<a href="/search/documentation/migrate/6.0/">
+migration guide.
+</a>
+</p>
+<h2 id="releases">Releases in this series</h2>
+<div class="ui stackable grid series-versions">
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Beta3
+</span>
+</p>
+<p>
+<small class="ui label">2019-12-16</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Schema improvements, deep customization of Elasticsearch search requests, more powerful bridge definitions, search query timeouts, upgrades to Lucene 8.3.0, Elasticsearch 7.5 and Hibernate ORM 5.4.10.Final.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta3%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta3
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta3">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta3/hibernate-search-6.0.0.Beta3-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta3)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2019/12/16/hibernate-search-6-0-0-Beta3">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Beta2
+</span>
+</p>
+<p>
+<small class="ui label">2019-10-28</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Search analyzers, improved background failure handling, upgrades to Elasticsearch 7.4 and Hibernate ORM 5.4.7.Final.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta2%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta2
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta2">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta2/hibernate-search-6.0.0.Beta2-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta2)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2019/10/28/hibernate-search-6-0-0-Beta2">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Beta1
+</span>
+</p>
+<p>
+<small class="ui label">2019-09-24</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Consistent API expected to remain stable, complete documentation for major features, aggregations.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta1%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta1
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta1">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Beta1/hibernate-search-6.0.0.Beta1-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Beta1)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2019/09/24/hibernate-search-6-0-0-Beta1">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha9
+</span>
+</p>
+<p>
+<small class="ui label">2019-08-26</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Correct handling of session flushing and clearing, static sharding, upgrades to Elasticsearch 7.3, Lucene 8.2 and Hibernate ORM 5.4.4.Final
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha9%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha9
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha9">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha9/hibernate-search-6.0.0.Alpha9-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha9)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2019/08/26/hibernate-search-6-0-0-Alpha9">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha8
+</span>
+</p>
+<p>
+<small class="ui label">2019-07-22</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Restored configuration options for entity loading and Lucene index storage, simpler and more powerful bridge APIs, upgrades to Elasticsearch 7.2 and Lucene 8.1
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha8%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha8
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha8">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha8/hibernate-search-6.0.0.Alpha8-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha8)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2019/07/22/hibernate-search-6-0-0-Alpha8">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha7
+</span>
+</p>
+<p>
+<small class="ui label">2019-06-24</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Missing index field type parameters restored, explicit indexing APIs restored, upgrade to Elasticsearch 6.8 and 7.1.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha7%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha7
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha7">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha7/hibernate-search-6.0.0.Alpha7-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha7)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/06/24/hibernate-search-6-0-0-Alpha7">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha6
+</span>
+</p>
+<p>
+<small class="ui label">2019-05-27</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Decent performance for Lucene index access, indexing BigDecimal and BigInteger, less verbose search DSL, configuration of on-commit synchronization for automatic indexing, other bugfixes and improvements.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha6%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha6
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha6">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha6/hibernate-search-6.0.0.Alpha6-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha6)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/05/27/hibernate-search-6-0-0-Alpha6">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha5
+</span>
+</p>
+<p>
+<small class="ui label">2019-05-02</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+"indexNullAs" feature restored, API to declare dependencies in bridges, Elasticsearch 6.7 and 7.0, other bugfixes and improvements.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha5%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha5
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha5">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha5/hibernate-search-6.0.0.Alpha5-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha5)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/05/02/hibernate-search-6-0-0-Alpha5">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha4
+</span>
+</p>
+<p>
+<small class="ui label">2019-04-05</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+"exists" predicate, DSL converter bypass and analyzer override in predicates, upgrade to Lucene 8, Elasticsearch AWS integration restored, other bugfixes and improvements.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha4%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha4
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha4">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha4/hibernate-search-6.0.0.Alpha4-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha4)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/04/05/hibernate-search-6-0-0-Alpha4">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha3
+</span>
+</p>
+<p>
+<small class="ui label">2019-03-22</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+More field types, more predicates, more consistent and less verbose API, other bugfixes and improvements.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha3%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha3
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha3">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha3/hibernate-search-6.0.0.Alpha3-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha3)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/03/22/hibernate-search-6-0-0-Alpha3">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha2
+</span>
+</p>
+<p>
+<small class="ui label">2019-01-31</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Mass indexer, Elasticsearch index lifecycle, efficient work orchestration in Elasticsearch, more projections, shorter annotation names, settings improvements.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha2%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha2
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha2">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha2/hibernate-search-6.0.0.Alpha2-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha2)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/02/01/hibernate-search-6-0-0-Alpha2-and-5-11-1-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.0.0.Alpha1
+</span>
+</p>
+<p>
+<small class="ui label">2018-11-29</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Initial implementation: a few field types only, a few predicates/sorts/projections only, sub-optimal work orchestration, minimal documentation.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha1%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha1
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha1">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Alpha1/hibernate-search-6.0.0.Alpha1-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Alpha1)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2018/11/29/hibernate-search-6-0-0-Alpha1">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
+
+<div class="ui inverted vertical footer segment print hidden">
+<div class="ui container">
+<div class="ui stackable inverted divided equal height stackable grid">
+<div class="three wide column">
+<h4 class="ui inverted header">Projects</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../.." title="Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
+</div>
+</div>
+<div class="three wide column">
+<h4 class="ui inverted header">Follow us</h4>
+<div class="ui inverted link list">
+<a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
+<a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+<a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
+</div>
+</div>
+<div class="five wide column">
+<h4 class="ui inverted header">Contribute and community</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
+<a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
+<a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
+<a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+</div>
+</div>
+<div class="five wide column sponsor">
+<div class="logo">
+<a href="https://www.redhat.com/">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span class="back-to-top computer only">
+<a href="javascript: void(0)">Back to top</a>
+</span>
+</div>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-45270411-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+  $(function() {
+    $('#mobile-menu').sidebar('setting', {
+      transition: 'push'
+    });
+    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
+  
+    $('.ui.accordion').accordion();
+  
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>150){
+        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
+      }
+      else {
+        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
+      }
+    });
+  
+      $('.back-to-top').click(function(e) {
+        $('body, html').animate({scrollTop:0}, 800);
+      });
+    });
+</script>
+</body>
 </html>

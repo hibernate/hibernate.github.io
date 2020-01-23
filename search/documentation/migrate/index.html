@@ -1,741 +1,754 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Hibernate Search Migration Guides - Hibernate Search</title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="description">
-    <meta content="" name="author">
-    <meta CONTENT="default-src 'none'; font-src 'self' data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src 'self' data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri 'none'; form-action 'none'; object-src 'none'; connect-src 'self' https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
-    <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
-    <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
-    <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1578313791" rel="stylesheet">
-    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
-    <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
-    <script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
-  </head>
-  <body class="pushable">
-    <div class="ui vertical inverted sidebar left" id="mobile-menu">
-      <div class="ui vertical fluid inverted text menu accordion">
-        <div class="item">
-          <a class="title">
-            <i class="database grid icon"></i>
-            <i class="dropdown icon"></i>
-            <strong>ORM</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/orm/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/orm/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/orm/documentation/">
-                <i class="folder grid icon open"></i>
-                Documentation
-              </a>
-              <a class="item" href="/orm/books/">
-                <i class="book grid icon"></i>
-                Books
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-                <i class="grid icon share"></i>
-                Migration guides
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/orm/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/orm/envers/">
-                <i class="grid icon time"></i>
-                Envers
-              </a>
-              <a class="item" href="/orm/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/orm/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/orm/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="active title">
-            <i class="grid icon search"></i>
-            <i class="dropdown icon"></i>
-            <strong>Search</strong>
-          </a>
-          <div class="active content">
-            <div class="menu internal-links">
-              <a class="item" href="/search/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/search/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="active item" href="/search/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/search/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/search/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/search/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/search/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/search/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="box checkmark grid icon"></i>
-            <i class="dropdown icon"></i>
-            <strong>Validator</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/validator/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/validator/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/validator/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/validator/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/validator/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/validator/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/validator/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/validator/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon sitemap"></i>
-            <i class="dropdown icon"></i>
-            <strong>OGM</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/ogm/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/ogm/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/ogm/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/ogm/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/ogm/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/ogm/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/ogm/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon wrench"></i>
-            <i class="dropdown icon"></i>
-            <strong>Tools</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/tools/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="item" href="/others/">
-          Others
-        </a>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon users"></i>
-            <i class="dropdown icon"></i>
-            <strong>Community</strong>
-          </a>
-          <div class="content">
-            <div class="menu external-links">
-              <a class="item" href="/community/">
-                <i class="grid icon users"></i>
-                Community
-              </a>
-              <a class="item" href="/community/contributors/orm/">
-                <i class="grid icon database"></i>
-                Contributors to ORM
-              </a>
-              <a class="item" href="/community/contributors/search/">
-                <i class="grid icon search"></i>
-                Contributors to Search
-              </a>
-              <a class="item" href="/community/contributors/validator/">
-                <i class="grid icon checkmark box"></i>
-                Contributors to Validator
-              </a>
-              <a class="item" href="/community/contributors/ogm/">
-                <i class="grid icon sitemap"></i>
-                Contributors to OGM
-              </a>
-              <a class="item" href="/community/corporate-contributors/">
-                <i class="grid icon building outline"></i>
-                Corporate contributors
-              </a>
-              <a class="item" href="/community/license/">
-                <i class="grid icon legal"></i>
-                Licenses
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="item" href="https://in.relation.to/">
-          Blog
-        </a>
-        <a class="item" href="https://discourse.hibernate.org/">
-          Forums
-        </a>
-        <a class="item" href="https://twitter.com/hibernate/">
-          <i class="icon twitter"></i>
-          Follow us
-        </a>
-      </div>
-    </div>
-    <div class="pusher">
-      <div class="mobile-menu-button-bar mobile only print hidden">
-        <a class="item" id="mobile-menu-toggle">
-          <i class="sidebar icon"></i>
-          Menu
-        </a>
-      </div>
-      <!-- begin accesibility skip to top -->
-      <ul class="sr-only">
-        <li>
-          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
-        </li>
-        <li>
-          <a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
-        </li>
-      </ul>
-      <div class="ui container banner">
-        <div class="logo">
-          <a href="/">
-            <img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
-          </a>
-        </div>
-        <div class="clearfix"></div>
-        <div class="ui stackable menu mobile hidden print hidden" id="nav">
-          <a class="item" href="/orm/">ORM</a>
-          <a class="active item" href="/search/">Search</a>
-          <a class="item" href="/validator/">Validator</a>
-          <a class="item" href="/ogm/">OGM</a>
-          <a class="item" href="/tools/">Tools</a>
-          <a class="item" href="/others/">Others</a>
-          <div class="right menu">
-            <a class="item" href="https://in.relation.to/">Blog</a>
-            <a class="item" href="https://discourse.hibernate.org/">Forums</a>
-            <a class="item" href="/community/">Community</a>
-            <a class="item" href="https://twitter.com/hibernate/">
-              <i class="twitter icon"></i>
-              Follow us
-            </a>
-          </div>
-        </div>
-      </div>
-      <script>
-        var displayed_series = [];
-        displayed_series.push('6.0');
-        displayed_series.push('5.11');
-        displayed_series.push('5.10');
-        displayed_series.push('5.9');
-        displayed_series.push('5.6');
-      </script>
-      <div class="jumbotron small">
-        <div class="ui container">
-          <div class="ui grid stackable">
-            <div class="column row">
-              <div class="column twelve wide middle aligned">
-                <h1>
-                  <span>
-                    Hibernate Search
-                  </span>
-                </h1>
-                <h2>
-                  <span>
-                    Hibernate Search Migration Guides
-                  </span>
-                </h2>
-              </div>
-              <div class="column four wide middle aligned">
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="ui container page-content">
-        <div class="ui stackable grid">
-          <div class="column three wide computer only print hidden">
-            <div class="ui fluid vertical menu">
-              <a class="item" href="../..">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <div class="dropdown item link ui">
-                Releases
-                <i class="icon dropdown"></i>
-                <div class="menu">
-                  <a class="item" href="../../releases">
-                    Overview
-                  </a>
-                  <a class="item" href="../../releases/6.0">
-                    6.0
-                    &nbsp;&nbsp;
-                    <span class="ui label orange">development</span>
-                  </a>
-                  <a class="item" href="../../releases/5.11">
-                    5.11
-                    &nbsp;&nbsp;
-                    <span class="ui label green">latest stable</span>
-                  </a>
-                  <a class="item" href="../../releases/5.10">
-                    5.10
-                  </a>
-                  <a class="item" href="../../releases/5.9">
-                    5.9
-                  </a>
-                  <a class="item" href="../../releases/5.6">
-                    5.6
-                  </a>
-                </div>
-              </div>
-              <a class="item selected" href="..">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="../../roadmap">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="../../contribute">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="../../tooling">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="../../support">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="../../faq">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-search">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate/search">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-            <hr>
-            <div class="license">
-              Released under the
-              <a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
-            </div>
-          </div>
-          <div class="column thirteen wide computer sixteen wide mobile">
-            <div class="content" id="content">
-              <div class="sect1">
-              <h2 id="migration-guides"><a class="anchor" href="#migration-guides"></a>Migration Guides</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>The following guides are meant to help you upgrading an existing application using Hibernate Search to a more recent version.
-              This content is not automatically generated, but structured to give you the high level overview.</p>
-              </div>
-              <div class="dlist">
-              <dl>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/6.0">Migration guide to Hibernate Search 6.0</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.11</em> to <em>6.0</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.11">Migration guide to Hibernate Search 5.11</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.10</em> to <em>5.11</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.10">Migration guide to Hibernate Search 5.10</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.9</em> to <em>5.10</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.9">Migration guide to Hibernate Search 5.9</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.8</em> to <em>5.9</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.8">Migration guide to Hibernate Search 5.8</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.7</em> to <em>5.8</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.7">Migration guide to Hibernate Search 5.7</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.6</em> to <em>5.7</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.6">Migration guide to Hibernate Search 5.6</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.5</em> to <em>5.6</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.5">Migration guide to Hibernate Search 5.5</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.4</em> to <em>5.5</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.4">Migration guide to Hibernate Search 5.4</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.3</em> to <em>5.4</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.3">Migration guide to Hibernate Search 5.3</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.2</em> to <em>5.3</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.2">Migration guide to Hibernate Search 5.2</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.1</em> to <em>5.2</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.1">Migration guide to Hibernate Search 5.1</a></dt>
-              <dd>
-              <p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.0</em> to <em>5.1</em>.</p>
-              </dd>
-              <dt class="hdlist1"><a href="/search/documentation/migrate/5.0">Migration guide for Hibernate Search 5.0</a></dt>
-              <dd>
-              <p>This is what you need when upgrading from a fairly recent version of Hibernate Search 4, such as <em>4.4.x</em> and <em>4.5.x</em>.
-              If you&#8217;re upgrading from older versions, please migrate to <em>4.5.3.Final</em> first.</p>
-              </dd>
-              </dl>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="hibernate-search-versions-3-and-4"><a class="anchor" href="#hibernate-search-versions-3-and-4"></a>Hibernate Search versions 3 and 4</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>Details to migrate from and between the various releases of Hibernate Search <em>3.x</em> and <em>4.x</em> are documented on our previous <a href="https://developer.jboss.org/wiki/HibernateSearchMigrationGuide">migration guide wiki</a>.
-              Please note these versions are no longer maintained, so migrating to a more recent <em>5.x</em> version is a very good idea.</p>
-              </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script>
-        $(document).ready(function() {
-          $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
-        });
-      </script>
-      <div class="ui inverted vertical footer segment print hidden">
-        <div class="ui container">
-          <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="three wide column">
-              <h4 class="ui inverted header">Projects</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../.." title="Search">Hibernate Search</a>
-                <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../../others" title="Other projects">Other projects</a>
-              </div>
-            </div>
-            <div class="three wide column">
-              <h4 class="ui inverted header">Follow us</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
-                <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
-                <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
-              </div>
-            </div>
-            <div class="five wide column">
-              <h4 class="ui inverted header">Contribute and community</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="../../../community" title="Community resources">Community resources</a>
-                <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
-                <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
-                <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
-                <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
-              </div>
-            </div>
-            <div class="five wide column sponsor">
-              <div class="logo">
-                <a href="https://www.redhat.com/">
-                  <img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <span class="back-to-top computer only">
-        <a href="javascript: void(0)">Back to top</a>
-      </span>
-    </div>
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-     
-    ga('create', 'UA-45270411-1', 'auto');
-    ga('send', 'pageview');
-    
-    </script>
-    <script>
-      $(function() {
-        $('#mobile-menu').sidebar('setting', {
-          transition: 'push'
-        });
-        $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
-      
-        $('.ui.accordion').accordion();
-      
-        $(window).scroll(function(e) {
-          if($(this).scrollTop()>150){
-            $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
-          }
-          else {
-            $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
-          }
-        });
-      
-          $('.back-to-top').click(function(e) {
-            $('body, html').animate({scrollTop:0}, 800);
-          });
-        });
-    </script>
-  </body>
+<head>
+<title>Hibernate Search Migration Guides - Hibernate Search</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="description">
+<meta content="" name="author">
+<meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
+<meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
+<meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
+<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1579777744" rel="stylesheet">
+<!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+<link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+<script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
+
+</head>
+<body class="pushable">
+<div class="ui vertical inverted sidebar left" id="mobile-menu">
+<div class="ui vertical fluid inverted text menu accordion">
+<div class="item">
+<a class="title">
+<i class="database grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>ORM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/orm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/orm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/orm/documentation/">
+<i class="folder grid icon open"></i>
+Documentation
+</a>
+<a class="item" href="/orm/books/">
+<i class="book grid icon"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="active title">
+<i class="grid icon search"></i>
+<i class="dropdown icon"></i>
+<strong>Search</strong>
+</a>
+<div class="active content">
+<div class="menu internal-links">
+<a class="item" href="/search/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/search/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="active item" href="/search/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="box checkmark grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>Validator</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/validator/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/validator/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/validator/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon sitemap"></i>
+<i class="dropdown icon"></i>
+<strong>OGM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/ogm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/ogm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/ogm/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/ogm/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/ogm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/ogm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/ogm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon wrench"></i>
+<i class="dropdown icon"></i>
+<strong>Tools</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/tools/">
+<i class="grid home icon"></i>
+About
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="/others/">
+Others
+</a>
+<div class="item">
+<a class="title">
+<i class="grid icon users"></i>
+<i class="dropdown icon"></i>
+<strong>Community</strong>
+</a>
+<div class="content">
+<div class="menu external-links">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<a class="item" href="/community/contributors/orm/">
+<i class="grid icon database"></i>
+Contributors to ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+<i class="grid icon search"></i>
+Contributors to Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+<i class="grid icon checkmark box"></i>
+Contributors to Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+<i class="grid icon sitemap"></i>
+Contributors to OGM
+</a>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+</div>
+</div>
+</div>
+<a class="item" href="https://in.relation.to/">
+Blog
+</a>
+<a class="item" href="https://discourse.hibernate.org/">
+Forums
+</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="icon twitter"></i>
+Follow us
+</a>
+</div>
+</div>
+
+<div class="pusher">
+<div class="mobile-menu-button-bar mobile only print hidden">
+<a class="item" id="mobile-menu-toggle">
+<i class="sidebar icon"></i>
+Menu
+</a>
+</div>
+<!-- begin accesibility skip to top -->
+<ul class="sr-only">
+<li>
+<a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+</li>
+<li>
+<a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+</li>
+</ul>
+<div class="ui container banner">
+<div class="logo">
+<a href="/">
+<img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="ui stackable menu mobile hidden print hidden" id="nav">
+<a class="item" href="/orm/">ORM</a>
+<a class="active item" href="/search/">Search</a>
+<a class="item" href="/validator/">Validator</a>
+<a class="item" href="/ogm/">OGM</a>
+<a class="item" href="/tools/">Tools</a>
+<a class="item" href="/others/">Others</a>
+<div class="right menu">
+<a class="item" href="https://in.relation.to/">Blog</a>
+<a class="item" href="https://discourse.hibernate.org/">Forums</a>
+<a class="item" href="/community/">Community</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="twitter icon"></i>
+Follow us
+</a>
+</div>
+</div>
+</div>
+
+<script>
+var displayed_series = [];
+displayed_series.push('6.0');
+displayed_series.push('5.11');
+displayed_series.push('5.10');
+displayed_series.push('5.9');
+displayed_series.push('5.6');
+</script>
+<div class="jumbotron small">
+<div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide middle aligned">
+<h1>
+<span>
+Hibernate Search
+</span>
+</h1>
+<h2>
+<span>
+Hibernate Search Migration Guides
+</span>
+</h2>
+</div>
+<div class="column four wide middle aligned">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only print hidden">
+<div class="ui fluid vertical menu">
+<a class="item" href="../..">
+<i class="grid home icon"></i>
+About
+</a>
+<div class="dropdown item link ui">
+Releases
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="../../releases">
+Overview
+</a>
+<a class="item" href="../../releases/6.0">
+6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="../../releases/5.11">
+5.11
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="../../releases/5.10">
+5.10
+</a>
+<a class="item" href="../../releases/5.9">
+5.9
+</a>
+<a class="item" href="../../releases/5.6">
+5.6
+</a>
+</div>
+</div>
+<a class="item selected" href="..">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="../../roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="../../contribute">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="../../tooling">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="../../support">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="../../faq">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="ui fluid vertical menu">
+<a class="item" href="https://github.com/hibernate/hibernate-search">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/search">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+<hr>
+<div class="license">
+Released under the
+<a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
+</div>
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div class="sect1">
+<h2 id="migration-guides"><a class="anchor" href="#migration-guides"></a>Migration Guides</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following guides are meant to help you upgrading an existing application using Hibernate Search to a more recent version.
+This content is not automatically generated, but structured to give you the high level overview.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="/search/documentation/migrate/6.0">Migration guide to Hibernate Search 6.0</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.11</em> to <em>6.0</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.11">Migration guide to Hibernate Search 5.11</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.10</em> to <em>5.11</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.10">Migration guide to Hibernate Search 5.10</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.9</em> to <em>5.10</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.9">Migration guide to Hibernate Search 5.9</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.8</em> to <em>5.9</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.8">Migration guide to Hibernate Search 5.8</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.7</em> to <em>5.8</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.7">Migration guide to Hibernate Search 5.7</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.6</em> to <em>5.7</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.6">Migration guide to Hibernate Search 5.6</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.5</em> to <em>5.6</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.5">Migration guide to Hibernate Search 5.5</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.4</em> to <em>5.5</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.4">Migration guide to Hibernate Search 5.4</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.3</em> to <em>5.4</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.3">Migration guide to Hibernate Search 5.3</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.2</em> to <em>5.3</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.2">Migration guide to Hibernate Search 5.2</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.1</em> to <em>5.2</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.1">Migration guide to Hibernate Search 5.1</a></dt>
+<dd>
+<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.0</em> to <em>5.1</em>.</p>
+</dd>
+<dt class="hdlist1"><a href="/search/documentation/migrate/5.0">Migration guide for Hibernate Search 5.0</a></dt>
+<dd>
+<p>This is what you need when upgrading from a fairly recent version of Hibernate Search 4, such as <em>4.4.x</em> and <em>4.5.x</em>.
+If you&#8217;re upgrading from older versions, please migrate to <em>4.5.3.Final</em> first.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hibernate-search-versions-3-and-4"><a class="anchor" href="#hibernate-search-versions-3-and-4"></a>Hibernate Search versions 3 and 4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Details to migrate from and between the various releases of Hibernate Search <em>3.x</em> and <em>4.x</em> are documented on our previous <a href="https://developer.jboss.org/wiki/HibernateSearchMigrationGuide">migration guide wiki</a>.
+Please note these versions are no longer maintained, so migrating to a more recent <em>5.x</em> version is a very good idea.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
+
+<div class="ui inverted vertical footer segment print hidden">
+<div class="ui container">
+<div class="ui stackable inverted divided equal height stackable grid">
+<div class="three wide column">
+<h4 class="ui inverted header">Projects</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../.." title="Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
+</div>
+</div>
+<div class="three wide column">
+<h4 class="ui inverted header">Follow us</h4>
+<div class="ui inverted link list">
+<a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
+<a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+<a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
+</div>
+</div>
+<div class="five wide column">
+<h4 class="ui inverted header">Contribute and community</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
+<a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
+<a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
+<a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+</div>
+</div>
+<div class="five wide column sponsor">
+<div class="logo">
+<a href="https://www.redhat.com/">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span class="back-to-top computer only">
+<a href="javascript: void(0)">Back to top</a>
+</span>
+</div>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-45270411-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+  $(function() {
+    $('#mobile-menu').sidebar('setting', {
+      transition: 'push'
+    });
+    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
+  
+    $('.ui.accordion').accordion();
+  
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>150){
+        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
+      }
+      else {
+        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
+      }
+    });
+  
+      $('.back-to-top').click(function(e) {
+        $('body, html').animate({scrollTop:0}, 800);
+      });
+    });
+</script>
+</body>
 </html>

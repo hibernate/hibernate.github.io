@@ -1,1105 +1,1120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Contribute - Hibernate Validator</title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="description">
-    <meta content="Hardy Ferentschik, Gunnar Morling" name="author">
-    <meta CONTENT="default-src 'none'; font-src 'self' data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src 'unsafe-inline' 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src 'self' data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri 'none'; form-action 'none'; object-src 'none'; connect-src 'self' https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
-    <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
-    <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
-    <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-    <link href="/stylesheets/styles.css?t=1578313792" rel="stylesheet">
-    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
-    <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-    <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
-    <script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
-    <script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
-  </head>
-  <body class="pushable">
-    <div class="ui vertical inverted sidebar left" id="mobile-menu">
-      <div class="ui vertical fluid inverted text menu accordion">
-        <div class="item">
-          <a class="title">
-            <i class="database grid icon"></i>
-            <i class="dropdown icon"></i>
-            <strong>ORM</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/orm/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/orm/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/orm/documentation/">
-                <i class="folder grid icon open"></i>
-                Documentation
-              </a>
-              <a class="item" href="/orm/books/">
-                <i class="book grid icon"></i>
-                Books
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-                <i class="grid icon share"></i>
-                Migration guides
-              </a>
-              <a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/orm/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/orm/envers/">
-                <i class="grid icon time"></i>
-                Envers
-              </a>
-              <a class="item" href="/orm/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/orm/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/orm/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon search"></i>
-            <i class="dropdown icon"></i>
-            <strong>Search</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/search/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/search/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/search/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/search/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/search/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/search/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/search/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/search/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="active title">
-            <i class="box checkmark grid icon"></i>
-            <i class="dropdown icon"></i>
-            <strong>Validator</strong>
-          </a>
-          <div class="active content">
-            <div class="menu internal-links">
-              <a class="item" href="/validator/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/validator/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/validator/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/validator/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="active item" href="/validator/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/validator/tooling/">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="/validator/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/validator/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon sitemap"></i>
-            <i class="dropdown icon"></i>
-            <strong>OGM</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/ogm/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <a class="item" href="/ogm/releases/">
-                <i class="grid icon tags"></i>
-                Releases
-              </a>
-              <a class="item" href="/ogm/documentation/">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="/ogm/roadmap/">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item" href="/ogm/contribute/">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="/ogm/support/">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="/ogm/faq/">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon wrench"></i>
-            <i class="dropdown icon"></i>
-            <strong>Tools</strong>
-          </a>
-          <div class="content">
-            <div class="menu internal-links">
-              <a class="item" href="/tools/">
-                <i class="grid home icon"></i>
-                About
-              </a>
-            </div>
-            <div class="menu external-links">
-              <a class="item" href="https://github.com/hibernate/hibernate-orm">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://ci.hibernate.org/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="item" href="/others/">
-          Others
-        </a>
-        <div class="item">
-          <a class="title">
-            <i class="grid icon users"></i>
-            <i class="dropdown icon"></i>
-            <strong>Community</strong>
-          </a>
-          <div class="content">
-            <div class="menu external-links">
-              <a class="item" href="/community/">
-                <i class="grid icon users"></i>
-                Community
-              </a>
-              <a class="item" href="/community/contributors/orm/">
-                <i class="grid icon database"></i>
-                Contributors to ORM
-              </a>
-              <a class="item" href="/community/contributors/search/">
-                <i class="grid icon search"></i>
-                Contributors to Search
-              </a>
-              <a class="item" href="/community/contributors/validator/">
-                <i class="grid icon checkmark box"></i>
-                Contributors to Validator
-              </a>
-              <a class="item" href="/community/contributors/ogm/">
-                <i class="grid icon sitemap"></i>
-                Contributors to OGM
-              </a>
-              <a class="item" href="/community/corporate-contributors/">
-                <i class="grid icon building outline"></i>
-                Corporate contributors
-              </a>
-              <a class="item" href="/community/license/">
-                <i class="grid icon legal"></i>
-                Licenses
-              </a>
-            </div>
-          </div>
-        </div>
-        <a class="item" href="https://in.relation.to/">
-          Blog
-        </a>
-        <a class="item" href="https://discourse.hibernate.org/">
-          Forums
-        </a>
-        <a class="item" href="https://twitter.com/hibernate/">
-          <i class="icon twitter"></i>
-          Follow us
-        </a>
-      </div>
-    </div>
-    <div class="pusher">
-      <div class="mobile-menu-button-bar mobile only print hidden">
-        <a class="item" id="mobile-menu-toggle">
-          <i class="sidebar icon"></i>
-          Menu
-        </a>
-      </div>
-      <!-- begin accesibility skip to top -->
-      <ul class="sr-only">
-        <li>
-          <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
-        </li>
-        <li>
-          <a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
-        </li>
-      </ul>
-      <div class="ui container banner">
-        <div class="logo">
-          <a href="/">
-            <img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
-          </a>
-        </div>
-        <div class="clearfix"></div>
-        <div class="ui stackable menu mobile hidden print hidden" id="nav">
-          <a class="item" href="/orm/">ORM</a>
-          <a class="item" href="/search/">Search</a>
-          <a class="active item" href="/validator/">Validator</a>
-          <a class="item" href="/ogm/">OGM</a>
-          <a class="item" href="/tools/">Tools</a>
-          <a class="item" href="/others/">Others</a>
-          <div class="right menu">
-            <a class="item" href="https://in.relation.to/">Blog</a>
-            <a class="item" href="https://discourse.hibernate.org/">Forums</a>
-            <a class="item" href="/community/">Community</a>
-            <a class="item" href="https://twitter.com/hibernate/">
-              <i class="twitter icon"></i>
-              Follow us
-            </a>
-          </div>
-        </div>
-      </div>
-      <script>
-        var displayed_series = [];
-        displayed_series.push('6.1');
-        displayed_series.push('6.0');
-        displayed_series.push('5.4');
-      </script>
-      <div class="jumbotron small">
-        <div class="ui container">
-          <div class="ui grid stackable">
-            <div class="column row">
-              <div class="column twelve wide middle aligned">
-                <h1>
-                  <span>
-                    Hibernate Validator
-                  </span>
-                </h1>
-                <h2>
-                  <span>
-                    Contribute
-                  </span>
-                </h2>
-              </div>
-              <div class="column four wide middle aligned">
-                <div class="jumbotron-button">
-                  <a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-validator/">
-                    <i class="github icon"></i>
-                    Project on GitHub
-                  </a>
-                </div>
-                <div class="jumbotron-button">
-                  <a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/HV">
-                    <i class="bug icon"></i>
-                    Issue tracker
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="ui container page-content">
-        <div class="ui stackable grid">
-          <div class="column three wide computer only print hidden">
-            <div class="ui fluid vertical menu">
-              <a class="item" href="..">
-                <i class="grid home icon"></i>
-                About
-              </a>
-              <div class="dropdown item link ui">
-                Releases
-                <i class="icon dropdown"></i>
-                <div class="menu">
-                  <a class="item" href="../releases">
-                    Overview
-                  </a>
-                  <a class="item" href="../releases/6.1">
-                    6.1
-                    &nbsp;&nbsp;
-                    <span class="ui label green">latest stable</span>
-                  </a>
-                  <a class="item" href="../releases/6.0">
-                    6.0
-                  </a>
-                  <a class="item" href="../releases/5.4">
-                    5.4
-                  </a>
-                </div>
-              </div>
-              <a class="item" href="../documentation">
-                <i class="book grid icon"></i>
-                Documentation
-              </a>
-              <a class="item" href="../roadmap">
-                <i class="grid icon road"></i>
-                Roadmap
-              </a>
-              <a class="item selected" href=".">
-                <i class="grid icon users"></i>
-                Contribute
-              </a>
-              <a class="item" href="../tooling">
-                <i class="grid icon wrench"></i>
-                Tooling
-              </a>
-              <a class="item" href="../support">
-                <i class="doctor grid icon"></i>
-                Paid support
-              </a>
-              <a class="item" href="../faq">
-                <i class="circle grid help icon"></i>
-                FAQ
-              </a>
-            </div>
-            <div class="ui fluid vertical menu">
-              <a class="item" href="https://github.com/hibernate/hibernate-validator">
-                <i class="code grid icon"></i>
-                Source code
-              </a>
-              <a class="item" href="https://hibernate.atlassian.net/browse/HV">
-                <i class="bug grid icon"></i>
-                Issue tracker
-              </a>
-              <a class="item" href="https://access.redhat.com/security/team/contact/">
-                <i class="grid icon lock"></i>
-                Security issue
-              </a>
-              <a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
-                <i class="comments grid icon"></i>
-                Forum
-              </a>
-              <a class="item" href="https://community.jboss.org/en/hibernate/validator">
-                <i class="edit grid icon"></i>
-                Wiki
-              </a>
-              <a class="item" href="https://hibernate-validator.ci.cloudbees.com/">
-                <i class="grid icon treatment"></i>
-                CI
-              </a>
-            </div>
-            <hr>
-            <div class="license">
-              Released under the
-              <a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
-            </div>
-          </div>
-          <div class="column thirteen wide computer sixteen wide mobile">
-            <div class="content" id="content">
-              <div id="preamble">
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>You want to implement a new validation feature or you found a bug and want to provide a fix? Awesome!
-              The following gets you started.</p>
-              </div>
-              </div>
-              <div id="toc" class="toc">
-              <div id="toctitle">Contents</div>
-              <ul class="sectlevel1">
-              <li><a href="#requirements">Requirements</a></li>
-              <li><a href="#getting-the-source">Getting the source</a></li>
-              <li><a href="#hibernate-validator-modules">Hibernate Validator modules</a></li>
-              <li><a href="#building-from-source">Building from Source</a>
-              <ul class="sectlevel2">
-              <li><a href="#compiling-and-testing">Compiling and testing</a></li>
-              <li><a href="#build-options">Build options</a>
-              <ul class="sectlevel3">
-              <li><a href="#skipping-parts-of-the-build">Skipping parts of the build</a></li>
-              <li><a href="#deploying-sources-and-javadocs-jars-as-part-of-local-install-or-snapshot-deploy">Deploying sources and javadocs jars as part of local install or snapshot deploy</a></li>
-              <li><a href="#staging-maven-release-locally">Staging Maven Release locally</a></li>
-              </ul>
-              </li>
-              <li><a href="#writing-and-building-the-documentation">Writing and building the documentation</a></li>
-              </ul>
-              </li>
-              <li><a href="#ide-setup">IDE Setup</a>
-              <ul class="sectlevel2">
-              <li><a href="#code-styles-guidelines">Code styles guidelines</a></li>
-              <li><a href="#eclipse">Eclipse</a></li>
-              <li><a href="#idea">IDEA</a></li>
-              <li><a href="#code-style">Code style</a></li>
-              <li><a href="#running-tck-tests">Running TCK tests</a></li>
-              </ul>
-              </li>
-              <li><a href="#coding-guidelines">Coding Guidelines</a>
-              <ul class="sectlevel2">
-              <li><a href="#general">General</a></li>
-              <li><a href="#javadoc">JavaDoc</a></li>
-              <li><a href="#providing-a-patch">Providing a patch</a></li>
-              <li><a href="#further-resources">Further resources</a></li>
-              </ul>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
-              <div class="sectionbody">
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>JDK 8 (use &gt;=1.8.0_20)</p>
-              </li>
-              <li>
-              <p><a href="http://maven.apache.org/">Maven</a> (at least version 3.3.1)</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="getting-the-source"><a class="anchor" href="#getting-the-source"></a>Getting the source</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>The Hibernate Validator code is available on <a href="http://github.com/hibernate/hibernate-validator/">GitHub</a>. To get a read only version of the source you can use:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>git clone git://github.com/hibernate/hibernate-validator.git validator</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>For people with write access:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>git clone git@github.com:hibernate/hibernate-validator.git validator</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>To contribute back to Hibernate Validator you should create a <a href="https://help.github.com/articles/fork-a-repo/">fork</a> of the project into your GitHub account and submit <a href="https://help.github.com/articles/creating-a-pull-request/">pull requests</a> with your changes. For more information on Git, check out <a href="http://in.relation.to/2010/10/13/hibernate-moves-to-git-git-tips-and-tricks/">this blog entry</a>.</p>
-              </div>
-              <div class="paragraph">
-              <p>The source code of the Bean Validation API (of which Hibernate Validator is the reference implementation) can be retrieved via</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>git clone https://github.com/beanvalidation/beanvalidation-api</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>Finally there is the Bean Validation TCK (test compatibility kit) which can be checked out via</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>git clone https://github.com/beanvalidation/beanvalidation-tck</code></pre>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="hibernate-validator-modules"><a class="anchor" href="#hibernate-validator-modules"></a>Hibernate Validator modules</h2>
-              <div class="sectionbody">
-              <div class="paragraph">
-              <p>The Hibernate Validator code base comes in form of a <a href="http://books.sonatype.com/mvnex-book/reference/multimodule.html">multi-module</a> Maven project, comprising the following modules:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p><strong>annotation-processor</strong>: the HV annotation processor for checking correctness of constraints at compile time</p>
-              </li>
-              <li>
-              <p><strong>build-config</strong>: some configuration files for the build</p>
-              </li>
-              <li>
-              <p><strong>cdi</strong>: the CDI portable extension</p>
-              </li>
-              <li>
-              <p><strong>distribution</strong>: builds the released HV distribution package</p>
-              </li>
-              <li>
-              <p><strong>documentation</strong>: builds the HV reference guide</p>
-              </li>
-              <li>
-              <p><strong>engine</strong>: the core validation engine</p>
-              </li>
-              <li>
-              <p><strong>integration</strong>: in-container integration tests</p>
-              </li>
-              <li>
-              <p><strong>modules</strong>: creates WildFly patches to be able to upgrade Hibernate Validator in WildFly</p>
-              </li>
-              <li>
-              <p><strong>osgi</strong>: contains HV features for Apache Karaf and the OSGi integration tests</p>
-              </li>
-              <li>
-              <p><strong>performance</strong>: a performance test suite based on JMH</p>
-              </li>
-              <li>
-              <p><strong>tck-runner</strong>: executes the Bean Validation TCK against HV</p>
-              </li>
-              <li>
-              <p><strong>test-utils</strong>: test utility methods and annotations used across several modules</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="building-from-source"><a class="anchor" href="#building-from-source"></a>Building from Source</h2>
-              <div class="sectionbody">
-              <div class="sect2">
-              <h3 id="compiling-and-testing"><a class="anchor" href="#compiling-and-testing"></a>Compiling and testing</h3>
-              <div class="paragraph">
-              <p>Prior to setting the project up in any IDE it is recommended to trigger a command line build to verify that everything builds. Just run:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn clean install</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>This will download all dependencies and compile and test each module.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="build-options"><a class="anchor" href="#build-options"></a>Build options</h3>
-              <div class="paragraph">
-              <p>There are several options/properties available to control the build. The following options might be useful to speed up the build time. Per default everything gets built!</p>
-              </div>
-              <div class="sect3">
-              <h4 id="skipping-parts-of-the-build"><a class="anchor" href="#skipping-parts-of-the-build"></a>Skipping parts of the build</h4>
-              <div class="paragraph">
-              <p>The build of the distribution bundle (<em>distribution</em>) can be skipped via the <em>disableDistributionBuild</em> property:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn install -DdisableDistributionBuild=true</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>The build of the <em>documentation</em> module can be skipped via the <em>disableDocumentationBuild</em> property:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn install -DdisableDocumentationBuild=true</code></pre>
-              </div>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="deploying-sources-and-javadocs-jars-as-part-of-local-install-or-snapshot-deploy"><a class="anchor" href="#deploying-sources-and-javadocs-jars-as-part-of-local-install-or-snapshot-deploy"></a>Deploying sources and javadocs jars as part of local install or snapshot deploy</h4>
-              <div class="paragraph">
-              <p>In case you want the sources and javadocs jar installed as part of the build (either on a local install or a SNAPSHOT deploy) specify <code>-DperformRelease=true</code>.</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn -DperformRelease=true clean [install|deploy]</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>See also <a href="http://stackoverflow.com/questions/4725668/how-to-deploy-snapshot-with-sources-and-javadoc">this SO post</a>.</p>
-              </div>
-              </div>
-              <div class="sect3">
-              <h4 id="staging-maven-release-locally"><a class="anchor" href="#staging-maven-release-locally"></a>Staging Maven Release locally</h4>
-              <div class="paragraph">
-              <p>Sometimes it is convenient to go through the Maven release steps without actually deploying anything.
-              This makes sure the release and deploy plugins work as expected. You can also re-build a release
-              from an existing tag this way.</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn release:stage -DconnectionUrl=scm:git:git://github.com/hibernate/hibernate-validator.git -Dtag=&lt;tag&gt; -DstagingRepository=staging::default::file:///&lt;fully-qualified-path-to-deploy-dir&gt;</code></pre>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="writing-and-building-the-documentation"><a class="anchor" href="#writing-and-building-the-documentation"></a>Writing and building the documentation</h3>
-              <div class="paragraph">
-              <p>The documentation is written in <a href="http://www.methods.co.nz/asciidoc/">Asciidoc</a> and can be found in
-              the <em>documentation</em> module of your checkout. <a href="http://asciidoctor.org/">Asciidoctor</a> is used to
-              transform the Asciidoc sources to their target formats. The <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference">Asciidoc syntax quick reference</a> helps you to get started with the syntax. You can
-              build the documentation by executing:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>mvn package -pl documentation</code></pre>
-              </div>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="ide-setup"><a class="anchor" href="#ide-setup"></a>IDE Setup</h2>
-              <div class="sectionbody">
-              <div class="admonitionblock tip">
-              <table>
-              <tr>
-              <td class="icon">
-              <i class="fa icon-tip" title="Tip"></i>
-              </td>
-              <td class="content">
-              <div class="paragraph">
-              <p>We recommend to trigger a command line build prior to importing into the IDE. This way the generated
-              sources (in our case JAXB binding classes generated via the jaxb2-maven-plugin) are available
-              and can be picked up by the IDE.</p>
-              </div>
-              </td>
-              </tr>
-              </table>
-              </div>
-              <div class="sect2">
-              <h3 id="code-styles-guidelines"><a class="anchor" href="#code-styles-guidelines"></a>Code styles guidelines</h3>
-              <div class="paragraph">
-              <p>We provide IDE configurations for our code styles guidelines for Eclipse and IDEA:
-              <a href="https://github.com/hibernate/hibernate-ide-codestyles" class="bare">https://github.com/hibernate/hibernate-ide-codestyles</a>.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="eclipse"><a class="anchor" href="#eclipse"></a>Eclipse</h3>
-              <div class="paragraph">
-              <p>Eclipse is able to import a Maven project (like Hibernate Validator) without needing plugins.
-              To import the project in Eclipse just follow these steps:</p>
-              </div>
-              <div class="olist arabic">
-              <ol class="arabic">
-              <li>
-              <p>Go to the menu: File &gt; Import &gt; Existing Maven projects</p>
-              </li>
-              <li>
-              <p>Select all the projects and Advance &gt; Name template &gt; [artifactId]-[version]</p>
-              </li>
-              <li>
-              <p>Run the maven build from the root folder: project 'hibernate-validator-parent' Run as &gt; Maven install</p>
-              </li>
-              <li>
-              <p>When the build is completed, refresh the workspace</p>
-              </li>
-              <li>
-              <p>the environment JavaSE-1.8 to use JDK 1.8</p>
-              </li>
-              </ol>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="idea"><a class="anchor" href="#idea"></a>IDEA</h3>
-              <div class="paragraph">
-              <p>IntelliJ IDEA come with built-in support for multi module Maven projects. Just import your project
-              as Maven project. We recommend the following options:</p>
-              </div>
-              <div class="imageblock" style="text-align: center">
-              <div class="content">
-              <img src="/images/hv-maven-import-options-idea.png" alt="Maven import options">
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>In particular Exclude build directory should be unchecked, so that the generated JAXB resources
-              are automatically added to the IDE module configuration.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="code-style"><a class="anchor" href="#code-style"></a>Code style</h3>
-              <div class="paragraph">
-              <p>Hibernate Validator uses code styles common to all the Hibernate projects. Configuration files
-              for Eclipse and IDEA with detailed instructions on how to import the styles in your IDE can be found
-              <a href="https://github.com/hibernate/hibernate-ide-codestyles">here</a>.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="running-tck-tests"><a class="anchor" href="#running-tck-tests"></a>Running TCK tests</h3>
-              <div class="paragraph">
-              <p>Running the Bean Validation TCK tests in the IDE can be a little tedious. One way is the following (should work in the same way in Eclipse as well as IDEA):</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Create a new TestNG test configuration</p>
-              </li>
-              <li>
-              <p>Select the <em>Suite</em> option</p>
-              </li>
-              <li>
-              <p>Select <em>tck-runner/target/dependency/beanvalidation-tck-tests-suite.xml</em> as suite file. The Maven build extracts the suite file from the JSR TCK jar and places it into this directory</p>
-              </li>
-              <li>
-              <p>Specify the following VM options (you need to set the same properties as set by the Maven build, see <em>pom.xml</em>) :</p>
-              </li>
-              </ul>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>-Dvalidation.provider=org.hibernate.validator.HibernateValidator&#x000A;-DexcludeIntegrationTests=true</code></pre>
-              </div>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Select the <em>hibernate-validator-tck-runner</em> module as the project (Eclipse) or module to obtain the classpath from (IDEA).</p>
-              </li>
-              </ul>
-              </div>
-              <div class="paragraph">
-              <p>All the steps are summarized in the screen-shot below (using IDEA):</p>
-              </div>
-              <div class="imageblock" style="text-align: center">
-              <div class="content">
-              <img src="/images/tck-jsr-349-setup.png" alt="TCK runner set-up">
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>If you run this test configuration all TCK tests are getting executed. You can just edit the suite file to change which tests you want to run, e.g.:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" &gt;&#x000A;&#x000A;&lt;suite name="JSR-380-TCK" verbose="1"&gt;&#x000A;    &lt;test name="JSR-380-TCK"&gt;&#x000A;        ...&#x000A;        &lt;classes&gt;&#x000A;           &lt;class name="org.hibernate.beanvalidation.tck.tests.validation.ValidateTest"/&gt;&#x000A;        &lt;/classes&gt;&#x000A;&#x000A;    &lt;/test&gt;&#x000A;&lt;/suite&gt;</code></pre>
-              </div>
-              </div>
-              <div class="paragraph">
-              <p>More information about how to configure the TestNG suite file can be found <a href="http://testng.org/doc/documentation-main.html#testng-xml">here</a>.</p>
-              </div>
-              </div>
-              </div>
-              </div>
-              <div class="sect1">
-              <h2 id="coding-guidelines"><a class="anchor" href="#coding-guidelines"></a>Coding Guidelines</h2>
-              <div class="sectionbody">
-              <div class="sect2">
-              <h3 id="general"><a class="anchor" href="#general"></a>General</h3>
-              <div class="paragraph">
-              <p>Refer to the Hibernate <a href="https://community.jboss.org/docs/DOC-17951">design philosophy</a> when working
-              on new HV features.</p>
-              </div>
-              <div class="paragraph">
-              <p>Make sure to add the following license header to all newly created source files:</p>
-              </div>
-              <div class="listingblock">
-              <div class="content">
-              <pre class="CodeRay highlight"><code>/*&#x000A; * Hibernate Validator, declare and validate application constraints&#x000A; *&#x000A; * License: Apache License, Version 2.0&#x000A; * See the license.txt file in the root directory or &lt;http://www.apache.org/licenses/LICENSE-2.0&gt;.&#x000A; */</code></pre>
-              </div>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="javadoc"><a class="anchor" href="#javadoc"></a>JavaDoc</h3>
-              <div class="paragraph">
-              <p>The following conventions should be followed when working on the Hibernate Validator code base:</p>
-              </div>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p>Use <code>{@code}</code> instead of <code>&lt;code&gt;</code>, because it is more readable and <code>{@code}</code> also escapes meta characters</p>
-              </li>
-              <li>
-              <p><code>@param</code>, <code>@return</code> and <code>@throw</code> don&#8217;t end with a '.'; the first word starts with a lower-case letter</p>
-              </li>
-              <li>
-              <p>If referring to other classes and methods of the library, use <code>{@link}</code></p>
-              </li>
-              <li>
-              <p><code>{@link}</code> might be use for external classes, <code>{@code}</code> is accepted, too</p>
-              </li>
-              <li>
-              <p>Use <code>&lt;ul/&gt;</code> for enumerations (not '-')</p>
-              </li>
-              <li>
-              <p>Use the code style template mentioned above to format the code</p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="providing-a-patch"><a class="anchor" href="#providing-a-patch"></a>Providing a patch</h3>
-              <div class="paragraph">
-              <p>Patches including a test and fix for an issue are always welcome, preferably as GitHub pull request. We are following the <em>Fork + Pull Model</em> as described <a href="https://help.github.com/articles/proposing-changes-to-your-work-with-pull-requests/">here</a>.</p>
-              </div>
-              <div class="paragraph">
-              <p>All contributions have to be submitted under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>. All contributions are subject to the <a href="https://developercertificate.org/">Developer Certificate of Origin (DCO)</a>.</p>
-              </div>
-              </div>
-              <div class="sect2">
-              <h3 id="further-resources"><a class="anchor" href="#further-resources"></a>Further resources</h3>
-              <div class="ulist">
-              <ul>
-              <li>
-              <p><a href="https://hibernate.atlassian.net/browse/BVAL">Bean Validation Specification issue tracker</a></p>
-              </li>
-              <li>
-              <p><a href="https://hibernate.atlassian.net/browse/BVTCK">Bean Validation TCK issue tracker</a></p>
-              </li>
-              <li>
-              <p><a href="https://discourse.hibernate.org/c/bean-validation">Forum for JSR 303/349/380 feeback</a></p>
-              </li>
-              </ul>
-              </div>
-              </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script>
-        $(document).ready(function() {
-          $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
-        });
-      </script>
-      <div class="ui inverted vertical footer segment print hidden">
-        <div class="ui container">
-          <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="three wide column">
-              <h4 class="ui inverted header">Projects</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
-                <a class="item" href="../../search" title="Search">Hibernate Search</a>
-                <a class="item" href=".." title="Hibernate Validator">Hibernate Validator</a>
-                <a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-                <a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-                <a class="item" href="../../others" title="Other projects">Other projects</a>
-              </div>
-            </div>
-            <div class="three wide column">
-              <h4 class="ui inverted header">Follow us</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
-                <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
-                <a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
-              </div>
-            </div>
-            <div class="five wide column">
-              <h4 class="ui inverted header">Contribute and community</h4>
-              <div class="ui inverted link list">
-                <a class="item" href="../../community" title="Community resources">Community resources</a>
-                <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
-                <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
-                <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
-                <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
-              </div>
-            </div>
-            <div class="five wide column sponsor">
-              <div class="logo">
-                <a href="https://www.redhat.com/">
-                  <img src="../../images/sponsored-by-redhat.svg" title="Red Hat">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <span class="back-to-top computer only">
-        <a href="javascript: void(0)">Back to top</a>
-      </span>
-    </div>
-    <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-     
-    ga('create', 'UA-45270411-1', 'auto');
-    ga('send', 'pageview');
-    
-    </script>
-    <script>
-      $(function() {
-        $('#mobile-menu').sidebar('setting', {
-          transition: 'push'
-        });
-        $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
-      
-        $('.ui.accordion').accordion();
-      
-        $(window).scroll(function(e) {
-          if($(this).scrollTop()>150){
-            $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
-          }
-          else {
-            $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
-          }
-        });
-      
-          $('.back-to-top').click(function(e) {
-            $('body, html').animate({scrollTop:0}, 800);
-          });
-        });
-    </script>
-  </body>
+<head>
+<title>Contribute - Hibernate Validator</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="description">
+<meta content="Hardy Ferentschik, Gunnar Morling" name="author">
+<meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
+<meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
+<meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
+<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1579777745" rel="stylesheet">
+<!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+<link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+<script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
+
+</head>
+<body class="pushable">
+<div class="ui vertical inverted sidebar left" id="mobile-menu">
+<div class="ui vertical fluid inverted text menu accordion">
+<div class="item">
+<a class="title">
+<i class="database grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>ORM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/orm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/orm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/orm/documentation/">
+<i class="folder grid icon open"></i>
+Documentation
+</a>
+<a class="item" href="/orm/books/">
+<i class="book grid icon"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon search"></i>
+<i class="dropdown icon"></i>
+<strong>Search</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/search/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/search/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/search/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="active title">
+<i class="box checkmark grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>Validator</strong>
+</a>
+<div class="active content">
+<div class="menu internal-links">
+<a class="item" href="/validator/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/validator/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/validator/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="active item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon sitemap"></i>
+<i class="dropdown icon"></i>
+<strong>OGM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/ogm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/ogm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/ogm/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/ogm/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/ogm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/ogm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/ogm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon wrench"></i>
+<i class="dropdown icon"></i>
+<strong>Tools</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/tools/">
+<i class="grid home icon"></i>
+About
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="/others/">
+Others
+</a>
+<div class="item">
+<a class="title">
+<i class="grid icon users"></i>
+<i class="dropdown icon"></i>
+<strong>Community</strong>
+</a>
+<div class="content">
+<div class="menu external-links">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<a class="item" href="/community/contributors/orm/">
+<i class="grid icon database"></i>
+Contributors to ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+<i class="grid icon search"></i>
+Contributors to Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+<i class="grid icon checkmark box"></i>
+Contributors to Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+<i class="grid icon sitemap"></i>
+Contributors to OGM
+</a>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+</div>
+</div>
+</div>
+<a class="item" href="https://in.relation.to/">
+Blog
+</a>
+<a class="item" href="https://discourse.hibernate.org/">
+Forums
+</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="icon twitter"></i>
+Follow us
+</a>
+</div>
+</div>
+
+<div class="pusher">
+<div class="mobile-menu-button-bar mobile only print hidden">
+<a class="item" id="mobile-menu-toggle">
+<i class="sidebar icon"></i>
+Menu
+</a>
+</div>
+<!-- begin accesibility skip to top -->
+<ul class="sr-only">
+<li>
+<a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+</li>
+<li>
+<a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+</li>
+</ul>
+<div class="ui container banner">
+<div class="logo">
+<a href="/">
+<img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="ui stackable menu mobile hidden print hidden" id="nav">
+<a class="item" href="/orm/">ORM</a>
+<a class="item" href="/search/">Search</a>
+<a class="active item" href="/validator/">Validator</a>
+<a class="item" href="/ogm/">OGM</a>
+<a class="item" href="/tools/">Tools</a>
+<a class="item" href="/others/">Others</a>
+<div class="right menu">
+<a class="item" href="https://in.relation.to/">Blog</a>
+<a class="item" href="https://discourse.hibernate.org/">Forums</a>
+<a class="item" href="/community/">Community</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="twitter icon"></i>
+Follow us
+</a>
+</div>
+</div>
+</div>
+
+<script>
+var displayed_series = [];
+displayed_series.push('6.1');
+displayed_series.push('6.0');
+displayed_series.push('5.4');
+</script>
+<div class="jumbotron small">
+<div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide middle aligned">
+<h1>
+<span>
+Hibernate Validator
+</span>
+</h1>
+<h2>
+<span>
+Contribute
+</span>
+</h2>
+</div>
+<div class="column four wide middle aligned">
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-validator/">
+<i class="github icon"></i>
+Project on GitHub
+</a>
+</div>
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/HV">
+<i class="bug icon"></i>
+Issue tracker
+</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only print hidden">
+<div class="ui fluid vertical menu">
+<a class="item" href="..">
+<i class="grid home icon"></i>
+About
+</a>
+<div class="dropdown item link ui">
+Releases
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="../releases">
+Overview
+</a>
+<a class="item" href="../releases/6.1">
+6.1
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="../releases/6.0">
+6.0
+</a>
+<a class="item" href="../releases/5.4">
+5.4
+</a>
+</div>
+</div>
+<a class="item" href="../documentation">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="../roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item selected" href=".">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="../tooling">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="../support">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="../faq">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="ui fluid vertical menu">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/validator">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://hibernate-validator.ci.cloudbees.com/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+<hr>
+<div class="license">
+Released under the
+<a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
+</div>
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You want to implement a new validation feature or you found a bug and want to provide a fix? Awesome!
+The following gets you started.</p>
+</div>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Contents</div>
+<ul class="sectlevel1">
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#getting-the-source">Getting the source</a></li>
+<li><a href="#hibernate-validator-modules">Hibernate Validator modules</a></li>
+<li><a href="#building-from-source">Building from Source</a>
+<ul class="sectlevel2">
+<li><a href="#compiling-and-testing">Compiling and testing</a></li>
+<li><a href="#build-options">Build options</a>
+<ul class="sectlevel3">
+<li><a href="#skipping-parts-of-the-build">Skipping parts of the build</a></li>
+<li><a href="#deploying-sources-and-javadocs-jars-as-part-of-local-install-or-snapshot-deploy">Deploying sources and javadocs jars as part of local install or snapshot deploy</a></li>
+<li><a href="#staging-maven-release-locally">Staging Maven Release locally</a></li>
+</ul>
+</li>
+<li><a href="#writing-and-building-the-documentation">Writing and building the documentation</a></li>
+</ul>
+</li>
+<li><a href="#ide-setup">IDE Setup</a>
+<ul class="sectlevel2">
+<li><a href="#code-styles-guidelines">Code styles guidelines</a></li>
+<li><a href="#eclipse">Eclipse</a></li>
+<li><a href="#idea">IDEA</a></li>
+<li><a href="#code-style">Code style</a></li>
+<li><a href="#running-tck-tests">Running TCK tests</a></li>
+</ul>
+</li>
+<li><a href="#coding-guidelines">Coding Guidelines</a>
+<ul class="sectlevel2">
+<li><a href="#general">General</a></li>
+<li><a href="#javadoc">JavaDoc</a></li>
+<li><a href="#providing-a-patch">Providing a patch</a></li>
+<li><a href="#further-resources">Further resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>JDK 8 (use &gt;=1.8.0_20)</p>
+</li>
+<li>
+<p><a href="http://maven.apache.org/">Maven</a> (at least version 3.3.1)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="getting-the-source"><a class="anchor" href="#getting-the-source"></a>Getting the source</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Hibernate Validator code is available on <a href="http://github.com/hibernate/hibernate-validator/">GitHub</a>. To get a read only version of the source you can use:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>git clone git://github.com/hibernate/hibernate-validator.git validator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For people with write access:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>git clone git@github.com:hibernate/hibernate-validator.git validator</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To contribute back to Hibernate Validator you should create a <a href="https://help.github.com/articles/fork-a-repo/">fork</a> of the project into your GitHub account and submit <a href="https://help.github.com/articles/creating-a-pull-request/">pull requests</a> with your changes. For more information on Git, check out <a href="http://in.relation.to/2010/10/13/hibernate-moves-to-git-git-tips-and-tricks/">this blog entry</a>.</p>
+</div>
+<div class="paragraph">
+<p>The source code of the Bean Validation API (of which Hibernate Validator is the reference implementation) can be retrieved via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>git clone https://github.com/beanvalidation/beanvalidation-api</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally there is the Bean Validation TCK (test compatibility kit) which can be checked out via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>git clone https://github.com/beanvalidation/beanvalidation-tck</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hibernate-validator-modules"><a class="anchor" href="#hibernate-validator-modules"></a>Hibernate Validator modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Hibernate Validator code base comes in form of a <a href="http://books.sonatype.com/mvnex-book/reference/multimodule.html">multi-module</a> Maven project, comprising the following modules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>annotation-processor</strong>: the HV annotation processor for checking correctness of constraints at compile time</p>
+</li>
+<li>
+<p><strong>build-config</strong>: some configuration files for the build</p>
+</li>
+<li>
+<p><strong>cdi</strong>: the CDI portable extension</p>
+</li>
+<li>
+<p><strong>distribution</strong>: builds the released HV distribution package</p>
+</li>
+<li>
+<p><strong>documentation</strong>: builds the HV reference guide</p>
+</li>
+<li>
+<p><strong>engine</strong>: the core validation engine</p>
+</li>
+<li>
+<p><strong>integration</strong>: in-container integration tests</p>
+</li>
+<li>
+<p><strong>modules</strong>: creates WildFly patches to be able to upgrade Hibernate Validator in WildFly</p>
+</li>
+<li>
+<p><strong>osgi</strong>: contains HV features for Apache Karaf and the OSGi integration tests</p>
+</li>
+<li>
+<p><strong>performance</strong>: a performance test suite based on JMH</p>
+</li>
+<li>
+<p><strong>tck-runner</strong>: executes the Bean Validation TCK against HV</p>
+</li>
+<li>
+<p><strong>test-utils</strong>: test utility methods and annotations used across several modules</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="building-from-source"><a class="anchor" href="#building-from-source"></a>Building from Source</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="compiling-and-testing"><a class="anchor" href="#compiling-and-testing"></a>Compiling and testing</h3>
+<div class="paragraph">
+<p>Prior to setting the project up in any IDE it is recommended to trigger a command line build to verify that everything builds. Just run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn clean install</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will download all dependencies and compile and test each module.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="build-options"><a class="anchor" href="#build-options"></a>Build options</h3>
+<div class="paragraph">
+<p>There are several options/properties available to control the build. The following options might be useful to speed up the build time. Per default everything gets built!</p>
+</div>
+<div class="sect3">
+<h4 id="skipping-parts-of-the-build"><a class="anchor" href="#skipping-parts-of-the-build"></a>Skipping parts of the build</h4>
+<div class="paragraph">
+<p>The build of the distribution bundle (<em>distribution</em>) can be skipped via the <em>disableDistributionBuild</em> property:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn install -DdisableDistributionBuild=true</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The build of the <em>documentation</em> module can be skipped via the <em>disableDocumentationBuild</em> property:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn install -DdisableDocumentationBuild=true</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="deploying-sources-and-javadocs-jars-as-part-of-local-install-or-snapshot-deploy"><a class="anchor" href="#deploying-sources-and-javadocs-jars-as-part-of-local-install-or-snapshot-deploy"></a>Deploying sources and javadocs jars as part of local install or snapshot deploy</h4>
+<div class="paragraph">
+<p>In case you want the sources and javadocs jar installed as part of the build (either on a local install or a SNAPSHOT deploy) specify <code>-DperformRelease=true</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn -DperformRelease=true clean [install|deploy]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See also <a href="http://stackoverflow.com/questions/4725668/how-to-deploy-snapshot-with-sources-and-javadoc">this SO post</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="staging-maven-release-locally"><a class="anchor" href="#staging-maven-release-locally"></a>Staging Maven Release locally</h4>
+<div class="paragraph">
+<p>Sometimes it is convenient to go through the Maven release steps without actually deploying anything.
+This makes sure the release and deploy plugins work as expected. You can also re-build a release
+from an existing tag this way.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn release:stage -DconnectionUrl=scm:git:git://github.com/hibernate/hibernate-validator.git -Dtag=&lt;tag&gt; -DstagingRepository=staging::default::file:///&lt;fully-qualified-path-to-deploy-dir&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="writing-and-building-the-documentation"><a class="anchor" href="#writing-and-building-the-documentation"></a>Writing and building the documentation</h3>
+<div class="paragraph">
+<p>The documentation is written in <a href="http://www.methods.co.nz/asciidoc/">Asciidoc</a> and can be found in
+the <em>documentation</em> module of your checkout. <a href="http://asciidoctor.org/">Asciidoctor</a> is used to
+transform the Asciidoc sources to their target formats. The <a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference">Asciidoc syntax quick reference</a> helps you to get started with the syntax. You can
+build the documentation by executing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>mvn package -pl documentation</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ide-setup"><a class="anchor" href="#ide-setup"></a>IDE Setup</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We recommend to trigger a command line build prior to importing into the IDE. This way the generated
+sources (in our case JAXB binding classes generated via the jaxb2-maven-plugin) are available
+and can be picked up by the IDE.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="code-styles-guidelines"><a class="anchor" href="#code-styles-guidelines"></a>Code styles guidelines</h3>
+<div class="paragraph">
+<p>We provide IDE configurations for our code styles guidelines for Eclipse and IDEA:
+<a href="https://github.com/hibernate/hibernate-ide-codestyles" class="bare">https://github.com/hibernate/hibernate-ide-codestyles</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="eclipse"><a class="anchor" href="#eclipse"></a>Eclipse</h3>
+<div class="paragraph">
+<p>Eclipse is able to import a Maven project (like Hibernate Validator) without needing plugins.
+To import the project in Eclipse just follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the menu: File &gt; Import &gt; Existing Maven projects</p>
+</li>
+<li>
+<p>Select all the projects and Advance &gt; Name template &gt; [artifactId]-[version]</p>
+</li>
+<li>
+<p>Run the maven build from the root folder: project 'hibernate-validator-parent' Run as &gt; Maven install</p>
+</li>
+<li>
+<p>When the build is completed, refresh the workspace</p>
+</li>
+<li>
+<p>the environment JavaSE-1.8 to use JDK 1.8</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="idea"><a class="anchor" href="#idea"></a>IDEA</h3>
+<div class="paragraph">
+<p>IntelliJ IDEA come with built-in support for multi module Maven projects. Just import your project
+as Maven project. We recommend the following options:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="/images/hv-maven-import-options-idea.png" alt="Maven import options">
+</div>
+</div>
+<div class="paragraph">
+<p>In particular Exclude build directory should be unchecked, so that the generated JAXB resources
+are automatically added to the IDE module configuration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="code-style"><a class="anchor" href="#code-style"></a>Code style</h3>
+<div class="paragraph">
+<p>Hibernate Validator uses code styles common to all the Hibernate projects. Configuration files
+for Eclipse and IDEA with detailed instructions on how to import the styles in your IDE can be found
+<a href="https://github.com/hibernate/hibernate-ide-codestyles">here</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="running-tck-tests"><a class="anchor" href="#running-tck-tests"></a>Running TCK tests</h3>
+<div class="paragraph">
+<p>Running the Bean Validation TCK tests in the IDE can be a little tedious. One way is the following (should work in the same way in Eclipse as well as IDEA):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a new TestNG test configuration</p>
+</li>
+<li>
+<p>Select the <em>Suite</em> option</p>
+</li>
+<li>
+<p>Select <em>tck-runner/target/dependency/beanvalidation-tck-tests-suite.xml</em> as suite file. The Maven build extracts the suite file from the JSR TCK jar and places it into this directory</p>
+</li>
+<li>
+<p>Specify the following VM options (you need to set the same properties as set by the Maven build, see <em>pom.xml</em>) :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>-Dvalidation.provider=org.hibernate.validator.HibernateValidator&#x000A;-DexcludeIntegrationTests=true</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select the <em>hibernate-validator-tck-runner</em> module as the project (Eclipse) or module to obtain the classpath from (IDEA).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All the steps are summarized in the screen-shot below (using IDEA):</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="/images/tck-jsr-349-setup.png" alt="TCK runner set-up">
+</div>
+</div>
+<div class="paragraph">
+<p>If you run this test configuration all TCK tests are getting executed. You can just edit the suite file to change which tests you want to run, e.g.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>&lt;!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" &gt;&#x000A;&#x000A;&lt;suite name="JSR-380-TCK" verbose="1"&gt;&#x000A;    &lt;test name="JSR-380-TCK"&gt;&#x000A;        ...&#x000A;        &lt;classes&gt;&#x000A;           &lt;class name="org.hibernate.beanvalidation.tck.tests.validation.ValidateTest"/&gt;&#x000A;        &lt;/classes&gt;&#x000A;&#x000A;    &lt;/test&gt;&#x000A;&lt;/suite&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More information about how to configure the TestNG suite file can be found <a href="http://testng.org/doc/documentation-main.html#testng-xml">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="coding-guidelines"><a class="anchor" href="#coding-guidelines"></a>Coding Guidelines</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="general"><a class="anchor" href="#general"></a>General</h3>
+<div class="paragraph">
+<p>Refer to the Hibernate <a href="https://community.jboss.org/docs/DOC-17951">design philosophy</a> when working
+on new HV features.</p>
+</div>
+<div class="paragraph">
+<p>Make sure to add the following license header to all newly created source files:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>/*&#x000A; * Hibernate Validator, declare and validate application constraints&#x000A; *&#x000A; * License: Apache License, Version 2.0&#x000A; * See the license.txt file in the root directory or &lt;http://www.apache.org/licenses/LICENSE-2.0&gt;.&#x000A; */</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="javadoc"><a class="anchor" href="#javadoc"></a>JavaDoc</h3>
+<div class="paragraph">
+<p>The following conventions should be followed when working on the Hibernate Validator code base:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use <code>{@code}</code> instead of <code>&lt;code&gt;</code>, because it is more readable and <code>{@code}</code> also escapes meta characters</p>
+</li>
+<li>
+<p><code>@param</code>, <code>@return</code> and <code>@throw</code> don&#8217;t end with a '.'; the first word starts with a lower-case letter</p>
+</li>
+<li>
+<p>If referring to other classes and methods of the library, use <code>{@link}</code></p>
+</li>
+<li>
+<p><code>{@link}</code> might be use for external classes, <code>{@code}</code> is accepted, too</p>
+</li>
+<li>
+<p>Use <code>&lt;ul/&gt;</code> for enumerations (not '-')</p>
+</li>
+<li>
+<p>Use the code style template mentioned above to format the code</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="providing-a-patch"><a class="anchor" href="#providing-a-patch"></a>Providing a patch</h3>
+<div class="paragraph">
+<p>Patches including a test and fix for an issue are always welcome, preferably as GitHub pull request. We are following the <em>Fork + Pull Model</em> as described <a href="https://help.github.com/articles/proposing-changes-to-your-work-with-pull-requests/">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>All contributions have to be submitted under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>. All contributions are subject to the <a href="https://developercertificate.org/">Developer Certificate of Origin (DCO)</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="further-resources"><a class="anchor" href="#further-resources"></a>Further resources</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/BVAL">Bean Validation Specification issue tracker</a></p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/BVTCK">Bean Validation TCK issue tracker</a></p>
+</li>
+<li>
+<p><a href="https://discourse.hibernate.org/c/bean-validation">Forum for JSR 303/349/380 feeback</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
+
+<div class="ui inverted vertical footer segment print hidden">
+<div class="ui container">
+<div class="ui stackable inverted divided equal height stackable grid">
+<div class="three wide column">
+<h4 class="ui inverted header">Projects</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../search" title="Search">Hibernate Search</a>
+<a class="item" href=".." title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../others" title="Other projects">Other projects</a>
+</div>
+</div>
+<div class="three wide column">
+<h4 class="ui inverted header">Follow us</h4>
+<div class="ui inverted link list">
+<a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
+<a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+<a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
+</div>
+</div>
+<div class="five wide column">
+<h4 class="ui inverted header">Contribute and community</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../community" title="Community resources">Community resources</a>
+<a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
+<a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
+<a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+</div>
+</div>
+<div class="five wide column sponsor">
+<div class="logo">
+<a href="https://www.redhat.com/">
+<img src="../../images/sponsored-by-redhat.svg" title="Red Hat">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span class="back-to-top computer only">
+<a href="javascript: void(0)">Back to top</a>
+</span>
+</div>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-45270411-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+  $(function() {
+    $('#mobile-menu').sidebar('setting', {
+      transition: 'push'
+    });
+    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
+  
+    $('.ui.accordion').accordion();
+  
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>150){
+        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
+      }
+      else {
+        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
+      }
+    });
+  
+      $('.back-to-top').click(function(e) {
+        $('body, html').animate({scrollTop:0}, 800);
+      });
+    });
+</script>
+</body>
 </html>
