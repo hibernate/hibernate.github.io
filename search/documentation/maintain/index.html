@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contribute - Hibernate Search</title>
+<title>Guide for maintainers - Hibernate Search</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="description">
-<meta content="Emmanuel Bernard" name="author">
+<meta content="" name="author">
 <meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
@@ -126,7 +126,7 @@ About
 <i class="grid icon tags"></i>
 Releases
 </a>
-<a class="item" href="/search/documentation/">
+<a class="active item" href="/search/documentation/">
 <i class="book grid icon"></i>
 Documentation
 </a>
@@ -134,7 +134,7 @@ Documentation
 <i class="grid icon road"></i>
 Roadmap
 </a>
-<a class="active item" href="/search/contribute/">
+<a class="item" href="/search/contribute/">
 <i class="grid icon users"></i>
 Contribute
 </a>
@@ -475,23 +475,11 @@ Hibernate Search
 </h1>
 <h2>
 <span>
-Contribute
+Guide for maintainers
 </span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
-<div class="jumbotron-button">
-<a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-search/">
-<i class="github icon"></i>
-Project on GitHub
-</a>
-</div>
-<div class="jumbotron-button">
-<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/HSEARCH">
-<i class="bug icon"></i>
-Issue tracker
-</a>
-</div>
 
 </div>
 </div>
@@ -504,7 +492,7 @@ Issue tracker
 <div class="ui stackable grid">
 <div class="column three wide computer only print hidden">
 <div class="ui fluid vertical menu">
-<a class="item" href="..">
+<a class="item" href="../..">
 <i class="grid home icon"></i>
 About
 </a>
@@ -512,51 +500,51 @@ About
 Releases
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="../releases">
+<a class="item" href="../../releases">
 Overview
 </a>
-<a class="item" href="../releases/6.0">
+<a class="item" href="../../releases/6.0">
 6.0
 &nbsp;&nbsp;
 <span class="ui label orange">development</span>
 </a>
-<a class="item" href="../releases/5.11">
+<a class="item" href="../../releases/5.11">
 5.11
 &nbsp;&nbsp;
 <span class="ui label green">latest stable</span>
 </a>
-<a class="item" href="../releases/5.10">
+<a class="item" href="../../releases/5.10">
 5.10
 </a>
-<a class="item" href="../releases/5.9">
+<a class="item" href="../../releases/5.9">
 5.9
 </a>
-<a class="item" href="../releases/5.6">
+<a class="item" href="../../releases/5.6">
 5.6
 </a>
 </div>
 </div>
-<a class="item" href="../documentation">
+<a class="item selected" href="..">
 <i class="book grid icon"></i>
 Documentation
 </a>
-<a class="item" href="../roadmap">
+<a class="item" href="../../roadmap">
 <i class="grid icon road"></i>
 Roadmap
 </a>
-<a class="item selected" href=".">
+<a class="item" href="../../contribute">
 <i class="grid icon users"></i>
 Contribute
 </a>
-<a class="item" href="../tooling">
+<a class="item" href="../../tooling">
 <i class="grid icon wrench"></i>
 Tooling
 </a>
-<a class="item" href="../support">
+<a class="item" href="../../support">
 <i class="doctor grid icon"></i>
 Paid support
 </a>
-<a class="item" href="../faq">
+<a class="item" href="../../faq">
 <i class="circle grid help icon"></i>
 FAQ
 </a>
@@ -598,98 +586,263 @@ Released under the
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Thanks for your interest! Hibernate Search is an open source project and community.
-We love contributions that scratch somebody&#8217;s own itch: they bring the project forward.</p>
+<p>This page contains documentation for current and future maintainers of Hibernate Search.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="getting-and-building-the-code"><a class="anchor" href="#getting-and-building-the-code"></a>Getting and building the code</h2>
+<h2 id="releasing"><a class="anchor" href="#releasing"></a>Releasing</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>You will need Maven 3 and git to get and build the sources.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>git clone git@github.com:hibernate/hibernate-search.git&#x000A;cd hibernate-search&#x000A;mvn clean install</code></pre>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You can find more information on how to build Hibernate Search and its documentation on the <a href="https://github.com/hibernate/hibernate-search/blob/master/README.md">README file</a> at the root of the git repository.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="what-to-contribute"><a class="anchor" href="#what-to-contribute"></a>What to contribute</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can contribute anything from code to test to documentation.
-If you do not have a specific itch to scratch, you can find the <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20status%20in%20(Open%2C%20Reopened%2C%20%22Awaiting%20Test%20Case%22)%20AND%20%22Suitable%20for%20new%20contributors%22%20%3D%20%22Yes%2C%20likely%22%20ORDER%20BY%20updated%20DESC">list of tasks</a> suitable for new contributors.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="how-to-contribute"><a class="anchor" href="#how-to-contribute"></a>How to contribute</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Do share early and often. Don&#8217;t be afraid, make the jump.</strong></p>
-</div>
-<div class="paragraph">
-<p>In good open source way, it is better to share a prototype and get input from everyone.
-We love GitHub pull requests. This is our way to discuss features, review and share code.
-So fork our repository and send a pull request. We are waiting.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Want to know more about Git and pull requests?
-You can start with <a href="http://in.relation.to/2010/10/13/hibernate-moves-to-git-git-tips-and-tricks/">this blog post</a>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>A good contribution has some or all of the following characteristics:</p>
-</div>
+<div class="sect2">
+<h3 id="prepare-the-release"><a class="anchor" href="#prepare-the-release"></a>Prepare the release</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>it respects the project code style - find templates for <a href="https://community.jboss.org/docs/DOC-16649">Eclipse</a> and <a href="https://community.jboss.org/docs/DOC-15468">IntelliJ IDEA</a></p>
+<p>Check that everything has been pushed to the upstream repository.</p>
 </li>
 <li>
-<p>a feature or bug fix has an associated suite of tests</p>
+<p>Check that the CI job for the branch you want to release is green.</p>
 </li>
 <li>
-<p>documentation is updated</p>
+<p>Check there are no outstanding issues in JIRA.</p>
 </li>
 <li>
-<p>the code compiles and the tests pass <code>mvn clean install</code></p>
+<p>If you <strong>added a new Maven module</strong> that should be included in the distribution,
+<strong>check that it has been included in the distribution</strong> (javadoc and ZIP distribution).</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mvn clean install -Pdocumentation-pdf,dist</code></p>
+</li>
+<li>
+<p>Check the distribution package as built by Maven (distribution/target/hibernate-search-&lt;version&gt;-dist).
+In particular, check the jar files in the subdirectories:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>lib/required</code></p>
+</li>
+<li>
+<p><code>lib/optional</code></p>
+</li>
+<li>
+<p><code>lib/provided</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>And last but not least, come discuss with us.
-We are hanging on the hibernate-dev mailing list and on #hibernate-dev on freenode.
-Find how to join them <a href="/community/#contribute">here</a>.</p>
+<p>They should contain the appropriate dependencies, without duplicates.
+The creation of these directories is driven by the assembly plugin (distribution/src/main/assembly/dist.xml)
+which is very specific and might break with the inclusion of new dependencies.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="perform-the-release"><a class="anchor" href="#perform-the-release"></a>Perform the release</h3>
+<div class="paragraph">
+<p>Once you trigger the CI job, it automatically pushes artifacts to the Nexus repository,
+the distribution to SourceForge and the documentation to docs.jboss.org.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Transfer the released issues in JIRA to the "Closed state".</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Got to <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20status%20%3D%20Resolved%20AND%20fixVersion%20%3D%205.7.2.Final">this search</a></p>
+</li>
+<li>
+<p>Select another "fixVersion".</p>
+</li>
+<li>
+<p>Click the button with three dots on the top right corner of the screen and click "Bulk update all XX issues".</p>
+</li>
+<li>
+<p>Use the "Transition" action to transition your issues from "Resolved" to "Closed",
+and please check the option to not send email notifications.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Release the <a href="https://hibernate.atlassian.net/plugins/servlet/project-config/HSEARCH/versions">version on JIRA</a>.</p>
+</li>
+<li>
+<p>Do <strong>not</strong> update the changelog.txt and README.md, the release job does it for you.</p>
+</li>
+<li>
+<p>Trigger the release on the CI</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to CI, to <a href="https://ci.hibernate.org/job/hibernate-search/">the "hibernate-search" CI job</a>.</p>
+</li>
+<li>
+<p>Click the "run" button (the green triangle on top of a clock, to the right) next to the branch you want to release.</p>
+</li>
+<li>
+<p><strong>Be careful</strong> when filling the form with the build parameters.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Release the artifacts on the JBoss Nexus repository manager.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Log into Nexus and examine your staging repository.
+Use the search box to hide all unrelated repositories:
+searching for "hibernate" will show only the ones created by hibernate-ci.</p>
+</li>
+<li>
+<p>Test the release in the staging repository.</p>
+<div class="paragraph">
+<p>You can find more information in the description of the JBoss project <a href="https://developer.jboss.org/docs/DOC-14608">release process</a>.
+A Maven <code>settings.xml</code> for testing the artifacts in the staging repository can be found
+<a href="https://developer.jboss.org/docs/DOC-15664">here</a>.</p>
+</div>
+</li>
+<li>
+<p>If there is a problem, drop the staging repo, fix the problem, delete the commits pushed by CI and the tag
+(Note: they have been pushed upstream by CI).</p>
+</li>
+<li>
+<p>If everything is ok, promote the staging repo to the releases repository.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For Search 5.x and below, you will also need to "Close" the repository before you can release it.</p>
+</li>
+<li>
+<p>Click "Refresh" after each action.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="announce"><a class="anchor" href="#announce"></a>Announce</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Update <a href="https://github.com/hibernate/hibernate.org">hibernate.org</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If it is a new major or minor release, add a <code>_data/projects/search/releases/series.yml</code> file
+and a <code>search/releases/&lt;version&gt;/index.adoc</code> file.</p>
+</li>
+<li>
+<p>Add a new YAML release file to <code>_data/projects/search/releases</code>.</p>
+</li>
+<li>
+<p>Depending on which series you want to have displayed,
+make sure to adjust the displayed flag of the series.yml file of the old series.</p>
+</li>
+<li>
+<p><strong>If it&#8217;s a <code>.CR</code> or <code>.Final</code> release</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Update the <a href="http://hibernate.org/search/documentation/migrate/">Migration Guide</a>;
+in particular, check the git history for API/SPI changes
+and document them in the migration guide.</p>
+</li>
+<li>
+<p>Verify the <a href="http://hibernate.org/search/documentation/getting-started/">Getting Started</a> guide.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>If it&#8217;s a Final release</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Don&#8217;t forget to add a line containing <code>stable: true</code> to the new YAML release file.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Push to the production branch.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Blog about release on <a href="http://in.relation.to/">in.relation.to</a>.
+Make sure to use the tags "Hibernate Search" and "Releases" for the blog entry.</p>
+</li>
+<li>
+<p>Send an email to hibernate-announce and CC hibernate-dev.</p>
+</li>
+<li>
+<p>Tweet about the release via @Hibernate.
+Try to engage with the Lucene community or other communities depending on the release highlights.</p>
+</li>
+<li>
+<p>Update our forum&#8217;s <a href="https://discourse.hibernate.org/t/latest-hibernate-search-version-5-8-2-final/26/3">sticky post</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="update-depending-projects"><a class="anchor" href="#update-depending-projects"></a>Update depending projects</h3>
+<div class="paragraph">
+<p>If you just released the latest stable, you will need to update other projects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Upgrade the Hibernate Search dependency
+in the <a href="https://github.com/hibernate/hibernate-test-case-templates/tree/master/search">test case templates</a>.</p>
+</li>
+<li>
+<p>Upgrade the Hibernate Search dependency
+in the <a href="https://github.com/hibernate/hibernate-demos/tree/master/hibernate-search">demos</a>.</p>
+</li>
+<li>
+<p>If not already done, create a maintenance branch for the previous series:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mvn versions:set -DnewVersion=x.(y-1).z-SNAPSHOT</code></p>
+</li>
+<li>
+<p><code>git add</code>, <code>commit</code>, <code>push upstream</code> the new branch.</p>
+</li>
+<li>
+<p>Activate github&#8217;s "branch protection" features on the newly created maintenance branch
+<a href="https://github.com/hibernate/hibernate-search/settings/branches/" class="bare">https://github.com/hibernate/hibernate-search/settings/branches/</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, you should make sure to keep the <code>previous.stable</code> property in the POM up-to-date
+on all actively developped branches.
+The property must point to the latest micro of the previous minor.
+E.g. let&#8217;s say you release 5.6.5 while being actively working on 5.7.
+Then the development branch for 5.7 must have its <code>previous.stable</code> property set to 5.6.5.</p>
 </div>
 </div>
 </div>
-
+</div>
 </div>
 
 </div>
@@ -707,12 +860,12 @@ Find how to join them <a href="/community/#contribute">here</a>.</p>
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href=".." title="Search">Hibernate Search</a>
-<a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="../../others" title="Other projects">Other projects</a>
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../.." title="Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -726,7 +879,7 @@ Find how to join them <a href="/community/#contribute">here</a>.</p>
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../community" title="Community resources">Community resources</a>
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -736,7 +889,7 @@ Find how to join them <a href="/community/#contribute">here</a>.</p>
 <div class="five wide column sponsor">
 <div class="logo">
 <a href="https://www.redhat.com/">
-<img src="../../images/sponsored-by-redhat.svg" title="Red Hat">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
 </a>
 </div>
 </div>
