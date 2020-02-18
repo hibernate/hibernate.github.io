@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Support - Hibernate Search</title>
+<title>Guidelines for contributing to Hibernate projects - Hibernate</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="description">
@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1582013093" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1582013089" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -111,12 +111,12 @@ CI
 </div>
 
 <div class="item">
-<a class="active title">
+<a class="title">
 <i class="grid icon search"></i>
 <i class="dropdown icon"></i>
 <strong>Search</strong>
 </a>
-<div class="active content">
+<div class="content">
 <div class="menu internal-links">
 <a class="item" href="/search/">
 <i class="grid home icon"></i>
@@ -142,7 +142,7 @@ Contribute
 <i class="grid icon wrench"></i>
 Tooling
 </a>
-<a class="active item" href="/search/support/">
+<a class="item" href="/search/support/">
 <i class="doctor grid icon"></i>
 Paid support
 </a>
@@ -362,12 +362,12 @@ CI
 Others
 </a>
 <div class="item">
-<a class="title">
+<a class="active title">
 <i class="grid icon users"></i>
 <i class="dropdown icon"></i>
 <strong>Community</strong>
 </a>
-<div class="content">
+<div class="active content">
 <div class="menu external-links">
 <a class="item" href="/community/">
 <i class="grid icon users"></i>
@@ -438,7 +438,7 @@ Menu
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
 <a class="item" href="/orm/">ORM</a>
-<a class="active item" href="/search/">Search</a>
+<a class="item" href="/search/">Search</a>
 <a class="item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
@@ -446,7 +446,7 @@ Menu
 <div class="right menu">
 <a class="item" href="https://in.relation.to/">Blog</a>
 <a class="item" href="https://discourse.hibernate.org/">Forums</a>
-<a class="item" href="/community/">Community</a>
+<a class="active item" href="/community/">Community</a>
 <a class="item" href="https://twitter.com/hibernate/">
 <i class="twitter icon"></i>
 Follow us
@@ -455,151 +455,172 @@ Follow us
 </div>
 </div>
 
-<script>
-var displayed_series = [];
-displayed_series.push('6.0');
-displayed_series.push('5.11');
-displayed_series.push('5.10');
-displayed_series.push('5.9');
-displayed_series.push('5.6');
-</script>
+<div class="ui container-fluid">
 <div class="jumbotron small">
 <div class="ui container">
 <div class="ui grid stackable">
 <div class="column row">
-<div class="column twelve wide middle aligned">
+<div class="column twelve wide">
 <h1>
-<span>
-Hibernate Search
-</span>
+<span>Community</span>
 </h1>
 <h2>
-<span>
-Support
-</span>
+<span>Guidelines for contributing to Hibernate projects</span>
 </h2>
 </div>
-<div class="column four wide middle aligned">
-
+<div class="column four wide">
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://github.com/hibernate/">
+<i class="github icon"></i>
+Our GitHub organization
+</a>
+</div>
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/">
+<i class="bug icon"></i>
+Our issue tracker
+</a>
 </div>
 </div>
 </div>
 </div>
 </div>
-
-
+</div>
+</div>
 <div class="ui container page-content">
 <div class="ui stackable grid">
-<div class="column three wide computer only print hidden">
+<div class="column three wide computer only">
 <div class="ui fluid vertical menu">
-<a class="item" href="..">
-<i class="grid home icon"></i>
-About
+<a class="item" href="../..">
+<i class="grid icon users"></i>
+Community
 </a>
 <div class="dropdown item link ui">
-Releases
+Contributors
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="../releases">
-Overview
+<a class="item" href="/community/contributors/orm/">
+Hibernate ORM
 </a>
-<a class="item" href="../releases/6.0">
-6.0
-&nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<a class="item" href="/community/contributors/search/">
+Hibernate Search
 </a>
-<a class="item" href="../releases/5.11">
-5.11
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
+<a class="item" href="/community/contributors/validator/">
+Hibernate Validator
 </a>
-<a class="item" href="../releases/5.10">
-5.10
-</a>
-<a class="item" href="../releases/5.9">
-5.9
-</a>
-<a class="item" href="../releases/5.6">
-5.6
+<a class="item" href="/community/contributors/ogm/">
+Hibernate OGM
 </a>
 </div>
 </div>
-<a class="item" href="../documentation">
-<i class="book grid icon"></i>
-Documentation
+<a class="item" href="../../corporate-contributors">
+<i class="grid icon building outline"></i>
+Corporate contributors
 </a>
-<a class="item" href="../roadmap">
-<i class="grid icon road"></i>
-Roadmap
+<a class="item" href="../../license">
+<i class="grid icon legal"></i>
+Licenses
 </a>
-<a class="item" href="../contribute">
-<i class="grid icon users"></i>
+<div class="dropdown item link selected ui">
 Contribute
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item selected" href="/community/contribute/guidelines/">
+Guidelines
 </a>
-<a class="item" href="../tooling">
-<i class="grid icon wrench"></i>
-Tooling
+<a class="item" href="/community/contribute/intellij-idea/">
+Set up IntelliJ IDEA
 </a>
-<a class="item selected" href=".">
-<i class="doctor grid icon"></i>
-Paid support
-</a>
-<a class="item" href="../faq">
-<i class="circle grid help icon"></i>
-FAQ
+<a class="item" href="/community/contribute/eclipse-ide/">
+Set up Eclipse IDE
 </a>
 </div>
-<div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-search">
-<i class="code grid icon"></i>
-Source code
-</a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
-<i class="bug grid icon"></i>
-Issue tracker
-</a>
-<a class="item" href="https://access.redhat.com/security/team/contact/">
-<i class="grid icon lock"></i>
-Security issue
-</a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
-<i class="comments grid icon"></i>
-Forum
-</a>
-<a class="item" href="https://community.jboss.org/en/hibernate/search">
-<i class="edit grid icon"></i>
-Wiki
-</a>
-<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
-<i class="grid icon treatment"></i>
-CI
-</a>
 </div>
-<hr>
-<div class="license">
-Released under the
-<a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
 </div>
 </div>
 <div class="column thirteen wide computer sixteen wide mobile">
 <div class="content" id="content">
 <div class="sect1">
-<h2 id="supported-versions"><a class="anchor" href="#supported-versions"></a>Supported Products <i class="icon-user-md icon-fixed-width icon-2x"></i></h2>
+<h2 id="project-specifics"><a class="anchor" href="#project-specifics"></a>Project specifics</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Hibernate Search is available as an enterprise ready supported library as a component of the <a href="http://www.redhat.com/en/technologies/jboss-middleware/application-platform">Red Hat JBoss Enterprise Application Platform</a>.</p>
+<p>Each project has its own page dedicated to contributing: what&#8217;s needed and what is the process.
+<br />
+<div class="ui labels blue">
+<a class="ui label" href="/orm/contribute/">Hibernate ORM</a>
+<a class="ui label" href="/search/contribute/">Hibernate Search</a>
+<a class="ui label" href="/validator/contribute/">Hibernate Validator</a>
+<a class="ui label" href="/ogm/contribute/">Hibernate OGM</a>
+</div>
+</p>
 </div>
 <div class="paragraph">
-<p>In addition the <a href="http://www.redhat.com/en/technologies/jboss-middleware/data-grid">Red Hat JBoss Data Grid</a> provides optional extensions such as high performance real time replication for Hibernate Search powered applications running on the Red Hat JBoss Enterprise Application Platform.</p>
+<p>Below are some guidelines that stand true across all projects.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="design-philosophy"><a class="anchor" href="#design-philosophy"></a>Design philosophy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is a set of principles driving the design of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hibernate Validator</p>
+</li>
+<li>
+<p>Hibernate Search</p>
+</li>
+<li>
+<p>Hibernate OGM</p>
+</li>
+<li>
+<p>Bean Validation</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The Red Hat JBoss Data Grid also embeds a custom edition of Hibernate Search and allows using most of the same API to run high performance full-text queries and data mining on the data grid.</p>
+<p>The goal of these projects is to improve developer productivity and ease of use.</p>
 </div>
 <div class="paragraph">
-<p>Several more products from Red Hat are powered by Hibernate Search.</p>
+<p>When adding a feature, we ask this pool of questions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Does it feel like the right way of doing things?
+If it is not we tend to wait till the idea matures</p>
+</li>
+<li>
+<p>Can it be done with an existing construct with similar or less complexity?
+Several ways of doing things is counter productive.</p>
+</li>
+<li>
+<p>Is this feature wrong?
+For example, does it encourage bad practice?</p>
+</li>
+<li>
+<p>Is this a popular request?</p>
+</li>
+<li>
+<p>Is this feature useful?
+That is the reason for asking "What&#8217;s your use case?"</p>
+</li>
+<li>
+<p>Is it the most readable approach?</p>
+</li>
+<li>
+<p>Is the feature designed consistently with the rest of the library?</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>If you are interested in Hibernate Search support/consulting within these platforms, please <a href="http://www.redhat.com/contact/sales.html">contact Red Hat</a>!</p>
+<p>None of these questions should slow down innovation but we want high quality libraries.
+Keeping them both useful and simple is a constant battle against the easier way of adding features ad nauseum.
+The team believes it is his responsibility to be the guardian of these principles.
+We are here to make the world a better place, not give food to guideline writers.</p>
 </div>
 </div>
 </div>
@@ -620,12 +641,12 @@ Released under the
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href=".." title="Search">Hibernate Search</a>
-<a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="../../others" title="Other projects">Other projects</a>
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -639,7 +660,7 @@ Released under the
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../community" title="Community resources">Community resources</a>
+<a class="item" href="../.." title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -649,7 +670,7 @@ Released under the
 <div class="five wide column sponsor">
 <div class="logo">
 <a href="https://www.redhat.com/">
-<img src="../../images/sponsored-by-redhat.svg" title="Red Hat">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
 </a>
 </div>
 </div>
