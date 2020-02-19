@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>5.0 series - Hibernate Validator</title>
+<title>Build Hibernate ORM (5.x) - Hibernate</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="description">
@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1582112160" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1582112155" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -181,18 +181,18 @@ CI
 </div>
 
 <div class="item">
-<a class="active title">
+<a class="title">
 <i class="box checkmark grid icon"></i>
 <i class="dropdown icon"></i>
 <strong>Validator</strong>
 </a>
-<div class="active content">
+<div class="content">
 <div class="menu internal-links">
 <a class="item" href="/validator/">
 <i class="grid home icon"></i>
 About
 </a>
-<a class="active item" href="/validator/releases/">
+<a class="item" href="/validator/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -362,12 +362,12 @@ CI
 Others
 </a>
 <div class="item">
-<a class="title">
+<a class="active title">
 <i class="grid icon users"></i>
 <i class="dropdown icon"></i>
 <strong>Community</strong>
 </a>
-<div class="content">
+<div class="active content">
 <div class="menu external-links">
 <a class="item" href="/community/">
 <i class="grid icon users"></i>
@@ -439,14 +439,14 @@ Menu
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
 <a class="item" href="/orm/">ORM</a>
 <a class="item" href="/search/">Search</a>
-<a class="active item" href="/validator/">Validator</a>
+<a class="item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
 <a class="item" href="/others/">Others</a>
 <div class="right menu">
 <a class="item" href="https://in.relation.to/">Blog</a>
 <a class="item" href="https://discourse.hibernate.org/">Forums</a>
-<a class="item" href="/community/">Community</a>
+<a class="active item" href="/community/">Community</a>
 <a class="item" href="https://twitter.com/hibernate/">
 <i class="twitter icon"></i>
 Follow us
@@ -455,346 +455,277 @@ Follow us
 </div>
 </div>
 
-<script>
-var displayed_series = [];
-displayed_series.push('6.1');
-displayed_series.push('6.0');
-displayed_series.push('5.4');
-</script>
+<div class="ui container-fluid">
 <div class="jumbotron small">
 <div class="ui container">
 <div class="ui grid stackable">
 <div class="column row">
-<div class="column twelve wide middle aligned">
+<div class="column twelve wide">
 <h1>
-<span>
-Hibernate Validator
-</span>
+<span>Community</span>
 </h1>
 <h2>
-<span>
-5.0 series
-</span>
-<span class="green label tag ui">stable</span>
+<span>Build Hibernate ORM (5.x)</span>
 </h2>
 </div>
-<div class="column four wide middle aligned">
-
+<div class="column four wide">
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://github.com/hibernate/">
+<i class="github icon"></i>
+Our GitHub organization
+</a>
+</div>
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/">
+<i class="bug icon"></i>
+Our issue tracker
+</a>
 </div>
 </div>
 </div>
 </div>
 </div>
-
-<div class="page-title small">
-<div class="ui container">
-<h4>
-Reference implementation for Bean Validation 1.1
-</h4>
 </div>
 </div>
-
 <div class="ui container page-content">
 <div class="ui stackable grid">
-<div class="column three wide computer only print hidden">
+<div class="column three wide computer only">
 <div class="ui fluid vertical menu">
 <a class="item" href="../..">
-<i class="grid home icon"></i>
-About
+<i class="grid icon users"></i>
+Community
 </a>
-<div class="dropdown item link selected ui">
-Releases
+<div class="dropdown item link ui">
+Contributors
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="..">
-Overview
+<a class="item" href="/community/contributors/orm/">
+Hibernate ORM
 </a>
-<a class="item" href="../6.1">
-6.1
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
+<a class="item" href="/community/contributors/search/">
+Hibernate Search
 </a>
-<a class="item" href="../6.0">
-6.0
+<a class="item" href="/community/contributors/validator/">
+Hibernate Validator
 </a>
-<a class="item" href="../5.4">
-5.4
+<a class="item" href="/community/contributors/ogm/">
+Hibernate OGM
 </a>
 </div>
 </div>
-<a class="item" href="../../documentation">
-<i class="book grid icon"></i>
-Documentation
+<a class="item" href="../../corporate-contributors">
+<i class="grid icon building outline"></i>
+Corporate contributors
 </a>
-<a class="item" href="../../roadmap">
-<i class="grid icon road"></i>
-Roadmap
+<a class="item" href="../../license">
+<i class="grid icon legal"></i>
+Licenses
 </a>
-<a class="item" href="../../contribute">
-<i class="grid icon users"></i>
+<div class="dropdown item link selected ui">
 Contribute
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/community/contribute/guidelines/">
+Guidelines
 </a>
-<a class="item" href="../../tooling">
-<i class="grid icon wrench"></i>
-Tooling
+<a class="item" href="/community/contribute/intellij-idea/">
+Set up IntelliJ IDEA
 </a>
-<a class="item" href="../../support">
-<i class="doctor grid icon"></i>
-Paid support
+<a class="item" href="/community/contribute/eclipse-ide/">
+Set up Eclipse IDE
 </a>
-<a class="item" href="../../faq">
-<i class="circle grid help icon"></i>
-FAQ
-</a>
-</div>
-<div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-validator">
-<i class="code grid icon"></i>
-Source code
-</a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HV">
-<i class="bug grid icon"></i>
-Issue tracker
-</a>
-<a class="item" href="https://access.redhat.com/security/team/contact/">
-<i class="grid icon lock"></i>
-Security issue
-</a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
-<i class="comments grid icon"></i>
-Forum
-</a>
-<a class="item" href="https://community.jboss.org/en/hibernate/validator">
-<i class="edit grid icon"></i>
-Wiki
-</a>
-<a class="item" href="https://hibernate-validator.ci.cloudbees.com/">
-<i class="grid icon treatment"></i>
-CI
+<a class="item selected" href="/community/contribute/build-hibernate-orm/">
+Build Hibernate ORM
 </a>
 </div>
-<hr>
-<div class="license">
-Released under the
-<a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
+</div>
 </div>
 </div>
 <div class="column thirteen wide computer sixteen wide mobile">
 <div class="content" id="content">
-<div id="toc">
-<div id="toctitle">
-Quick links
-</div>
+<div class="sect1">
+<h2 id="prerequesites"><a class="anchor" href="#prerequesites"></a>Prerequesites</h2>
+<div class="sectionbody">
+<div class="ulist">
 <ul>
 <li>
-<a class="item" href="#compatibility">
-Compatibility
-</a>
+<p>JDK 7 for 5.0 and 5.1, JDK 8 from version 5.2 onwards</p>
 </li>
 <li>
-<a class="item" href="#documentation">
-Documentation
-</a>
+<p><a href="https://git-scm.com/">Git</a></p>
 </li>
 <li>
-<a class="item" href="#get-it">
-How to get it
-</a>
-</li>
-<li>
-<a class="item" href="#whats-new">
-What's new
-</a>
-</li>
-<li>
-<a class="item" href="#migrate">
-Migrate
-</a>
-</li>
-<li>
-<a class="item" href="#releases">
-Releases in this series
-</a>
+<p><a href="https://gradle.org/">Gradle</a> (you don&#8217;t have to install Gradle on your system prior to building Hibernate. You can use the <a href="https://docs.gradle.org/current/userguide/gradle_wrapper.html">gradle wrapper</a> gradlew to bootstrap Gradle and the build. You find gradlew in the root directory of your Hibernate git clone)</p>
 </li>
 </ul>
 </div>
-<h2 id="compatibility">Compatibility</h2>
-<table class="ui collapsing table striped celled unstackable">
-<tr>
-<td>
-<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
-Java
-</a>
-</td>
-<td>
-6 or 7
-</td>
-</tr>
-<tr>
-<td>
-<a href="http://beanvalidation.org/">
-Bean Validation
-</a>
-</td>
-<td>
-1.1
-</td>
-</tr>
-</table>
-<p>
-Not compatible with your requirements? Have a look at the
-<a href="../">
-other series.
-</a>
-</p>
-<h2 id="documentation">Documentation</h2>
-<p>
-Documentation for this specific series can be accessed through the links below:
-</p>
-<p>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/html_single/">
-<i class="icon file text outline"></i>
-HTML
-</a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.0/reference/en-US/pdf/hibernate_validator_reference.pdf">
-<i class="icon file pdf outline"></i>
-PDF
-</a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.0/api/">
-<i class="icon code outline"></i>
-API (JavaDoc)
-</a>
-</p>
-<p>
-You can find more documentation for all series on the
-<a href="../../documentation">
-documentation page.
-</a>
-</p>
-<h2 id="get-it">How to get it</h2>
-<div class="ui grid equal height stackable download-options">
-<div class="eleven wide column">
-<h3>Maven, Gradle...</h3>
-<p>
-Maven artifacts of Hibernate Validator are published to
-<a href="https://search.maven.org">
-Maven Central
-</a>
-and to the
-<a href="https://repository.jboss.org/nexus/index.html">
-JBoss Maven repository.
-</a>
-Refer to the
-<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
-on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
-</p>
-<p>
-You can find the Maven coordinates of all artifacts through the link below:
-<p>
-<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.0.3.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-</p>
-</p>
-<p>
-Below are the Maven coordinates of the main artifacts.
-</p>
-<dl class="sparse">
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator%7C5.0.3.Final%7C">
-org.hibernate:hibernate-validator:5.0.3.Final
-</a>
-</dt>
-<dd>Core implementation</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator-cdi%7C5.0.3.Final%7C">
-org.hibernate:hibernate-validator-cdi:5.0.3.Final
-</a>
-</dt>
-<dd>CDI integration</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator-annotation-processor%7C5.0.3.Final%7C">
-org.hibernate:hibernate-validator-annotation-processor:5.0.3.Final
-</a>
-</dt>
-<dd>Annotation processor</dd>
-</dl>
-</div>
-<div class="five wide column divided">
-<h3>Zip archive</h3>
-<p>
-Direct download is available from SourceForge:
-</p>
-<p>
-<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.0.3.Final/hibernate-validator-5.0.3.Final-dist.zip/download" title="Download">
-<i class="icon cloud download"></i>
-Download Zip archive
-</a>
-</p>
 </div>
 </div>
-<p>
-More information about specific releases (announcements, download links) can be found
-<a href="#releases">
-here.
-</a>
-</p>
-<h2 id="whats-new">What's new</h2>
-<p>
-A detailed list of new features, improvements and fixes in this series can be found
-<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.0.3.Final)%20ORDER%20BY%20updated">
-on our JIRA instance.
-</a>
-</p>
-
-<h2 id="migrate">Migrate</h2>
-<p>
-If you need to upgrade from a previous series, please refer to the
-<a href="https://developer.jboss.org/wiki/HibernateValidatorMigrationGuide">
-migration guide.
-</a>
-</p>
-<h2 id="releases">Releases in this series</h2>
-<div class="ui stackable grid series-versions">
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="green label ui version">
-5.0.3.Final
-</span>
-</p>
-<p>
-<small class="ui label">2014-01-28</small>
-</p>
+<div class="sect1">
+<h2 id="get-the-sources"><a class="anchor" href="#get-the-sources"></a>Get the sources</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>git clone git://github.com/hibernate/hibernate-orm.git</pre>
 </div>
-<div class="thirteen wide column">
-<p>
-Reference implementation for Bean Validation 1.1 (maintenance release)
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator%7C5.0.3.Final%7C">
-org.hibernate:hibernate-validator:5.0.3.Final
-</a>
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.0.3.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.0.3.Final/hibernate-validator-5.0.3.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.0.3.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-</p>
+</div>
+<div class="paragraph">
+<p>You can also browse the code on <a href="https://github.com/hibernate/hibernate-orm">GitHub</a></p>
 </div>
 </div>
 </div>
-
+<div class="sect1">
+<h2 id="build-tasks"><a class="anchor" href="#build-tasks"></a>Build tasks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="build-all"><a class="anchor" href="#build-all"></a>Build all</h3>
+<div class="listingblock">
+<div class="content">
+<pre>./gradlew clean build</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="running-tests"><a class="anchor" href="#running-tests"></a>Running tests</h3>
+<div class="listingblock">
+<div class="content">
+<pre>./gradlew test</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="running-test-of-a-single-module"><a class="anchor" href="#running-test-of-a-single-module"></a>Running test of a single module</h3>
+<div class="listingblock">
+<div class="content">
+<pre>./gradlew test -p hibernate-agroal</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="running-single-tests"><a class="anchor" href="#running-single-tests"></a>Running single tests</h3>
+<div class="paragraph">
+<p><code>./gradlew test --tests ThisUniquelyNamedTest</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="skipping-tests"><a class="anchor" href="#skipping-tests"></a>Skipping tests</h3>
+<div class="listingblock">
+<div class="content">
+<pre>./gradlew build -x test</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="other-tasks"><a class="anchor" href="#other-tasks"></a>Other tasks</h3>
+<div class="paragraph">
+<p>You get a full list of available tasks via</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./gradlew --tasks --all</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Some important tasks are listed below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>build - Assembles (jars) and tests this project</p>
+</li>
+<li>
+<p>buildDependents - Assembles and tests this project and all projects that depend on it.  So think of running this in hibernnate-entitymanager, Gradle would assemble and test hibernate-entitymanager as well as hibernate-envers (because envers depends on entitymanager)</p>
+</li>
+<li>
+<p>classes - compiles the main classes</p>
+</li>
+<li>
+<p>clean - Deletes the build directory</p>
+</li>
+<li>
+<p>jar - Generates a jar archive with all the compiled classes</p>
+</li>
+<li>
+<p>testClasses - Assembles the test classes</p>
+</li>
+<li>
+<p>test - Runs the unit tests</p>
+</li>
+<li>
+<p>uploadArchives - think Maven deploy</p>
+</li>
+<li>
+<p>install - installs the project jar to your local maven cache (aka ~/.m2/repository)</p>
+</li>
+<li>
+<p>idea or eclipse - creates the project files for the respective IDE</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gradle-wrapper"><a class="anchor" href="#gradle-wrapper"></a>Gradle wrapper</h3>
+<div class="paragraph">
+<p>The above examples use the gradle wrapper (gradlew) to run the different build tasks. Using the wrapper you don&#8217;t have to install Gradle prior to building the source. It also ensures that you are using the right version of gradle as specified in build.gradle. It requires, however, that you specify the path to gradlew. For example if you are in the hibernate-core module you need to use <code>../gradlew</code>. One way to avoid this is to add some custom functions or aliases to your <code>~/.bashrc</code> (assuming you are using Unix). Something like this might do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>function gradleProjectRoot()&#x000A;{&#x000A;x=`pwd``; while [ "$x" != "/" ] ; do if [ `find "$x" -maxdepth 1 -name gradlew` ]; then echo "$x"; break; fi; x=`dirname "$x"`; done&#x000A;}</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>function gradlew()&#x000A;{&#x000A;    `gradleProjectRoot`/gradlew $@&#x000A;}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This way you can just type gradlew in any subdirectory of the project root and the right wrapper script will be executed. If you have a better script, let us know :-)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="idea-settings"><a class="anchor" href="#idea-settings"></a>Idea settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create the Idea project files you can run</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./gradlew idea</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After changes to the dependencies you need to clean the project files and recreate them:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>./gradlew cleanIdea idea</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See also general Idea setup information - <a href="https://hibernate.org/community/contribute/intellij-idea/">IntelliJ Information</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="gradle-documentation"><a class="anchor" href="#gradle-documentation"></a>Gradle documentation</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.gradle.org/current/userguide/userguide_single.html">User Guide</a></p>
+</li>
+<li>
+<p><a href="https://docs.gradle.org/current/dsl/index.html">Gradle Build Language (DSL) Reference</a></p>
+</li>
+<li>
+<p>You also find a lot of Gradle tips on this <a href="https://mrhaki.blogspot.com/search/label/Gradle%3AGoodness">blog</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 
 </div>
@@ -814,7 +745,7 @@ Resolved issues
 <div class="ui inverted link list">
 <a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
 <a class="item" href="../../../search" title="Search">Hibernate Search</a>
-<a class="item" href="../.." title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
 <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
 <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
 <a class="item" href="../../../others" title="Other projects">Other projects</a>
@@ -831,7 +762,7 @@ Resolved issues
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../../community" title="Community resources">Community resources</a>
+<a class="item" href="../.." title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
