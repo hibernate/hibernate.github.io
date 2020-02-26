@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1582554897" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1582707407" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -481,7 +481,7 @@ ORM. Lucene. Elasticsearch. Integrated.
 </div>
 <div class="column four wide middle aligned">
 <div class="jumbotron-button">
-<a class="ui small right labeled icon button" href="documentation/getting-started">
+<a class="ui small right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#getting-started">
 <i class="right arrow icon"></i>
 Getting started
 </a>
@@ -617,24 +617,71 @@ Released under the
 <h2 id="full-text-search-for-entities"><a class="anchor" href="#full-text-search-for-entities"></a>Full-text search for entities</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Offers full-text search support for objects stored by Hibernate ORM, <a href="http://infinispan.org/">Infinispan</a> and other sources.
-Think of it as Google(tm) for your entities:</p>
+<p>Hibernate Search automatically extracts data from Hibernate ORM entities to push it to
+local <a href="http://lucene.apache.org/">Apache Lucene</a> indexes
+or remote <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> indexes.</p>
+</div>
+<div class="paragraph">
+<p>It features:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>search words with text</p>
+<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-mapping"><strong>Declarative mapping</strong></a>
+of entity properties to index fields,
+either through annotations or a programmatic API.</p>
 </li>
 <li>
-<p>order results by relevance</p>
+<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-massindexer"><strong>On-demand mass indexing</strong></a>
+of all entities in the database,
+to initialize the indexes with pre-existing data.</p>
 </li>
 <li>
-<p>find by approximation (fuzzy search)</p>
+<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-automatic"><strong>On-the-fly automatic indexing</strong></a>
+of entities modified through a Hibernate ORM session,
+to always keep the indexes up-to-date.</p>
+</li>
+<li>
+<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl"><strong>A Search DSL</strong></a>
+to easily build full-text search queries
+and retrieve the hits as Hibernate ORM entities.</p>
+</li>
+<li>
+<p>And much more! (see below)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Under the hood it will use <a href="https://lucene.apache.org/core/">Apache Lucene</a> directly or over <a href="https://www.elastic.co/products/elasticsearch/">Elasticsearch</a>.</p>
+<p>For example, map your entities like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span style="color:#007">@Entity</span>&#x000A;<span style="color:#777">// This entity is mapped to an index</span>&#x000A;<span style="color:#007">@Indexed</span>&#x000A;<span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Book</span> {&#x000A;&#x000A;    <span style="color:#777">// The entity ID is the document ID</span>&#x000A;    <span style="color:#007">@Id</span>&#x000A;    <span style="color:#007">@GeneratedValue</span>&#x000A;    <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">Integer</span> id;&#x000A;&#x000A;    <span style="color:#777">// This property is mapped to a document field</span>&#x000A;    <span style="color:#007">@FullTextField</span>(analyzer = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">english</span><span style="color:#710">&quot;</span></span>)&#x000A;    <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">String</span> title;&#x000A;&#x000A;    <span style="color:#007">@ManyToMany</span>&#x000A;    <span style="color:#777">// Authors will be embedded in Book documents</span>&#x000A;    <span style="color:#007">@IndexedEmbedded</span>&#x000A;    <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">Set</span>&lt;Author&gt; authors = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">HashSet</span>&lt;&gt;();&#x000A;&#x000A;    <span style="color:#777">// Getters and setters</span>&#x000A;    <span style="color:#777">// ...</span>&#x000A;}&#x000A;&#x000A;<span style="color:#007">@Entity</span>&#x000A;<span style="color:#088;font-weight:bold">public</span> <span style="color:#339;font-weight:bold">class</span> <span style="color:#B06;font-weight:bold">Author</span> {&#x000A;&#x000A;    <span style="color:#007">@Id</span>&#x000A;    <span style="color:#007">@GeneratedValue</span>&#x000A;    <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">Integer</span> id;&#x000A;&#x000A;    <span style="color:#777">// This property is mapped to a document field</span>&#x000A;    <span style="color:#007">@FullTextField</span>(analyzer = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">name</span><span style="color:#710">&quot;</span></span>)&#x000A;    <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">String</span> name;&#x000A;&#x000A;    <span style="color:#007">@ManyToMany</span>(mappedBy = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">authors</span><span style="color:#710">&quot;</span></span>)&#x000A;    <span style="color:#088;font-weight:bold">private</span> <span style="color:#0a8;font-weight:bold">Set</span>&lt;<span style="color:#0a8;font-weight:bold">Book</span>&gt; books = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">HashSet</span>&lt;&gt;();&#x000A;&#x000A;    <span style="color:#088;font-weight:bold">public</span> Author() {&#x000A;    }&#x000A;&#x000A;    <span style="color:#777">// Getters and setters</span>&#x000A;    <span style="color:#777">// ...</span>&#x000A;}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Index pre-existing data like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">SearchSession searchSession = Search.session( entityManager );&#x000A;MassIndexer indexer = searchSession.massIndexer( <span style="color:#0a8;font-weight:bold">Book</span>.class );&#x000A;indexer.startAndWait();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Automatic indexing does not require any change to code based on JPA or Hibernate ORM:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">Author author = <span style="color:#080;font-weight:bold">new</span> Author();&#x000A;author.setName( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Isaac Asimov</span><span style="color:#710">&quot;</span></span> );&#x000A;&#x000A;<span style="color:#0a8;font-weight:bold">Book</span> book = <span style="color:#080;font-weight:bold">new</span> <span style="color:#0a8;font-weight:bold">Book</span>();&#x000A;book.setTitle( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">The Caves Of Steel</span><span style="color:#710">&quot;</span></span> );&#x000A;book.getAuthors().add( author );&#x000A;author.getBooks().add( book );&#x000A;&#x000A;entityManager.persist( author );&#x000A;entityManager.persist( book );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And search like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java"><span style="color:#0a8;font-weight:bold">SearchResult</span>&lt;<span style="color:#0a8;font-weight:bold">Book</span>&gt; result = Search.session( entityManager )&#x000A;        .search( <span style="color:#0a8;font-weight:bold">Book</span>.class )&#x000A;        .where( f -&gt; f.match()&#x000A;                .fields( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">title</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">authors.name</span><span style="color:#710">&quot;</span></span> )&#x000A;                .matching( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Isaac</span><span style="color:#710">&quot;</span></span> )&#x000A;        )&#x000A;        .fetch( <span style="color:#00D">20</span> );&#x000A;&#x000A;<span style="color:#339;font-weight:bold">long</span> totalHitCount = result.getTotalHitCount();&#x000A;<span style="color:#0a8;font-weight:bold">List</span>&lt;<span style="color:#0a8;font-weight:bold">Book</span>&gt; hits = result.getHits();</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -647,37 +694,25 @@ Think of it as Google(tm) for your entities:</p>
 <p>Unlike with web search, this is your data, your domain, your application, stored wherever you decide.</p>
 </div>
 <div class="paragraph">
-<p>You also have far better control on how your data is processed, and how to extract what you need.</p>
+<p>You can chose what to index (and how to index it) very precisely with
+<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-directfieldmapping">per-property mapping</a>
+and go even further with <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge">custom bridges</a>.</p>
 </div>
 <div class="paragraph">
-<p>Hibernate Search exposes all capabilities of the powerful analysis framework from Apache Lucene, so you can:</p>
+<p>You also have far better control on how your data is processed with
+<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#concepts-analysis">configurable analysis</a>,
+so you can:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>tune text processing for specific languages</p>
+<p>Tune text processing for specific languages.</p>
 </li>
 <li>
-<p>for domain specific terminology (e.g. medical terms, custom acronyms expansion,..)</p>
+<p>Tune text processing for domain specific terminology (e.g. medical terms, custom acronyms expansion, &#8230;&#8203;).</p>
 </li>
 <li>
-<p>control the ranking process: which results are more important</p>
-</li>
-<li>
-<p>advanced index encoding for analytics and signals</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Additionally it allows to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>partition data, apply multi-tenancy for security and performance optimisations</p>
-</li>
-<li>
-<p>perform declarative filtering, to control data access security via aspect based programming</p>
+<p>Control the ranking process: which results are more important.</p>
 </li>
 </ul>
 </div>
@@ -686,35 +721,35 @@ Think of it as Google(tm) for your entities:</p>
 </div>
 <div class="feature-block">
 <div class="sect1">
-<h2 id="scalable-fault-tolerant-cloud-native"><a class="anchor" href="#scalable-fault-tolerant-cloud-native"></a>Scalable, Fault Tolerant, Cloud Native</h2>
+<h2 id="easy-yet-powerful"><a class="anchor" href="#easy-yet-powerful"></a>Easy yet powerful</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You&#8217;ll find that performance of a "single box" is exceptional, still it can be distributed.</p>
+<p>Designed to be easy to use from the ground up.
+Handles schema initialization, indexing and query syntax transparently while you focus on the business side of your search.</p>
 </div>
 <div class="paragraph">
-<p>Maintaining an high performance, scalable distributed index is not simple. Hibernate Search offers several architectural solutions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Integration with <a href="https://www.elastic.co/products/elasticsearch/">Elasticsearch</a></p>
-</li>
-<li>
-<p>Store the Apache Lucene index in an <a href="http://infinispan.org/">Infinispan distributed data grid</a></p>
-</li>
-<li>
-<p>Simple filesystem based replication</p>
-</li>
-<li>
-<p>Replicate changes across nodes using JMS, JGroups, or plug your own service</p>
-</li>
-<li>
-<p>Update indexes within a JTA transaction, or as a post-transaction listener</p>
-</li>
-</ul>
+<p>The Search DSL exposes many different <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate">predicates</a>
+and <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-sort">sorts</a>
+through a succinct, easy-to-use API.</p>
 </div>
 <div class="paragraph">
-<p>These building blocks can be combined in various ways.</p>
+<p>And if you need to go beyond, it won&#8217;t stop you:
+native <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-lucene-from-lucene-query">Lucene Queries</a>
+or <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-elasticsearch-from-json">Elasticsearch JSON</a>
+can be inserted right in the middle of Search DSL queries.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="feature-block">
+<div class="sect1">
+<h2 id="local-or-distributed"><a class="anchor" href="#local-or-distributed"></a>Local or distributed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>While you&#8217;ll find that performance of a "single box" based on <a href="http://lucene.apache.org/">Apache Lucene</a> is exceptional,
+you can also scale out by distributing your application
+and relying on an <a href="https://www.elastic.co/products/elasticsearch/">Elasticsearch</a> cluster for indexing,
+with only a few configuration changes.</p>
 </div>
 </div>
 </div>
@@ -724,33 +759,28 @@ Think of it as Google(tm) for your entities:</p>
 <h2 id="spatial-queries"><a class="anchor" href="#spatial-queries"></a>Spatial queries</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Indexing Geolocalized entities is as easy as adding the <code>@Spatial</code> annotation.</p>
+<p>Indexing geo-localized entities is as easy as
+<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-geopoint">adding the <code>@GenericField</code> annotation</a>.</p>
 </div>
 <div class="paragraph">
-<p>Filter results around a certain location like the user position, and just highlight the matching pizzerias which are actually close to the user.</p>
+<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-spatial-within">Filter results around a certain location</a>
+like the user position,
+and use a <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-sort-distance">distance sort</a>
+to pull to the top the matching pizzerias which are closest to the user.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="feature-block">
 <div class="sect1">
-<h2 id="faceting"><a class="anchor" href="#faceting"></a>Faceting</h2>
+<h2 id="aggregations"><a class="anchor" href="#aggregations"></a>Aggregations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Get query results organized by groups and categories, having these automatically discovered from your data.</p>
+<p>Get search results <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-aggregation">aggregated</a> by groups and categories.</p>
 </div>
 <div class="paragraph">
-<p>For example webshops will want to show all results, but grouped by properties like price ranges and brand.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="sect1">
-<h2 id="easy-to-use"><a class="anchor" href="#easy-to-use"></a>Easy to use</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Designed to be easy to use from the ground up. Handles indexing, datastore synchronization, clustering and infrastructure transparently while you focus on the business side of your queries.</p>
+<p>For example webshops will want to show all hits,
+but also display a count of hits by price range and brand.</p>
 </div>
 </div>
 </div>
