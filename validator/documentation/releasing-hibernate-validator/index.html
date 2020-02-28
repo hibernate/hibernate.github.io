@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Hibernate. Everything data. - Hibernate</title>
+<title>Releasing Hibernate Validator - Hibernate Validator</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="description">
@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1582910233" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1582910238" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -181,12 +181,12 @@ CI
 </div>
 
 <div class="item">
-<a class="title">
+<a class="active title">
 <i class="box checkmark grid icon"></i>
 <i class="dropdown icon"></i>
 <strong>Validator</strong>
 </a>
-<div class="content">
+<div class="active content">
 <div class="menu internal-links">
 <a class="item" href="/validator/">
 <i class="grid home icon"></i>
@@ -196,7 +196,7 @@ About
 <i class="grid icon tags"></i>
 Releases
 </a>
-<a class="item" href="/validator/documentation/">
+<a class="active item" href="/validator/documentation/">
 <i class="book grid icon"></i>
 Documentation
 </a>
@@ -439,7 +439,7 @@ Menu
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
 <a class="item" href="/orm/">ORM</a>
 <a class="item" href="/search/">Search</a>
-<a class="item" href="/validator/">Validator</a>
+<a class="active item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
 <a class="item" href="/others/">Others</a>
@@ -455,226 +455,284 @@ Follow us
 </div>
 </div>
 
-<div class="jumbotron">
+<script>
+var displayed_series = [];
+displayed_series.push('6.1');
+displayed_series.push('6.0');
+displayed_series.push('5.4');
+</script>
+<div class="jumbotron small">
 <div class="ui container">
 <div class="ui grid stackable">
-<div class="column row" style="z-index: 1;">
-<div class="left floated column eight wide middle aligned">
+<div class="column row">
+<div class="column twelve wide middle aligned">
 <h1>
-<span>Hibernate</span>
+<span>
+Hibernate Validator
+</span>
 </h1>
 <h2>
-<span>Everything data.</span>
+<span>
+Releasing Hibernate Validator
+</span>
 </h2>
 </div>
-<div class="right floated column five wide middle aligned print hidden">
-<div id="carousel"></div>
+<div class="column four wide middle aligned">
+
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="page-title home">
-<div class="ui container">
-<h1>More than an ORM, discover the Hibernate galaxy.</h1>
-</div>
-</div>
-<div class="ui container content" id="content">
-<div class="projects">
-<div class="ui three column doubling grid stackable">
-<div class="column">
-<div class="ui raised segment orm">
-<div class="project">
-<h3 class="ui header">
-<a href="orm">Hibernate ORM</a>
-</h3>
-<p>
-<i class="big icon database"></i>
-Domain model persistence for relational databases.
-</p>
-<div class="ui right aligned basic segment">
-<a class="ui button right labeled icon a primary" href="orm">
-<i class="right arrow icon"></i>
-More
+
+
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only print hidden">
+<div class="ui fluid vertical menu">
+<a class="item" href="../..">
+<i class="grid home icon"></i>
+About
+</a>
+<div class="dropdown item link ui">
+Releases
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="../../releases">
+Overview
+</a>
+<a class="item" href="../../releases/6.1">
+6.1
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="../../releases/6.0">
+6.0
+</a>
+<a class="item" href="../../releases/5.4">
+5.4
 </a>
 </div>
 </div>
-</div>
-</div>
-<div class="column">
-<div class="ui raised segment search">
-<div class="project">
-<h3 class="ui header">
-<a href="search">Hibernate Search</a>
-</h3>
-<p>
-<i class="big icon search"></i>
-Full-text search for your domain model.
-</p>
-<div class="ui right aligned basic segment">
-<a class="button ui right labeled icon a primary" href="search">
-<i class="right arrow icon"></i>
-More
+<a class="item selected" href="..">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="../../roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="../../contribute">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="../../tooling">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="../../support">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="../../faq">
+<i class="circle grid help icon"></i>
+FAQ
 </a>
 </div>
-</div>
-</div>
-</div>
-<div class="column">
-<div class="ui raised segment validator">
-<div class="project">
-<h3 class="ui header">
-<a href="validator">Hibernate Validator</a>
-</h3>
-<p>
-<i class="big icon checkmark box"></i>
-Annotation based constraints for your domain model.
-</p>
-<div class="ui right aligned basic segment">
-<a class="ui button right labeled icon a primary" href="validator">
-<i class="right arrow icon"></i>
-More
+<div class="ui fluid vertical menu">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
 </a>
 </div>
+<hr>
+<div class="license">
+Released under the
+<a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
+</div>
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div class="sect1">
+<h2 id="release-process"><a class="anchor" href="#release-process"></a>Release Process</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow these steps for an official release.</p>
+</div>
+<div class="sect2">
+<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>You need to have access to <a href="https://ci.hibernate.org/" class="bare">https://ci.hibernate.org/</a>: the release process is now driven by CI.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="prepare"><a class="anchor" href="#prepare"></a>Prepare</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Update the version of validation-api and tck in <code>pom.xml</code> if need be</p>
+</li>
+<li>
+<p>Update the version of tck in <code>pom.xml</code> if need be</p>
+</li>
+<li>
+<p>Check that everything has been pushed to the upstream repository</p>
+</li>
+<li>
+<p>Check that CI is green for the branch you want to release</p>
+</li>
+<li>
+<p>Before you release try the latest snapshot of Validator in Core to make sure the snapshot works in Hibernate ORM.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the HV snapshot version in <a href="https://github.com/hibernate/hibernate-orm/blob/master/gradle/libraries.gradle">libraries.gradle</a></p>
+</li>
+<li>
+<p>Run either the full ORM build or hibernate-core and hibernate-entitymanager</p>
+</li>
+<li>
+<p>A <code>./gradlew test</code> in the ORM directory should be sufficient</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Double check that <code>distribution/pom.xml</code> and <code>distribution/src/main/assembly/dist.xml</code> list and include all the right dependencies (this is especially important when dependencies changed).</p>
+</li>
+<li>
+<p>Make sure there are no outstanding issues in <a href="https://hibernate.atlassian.net/browse/HV">Jira</a></p>
+</li>
+<li>
+<p>On <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20%3D%206.0.0.Alpha1%20AND%20component%20%3D%20EMPTY%20ORDER%20BY%20priority%20DESC%2C%20updated%20DESC">Jira (adjust the fixVersion)</a> check that all the issues referenced in this version have a Component set</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="release"><a class="anchor" href="#release"></a>Release</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Release <a href="https://hibernate.atlassian.net/projects/HV?selectedItem=com.atlassian.jira.jira-projects-plugin%3Arelease-page&amp;status=released-unreleased">the Jira version</a></p>
+</li>
+<li>
+<p>Do <strong>NOT</strong> update the changelog.txt and README.md, the release job does it for you.</p>
+</li>
+<li>
+<p>Go to CI, and select <a href="http://ci.hibernate.org/view/Validator/job/hibernate-validator-release/">the hibernate-validator-release job</a>. Click on Build with parameters.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Be careful when filling the form with the build parameters.</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Release the artifacts on the JBoss Nexus repository manager. This is a two-steps process.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Log into <a href="https://repository.jboss.org/nexus/index.html">Nexus</a> and examine your <a href="https://repository.jboss.org/nexus/index.html#stagingRepositories">staging repository</a>. Click on the <code>Updated</code> column 2 times to have the repositories sorted correctly.</p>
+</li>
+<li>
+<p>You can either <code>Drop</code> it in order to start over again or you can <code>Close</code> and <code>Release</code> it making the artifacts available in the live repository. (Click <code>Refresh</code> after each action)</p>
+</li>
+<li>
+<p>You can find more information in the description of <a href="https://developer.jboss.org/docs/DOC-14608">the JBoss project release process</a>. A Maven settings.xml for testing the artifacts in the staging repository can be found <a href="https://developer.jboss.org/wiki/MavenStagingSettings">here</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Transfer the released issues in JIRA to the Closed state. You can use this search <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20status%20%3D%20Resolved%20AND%20fixVersion%20%3D%205.3.0.CR1">Issue Navigator - Hibernate JIRA</a> and select another fixVersion. Once you have selected the right version, click on the button with three dots at the top right of the screen and click on Bulk update all XX issues. Use the Transition action to transition your issues from Resolved to Closed.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="publish"><a class="anchor" href="#publish"></a>Publish</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the HTML version of the reference guide, some special characters and the section titles will show up not correctly when opening the file locally. This is a known issue, the documentation looks correct when retrieved via Apache.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The CI job automatically pushes the distribution to SourceForge and publishes the documentation to docs.jboss.org.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="announce"><a class="anchor" href="#announce"></a>Announce</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Update the migration guide: <a href="https://github.com/hibernate/hibernate.org/blob/production/validator/documentation/migration-guide.adoc" class="bare">https://github.com/hibernate/hibernate.org/blob/production/validator/documentation/migration-guide.adoc</a></p>
+</li>
+<li>
+<p>Blog about the release on in.relation.to. Add the tag 'Hibernate Validator' to the  post so it will also appear on the Hibernate Validator project page.</p>
+</li>
+<li>
+<p>Update <a href="https://github.com/hibernate/hibernate.org">hibernate.org</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If it is a new major release, add a <code>_data/projects/validator/releases/series.yml</code> file and a <code>validator/releases/&lt;version&gt;/index.adoc</code> file</p>
+</li>
+<li>
+<p>Add a new release file to <code>_data/projects/validator/releases</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Depending on which series you want to have displayed, make sure to adjust the displayed flag of the <code>series.yml</code> file of the old series</p>
+</li>
+<li>
+<p>Deploy to production</p>
+</li>
+<li>
+<p>Send an email to <a href="mailto:hibernate-dev@lists.jboss.org">hibernate-dev</a> and <a href="mailto:hibernate-announce@lists.jboss.org">hibernate-announce</a></p>
+</li>
+<li>
+<p>Twitter via <a href="https://twitter.com/Hibernate">Hibernate</a> user</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
-<div class="column">
-<div class="ui raised segment ogm">
-<div class="project">
-<h3 class="ui header">
-<a href="ogm">Hibernate OGM</a>
-</h3>
-<p>
-<i class="big icon sitemap"></i>
-Domain model persistence for NoSQL datastores.
-</p>
-<div class="ui right aligned basic segment">
-<a class="ui button right labeled icon a primary" href="ogm">
-<i class="right arrow icon"></i>
-More
-</a>
 </div>
 </div>
-</div>
-</div>
-<div class="column">
-<div class="ui raised segment tools">
-<div class="project">
-<h3 class="ui header">
-<a href="tools">Hibernate Tools</a>
-</h3>
-<p>
-<i class="big icon wrench"></i>
-Command line tools and IDE plugins for your Hibernate usages.
-</p>
-<div class="ui right aligned basic segment">
-<a class="ui button right labeled icon a primary" href="tools">
-<i class="right arrow icon"></i>
-More
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="column">
-<div class="ui raised segment others">
-<div class="project">
-<h3 class="ui header">
-<a href="others">Others</a>
-</h3>
-<p>We like the symmetry, everything else is here.</p>
-<div class="ui right aligned basic segment">
-<a class="ui button right labeled icon a primary" href="others">
-<i class="right arrow icon"></i>
-Even more
-</a>
-</div>
-</div>
-</div>
-</div>
+
 </div>
 </div>
 </div>
 <script>
   $(document).ready(function() {
-    $('.project').matchHeight({ byRow: false });
-  
-    $.ajax({
-      url: "https://in.relation.to/feeds/global.json",
-      jsonpCallback: "getBlogEntries",
-      dataType: "jsonp",
-  
-      // Work with the response
-      success: function( data ) {
-        var carousel = $('#carousel');
-        for (var i = 0; i < data.length; i++) {
-          var entry = data[i];
-  
-          var carouselElement = $('<div class="carousel-element" />');
-          var segment = $('<div class="ui raised segment" />');
-          carouselElement.append(segment);
-  
-          var ribbonText = 'Community';
-          var ribbonIcon = 'users';
-          if ( entry.tags ) {
-            if ( entry.tags.includes('Newsletter') ) {
-              ribbonText = 'Newsletter';
-              ribbonIcon = 'newspaper';
-            }
-            else if ( entry.tags.includes('Interview') ) {
-              ribbonText = 'Community';
-              ribbonIcon = 'users';
-            }
-            else if ( entry.tags.includes('Hibernate ORM') ) {
-              ribbonText = 'ORM';
-              ribbonIcon = 'database';
-            }
-            else if ( entry.tags.includes('Hibernate Search') ) {
-              ribbonText = 'Search';
-              ribbonIcon = 'search';
-            }
-            else if ( entry.tags.includes('Hibernate OGM') ) {
-              ribbonText = 'OGM';
-              ribbonIcon = 'database';
-            }
-            else if ( entry.tags.includes('Hibernate Validator') ) {
-              ribbonText = 'Validator';
-              ribbonIcon = 'check';
-            }
-            else if ( entry.tags.includes('Hibernate Tools') ) {
-              ribbonText = 'Tooling';
-              ribbonIcon = 'wrench';
-            }
-          }
-  
-          var ribbon = $('<span class="ui brown right ribbon label" />');
-          var icon = $('<i class="icon ' + ribbonIcon + '" />');
-  
-          segment.append(ribbon);
-          ribbon.append(icon);
-          ribbon.append(ribbonText);
-  
-          var entryItem = $('<h4/>');
-          entryItem.append(
-            $('<a href="' + entry.url + '"/>').text(entry.title)
-          );
-          segment.append(entryItem);
-  
-          carousel.append(carouselElement);
-        }
-  
-        $('#carousel').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 4000,
-          focusOnSelect: true,
-          arrows: false,
-          dots: true
-        });
-      }
-    });
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
   });
 </script>
 
@@ -684,12 +742,12 @@ Even more
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="orm" title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href="search" title="Search">Hibernate Search</a>
-<a class="item" href="validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="others" title="Other projects">Other projects</a>
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Search">Hibernate Search</a>
+<a class="item" href="../.." title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -703,7 +761,7 @@ Even more
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="community" title="Community resources">Community resources</a>
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -713,7 +771,7 @@ Even more
 <div class="five wide column sponsor">
 <div class="logo">
 <a href="https://www.redhat.com/">
-<img src="images/sponsored-by-redhat.svg" title="Red Hat">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
 </a>
 </div>
 </div>
