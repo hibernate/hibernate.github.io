@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1583224893" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1583233094" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -744,7 +744,7 @@ Expand "Debugger" and you will find both "Data Type Renderers" and "Data Views":
 <li>
 <p>"Data Type Renderers". We will need to define 2 specific type renderers:</p>
 <div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<ol class="loweralpha">
 <li>
 <p>Entity Proxy renderer</p>
 <div class="ulist">
@@ -753,7 +753,7 @@ Expand "Debugger" and you will find both "Data Type Renderers" and "Data Views":
 <p>FQN: <code>org.hibernate.proxy.HibernateProxy</code></p>
 </li>
 <li>
-<p>Rendering: use expression &#8594; <code>((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().isUninitialized() ? ( ((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().getEntityName()"@"+System.identityHashCode(this)"[proxy;id="((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().getIdentifier()"]" ) : this.toString()</code></p>
+<p>Rendering: use expression &#8594; <code>((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().isUninitialized() ? ( ((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().getEntityName()+"@"+System.identityHashCode(this)+"[proxy;id="+((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().getIdentifier()+"]" ) : this.toString()</code></p>
 </li>
 <li>
 <p>Expanding: default; this will force the proxy to initialize (if not already) if the  user attempts to expand the node.</p>
@@ -769,7 +769,7 @@ Expand "Debugger" and you will find both "Data Type Renderers" and "Data Views":
 <p>FQN: <code>org.hibernate.collection.AbstractPersistentCollection</code></p>
 </li>
 <li>
-<p>Rendering: use expression &#8594; <code>((org.hibernate.collection.AbstractPersistentCollection)this).wasInitialized() ? this.toString() : ( ((org.hibernate.collection.AbstractPersistentCollection )this).getClass().getName()"@" System.identityHashCode(this)+" [uninitialized]" )</code></p>
+<p>Rendering: use expression &#8594; <code>((org.hibernate.collection.AbstractPersistentCollection)this).wasInitialized() ? this.toString() : ( ((org.hibernate.collection.AbstractPersistentCollection )this).getClass().getName()+"@"+ System.identityHashCode(this)+" [uninitialized]" )</code></p>
 </li>
 <li>
 <p>Expanding: default; again, this will force the collection to initialize (if not already) if the  user attempts  to expand the node.</p>

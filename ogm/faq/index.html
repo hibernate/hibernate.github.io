@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1583224893" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1583233094" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -588,13 +588,13 @@ Released under the
 <ul class="sectlevel2">
 <li><a href="#how-does-hibernate-ogm-handle-transactions">How does Hibernate OGM handle transactions?</a></li>
 <li><a href="#how-does-hibernate-ogm-deal-with-failures-upon-transaction-commit">How does Hibernate OGM deal with failures upon transaction commit?</a></li>
-<li><a href="#in-neo4j-i-get-a-code-org-neo4j-graphdb-notintransactionexception-code">In Neo4j, I get a <code>org.neo4j.graphdb.NotInTransactionException</code></a></li>
-<li><a href="#using-mongodb-i-get-a-code-java-lang-nosuchfielderror-errors_ignored-code-exception">Using MongoDB, I get a <code>java.lang.NoSuchFieldError: ERRORS_IGNORED</code> exception</a></li>
+<li><a href="#in-neo4j-i-get-a-org-neo4j-graphdb-notintransactionexception">In Neo4j, I get a <code>org.neo4j.graphdb.NotInTransactionException</code></a></li>
+<li><a href="#using-mongodb-i-get-a-java-lang-nosuchfielderror-errors_ignored-exception">Using MongoDB, I get a <code>java.lang.NoSuchFieldError: ERRORS_IGNORED</code> exception</a></li>
 <li><a href="#my-changes-are-not-applied-to-the-backend-where-is-the-bug">My changes are not applied to the backend, where is the bug?</a></li>
 <li><a href="#how-can-i-query">How can I query?</a></li>
-<li><a href="#when-using-mongodb-native-queries-i-get-a-code-com-mongodb-util-jsonparseexception-code">When using MongoDB native queries, I get a <code>com.mongodb.util.JSONParseException</code></a></li>
-<li><a href="#when-using-hibernate-ogm-on-top-of-wildfly-i-m-getting-a-jndiexception-what-s-wrong">When using Hibernate OGM on top of WildFly, I&#8217;m getting a JndiException. What&#8217;s wrong?</a></li>
-<li><a href="#why-do-i-get-a-code-java-lang-noclassdeffounderror-org-hibernate-search-batchindexing-spi-massindexerfactory-code">Why do I get a <code>java.lang.NoClassDefFoundError: org/hibernate/search/batchindexing/spi/MassIndexerFactory</code>?</a></li>
+<li><a href="#when-using-mongodb-native-queries-i-get-a-com-mongodb-util-jsonparseexception">When using MongoDB native queries, I get a <code>com.mongodb.util.JSONParseException</code></a></li>
+<li><a href="#when-using-hibernate-ogm-on-top-of-wildfly-im-getting-a-jndiexception-whats-wrong">When using Hibernate OGM on top of WildFly, I&#8217;m getting a JndiException. What&#8217;s wrong?</a></li>
+<li><a href="#why-do-i-get-a-java-lang-noclassdeffounderror-orghibernatesearchbatchindexingspimassindexerfactory">Why do I get a <code>java.lang.NoClassDefFoundError: org/hibernate/search/batchindexing/spi/MassIndexerFactory</code>?</a></li>
 </ul>
 </li>
 <li><a href="#developers-of-hibernate-ogm">Developers of Hibernate OGM</a>
@@ -716,14 +716,14 @@ If you have any ideas or requirements around it, please let us know and get in t
 </div>
 </div>
 <div class="sect2">
-<h3 id="in-neo4j-i-get-a-code-org-neo4j-graphdb-notintransactionexception-code"><a class="anchor" href="#in-neo4j-i-get-a-code-org-neo4j-graphdb-notintransactionexception-code"></a>In Neo4j, I get a <code>org.neo4j.graphdb.NotInTransactionException</code></h3>
+<h3 id="in-neo4j-i-get-a-org-neo4j-graphdb-notintransactionexception"><a class="anchor" href="#in-neo4j-i-get-a-org-neo4j-graphdb-notintransactionexception"></a>In Neo4j, I get a <code>org.neo4j.graphdb.NotInTransactionException</code></h3>
 <div class="paragraph">
 <p>Neo4j does require to run all operations within a transaction, even read-only operations.
 Make sure you demarcate your transactions either explicitly or via a container like Java EE or Spring.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="using-mongodb-i-get-a-code-java-lang-nosuchfielderror-errors_ignored-code-exception"><a class="anchor" href="#using-mongodb-i-get-a-code-java-lang-nosuchfielderror-errors_ignored-code-exception"></a>Using MongoDB, I get a <code>java.lang.NoSuchFieldError: ERRORS_IGNORED</code> exception</h3>
+<h3 id="using-mongodb-i-get-a-java-lang-nosuchfielderror-errors_ignored-exception"><a class="anchor" href="#using-mongodb-i-get-a-java-lang-nosuchfielderror-errors_ignored-exception"></a>Using MongoDB, I get a <code>java.lang.NoSuchFieldError: ERRORS_IGNORED</code> exception</h3>
 <div class="paragraph">
 <p>You are using MongoDB driver 3.x with Hibernate OGM 4.2.
 Hibernate OGM uses the MongoDB driver 2.13 at this stage.
@@ -768,7 +768,7 @@ But do not consider rollback as a possibility, this won&#8217;t work.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="when-using-mongodb-native-queries-i-get-a-code-com-mongodb-util-jsonparseexception-code"><a class="anchor" href="#when-using-mongodb-native-queries-i-get-a-code-com-mongodb-util-jsonparseexception-code"></a>When using MongoDB native queries, I get a <code>com.mongodb.util.JSONParseException</code></h3>
+<h3 id="when-using-mongodb-native-queries-i-get-a-com-mongodb-util-jsonparseexception"><a class="anchor" href="#when-using-mongodb-native-queries-i-get-a-com-mongodb-util-jsonparseexception"></a>When using MongoDB native queries, I get a <code>com.mongodb.util.JSONParseException</code></h3>
 <div class="paragraph">
 <p>It&#8217;s probable that you are not using JSON&#8217;s strict mode.
 In particular, use quotes around your attributes.</p>
@@ -780,7 +780,7 @@ In particular, use quotes around your attributes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="when-using-hibernate-ogm-on-top-of-wildfly-i-m-getting-a-jndiexception-what-s-wrong"><a class="anchor" href="#when-using-hibernate-ogm-on-top-of-wildfly-i-m-getting-a-jndiexception-what-s-wrong"></a>When using Hibernate OGM on top of WildFly, I&#8217;m getting a JndiException. What&#8217;s wrong?</h3>
+<h3 id="when-using-hibernate-ogm-on-top-of-wildfly-im-getting-a-jndiexception-whats-wrong"><a class="anchor" href="#when-using-hibernate-ogm-on-top-of-wildfly-im-getting-a-jndiexception-whats-wrong"></a>When using Hibernate OGM on top of WildFly, I&#8217;m getting a JndiException. What&#8217;s wrong?</h3>
 <div class="paragraph">
 <p>In case you&#8217;re are seeing a JndiException saying "Unable to lookup JNDI name [---PlaceHolderDSForOGM---]",
 your application likely cannot access the application server module(s) of Hibernate OGM.</p>
@@ -800,7 +800,7 @@ See the <a href="https://docs.jboss.org/hibernate/ogm/4.1/reference/en-US/html_s
 </div>
 </div>
 <div class="sect2">
-<h3 id="why-do-i-get-a-code-java-lang-noclassdeffounderror-org-hibernate-search-batchindexing-spi-massindexerfactory-code"><a class="anchor" href="#why-do-i-get-a-code-java-lang-noclassdeffounderror-org-hibernate-search-batchindexing-spi-massindexerfactory-code"></a>Why do I get a <code>java.lang.NoClassDefFoundError: org/hibernate/search/batchindexing/spi/MassIndexerFactory</code>?</h3>
+<h3 id="why-do-i-get-a-java-lang-noclassdeffounderror-orghibernatesearchbatchindexingspimassindexerfactory"><a class="anchor" href="#why-do-i-get-a-java-lang-noclassdeffounderror-orghibernatesearchbatchindexingspimassindexerfactory"></a>Why do I get a <code>java.lang.NoClassDefFoundError: org/hibernate/search/batchindexing/spi/MassIndexerFactory</code>?</h3>
 <div class="paragraph">
 <p>This means that you need Hibernate Search on the classpath.
 You can add it via maven using the following coordinates:</p>

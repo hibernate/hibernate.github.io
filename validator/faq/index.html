@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1583224897" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1583233099" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -580,7 +580,7 @@ Released under the
 <ul class="sectlevel1">
 <li><a href="#general">General</a>
 <ul class="sectlevel2">
-<li><a href="#what-s-the-difference-between-hibernate-validator-3-4-and-5">What&#8217;s the difference between Hibernate Validator 3, 4 and 5?</a></li>
+<li><a href="#whats-the-difference-between-hibernate-validator-3-4-and-5">What&#8217;s the difference between Hibernate Validator 3, 4 and 5?</a></li>
 <li><a href="#why-is-my-jpa-entity-not-validated-when-i-call-persist">Why is my JPA entity not validated when I call persist()?</a></li>
 <li><a href="#my-question-is-not-answered-where-can-i-find-help">My question is not answered. Where can I find help?</a></li>
 </ul>
@@ -601,7 +601,7 @@ Released under the
 </li>
 <li><a href="#errors">Errors</a>
 <ul class="sectlevel2">
-<li><a href="#when-using-the-hv-annotation-processor-i-m-getting-a-compilation-error-like-incompatible-types-found-xy-required-xy-what-s-wrong">When using the HV annotation processor, I&#8217;m getting a compilation error like "Incompatible types, found: XY, required XY" - what&#8217;s wrong?</a></li>
+<li><a href="#when-using-the-hv-annotation-processor-im-getting-a-compilation-error-like-incompatible-types-found-xy-required-xy-whats-wrong">When using the HV annotation processor, I&#8217;m getting a compilation error like "Incompatible types, found: XY, required XY" - what&#8217;s wrong?</a></li>
 <li><a href="#how-can-i-avoid-the-error-hv000150-the-constraint-javax-validation-constraints-decimalmin-defines-multiple-validators-for-the-type-interface-javax-money-monetaryamount-only-one-is-allowed">How can I avoid the error "HV000150: The constraint 'javax.validation.constraints.DecimalMin' defines multiple validators for the type 'interface javax.money.MonetaryAmount'. Only one is allowed."</a></li>
 </ul>
 </li>
@@ -612,7 +612,7 @@ Released under the
 <h2 id="general"><a class="anchor" href="#general"></a>General</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="what-s-the-difference-between-hibernate-validator-3-4-and-5"><a class="anchor" href="#what-s-the-difference-between-hibernate-validator-3-4-and-5"></a>What&#8217;s the difference between Hibernate Validator 3, 4 and 5?</h3>
+<h3 id="whats-the-difference-between-hibernate-validator-3-4-and-5"><a class="anchor" href="#whats-the-difference-between-hibernate-validator-3-4-and-5"></a>What&#8217;s the difference between Hibernate Validator 3, 4 and 5?</h3>
 <div class="paragraph">
 <p>Hibernate Validator 3.x and 4.x/5.x are different codebases.</p>
 </div>
@@ -747,7 +747,7 @@ The next question shows an example for using that API.</p>
 <h2 id="errors"><a class="anchor" href="#errors"></a>Errors</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="when-using-the-hv-annotation-processor-i-m-getting-a-compilation-error-like-incompatible-types-found-xy-required-xy-what-s-wrong"><a class="anchor" href="#when-using-the-hv-annotation-processor-i-m-getting-a-compilation-error-like-incompatible-types-found-xy-required-xy-what-s-wrong"></a>When using the HV annotation processor, I&#8217;m getting a compilation error like "Incompatible types, found: XY, required XY" - what&#8217;s wrong?</h3>
+<h3 id="when-using-the-hv-annotation-processor-im-getting-a-compilation-error-like-incompatible-types-found-xy-required-xy-whats-wrong"><a class="anchor" href="#when-using-the-hv-annotation-processor-im-getting-a-compilation-error-like-incompatible-types-found-xy-required-xy-whats-wrong"></a>When using the HV annotation processor, I&#8217;m getting a compilation error like "Incompatible types, found: XY, required XY" - what&#8217;s wrong?</h3>
 <div class="paragraph">
 <p>This is caused by a <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6512707">bug</a> in the javac compiler and occurs when the compiled project contains an annotation type with an enum-typed member which has a default value. As workaround either specify the default value using its fully qualified name or add <a href="https://github.com/emmanuelbernard/APCleaner">this annotation processor</a> to your project. See also <a href="http://opensource.atlassian.com/projects/hibernate/browse/HV-498">HV-498</a> for more details.</p>
 </div>
