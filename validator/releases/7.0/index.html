@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Contribute - Hibernate ORM</title>
+<title>7.0 series - Hibernate Validator</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="description">
@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1589386471" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1589386476" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -29,12 +29,12 @@
 <div class="ui vertical inverted sidebar left" id="mobile-menu">
 <div class="ui vertical fluid inverted text menu accordion">
 <div class="item">
-<a class="active title">
+<a class="title">
 <i class="database grid icon"></i>
 <i class="dropdown icon"></i>
 <strong>ORM</strong>
 </a>
-<div class="active content">
+<div class="content">
 <div class="menu internal-links">
 <a class="item" href="/orm/">
 <i class="grid home icon"></i>
@@ -68,7 +68,7 @@ Tooling
 <i class="grid icon time"></i>
 Envers
 </a>
-<a class="active item" href="/orm/contribute/">
+<a class="item" href="/orm/contribute/">
 <i class="grid icon users"></i>
 Contribute
 </a>
@@ -181,18 +181,18 @@ CI
 </div>
 
 <div class="item">
-<a class="title">
+<a class="active title">
 <i class="box checkmark grid icon"></i>
 <i class="dropdown icon"></i>
 <strong>Validator</strong>
 </a>
-<div class="content">
+<div class="active content">
 <div class="menu internal-links">
 <a class="item" href="/validator/">
 <i class="grid home icon"></i>
 About
 </a>
-<a class="item" href="/validator/releases/">
+<a class="active item" href="/validator/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -437,9 +437,9 @@ Menu
 </div>
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
-<a class="active item" href="/orm/">ORM</a>
+<a class="item" href="/orm/">ORM</a>
 <a class="item" href="/search/">Search</a>
-<a class="item" href="/validator/">Validator</a>
+<a class="active item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
 <a class="item" href="/others/">Others</a>
@@ -457,12 +457,10 @@ Follow us
 
 <script>
 var displayed_series = [];
+displayed_series.push('7.0');
+displayed_series.push('6.1');
 displayed_series.push('6.0');
 displayed_series.push('5.4');
-displayed_series.push('5.3');
-displayed_series.push('5.2');
-displayed_series.push('5.1');
-displayed_series.push('5.0');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -471,28 +469,17 @@ displayed_series.push('5.0');
 <div class="column twelve wide middle aligned">
 <h1>
 <span>
-Hibernate ORM
+Hibernate Validator
 </span>
 </h1>
 <h2>
 <span>
-Contribute
+7.0 series
 </span>
+<span class="label orange tag ui">development</span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
-<div class="jumbotron-button">
-<a class="ui small labeled icon button" href="https://github.com/hibernate//hibernate-orm/">
-<i class="github icon"></i>
-Project on GitHub
-</a>
-</div>
-<div class="jumbotron-button">
-<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/browse/HHH">
-<i class="bug icon"></i>
-Issue tracker
-</a>
-</div>
 
 </div>
 </div>
@@ -500,120 +487,78 @@ Issue tracker
 </div>
 </div>
 
+<div class="page-title small">
+<div class="ui container">
+<h4>
+Jakarta Bean Validation 3.0, jakarta.* packages
+</h4>
+</div>
+</div>
 
 <div class="ui container page-content">
 <div class="ui stackable grid">
 <div class="column three wide computer only print hidden">
 <div class="ui fluid vertical menu">
-<a class="item" href="..">
+<a class="item" href="../..">
 <i class="grid home icon"></i>
 About
 </a>
-<div class="dropdown item link ui">
+<div class="dropdown item link selected ui">
 Releases
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="../releases">
+<a class="item" href="..">
 Overview
 </a>
-<a class="item" href="../releases/6.0">
-6.0
+<a class="item selected" href=".">
+7.0
 &nbsp;&nbsp;
 <span class="ui label orange">development</span>
 </a>
-<a class="item" href="../releases/5.4">
-5.4
+<a class="item" href="../6.1">
+6.1
 &nbsp;&nbsp;
 <span class="ui label green">latest stable</span>
 </a>
-<a class="item" href="../releases/5.3">
-5.3
-</a>
-<a class="item" href="../releases/5.2">
-5.2
-</a>
-<a class="item" href="../releases/5.1">
-5.1
-</a>
-<a class="item" href="../releases/5.0">
-5.0
-</a>
-</div>
-</div>
-<!-- / Here we want to display all the known versions -->
-<div class="dropdown item link ui">
-Documentation
-<i class="icon dropdown"></i>
-<div class="menu">
-<a class="item" href="/orm/documentation/6.0/">
+<a class="item" href="../6.0">
 6.0
-&nbsp;&nbsp;
-<span class="ui label orange">development</span>
 </a>
-<a class="item" href="/orm/documentation/5.4/">
+<a class="item" href="../5.4">
 5.4
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
-</a>
-<a class="item" href="/orm/documentation/5.3/">
-5.3
-</a>
-<a class="item" href="/orm/documentation/5.2/">
-5.2
-</a>
-<a class="item" href="/orm/documentation/5.1/">
-5.1
-</a>
-<a class="item" href="/orm/documentation/5.0/">
-5.0
-</a>
-<a class="item" href="/orm/documentation/4.3/">
-4.3
-</a>
-<a class="item" href="/orm/documentation/4.2/">
-4.2
 </a>
 </div>
 </div>
-<a class="item" href="../books">
+<a class="item" href="../../documentation">
 <i class="book grid icon"></i>
-Books
+Documentation
 </a>
-<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-<i class="grid icon share"></i>
-Migration guides
-</a>
-<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<a class="item" href="../../roadmap">
 <i class="grid icon road"></i>
 Roadmap
 </a>
-<a class="item" href="../tooling">
-<i class="grid icon wrench"></i>
-Tooling
-</a>
-<a class="item" href="../envers">
-<i class="grid icon time"></i>
-Envers
-</a>
-<a class="item selected" href=".">
+<a class="item" href="../../contribute">
 <i class="grid icon users"></i>
 Contribute
 </a>
-<a class="item" href="../support">
+<a class="item" href="../../tooling">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="../../support">
 <i class="doctor grid icon"></i>
 Paid support
 </a>
-<a class="item" href="../faq">
+<a class="item" href="../../faq">
 <i class="circle grid help icon"></i>
 FAQ
 </a>
 </div>
 <div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
 <i class="code grid icon"></i>
 Source code
 </a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
 <i class="bug grid icon"></i>
 Issue tracker
 </a>
@@ -621,13 +566,9 @@ Issue tracker
 <i class="grid icon lock"></i>
 Security issue
 </a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
 <i class="comments grid icon"></i>
 Forum
-</a>
-<a class="item" href="https://community.jboss.org/en/hibernate">
-<i class="edit grid icon"></i>
-Wiki
 </a>
 <a class="item" href="https://ci.hibernate.org/">
 <i class="grid icon treatment"></i>
@@ -637,116 +578,271 @@ CI
 <hr>
 <div class="license">
 Released under the
-<a href="http://hibernate.org/license/">LGPL V2.1</a>
+<a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
 </div>
 </div>
 <div class="column thirteen wide computer sixteen wide mobile">
 <div class="content" id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Thanks for your interest! Hibernate ORM is an open source project and community.  Contributions, of any type or any
-scope, drive the project forward!</p>
+<div id="toc">
+<div id="toctitle">
+Quick links
 </div>
-<div class="paragraph">
-<p>There are lots of ways to become part of the community and contribute, not just writing/fixing code&#8230;&#8203;</p>
+<ul>
+<li>
+<a class="item" href="#compatibility">
+Compatibility
+</a>
+</li>
+<li>
+<a class="item" href="#documentation">
+Documentation
+</a>
+</li>
+<li>
+<a class="item" href="#get-it">
+How to get it
+</a>
+</li>
+<li>
+<a class="item" href="#whats-new">
+What's new
+</a>
+</li>
+<li>
+<a class="item" href="#migrate">
+Migrate
+</a>
+</li>
+<li>
+<a class="item" href="#releases">
+Releases in this series
+</a>
+</li>
+</ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="help-other-users"><a class="anchor" href="#help-other-users"></a>Help Other Users</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The <a href="/community/">community</a> page lists a few places for users to find help such as IRC and forums.  Not to mention
-that users often look for help in other places such as StackOverflow or JBoss forums.  A great way to get involved in the
-community is to share your knowledge with others who need it.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="improve-documentation"><a class="anchor" href="#improve-documentation"></a>Improve Documentation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>An extension of helping other users is to contribute documentation.  Its the help that keeps on giving!</p>
-</div>
-<div class="paragraph">
-<p>Whether you simply fix a typo, re-word an unclear section or add a whole new section/topic, improving the documentation
-helps everyone.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="discuss-development"><a class="anchor" href="#discuss-development"></a>Discuss Development</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As the development team discusses design of new features or tries to prioritize work it is great to have input from
-users.  As the saying goes, it is better to measure twice and cut once; and the more eyes we have on theses designs
-and the more voices in the discussions, the better measurements we get.</p>
-</div>
-<div class="paragraph">
-<p>You can find the different places to get involved in discussing development
-on the <a href="/community#contribute">Community</a> page.</p>
-</div>
-<div class="admonitionblock note">
-<table>
+<h2 id="compatibility">Compatibility</h2>
+<table class="ui collapsing table striped celled unstackable">
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<td>
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+Java
+</a>
 </td>
-<td class="content">
-Prefer the chat or the mailing list. The #hibernate-dev IRC channel is visited very infrequently.
+<td>
+8 or 11
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://beanvalidation.org/">
+Jakarta Bean Validation
+</a>
+</td>
+<td>
+3.0
 </td>
 </tr>
 </table>
+<p>
+Not compatible with your requirements? Have a look at the
+<a href="../">
+other series.
+</a>
+</p>
+<h2 id="documentation">Documentation</h2>
+<p>
+Documentation for this specific series can be accessed through the links below:
+</p>
+<p>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/pdf/hibernate_validator_reference.pdf">
+<i class="icon file pdf outline"></i>
+PDF
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/7.0/api/">
+<i class="icon code outline"></i>
+API (JavaDoc)
+</a>
+</p>
+<p>
+You can find more documentation for all series on the
+<a href="../../documentation">
+documentation page.
+</a>
+</p>
+<h2 id="get-it">How to get it</h2>
+<div class="ui grid equal height stackable download-options">
+<div class="eleven wide column">
+<h3>Maven, Gradle...</h3>
+<p>
+Maven artifacts of Hibernate Validator are published to
+<a href="https://search.maven.org">
+Maven Central
+</a>
+and to the
+<a href="https://repository.jboss.org/nexus/index.html">
+JBoss Maven repository.
+</a>
+Refer to the
+<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+</p>
+<p>
+You can find the Maven coordinates of all artifacts through the link below:
+<p>
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.validator%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A7.0.0.Alpha2">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+</p>
+</p>
+<p>
+Below are the Maven coordinates of the main artifacts.
+</p>
+<dl class="sparse">
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator%7C7.0.0.Alpha2%7C">
+org.hibernate.validator:hibernate-validator:7.0.0.Alpha2
+</a>
+</dt>
+<dd>Core implementation</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator-cdi%7C7.0.0.Alpha2%7C">
+org.hibernate.validator:hibernate-validator-cdi:7.0.0.Alpha2
+</a>
+</dt>
+<dd>CDI integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator-osgi%7C7.0.0.Alpha2%7C">
+org.hibernate.validator:hibernate-validator-osgi:7.0.0.Alpha2
+</a>
+</dt>
+<dd>OSGi integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator-annotation-processor%7C7.0.0.Alpha2%7C">
+org.hibernate.validator:hibernate-validator-annotation-processor:7.0.0.Alpha2
+</a>
+</dt>
+<dd>Annotation processor</dd>
+</dl>
+</div>
+<div class="five wide column divided">
+<h3>Zip archive</h3>
+<p>
+Direct download is available from SourceForge:
+</p>
+<p>
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/7.0.0.Alpha2/hibernate-validator-7.0.0.Alpha2-dist.zip/download" title="Download">
+<i class="icon cloud download"></i>
+Download Zip archive
+</a>
+</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="reportinvestigate-bugs"><a class="anchor" href="#reportinvestigate-bugs"></a>Report/Investigate Bugs</h2>
-<div class="sectionbody">
+<p>
+More information about specific releases (announcements, download links) can be found
+<a href="#releases">
+here.
+</a>
+</p>
+<h2 id="whats-new">What's new</h2>
+<p>
+A detailed list of new features, improvements and fixes in this series can be found
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(7.0.0.Alpha2%2C%207.0.0.Alpha1)%20ORDER%20BY%20updated">
+on our JIRA instance.
+</a>
+</p>
+<div class="sect2">
+<h3 id="jakarta-bean-validation-3-0"><a class="anchor" href="#jakarta-bean-validation-3-0"></a>Jakarta Bean Validation 3.0</h3>
 <div class="paragraph">
-<p>Trying out releases and reporting/fixing problems is in many ways the cornerstone of open source development.  It is
-especially critical in the case of early releases (Alphas and Betas) as we are trying to solidify APIs and contracts.</p>
+<p>Hibernate Validator 7.0 is the reference implementation for Jakarta Bean Validation 3.0.</p>
 </div>
 <div class="paragraph">
-<p>When creating a bug report, please have a test case available that can be 1.) used to reproduce the issue and 2.)
-used as a long-term regression test.
-Please see <a href="https://github.com/hibernate/hibernate-test-case-templates">Hibernate Test Case Templates</a> for an easy
-way to start!</p>
-</div>
-<div class="paragraph">
-<p>Even if you cannot help code the fix for a bug, submitting test cases for reported
-<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20status%20%3D%20%22Awaiting%20Test%20Case%22">bugs that did not provide tests</a>
-is a great help get these bugs resolved.</p>
-</div>
-<div class="paragraph">
-<p>Speaking of JIRA, helping us identify issues that duplicate other issues or that are out of date is a great help as well.  And voting
-for issues that are important to you is important in terms of how the development team sets priorities.</p>
+<p>The main change is that all the dependencies using <code>javax.</code> packages are now using <code>jakarta.*</code> packages.</p>
 </div>
 </div>
+<h2 id="migrate">Migrate</h2>
+<p>
+If you need to upgrade from a previous series, please refer to the
+<a href="/validator/documentation/migration-guide">
+migration guide.
+</a>
+</p>
+<h2 id="releases">Releases in this series</h2>
+<div class="ui stackable grid series-versions">
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+7.0.0.Alpha2
+</span>
+</p>
+<p>
+<small class="ui label">2020-05-13</small>
+</p>
 </div>
-<div class="sect1">
-<h2 id="contribute-code"><a class="anchor" href="#contribute-code"></a>Contribute code</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Details on contribiuting code (and documentation) are covered in the CONTRIBUTING.md file available in the repository&#8217;s root directory (<a href="https://github.com/hibernate/hibernate-orm/blob/master/CONTRIBUTING.md" class="bare">https://github.com/hibernate/hibernate-orm/blob/master/CONTRIBUTING.md</a>).</p>
+<div class="thirteen wide column">
+<p>
+fix for CDI extension, sync with 6.1.5.Final
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator%7C7.0.0.Alpha2%7C">
+org.hibernate.validator:hibernate-validator:7.0.0.Alpha2
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.validator%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A7.0.0.Alpha2">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/7.0.0.Alpha2/hibernate-validator-7.0.0.Alpha2-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(7.0.0.Alpha2)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+</p>
 </div>
-<div class="paragraph">
-<p>Details on building the project are covered in the README.md file also available in the repository&#8217;s root directory (<a href="https://github.com/hibernate/hibernate-orm/blob/master/README.md" class="bare">https://github.com/hibernate/hibernate-orm/blob/master/README.md</a>).</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>CONTRIBUTING.md covers all branches.  README.md is specific to each branch, as it contains building information that varies based on the branch&#8217;s <code>javac</code> requirements, build tool (Gradle, Maven, Ant), etc.</p>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+7.0.0.Alpha1
+</span>
+</p>
+<p>
+<small class="ui label">2020-03-25</small>
+</p>
 </div>
-</td>
-</tr>
-</table>
+<div class="thirteen wide column">
+<p>
+Jakarta Bean Validation 3.0, jakarta.* packages
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator%7C7.0.0.Alpha1%7C">
+org.hibernate.validator:hibernate-validator:7.0.0.Alpha1
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.validator%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A7.0.0.Alpha1">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/7.0.0.Alpha1/hibernate-validator-7.0.0.Alpha1-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(7.0.0.Alpha1)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+</p>
 </div>
 </div>
 </div>
@@ -768,12 +864,12 @@ for issues that are important to you is important in terms of how the developmen
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href=".." title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href="../../search" title="Search">Hibernate Search</a>
-<a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="../../others" title="Other projects">Other projects</a>
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Search">Hibernate Search</a>
+<a class="item" href="../.." title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -787,7 +883,7 @@ for issues that are important to you is important in terms of how the developmen
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../community" title="Community resources">Community resources</a>
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -797,7 +893,7 @@ for issues that are important to you is important in terms of how the developmen
 <div class="five wide column sponsor">
 <div class="logo">
 <a href="https://www.redhat.com/">
-<img src="../../images/sponsored-by-redhat.svg" title="Red Hat">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
 </a>
 </div>
 </div>

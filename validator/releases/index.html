@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1589187585" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1589386476" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -457,6 +457,7 @@ Follow us
 
 <script>
 var displayed_series = [];
+displayed_series.push('7.0');
 displayed_series.push('6.1');
 displayed_series.push('6.0');
 displayed_series.push('5.4');
@@ -484,6 +485,12 @@ Releases
 Latest stable (6.1)
 </a>
 </div>
+<div class="jumbotron-button">
+<a class="ui small right labeled icon button orange" href="./7.0/">
+<i class="right arrow icon"></i>
+Development (7.0)
+</a>
+</div>
 
 </div>
 </div>
@@ -506,6 +513,11 @@ Releases
 <div class="menu">
 <a class="item selected" href=".">
 Overview
+</a>
+<a class="item" href="7.0">
+7.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
 </a>
 <a class="item" href="6.1">
 6.1
@@ -592,13 +604,33 @@ Check out
 <div class="ui three column doubling grid series active-series stackable">
 <div class="column">
 <div class="ui raised segment version">
+<span class="ui right ribbon label orange">
+development
+</span>
+<h3 class="ui header">
+7.0
+<small>
+2020-05-13
+</small>
+</h3>
+<p>Jakarta Bean Validation 3.0, jakarta.* packages</p>
+<div class="ui right aligned basic segment">
+<a class="ui right labeled icon button primary" href="./7.0/">
+<i class="right arrow icon"></i>
+More info
+</a>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="ui raised segment version">
 <span class="ui right ribbon label green">
 stable
 </span>
 <h3 class="ui header">
 6.1
 <small>
-2020-04-10
+2020-05-07
 </small>
 </h3>
 <p>Jakarta Bean Validation, new Quarkus-tailored bootstrap</p>
@@ -618,7 +650,7 @@ stable
 <h3 class="ui header">
 6.0
 <small>
-2020-03-27
+2020-05-07
 </small>
 </h3>
 <p>Bean Validation 2.0 support, performance improvements.</p>
@@ -782,6 +814,9 @@ More info
 Hibernate Validator
 </th>
 <th>
+7.0
+</th>
+<th>
 6.1
 </th>
 <th>
@@ -806,6 +841,9 @@ Java
 8 or 11
 </td>
 <td>
+8 or 11
+</td>
+<td>
 6, 7 or 8
 </td>
 </tr>
@@ -814,6 +852,9 @@ Java
 <a href="http://beanvalidation.org/">
 Bean Validation
 </a>
+</td>
+<td>
+N/A
 </td>
 <td>
 N/A
@@ -830,6 +871,9 @@ N/A
 <a href="http://beanvalidation.org/">
 Jakarta Bean Validation
 </a>
+</td>
+<td>
+3.0
 </td>
 <td>
 2.0
