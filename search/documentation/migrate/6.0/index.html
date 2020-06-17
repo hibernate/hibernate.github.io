@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1592378732" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1592381620" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -597,7 +597,11 @@ Released under the
 <li><a href="#requirements">Requirements</a></li>
 <li><a href="#maven-coordinates-changes">Maven coordinates changes</a></li>
 <li><a href="#configuration-changes">Configuration changes</a></li>
-<li><a href="#api-changes">API changes</a></li>
+<li><a href="#api-changes">API changes</a>
+<ul class="sectlevel3">
+<li><a href="#factory"><code>@Factory</code></a></li>
+</ul>
+</li>
 <li><a href="#spi-changes">SPI changes</a></li>
 <li><a href="#behavior-changes">Behavior changes</a></li>
 </ul>
@@ -767,6 +771,53 @@ This section is still incomplete. To be completed upon the CR or release.
 <div class="paragraph">
 <p>A lot of APIs changed. We recommend to have a look at
 <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#getting-started">the getting started guide</a> before migrating.</p>
+</div>
+<div class="sect3">
+<h4 id="factory"><a class="anchor" href="#factory"></a><code>@Factory</code></h4>
+<div class="paragraph">
+<p>The <code>@Factory</code> annotation does not exist in Hibernate Search 6 anymore.</p>
+</div>
+<div class="paragraph">
+<p>You are encouraged to rely on a proper dependency injection framework if you need such a feature:
+just reference the bean name instead of referencing the bean class in your Hibernate Search mapping/configuration.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#configuration-bean">the section of the documentation about beans in Hibernate Search</a>
+for details and supported DI frameworks.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t use a dependency injection framework,
+here are details on how to migrate:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">String bridges, field bridges, class bridges</dt>
+<dd>
+<p>Use their <code>*Binder</code> equivalent in Hibernate Search 6,
+which can act as a factory:
+<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge-valuebridge-valuebinder"><code>ValueBinder</code></a>,
+<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge-propertybridge"><code>PropertyBinder</code></a>,
+<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge-typebridge"><code>TypeBinder</code></a>.</p>
+</dd>
+<dt class="hdlist1">Full-text filters</dt>
+<dd>
+<p>These no longer exist in Hibernate Search 6.
+See <a href="https://hibernate.atlassian.net/browse/HSEARCH-3325">HSEARCH-3325</a>.</p>
+</dd>
+<dt class="hdlist1">Programmatic mapping</dt>
+<dd>
+<p><code>@Factory</code> is no longer needed for the programmatic mapping,
+since you will pass a callback (<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#_configuring_the_mapping"><code>HibernateOrmSearchMappingConfigurer</code></a>)
+instead of passing the mapping directly.
+Whatever code was implemented in your factory can be moved to the configurer.</p>
+</dd>
+<dt class="hdlist1">Analysis definition providers</dt>
+<dd>
+<p>Analysis definition providers are now called <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#backend-lucene-analysis">analysis configurers</a>,
+and as they are just callbacks that are used only once,
+the <code>@Factory</code> annotation should not be necessary.
+Whatever code was implemented in your factory can be moved to the configurer.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="sect2">
