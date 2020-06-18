@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1592381714" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1592468441" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -815,80 +815,11 @@ there are still some limitations:</p>
 <p>If you encounter problems, be sure to <a href="https://hibernate.atlassian.net/browse/HSEARCH">report them</a>:
 new preview versions are released regularly.</p>
 </div>
-<div class="paragraph">
-<p>The exact features that are currently implemented and expected to work will be added to the reference documentation
-as new Beta versions are released, but to sum up, here is what you can start to play with:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ORM integration:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Mapping of entities using either annotation mapping or programmatic mapping.
-Most of the field types supported in Search 5 are supported in Search 6.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-mapping">mapping</a>
-in the reference documentation.</p>
-</li>
-<li>
-<p>Custom, user-defined type bridges, property bridges or value bridges.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge">bridges</a>
-in the reference documentation.</p>
-</li>
-<li>
-<p>Automatic indexing of ORM entities on transaction commit or session flush (if outside of a transaction)
-(enabled automatically if Hibernate Search is in your classpath and the entity is <code>@Indexed</code>).
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-automatic">automatic indexing</a>
-in the reference documentation.</p>
-</li>
-<li>
-<p>Mass indexing of ORM entities that are already persisted in database.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-massindexer">mass indexing</a>
-in the reference documentation.</p>
-</li>
-<li>
-<p>Searching for ORM entities using their Hibernate Search index,
-and retrieving managed entities as results.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-query">query DSL</a>
-in the reference documentation.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Search DSL</p>
-<div class="ulist">
-<ul>
-<li>
-<p>All the predicates available in Search 5, except <code>facet</code> and <code>moreLikeThis</code>.
-Additionally, the new <code>id</code>, <code>nested</code> and <code>exists</code> predicates were added.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate">predicate DSL</a>
-in the reference documentation.</p>
-</li>
-<li>
-<p>All the sorts available in Search 5.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-sort">sort DSL</a>
-in the reference documentation.</p>
-</li>
-<li>
-<p>All the projections available in Search 5.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-projection">projection DSL</a>
-in the reference documentation.</p>
-</li>
-<li>
-<p>Aggregations, equivalent to the "faceting" feature of Search 5.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-aggregation">aggregation DSL</a>
-in the reference documentation.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect2">
-<h3 id="orm-version"><a class="anchor" href="#orm-version"></a>ORM version</h3>
+<h3 id="dependency-upgrades"><a class="anchor" href="#dependency-upgrades"></a>Dependency upgrades</h3>
+<div class="sect3">
+<h4 id="orm-version"><a class="anchor" href="#orm-version"></a>Hibernate ORM</h4>
 <div class="paragraph">
 <p>Hibernate Search 6 still relies on ORM 5.4 at the moment,
 because it requires features that are not yet implemented in ORM 6 (still in development).</p>
@@ -898,17 +829,18 @@ because it requires features that are not yet implemented in ORM 6 (still in dev
 5.4.3.Final and earlier will not.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="lucene-8"><a class="anchor" href="#lucene-8"></a>Lucene 8</h3>
+<div class="sect3">
+<h4 id="lucene-8"><a class="anchor" href="#lucene-8"></a>Lucene 8</h4>
 <div id="lucene-7" class="paragraph">
 <p>The Lucene backend now uses Lucene 8.5.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="elasticsearch-7"><a class="anchor" href="#elasticsearch-7"></a>Elasticsearch 7</h3>
+<div class="sect3">
+<h4 id="elasticsearch-7"><a class="anchor" href="#elasticsearch-7"></a>Elasticsearch 7</h4>
 <div id="elasticsearch-6" class="paragraph">
 <p>The Elasticsearch backend now works with Elasticsearch 5.6, 6.8 or 7.7.
 Support for older versions of Elasticsearch was dropped.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1004,25 +936,49 @@ by allowing bridges to declare what parts of the entity they use.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="easier-to-use-safer-automatic-indexing"><a class="anchor" href="#easier-to-use-safer-automatic-indexing"></a>Easier to use, safer automatic indexing</h3>
+<h3 id="automatic-indexing"><a class="anchor" href="#automatic-indexing"></a>Easier to use, smarter automatic indexing</h3>
 <div class="paragraph">
-<p>Automatic indexing improvements are not limited to bridges:
-<code>@IndexedEmbedded</code> is easier to configure properly in Search 6, too.</p>
+<p>In Hibernate Search 6, automatic indexing is easier to configure correctly:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When using <code>@IndexedEmbedded</code> on an association,
+Hibernate Search 6 infers the inverse side of the association from Hibernate ORM metadata,
+which allows it to automatically reindex the class hosting the <code>@IndexedEmbedded</code> annotation
+when the target of the association changes. <code>@ContainedIn</code> is no longer needed.</p>
+</li>
+<li>
+<p>When the inverse side of an association cannot be resolved,
+Hibernate Search 6 will report a mapping error, allowing you to detect risks of out-of-sync indexes early.</p>
+</li>
+<li>
+<p>You can still opt out of automatic reindexing using <code>@IndexingDependency(reindexOnUpdate = ReindexOnUpdate.NO)</code>.
+See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-reindexing-reindexonupdate">this section of the documentation</a>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>To be precise, changes on indexed-embedded entities trigger reindexing of the "embedding" entity automatically,
-and annotating the inverse side of the association with <code>@ContainedIn</code> is no longer needed in most cases.
-A mapping error will be reported when the inverse side of the association cannot be resolved.</p>
+<p>Hibernate Search 6 is also smarter with reindexing.
+When a property changes in an entity that is indexed-embedded in multiple other entities,
+Hibernate Search 6 will only traverse associations to entities that are actually
+affected by the change, based on <code>@IndexedEmbedded(includePaths = &#8230;&#8203;)</code> and other metadata.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="runtime-joins"><a class="anchor" href="#runtime-joins"></a>Runtime joins</h3>
+<h3 id="runtime-joins"><a class="anchor" href="#runtime-joins"></a>Runtime joins with nested documents</h3>
 <div class="paragraph">
 <p>Hibernate Search 6.0 introduces "nested" fields and predicates,
 similar to the feature with the same name in Elasticsearch.</p>
 </div>
 <div class="paragraph">
-<p>See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexedembedded-storage"><code>@IndexedEmbedded</code> storage type</a>
+<p>This means in particular that embedded entities can be searched much more finely,
+for example searching for that one book whose author has a given first name <strong>and</strong> last name.
+With the right query, no longer will Hibernate Search return a book authored by "John Smith" and "Jane Doe"
+when you were looking for "John Doe"!</p>
+</div>
+<div class="paragraph">
+<p>For details, see <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexedembedded-storage"><code>@IndexedEmbedded</code> storage type</a>
 in the reference documentation.</p>
 </div>
 </div>
