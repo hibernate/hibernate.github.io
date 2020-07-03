@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Compatibility policy - Hibernate</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="description">
+<meta content="Emmanuel Bernard, Yoann Rodiere" name="author">
+<meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
+<meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
+<meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
+<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1593759258" rel="stylesheet">
+<!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+<link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+<script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
+
+</head>
+<body class="pushable">
+<div class="ui vertical inverted sidebar left" id="mobile-menu">
+<div class="ui vertical fluid inverted text menu accordion">
+<div class="item">
+<a class="title">
+<i class="database grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>ORM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/orm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/orm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/orm/documentation/">
+<i class="folder grid icon open"></i>
+Documentation
+</a>
+<a class="item" href="/orm/books/">
+<i class="book grid icon"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon search"></i>
+<i class="dropdown icon"></i>
+<strong>Search</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/search/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/search/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/search/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="box checkmark grid icon"></i>
+<i class="dropdown icon"></i>
+<strong>Validator</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/validator/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/validator/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/validator/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon sitemap"></i>
+<i class="dropdown icon"></i>
+<strong>OGM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/ogm/">
+<i class="grid home icon"></i>
+About
+</a>
+<a class="item" href="/ogm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/ogm/documentation/">
+<i class="book grid icon"></i>
+Documentation
+</a>
+<a class="item" href="/ogm/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/ogm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/ogm/support/">
+<i class="doctor grid icon"></i>
+Paid support
+</a>
+<a class="item" href="/ogm/faq/">
+<i class="circle grid help icon"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon wrench"></i>
+<i class="dropdown icon"></i>
+<strong>Tools</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/tools/">
+<i class="grid home icon"></i>
+About
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="code grid icon"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="bug grid icon"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="comments grid icon"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate">
+<i class="edit grid icon"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="/others/">
+Others
+</a>
+<div class="item">
+<a class="active title">
+<i class="grid icon users"></i>
+<i class="dropdown icon"></i>
+<strong>Community</strong>
+</a>
+<div class="active content">
+<div class="menu external-links">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<a class="item" href="/community/contributors/orm/">
+<i class="grid icon database"></i>
+Contributors to ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+<i class="grid icon search"></i>
+Contributors to Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+<i class="grid icon checkmark box"></i>
+Contributors to Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+<i class="grid icon sitemap"></i>
+Contributors to OGM
+</a>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+</div>
+</div>
+</div>
+<a class="item" href="https://in.relation.to/">
+Blog
+</a>
+<a class="item" href="https://discourse.hibernate.org/">
+Forums
+</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="icon twitter"></i>
+Follow us
+</a>
+</div>
+</div>
+
+<div class="pusher">
+<div class="mobile-menu-button-bar mobile only print hidden">
+<a class="item" id="mobile-menu-toggle">
+<i class="sidebar icon"></i>
+Menu
+</a>
+</div>
+<!-- begin accesibility skip to top -->
+<ul class="sr-only">
+<li>
+<a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+</li>
+<li>
+<a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+</li>
+</ul>
+<div class="ui container banner">
+<div class="logo">
+<a href="/">
+<img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="ui stackable menu mobile hidden print hidden" id="nav">
+<a class="item" href="/orm/">ORM</a>
+<a class="item" href="/search/">Search</a>
+<a class="item" href="/validator/">Validator</a>
+<a class="item" href="/ogm/">OGM</a>
+<a class="item" href="/tools/">Tools</a>
+<a class="item" href="/others/">Others</a>
+<div class="right menu">
+<a class="item" href="https://in.relation.to/">Blog</a>
+<a class="item" href="https://discourse.hibernate.org/">Forums</a>
+<a class="active item" href="/community/">Community</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="twitter icon"></i>
+Follow us
+</a>
+</div>
+</div>
+</div>
+
+<div class="ui container-fluid">
+<div class="jumbotron small">
+<div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide">
+<h1>
+<span>Community</span>
+</h1>
+<h2>
+<span>Compatibility policy</span>
+</h2>
+</div>
+<div class="column four wide">
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://github.com/hibernate/">
+<i class="github icon"></i>
+Our GitHub organization
+</a>
+</div>
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/">
+<i class="bug icon"></i>
+Our issue tracker
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only">
+<div class="ui fluid vertical menu">
+<a class="item" href="..">
+<i class="grid icon users"></i>
+Community
+</a>
+<div class="dropdown item link ui">
+Contributors
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/community/contributors/orm/">
+Hibernate ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+Hibernate Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+Hibernate Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+Hibernate OGM
+</a>
+</div>
+</div>
+<a class="item" href="../corporate-contributors">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="active item" href=".">
+<i class="grid icon history"></i>
+Compatibility policy
+</a>
+<a class="item" href="../license">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+<div class="dropdown item link ui">
+Contribute
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/community/contribute/guidelines/">
+Guidelines
+</a>
+<a class="item" href="/community/contribute/intellij-idea/">
+Set up IntelliJ IDEA
+</a>
+<a class="item" href="/community/contribute/eclipse-ide/">
+Set up Eclipse IDE
+</a>
+<a class="item" href="/community/contribute/build-hibernate-orm/">
+Build Hibernate ORM
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#concepts">Concepts</a>
+<ul class="sectlevel2">
+<li><a href="#code-categorization">Code categorization</a></li>
+<li><a href="#versioning-scheme">Versioning scheme</a></li>
+</ul>
+</li>
+<li><a href="#compatibility-api-spi">Compatibility between applications and Hibernate projects</a>
+<ul class="sectlevel2">
+<li><a href="#api">API</a></li>
+<li><a href="#spi">SPI</a></li>
+<li><a href="#incubating">Incubating</a></li>
+<li><a href="#internals">Internals</a></li>
+</ul>
+</li>
+<li><a href="#compatibility-between-hibernate-projects">Compatibility between Hibernate projects</a></li>
+<li><a href="#compatibility-third-party">Compatibility with third-party software</a>
+<ul class="sectlevel2">
+<li><a href="#compatibility-third-party-hsearch-lucene">Hibernate Search and Lucene</a>
+<ul class="sectlevel3">
+<li><a href="#lucene-version">Lucene version</a></li>
+<li><a href="#lucene-index-data">Lucene index data</a></li>
+<li><a href="#lucene-api">Lucene API</a></li>
+</ul>
+</li>
+<li><a href="#compatibility-third-party-hsearch-elasticsearch">Hibernate Search and Elasticsearch</a>
+<ul class="sectlevel3">
+<li><a href="#elasticsearch-version">Elasticsearch version</a></li>
+<li><a href="#elasticsearch-mapping-and-index-data">Elasticsearch mapping and index data</a></li>
+<li><a href="#user-provided-json">User-provided JSON</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your application interacts with Hibernate libraries,
+and those in turn interact with third-party software: JDBC drivers, other libraries,
+or even REST APIs (Elasticsearch).
+When any of these components changes its API, there is a risk that it becomes incompatible.
+This page explains how Hibernate projects try to limit incompatible changes.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Hibernate projects comply with this compatibility policy on a best effort basis.</p>
+</div>
+<div class="paragraph">
+<p>For contractually binding warranty, consider paid support:
+<br />
+<div class="ui labels blue">
+<a class="ui label" href="/orm/support/"><i class="icon doctor"></i>ORM</a>
+<a class="ui label" href="/search/support/"><i class="icon doctor"></i>Search</a>
+<a class="ui label" href="/validator/support/"><i class="icon doctor"></i>Validator</a>
+<a class="ui label" href="/ogm/support/"><i class="icon doctor"></i>OGM</a>
+</div>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="concepts"><a class="anchor" href="#concepts"></a>Concepts</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="code-categorization"><a class="anchor" href="#code-categorization"></a>Code categorization</h3>
+<div class="paragraph">
+<p>We conceptually divide the classes of the codebase into 3 broad categories:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The API is the set of contracts exposed to the application. For example, <code>Session#save</code>.
+It is an interface for your application to interact with Hibernate.
+This is code that we fully expect to be directly linked to your application bytecode by the compiler.</p>
+</li>
+<li>
+<p>An SPI is an "integration point" with Hibernate and the contracts needed to perform those integrations.
+It is an interface for frameworks or third-party libraries (caching implementations, &#8230;&#8203;)
+to integrate with Hibernate.</p>
+</li>
+<li>
+<p>The internals are classes and code meant only for Hibernate usage internally.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the most part we try to denote these distinctions through the placement of classes into packages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Classes in packages with <code>internal</code> or <code>impl</code> in the name are internal.</p>
+</li>
+<li>
+<p>Classes in packages with <code>spi</code> in the name are SPI.</p>
+</li>
+<li>
+<p>Classes in packages with neither <code>internal</code>, <code>impl</code> nor <code>spi</code> in the name are API.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For Hibernate ORM, grouping code into packages in this manner is an ongoing process and is still incomplete.
+The reason we could not do it en masse is, oddly, backwards compatibility.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Additionally, some classes, methods or fields may be annotated to introduce exceptions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Code annotated with <code>@Internal</code> is internal.
+This annotation is used for code that leaks through API or SPI due to technical constraints or for historical reasons.</p>
+</li>
+<li>
+<p>Code annotated with <code>@Incubating</code> is not part of an API or SPI yet, but may be in the future.
+This annotation is used for code that is still under development and may still change incompatibly.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="versioning-scheme"><a class="anchor" href="#versioning-scheme"></a>Versioning scheme</h3>
+<div class="paragraph">
+<p>Hibernate projects are versioned according to the following scheme:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>major.minor.micro.qualifier</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>major</code>, <code>minor</code> and <code>micro</code> are incrementing integers.</p>
+</li>
+<li>
+<p><code>qualifier</code> is <code>Alpha1</code>, <code>Alpha2</code>, etc., <code>Beta1</code>, <code>Beta2</code>, etc., for development releases,
+<code>CR1</code>, <code>CR2</code>, etc. for candidate releases
+or <code>Final</code> for stable releases.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example: <code>4.0.0.Final</code>, <code>5.2.0.Beta2</code>, <code>5.4.0.CR1</code>.</p>
+</div>
+<div class="paragraph">
+<p>For the most part we follow the guidelines as defined by
+<a href="https://community.jboss.org/wiki/JBossProjectVersioning">JBoss Project Versioning Guidelines</a>,
+so that is a good background material.</p>
+</div>
+<div class="paragraph">
+<p>Hibernate, however, applies some additional semantics. Roughly speaking:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Major updates imply potentially incompatible changes to existing APIs. This may include removal of some APIs.</p>
+</li>
+<li>
+<p>Minor updates are simply additions to existing APIs.</p>
+</li>
+<li>
+<p>Micro updates are for bugfixes only.</p>
+</li>
+<li>
+<p>Alpha/Beta updates are for work in progress and may change newly introduced APIs.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Details can be found further down in <a href="#compatibility-api-spi">Compatibility between applications and Hibernate projects</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compatibility-api-spi"><a class="anchor" href="#compatibility-api-spi"></a>Compatibility between applications and Hibernate projects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section discusses the expectations users should have regarding
+compatibility between their application and Hibernate projects.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The principles below are guidelines. While we strive to follow them as much as possible,
+there are times when exceptions need to be made.</p>
+</div>
+<div class="paragraph">
+<p>For example, if the design of a small part of the API renders it useless or causes critical bugs,
+we may decide to change it incompatibly in a bugfix (micro) release.</p>
+</div>
+<div class="paragraph">
+<p>Another exception is when backporting support for standards.
+We might decide to introduce "transition" minors that upgrade to a newer version of a standard
+while keeping backward compatibility everywhere else,
+in order to ease the migration to the next major version.
+For example Hibernate ORM 5.5 might upgrade to Jakarta 9&#8217;s persistence API (and change nothing else)
+to ease the migration to Hibernate ORM 6.0.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="api"><a class="anchor" href="#api"></a>API</h3>
+<div class="paragraph">
+<p>API contracts are stable across all releases within a <strong>major</strong> version.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you develop an application initially using Hibernate ORM version 4.0.0
+and the application only relies on the defined APIs,
+the expectation is that you can drop in any newer Hibernate 4.x version and it will JustWork.</p>
+</div>
+<div class="paragraph">
+<p>This is what is called <em>backwards compatibility</em>: any changes done in 4.3 (for example)
+are done in such a way as to remain compatible with older (backward) versions all the way back to 4.0.</p>
+</div>
+<div class="paragraph">
+<p>The inverse is something we actually do not guarantee in regards to APIs
+and going back to an older version (reverting).
+An example here would be developing an application using the natural-id API developed in 4.2
+and then trying to drop Hibernate ORM 4.1 or 4.0 into that application.
+That won&#8217;t work.</p>
+</div>
+<div class="paragraph">
+<p>So within a major version we guarantee APIs to be backwards compatible,
+but not forward compatible.
+Newer releases might <strong>add to</strong> an API, but they should not alter or remove.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="spi"><a class="anchor" href="#spi"></a>SPI</h3>
+<div class="paragraph">
+<p>SPI contracts are stable across all releases within a <strong>minor</strong> version,
+but not necessarily across different minors of the same major.</p>
+</div>
+<div class="paragraph">
+<p>For example, an integration developed against Hibernate ORM 4.0.0 will work with 4.0.1 or 4.0.3,
+but not necessarily with 4.1.0.</p>
+</div>
+<div class="paragraph">
+<p>We do strive to maintain backwards compatibility for SPI contracts across minor versions,
+it is just not guaranteed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="incubating"><a class="anchor" href="#incubating"></a>Incubating</h3>
+<div class="paragraph">
+<p>Code annotated with <code>@Incubating</code> is not covered by this compatibility policy <strong>at all</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Incubating code change at any time, even in a bugfix (micro) release.
+It may or may not become fully part of an API or SPI in a future release,
+potentially under a different form.
+It may be removed without replacement and without prior notice,
+including in a bugfix (micro) release.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="internals"><a class="anchor" href="#internals"></a>Internals</h3>
+<div class="paragraph">
+<p>Users should have no expectations of any kind for compatibility when it comes to "internal" code.
+Internal classes may be altered or even removed at any time, including in micro updates.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compatibility-between-hibernate-projects"><a class="anchor" href="#compatibility-between-hibernate-projects"></a>Compatibility between Hibernate projects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Hibernate projects with the same version number are not automatically compatible</strong>.</p>
+</div>
+<div class="paragraph">
+<p>There is no "release train" in Hibernate projects.
+Each Hibernate project releases new versions independently
+and picks the version of its dependencies according to its needs and compatibility requirements.</p>
+</div>
+<div class="paragraph">
+<p>For example, Hibernate Search 5.11.5.Final depends on Hibernate ORM 5.4.12.Final.
+Hibernate ORM 5.11.5.Final does not even exist!</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To help you pick compatible versions, we provide a compatibility matrix for each project:
+<br />
+<div class="ui labels blue">
+<a class="ui label" href="/orm/releases/#compatibility-matrix"><i class="icon table"></i>ORM</a>
+<a class="ui label" href="/search/releases/#compatibility-matrix"><i class="icon table"></i>Search</a>
+<a class="ui label" href="/validator/releases/#compatibility-matrix"><i class="icon table"></i>Validator</a>
+<a class="ui label" href="/ogm/releases/#compatibility-matrix"><i class="icon table"></i>OGM</a>
+</div>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compatibility-third-party"><a class="anchor" href="#compatibility-third-party"></a>Compatibility with third-party software</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section discusses the expectations users should have regarding
+compatibility between Hibernate projects and third-party software.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In many cases, you can find the appropriate version of a third-party dependency
+using the compatibility matrix of the relevant project:
+<br />
+<div class="ui labels blue">
+<a class="ui label" href="/orm/releases/#compatibility-matrix"><i class="icon table"></i>ORM</a>
+<a class="ui label" href="/search/releases/#compatibility-matrix"><i class="icon table"></i>Search</a>
+<a class="ui label" href="/validator/releases/#compatibility-matrix"><i class="icon table"></i>Validator</a>
+<a class="ui label" href="/ogm/releases/#compatibility-matrix"><i class="icon table"></i>OGM</a>
+</div>
+</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="compatibility-third-party-hsearch-lucene"><a class="anchor" href="#compatibility-third-party-hsearch-lucene"></a>Hibernate Search and Lucene</h3>
+<div class="paragraph">
+<p><a href="/search">Hibernate Search</a> provides ways to index entities directly in a local Lucene index.
+The following sections detail aspects of compatibility that are specific to Lucene.</p>
+</div>
+<div class="sect3">
+<h4 id="lucene-version"><a class="anchor" href="#lucene-version"></a>Lucene version</h4>
+<div class="paragraph">
+<p>Each release of Hibernate Search ties itself to one (and only one) specific version of Lucene.</p>
+</div>
+<div class="paragraph">
+<p>Upgrading Hibernate Search, even in a bugfix (micro) update, <strong>may</strong> require upgrading Lucene.</p>
+</div>
+<div class="paragraph">
+<p>For example, upgrading from Hibernate Search 6.0.0.Final to 6.0.1.Final
+may require an upgrade of Lucene.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="lucene-index-data"><a class="anchor" href="#lucene-index-data"></a>Lucene index data</h4>
+<div class="paragraph">
+<p>Lucene indexes are stored on disk (or otherwise) with a given format,
+which may change in incompatible ways when upgrading Hibernate Search or Lucene.
+In such an event, old indexes would be unusable in an upgraded application,
+which would require dropping indexes and reindexing all data.</p>
+</div>
+<div class="paragraph">
+<p>Index format is stable across all releases within a <strong>minor</strong> version.</p>
+</div>
+<div class="paragraph">
+<p>For example, upgrading from Hibernate Search 5.10.0.Final to 5.10.1.Final
+may require an upgrade of Lucene,
+but this Lucene upgrade <strong>should not</strong> require dropping indexes and reindexing.
+Upgrading from Hibernate Search 5.10.0.Final to 5.11.0.Final <strong>may</strong> require dropping indexes and reindexing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="lucene-api"><a class="anchor" href="#lucene-api"></a>Lucene API</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Hibernate Search 5 or earlier</dt>
+<dd>
+<p>Lucene APIs are largely leaking through Hibernate Search APIs.</p>
+<div class="paragraph">
+<p>Therefore, we try to provide the same level of backward compatibility for Lucene APIs
+as <a href="#compatibility-api-spi">we do for our own APIs</a>.</p>
+</div>
+<div class="paragraph">
+<p>For example, upgrading from Hibernate Search 5.10.0.Final to 5.11.0.Final
+may require an upgrade of Lucene,
+but this Lucene upgrade <strong>should not</strong> introduce any breaking change in Lucene APIs.
+Upgrading from Hibernate Search 5.11.0.Final to 6.0.0.Final <strong>may</strong> introduce breaking changes in Lucene APIs.</p>
+</div>
+</dd>
+<dt class="hdlist1">Hibernate Search 6 or later</dt>
+<dd>
+<p>Abstraction layers hide Lucene APIs, meaning applications generally do not need to rely on Lucene APIs at all.
+The only way to rely on Lucene APIs directly from user code is through extensions,
+for example <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-lucene-from-lucene-query">to pass a Lucene Query directly to the Search DSL</a>.</p>
+<div class="paragraph">
+<p>These extensions are not covered by the compatibility policy.</p>
+</div>
+<div class="paragraph">
+<p>For example, upgrading from Hibernate Search 6.0.0.Final to 6.0.1.Final
+may require an upgrade of Lucene,
+and this Lucene upgrade <strong>may</strong> introduce breaking change in Lucene APIs.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="compatibility-third-party-hsearch-elasticsearch"><a class="anchor" href="#compatibility-third-party-hsearch-elasticsearch"></a>Hibernate Search and Elasticsearch</h3>
+<div class="paragraph">
+<p><a href="/search">Hibernate Search</a> provides ways to index entities in a remote Elasticsearch cluster.
+The following sections detail aspects of compatibility that are specific to Elasticsearch.</p>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch-version"><a class="anchor" href="#elasticsearch-version"></a>Elasticsearch version</h4>
+<div class="paragraph">
+<p>Each release of Hibernate Search supports multiple versions of Elasticsearch.</p>
+</div>
+<div class="paragraph">
+<p>Supported versions of Elasticsearch are stable across all releases within a <strong>minor</strong> version of Hibernate Search.</p>
+</div>
+<div class="paragraph">
+<p>For example, upgrading from Hibernate Search 6.0.0.Final to 6.0.1.Final
+<strong>should not</strong> require dropping indexes or reindexing,
+but upgrading from 6.0.1.Final to 6.1.0.Final <strong>may</strong> require dropping indexes and reindexing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="elasticsearch-mapping-and-index-data"><a class="anchor" href="#elasticsearch-mapping-and-index-data"></a>Elasticsearch mapping and index data</h4>
+<div class="paragraph">
+<p>Elasticsearch indexes are stored with a specific format,
+generally driven by the "mapping" assigned to the index,
+either of which may change in incompatible ways when upgrading Hibernate Search or Elasticsearch.
+In such an event, old indexes would be unusable in an upgraded application,
+which would require dropping indexes and reindexing all data.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Hibernate Search upgrades</dt>
+<dd>
+<p>The Elasticsearch mapping generated by Hibernate Search for a given version of Elasticsearch
+is stable across all releases within a <strong>minor</strong> version of Hibernate Search.</p>
+<div class="paragraph">
+<p>For example, upgrading from Hibernate Search 6.0.0.Final to 6.0.1.Final while staying on the same version of Elasticsearch
+<strong>should not</strong> require dropping indexes or reindexing,
+but upgrading from 6.0.1.Final to 6.1.0.Final <strong>may</strong> require dropping indexes and reindexing.</p>
+</div>
+<div class="paragraph">
+<p>The internal format of Elasticsearch indexes is not affected by Hibernate Search upgrades.</p>
+</div>
+</dd>
+<dt class="hdlist1">Elasticsearch upgrades</dt>
+<dd>
+<p>Upgrading from one version of Elasticsearch to the next, even when staying on the same version of Hibernate Search,
+<strong>may</strong> require dropping indexes and reindexing.
+It mainly depends on whether the Elasticsearch mapping API or internal index format changed in incompatible ways,
+which is out of the control of the Hibernate Search project.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="user-provided-json"><a class="anchor" href="#user-provided-json"></a>User-provided JSON</h4>
+<div class="paragraph">
+<p>Abstraction layers hide Elasticsearch APIs, meaning users generally
+do not need to provide JSON directly: Hibernate Search will generate it automatically.
+The only way to rely on Elasticsearch APIs directly from user code is through extensions,
+for example <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-elasticsearch-from-json">when passing JSON to embed in a search request</a>.</p>
+</div>
+<div class="paragraph">
+<p>These extensions are not covered by the compatibility policy.</p>
+</div>
+<div class="paragraph">
+<p>For example, upgrading from Elasticsearch 6.0.0 to 6.0.1
+may require updating JSON hard-coded in application code,
+and Hibernate Search cannot do anything about it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
+
+<div class="ui inverted vertical footer segment print hidden">
+<div class="ui container">
+<div class="ui stackable inverted divided equal height stackable grid">
+<div class="three wide column">
+<h4 class="ui inverted header">Projects</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../search" title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../others" title="Other projects">Other projects</a>
+</div>
+</div>
+<div class="three wide column">
+<h4 class="ui inverted header">Follow us</h4>
+<div class="ui inverted link list">
+<a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
+<a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+<a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
+</div>
+</div>
+<div class="five wide column">
+<h4 class="ui inverted header">Contribute and community</h4>
+<div class="ui inverted link list">
+<a class="item" href=".." title="Community resources">Community resources</a>
+<a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
+<a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
+<a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+</div>
+</div>
+<div class="five wide column sponsor">
+<div class="logo">
+<a href="https://www.redhat.com/">
+<img src="../../images/sponsored-by-redhat.svg" title="Red Hat">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span class="back-to-top computer only">
+<a href="javascript: void(0)">Back to top</a>
+</span>
+</div>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-45270411-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+  $(function() {
+    $('#mobile-menu').sidebar('setting', {
+      transition: 'push'
+    });
+    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
+  
+    $('.ui.accordion').accordion();
+  
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>150){
+        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
+      }
+      else {
+        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
+      }
+    });
+  
+      $('.back-to-top').click(function(e) {
+        $('body, html').animate({scrollTop:0}, 800);
+      });
+    });
+</script>
+</body>
+</html>
