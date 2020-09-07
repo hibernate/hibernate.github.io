@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1599463670" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1599463897" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -703,7 +703,7 @@ and retrieve the hits as Hibernate ORM entities.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span style="color:#0a8;font-weight:bold">SearchResult</span>&lt;<span style="color:#0a8;font-weight:bold">Book</span>&gt; result = Search.session( entityManager )&#x000A;        .search( <span style="color:#0a8;font-weight:bold">Book</span>.class )&#x000A;        .where( f -&gt; f.match()&#x000A;                .fields( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">title</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">authors.name</span><span style="color:#710">&quot;</span></span> )&#x000A;                .matching( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Isaac</span><span style="color:#710">&quot;</span></span> ) )&#x000A;        .fetch( <span style="color:#00D">20</span> );&#x000A;&#x000A;<span style="color:#339;font-weight:bold">long</span> totalHitCount = result.totalHitCount();&#x000A;<span style="color:#0a8;font-weight:bold">List</span>&lt;<span style="color:#0a8;font-weight:bold">Book</span>&gt; hits = result.hits();</code></pre>
+<pre class="CodeRay highlight"><code data-lang="java"><span style="color:#0a8;font-weight:bold">SearchResult</span>&lt;<span style="color:#0a8;font-weight:bold">Book</span>&gt; result = Search.session( entityManager )&#x000A;        .search( <span style="color:#0a8;font-weight:bold">Book</span>.class )&#x000A;        .where( f -&gt; f.match()&#x000A;                .fields( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">title</span><span style="color:#710">&quot;</span></span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">authors.name</span><span style="color:#710">&quot;</span></span> )&#x000A;                .matching( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Isaac</span><span style="color:#710">&quot;</span></span> ) )&#x000A;        .fetch( <span style="color:#00D">20</span> );&#x000A;&#x000A;<span style="color:#0a8;font-weight:bold">List</span>&lt;<span style="color:#0a8;font-weight:bold">Book</span>&gt; hits = result.hits();&#x000A;<span style="color:#339;font-weight:bold">long</span> totalHitCount = result.total().hitCount();</code></pre>
 </div>
 </div>
 </div>
