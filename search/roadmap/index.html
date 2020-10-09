@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1601565280" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1602227030" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -635,6 +635,7 @@ To learn more about what we introduced in our past releases, please consult the
 <div id="toctitle">Releases</div>
 <ul class="sectlevel1">
 <li><a href="#hibernate-search-6-0">Hibernate Search 6.0</a></li>
+<li><a href="#hibernate-search-6-1">Hibernate Search 6.1</a></li>
 <li><a href="#hibernate-search-6-x">Hibernate Search 6.x</a></li>
 </ul>
 </div>
@@ -647,31 +648,23 @@ To learn more about what we introduced in our past releases, please consult the
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">API Refresh</dt>
+<dt class="hdlist1">API overhaul</dt>
 <dd>
 <p>A significant API refresh is planned to better abstract from the Lucene API so that alternative backends such as Elasticsearch can be used without having Lucene on your classpath.
 This will also benefit Lucene users, as the abstraction should allow us to automatically apply more optimisations without the user needing to be a Lucene expert.</p>
 </dd>
-<dt class="hdlist1">Bridge 2.0</dt>
+<dt class="hdlist1">More powerful bridges</dt>
 <dd>
-<p>The bridge APIs will have to change as part of the API refresh,
-so we will take this opportunity to overhaul bridge APIs to make bridges more powerful.
-There are multiple aspects we intend to address:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Custom (user-defined) bridge annotations, allowing to pass type-safe parameters, and not just strings</p>
-</li>
-<li>
-<p>Better support for dirty checking optimization in bridges (class/type bridges in particular),
-by allowing bridges to declare what parts of the entity they use.</p>
-</li>
-<li>
-<p>Better integration of bridges in the Search DSL:
+<p>The bridge APIs will have to change as part of the API overhaul,
+so we will take this opportunity to overhaul how bridges work, in order to make them more powerful.</p>
+<div class="paragraph">
+<p>There are multiple aspects we intend to address:
+* Custom (user-defined) bridge annotations, allowing to pass type-safe parameters, and not just strings
+* Better support for dirty checking optimization in bridges (class/type bridges in particular),
+by allowing bridges to declare what parts of the entity they use.
+* Better integration of bridges in the Search DSL:
 non-String fields should work without having to bypass bridges (<code>.ignoreFieldBridge()</code>) like in Search 5,
 bridges should be allowed to define precisely how to project their fields, &#8230;&#8203;</p>
-</li>
-</ul>
 </div>
 </dd>
 <dt class="hdlist1">Upgrade to Apache Lucene 8</dt>
@@ -685,12 +678,7 @@ This includes some API improvements which could have been useful since the upgra
 Hibernate Search 6 will address this, possibly by forcing to use different indexes for different types.
 Once this is done, we will add support for Elasticsearch 7.</p>
 </dd>
-<dt class="hdlist1">Free-form indexing</dt>
-<dd>
-<p>We&#8217;re planning to decouple the metadata definition from annotated java classes, to allow better indexing of other more flexible sources;
-for example to make it easier to index data structured in the JSON format, or other formats whose schema is not known at compile time.</p>
-</dd>
-<dt class="hdlist1">Join operations</dt>
+<dt class="hdlist1">Nested documents for runtime joins</dt>
 <dd>
 <p>Expose Lucene&#8217;s index-time and query-time join capabilities.</p>
 </dd>
@@ -723,7 +711,7 @@ In particular:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="hibernate-search-6-x"><a class="anchor" href="#hibernate-search-6-x"></a>Hibernate Search 6.x</h2>
+<h2 id="hibernate-search-6-1"><a class="anchor" href="#hibernate-search-6-1"></a>Hibernate Search 6.1</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
@@ -732,32 +720,40 @@ In particular:</p>
 <p>The WildFly integration was removed in 6.0 to reduce the work load.
 We will restore it in 6.1.</p>
 </dd>
+<dt class="hdlist1">First-class support for clustered applications</dt>
+<dd>
+<p>Hibernate Search 6.0 only allows single-node applications,
+or multi-node applications where each node works independently, simply sending events to an Elasticsearch cluster.</p>
+<div class="paragraph">
+<p>This does not account for several challenges that we will address in 6.1:
+* When each node sends updates to Elasticsearch independently,
+conflicts may arise when entities are updated simultaneously on different nodes.
+There is a need to prevent, or at least resolve, these conflicts.
+* For some use cases where maintenance downtime is not acceptable,
+Hibernate Search needs to provide hot updates at the cluster level:
+allow to boot application nodes with the new mapping,
+while some application nodes with the old mapping are still running.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hibernate-search-6-x"><a class="anchor" href="#hibernate-search-6-x"></a>Hibernate Search 6.x</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Restore the OSGi integration</dt>
 <dd>
 <p>The OSGi integration was removed in 6.0 to reduce the work load.
 We will restore it in 6.1 if there is demand for it.
 <a href="https://hibernate.atlassian.net/browse/HSEARCH-3279">Vote here</a>.</p>
 </dd>
-<dt class="hdlist1">First-class support for clustered applications</dt>
+<dt class="hdlist1">Free-form indexing</dt>
 <dd>
-<p>Hibernate Search 6.0 only allows single-node applications,
-or multi-node applications where each node works independently, simply sending events to an Elasticsearch cluster.
-This does not account for several challenges that we will address in later 6.x versions:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>When each node sends updates to Elasticsearch independently,
-conflicts may arise when entities are updated simultaneously on different nodes.
-There is a need to prevent, or at least resolve, these conflicts.</p>
-</li>
-<li>
-<p>For some use cases where maintenance downtime is not acceptable,
-Hibernate Search needs to provide hot updates at the cluster level:
-allow to boot application nodes with the new mapping,
-while some application nodes with the old mapping are still running.</p>
-</li>
-</ul>
-</div>
+<p>We&#8217;re planning to decouple the metadata definition from annotated java classes, to allow better indexing of other more flexible sources;
+for example to make it easier to index data structured in the JSON format, or other formats whose schema is not known at compile time.</p>
 </dd>
 </dl>
 </div>
