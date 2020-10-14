@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1602664519" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1602694168" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -482,8 +482,6 @@ var displayed_series = [];
 displayed_series.push('6.0');
 displayed_series.push('5.11');
 displayed_series.push('5.10');
-displayed_series.push('5.9');
-displayed_series.push('5.6');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -549,12 +547,6 @@ Overview
 </a>
 <a class="item" href="/search/releases/5.10/">
 5.10
-</a>
-<a class="item" href="/search/releases/5.9/">
-5.9
-</a>
-<a class="item" href="/search/releases/5.6/">
-5.6
 </a>
 </div>
 </div>
@@ -693,46 +685,6 @@ More info
 </div>
 </div>
 </div>
-<div class="column">
-<div class="ui raised segment version">
-<span class="ui right ribbon label green">
-stable
-</span>
-<h3 class="ui header">
-5.9
-<small>
-2018-09-10
-</small>
-</h3>
-<p>JSR 352 (Batch for Java) mass indexing job, WildFly feature packs, improvements and deprecations paving the road to Search 6</p>
-<div class="ui right aligned basic segment">
-<a class="ui right labeled icon button primary" href="./5.9/">
-<i class="right arrow icon"></i>
-More info
-</a>
-</div>
-</div>
-</div>
-<div class="column">
-<div class="ui raised segment version">
-<span class="ui right ribbon label green">
-stable
-</span>
-<h3 class="ui header">
-5.6
-<small>
-2018-09-10
-</small>
-</h3>
-<p>Introduces experimental support for Elasticsearch, last release supporting Hibernate ORM 5.0.z or 5.1.z</p>
-<div class="ui right aligned basic segment">
-<a class="ui right labeled icon button primary" href="./5.6/">
-<i class="right arrow icon"></i>
-More info
-</a>
-</div>
-</div>
-</div>
 </div>
 <p>
 <a class="ui button right labeled icon" href="javascript: void(0)" id="older-series-button">
@@ -755,6 +707,26 @@ More info
 <div id="older-series">
 <h2>Older series</h2>
 <div class="ui three column doubling grid series older-series stackable">
+<div class="column">
+<div class="ui raised segment version">
+<span class="ui right ribbon label green">
+stable
+</span>
+<h3 class="ui header">
+5.9
+<small>
+2018-09-10
+</small>
+</h3>
+<p>JSR 352 (Batch for Java) mass indexing job, WildFly feature packs, improvements and deprecations paving the road to Search 6</p>
+<div class="ui right aligned basic segment">
+<a class="ui right labeled icon button primary" href="./5.9/">
+<i class="right arrow icon"></i>
+More info
+</a>
+</div>
+</div>
+</div>
 <div class="column">
 <div class="ui raised segment version">
 <span class="ui right ribbon label green">
@@ -789,6 +761,26 @@ stable
 <p>Improved integration with Elasticsearch 2.x, compatible with Hibernate ORM 5.2.x</p>
 <div class="ui right aligned basic segment">
 <a class="ui right labeled icon button primary" href="./5.7/">
+<i class="right arrow icon"></i>
+More info
+</a>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="ui raised segment version">
+<span class="ui right ribbon label green">
+stable
+</span>
+<h3 class="ui header">
+5.6
+<small>
+2018-09-10
+</small>
+</h3>
+<p>Introduces experimental support for Elasticsearch, last release supporting Hibernate ORM 5.0.z or 5.1.z</p>
+<div class="ui right aligned basic segment">
+<a class="ui right labeled icon button primary" href="./5.6/">
 <i class="right arrow icon"></i>
 More info
 </a>
@@ -973,12 +965,6 @@ Hibernate Search
 <th>
 5.10
 </th>
-<th>
-5.9
-</th>
-<th>
-5.6
-</th>
 </tr>
 </thead>
 <tbody>
@@ -989,19 +975,13 @@ Java
 </a>
 </td>
 <td>
-8, 11 or 14
+8, 11 or 15
 </td>
 <td>
 8 or 11
 </td>
 <td>
 8 or 11 (with 5.10.7+)
-</td>
-<td>
-8
-</td>
-<td>
-7 or 8
 </td>
 </tr>
 <tr>
@@ -1019,12 +999,6 @@ Hibernate ORM
 <td>
 5.3
 </td>
-<td>
-5.2 (>= 5.2.3.Final)
-</td>
-<td>
-5.0 - 5.1
-</td>
 </tr>
 <tr>
 <td>
@@ -1034,12 +1008,6 @@ Apache Lucene
 </td>
 <td>
 8.6
-</td>
-<td>
-5.5
-</td>
-<td>
-5.5
 </td>
 <td>
 5.5
@@ -1062,12 +1030,6 @@ Elasticsearch
 </td>
 <td>
 2.0 - 5.6
-</td>
-<td>
-2.0 - 5.6
-</td>
-<td>
-2.0 - 2.4
 </td>
 </tr>
 </tbody>

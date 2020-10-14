@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Hibernate Search Migration Guides - Hibernate Search</title>
+<title>Migration guides - Hibernate Search</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="description">
@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1602664518" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1602694167" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -482,8 +482,6 @@ var displayed_series = [];
 displayed_series.push('6.0');
 displayed_series.push('5.11');
 displayed_series.push('5.10');
-displayed_series.push('5.9');
-displayed_series.push('5.6');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -497,11 +495,23 @@ Hibernate Search
 </h1>
 <h2>
 <span>
-Hibernate Search Migration Guides
+Migration guides
 </span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
+<div class="jumbotron-button">
+<a class="ui small right labeled icon button" href="/search/documentation/getting-started/">
+<i class="right arrow icon"></i>
+Getting started
+</a>
+</div>
+<div class="jumbotron-button">
+<a class="ui small right labeled icon button green" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/">
+<i class="right arrow icon"></i>
+Get documentation for 5.11
+</a>
+</div>
 
 </div>
 </div>
@@ -537,12 +547,6 @@ Overview
 </a>
 <a class="item" href="/search/releases/5.10/">
 5.10
-</a>
-<a class="item" href="/search/releases/5.9/">
-5.9
-</a>
-<a class="item" href="/search/releases/5.6/">
-5.6
 </a>
 </div>
 </div>
@@ -606,69 +610,357 @@ Released under the
 </div>
 <div class="column thirteen wide computer sixteen wide mobile">
 <div class="content" id="content">
-<div class="sect1">
-<h2 id="migration-guides"><a class="anchor" href="#migration-guides"></a>Migration Guides</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following guides are meant to help you upgrading an existing application using Hibernate Search to a more recent version.
-This content is not automatically generated, but structured to give you the high level overview.</p>
+<h2>Migration Guides per Series</h2>
+<p>
+The following guides are meant to help you upgrading an existing application using
+Hibernate Search
+to a more recent version.
+These guides are not automatically generated, but structured to give you the high level overview.
+</p>
+<div class="ui grid documentation-versions">
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">6.0</span>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="/search/documentation/migrate/6.0">Migration guide to Hibernate Search 6.0</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.11</em> to <em>6.0</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.11">Migration guide to Hibernate Search 5.11</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.10</em> to <em>5.11</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.10">Migration guide to Hibernate Search 5.10</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.9</em> to <em>5.10</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.9">Migration guide to Hibernate Search 5.9</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.8</em> to <em>5.9</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.8">Migration guide to Hibernate Search 5.8</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.7</em> to <em>5.8</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.7">Migration guide to Hibernate Search 5.7</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.6</em> to <em>5.7</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.6">Migration guide to Hibernate Search 5.6</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.5</em> to <em>5.6</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.5">Migration guide to Hibernate Search 5.5</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.4</em> to <em>5.5</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.4">Migration guide to Hibernate Search 5.4</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.3</em> to <em>5.4</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.3">Migration guide to Hibernate Search 5.3</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.2</em> to <em>5.3</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.2">Migration guide to Hibernate Search 5.2</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.1</em> to <em>5.2</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.1">Migration guide to Hibernate Search 5.1</a></dt>
-<dd>
-<p>Notes and relevant changes you should keep in mind when upgrading from versions <em>5.0</em> to <em>5.1</em>.</p>
-</dd>
-<dt class="hdlist1"><a href="/search/documentation/migrate/5.0">Migration guide for Hibernate Search 5.0</a></dt>
-<dd>
-<p>This is what you need when upgrading from a fairly recent version of Hibernate Search 4, such as <em>4.4.x</em> and <em>4.5.x</em>.
-If you&#8217;re upgrading from older versions, please migrate to <em>4.5.3.Final</em> first.</p>
-</dd>
-</dl>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>6.0.0.Beta11</strong>
+<span class="detail">2020-10-08</span>
+</span>
+<span class="label orange tag ui">development</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/6.0/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.11</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.11.5.Final</strong>
+<span class="detail">2020-02-19</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.11/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.10</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.10.9.Final</strong>
+<span class="detail">2020-02-19</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.10/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.9</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.9.3.Final</strong>
+<span class="detail">2018-09-10</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.9/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.8</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.8.2.Final</strong>
+<span class="detail">2017-10-26</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.8/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.7</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.7.3.Final</strong>
+<span class="detail">2017-10-26</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.7/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.6</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.6.6.Final</strong>
+<span class="detail">2018-09-10</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.6/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.5</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.5.8.Final</strong>
+<span class="detail">2017-08-16</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.5/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.4</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.4.0.Final</strong>
+<span class="detail">2015-09-03</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.4/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.3</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.3.0.Final</strong>
+<span class="detail">2015-06-10</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.3/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.2</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.2.1.Final</strong>
+<span class="detail">2015-09-04</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.2/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.1</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.1.2.Final</strong>
+<span class="detail">2015-04-24</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.1/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">5.0</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>5.0.1.Final</strong>
+<span class="detail">2015-01-12</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/search/documentation/migrate/5.0/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">4.5</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>4.5.3.Final</strong>
+<span class="detail">2015-01-12</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="https://developer.jboss.org/wiki/HibernateSearchMigrationGuide">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">4.4</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>4.4.6.Final</strong>
+<span class="detail">2014-12-02</span>
+</span>
+<span class="green label tag ui">stable</span>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="https://developer.jboss.org/wiki/HibernateSearchMigrationGuide">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</p>
 </div>
 </div>
 </div>
@@ -681,6 +973,7 @@ Please note these versions are no longer maintained, so migrating to a more rece
 </div>
 </div>
 </div>
+
 </div>
 
 </div>

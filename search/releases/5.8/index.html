@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1602664519" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1602694168" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -482,8 +482,6 @@ var displayed_series = [];
 displayed_series.push('6.0');
 displayed_series.push('5.11');
 displayed_series.push('5.10');
-displayed_series.push('5.9');
-displayed_series.push('5.6');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -545,12 +543,6 @@ Overview
 </a>
 <a class="item" href="/search/releases/5.10/">
 5.10
-</a>
-<a class="item" href="/search/releases/5.9/">
-5.9
-</a>
-<a class="item" href="/search/releases/5.6/">
-5.6
 </a>
 </div>
 </div>
@@ -635,13 +627,13 @@ How to get it
 </a>
 </li>
 <li>
-<a class="item" href="#whats-new">
-What's new
+<a class="item" href="#migrate">
+Migrating
 </a>
 </li>
 <li>
-<a class="item" href="#migrate">
-Migrate
+<a class="item" href="#whats-new">
+What's new
 </a>
 </li>
 <li>
@@ -809,6 +801,16 @@ Download Zip archive
 More information about specific releases (announcements, download links) can be found
 <a href="#releases">
 here.
+</a>
+</p>
+<h2 id="migrate">Migrating</h2>
+<p>
+If you need to upgrade from a previous series, please refer to the migration guide:
+</p>
+<p>
+<a class="ui right labeled icon button" href="/search/documentation/migrate/5.8/">
+<i class="icon file text outline"></i>
+HTML
 </a>
 </p>
 <h2 id="whats-new">What's new</h2>
@@ -1013,13 +1015,6 @@ and <a href="https://github.com/hibernate/hibernate-search/blob/bf4342c8991e0384
 </ul>
 </div>
 </div>
-<h2 id="migrate">Migrate</h2>
-<p>
-If you need to upgrade from a previous series, please refer to the
-<a href="/search/documentation/migrate/5.8/">
-migration guide.
-</a>
-</p>
 <h2 id="releases">Releases in this series</h2>
 <div class="ui stackable grid series-versions">
 <div class="ui row">
