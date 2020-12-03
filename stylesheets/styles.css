@@ -291,7 +291,7 @@ pre {
 #toc > ul > li > ul > li {
   margin-left: 0.5em; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   /* line 356, /home/dev/website/stylesheets/styles.scss */
   #toc {
     display: none; } }
