@@ -12,7 +12,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1606997861" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1607004433" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -655,14 +655,15 @@ Released under the
 of interaction with the database.</p>
 </div>
 <div class="paragraph">
-<p>Hibernate Reactive is intended for use in a reactive programming environment like Vert.x or Quarkus, where interaction
-with the database should occur in a non-blocking fashion. Persistence operations are orchestrated via the construction
-of a reactive stream rather than via direct invocation of synchronous functions in procedural Java code.</p>
+<p>Hibernate Reactive is intended for use in a reactive programming environment like <a href="https://vertx.io">Vert.x</a> or
+<a href="https://quarkus.io">Quarkus</a>, where interaction with the database should occur in a non-blocking fashion.
+Persistence operations are orchestrated via the construction of a reactive stream rather than via direct invocation
+of synchronous functions in procedural Java code.</p>
 </div>
 <div class="paragraph">
 <p>JDBC, JPA and Hibernate ORM use blocking IO for interaction with the database, and are therefore not appropriate for
 use in a reactive environment. Hibernate Reactive is a feature rich ORM implementation designed to take advantage of
-non-blocking database clients. PostgreSQL, MySQL, and DB2 are supported via the Vert.x client libraries.</p>
+non-blocking database clients.</p>
 </div>
 </div>
 </div>
@@ -670,26 +671,49 @@ non-blocking database clients. PostgreSQL, MySQL, and DB2 are supported via the 
 <h2 id="compatibility"><a class="anchor" href="#compatibility"></a>Compatibility</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>JDK 1.8</p>
-</div>
-<div class="paragraph">
-<p>Currently supports:</p>
+<p>Hibernate Reactive requires:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://www.postgresql.org">PostgreSQL</a></p>
+<p>JDK 1.8,</p>
 </li>
 <li>
-<p><a href="https://www.mysql.org">MySQL</a></p>
+<p>Hibernate ORM 5.4, and</p>
 </li>
 <li>
-<p><a href="https://www.ibm.com/analytics/db2">Db2</a></p>
+<p>the Vert.x 3.9 reactive database client for your database.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="getting-started"><a class="anchor" href="#getting-started"></a>Getting Started</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Want to see it in action? Move on to the <a href="/reactive/documentation/1.0/reference/html_single/#getting-started">getting started guide</a>.</p>
+<p>The <a href="http://hibernate.org/reactive/documentation/1.0/reference/html_single/">Introduction to Hibernate Reactive</a> covers everything you need to know to get started,
+including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://hibernate.org/reactive/documentation/1.0/reference/html_single/#_including_hibernate_reactive_in_your_project_build">setting up a project</a> that uses Hibernate Reactive and the Vert.x reactive SQL client for your
+database,</p>
+</li>
+<li>
+<p><a href="http://hibernate.org/reactive/documentation/1.0/reference/html_single/#_basic_configuration">configuring</a> Hibernate Reactive to access your database,</p>
+</li>
+<li>
+<p>writing Java code to <a href="http://hibernate.org/reactive/documentation/1.0/reference/html_single/#_mapping_entity_classes">define the entities</a> of your data model,</p>
+</li>
+<li>
+<p>writing reactive data access code <a href="http://hibernate.org/reactive/documentation/1.0/reference/html_single/#_using_the_reactive_session">using a reactive session</a>, and</p>
+</li>
+<li>
+<p><a href="http://hibernate.org/reactive/documentation/1.0/reference/html_single/#_tuning_and_performance">tuning the performance</a> of your program.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
