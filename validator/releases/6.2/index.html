@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Migration Guide from Hibernate Search 4.x to 5.0 - Hibernate Search</title>
+<title>6.2 series - Hibernate Validator</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="description">
-<meta content="Hardy Ferentschik" name="author">
+<meta content="" name="author">
 <meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
 <meta content="Hibernate" property="og:site_name">
-<meta content="http://hibernate.org/search/documentation/migrate/5.0/" property="og:url">
-<meta content="Migration Guide from Hibernate Search 4.x to 5.0" property="og:title">
-<meta content="Automatic indexing of Hibernate ORM entities into Apache Lucene or Elasticsearch.
-Advanced search API: full-text, geospatial, aggregations and more.
+<meta content="http://hibernate.org/validator/releases/6.2/" property="og:url">
+<meta content="6.2 series" property="og:title">
+<meta content="Express validation rules in a standardized way using annotation-based constraints and benefit from transparent integration with a wide variety of frameworks.
 " name="og:description">
 <meta content="http://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
-<meta content="Automatic indexing of Hibernate ORM entities into Apache Lucene or Elasticsearch.
-Advanced search API: full-text, geospatial, aggregations and more.
+<meta content="Express validation rules in a standardized way using annotation-based constraints and benefit from transparent integration with a wide variety of frameworks.
 " name="description">
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1607444461" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1607444464" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -117,12 +115,12 @@ CI
 </div>
 
 <div class="item">
-<a class="active title">
+<a class="title">
 <i class="grid icon search"></i>
 <i class="dropdown icon"></i>
 <strong>Search</strong>
 </a>
-<div class="active content">
+<div class="content">
 <div class="menu internal-links">
 <a class="item" href="/search/">
 <i class="grid home icon"></i>
@@ -132,7 +130,7 @@ About
 <i class="grid icon tags"></i>
 Releases
 </a>
-<a class="active item" href="/search/documentation/">
+<a class="item" href="/search/documentation/">
 <i class="book grid icon"></i>
 Documentation
 </a>
@@ -187,18 +185,18 @@ CI
 </div>
 
 <div class="item">
-<a class="title">
+<a class="active title">
 <i class="box checkmark grid icon"></i>
 <i class="dropdown icon"></i>
 <strong>Validator</strong>
 </a>
-<div class="content">
+<div class="active content">
 <div class="menu internal-links">
 <a class="item" href="/validator/">
 <i class="grid home icon"></i>
 About
 </a>
-<a class="item" href="/validator/releases/">
+<a class="active item" href="/validator/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -523,8 +521,8 @@ Menu
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
 <a class="item" href="/orm/">ORM</a>
-<a class="active item" href="/search/">Search</a>
-<a class="item" href="/validator/">Validator</a>
+<a class="item" href="/search/">Search</a>
+<a class="active item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
 <a class="item" href="/reactive/">Reactive</a>
@@ -544,9 +542,11 @@ Follow us
 
 <script>
 var displayed_series = [];
+displayed_series.push('7.0');
+displayed_series.push('6.2');
+displayed_series.push('6.1');
 displayed_series.push('6.0');
-displayed_series.push('5.11');
-displayed_series.push('5.10');
+displayed_series.push('5.4');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -555,13 +555,14 @@ displayed_series.push('5.10');
 <div class="column twelve wide middle aligned">
 <h1>
 <span>
-Hibernate Search
+Hibernate Validator
 </span>
 </h1>
 <h2>
 <span>
-Migration Guide from Hibernate Search 4.x to 5.0
+6.2 series
 </span>
+<span class="label orange tag ui">development</span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
@@ -572,68 +573,83 @@ Migration Guide from Hibernate Search 4.x to 5.0
 </div>
 </div>
 
+<div class="page-title small">
+<div class="ui container">
+<h4>
+Keep javax.* packages, Expression Language overhaul, @SafeHtml removal
+</h4>
+</div>
+</div>
 
 <div class="ui container page-content">
 <div class="ui stackable grid">
 <div class="column three wide computer only print hidden">
 <div class="ui fluid vertical menu">
-<a class="item" href="/search/">
+<a class="item" href="/validator/">
 <i class="grid home icon"></i>
 About
 </a>
-<div class="dropdown item link ui">
+<div class="dropdown item link selected ui">
 Releases
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="/search/releases/">
+<a class="item" href="/validator/releases/">
 Overview
 </a>
-<a class="item" href="/search/releases/6.0/">
-6.0
+<a class="item" href="/validator/releases/7.0/">
+7.0
 &nbsp;&nbsp;
 <span class="ui label orange">development</span>
 </a>
-<a class="item" href="/search/releases/5.11/">
-5.11
+<a class="item selected" href="/validator/releases/6.2/">
+6.2
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/validator/releases/6.1/">
+6.1
 &nbsp;&nbsp;
 <span class="ui label green">latest stable</span>
 </a>
-<a class="item" href="/search/releases/5.10/">
-5.10
+<a class="item" href="/validator/releases/6.0/">
+6.0
+</a>
+<a class="item" href="/validator/releases/5.4/">
+5.4
 </a>
 </div>
 </div>
-<a class="item selected" href="/search/documentation/">
+<a class="item" href="/validator/documentation/">
 <i class="book grid icon"></i>
 Documentation
 </a>
-<a class="item" href="/search/roadmap/">
+<a class="item" href="/validator/roadmap/">
 <i class="grid icon road"></i>
 Roadmap
 </a>
-<a class="item" href="/search/contribute/">
+<a class="item" href="/validator/contribute/">
 <i class="grid icon users"></i>
 Contribute
 </a>
-<a class="item" href="/search/tooling/">
+<a class="item" href="/validator/tooling/">
 <i class="grid icon wrench"></i>
 Tooling
 </a>
-<a class="item" href="/search/support/">
+<a class="item" href="/validator/support/">
 <i class="doctor grid icon"></i>
 Paid support
 </a>
-<a class="item" href="/search/faq/">
+<a class="item" href="/validator/faq/">
 <i class="circle grid help icon"></i>
 FAQ
 </a>
 </div>
 <div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-search">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
 <i class="code grid icon"></i>
 Source code
 </a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
 <i class="bug grid icon"></i>
 Issue tracker
 </a>
@@ -641,15 +657,11 @@ Issue tracker
 <i class="grid icon lock"></i>
 Security issue
 </a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
 <i class="comments grid icon"></i>
 Forum
 </a>
-<a class="item" href="https://community.jboss.org/en/hibernate/search">
-<i class="edit grid icon"></i>
-Wiki
-</a>
-<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<a class="item" href="https://ci.hibernate.org/">
 <i class="grid icon treatment"></i>
 CI
 </a>
@@ -657,354 +669,293 @@ CI
 <hr>
 <div class="license">
 Released under the
-<a href="https://raw.github.com/hibernate/hibernate-search/master/lgpl.txt">LGPL v2.1</a>
+<a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
 </div>
 
 </div>
 <div class="column thirteen wide computer sixteen wide mobile">
 <div class="content" id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Here we are helping you migrate your existing Hibernate Search application to the latest and greatest.</p>
+<div id="toc">
+<div id="toctitle">
+Quick links
 </div>
-</div>
-<div id="toc" class="toc">
-<div id="toctitle">Content</div>
-<ul class="sectlevel1">
-<li><a href="#upgrade-to-hibernate-search-5-0-0-final">Upgrade to Hibernate Search 5.0.0.Final</a>
-<ul class="sectlevel2">
-<li><a href="#requirements">Requirements</a></li>
-<li><a href="#api-changes">API changes</a>
-<ul class="sectlevel3">
-<li><a href="#sorting-query-results">Sorting query results</a></li>
-</ul>
-</li>
-<li><a href="#class-re-names-and-re-locations">Class re-names and re-locations</a>
-<ul class="sectlevel3">
-<li><a href="#within-hibernate-search">Within Hibernate Search</a></li>
-<li><a href="#within-apache-lucene">Within Apache Lucene</a></li>
-</ul>
-</li>
-<li><a href="#mapping">Mapping</a>
-<ul class="sectlevel3">
-<li><a href="#id-fields-of-embedded-relations-no-longer-indexed-by-default">Id fields of embedded relations no longer indexed by default</a></li>
-<li><a href="#number-and-date-index-format">Number and date index format</a></li>
-</ul>
-</li>
-<li><a href="#misc">Misc</a>
-<ul class="sectlevel3">
-<li><a href="#fulltextindexeventlistener-now-final">FullTextIndexEventListener now final</a></li>
-<li><a href="#hibernate-search-analyzers-module-removed">hibernate-search-analyzers module removed</a></li>
-<li><a href="#jms-controller-api-changed">JMS controller API changed</a></li>
-<li><a href="#serviceregistry-api-updated">ServiceRegistry API updated</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect1">
-<h2 id="upgrade-to-hibernate-search-5-0-0-final"><a class="anchor" href="#upgrade-to-hibernate-search-5-0-0-final"></a>Upgrade to Hibernate Search 5.0.0.Final</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The aim of this guide is to assist you migrating an existing application based on
-a fairly recent version of Hibernate Search 4, such as <em>4.4.x</em> and <em>4.5.x</em>,
-to Hibernate Search 5.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-If you&#8217;re upgrading from older versions, please migrate to <em>4.5.3.Final</em> first.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This document provides pointers for a migration.
-It refers to Hibernate Search 5.0.0.Final.
-If you think something is missing or something does not work, please <a href="/community">contact us</a>.
-If you&#8217;re looking to migrate different versions see <a href="/search/documentation/migrate">Hibernate Search migration guides</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="requirements"><a class="anchor" href="#requirements"></a>Requirements</h3>
-<div class="paragraph">
-<p>The most important upfront. Hibernate Search 5 requires now Java 7. Support for Java 6 has been dropped.</p>
-</div>
-<div class="paragraph">
-<p>Hibernate Search 5 also builds now upon Lucene 4 (more specifically
-<a href="http://lucene.apache.org/core/4_10_2/index.html">4.10.2</a>). If you are using any
-native Lucene APIs make sure to align with this version. Refer also to the
-<a href="https://lucene.apache.org/core/4_10_2/MIGRATE.html">Lucene Migration Guide</a>.</p>
-</div>
-<div class="paragraph">
-<p>Hibernate Search is compatible with <a href="/orm">Hibernate ORM</a> 4.3.7.Final and
-<a href="http://infinispan.org/">Infinispan</a> 7.0.2.Final.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="api-changes"><a class="anchor" href="#api-changes"></a>API changes</h3>
-<div class="paragraph">
-<p>Even though the Lucene API changes between version 3 and 4 are rather big, we were able to hide most
-of the complexities behind the Hibernate Search API. Some changes, however, trickle all the way through.</p>
-</div>
-<div class="sect3">
-<h4 id="sorting-query-results"><a class="anchor" href="#sorting-query-results"></a>Sorting query results</h4>
-<div class="paragraph">
-<p>Lucene&#8217;s <code>SortField</code> API has changed. Instead of</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">fulltextQuery.setSort( <span style="color:#080;font-weight:bold">new</span> Sort( <span style="color:#080;font-weight:bold">new</span> SortField( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">title</span><span style="color:#710">&quot;</span></span>, SortField.STRING ) ) );</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>you now need to use:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java">fulltextQuery.setSort( <span style="color:#080;font-weight:bold">new</span> Sort( <span style="color:#080;font-weight:bold">new</span> SortField( <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">title</span><span style="color:#710">&quot;</span></span>, SortField.Type.STRING ) ) );</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="class-re-names-and-re-locations"><a class="anchor" href="#class-re-names-and-re-locations"></a>Class re-names and re-locations</h3>
-<div class="paragraph">
-<p>Between Hibernate Search 4 and 5 several classes have changes names or package. This happened within
-the Search API as well as within the Lucene API. The following is a list of the most important changes.</p>
-</div>
-<div class="sect3">
-<h4 id="within-hibernate-search"><a class="anchor" href="#within-hibernate-search"></a>Within Hibernate Search</h4>
-<div class="ulist">
 <ul>
 <li>
-<p><code>SearchFactory</code> was moved from the module <code>hibernate-search-engine</code> to <code>hibernate-search-orm</code> as
-it should only be used by the ORM integration. Other integrators should depend exclusively on <code>SearchIntegrator</code> (former <code>SearchFactoryIntegrator</code>)</p>
+<a class="item" href="#compatibility">
+Compatibility
+</a>
 </li>
 <li>
-<p>The following classes got re-located:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>org.hibernate.search.engine.impl.SearchMappingBuilder</code> &#8658;<br>
-<code>org.hibernate.search.engine.spi.SearchMappingBuilder</code></p>
+<a class="item" href="#documentation">
+Documentation
+</a>
 </li>
 <li>
-<p><code>org.hibernate.search.Environment</code> &#8658;<br>
-<code>org.hibernate.search.cfg.Environment</code></p>
+<a class="item" href="#get-it">
+How to get it
+</a>
 </li>
 <li>
-<p><code>org.hibernate.search.FullTextFilter</code> &#8658;<br>
-<code>org.hibernate.search.filter.FullTextFilter</code></p>
+<a class="item" href="#getting_started">
+Getting started
+</a>
 </li>
 <li>
-<p><code>org.hibernate.search.indexes.impl.DirectoryBasedIndexManager</code> &#8658;<br>
-<code>org.hibernate.search.indexes.spi.DirectoryBasedIndexManager</code></p>
+<a class="item" href="#migrate">
+Migrating
+</a>
 </li>
 <li>
-<p><code>org.hibernate.search.infinispan.impl.InfinispanDirectoryProvider</code> &#8658;<br>
-<code>org.hibernate.search.infinispan.spi.InfinispanDirectoryProvider</code></p>
+<a class="item" href="#whats-new">
+What's new
+</a>
 </li>
 <li>
-<p><code>org.hibernate.search.ProjectionConstants</code> &#8658;<br>
-<code>org.hibernate.search.engine.ProjectionConstants</code></p>
-</li>
-<li>
-<p><code>org.hibernate.search.SearchException</code> &#8658;<br>
-<code>org.hibernate.search.exception.SearchException</code></p>
-</li>
-<li>
-<p><code>org.hibernate.search.spi.MassIndexerFactory</code> &#8658;<br>
-<code>org.hibernate.search.batchindexing.spi.MassIndexerFactory</code></p>
-</li>
-<li>
-<p><code>org.hibernate.search.spi.SearchFactoryBuilder</code> &#8658;<br>
-<code>org.hibernate.search.spi.SearchIntegratorBuilder</code></p>
-</li>
-<li>
-<p><code>org.hibernate.search.spi.SearchFactoryIntegrator</code> &#8658;<br>
-<code>org.hibernate.search.spi.SearchIntegrator</code></p>
-</li>
-<li>
-<p><code>org.hibernate.search.Version</code> &#8658;<br>
-<code>org.hibernate.search.engine.Version</code></p>
+<a class="item" href="#releases">
+Releases in this series
+</a>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>The enum value <code>SpatialMode.GRID</code> was renamed to <code>SpatialMode.HASH</code></p>
-</li>
-</ul>
+<h2 id="compatibility">Compatibility</h2>
+<table class="ui collapsing table striped celled unstackable">
+<tr>
+<td>
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">
+Java
+</a>
+</td>
+<td>
+8 or 11
+</td>
+</tr>
+<tr>
+<td>
+<a href="http://beanvalidation.org/">
+Jakarta Bean Validation
+</a>
+</td>
+<td>
+2.0
+</td>
+</tr>
+</table>
+<p>
+Not compatible with your requirements? Have a look at the
+<a href="../">
+other series.
+</a>
+</p>
+<p>
+See also the
+<a href="/community/compatibility-policy">
+Compatibility policy.
+</a>
+</p>
+<h2 id="documentation">Documentation</h2>
+<p>
+Documentation for this specific series can be accessed through the links below:
+</p>
+<p>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/html_single/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/pdf/hibernate_validator_reference.pdf">
+<i class="icon file pdf outline"></i>
+PDF
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/6.2/api/">
+<i class="icon code outline"></i>
+API (JavaDoc)
+</a>
+</p>
+<p>
+You can find more documentation for all series on the
+<a href="../../documentation">
+documentation page.
+</a>
+</p>
+<h2 id="get-it">How to get it</h2>
+<div class="ui grid equal height stackable download-options">
+<div class="eleven wide column">
+<h3>Maven, Gradle...</h3>
+<p>
+Maven artifacts of Hibernate Validator are published to
+<a href="https://search.maven.org">
+Maven Central
+</a>
+and to the
+<a href="https://repository.jboss.org/nexus/index.html">
+JBoss Maven repository.
+</a>
+Refer to the
+<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+</p>
+<p>
+You can find the Maven coordinates of all artifacts through the link below:
+<p>
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.validator%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A6.2.0.CR1">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+</p>
+</p>
+<p>
+Below are the Maven coordinates of the main artifacts.
+</p>
+<dl class="sparse">
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator%7C6.2.0.CR1%7C">
+org.hibernate.validator:hibernate-validator:6.2.0.CR1
+</a>
+</dt>
+<dd>Core implementation</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator-cdi%7C6.2.0.CR1%7C">
+org.hibernate.validator:hibernate-validator-cdi:6.2.0.CR1
+</a>
+</dt>
+<dd>CDI integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator-osgi%7C6.2.0.CR1%7C">
+org.hibernate.validator:hibernate-validator-osgi:6.2.0.CR1
+</a>
+</dt>
+<dd>OSGi integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator-annotation-processor%7C6.2.0.CR1%7C">
+org.hibernate.validator:hibernate-validator-annotation-processor:6.2.0.CR1
+</a>
+</dt>
+<dd>Annotation processor</dd>
+</dl>
+</div>
+<div class="five wide column divided">
+<h3>Zip archive</h3>
+<p>
+Direct download is available from SourceForge:
+</p>
+<p>
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/6.2.0.CR1/hibernate-validator-6.2.0.CR1-dist.zip/download" title="Download">
+<i class="icon cloud download"></i>
+Download Zip archive
+</a>
+</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="within-apache-lucene"><a class="anchor" href="#within-apache-lucene"></a>Within Apache Lucene</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Lucene&#8217;s <code>QueryParser</code> changed package from <code>org.apache.lucene.queryParser.QueryParser</code> to
-<code>org.apache.lucene.queryparser.classic.QueryParser</code></p>
-</li>
-<li>
-<p>Many popular <code>Analyzer</code>, <code>TokenFilter</code> and <code>CharFilter</code> classes moved. Refer to the
-<a href="http://lucene.apache.org/core/4_10_2/">Lucene API docs</a> to find the appropriate replacement.</p>
-</li>
-<li>
-<p>Solr utilities classes, for example
-<code><a href="http://lucene.apache.org/core/4_10_2/analyzers-common/org/apache/lucene/analysis/util/TokenizerFactory.html">TokenizerFactory</a></code> or
-<code><a href="http://lucene.apache.org/core/4_10_2/analyzers-common/org/apache/lucene/analysis/util/TokenFilterFactory.html">TokenFilterFactory</a></code>,
-were moved into Apache Lucene. For this reason we could remove the dependency to Apache Solr.
-Good news is a simplified dependency graph! The bad news, if you depend on some of these utilities
-or custom analyzers, you&#8217;ll need to find the new (package) name</p>
-</li>
-</ul>
+<p>
+More information about specific releases (announcements, download links) can be found
+<a href="#releases">
+here.
+</a>
+</p>
+<h2 id="getting_started">Getting started</h2>
+<p>
+If you want to start using the library, please refer to the getting started guide:
+</p>
+<p>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/html_single/#validator-gettingstarted">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/6.2/reference/en-US/pdf/hibernate_validator_reference.pdf#validator-gettingstarted">
+<i class="icon file pdf outline"></i>
+PDF
+</a>
+</p>
+<h2 id="migrate">Migrating</h2>
+<p>
+If you need to upgrade from a previous series, please refer to the migration guide:
+</p>
+<p>
+<a class="ui right labeled icon button" href="/validator/documentation/migration-guide/#6-2-x">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+<h2 id="whats-new">What's new</h2>
+<p>
+Latest release announcement (2020-12-08):
+<a href="https://in.relation.to/2020/12/08/hibernate-validator-700-62-cr1-released/">
+6.2.0.CR1.
+</a>
+</p>
+<p>
+A detailed list of new features, improvements and fixes in this series can be found
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(6.2.0.CR1)%20ORDER%20BY%20updated">
+on our issue tracker.
+</a>
+</p>
+<div class="sect2">
+<h3 id="jakarta-bean-validation"><a class="anchor" href="#jakarta-bean-validation"></a>Jakarta Bean Validation</h3>
+<div class="paragraph">
+<p>Hibernate Validator 6.2 uses the Jakarta Bean Validation API artifact i.e. <code>jakarta.validation:jakarta.validation-api</code> in version 2 and with the <code>javax.validation.*</code> package name.</p>
 </div>
+<div class="paragraph">
+<p>No API changes.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mapping"><a class="anchor" href="#mapping"></a>Mapping</h3>
-<div class="sect3">
-<h4 id="id-fields-of-embedded-relations-no-longer-indexed-by-default"><a class="anchor" href="#id-fields-of-embedded-relations-no-longer-indexed-by-default"></a>Id fields of embedded relations no longer indexed by default</h4>
+<h3 id="expression-language-overhaul"><a class="anchor" href="#expression-language-overhaul"></a>Expression Language overhaul</h3>
 <div class="paragraph">
-<p>When using an <code>@IndexedEmbedded</code> annotation to include fields from a related entity, we would include the 'id' of the related entity.
-These 'id' fields are no longer included by default, but you can enable the inclusion by using the <code>includeEmbeddedObjectId</code> attribute of  the <code>@IndexedEmbedded</code> annotation.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="java"><span style="color:#007">@IndexedEmbedded</span>(includeEmbeddedObjectId=<span style="color:#069">true</span>)</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="number-and-date-index-format"><a class="anchor" href="#number-and-date-index-format"></a>Number and date index format</h4>
-<div class="paragraph">
-<p>Numbers and dates now indexed as numeric fields by default.</p>
+<p>Expression Language disabled by default for custom violations.</p>
 </div>
 <div class="paragraph">
-<p>Properties of type <code>Date</code>, <code>Calendar</code> as well as <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code> and their corresponding
-wrappers, are no longer indexed as strings. Instead, they are now indexed using Lucene&#8217;s appropriate
-numeric encoding.</p>
-</div>
-<div class="paragraph">
-<p>The 'id' fields are an exception to this rule: even when these are represented by a numeric type, they will still be indexed as a string keyword by default.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<code>Date</code> and <code>Calendar</code> instances are encoded as <code>long</code> value representing the number of
-milliseconds since <em>January 1, 1970, 00:00:00 GMT</em>.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-The use of <code>@NumericField</code> becomes now obsolete, unless you want to specify a custom precision
-for the numeric encoding.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>You can still keep the old (string based) index format by explicitly specifying a string encoding
-field bridge. In the case of integers for example
-<code><a href="http://docs.jboss.org/hibernate/search/5.0/api/org/hibernate/search/bridge/builtin/IntegerBridge.html">org.hibernate.search.bridge.builtin.IntegerBridge</a></code>.
-Check the package <code><a href="http://docs.jboss.org/hibernate/search/5.0/api/org/hibernate/search/bridge/builtin/package-summary.html">org.hibernate.search.bridge.builtin</a></code> for
-other publicly available field bridges.</p>
-</div>
-<div class="paragraph">
-<p>For dates and calendars you can switch the indexing format via the new
-<code><a href="http://docs.jboss.org/hibernate/search/5.0/api/org/hibernate/search/annotations/EncodingType.html">EncodingType</a></code>
-enum, for example <code>@DateBridge(encoding=EncodingType.STRING)</code> resp.
-<code>@CalendarBridge(encoding=EncodingType.STRING)</code>.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-The change of encoding for number and dates is probably the most important user facing
-change. If you have any query which targets a previously string encoded field, but
-is not encoded numerically, you will need to update the query. Numeric fields must be searched with
-a <code><a href="https://lucene.apache.org/core/3_0_3/api/core/org/apache/lucene/search/NumericRangeQuery.html">NumericRangeQuery</a></code> (if you are using the Search query DSL, the right query should be created for
-you). Also make sure that all fields targeted by faceting need for now be string encoded.
-</td>
-</tr>
-</table>
-</div>
+<p>Ability to define the Expression Language features enabled for more safety.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="misc"><a class="anchor" href="#misc"></a>Misc</h3>
-<div class="sect3">
-<h4 id="fulltextindexeventlistener-now-final"><a class="anchor" href="#fulltextindexeventlistener-now-final"></a>FullTextIndexEventListener now final</h4>
+<h3 id="safehtml-removal"><a class="anchor" href="#safehtml-removal"></a>@SafeHtml removal</h3>
 <div class="paragraph">
-<p><code>FullTextIndexEventListener</code> is now a final class. If you are extending this class, you need to
-find an alternative approach for what you want to achieve. Maybe you can use an
-<code>EntityIndexingInterceptor</code>? If you cannot find a way to implement your use case
-- <a href="/community">contact us</a>.</p>
+<p>The <code>@SafeHtml</code> constraint marked as deprecated for a while has been dropped from the codebase.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="hibernate-search-analyzers-module-removed"><a class="anchor" href="#hibernate-search-analyzers-module-removed"></a>hibernate-search-analyzers module removed</h4>
-<div class="paragraph">
-<p>The module <em>hibernate-search-analyzers</em> was dropped from the repository and will no longer be
-included in upcoming release. It is obsolete and we recommend to depend on the appropriate
-Lucene artifact directly, for example <em>org.apache.lucene:lucene-analyzers-common</em>.</p>
+<h2 id="releases">Releases in this series</h2>
+<div class="ui stackable grid series-versions">
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="label orange ui version">
+6.2.0.CR1
+</span>
+</p>
+<p>
+<small class="ui label">2020-12-08</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Expression Language overhaul, @SafeHtml removal
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.validator%7Chibernate-validator%7C6.2.0.CR1%7C">
+org.hibernate.validator:hibernate-validator:6.2.0.CR1
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.validator%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A6.2.0.CR1">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/6.2.0.CR1/hibernate-validator-6.2.0.CR1-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(6.2.0.CR1)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2020/12/08/hibernate-validator-700-62-cr1-released/">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="jms-controller-api-changed"><a class="anchor" href="#jms-controller-api-changed"></a>JMS controller API changed</h4>
-<div class="paragraph">
-<p>The JMS backend was depending to <a href="/orm">Hibernate ORM</a>. This dependency was removed, so that the
-backend can be used in other (non ORM) environments as well. A consequence is that implementors of
-<code>org.hibernate.search.backend.impl.jms.AbstractJMSHibernateSearchController</code> will need to adjust to
-the new signature. This class is really considered internal. We suggest to take this class as an
-example instead of extending it.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="serviceregistry-api-updated"><a class="anchor" href="#serviceregistry-api-updated"></a>ServiceRegistry API updated</h4>
-<div class="paragraph">
-<p>The <code>org.hibernate.search.engine.service.spi.Service</code> SPI got refactored. If you where integrating
-with the old service contract, refer to the javadoc of
-<code><a href="http://docs.jboss.org/hibernate/search/5.0/api/org/hibernate/search/engine/service/spi/ServiceManager.html">ServiceManager</a></code>,
-<code><a href="http://docs.jboss.org/hibernate/search/5.0/api/org/hibernate/search/engine/service/spi/Service.html">Service</a></code>,
-<code><a href="http://docs.jboss.org/hibernate/search/5.0/api/org/hibernate/search/engine/service/spi/Startable.html">Startable</a></code>
-and <code><a href="http://docs.jboss.org/hibernate/search/5.0/api/org/hibernate/search/engine/service/spi/Stoppable.html">Stoppable</a></code>
-for details about the new contract.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 </div>
 
 </div>
@@ -1022,13 +973,13 @@ for details about the new contract.</p>
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href="../../.." title="Hibernate Search">Hibernate Search</a>
-<a class="item" href="../../../../validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="../../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="../../../../tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="../../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
-<a class="item" href="../../../../others" title="Other projects">Other projects</a>
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../.." title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -1042,7 +993,7 @@ for details about the new contract.</p>
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../../../community" title="Community resources">Community resources</a>
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
@@ -1052,7 +1003,7 @@ for details about the new contract.</p>
 <div class="five wide column sponsor">
 <div class="logo">
 <a href="https://www.redhat.com/">
-<img src="../../../../images/sponsored-by-redhat.svg" title="Red Hat">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
 </a>
 </div>
 </div>
