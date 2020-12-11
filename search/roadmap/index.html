@@ -22,7 +22,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1607680377" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1607682632" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -689,80 +689,9 @@ To learn more about what we introduced in our past releases, please consult the
 <div id="toc" class="toc">
 <div id="toctitle">Releases</div>
 <ul class="sectlevel1">
-<li><a href="#hibernate-search-6-0">Hibernate Search 6.0</a></li>
 <li><a href="#hibernate-search-6-1">Hibernate Search 6.1</a></li>
 <li><a href="#hibernate-search-6-x">Hibernate Search 6.x</a></li>
 </ul>
-</div>
-</div>
-<div class="sect1">
-<h2 id="hibernate-search-6-0"><a class="anchor" href="#hibernate-search-6-0"></a>Hibernate Search 6.0</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Compatible with Hibernate ORM 6, Apache Lucene 8, Elasticsearch 7.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">API overhaul</dt>
-<dd>
-<p>A significant API refresh is planned to better abstract from the Lucene API so that alternative backends such as Elasticsearch can be used without having Lucene on your classpath.
-This will also benefit Lucene users, as the abstraction should allow us to automatically apply more optimisations without the user needing to be a Lucene expert.</p>
-</dd>
-<dt class="hdlist1">More powerful bridges</dt>
-<dd>
-<p>The bridge APIs will have to change as part of the API overhaul,
-so we will take this opportunity to overhaul how bridges work, in order to make them more powerful.</p>
-<div class="paragraph">
-<p>There are multiple aspects we intend to address:
-* Custom (user-defined) bridge annotations, allowing to pass type-safe parameters, and not just strings
-* Better support for dirty checking optimization in bridges (class/type bridges in particular),
-by allowing bridges to declare what parts of the entity they use.
-* Better integration of bridges in the Search DSL:
-non-String fields should work without having to bypass bridges (<code>.ignoreFieldBridge()</code>) like in Search 5,
-bridges should be allowed to define precisely how to project their fields, &#8230;&#8203;</p>
-</div>
-</dd>
-<dt class="hdlist1">Upgrade to Apache Lucene 8</dt>
-<dd>
-<p>To provide the full power of some of the new features in Apache Lucene 8, some API changes are needed.
-This includes some API improvements which could have been useful since the upgrade to Lucene 5; since we only apply breaking API changes in major releases these had to wait.</p>
-</dd>
-<dt class="hdlist1">Upgrade to Elasticsearch 7</dt>
-<dd>
-<p>Elasticsearch 6 and above do not provide the ability to store multiple types in one index anymore.
-Hibernate Search 6 will address this, possibly by forcing to use different indexes for different types.
-Once this is done, we will add support for Elasticsearch 7.</p>
-</dd>
-<dt class="hdlist1">Nested documents for runtime joins</dt>
-<dd>
-<p>Expose Lucene&#8217;s index-time and query-time join capabilities.</p>
-</dd>
-<dt class="hdlist1">Temporary removal of non-essential features</dt>
-<dd>
-<p>Hibernate Search 6.0 is a major rewrite, which will take time.
-In order to make it available to at least some users as early as possible,
-one solution is to reduce the feature coverage of Hibernate Search 6 and only address essential use cases.
-We will temporarily remove some features that are not commonly used,
-or could not be used immediately due to integration constraints,
-and reintroduce them in a later 6.x.
-Note <strong>this is a temporary removal</strong>, we are just delaying some of the work to a later release.
-In particular:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>WildFly integration</p>
-</li>
-<li>
-<p>OSGi integration</p>
-</li>
-<li>
-<p>Clustering support (JMS/JGroups backends)</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
 </div>
 </div>
 <div class="sect1">
