@@ -22,7 +22,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1607679926" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1607680377" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -562,7 +562,7 @@ Hibernate Search
 <span>
 6.0 series
 </span>
-<span class="ui label tag orange">development</span>
+<span class="ui label tag green">stable</span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
@@ -576,7 +576,7 @@ Hibernate Search
 <div class="page-title small">
 <div class="ui container">
 <h4>
-API overhaul, more powerful bridges, smarter automatic indexing, nested documents, Lucene 8, Elasticsearch 7.
+API overhaul. Safer and more concise Search DSL, more powerful bridges, smarter automatic indexing, nested documents. Upgrades to Lucene 8 and Elasticsearch 7.
 </h4>
 </div>
 </div>
@@ -599,12 +599,10 @@ Overview
 <a class="item selected" href="/search/releases/6.0/">
 6.0
 &nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/search/releases/5.11/">
 5.11
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/search/releases/5.10/">
 5.10
@@ -773,15 +771,15 @@ Compatibility policy.
 Documentation for this specific series can be accessed through the links below:
 </p>
 <p>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/">
 <i class="icon file text outline"></i>
 HTML
 </a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/pdf/hibernate_search_reference.pdf">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/pdf/hibernate_search_reference.pdf">
 <i class="icon file pdf outline"></i>
 PDF
 </a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.0/api/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/api/">
 <i class="icon code outline"></i>
 API (JavaDoc)
 </a>
@@ -812,7 +810,7 @@ on the JBoss Wiki for more information on how to configure the JBoss Maven repos
 <p>
 You can find the Maven coordinates of all artifacts through the link below:
 <p>
-<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.CR2">
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Final">
 <i class="icon cloud cubes"></i>
 Maven artifacts
 </a>
@@ -823,44 +821,44 @@ Below are the Maven coordinates of the main artifacts.
 </p>
 <dl class="sparse">
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.CR2
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Final
 </a>
 </dt>
 <dd>Hibernate ORM mapper</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-backend-lucene:6.0.0.CR2
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-backend-lucene:6.0.0.Final
 </a>
 </dt>
 <dd>Lucene backend</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-backend-elasticsearch:6.0.0.CR2
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-backend-elasticsearch:6.0.0.Final
 </a>
 </dt>
 <dd>Elasticsearch backend</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch-aws%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-backend-elasticsearch-aws:6.0.0.CR2
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch-aws%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-backend-elasticsearch-aws:6.0.0.Final
 </a>
 </dt>
 <dd>Amazon IAM authentication for Elasticsearch</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-core%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-core:6.0.0.CR2
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-core%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-core:6.0.0.Final
 </a>
 </dt>
 <dd>Batch for Java (JSR-352) mass indexing job for the Hibernate ORM mapper - Core</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-jberet%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-jberet:6.0.0.CR2
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-jberet%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-jberet:6.0.0.Final
 </a>
 </dt>
 <dd>Batch for Java (JSR-352) mass indexing job for the Hibernate ORM mapper - JBeret specifics</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-v5migrationhelper-orm%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-v5migrationhelper-orm:6.0.0.CR2
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-v5migrationhelper-orm%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-v5migrationhelper-orm:6.0.0.Final
 </a>
 </dt>
 <dd>Helper for migrating from Hibernate Search 5 to Hibernate Search 6 (Hibernate ORM mapper + Lucene backend)</dd>
@@ -872,7 +870,7 @@ org.hibernate.search:hibernate-search-v5migrationhelper-orm:6.0.0.CR2
 Direct download is available from SourceForge:
 </p>
 <p>
-<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.CR2/hibernate-search-6.0.0.CR2-dist.zip/download" title="Download">
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Final/hibernate-search-6.0.0.Final-dist.zip/download" title="Download">
 <i class="icon cloud download"></i>
 Download Zip archive
 </a>
@@ -915,159 +913,300 @@ PDF
 </p>
 <h2 id="whats-new">What's new</h2>
 <p>
-Latest release announcement (2020-11-23):
-<a href="https://in.relation.to/2020/11/24/hibernate-search-6-0-0-CR2">
-6.0.0.CR2.
+Latest release announcement (2020-12-10):
+<a href="https://in.relation.to/2020/12/11/hibernate-search-6-0-0-Final">
+6.0.0.Final.
 </a>
 </p>
 <p>
 A detailed list of new features, improvements and fixes in this series can be found
-<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.CR2%2C%206.0.0.CR1%2C%206.0.0.Beta11%2C%206.0.0.Beta10%2C%206.0.0.Beta9%2C%206.0.0.Beta8%2C%206.0.0.Beta7%2C%206.0.0.Beta6%2C%206.0.0.Beta5%2C%206.0.0.Beta4%2C%206.0.0.Beta3%2C%206.0.0.Beta2%2C%206.0.0.Beta1%2C%206.0.0.Alpha9%2C%206.0.0.Alpha8%2C%206.0.0.Alpha7%2C%206.0.0.Alpha6%2C%206.0.0.Alpha5%2C%206.0.0.Alpha4%2C%206.0.0.Alpha3%2C%206.0.0.Alpha2%2C%206.0.0.Alpha1)%20ORDER%20BY%20updated">
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Final%2C%206.0.0.CR2%2C%206.0.0.CR1%2C%206.0.0.Beta11%2C%206.0.0.Beta10%2C%206.0.0.Beta9%2C%206.0.0.Beta8%2C%206.0.0.Beta7%2C%206.0.0.Beta6%2C%206.0.0.Beta5%2C%206.0.0.Beta4%2C%206.0.0.Beta3%2C%206.0.0.Beta2%2C%206.0.0.Beta1%2C%206.0.0.Alpha9%2C%206.0.0.Alpha8%2C%206.0.0.Alpha7%2C%206.0.0.Alpha6%2C%206.0.0.Alpha5%2C%206.0.0.Alpha4%2C%206.0.0.Alpha3%2C%206.0.0.Alpha2%2C%206.0.0.Alpha1)%20ORDER%20BY%20updated">
 on our issue tracker.
 </a>
 </p>
 <div class="sect2">
 <h3 id="dependency-upgrades"><a class="anchor" href="#dependency-upgrades"></a>Dependency upgrades</h3>
-<div class="sect3">
-<h4 id="orm-version"><a class="anchor" href="#orm-version"></a>Hibernate ORM</h4>
-<div class="paragraph">
+<div id="orm-version" class="dlist">
+<dl>
+<dt class="hdlist1">Hibernate ORM</dt>
+<dd>
 <p>Hibernate Search 6 relies on Hibernate ORM 5.4.</p>
-</div>
 <div class="paragraph">
 <p>Note that only Hibernate ORM 5.4.4.Final or later will work correctly;
 5.4.3.Final and earlier will not.</p>
 </div>
+</dd>
+</dl>
 </div>
-<div class="sect3">
-<h4 id="lucene-8"><a class="anchor" href="#lucene-8"></a>Lucene 8</h4>
-<div id="lucene-7" class="paragraph">
+<div id="lucene-8" class="dlist">
+<dl>
+<dt class="hdlist1"><a id="lucene-7"></a>Lucene 8</dt>
+<dd>
 <p>The Lucene backend now uses Lucene 8.7.</p>
+</dd>
+</dl>
 </div>
-</div>
-<div class="sect3">
-<h4 id="elasticsearch-7"><a class="anchor" href="#elasticsearch-7"></a>Elasticsearch 7</h4>
-<div id="elasticsearch-6" class="paragraph">
+<div id="elasticsearch-7" class="dlist">
+<dl>
+<dt class="hdlist1"><a id="elasticsearch-6"></a>Elasticsearch 7</dt>
+<dd>
 <p>The Elasticsearch backend now works with Elasticsearch 5.6, 6.8 or 7.10.
 Support for older versions of Elasticsearch was dropped.</p>
-</div>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
-<h3 id="api-refresh"><a class="anchor" href="#api-refresh"></a>API refresh</h3>
+<h3 id="api-refresh"><a class="anchor" href="#api-refresh"></a>API overhaul</h3>
 <div class="paragraph">
-<p>A lot of APIs have been changed, for multiple reasons.</p>
-</div>
-<div class="sect3">
-<h4 id="more-consistent-api-types"><a class="anchor" href="#more-consistent-api-types"></a>More consistent API types</h4>
-<div class="paragraph">
-<p>The API types consistently use the <code>Search</code> prefix: no more mixing <code>FullText</code> with <code>Search</code> or simply no prefix.</p>
+<p>This is perhaps the most important aspect of Hibernate Search 6: most APIs have changed.
+We didn&#8217;t take this decision lightly, and we don&#8217;t intend to do this again anytime soon:
+at this point, breaking APIs was necessary for Hibernate Search to keep improving.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, the <code>SearchQuery</code> type (previously <code>FullTextQuery</code>)
-now <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-query-fetching-results">defines its own methods</a>
-instead of extending JPA&#8217;s <code>TypeQuery</code>,
-highlighting the fact that it targets an index and not a database, and making it a friendlier API.
-It is still possible to
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single//#search-dsl-query-object">create an adapter that implements JPA&#8217;s <code>TypeQuery</code></a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="no-more-lucene-apis-leaking-from-hibernate-search-apis"><a class="anchor" href="#no-more-lucene-apis-leaking-from-hibernate-search-apis"></a>No more Lucene APIs leaking from Hibernate Search APIs</h4>
-<div class="paragraph">
-<p>Hibernate Search APIs now abstract from the Lucene APIs,
-so that alternative backends such as Elasticsearch can be used without having Lucene on your classpath.</p>
+<p>The primary goal of this overhaul was to abstract away Lucene APIs,
+so that the Elasticsearch backend can become a first-class citizen,
+implemented without any hacks or unnecessary dependencies.</p>
 </div>
 <div class="paragraph">
-<p>This should also improve the ability of the Hibernate Search project
-to upgrade Lucene as soon as new versions are released.
-In Hibernate Search 5, as Lucene was "part of" Hibernate Search APIs,
-we were severely limited when we wanted to upgrade to a newer Lucene version,
-because any breaking change in Lucene could mean a breaking change for Hibernate Search users, too.
-Now that Lucene APIs are no longer necessary to use Hibernate Search,
-upgrades should be faster.</p>
+<p>It goes without saying, but the Lucene backend will remain as important as ever.
+In fact, abstracting away Lucene APIs is good for the Lucene backend too:
+it will give the Hibernate Search project the ability
+to upgrade Lucene as soon as new versions are released.</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="new-search-dsl"><a class="anchor" href="#new-search-dsl"></a>New Search DSL</h4>
 <div class="paragraph">
-<p>The <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl">Search DSL</a> is brand new, with several improvements:</p>
+<p>Another benefit of the overhaul: since APIs had to change anyway, we took that opportunity to implement
+long-overdue improvements that also required API changes.
+See the following sections to know more about these improvements.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="safer-more-concise-backend-agnostic-search-dsl"><a class="anchor" href="#safer-more-concise-backend-agnostic-search-dsl"></a>Safer, more concise, backend-agnostic Search DSL</h3>
+<div class="paragraph">
+<p>The <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl">Search DSL</a> is brand new, with several improvements:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Safer</dt>
+<dd>
 <div class="ulist">
 <ul>
 <li>
-<p>Ability to <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate">use lambdas</a>
+<p>Search hits <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-query-fetching-results">now have a type</a>,
+even when projecting thanks to the brand-new <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-projection">projection DSL</a>.</p>
+</li>
+<li>
+<p>The implementation for numeric predicates (e.g. <code>int</code>-based, <code>long</code>-based, <code>double</code>-based)
+is now determined from the type of the targeted field, instead of the type of arguments.
+This is safer when passing arguments with the wrong type:
+where Hibernate Search 5 would have generated a predicate that doesn&#8217;t match anything,
+Hibernate Search 6 will detect the type mismatch and will throw an exception.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">More concise</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Ability to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate">use lambdas</a>
 for more concise query definition,
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-boolean-lambda">even when queries are complex</a>.</p>
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-boolean-lambda">even when queries are complex</a>.</p>
 </li>
 <li>
-<p>Type-safe projections thanks to the brand-new <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-projection">projection DSL</a>.</p>
-</li>
-<li>
-<p>Various new features and improvements such as
-a new <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-exists"><code>exists</code> predicate</a>,
-the ability to <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-common-overriding-analysis">override analyzers on a per-predicate basis</a>, &#8230;&#8203;</p>
-</li>
-<li>
-<p>Injection of native predicates
-(<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-lucene-from-lucene-query"><code>org.apache.lucene.search.Query</code> for Lucene</a>,
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-elasticsearch-from-json">JSON for Elasticsearch</a>)
-within DSL-created predicates.
-This is not new for the Lucene integration, but it is for the Elasticsearch integration.
-See <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions">predicate extensions</a>.</p>
-</li>
-<li>
-<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/search-dsl-query-targeting-multiple">Simpler syntax for predicates when targeting multiple types</a> in a single query:
+<p><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/search-dsl-query-targeting-multiple">Simpler syntax for predicates when targeting multiple types</a> in a single query:
 instantiating multiple <code>QueryBuilders</code> is no longer needed,
 Hibernate Search takes into account that multiple types are targeted
 and automatically checks that targeted fields are compatible across all targeted indexes.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="bridge-2.0"><a class="anchor" href="#bridge-2.0"></a>Bridge 2.0</h4>
-<div class="paragraph">
-<p>The bridge APIs had to change as part of the API refresh,
-so we took this opportunity to overhaul bridge APIs to make bridges more powerful.</p>
-</div>
-<div class="paragraph">
-<p>The new Bridge APIs are completely different, but with a lot of improvements:</p>
-</div>
+</dd>
+<dt class="hdlist1">More consistent</dt>
+<dd>
 <div class="ulist">
 <ul>
 <li>
-<p>bridges targeting non-String fields are now first-class citizens:
-when targeting bridge-declared, non-String fields in the Search DSL,
-you will no longer have to bypass bridges (<code>.ignoreFieldBridge()</code>) like you had to in Search 5;</p>
+<p>The API types consistently use the <code>Search</code> prefix: no more mixing <code>FullText</code> with <code>Search</code> or simply no prefix.</p>
 </li>
 <li>
-<p>bridges can <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge-index-field-type-dsl">define field types precisely</a>,
-allowing in particular to pick an analyzer or to enable aggregation (faceting) on a bridge-declared field;</p>
-</li>
-<li>
-<p>bridges can <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge-bridgedelement-dependencies">declare the properties they rely on</a>,
-allowing Hibernate Search to reindex less frequently;</p>
-</li>
-<li>
-<p>bridges can <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge-index-field-dsl-dynamic">declare dynamic fields with a precise type</a>
-which the Search DSL will be aware of;</p>
-</li>
-<li>
-<p>bridges can be applied with <a href="{hibernateSearchDocUrl}#mapper-orm-custom-annotations">custom annotations</a>,
-allowing clearer mappings, especially when bridges are parameterized;</p>
-</li>
-<li>
-<p>and <a href="{hibernateSearchDocUrl}#mapper-orm-bridge">more</a>.</p>
+<p>The <code>SearchQuery</code> type (previously <code>FullTextQuery</code>)
+now <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-query-fetching-results">defines its own methods</a>
+instead of extending JPA&#8217;s <code>TypeQuery</code>,
+highlighting the fact that it targets an index and not a database, and making it a friendlier API.
+When necessary, it is still possible to
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single//#search-dsl-query-object">retrieve an adapter that implements JPA&#8217;s <code>TypeQuery</code></a>.</p>
 </li>
 </ul>
 </div>
+</dd>
+<dt class="hdlist1">Backend-agnostic by default, with backend-specific extensions</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>As explained in <a href="#api-refresh">API overhaul</a>, the Search DSL no longer exposes Lucene-specific types by default.
+When necessary, native Lucene queries can still be used (see below).</p>
+</li>
+<li>
+<p>Injection of native predicates
+(<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-extensions-lucene-from-lucene-query"><code>org.apache.lucene.search.Query</code> for Lucene</a>,
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-extensions-elasticsearch-from-json">JSON for Elasticsearch</a>)
+within DSL-created predicates.
+This is not new for the Lucene integration, but it is for the Elasticsearch integration.
+See <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-extensions">predicate extensions</a>.</p>
+</li>
+<li>
+<p>Injection of native <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-sort-extensions">sorts</a>
+and <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-aggregation-extensions">aggregations</a>
+within DSL-created Hibernate Search queries.</p>
+</li>
+<li>
+<p>Ability to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-query-elasticsearch-json">directly manipulate the JSON of Elasticsearch requests/responses</a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">More features</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>A new <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-id"><code>id</code> predicate</a>.</p>
+</li>
+<li>
+<p>A new <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-exists"><code>exists</code> predicate</a>.</p>
+</li>
+<li>
+<p>Ability to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-common-overriding-analysis">override analyzers on a per-predicate basis</a>.</p>
+</li>
+<li>
+<p>Better support for multi-valued fields for <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-sort-common-multi-value-mode">sorts</a>,
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-projection-field-multivalued">projections</a>
+and <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-aggregation">aggregations (faceting)</a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
-<h3 id="automatic-indexing"><a class="anchor" href="#automatic-indexing"></a>Easier to configure, more efficient automatic indexing</h3>
+<h3 id="mapping"><a class="anchor" href="#mapping"></a>Easier mapping</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Specialized <code>@*Field</code> annotations</dt>
+<dd>
+<p>Hibernate Search 6 offers separate <code>@*Field</code> annotations for each major field type:
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-directfieldmapping-annotations"><code>@GenericField</code></a> works in most cases,
+but you can access more options (analysis, &#8230;&#8203;)
+with <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-directfieldmapping-annotations-fulltextfield"><code>@FullTextField</code></a>,
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-directfieldmapping-annotations-keywordfield"><code>@KeywordField</code></a>,
+&#8230;&#8203;</p>
 <div class="paragraph">
-<p>In Hibernate Search 6, automatic indexing is easier to configure correctly:</p>
+<p>This way, each annotation offers the options that make sense for the selected field types,
+and only those options. No longer will you end up disabling analysis on a numeric field!</p>
 </div>
+</dd>
+<dt class="hdlist1">Simpler mapping of container types</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@*Field</code> annotations can be applied directly to <code>List&lt;String&gt;</code> or <code>OptionalInt</code>
+in order to index the "contained" elements,
+thanks to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-containerextractor">container extractors</a>.</p>
+</li>
+<li>
+<p>For more complex types (e.g. <code>Map&lt;String, Integer&gt;</code>),
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#_explicit_container_extraction">the container extractor can be selected explicitly</a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">More features</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Ability to define a <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-directfieldmapping-search-analyzer"><code>searchAnalyzer</code></a>,
+to analyze search queries differently from indexed text (useful for auto-complete in particular).</p>
+</li>
+<li>
+<p>Ability to map scaled numbers (<code>BigDecimal</code>/<code>BigInteger</code>)
+with <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-directfieldmapping-annotations-scalednumberfield"><code>@ScaledNumberField</code></a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bridge-2.0"><a class="anchor" href="#bridge-2.0"></a>More powerful, backend-agnostic bridges</h3>
+<div class="paragraph">
+<p>The new Bridge APIs are different and vastly improved.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Full control over field definitions</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Bridges can <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-bridge-index-field-type-dsl">declare field types precisely</a>,
+allowing in particular to pick an analyzer or to enable aggregation (faceting) on a bridge-declared field.</p>
+</li>
+<li>
+<p>Bridges targeting non-String fields are now first-class citizens:
+when targeting bridge-declared, non-String fields in the Search DSL,
+you will no longer have to bypass bridges (<code>.ignoreFieldBridge()</code>) like you had to in Search 5.</p>
+</li>
+<li>
+<p>Bridges can <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-bridge-index-field-dsl-dynamic">declare dynamic fields with a precise type</a>
+which the Search DSL will be aware of.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Full control over automatic reindexing</dt>
+<dd>
+<p>Bridges can <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-bridge-bridgedelement-dependencies">declare the properties they rely on</a>,
+allowing Hibernate Search to reindex less frequently.</p>
+</dd>
+<dt class="hdlist1">Custom bridge annotations</dt>
+<dd>
+<p>Bridges can be applied with <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-custom-annotations">custom annotations</a>,
+allowing clearer mappings, especially when bridges are parameterized.</p>
+<div class="paragraph">
+<p>For more information about bridges, see <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-bridge">this section of the documentation</a>.</p>
+</div>
+</dd>
+<dt class="hdlist1">Backend-agnostic</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Field declarations do not involve any Lucene API by default.</p>
+</li>
+<li>
+<p>However, bridges can still declare native fields when necessary,
+be it with <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#backend-lucene-field-types-extension">Lucene</a>
+or <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#backend-elasticsearch-field-types-extension">Elasticsearch</a>.</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="automatic-indexing"><a class="anchor" href="#automatic-indexing"></a>Easier to configure, smarter automatic indexing</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Automatic resolution of reindexing requirements</dt>
+<dd>
 <div class="ulist">
 <ul>
 <li>
@@ -1081,57 +1220,150 @@ when the target of the association changes.</p>
 Hibernate Search 6 will report a mapping error on bootstrap,
 allowing you to detect risks of out-of-sync indexes early.</p>
 </li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Easy override of reindexing requirements</dt>
+<dd>
+<div class="ulist">
+<ul>
 <li>
-<p>You can still opt out of automatic reindexing locally
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-reindexing-reindexonupdate">using <code>@IndexingDependency(reindexOnUpdate = ReindexOnUpdate.NO)</code></a>.</p>
+<p>You can opt out of automatic reindexing locally using
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-reindexing-reindexonupdate"><code>@IndexingDependency(reindexOnUpdate = &#8230;&#8203;)</code></a>.</p>
 </li>
 <li>
-<p>Some want more performance with asynchronous automatic indexing,
-others prefer data safety and immediate visibility of indexed documents with synchronous automatic indexing.
-With Hibernate Search 6, this can all be configured
-with a <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-automatic-synchronization">single configuration property</a>.</p>
+<p>You can declare the dependencies of a <code>@Transient</code>, indexed property using
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-reindexing-derivedfrom"><code>@IndexingDependency(derivedFrom = &#8230;&#8203;)</code></a>.</p>
 </li>
 </ul>
 </div>
+</dd>
+<dt class="hdlist1">Easy configuration of indexing synchronization</dt>
+<dd>
+<p>Some want more performance with asynchronous automatic indexing,
+others prefer data safety and immediate visibility of indexed documents with synchronous automatic indexing.
+With Hibernate Search 6, this can all be configured
+with a <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexing-automatic-synchronization">single configuration property</a>.</p>
+</dd>
+<dt class="hdlist1">Smarter change processing</dt>
+<dd>
+<p>Hibernate Search 6 is smarter when processing changes on complex entity graphs.</p>
 <div class="paragraph">
-<p>Hibernate Search 6 is also more efficient when processing changes on complex entity graphs.
-When a property changes in an entity that is indexed-embedded in multiple other entities,
+<p>When a property changes in an entity that is indexed-embedded in multiple other entities,
 Hibernate Search 6 will only traverse associations to entities that are actually
 affected by the change, based on <code>@IndexedEmbedded(includePaths = &#8230;&#8203;)</code> and other metadata.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="schema-management"><a class="anchor" href="#schema-management"></a>More flexible schema management</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Manage the schema on startup</dt>
+<dd>
+<p>Just like Hibernate Search 5, Hibernate Search 6 can
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-schema-management-strategy">manage the schema for you on startup</a>.
+Or not: if this gets in the way, it can be disabled.</p>
+</dd>
+<dt class="hdlist1">Manage the schema on demand</dt>
+<dd>
+<p>Unlike Hibernate Search 5, Hibernate Search 6 offers
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-schema-management-manager">dedicated APIs to trigger schema operations on demand</a>.</p>
+</dd>
+<dt class="hdlist1">Manage the schema when mass indexing</dt>
+<dd>
+<p>The <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexing-massindexer">mass indexer</a>
+can drop and re-create the schema automatically: you only have to call
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexing-massindexer-parameters">.dropAndCreateSchemaOnStart(true)</a>.
+With the Elasticsearch backend, this can be significantly faster than removing all documents from an existing schema.</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="sect2">
 <h3 id="runtime-joins"><a class="anchor" href="#runtime-joins"></a>Runtime joins with nested documents</h3>
 <div class="paragraph">
-<p>Hibernate Search 6.0 introduces "nested" <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexedembedded-structure">fields</a>
-and <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-nested">predicates</a>,
+<p>Hibernate Search 6.0 introduces "nested" <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexedembedded-structure">fields</a>
+and <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-nested">predicates</a>,
 similar to the feature with the same name in Elasticsearch.</p>
 </div>
 <div class="paragraph">
 <p>This means in particular that indexed-embedded entities can be searched much more finely,
 for example searching for that one book whose author has a given first name <strong>and</strong> last name.
-With the right query, no longer will Hibernate Search return a book authored by "John Smith" and "Jane Doe"
+With the right mapping and the right query,
+no longer will Hibernate Search return a book co-authored by "John Smith" and "Jane Doe"
 when you were looking for "John Doe"!</p>
 </div>
 <div class="paragraph">
-<p>For details, see <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexedembedded-storage"><code>@IndexedEmbedded</code> storage type</a>
+<p>For details, see <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexedembedded-structure">Structuring embedded elements as nested documents</a>
 in the reference documentation.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="schema-management"><a class="anchor" href="#schema-management"></a>More flexible schema management options</h3>
-<div class="paragraph">
-<p>Creating Elasticsearch indexes with the right mapping can be a complex task.
-Doing it at the right time in a distributed application, even more so.</p>
-</div>
-<div class="paragraph">
-<p>Just like Hibernate Search 5, Hibernate Search 6 can manage the schema for you on startup,
-but you can also disable automatic schema management and access
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-schema-management-manager">dedicated APIs to trigger schema operations on demand</a>.</p>
+<h3 id="other"><a class="anchor" href="#other"></a>And more</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Better support for traditional JPA batch processes involving a periodic flush/clear:
+Hibernate Search 6 will
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexing-automatic-concepts-extraction-on-flush">buffer the documents to index upon flush()</a>,
+to avoid the dreaded <code>LazyInitializationException</code> that Hibernate Search 5 would trigger.</p>
+</li>
+<li>
+<p>Better reporting of errors on bootstrap:
+Hibernate Search will provide more context for each error,
+and will collect as many errors as possible before stopping.</p>
+</li>
+<li>
+<p>&#8230;&#8203;</p>
+</li>
+</ul>
 </div>
 </div>
 <h2 id="releases">Releases in this series</h2>
 <div class="ui stackable grid series-versions">
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+6.0.0.Final
+</span>
+</p>
+<p>
+<small class="ui label">2020-12-10</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+A few internal changes for the benefit of frameworks (Quarkus, ...), and upgrade to Hibernate ORM 5.4.25.Final. Otherwise identical to 6.0.0.CR2.
+</p>
+<p>
+<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Final
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.0.0.Final/hibernate-search-6.0.0.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.0.0.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2020/12/11/hibernate-search-6-0-0-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
 <div class="ui row">
 <div class="three wide column">
 <p>
