@@ -19,7 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1609920956" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1609940775" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -543,9 +543,7 @@ Follow us
 var displayed_series = [];
 displayed_series.push('7.0');
 displayed_series.push('6.2');
-displayed_series.push('6.1');
 displayed_series.push('6.0');
-displayed_series.push('5.4');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -565,15 +563,15 @@ Documentation
 </div>
 <div class="column four wide middle aligned">
 <div class="jumbotron-button">
-<a class="ui small right labeled icon button" href="https://docs.jboss.org/hibernate/validator/6.1/reference/en-US/html_single/#validator-gettingstarted">
+<a class="ui small right labeled icon button" href="https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/#validator-gettingstarted">
 <i class="right arrow icon"></i>
 Getting started
 </a>
 </div>
 <div class="jumbotron-button">
-<a class="ui small right labeled icon button green" href="https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/">
+<a class="ui small right labeled icon button green" href="https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/">
 <i class="right arrow icon"></i>
-Get documentation for 6.1
+Get documentation for 7.0
 </a>
 </div>
 
@@ -602,23 +600,13 @@ Overview
 <a class="item" href="/validator/releases/7.0/">
 7.0
 &nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/validator/releases/6.2/">
 6.2
-&nbsp;&nbsp;
-<span class="ui label orange">development</span>
-</a>
-<a class="item" href="/validator/releases/6.1/">
-6.1
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/validator/releases/6.0/">
 6.0
-</a>
-<a class="item" href="/validator/releases/5.4/">
-5.4
 </a>
 </div>
 </div>
@@ -687,10 +675,10 @@ Released under the
 <div class="thirteen wide column">
 <p>
 <span class="ui label large">
-<strong>7.0.0.CR1</strong>
-<span class="detail">2020-12-08</span>
+<strong>7.0.0.Final</strong>
+<span class="detail">2020-12-23</span>
 </span>
-<span class="ui tag label orange">development</span>
+<span class="ui tag label green">stable</span>
 </p>
 <p>
 Jakarta Bean Validation 3.0, jakarta.* packages
@@ -699,15 +687,15 @@ Jakarta Bean Validation 3.0, jakarta.* packages
 <span class="ui button disabled">
 Reference
 </span>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/html_single/">
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/">
 <i class="icon file text outline"></i>
 HTML
 </a>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/7.0/reference/en-US/pdf/hibernate_validator_reference.pdf">
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/stable/validator/reference/en-US/pdf/hibernate_validator_reference.pdf">
 <i class="icon file pdf outline"></i>
 PDF
 </a>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/7.0/api/">
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/stable/validator/api/">
 <i class="icon code outline"></i>
 API (JavaDoc)
 </a>
@@ -743,10 +731,10 @@ HTML
 <div class="thirteen wide column">
 <p>
 <span class="ui label large">
-<strong>6.2.0.CR1</strong>
-<span class="detail">2020-12-08</span>
+<strong>6.2.0.Final</strong>
+<span class="detail">2020-12-23</span>
 </span>
-<span class="ui tag label orange">development</span>
+<span class="ui tag label green">stable</span>
 </p>
 <p>
 Keep javax.* packages, Expression Language overhaul, @SafeHtml removal
@@ -786,62 +774,6 @@ PDF
 Migration guide
 </span>
 <a class="ui right labeled icon button primary" href="/validator/documentation/migration-guide/#6-2-x">
-<i class="icon file text outline"></i>
-HTML
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<span class="ui label series">6.1</span>
-</div>
-<div class="thirteen wide column">
-<p>
-<span class="ui label large">
-<strong>6.1.7.Final</strong>
-<span class="detail">2020-12-16</span>
-</span>
-<span class="ui tag label green">stable</span>
-</p>
-<p>
-Jakarta Bean Validation, new Quarkus-tailored bootstrap
-</p>
-<p>
-<span class="ui button disabled">
-Reference
-</span>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/">
-<i class="icon file text outline"></i>
-HTML
-</a>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/stable/validator/reference/en-US/pdf/hibernate_validator_reference.pdf">
-<i class="icon file pdf outline"></i>
-PDF
-</a>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/stable/validator/api/">
-<i class="icon code outline"></i>
-API (JavaDoc)
-</a>
-</p>
-<p>
-<span class="ui button disabled">
-Getting started guide
-</span>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/6.1/reference/en-US/html_single/#validator-gettingstarted">
-<i class="icon file text outline"></i>
-HTML
-</a>
-<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/6.1/reference/en-US/pdf/hibernate_validator_reference.pdf#validator-gettingstarted">
-<i class="icon file pdf outline"></i>
-PDF
-</a>
-</p>
-<p>
-<span class="ui button disabled">
-Migration guide
-</span>
-<a class="ui right labeled icon button primary" href="/validator/documentation/migration-guide/#6-1-x">
 <i class="icon file text outline"></i>
 HTML
 </a>
@@ -904,6 +836,83 @@ HTML
 </p>
 </div>
 </div>
+</div>
+<p>
+<a class="ui button right labeled icon" href="javascript: void(0)" id="older-series-button">
+<i class="icon snowflake"></i>
+<span>See older series</span>
+</a>
+</p>
+<script>
+  $(document).ready(function() {
+    $('#older-series-button').click(function() {
+      $('#older-series').slideToggle(400, function() {
+      });
+      var buttonText = $('#older-series-button span');
+      buttonText.text() == 'See older series' ?
+        buttonText.text("Hide older series") :
+        buttonText.text("See older series");
+    });
+  });
+</script>
+<div id="older-series">
+<div class="ui grid documentation-versions">
+<div class="ui row">
+<div class="three wide column">
+<span class="ui label series">6.1</span>
+</div>
+<div class="thirteen wide column">
+<p>
+<span class="ui label large">
+<strong>6.1.7.Final</strong>
+<span class="detail">2020-12-16</span>
+</span>
+<span class="ui tag label green">stable</span>
+</p>
+<p>
+Jakarta Bean Validation, new Quarkus-tailored bootstrap
+</p>
+<p>
+<span class="ui button disabled">
+Reference
+</span>
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/6.1/reference/en-US/html_single/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/6.1/reference/en-US/pdf/hibernate_validator_reference.pdf">
+<i class="icon file pdf outline"></i>
+PDF
+</a>
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/6.1/api/">
+<i class="icon code outline"></i>
+API (JavaDoc)
+</a>
+</p>
+<p>
+<span class="ui button disabled">
+Getting started guide
+</span>
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/6.1/reference/en-US/html_single/#validator-gettingstarted">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button primary" href="https://docs.jboss.org/hibernate/validator/6.1/reference/en-US/pdf/hibernate_validator_reference.pdf#validator-gettingstarted">
+<i class="icon file pdf outline"></i>
+PDF
+</a>
+</p>
+<p>
+<span class="ui button disabled">
+Migration guide
+</span>
+<a class="ui right labeled icon button primary" href="/validator/documentation/migration-guide/#6-1-x">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+</div>
+</div>
 <div class="ui row">
 <div class="three wide column">
 <span class="ui label series">5.4</span>
@@ -960,27 +969,6 @@ HTML
 </p>
 </div>
 </div>
-</div>
-<p>
-<a class="ui button right labeled icon" href="javascript: void(0)" id="older-series-button">
-<i class="icon snowflake"></i>
-<span>See older series</span>
-</a>
-</p>
-<script>
-  $(document).ready(function() {
-    $('#older-series-button').click(function() {
-      $('#older-series').slideToggle(400, function() {
-      });
-      var buttonText = $('#older-series-button span');
-      buttonText.text() == 'See older series' ?
-        buttonText.text("Hide older series") :
-        buttonText.text("See older series");
-    });
-  });
-</script>
-<div id="older-series">
-<div class="ui grid documentation-versions">
 <div class="ui row">
 <div class="three wide column">
 <span class="ui label series">5.3</span>
