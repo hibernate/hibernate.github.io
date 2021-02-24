@@ -21,7 +21,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1614155240" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1614157712" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -1339,8 +1339,13 @@ and will collect as many errors as possible before stopping.</p>
 Bugfixes, upgrade to ORM 5.4.28.Final
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.2.Final%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.2.Final
+<a class="ui small right labeled icon button" href="#get-it">
+<i class="right arrow icon"></i>
+How to get it
+</a>
+<a class="ui small right labeled icon button" href="#getting_started">
+<i class="right arrow icon"></i>
+Getting started
 </a>
 </p>
 <p>
@@ -1379,11 +1384,6 @@ Release announcement
 Bugfixes, upgrade to ORM 5.4.27.Final
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.1.Final%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.1.Final
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.1.Final">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1417,11 +1417,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 A few internal changes for the benefit of frameworks (Quarkus, ...), and upgrade to Hibernate ORM 5.4.25.Final. Otherwise identical to 6.0.0.CR2.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Final%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Final
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Final">
@@ -1459,11 +1454,6 @@ Release announcement
 Workaround for applications hanging on startup with Spring Boot 2.3+, type parameters for type bridges and property bridges, URI-based configuration for target Elasticsearch hosts, upgrade to Hibernate ORM 5.4.24.Final, Lucene 8.7, Elasticsearch 7.10.
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.CR2%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.CR2
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.CR2">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1497,11 +1487,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 First release candidate for Hibernate Search 6. Compared to Beta11: Batch for Java (JSR-352) integration for the ORM mapper, built-in analyzer definitions for Lucene, total hit count on scrolls, optional path prefix for Elasticsearch, upgrade to Hibernate ORM 5.4.23.Final.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.CR1%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.CR1
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.CR1">
@@ -1539,11 +1524,6 @@ Release announcement
 Default analyzer, ReindexOnUpdate.SHALLOW to limit automatic reindexing to same-entity updates only, new implementation for AWS IAM authentication, migration helper for applications moving from Search 5 to Search 6, upgrades to Lucene 8.6.2 and Hibernate ORM 5.4.22.Final
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta11%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta11
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta11">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1577,11 +1557,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Total hit count threshold, conditional indexing, per-index analyzer definitions for Elasticsearch, better timeouts, upgrades to Lucene 8.6.1, Elasticsearch 7.9.0 and Hibernate ORM 5.4.21.Final
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta10%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta10
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta10">
@@ -1619,11 +1594,6 @@ Release announcement
 Simpler configuration, scrolling, projections on multi-valued fields, complete documentation, upgrades to Lucene 8.6.0, Elasticsearch 7.8.0 and Hibernate ORM 5.4.19.Final
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta9%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta9
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta9">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1657,11 +1627,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Entity graphs in search queries, @Indexed becomes inherited, upgrades to Lucene 8.5.2, Elasticsearch 7.7.0 and Hibernate ORM 5.4.17.Final
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta8%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta8
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta8">
@@ -1699,11 +1664,6 @@ Release announcement
 Better sorts/aggregations on multi-valued/nested fields, dynamic index fields, index metamodel, low-level configuration of the Lucene backend, upgrade to Hibernate ORM 5.4.15.Final
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta7%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta7
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta7">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1737,11 +1697,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Bugfixes, schema management configuration and API at the mapper level, sorts on multi-valued fields, simpler and configurable indexing queues, implicit nested predicates, offline startup for Elasticsearch, upgrades to Lucene 8.5, Elasticsearch 7.6.1 and Hibernate ORM 5.4.13.Final
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta6%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta6
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta6">
@@ -1779,11 +1734,6 @@ Release announcement
 Aliases for Elasticsearch indexes, delayed commits and NRT for Lucene, renaming of a few Search DSL methods, upgrades to Lucene 8.4, Elasticsearch 7.6 and Hibernate ORM 5.4.12.Final.
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta5%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta5
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta5">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1817,11 +1767,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Fixed a performance regression in the Lucene backend, new MassIndexingFailureHandler for custom behavior on failure during mass indexing.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta4%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta4
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta4">
@@ -1859,11 +1804,6 @@ Release announcement
 Schema improvements, deep customization of Elasticsearch search requests, more powerful bridge definitions, search query timeouts, upgrades to Lucene 8.3.0, Elasticsearch 7.5 and Hibernate ORM 5.4.10.Final.
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta3%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta3
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta3">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1897,11 +1837,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Search analyzers, improved background failure handling, upgrades to Elasticsearch 7.4 and Hibernate ORM 5.4.7.Final.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta2%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta2
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta2">
@@ -1939,11 +1874,6 @@ Release announcement
 Consistent API expected to remain stable, complete documentation for major features, aggregations.
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Beta1%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Beta1
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Beta1">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -1977,11 +1907,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Correct handling of session flushing and clearing, static sharding, upgrades to Elasticsearch 7.3, Lucene 8.2 and Hibernate ORM 5.4.4.Final
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha9%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha9
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha9">
@@ -2019,11 +1944,6 @@ Release announcement
 Restored configuration options for entity loading and Lucene index storage, simpler and more powerful bridge APIs, upgrades to Elasticsearch 7.2 and Lucene 8.1
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha8%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha8
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha8">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -2057,11 +1977,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Missing index field type parameters restored, explicit indexing APIs restored, upgrade to Elasticsearch 6.8 and 7.1.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha7%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha7
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha7">
@@ -2099,11 +2014,6 @@ Release announcement
 Decent performance for Lucene index access, indexing BigDecimal and BigInteger, less verbose search DSL, configuration of on-commit synchronization for automatic indexing, other bugfixes and improvements.
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha6%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha6
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha6">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -2137,11 +2047,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 "indexNullAs" feature restored, API to declare dependencies in bridges, Elasticsearch 6.7 and 7.0, other bugfixes and improvements.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha5%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha5
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha5">
@@ -2179,11 +2084,6 @@ Release announcement
 "exists" predicate, DSL converter bypass and analyzer override in predicates, upgrade to Lucene 8, Elasticsearch AWS integration restored, other bugfixes and improvements.
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha4%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha4
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha4">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -2217,11 +2117,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 More field types, more predicates, more consistent and less verbose API, other bugfixes and improvements.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha3%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha3
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha3">
@@ -2259,11 +2154,6 @@ Release announcement
 Mass indexer, Elasticsearch index lifecycle, efficient work orchestration in Elasticsearch, more projections, shorter annotation names, settings improvements.
 </p>
 <p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha2%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha2
-</a>
-</p>
-<p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha2">
 <i class="icon cloud cubes"></i>
 Maven artifacts
@@ -2297,11 +2187,6 @@ Release announcement
 <div class="thirteen wide column">
 <p>
 Initial implementation: a few field types only, a few predicates/sorts/projections only, sub-optimal work orchestration, minimal documentation.
-</p>
-<p>
-<a class="ui label blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.0.0.Alpha1%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.0.0.Alpha1
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.0.0.Alpha1">
