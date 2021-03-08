@@ -19,7 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1615217685" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1615235301" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -679,7 +679,7 @@ including:</p>
 <p>Almost every operation of the <code>Session</code> and <code>StatelessSession</code> APIs</p>
 </li>
 <li>
-<p>Almost every ORM mapping annotation except for <code>@ManyToMany</code></p>
+<p>Almost every ORM mapping annotation</p>
 </li>
 <li>
 <p>HQL, native SQL, and <code>Criteria</code> queries</p>
@@ -726,7 +726,7 @@ and the Hibernate bytecode enhancer</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Db2, MySQL, and PostgreSQL</p>
+<p>PostgreSQL, MySQL, MariaDB, Db2, and CockroachDB.</p>
 </li>
 </ul>
 </div>
@@ -736,10 +736,15 @@ and the Hibernate bytecode enhancer</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>@ManyToMany</code></p>
+<p>Automatic update or validation of an existing database schema
+without requiring the use of JDBC.</p>
 </li>
 <li>
-<p>Hi/lo (block) identifier generation</p>
+<p>The annotation <code>@org.hibernate.annotations.Source</code> for database-generated
+<code>@Version</code> properties.</p>
+</li>
+<li>
+<p>The annotation <code>@org.hibernate.annotations.CollectionId</code>.</p>
 </li>
 <li>
 <p>Support for SQL Server via the Vert.x 4 client library</p>
