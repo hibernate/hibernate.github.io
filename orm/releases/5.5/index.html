@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>5.3 series - Hibernate Validator</title>
+<title>5.5 series - Hibernate ORM</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="author">
@@ -9,17 +9,17 @@
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
 <meta content="Hibernate" property="og:site_name">
-<meta content="https://hibernate.org/validator/releases/5.3/" property="og:url">
-<meta content="5.3 series - Hibernate Validator" property="og:title">
-<meta content="Express validation rules in a standardized way using annotation-based constraints and benefit from transparent integration with a wide variety of frameworks.
+<meta content="https://hibernate.org/orm/releases/5.5/" property="og:url">
+<meta content="5.5 series - Hibernate ORM" property="og:title">
+<meta content="Idiomatic persistence for Java and relational databases.
 " property="og:description">
 <meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
-<meta content="Express validation rules in a standardized way using annotation-based constraints and benefit from transparent integration with a wide variety of frameworks.
+<meta content="Idiomatic persistence for Java and relational databases.
 " name="description">
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1619791645" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1619791640" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -36,18 +36,18 @@
 <div class="ui vertical inverted sidebar left" id="mobile-menu">
 <div class="ui vertical fluid inverted text menu accordion">
 <div class="item">
-<a class="title">
+<a class="title active">
 <i class="grid icon database"></i>
 <i class="dropdown icon"></i>
 <strong>ORM</strong>
 </a>
-<div class="content">
+<div class="content active">
 <div class="menu internal-links">
 <a class="item" href="/orm/">
 <i class="grid icon home"></i>
 About
 </a>
-<a class="item" href="/orm/releases/">
+<a class="item active" href="/orm/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -188,18 +188,18 @@ CI
 </div>
 
 <div class="item">
-<a class="title active">
+<a class="title">
 <i class="grid icon checkmark box"></i>
 <i class="dropdown icon"></i>
 <strong>Validator</strong>
 </a>
-<div class="content active">
+<div class="content">
 <div class="menu internal-links">
 <a class="item" href="/validator/">
 <i class="grid icon home"></i>
 About
 </a>
-<a class="item active" href="/validator/releases/">
+<a class="item" href="/validator/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -523,9 +523,9 @@ Menu
 </div>
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
-<a class="item" href="/orm/">ORM</a>
+<a class="item active" href="/orm/">ORM</a>
 <a class="item" href="/search/">Search</a>
-<a class="item active" href="/validator/">Validator</a>
+<a class="item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
 <a class="item" href="/reactive/">Reactive</a>
@@ -545,9 +545,13 @@ Follow us
 
 <script>
 var displayed_series = [];
-displayed_series.push('7.0');
-displayed_series.push('6.2');
 displayed_series.push('6.0');
+displayed_series.push('5.5');
+displayed_series.push('5.4');
+displayed_series.push('5.3');
+displayed_series.push('5.2');
+displayed_series.push('5.1');
+displayed_series.push('5.0');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -556,14 +560,14 @@ displayed_series.push('6.0');
 <div class="column twelve wide middle aligned">
 <h1>
 <span>
-Hibernate Validator
+Hibernate ORM
 </span>
 </h1>
 <h2>
 <span>
-5.3 series
+5.5 series
 </span>
-<span class="ui label tag green">stable</span>
+<span class="ui label tag orange">development</span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
@@ -577,7 +581,7 @@ Hibernate Validator
 <div class="page-title small">
 <div class="ui container">
 <h4>
-Dynamic constraint payload, parameter relaxation, new api for programmatic constraint definition, new translations.
+Jakarta JPA, Bytecode enhancement
 </h4>
 </div>
 </div>
@@ -586,7 +590,7 @@ Dynamic constraint payload, parameter relaxation, new api for programmatic const
 <div class="ui stackable grid">
 <div class="column three wide computer only print hidden">
 <div class="ui fluid vertical menu">
-<a class="item" href="/validator/">
+<a class="item" href="/orm/">
 <i class="grid icon home"></i>
 About
 </a>
@@ -594,53 +598,117 @@ About
 Releases
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="/validator/releases/">
+<a class="item" href="/orm/releases/">
 Overview
 </a>
-<a class="item" href="/validator/releases/7.0/">
-7.0
+<a class="item" href="/orm/releases/6.0/">
+6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item selected" href="/orm/releases/5.5/">
+5.5
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/orm/releases/5.4/">
+5.4
 &nbsp;&nbsp;
 <span class="ui label green">latest stable</span>
 </a>
-<a class="item" href="/validator/releases/6.2/">
-6.2
+<a class="item" href="/orm/releases/5.3/">
+5.3
 </a>
-<a class="item" href="/validator/releases/6.0/">
-6.0
+<a class="item" href="/orm/releases/5.2/">
+5.2
+</a>
+<a class="item" href="/orm/releases/5.1/">
+5.1
+</a>
+<a class="item" href="/orm/releases/5.0/">
+5.0
 </a>
 </div>
 </div>
-<a class="item" href="/validator/documentation/">
-<i class="grid icon book"></i>
+<!-- / Here we want to display all the known versions -->
+<div class="ui dropdown link item">
 Documentation
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/orm/documentation/6.0/">
+6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
 </a>
-<a class="item" href="/validator/roadmap/">
+<a class="item" href="/orm/documentation/5.5/">
+5.5
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/orm/documentation/5.4/">
+5.4
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="/orm/documentation/5.3/">
+5.3
+</a>
+<a class="item" href="/orm/documentation/5.2/">
+5.2
+</a>
+<a class="item" href="/orm/documentation/5.1/">
+5.1
+</a>
+<a class="item" href="/orm/documentation/5.0/">
+5.0
+</a>
+<a class="item" href="/orm/documentation/4.3/">
+4.3
+</a>
+<a class="item" href="/orm/documentation/4.2/">
+4.2
+</a>
+</div>
+</div>
+<a class="item" href="/orm/books/">
+<i class="grid icon book"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
 <i class="grid icon road"></i>
 Roadmap
 </a>
-<a class="item" href="/validator/contribute/">
-<i class="grid icon users"></i>
-Contribute
-</a>
-<a class="item" href="/validator/tooling/">
+<a class="item" href="/orm/tooling/">
 <i class="grid icon wrench"></i>
 Tooling
 </a>
-<a class="item" href="/validator/support/">
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
 <i class="grid icon doctor"></i>
 Paid support
 </a>
-<a class="item" href="/validator/faq/">
-<i class="grid icon circle help"></i>
+<a class="item" href="/orm/faq/">
+<i class="grid icon help circle"></i>
 FAQ
 </a>
 </div>
 <div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-validator">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
 <i class="grid icon code"></i>
 Source code
 </a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HV">
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
 <i class="grid icon bug"></i>
 Issue tracker
 </a>
@@ -648,7 +716,7 @@ Issue tracker
 <i class="grid icon lock"></i>
 Security issue
 </a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
 <i class="grid icon comments"></i>
 Forum
 </a>
@@ -660,7 +728,7 @@ CI
 <hr>
 <div class="license">
 Released under the
-<a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
+<a href="https://hibernate.org/license/">LGPL V2.1</a>
 </div>
 
 </div>
@@ -684,11 +752,6 @@ Documentation
 <li>
 <a class="item" href="#get-it">
 How to get it
-</a>
-</li>
-<li>
-<a class="item" href="#getting_started">
-Getting started
 </a>
 </li>
 <li>
@@ -717,17 +780,17 @@ Java
 </a>
 </td>
 <td>
-6, 7 or 8
+8 or 11
 </td>
 </tr>
 <tr>
 <td>
-<a href="https://beanvalidation.org/">
-Bean Validation
+<a href="https://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
+JPA
 </a>
 </td>
 <td>
-1.1
+2.2
 </td>
 </tr>
 </table>
@@ -748,15 +811,11 @@ Compatibility policy.
 Documentation for this specific series can be accessed through the links below:
 </p>
 <p>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/5.5/userguide/html_single/Hibernate_User_Guide.html">
 <i class="icon file text outline"></i>
 HTML
 </a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/pdf/hibernate_validator_reference.pdf">
-<i class="icon file pdf outline"></i>
-PDF
-</a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.3/api/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/5.5/javadocs/">
 <i class="icon code outline"></i>
 API (JavaDoc)
 </a>
@@ -772,56 +831,20 @@ documentation page.
 <div class="eleven wide column">
 <h3>Maven, Gradle...</h3>
 <p>
-Maven artifacts of Hibernate Validator are published to
+Maven artifacts of Hibernate ORM are published to
 <a href="https://search.maven.org">
-Maven Central
+Maven Central.
 </a>
-and to the
-<a href="https://repository.jboss.org/nexus/index.html">
-JBoss Maven repository.
-</a>
-Refer to the
-<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
-on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
 </p>
 <p>
 You can find the Maven coordinates of all artifacts through the link below:
 <p>
-<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.6.Final">
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.5.0.Alpha1">
 <i class="icon cloud cubes"></i>
 Maven artifacts
 </a>
 </p>
 </p>
-<p>
-Below are the Maven coordinates of the main artifacts.
-</p>
-<dl class="sparse">
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator%7C5.3.6.Final%7C">
-org.hibernate:hibernate-validator:5.3.6.Final
-</a>
-</dt>
-<dd>Core implementation</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator-cdi%7C5.3.6.Final%7C">
-org.hibernate:hibernate-validator-cdi:5.3.6.Final
-</a>
-</dt>
-<dd>CDI integration</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator-osgi%7C5.3.6.Final%7C">
-org.hibernate:hibernate-validator-osgi:5.3.6.Final
-</a>
-</dt>
-<dd>OSGi integration</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-validator-annotation-processor%7C5.3.6.Final%7C">
-org.hibernate:hibernate-validator-annotation-processor:5.3.6.Final
-</a>
-</dt>
-<dd>Annotation processor</dd>
-</dl>
 </div>
 <div class="five wide column divided">
 <h3>Zip archive</h3>
@@ -829,7 +852,7 @@ org.hibernate:hibernate-validator-annotation-processor:5.3.6.Final
 Direct download is available from SourceForge:
 </p>
 <p>
-<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.6.Final/hibernate-validator-5.3.6.Final-dist.zip/download" title="Download">
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.5.0.Alpha1/hibernate-release-5.5.0.Alpha1.zip/download" title="Download">
 <i class="icon cloud download"></i>
 Download Zip archive
 </a>
@@ -842,81 +865,40 @@ More information about specific releases (announcements, download links) can be 
 here.
 </a>
 </p>
-<h2 id="getting_started">Getting started</h2>
-<p>
-If you want to start using the library, please refer to the getting started guide:
-</p>
-<p>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#validator-gettingstarted">
-<i class="icon file text outline"></i>
-HTML
-</a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/pdf/hibernate_validator_reference.pdf#validator-gettingstarted">
-<i class="icon file pdf outline"></i>
-PDF
-</a>
-</p>
 <h2 id="migrate">Migrating</h2>
 <p>
 If you need to upgrade from a previous series, please refer to the migration guide:
 </p>
 <p>
-<a class="ui right labeled icon button" href="/validator/documentation/migration-guide/#5-3-x">
+<a class="ui right labeled icon button" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
 <i class="icon file text outline"></i>
 HTML
 </a>
 </p>
 <h2 id="whats-new">What's new</h2>
 <p>
+Latest release announcement (2021-04-30):
+<a href="https://in.relation.to/2021/04/30/hibernate-orm-550-alpha1-release/">
+5.5.0.Alpha1.
+</a>
+</p>
+<p>
 A detailed list of new features, improvements and fixes in this series can be found
-<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.6.Final%2C%205.3.5.Final%2C%205.3.4.Final%2C%205.3.3.Final%2C%205.3.2.Final%2C%205.3.1.Final%2C%205.3.0.Final%2C%205.3.0.CR1%2C%205.3.0.Alpha1)%20ORDER%20BY%20updated">
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.5.0.Alpha1)%20ORDER%20BY%20updated">
 on our issue tracker.
 </a>
 </p>
 <div class="sect2">
-<h3 id="dynamic-payloads-for-constraints"><a class="anchor" href="#dynamic-payloads-for-constraints"></a>Dynamic payloads for constraints</h3>
+<h3 id="jakarta-jpa-work-in-progress"><a class="anchor" href="#jakarta-jpa-work-in-progress"></a>Jakarta JPA work in progress</h3>
 <div class="paragraph">
-<p>Hibernate Validator 5.3 allows you to enrich custom constraint violations with additional context data.</p>
-</div>
-<div class="paragraph">
-<p>Code examining constraint violations can access and interpret this data in a safer way than by parsing string-based constraint violation messages.</p>
-</div>
-<div class="paragraph">
-<p>You can find more information about this feature in the <a href="http://in.relation.to/2016/01/18/hibernate-validator-530-alpha1-out/">5.3.0.Alpha1 release announcement</a>.</p>
+<p>Hibernate ORM 5.5.0.Alpha1 adds new artifacts with the name suffix "-jakarta" like hibernate-core-jakarta.
+These artifacts are currently work in progress, but will eventually provide support for Jakarta JPA 3.0.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="relaxation-of-requirements-for-method-validation-in-class-hierarchies"><a class="anchor" href="#relaxation-of-requirements-for-method-validation-in-class-hierarchies"></a>Relaxation of requirements for method validation in class hierarchies</h3>
+<h3 id="bytecode-enhancement"><a class="anchor" href="#bytecode-enhancement"></a>Bytecode enhancement</h3>
 <div class="paragraph">
-<p>The Bean Validation specification defines a set of rules which apply when defining constraints on methods within class hierarchies.</p>
-</div>
-<div class="paragraph">
-<p>As per specification a Bean Validation provider is allowed to relax these preconditions.</p>
-</div>
-<div class="paragraph">
-<p>Starting with 5.3, it is now possible to do so as explained in <a href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#section-method-validation-prerequisite-relaxation">our documentation</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="programmatic-api-improvements"><a class="anchor" href="#programmatic-api-improvements"></a>Programmatic API improvements</h3>
-<div class="paragraph">
-<p>Until now, it was only possible to alter the list of <code>ConstraintValidator</code> of a given constraint via the XML configuration. 5.3 brings the ability to do it <a href="https://docs.jboss.org/hibernate/validator/5.3/reference/en-US/html_single/#section-programmatic-constraint-definition">via the programmatic API</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="jdk-9-support"><a class="anchor" href="#jdk-9-support"></a>JDK 9 support</h3>
-<div class="paragraph">
-<p>5.3 is the first version compatible with JDK 9.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="other-improvements"><a class="anchor" href="#other-improvements"></a>Other improvements</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Arabic, Russian and Slovak translations</p>
-</li>
-</ul>
+<p>The bytecode enhancement configuration was adapted to turn on enhancement-as-proxy by default and remove the switch for configuring this.</p>
 </div>
 </div>
 <h2 id="releases">Releases in this series</h2>
@@ -924,314 +906,38 @@ on our issue tracker.
 <div class="ui row">
 <div class="three wide column">
 <p>
-<span class="ui label version green">
-5.3.6.Final
+<span class="ui label version orange">
+5.5.0.Alpha1
 </span>
 </p>
 <p>
-<small class="ui label">2017-10-19</small>
+<small class="ui label">2021-04-30</small>
 </p>
 </div>
 <div class="thirteen wide column">
 <p>
-security fix, JDK 9 related updates
+Jakarta JPA work in progress, Bytecode enhancement, bug fixes
 </p>
 <p>
 <a class="ui small right labeled icon button" href="#get-it">
 <i class="right arrow icon"></i>
 How to get it
 </a>
-<a class="ui small right labeled icon button" href="#getting_started">
-<i class="right arrow icon"></i>
-Getting started
-</a>
 </p>
 <p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.6.Final">
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.5.0.Alpha1">
 <i class="icon cloud cubes"></i>
 Maven artifacts
 </a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.6.Final/hibernate-validator-5.3.6.Final-dist.zip/download">
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.5.0.Alpha1/hibernate-release-5.5.0.Alpha1.zip/download">
 <i class="icon cloud download"></i>
 Download
 </a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.6.Final)%20ORDER%20BY%20updated">
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.5.0.Alpha1)%20ORDER%20BY%20updated">
 <i class="icon bug"></i>
 Resolved issues
 </a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-5.3.5.Final
-</span>
-</p>
-<p>
-<small class="ui label">2017-03-15</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-bug fixes, JDK 9 related updates
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.5.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.5.Final/hibernate-validator-5.3.5.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.5.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-5.3.4.Final
-</span>
-</p>
-<p>
-<small class="ui label">2016-12-08</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-bug fixes
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.4.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.4.Final/hibernate-validator-5.3.4.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.4.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2016/12/08/hibernate-validator-540-beta1-and-534-final-out/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-5.3.3.Final
-</span>
-</p>
-<p>
-<small class="ui label">2016-11-22</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-bugfix for modular environments
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.3.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.3.Final/hibernate-validator-5.3.3.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.3.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2016/11/22/hibernate-validator-533-final-out/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-5.3.2.Final
-</span>
-</p>
-<p>
-<small class="ui label">2016-11-10</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-bug fix, JDK 9 related updates
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.2.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.2.Final/hibernate-validator-5.3.2.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.2.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2016/11/10/hibernate-validator-532-final-out/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-5.3.1.Final
-</span>
-</p>
-<p>
-<small class="ui label">2016-10-27</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-bug fixes, JDK 9 related updates
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.1.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.1.Final/hibernate-validator-5.3.1.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.1.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2016/10/27/hibernate-validator-531-final-out/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-5.3.0.Final
-</span>
-</p>
-<p>
-<small class="ui label">2016-10-11</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-dynamic constraint payload, parameter relaxation, new api for programmatic constraint definition, new translations
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.0.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.0.Final/hibernate-validator-5.3.0.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.0.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2016/10/11/hibernate-validator-530-final-out/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version orange">
-5.3.0.CR1
-</span>
-</p>
-<p>
-<small class="ui label">2016-09-05</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-new api for programmatic constraint definition, translations
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.0.CR1">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.0.CR1/hibernate-validator-5.3.0.CR1-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.0.CR1)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2016/09/05/hibernate-validator-530-cr1-out/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version orange">
-5.3.0.Alpha1
-</span>
-</p>
-<p>
-<small class="ui label">2016-01-15</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-dynamic constraint payload, parameter relaxation
-</p>
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-validator%2A%20AND%20v%3A5.3.0.Alpha1">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-validator/5.3.0.Alpha1/hibernate-validator-5.3.0.Alpha1-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HV%20AND%20fixVersion%20in%20(5.3.0.Alpha1)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2016/01/18/hibernate-validator-530-alpha1-out/">
+<a class="ui small right labeled button icon" href="https://in.relation.to/2021/04/30/hibernate-orm-550-alpha1-release/">
 <i class="icon announcement"></i>
 Release announcement
 </a>
@@ -1257,9 +963,9 @@ Release announcement
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../.." title="Hibernate ORM">Hibernate ORM</a>
 <a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
-<a class="item" href="../.." title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
 <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
 <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
 <a class="item" href="../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
