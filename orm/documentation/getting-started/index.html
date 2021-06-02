@@ -19,7 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1622567807" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1622643108" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -601,12 +601,10 @@ Overview
 <a class="item" href="/orm/releases/5.5/">
 5.5
 &nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/orm/releases/5.4/">
 5.4
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/orm/releases/5.3/">
 5.3
@@ -635,12 +633,10 @@ Documentation
 <a class="item" href="/orm/documentation/5.5/">
 5.5
 &nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/orm/documentation/5.4/">
 5.4
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/orm/documentation/5.3/">
 5.3
@@ -795,7 +791,7 @@ so if you want to use SNAPSHOT versions be sure to add the <a href="https://repo
 </table>
 </div>
 <div class="paragraph">
-<p>The main Hibernate ORM artifact is named <strong>hibernate-core</strong>.</p>
+<p>The main Hibernate ORM artifact is named <strong>hibernate-core</strong>. If you want to use the Jakarta JPA APIs you can us the <strong>hibernate-core-jakarta</strong> artifact.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -818,14 +814,32 @@ These are discussed in the <a href="http://docs.jboss.org/hibernate/orm/current/
 <div class="listingblock">
 <div class="title">From Maven</div>
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-core<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.4.32.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+<pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-core<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.5.0.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">From Gradle</div>
 <div class="content">
-<pre class="CodeRay highlight"><code>org.hibernate:hibernate-core:5.4.32.Final</code></pre>
+<pre class="CodeRay highlight"><code>org.hibernate:hibernate-core:5.5.0.Final</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Or in case you want to use the Jakarta JPA API:</p>
+</div>
+<div class="listingblock">
+<div class="title">From Maven</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;    <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.hibernate<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;    <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>hibernate-core-jakarta<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;    <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.5.0.Final<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;    <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.glassfish.jaxb<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;    <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>jaxb-runtime<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;    <span style="color:#070;font-weight:bold">&lt;version&gt;</span>3.0.0<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">From Gradle</div>
+<div class="content">
+<pre class="CodeRay highlight"><code>org.hibernate:hibernate-core-jakarta:5.5.0.Final&#x000A;org.glassfish.jaxb:jaxb-runtime:3.0.0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that you need a Jakarta XML Binding implementation when you want to use the Jakarta JPA version.</p>
 </div>
 </div>
 </div>
