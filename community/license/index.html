@@ -4,7 +4,7 @@
 <title>Licenses - Hibernate</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="Emmanuel Bernard" name="author">
+<meta content="Richard Fontana" name="author">
 <meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
@@ -15,7 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1622810088" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1623136668" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -648,21 +648,57 @@ Hibernate is Free Software.</p>
 <h2 id="lgpl-2-1"><a class="anchor" href="#lgpl-2-1"></a>LGPL 2.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Most Hibernate projects are released under the <a href="https://opensource.org/licenses/LGPL-2.1">LGPL v2.1</a>.</p>
+<p>Most Hibernate projects are released under <a href="https://opensource.org/licenses/LGPL-2.1">LGPL v2.1</a>.</p>
 </div>
 <div class="paragraph">
-<p>The LGPL is sufficiently flexible to allow the use of Hibernate in both open source and commercial projects.
-The LGPL guarantees that Hibernate and any modifications made to Hibernate will stay open source, protecting our and your work.
-Anyone who wanted to release Hibernate under a different license would have to obtain permission from hundreds of people who have contributed code to Hibernate, which would be impractical.
-Hibernate is and will be open source.</p>
+<p>The maintainers of Hibernate have consistently understood the LGPL to simply allow Hibernate to be used by both open source and proprietary code without any impact on the licensing or distribution of such independent code.
+This interpretation applies regardless of whether a binary that includes Hibernate code is designed to run on the JVM or is a native image generated through use of tools and frameworks like <a href="https://www.graalvm.org/">GraalVM</a> and <a href="https://quarkus.io/">Quarkus</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="more-detailed-explanation"><a class="anchor" href="#more-detailed-explanation"></a>More detailed explanation</h3>
+<div class="paragraph">
+<p>The original version of the LGPL was written in 1991 with embedded C programming in mind, before Java existed.
+This has sometimes led to questions about how to interpret LGPL in a Java context.
+The “L” in LGPL originally stood for “library”; LGPL was designed to enable libraries to be used by proprietary applications in situations that might be impermissible under the ordinary GPL.
+For this reason, the LGPL is classified as a “weak copyleft” license, in contrast to the GPL which is considered a “strong copyleft”.
+The “L” in LGPL was later reinterpreted to mean “lesser”, to communicate the fact that it has more limited scope than the GPL and is not meant exclusively for libraries.</p>
 </div>
 <div class="paragraph">
-<p>The use of the unmodified Hibernate binary of course never affects the license of your application or distribution.
-You will never have to pay money to any commercial entity for using or integrating Hibernate.</p>
+<p>By the 2000s, the LGPL had become one of the most widely used and best known open source licenses.
+At this time, some Java developers naturally began to adopt the LGPL for their projects as a more permissive and flexible alternative to the GPL.
+For projects like Hibernate, the LGPL had a simple interpretation in the Java setting, which can be summarized as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LGPL requirements are triggered only if there is distribution; internal use is not restricted.</p>
+</li>
+<li>
+<p>Distributors of binaries built from LGPL-licensed source code must comply with the LGPL by providing source code corresponding only to the LGPL-covered parts of the binary.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>There is no requirement to publish independent code that, for example, merely imports LGPL-covered packages or classes. Such independent code can be under different licensing terms, including proprietary licensing terms or other open source licenses.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Modifications of LGPL-licensed source code, if distributed, must be licensed under the LGPL.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>If you modify Hibernate and redistribute your modifications, the LGPL applies.
-Please submit any modifications to our issue tracking system for review and possible inclusion in the upstream Hibernate project(s).</p>
+<p>This has been the consistent interpretation of the LGPL by the maintainers of Hibernate ever since the project adopted LGPL.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="use-in-graalvm-native-images"><a class="anchor" href="#use-in-graalvm-native-images"></a>Use in GraalVM native images</h3>
+<div class="paragraph">
+<p>Recently there has been interest in native compilation for Java using tools like GraalVM, such as commonly used in frameworks like Quarkus.
+The view of the Hibernate maintainers is that native compilation is a technical detail that does not fundamentally change how LGPL works for Java code.
+In a native image that includes LGPL-licensed code from Hibernate, the Hibernate code remains under the terms of the LGPL, but the other code in the generated binary is not affected by the licensing of the Hibernate code.</p>
+</div>
 </div>
 </div>
 </div>
@@ -670,15 +706,10 @@ Please submit any modifications to our issue tracking system for review and poss
 <h2 id="asl-2-0"><a class="anchor" href="#asl-2-0"></a>ASL 2.0</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Some Hibernate projects are released under the more permissive <a href="https://www.apache.org/licenses/LICENSE-2.0.html">ASL 2.0</a>.</p>
+<p>Some Hibernate projects are released under <a href="https://www.apache.org/licenses/LICENSE-2.0.html">ASL 2.0</a>.</p>
 </div>
 <div class="paragraph">
-<p>This is mostly due to our work with the Java Community Process.
-Implementing a reference implementation in practice requires such liberal license (or a fully proprietary one strangely enough).</p>
-</div>
-<div class="paragraph">
-<p>Every now and then we do evaluate the option to start or relicense certain projects under liberal licenses like the ASL but our DNA is with the LGPL.
-So the reasons have to be solid.</p>
+<p>This is mostly due to our work with the Java Community Process: implementing a reference implementation in practice requires such a liberal license (or a fully proprietary one strangely enough).</p>
 </div>
 </div>
 </div>
@@ -713,7 +744,6 @@ So the reasons have to be solid.</p>
 <div class="ui inverted link list">
 <a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
 <a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
-<a class="item" href="https://plus.google.com/112681342290762837955/posts" title="Google+">Google+</a>
 </div>
 </div>
 <div class="five wide column">
@@ -724,6 +754,7 @@ So the reasons have to be solid.</p>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
 <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+<a class="item" href="." title="License">License</a>
 </div>
 </div>
 <div class="five wide column sponsor">
