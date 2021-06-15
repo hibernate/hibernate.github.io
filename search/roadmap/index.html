@@ -21,7 +21,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1623749349" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1623749984" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -697,13 +697,19 @@ To learn more about what we introduced in our past releases, please consult the
 <div id="toctitle">Releases</div>
 <ul class="sectlevel1">
 <li><a href="#hibernate-search-6-1">Hibernate Search 6.1</a></li>
-<li><a href="#hibernate-search-6-x">Hibernate Search 6.x</a></li>
+<li><a href="#hibernate-search-6-2">Hibernate Search 6.2</a></li>
+<li><a href="#hibernate-search-6-3">Hibernate Search 6.3</a></li>
+<li><a href="#hibernate-search-6-x-or-later">Hibernate Search 6.x or later</a></li>
 </ul>
 </div>
 </div>
 <div class="sect1">
 <h2 id="hibernate-search-6-1"><a class="anchor" href="#hibernate-search-6-1"></a>Hibernate Search 6.1</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>For a full list of issues currently planned for this series,
+see <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20%3D%206.1-backlog%20ORDER%20BY%20created%20DESC">here</a>.</p>
+</div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Restore the WildFly integration</dt>
@@ -723,13 +729,15 @@ or multi-node applications where each node works independently, simply sending e
 <li>
 <p>When each node sends updates to Elasticsearch independently,
 conflicts may arise when entities are updated simultaneously on different nodes.
-There is a need to prevent, or at least resolve, these conflicts.</p>
+There is a need to prevent, or at least resolve, these conflicts.
+See <a href="https://hibernate.atlassian.net/browse/HSEARCH-3280">HSEARCH-3280</a>.</p>
 </li>
 <li>
 <p>For some use cases where maintenance downtime is not acceptable,
 Hibernate Search needs to provide hot updates at the cluster level:
-allow to boot application nodes with the new mapping,
-while some application nodes with the old mapping are still running.</p>
+allow booting application nodes with the new mapping,
+while some application nodes with the old mapping are still running.
+See <a href="https://hibernate.atlassian.net/browse/HSEARCH-3499">HSEARCH-3499</a>.</p>
 </li>
 </ul>
 </div>
@@ -739,7 +747,123 @@ while some application nodes with the old mapping are still running.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="hibernate-search-6-x"><a class="anchor" href="#hibernate-search-6-x"></a>Hibernate Search 6.x</h2>
+<h2 id="hibernate-search-6-2"><a class="anchor" href="#hibernate-search-6-2"></a>Hibernate Search 6.2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For a full list of issues currently planned for this series,
+see <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20%3D%206.2-backlog%20ORDER%20BY%20created%20DESC">here</a>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Search query features</dt>
+<dd>
+<p>Add more features to the Hibernate Search DSL.
+In particular:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-2192">HSEARCH-2192</a> Highlighting in the Search API</p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-917">HSEARCH-917</a> Add match all terms option when matching in the DSL API</p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-3327">HSEARCH-3327</a> Add options for match predicates targeting multiple fields</p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-3926">HSEARCH-3926</a> Predicate on multiple fields designated by a single label/group name/etc. ("_all", copy_to, &#8230;&#8203;)</p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-3927">HSEARCH-3927</a> Projection to a DTO/JavaBean/etc.</p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-3943">HSEARCH-3943</a> Projection nesting: preserving the document structure in projections</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Reactive Search</dt>
+<dd>
+<p>Experiment with integrating Hibernate Search with Hibernate Reactive.</p>
+<div class="paragraph">
+<p>See also <a href="https://hibernate.atlassian.net/browse/HSEARCH-3322">HSEARCH-3322</a>,
+<a href="https://hibernate.atlassian.net/browse/HSEARCH-3471">HSEARCH-3471</a>.</p>
+</div>
+</dd>
+<dt class="hdlist1">Hibernate Search for arbitrary data sources</dt>
+<dd>
+<p>Experimental module allowing integration with a datastore that is not accessed using Hibernate ORM.</p>
+<div class="paragraph">
+<p>Users will need to put in more work to configure it, in particular they will need to capture insert/update/delete events
+themselves.</p>
+</div>
+<div class="paragraph">
+<p>Nevertheless, this could be useful for people looking to add full-text search to any application,
+not just applications relying on Hibernate ORM.</p>
+</div>
+<div class="paragraph">
+<p>See also <a href="https://hibernate.atlassian.net/browse/HSEARCH-1800">HSEARCH-1800</a>.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hibernate-search-6-3"><a class="anchor" href="#hibernate-search-6-3"></a>Hibernate Search 6.3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For a full list of issues currently planned for this series,
+see <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20%3D%206.3-backlog%20ORDER%20BY%20created%20DESC">here</a>.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">More advanced mapping</dt>
+<dd>
+<p>Allow more complex setups when it comes to mapping entities to indexes. In particular:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-3971">HSEARCH-3971</a> Mapping an entity differently based on a discriminator</p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-3683">HSEARCH-3683</a> Mapping a single entity type to multiple indexes</p>
+</li>
+<li>
+<p><a href="https://hibernate.atlassian.net/browse/HSEARCH-3903">HSEARCH-3903</a> Filters based exclusively on mapper metadata for @IndexedEmbedded</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Some specialized field types</dt>
+<dd>
+<p>Add commonly used field types. In particular:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Fields derived from large blobs, useful when
+<a href="https://hibernate.atlassian.net/browse/HSEARCH-3350">indexing PDFs with Apache Tika</a> for example.</p>
+</li>
+<li>
+<p>Maybe more, depending on demand, e.g.
+<a href="https://hibernate.atlassian.net/browse/HSEARCH-3488">HSEARCH-3488</a> Add support for nanosecond precision for temporal fields.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Tracing</dt>
+<dd>
+<p>Tracing of search queries and indexing requests to enable easier debugging and performance investigation.</p>
+<div class="paragraph">
+<p>See <a href="https://hibernate.atlassian.net/browse/HSEARCH-4057">HSEARCH-4057</a>.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hibernate-search-6-x-or-later"><a class="anchor" href="#hibernate-search-6-x-or-later"></a>Hibernate Search 6.x or later</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
@@ -753,6 +877,16 @@ We will restore it in 6.1 if there is demand for it.
 <dd>
 <p>We&#8217;re planning to decouple the metadata definition from annotated java classes, to allow better indexing of other more flexible sources;
 for example to make it easier to index data structured in the JSON format, or other formats whose schema is not known at compile time.</p>
+</dd>
+<dt class="hdlist1">Debezium integration</dt>
+<dd>
+<p>Asynchronous indexing driven by Change Data Capture in the database instead of Hibernate ORM events.</p>
+<div class="paragraph">
+<p>This would allow capturing changes caused by any SQL command, not just those issued by Hibernate ORM.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://hibernate.atlassian.net/browse/HSEARCH-3513">HSEARCH-3513</a>.</p>
+</div>
 </dd>
 </dl>
 </div>
