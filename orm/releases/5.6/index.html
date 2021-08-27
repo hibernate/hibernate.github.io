@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>4.5 series - Hibernate Search</title>
+<title>5.6 series - Hibernate ORM</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="author">
@@ -9,19 +9,17 @@
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
 <meta content="Hibernate" property="og:site_name">
-<meta content="https://hibernate.org/search/releases/4.5/" property="og:url">
-<meta content="4.5 series - Hibernate Search" property="og:title">
-<meta content="Automatic indexing of Hibernate ORM entities into Apache Lucene or Elasticsearch.
-Advanced search API: full-text, geospatial, aggregations and more.
+<meta content="https://hibernate.org/orm/releases/5.6/" property="og:url">
+<meta content="5.6 series - Hibernate ORM" property="og:title">
+<meta content="Idiomatic persistence for Java and relational databases.
 " property="og:description">
 <meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
-<meta content="Automatic indexing of Hibernate ORM entities into Apache Lucene or Elasticsearch.
-Advanced search API: full-text, geospatial, aggregations and more.
+<meta content="Idiomatic persistence for Java and relational databases.
 " name="description">
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1630076110" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1630076108" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -38,18 +36,18 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <div class="ui vertical inverted sidebar left" id="mobile-menu">
 <div class="ui vertical fluid inverted text menu accordion">
 <div class="item">
-<a class="title">
+<a class="title active">
 <i class="grid icon database"></i>
 <i class="dropdown icon"></i>
 <strong>ORM</strong>
 </a>
-<div class="content">
+<div class="content active">
 <div class="menu internal-links">
 <a class="item" href="/orm/">
 <i class="grid icon home"></i>
 About
 </a>
-<a class="item" href="/orm/releases/">
+<a class="item active" href="/orm/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -116,18 +114,18 @@ CI
 </div>
 
 <div class="item">
-<a class="title active">
+<a class="title">
 <i class="grid icon search"></i>
 <i class="dropdown icon"></i>
 <strong>Search</strong>
 </a>
-<div class="content active">
+<div class="content">
 <div class="menu internal-links">
 <a class="item" href="/search/">
 <i class="grid icon home"></i>
 About
 </a>
-<a class="item active" href="/search/releases/">
+<a class="item" href="/search/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -525,8 +523,8 @@ Menu
 </div>
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
-<a class="item" href="/orm/">ORM</a>
-<a class="item active" href="/search/">Search</a>
+<a class="item active" href="/orm/">ORM</a>
+<a class="item" href="/search/">Search</a>
 <a class="item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
@@ -548,8 +546,13 @@ Follow us
 <script>
 var displayed_series = [];
 displayed_series.push('6.0');
-displayed_series.push('5.11');
-displayed_series.push('5.10');
+displayed_series.push('5.6');
+displayed_series.push('5.5');
+displayed_series.push('5.4');
+displayed_series.push('5.3');
+displayed_series.push('5.2');
+displayed_series.push('5.1');
+displayed_series.push('5.0');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -558,14 +561,14 @@ displayed_series.push('5.10');
 <div class="column twelve wide middle aligned">
 <h1>
 <span>
-Hibernate Search
+Hibernate ORM
 </span>
 </h1>
 <h2>
 <span>
-4.5 series
+5.6 series
 </span>
-<span class="ui label tag green">stable</span>
+<span class="ui label tag orange">development</span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
@@ -579,7 +582,7 @@ Hibernate Search
 <div class="page-title small">
 <div class="ui container">
 <h4>
-Performance, WildFly 8 compatibility, JPA 2.1 / Hibernate ORM 4.3 compatibility
+Dropped support for Javassist, Performance
 </h4>
 </div>
 </div>
@@ -588,7 +591,7 @@ Performance, WildFly 8 compatibility, JPA 2.1 / Hibernate ORM 4.3 compatibility
 <div class="ui stackable grid">
 <div class="column three wide computer only print hidden">
 <div class="ui fluid vertical menu">
-<a class="item" href="/search/">
+<a class="item" href="/orm/">
 <i class="grid icon home"></i>
 About
 </a>
@@ -596,57 +599,123 @@ About
 Releases
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="/search/releases/">
+<a class="item" href="/orm/releases/">
 Overview
 </a>
-<a class="item" href="/search/releases/6.0/">
+<a class="item" href="/orm/releases/6.0/">
 6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item selected" href="/orm/releases/5.6/">
+5.6
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/orm/releases/5.5/">
+5.5
 &nbsp;&nbsp;
 <span class="ui label green">latest stable</span>
 </a>
-<a class="item" href="/search/releases/5.11/">
-5.11
+<a class="item" href="/orm/releases/5.4/">
+5.4
 </a>
-<a class="item" href="/search/releases/5.10/">
-5.10
+<a class="item" href="/orm/releases/5.3/">
+5.3
+</a>
+<a class="item" href="/orm/releases/5.2/">
+5.2
+</a>
+<a class="item" href="/orm/releases/5.1/">
+5.1
+</a>
+<a class="item" href="/orm/releases/5.0/">
+5.0
 </a>
 </div>
 </div>
-<a class="item" href="/search/documentation/">
-<i class="grid icon book"></i>
+<!-- / Here we want to display all the known versions -->
+<div class="ui dropdown link item">
 Documentation
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/orm/documentation/6.0/">
+6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
 </a>
-<a class="item" href="/search/articles/">
-<i class="grid icon bookmark"></i>
-Articles
+<a class="item" href="/orm/documentation/5.6/">
+5.6
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
 </a>
-<a class="item" href="/search/roadmap/">
+<a class="item" href="/orm/documentation/5.5/">
+5.5
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="/orm/documentation/5.4/">
+5.4
+</a>
+<a class="item" href="/orm/documentation/5.3/">
+5.3
+</a>
+<a class="item" href="/orm/documentation/5.2/">
+5.2
+</a>
+<a class="item" href="/orm/documentation/5.1/">
+5.1
+</a>
+<a class="item" href="/orm/documentation/5.0/">
+5.0
+</a>
+<a class="item" href="/orm/documentation/4.3/">
+4.3
+</a>
+<a class="item" href="/orm/documentation/4.2/">
+4.2
+</a>
+</div>
+</div>
+<a class="item" href="/orm/books/">
+<i class="grid icon book"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
 <i class="grid icon road"></i>
 Roadmap
 </a>
-<a class="item" href="/search/contribute/">
-<i class="grid icon users"></i>
-Contribute
-</a>
-<a class="item" href="/search/tooling/">
+<a class="item" href="/orm/tooling/">
 <i class="grid icon wrench"></i>
 Tooling
 </a>
-<a class="item" href="/search/support/">
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
 <i class="grid icon doctor"></i>
 Paid support
 </a>
-<a class="item" href="/search/faq/">
-<i class="grid icon circle help"></i>
+<a class="item" href="/orm/faq/">
+<i class="grid icon help circle"></i>
 FAQ
 </a>
 </div>
 <div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-search">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
 <i class="grid icon code"></i>
 Source code
 </a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
 <i class="grid icon bug"></i>
 Issue tracker
 </a>
@@ -654,15 +723,11 @@ Issue tracker
 <i class="grid icon lock"></i>
 Security issue
 </a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
 <i class="grid icon comments"></i>
 Forum
 </a>
-<a class="item" href="https://community.jboss.org/en/hibernate/search">
-<i class="grid icon edit"></i>
-Wiki
-</a>
-<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<a class="item" href="https://ci.hibernate.org/">
 <i class="grid icon treatment"></i>
 CI
 </a>
@@ -670,7 +735,7 @@ CI
 <hr>
 <div class="license">
 Released under the
-<a href="https://raw.github.com/hibernate/hibernate-search/main/lgpl.txt">LGPL v2.1</a>
+<a href="https://hibernate.org/license/">LGPL V2.1</a>
 </div>
 
 </div>
@@ -717,32 +782,32 @@ Releases in this series
 <table class="ui collapsing table striped celled unstackable">
 <tr>
 <td>
-<a href="https://www.oracle.com/java/technologies/javase-downloads.html">
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
 Java
 </a>
 </td>
 <td>
-6, 7 or 8
+8, 11 or 17
 </td>
 </tr>
 <tr>
 <td>
-<a href="/orm/">
-Hibernate ORM
+<a href="https://www.oracle.com/technetwork/java/javaee/tech/persistence-jsp-140049.html">
+JPA
 </a>
 </td>
 <td>
-4.3
+2.2
 </td>
 </tr>
 <tr>
 <td>
-<a href="https://lucene.apache.org/core/">
-Apache Lucene
+<a href="https://jakarta.ee/specifications/persistence/">
+Jakarta JPA
 </a>
 </td>
 <td>
-3.6
+3.0
 </td>
 </tr>
 </table>
@@ -763,15 +828,11 @@ Compatibility policy.
 Documentation for this specific series can be accessed through the links below:
 </p>
 <p>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/4.5/reference/en-US/html_single/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/5.6/userguide/html_single/Hibernate_User_Guide.html">
 <i class="icon file text outline"></i>
 HTML
 </a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/4.5/reference/en-US/pdf/hibernate_search_reference.pdf">
-<i class="icon file pdf outline"></i>
-PDF
-</a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/4.5/api/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/orm/5.6/javadocs/">
 <i class="icon code outline"></i>
 API (JavaDoc)
 </a>
@@ -787,56 +848,20 @@ documentation page.
 <div class="eleven wide column">
 <h3>Maven, Gradle...</h3>
 <p>
-Maven artifacts of Hibernate Search are published to
+Maven artifacts of Hibernate ORM are published to
 <a href="https://search.maven.org">
-Maven Central
+Maven Central.
 </a>
-and to the
-<a href="https://repository.jboss.org/nexus/index.html">
-JBoss Maven repository.
-</a>
-Refer to the
-<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
-on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
 </p>
 <p>
 You can find the Maven coordinates of all artifacts through the link below:
 <p>
-<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.3.Final">
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.6.0.Beta1">
 <i class="icon cloud cubes"></i>
 Maven artifacts
 </a>
 </p>
 </p>
-<p>
-Below are the Maven coordinates of the main artifacts.
-</p>
-<dl class="sparse">
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C4.5.3.Final%7C">
-org.hibernate:hibernate-search-orm:4.5.3.Final
-</a>
-</dt>
-<dd>Hibernate ORM integration</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jgroups%7C4.5.3.Final%7C">
-org.hibernate:hibernate-search-backend-jgroups:4.5.3.Final
-</a>
-</dt>
-<dd>JGroups backend</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jms%7C4.5.3.Final%7C">
-org.hibernate:hibernate-search-backend-jms:4.5.3.Final
-</a>
-</dt>
-<dd>JMS backend</dd>
-<dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-analyzers%7C4.5.3.Final%7C">
-org.hibernate:hibernate-search-analyzers:4.5.3.Final
-</a>
-</dt>
-<dd>Analyzer dependencies from Lucene/Solr</dd>
-</dl>
 </div>
 <div class="five wide column divided">
 <h3>Zip archive</h3>
@@ -844,7 +869,7 @@ org.hibernate:hibernate-search-analyzers:4.5.3.Final
 Direct download is available from SourceForge:
 </p>
 <p>
-<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.3.Final/hibernate-search-4.5.3.Final-dist.zip/download" title="Download">
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.6.0.Beta1/hibernate-release-5.6.0.Beta1.zip/download" title="Download">
 <i class="icon cloud download"></i>
 Download Zip archive
 </a>
@@ -862,39 +887,50 @@ here.
 If you need to upgrade from a previous series, please refer to the migration guide:
 </p>
 <p>
-<a class="ui right labeled icon button" href="https://developer.jboss.org/wiki/HibernateSearchMigrationGuide">
+<a class="ui right labeled icon button" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
 <i class="icon file text outline"></i>
 HTML
 </a>
 </p>
 <h2 id="whats-new">What's new</h2>
 <p>
-Latest release announcement (2015-01-12):
-<a href="http://in.relation.to/Bloggers/SomeMoreHibernateSearch5">
-4.5.3.Final.
+Latest release announcement (2021-08-27):
+<a href="https://in.relation.to/2021/08/27/hibernate-orm-560-beta1-release/">
+5.6.0.Beta1.
 </a>
 </p>
 <p>
 A detailed list of new features, improvements and fixes in this series can be found
-<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.3.Final%2C%204.5.2.Final%2C%204.5.1.Final%2C%204.5.0.Final%2C%204.5.0.CR1%2C%204.5.0.Alpha2%2C%204.5.0.Alpha1)%20ORDER%20BY%20updated">
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.6.0.Beta1)%20ORDER%20BY%20updated">
 on our issue tracker.
 </a>
 </p>
-
+<div class="sect2">
+<h3 id="removal-of-javassist"><a class="anchor" href="#removal-of-javassist"></a>Removal of Javassist</h3>
+<div class="paragraph">
+<p>When it comes to bytecode enhancement of entities, we used to support using either <strong>Byte Buddy</strong> or <strong>Javassist</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The Byte Buddy option has been for long the preferred choice, while Javassist was deprecated and is now removed.s</p>
+</div>
+</div>
 <h2 id="releases">Releases in this series</h2>
 <div class="ui stackable grid series-versions">
 <div class="ui row">
 <div class="three wide column">
 <p>
-<span class="ui label version green">
-4.5.3.Final
+<span class="ui label version orange">
+5.6.0.Beta1
 </span>
 </p>
 <p>
-<small class="ui label">2015-01-12</small>
+<small class="ui label">2021-08-27</small>
 </p>
 </div>
 <div class="thirteen wide column">
+<p>
+Dropped Javassist support, performance improvements
+</p>
 <p>
 <a class="ui small right labeled icon button" href="#get-it">
 <i class="right arrow icon"></i>
@@ -902,211 +938,19 @@ How to get it
 </a>
 </p>
 <p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.3.Final">
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.6.0.Beta1">
 <i class="icon cloud cubes"></i>
 Maven artifacts
 </a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.3.Final/hibernate-search-4.5.3.Final-dist.zip/download">
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.6.0.Beta1/hibernate-release-5.6.0.Beta1.zip/download">
 <i class="icon cloud download"></i>
 Download
 </a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.3.Final)%20ORDER%20BY%20updated">
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.6.0.Beta1)%20ORDER%20BY%20updated">
 <i class="icon bug"></i>
 Resolved issues
 </a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/Bloggers/SomeMoreHibernateSearch5">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-4.5.2.Final
-</span>
-</p>
-<p>
-<small class="ui label">2014-12-02</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.2.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.2.Final/hibernate-search-4.5.2.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.2.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/Bloggers/SomeExceptionalBackportsToMaintenanceHibernateSearchReleases">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-4.5.1.Final
-</span>
-</p>
-<p>
-<small class="ui label">2014-04-10</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.1.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.1.Final/hibernate-search-4.5.1.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.1.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/Bloggers/MaintenanceReleasesForStableBranchesOfHibernateSearch">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version green">
-4.5.0.Final
-</span>
-</p>
-<p>
-<small class="ui label">2014-01-29</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.0.Final">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.0.Final/hibernate-search-4.5.0.Final-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.0.Final)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2014/01/29/wild-fly-8-integration-jpa-21-ready-hibernate-search-450-final-is-here/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version orange">
-4.5.0.CR1
-</span>
-</p>
-<p>
-<small class="ui label">2014-01-27</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.0.CR1">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.0.CR1/hibernate-search-4.5.0.CR1-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.0.CR1)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2014/01/27/better-performance-simpler-mass-indexer-hibernate-search-450-cr-1-available/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version orange">
-4.5.0.Alpha2
-</span>
-</p>
-<p>
-<small class="ui label">2013-12-15</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.0.Alpha2">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.0.Alpha2/hibernate-search-4.5.0.Alpha2-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.0.Alpha2)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2013/12/15/hibernate-search-weekend-releases-from-both-maintenance-branches/">
-<i class="icon announcement"></i>
-Release announcement
-</a>
-</p>
-</div>
-</div>
-<div class="ui row">
-<div class="three wide column">
-<p>
-<span class="ui label version orange">
-4.5.0.Alpha1
-</span>
-</p>
-<p>
-<small class="ui label">2013-10-15</small>
-</p>
-</div>
-<div class="thirteen wide column">
-<p>
-<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A4.5.0.Alpha1">
-<i class="icon cloud cubes"></i>
-Maven artifacts
-</a>
-<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/4.5.0.Alpha1/hibernate-search-4.5.0.Alpha1-dist.zip/download">
-<i class="icon cloud download"></i>
-Download
-</a>
-<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(4.5.0.Alpha1)%20ORDER%20BY%20updated">
-<i class="icon bug"></i>
-Resolved issues
-</a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2013/10/15/hibernate-search-440-final-released-with-450-alpha-1-released-too/">
+<a class="ui small right labeled button icon" href="https://in.relation.to/2021/08/27/hibernate-orm-560-beta1-release/">
 <i class="icon announcement"></i>
 Release announcement
 </a>
@@ -1132,8 +976,8 @@ Release announcement
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href="../.." title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../.." title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
 <a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
 <a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
 <a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
