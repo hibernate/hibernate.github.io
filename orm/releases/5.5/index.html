@@ -19,7 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1629708700" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1630075421" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -546,6 +546,7 @@ Follow us
 <script>
 var displayed_series = [];
 displayed_series.push('6.0');
+displayed_series.push('5.6');
 displayed_series.push('5.5');
 displayed_series.push('5.4');
 displayed_series.push('5.3');
@@ -606,6 +607,11 @@ Overview
 &nbsp;&nbsp;
 <span class="ui label orange">development</span>
 </a>
+<a class="item" href="/orm/releases/5.6/">
+5.6
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
 <a class="item selected" href="/orm/releases/5.5/">
 5.5
 &nbsp;&nbsp;
@@ -635,6 +641,11 @@ Documentation
 <div class="menu">
 <a class="item" href="/orm/documentation/6.0/">
 6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/orm/documentation/5.6/">
+5.6
 &nbsp;&nbsp;
 <span class="ui label orange">development</span>
 </a>
@@ -850,7 +861,7 @@ Maven Central.
 <p>
 You can find the Maven coordinates of all artifacts through the link below:
 <p>
-<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.5.6.Final">
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.5.7.Final">
 <i class="icon cloud cubes"></i>
 Maven artifacts
 </a>
@@ -863,7 +874,7 @@ Maven artifacts
 Direct download is available from SourceForge:
 </p>
 <p>
-<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.5.6.Final/hibernate-release-5.5.6.Final.zip/download" title="Download">
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.5.7.Final/hibernate-release-5.5.7.Final.zip/download" title="Download">
 <i class="icon cloud download"></i>
 Download Zip archive
 </a>
@@ -898,14 +909,14 @@ HTML
 </p>
 <h2 id="whats-new">What's new</h2>
 <p>
-Latest release announcement (2021-08-04):
-<a href="https://in.relation.to/2021/08/04/hibernate-orm-556-release/">
-5.5.6.Final.
+Latest release announcement (2021-08-26):
+<a href="https://in.relation.to/2021/08/27/hibernate-orm-560-beta1-release/">
+5.5.7.Final.
 </a>
 </p>
 <p>
 A detailed list of new features, improvements and fixes in this series can be found
-<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.5.6%2C%205.5.5%2C%205.5.4%2C%205.5.3%2C%205.5.2%2C%205.5.0%2C%205.5.0.CR1%2C%205.5.0.Beta1%2C%205.5.0.Alpha1)%20ORDER%20BY%20updated">
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.5.7%2C%205.5.6%2C%205.5.5%2C%205.5.4%2C%205.5.3%2C%205.5.2%2C%205.5.0%2C%205.5.0.CR1%2C%205.5.0.Beta1%2C%205.5.0.Alpha1)%20ORDER%20BY%20updated">
 on our issue tracker.
 </a>
 </p>
@@ -947,16 +958,16 @@ while the <code>hibernate-core</code> artifact still implements the Jakarta JPA 
 <div class="three wide column">
 <p>
 <span class="ui label version green">
-5.5.6.Final
+5.5.7.Final
 </span>
 </p>
 <p>
-<small class="ui label">2021-08-04</small>
+<small class="ui label">2021-08-26</small>
 </p>
 </div>
 <div class="thirteen wide column">
 <p>
-minor bug fixes
+Performance and minor bug fixes
 </p>
 <p>
 <a class="ui small right labeled icon button" href="#get-it">
@@ -967,6 +978,41 @@ How to get it
 <i class="right arrow icon"></i>
 Getting started
 </a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.5.7.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-orm/5.5.7.Final/hibernate-release-5.5.7.Final.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.5.7)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2021/08/27/hibernate-orm-560-beta1-release/">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.5.6.Final
+</span>
+</p>
+<p>
+<small class="ui label">2021-08-04</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+minor bug fixes
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-%2A%20AND%20v%3A5.5.6.Final">

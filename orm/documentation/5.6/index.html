@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>How to build hibernate.org - Hibernate</title>
+<title>Documentation - 5.6 - Hibernate ORM</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="author">
@@ -9,13 +9,17 @@
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
 <meta content="Hibernate" property="og:site_name">
-<meta content="https://hibernate.org/README/" property="og:url">
-<meta content="How to build hibernate.org - Hibernate" property="og:title">
+<meta content="https://hibernate.org/orm/documentation/5.6/" property="og:url">
+<meta content="Documentation - 5.6 - Hibernate ORM" property="og:title">
+<meta content="Idiomatic persistence for Java and relational databases.
+" property="og:description">
 <meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
+<meta content="Idiomatic persistence for Java and relational databases.
+" name="description">
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1630075418" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1630075420" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -32,12 +36,12 @@
 <div class="ui vertical inverted sidebar left" id="mobile-menu">
 <div class="ui vertical fluid inverted text menu accordion">
 <div class="item">
-<a class="title">
+<a class="title active">
 <i class="grid icon database"></i>
 <i class="dropdown icon"></i>
 <strong>ORM</strong>
 </a>
-<div class="content">
+<div class="content active">
 <div class="menu internal-links">
 <a class="item" href="/orm/">
 <i class="grid icon home"></i>
@@ -47,7 +51,7 @@ About
 <i class="grid icon tags"></i>
 Releases
 </a>
-<a class="item" href="/orm/documentation/">
+<a class="item active" href="/orm/documentation/">
 <i class="grid icon folder open"></i>
 Documentation
 </a>
@@ -519,7 +523,7 @@ Menu
 </div>
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
-<a class="item" href="/orm/">ORM</a>
+<a class="item active" href="/orm/">ORM</a>
 <a class="item" href="/search/">Search</a>
 <a class="item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
@@ -539,311 +543,335 @@ Follow us
 
 </div>
 
-<div class="ui container-fluid">
+<script>
+var displayed_series = [];
+displayed_series.push('6.0');
+displayed_series.push('5.6');
+displayed_series.push('5.5');
+displayed_series.push('5.4');
+displayed_series.push('5.3');
+displayed_series.push('5.2');
+displayed_series.push('5.1');
+displayed_series.push('5.0');
+</script>
 <div class="jumbotron small">
 <div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide middle aligned">
 <h1>
-<span>How to build hibernate.org</span>
+<span>
+Hibernate ORM
+</span>
 </h1>
+<h2>
+<span>
+Documentation - 5.6
+</span>
+</h2>
+</div>
+<div class="column four wide middle aligned">
+<div class="jumbotron-button">
+<div class="ui segment raised" id="documentation-version-selector-container">
+<form class="ui form">
+<div class="field">
+<label>Other versions</label>
+<select class="ui fluid dropdown selection" onchange="location = this.options[this.selectedIndex].value;">
+<option value="/orm/documentation/6.0">
+6.0
+</option>
+<option selected value="/orm/documentation/5.6">
+5.6
+</option>
+<option value="/orm/documentation/5.5">
+5.5
+</option>
+<option value="/orm/documentation/5.4">
+5.4
+</option>
+<option value="/orm/documentation/5.3">
+5.3
+</option>
+<option value="/orm/documentation/5.2">
+5.2
+</option>
+<option value="/orm/documentation/5.1">
+5.1
+</option>
+<option value="/orm/documentation/5.0">
+5.0
+</option>
+<option value="/orm/documentation/4.3">
+4.3
+</option>
+<option value="/orm/documentation/4.2">
+4.2
+</option>
+</select>
+</div>
+</form>
+</div>
+</div>
+
 </div>
 </div>
 </div>
+</div>
+</div>
+
+
 <div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only print hidden">
+<div class="ui fluid vertical menu">
+<a class="item" href="/orm/">
+<i class="grid icon home"></i>
+About
+</a>
+<div class="ui dropdown link item">
+Releases
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/orm/releases/">
+Overview
+</a>
+<a class="item" href="/orm/releases/6.0/">
+6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/orm/releases/5.6/">
+5.6
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/orm/releases/5.5/">
+5.5
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="/orm/releases/5.4/">
+5.4
+</a>
+<a class="item" href="/orm/releases/5.3/">
+5.3
+</a>
+<a class="item" href="/orm/releases/5.2/">
+5.2
+</a>
+<a class="item" href="/orm/releases/5.1/">
+5.1
+</a>
+<a class="item" href="/orm/releases/5.0/">
+5.0
+</a>
+</div>
+</div>
+<!-- / Here we want to display all the known versions -->
+<div class="ui dropdown link item selected">
+Documentation
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/orm/documentation/6.0/">
+6.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item selected" href="/orm/documentation/5.6/">
+5.6
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/orm/documentation/5.5/">
+5.5
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="/orm/documentation/5.4/">
+5.4
+</a>
+<a class="item" href="/orm/documentation/5.3/">
+5.3
+</a>
+<a class="item" href="/orm/documentation/5.2/">
+5.2
+</a>
+<a class="item" href="/orm/documentation/5.1/">
+5.1
+</a>
+<a class="item" href="/orm/documentation/5.0/">
+5.0
+</a>
+<a class="item" href="/orm/documentation/4.3/">
+4.3
+</a>
+<a class="item" href="/orm/documentation/4.2/">
+4.2
+</a>
+</div>
+</div>
+<a class="item" href="/orm/books/">
+<i class="grid icon book"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="grid icon help circle"></i>
+FAQ
+</a>
+</div>
+<div class="ui fluid vertical menu">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+<hr>
+<div class="license">
+Released under the
+<a href="https://hibernate.org/license/">LGPL V2.1</a>
+</div>
+
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
 <div class="content" id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>A bit of Git, a bit of Ruby and you will get your local hibernate.org served.</p>
-</div>
-</div>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#get-the-source">Get the source</a></li>
-<li><a href="#set-up-the-build-environmentthe-easy-way">Set up the build environment&#8201;&#8212;&#8201;the easy way</a></li>
-<li><a href="#set-up-the-build-environmentthe-hard-way">Set up the build environment&#8201;&#8212;&#8201;the hard way</a>
-<ul class="sectlevel2">
-<li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#ensure-rake-is-installed">Ensure Rake is installed</a></li>
-<li><a href="#ensure-bundler-is-installed">Ensure Bundler is installed</a></li>
-<li><a href="#awestruct-setup">Setup awestruct</a></li>
-</ul>
-</li>
-<li><a href="#serve-the-site-locally">Serve the site locally</a></li>
-<li><a href="#tips-tricks">Tips &amp; Tricks</a>
-<ul class="sectlevel2">
-<li><a href="#how-to-editpublish-content">How to edit/publish content</a></li>
-<li><a href="#which-other-tasks-exist-in-the-rake-build-file">Which other tasks exist in the Rake build file?</a></li>
-<li><a href="#i-am-getting-errors-when-trying-to-execute-awestruct-directly">I am getting errors when trying to execute <strong>awestruct</strong> directly</a></li>
-<li><a href="#if-you-are-getting-error-after-an-update">If you are getting error after an update</a></li>
-<li><a href="#if-your-changes-are-not-visible">If your changes are not visible&#8230;&#8203;</a></li>
-<li><a href="#fedora-23-setup">Fedora 23 setup</a>
-<ul class="sectlevel3">
-<li><a href="#using-ruby-version-provided-by-the-fedora-packages">Using Ruby version provided by the Fedora packages</a></li>
-<li><a href="#using-rvm">Using RVM</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#license">License</a></li>
-<li><a href="#acknowledgements">Acknowledgements</a></li>
-</ul>
-</div>
-</div>
 <div class="sect1">
-<h2 id="get-the-source"><a class="anchor" href="#get-the-source"></a>Get the source</h2>
+<h2 id="guides-and-such"><a class="anchor" href="#guides-and-such"></a>Guides and such</h2>
 <div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; git clone git@github.com:hibernate/hibernate.org.git&#x000A;&gt; cd hibernate.org</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="set-up-the-build-environmentthe-easy-way"><a class="anchor" href="#set-up-the-build-environmentthe-easy-way"></a>Set up the build environment&#8201;&#8212;&#8201;the easy way</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The easiest way to set up a build environment is to use docker.</p>
-</div>
-<div class="paragraph">
-<p>See <a href="https://github.com/hibernate/awestruct-build-env" class="bare">https://github.com/hibernate/awestruct-build-env</a>.</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.6/quickstart/html_single/">Getting Started Guide</a></dt>
+<dd>
+<p>A quickstart-style guide with tutorials.  See also the Obtaining Hibernate section discussing the Hibernate artifacts and how to obtain them.</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/hibernate/hibernate-orm/blob/main/migration-guide.adoc">Migration Guide</a></dt>
+<dd>
+<p>Migration guide covering migration to 5.6 from the previous version</p>
+</dd>
+<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.6/userguide/html_single/Hibernate_User_Guide.html">User Guide</a></dt>
+<dd>
+<p>Guide covering most user facing concepts and APIs of Hibernate</p>
+</dd>
+<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.6/integrationguide/html_single/Hibernate_Integration_Guide.html">Integrations Guide</a></dt>
+<dd>
+<p>Guide covering topics of interest for developers looking to develop integrations with Hibernate.</p>
+</dd>
+<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.6/javadocs/">Hibernate JavaDoc</a></dt>
+<dd>
+<p>The Hibernate JavaDocs</p>
+</dd>
+<dt class="hdlist1"><a href="https://docs.jboss.org/hibernate/orm/5.6/topical/html_single/wildfly/Wildfly.html">WildFly, updating in</a></dt>
+<dd>
+<p>Guide to update WildFly 12 to use the latest version of Hibernate ORM 5.6</p>
+</dd>
+<dt class="hdlist1"><a href="https://jakarta.ee/specifications/persistence/2.2/apidocs/">JPA 2.2 JavaDoc</a></dt>
+<dd>
+<p>The JPA (2.2) JavaDocs</p>
+</dd>
+<dt class="hdlist1"><a href="https://jakarta.ee/specifications/persistence/3.0/apidocs/">JPA 3.0 JavaDoc</a></dt>
+<dd>
+<p>The JPA (3.0) JavaDocs</p>
+</dd>
+<dt class="hdlist1"><a href="/orm/faq/">FAQ</a></dt>
+<dd>
+<p>The FAQ</p>
+</dd>
+<dt class="hdlist1"><a href="https://github.com/hibernate/hibernate-orm/wiki/_pages">GitHub-hosted wiki</a></dt>
+<dd>
+<p>Wiki hosted at GitHub</p>
+</dd>
+<dt class="hdlist1"><a href="https://developer.jboss.org/en/hibernate">JBoss-Developer wiki</a></dt>
+<dd>
+<p>Old wiki hosted at JBoss.org. Mostly out-of-date content.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="set-up-the-build-environmentthe-hard-way"><a class="anchor" href="#set-up-the-build-environmentthe-hard-way"></a>Set up the build environment&#8201;&#8212;&#8201;the hard way</h2>
+<h2 id="presentations"><a class="anchor" href="#presentations"></a>Presentations</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>Brett did a few interesting presentations available on Slideshare:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Get <a href="http://git-scm.com">Git</a></p>
+<p><a href="http://www.slideshare.net/brmeyer/orm-jpa-hibernate-overview">Gentle introduction on ORMs and JPA</a></p>
 </li>
 <li>
-<p>Get <a href="https://www.ruby-lang.org/en/">Ruby</a> &gt; 1.9</p>
+<p><a href="http://www.slideshare.net/brmeyer/hibernate-orm-performance-31550150">Hibernate ORM: tips, tricks and performance techniques</a></p>
+</li>
+<li>
+<p><a href="http://www.slideshare.net/brmeyer/hibernate-orm-features">Not Just ORM: Powerful Hibernate ORM Features and Capabilities</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are interested in <strong>Hibernate Performance Tuning</strong>, check out Vlad&#8217;s presentation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=BTdTEe9QL5k&amp;t=1s">Video</a></p>
+</li>
+<li>
+<p><a href="http://www.slideshare.net/VladMihalcea/high-performance-hibernate-devoxx-france">Slides</a></p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="ensure-rake-is-installed"><a class="anchor" href="#ensure-rake-is-installed"></a>Ensure Rake is installed</h3>
-<div class="paragraph">
-<p>Make sure <a href="https://github.com/jimweirich/rake">Rake</a> is available. It is often installed per default.</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; rake --version</code></pre>
+
 </div>
+
 </div>
-<div class="paragraph">
-<p>If you get "<em>command not found</em>":</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; gem install rake</code></pre>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ensure-bundler-is-installed"><a class="anchor" href="#ensure-bundler-is-installed"></a>Ensure Bundler is installed</h3>
-<div class="paragraph">
-<p>Make sure <a href="http://bundler.io/">Bundler</a> (version &gt;= 1.10) is available. It manages your Ruby gems
-locally to the project and prevents version conflicts between different Ruby projects.
-Quoting from the website:</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>Bundler provides a consistent environment for Ruby projects by tracking and installing the exact
-gems and versions that are needed.</p>
-</div>
-</blockquote>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; bundle -v</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If you get "<em>command not found</em>" or a version &lt; 1.10:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; gem install bundler</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="awestruct-setup"><a class="anchor" href="#awestruct-setup"></a>Setup awestruct</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; rake setup</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="serve-the-site-locally"><a class="anchor" href="#serve-the-site-locally"></a>Serve the site locally</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>rake preview</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Point your browser to <a href="http://localhost:4242" class="bare">http://localhost:4242</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="tips-tricks"><a class="anchor" href="#tips-tricks"></a>Tips &amp; Tricks</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="how-to-editpublish-content"><a class="anchor" href="#how-to-editpublish-content"></a>How to edit/publish content</h3>
-<div class="paragraph">
-<p>Refer to this <a href="/survival-guide/">guide</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="which-other-tasks-exist-in-the-rake-build-file"><a class="anchor" href="#which-other-tasks-exist-in-the-rake-build-file"></a>Which other tasks exist in the Rake build file?</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; rake --tasks</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This will list the available tasks with a short description</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="i-am-getting-errors-when-trying-to-execute-awestruct-directly"><a class="anchor" href="#i-am-getting-errors-when-trying-to-execute-awestruct-directly"></a>I am getting errors when trying to execute <strong>awestruct</strong> directly</h3>
-<div class="paragraph">
-<p>You need to use <code>bundle exec &lt;command&gt;</code> to make sure you get all required Gems. Check the <strong>Rakefile</strong>
-to see how the different awestruct calls are wrapped.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="if-you-are-getting-error-after-an-update"><a class="anchor" href="#if-you-are-getting-error-after-an-update"></a>If you are getting error after an update</h3>
-<div class="listingblock">
-<div class="content">
-<pre>&gt; rake clean[all]&#x000A;&gt; rake setup&#x000A;&gt; rake preview</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="if-your-changes-are-not-visible"><a class="anchor" href="#if-your-changes-are-not-visible"></a>If your changes are not visible&#8230;&#8203;</h3>
-<div class="paragraph">
-<p>Panic! Then completely regenerate the site via:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; rake clean preview</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="fedora-23-setup"><a class="anchor" href="#fedora-23-setup"></a>Fedora 23 setup</h3>
-<div class="paragraph">
-<p>Make sure the user is in the sudo group and install required dependencies for
-compilation of native extensions:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; sudo dnf -y install gcc-c++ make ruby-devel libxml2-devel libxslt-devel redhat-rpm-config</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>This is required regardless how you proceed from here (provided Ruby version vs RVM)</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect3">
-<h4 id="using-ruby-version-provided-by-the-fedora-packages"><a class="anchor" href="#using-ruby-version-provided-by-the-fedora-packages"></a>Using Ruby version provided by the Fedora packages</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>&gt; sudo dnf -y install ruby&#x000A;&gt; gem install rake bundler</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Continue <a href="#get-the-source">here</a></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="using-rvm"><a class="anchor" href="#using-rvm"></a>Using RVM</h4>
-<div class="paragraph">
-<p>How to Integrating RVM with gnome-terminal: <a href="http://rvm.io/integration/gnome-terminal" class="bare">http://rvm.io/integration/gnome-terminal</a></p>
-</div>
-<div class="paragraph">
-<p>How to install RVM (<a href="http://rvm.io/rvm/install" class="bare">http://rvm.io/rvm/install</a>)</p>
-</div>
-<div class="paragraph">
-<p>Install the GPG key:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Install a stable Ruby version:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>curl -sSL https://get.rvm.io | bash -s stable --ruby&#x000A;git clone in.relation.to&#x000A;cd in.relation.to&#x000A;echo &quot;rvm ruby-2.2@global&quot; &gt; .rvmrc</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Load the .rvmrc file:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code>cd ../in.relation.to</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Say yes to .rvmrc execution.</p>
-</div>
-<div class="paragraph">
-<p>Continue <a href="#awestruct-setup">here</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="license"><a class="anchor" href="#license"></a>License</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The content of this repository is released under the <a href="http://www.apache.org/licenses/LICENSE-2.0.txt">ASL 2.0</a>.</p>
-</div>
-<div class="paragraph">
-<p>By submitting a "pull request" or otherwise contributing to this repository, you
-agree to license your contribution under the respective licenses mentioned above.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="acknowledgements"><a class="anchor" href="#acknowledgements"></a>Acknowledgements</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This website uses <a href="https://github.com/jbossorg/bootstrap-community">JBoss Community Bootstrap</a>.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
 
 <div class="ui inverted vertical footer segment print hidden">
 <div class="ui container">
@@ -851,13 +879,13 @@ agree to license your contribution under the respective licenses mentioned above
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="../orm" title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href="../search" title="Hibernate Search">Hibernate Search</a>
-<a class="item" href="../validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="../ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="../tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
-<a class="item" href="../others" title="Other projects">Other projects</a>
+<a class="item" href="../.." title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -870,18 +898,18 @@ agree to license your contribution under the respective licenses mentioned above
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../community" title="Community resources">Community resources</a>
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
 <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
-<a class="item" href="../community/license" title="License">License</a>
+<a class="item" href="../../../community/license" title="License">License</a>
 </div>
 </div>
 <div class="five wide column sponsor">
 <div class="logo">
 <a href="https://www.redhat.com/">
-<img src="../images/sponsored-by-redhat.svg" title="Red Hat">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
 </a>
 </div>
 </div>
