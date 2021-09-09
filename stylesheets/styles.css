@@ -149,7 +149,7 @@ div.logo img {
 #content p, #content table td, #content table th, #content ul {
   font-size: 1.1em; }
 /* line 180, /var/lib/jenkins/workspace/hibernate.org_production/stylesheets/styles.scss */
-#content table td p, #content ul ul, #content ul p {
+#content table td p, #content table td ul, #content ul ul, #content ul p {
   font-size: 1em; }
 /* line 184, /var/lib/jenkins/workspace/hibernate.org_production/stylesheets/styles.scss */
 #content dl {
