@@ -21,7 +21,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1631190484" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1631267631" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -547,6 +547,7 @@ Follow us
 
 <script>
 var displayed_series = [];
+displayed_series.push('6.1');
 displayed_series.push('6.0');
 displayed_series.push('5.11');
 displayed_series.push('5.10');
@@ -580,6 +581,12 @@ Getting started
 Latest stable (6.0)
 </a>
 </div>
+<div class="jumbotron-button">
+<a class="ui small right labeled icon button orange" href="./releases/6.1/">
+<i class="right arrow icon"></i>
+Development (6.1)
+</a>
+</div>
 
 </div>
 </div>
@@ -611,6 +618,11 @@ Releases
 <div class="menu">
 <a class="item" href="/search/releases/">
 Overview
+</a>
+<a class="item" href="/search/releases/6.1/">
+6.1
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
 </a>
 <a class="item" href="/search/releases/6.0/">
 6.0
@@ -698,7 +710,7 @@ Released under the
 <div class="paragraph">
 <p>Hibernate Search automatically extracts data from Hibernate ORM entities to push it to
 local <a href="http://lucene.apache.org/">Apache Lucene</a> indexes
-or remote <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a> indexes.</p>
+or remote <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a>/https://www.opensearch.org[OpenSearch] indexes.</p>
 </div>
 <div class="paragraph">
 <p>It features:</p>

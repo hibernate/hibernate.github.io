@@ -15,7 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1631190477" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1631267626" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -659,10 +659,10 @@ Build Hibernate ORM
 <li><a href="#lucene-api">Lucene API</a></li>
 </ul>
 </li>
-<li><a href="#compatibility-third-party-hsearch-elasticsearch">Hibernate Search and Elasticsearch</a>
+<li><a href="#compatibility-third-party-hsearch-elasticsearch">Hibernate Search and Elasticsearch/OpenSearch</a>
 <ul class="sectlevel3">
-<li><a href="#elasticsearch-version">Elasticsearch version</a></li>
-<li><a href="#elasticsearch-mapping-and-index-data">Elasticsearch mapping and index data</a></li>
+<li><a href="#elasticsearchopensearch-version">Elasticsearch/OpenSearch version</a></li>
+<li><a href="#remote-mapping-and-data">Remote mapping and data</a></li>
 <li><a href="#user-provided-json">User-provided JSON</a></li>
 </ul>
 </li>
@@ -675,7 +675,7 @@ Build Hibernate ORM
 <div class="paragraph">
 <p>Your application interacts with Hibernate libraries,
 and those in turn interact with third-party software: JDBC drivers, other libraries,
-or even REST APIs (Elasticsearch).
+or even REST APIs (Elasticsearch/OpenSearch).
 When any of these components changes its API, there is a risk that it becomes incompatible.
 This page explains how Hibernate projects try to limit incompatible changes.</p>
 </div>
@@ -1078,18 +1078,18 @@ and this Lucene upgrade <strong>may</strong> introduce breaking change in Lucene
 </div>
 </div>
 <div class="sect2">
-<h3 id="compatibility-third-party-hsearch-elasticsearch"><a class="anchor" href="#compatibility-third-party-hsearch-elasticsearch"></a>Hibernate Search and Elasticsearch</h3>
+<h3 id="compatibility-third-party-hsearch-elasticsearch"><a class="anchor" href="#compatibility-third-party-hsearch-elasticsearch"></a>Hibernate Search and Elasticsearch/OpenSearch</h3>
 <div class="paragraph">
-<p><a href="/search">Hibernate Search</a> provides ways to index entities in a remote Elasticsearch cluster.
-The following sections detail aspects of compatibility that are specific to Elasticsearch.</p>
+<p><a href="/search">Hibernate Search</a> provides ways to index entities in a remote Elasticsearch/OpenSearch cluster.
+The following sections detail aspects of compatibility that are specific to Elasticsearch/OpenSearch.</p>
 </div>
 <div class="sect3">
-<h4 id="elasticsearch-version"><a class="anchor" href="#elasticsearch-version"></a>Elasticsearch version</h4>
+<h4 id="elasticsearchopensearch-version"><a class="anchor" href="#elasticsearchopensearch-version"></a>Elasticsearch/OpenSearch version</h4>
 <div class="paragraph">
-<p>Each release of Hibernate Search supports multiple versions of Elasticsearch.</p>
+<p>Each release of Hibernate Search supports multiple versions of Elasticsearch/OpenSearch.</p>
 </div>
 <div class="paragraph">
-<p>Supported versions of Elasticsearch are stable across all releases within a <strong>minor</strong> version of Hibernate Search.</p>
+<p>Supported versions are stable across all releases within a <strong>minor</strong> version of Hibernate Search.</p>
 </div>
 <div class="paragraph">
 <p>For example, upgrading from Hibernate Search 6.0.0.Final to 6.0.1.Final
@@ -1098,11 +1098,11 @@ but upgrading from 6.0.1.Final to 6.1.0.Final <strong>may</strong> require dropp
 </div>
 </div>
 <div class="sect3">
-<h4 id="elasticsearch-mapping-and-index-data"><a class="anchor" href="#elasticsearch-mapping-and-index-data"></a>Elasticsearch mapping and index data</h4>
+<h4 id="remote-mapping-and-data"><a class="anchor" href="#remote-mapping-and-data"></a>Remote mapping and data</h4>
 <div class="paragraph">
-<p>Elasticsearch indexes are stored with a specific format,
+<p>Elasticsearch/OpenSearch indexes are stored with a specific format,
 generally driven by the "mapping" assigned to the index,
-either of which may change in incompatible ways when upgrading Hibernate Search or Elasticsearch.
+either of which may change in incompatible ways when upgrading Hibernate Search or Elasticsearch/OpenSearch.
 In such an event, old indexes would be unusable in an upgraded application,
 which would require dropping indexes and reindexing all data.</p>
 </div>
@@ -1110,21 +1110,22 @@ which would require dropping indexes and reindexing all data.</p>
 <dl>
 <dt class="hdlist1">Hibernate Search upgrades</dt>
 <dd>
-<p>The Elasticsearch mapping generated by Hibernate Search for a given version of Elasticsearch
+<p>The Elasticsearch/OpenSearch mapping generated by Hibernate Search for a given version of Elasticsearch/OpenSearch
 is stable across all releases within a <strong>minor</strong> version of Hibernate Search.</p>
 <div class="paragraph">
-<p>For example, upgrading from Hibernate Search 6.0.0.Final to 6.0.1.Final while staying on the same version of Elasticsearch
+<p>For example, upgrading from Hibernate Search 6.0.0.Final to 6.0.1.Final while staying on Elasticsearch 7.10.0
 <strong>should not</strong> require dropping indexes or reindexing,
 but upgrading from 6.0.1.Final to 6.1.0.Final <strong>may</strong> require dropping indexes and reindexing.</p>
 </div>
 <div class="paragraph">
-<p>The internal format of Elasticsearch indexes is not affected by Hibernate Search upgrades.</p>
+<p>The internal format of Elasticsearch/OpenSearch indexes is not affected by Hibernate Search upgrades.</p>
 </div>
 </dd>
-<dt class="hdlist1">Elasticsearch upgrades</dt>
+<dt class="hdlist1">Elasticsearch/OpenSearch upgrades</dt>
 <dd>
-<p>Upgrading from one version of Elasticsearch to the next, even when staying on the same version of Hibernate Search,
+<p>Upgrading from one version of Elasticsearch/OpenSearch to the next, or from Elasticsearch to OpenSearch,
 <strong>may</strong> require dropping indexes and reindexing.
+This is true even when staying on the same version of Hibernate Search.
 It mainly depends on whether the Elasticsearch mapping API or internal index format changed in incompatible ways,
 which is out of the control of the Hibernate Search project.</p>
 </dd>
@@ -1134,16 +1135,16 @@ which is out of the control of the Hibernate Search project.</p>
 <div class="sect3">
 <h4 id="user-provided-json"><a class="anchor" href="#user-provided-json"></a>User-provided JSON</h4>
 <div class="paragraph">
-<p>Abstraction layers hide Elasticsearch APIs, meaning users generally
+<p>Abstraction layers hide Elasticsearch/OpenSearch APIs, meaning users generally
 do not need to provide JSON directly: Hibernate Search will generate it automatically.
-The only way to rely on Elasticsearch APIs directly from user code is through extensions,
+The only way to rely on these APIs directly from user code is through extensions,
 for example <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-elasticsearch-from-json">when passing JSON to embed in a search request</a>.</p>
 </div>
 <div class="paragraph">
 <p>These extensions are not covered by the compatibility policy.</p>
 </div>
 <div class="paragraph">
-<p>For example, upgrading from Elasticsearch 6.0.0 to 6.0.1
+<p>For example, upgrading from Elasticsearch 7.10.0 to 7.10.1
 may require updating JSON hard-coded in application code,
 and Hibernate Search cannot do anything about it.</p>
 </div>
