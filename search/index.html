@@ -21,7 +21,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1633334948" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1633343097" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -718,22 +718,22 @@ or remote <a href="https://www.elastic.co/products/elasticsearch">Elasticsearch<
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-mapping"><strong>Declarative mapping</strong></a>
+<p><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-mapping"><strong>Declarative mapping</strong></a>
 of entity properties to index fields,
 either through annotations or a programmatic API.</p>
 </li>
 <li>
-<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-massindexer"><strong>On-demand mass indexing</strong></a>
+<p><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexing-massindexer"><strong>On-demand mass indexing</strong></a>
 of all entities in the database,
 to initialize the indexes with pre-existing data.</p>
 </li>
 <li>
-<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-indexing-automatic"><strong>On-the-fly automatic indexing</strong></a>
+<p><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexing-automatic"><strong>On-the-fly automatic indexing</strong></a>
 of entities modified through a Hibernate ORM session,
 to always keep the indexes up-to-date.</p>
 </li>
 <li>
-<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl"><strong>A Search DSL</strong></a>
+<p><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl"><strong>A Search DSL</strong></a>
 to easily build full-text search queries
 and retrieve the hits as Hibernate ORM entities.</p>
 </li>
@@ -786,12 +786,12 @@ and retrieve the hits as Hibernate ORM entities.</p>
 </div>
 <div class="paragraph">
 <p>You can chose what to index (and how to index it) very precisely with
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-directfieldmapping">per-property mapping</a>
-and go even further with <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-bridge">custom bridges</a>.</p>
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-directfieldmapping">per-property mapping</a>
+and go even further with <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-bridge">custom bridges</a>.</p>
 </div>
 <div class="paragraph">
 <p>You also have far better control on how your data is processed with
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#concepts-analysis">configurable analysis</a>,
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#concepts-analysis">configurable analysis</a>,
 so you can:</p>
 </div>
 <div class="ulist">
@@ -819,14 +819,14 @@ so you can:</p>
 Handles schema initialization, indexing and query syntax transparently while you focus on the business side of your search.</p>
 </div>
 <div class="paragraph">
-<p>The Search DSL exposes many different <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate">predicates</a>
-and <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-sort">sorts</a>
+<p>The Search DSL exposes many different <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate">predicates</a>
+and <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-sort">sorts</a>
 through a succinct, easy-to-use API.</p>
 </div>
 <div class="paragraph">
 <p>And if you need to go beyond, it won&#8217;t stop you:
-native <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-lucene-from-lucene-query">Lucene Queries</a>
-or <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-extensions-elasticsearch-from-json">Elasticsearch JSON</a>
+native <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-extensions-lucene-from-lucene-query">Lucene Queries</a>
+or <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-extensions-elasticsearch-from-json">Elasticsearch JSON</a>
 can be inserted right in the middle of Search DSL queries.</p>
 </div>
 </div>
@@ -851,12 +851,12 @@ with only a few configuration changes.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Indexing geo-localized entities is as easy as
-<a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#mapper-orm-geopoint">adding the <code>@GenericField</code> annotation</a>.</p>
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-geopoint">adding the <code>@GenericField</code> annotation</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-predicate-spatial-within">Filter results around a certain location</a>
+<p><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-spatial-within">Filter results around a certain location</a>
 like the user position,
-and use a <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-sort-distance">distance sort</a>
+and use a <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-sort-distance">distance sort</a>
 to pull to the top the matching pizzerias which are closest to the user.</p>
 </div>
 </div>
@@ -867,7 +867,7 @@ to pull to the top the matching pizzerias which are closest to the user.</p>
 <h2 id="aggregations"><a class="anchor" href="#aggregations"></a>Aggregations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Get search results <a href="https://docs.jboss.org/hibernate/search/6.0/reference/en-US/html_single/#search-dsl-aggregation">aggregated</a> by groups and categories.</p>
+<p>Get search results <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-aggregation">aggregated</a> by groups and categories.</p>
 </div>
 <div class="paragraph">
 <p>For example webshops will want to show all hits,
