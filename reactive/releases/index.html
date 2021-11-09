@@ -19,7 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1636107166" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1636453659" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -545,6 +545,7 @@ Follow us
 
 <script>
 var displayed_series = [];
+displayed_series.push('1.1');
 displayed_series.push('1.0');
 </script>
 <div class="jumbotron small">
@@ -565,9 +566,9 @@ Releases
 </div>
 <div class="column four wide middle aligned">
 <div class="jumbotron-button">
-<a class="ui small right labeled icon button green" href="./1.0/">
+<a class="ui small right labeled icon button green" href="./1.1/">
 <i class="right arrow icon"></i>
-Latest stable (1.0)
+Latest stable (1.1)
 </a>
 </div>
 
@@ -593,10 +594,13 @@ Releases
 <a class="item selected" href="/reactive/releases/">
 Overview
 </a>
-<a class="item" href="/reactive/releases/1.0/">
-1.0
+<a class="item" href="/reactive/releases/1.1/">
+1.1
 &nbsp;&nbsp;
 <span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="/reactive/releases/1.0/">
+1.0
 </a>
 </div>
 </div>
@@ -669,6 +673,26 @@ Check out
 stable
 </span>
 <h3 class="ui header">
+1.1
+<small>
+2021-11-09
+</small>
+</h3>
+<p>Release with Vert.x 4.2</p>
+<div class="ui right aligned basic segment">
+<a class="ui right labeled icon button primary" href="./1.1/">
+<i class="right arrow icon"></i>
+More info
+</a>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="ui raised segment version">
+<span class="ui right ribbon label green">
+stable
+</span>
+<h3 class="ui header">
 1.0
 <small>
 2021-11-01
@@ -692,6 +716,9 @@ More info
 Hibernate Reactive
 </th>
 <th>
+1.1
+</th>
+<th>
 1.0
 </th>
 </tr>
@@ -706,6 +733,9 @@ Java
 <td>
 11, 16 or 17
 </td>
+<td>
+11, 16 or 17
+</td>
 </tr>
 <tr>
 <td>
@@ -716,12 +746,18 @@ Hibernate ORM
 <td>
 5.6
 </td>
+<td>
+5.6
+</td>
 </tr>
 <tr>
 <td>
 <a href="https://vertx.io">
 Vert.x
 </a>
+</td>
+<td>
+4.2
 </td>
 <td>
 4.1

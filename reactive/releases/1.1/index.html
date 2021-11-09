@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Your relational data. Objectively. - Hibernate ORM</title>
+<title>1.1 series - Hibernate Reactive</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="author">
@@ -9,17 +9,17 @@
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
 <meta content="Hibernate" property="og:site_name">
-<meta content="https://hibernate.org/orm/" property="og:url">
-<meta content="Your relational data. Objectively. - Hibernate ORM" property="og:title">
-<meta content="Idiomatic persistence for Java and relational databases.
+<meta content="https://hibernate.org/reactive/releases/1.1/" property="og:url">
+<meta content="1.1 series - Hibernate Reactive" property="og:title">
+<meta content="Add a reactive API to Hibernate ORM, supporting non-blocking database drivers and a reactive style of interaction with the database.
 " property="og:description">
 <meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
-<meta content="Idiomatic persistence for Java and relational databases.
+<meta content="Add a reactive API to Hibernate ORM, supporting non-blocking database drivers and a reactive style of interaction with the database.
 " name="description">
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1636453657" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1636453659" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -36,14 +36,14 @@
 <div class="ui vertical inverted sidebar left" id="mobile-menu">
 <div class="ui vertical fluid inverted text menu accordion">
 <div class="item">
-<a class="title active">
+<a class="title">
 <i class="grid icon database"></i>
 <i class="dropdown icon"></i>
 <strong>ORM</strong>
 </a>
-<div class="content active">
+<div class="content">
 <div class="menu internal-links">
-<a class="item active" href="/orm/">
+<a class="item" href="/orm/">
 <i class="grid icon home"></i>
 About
 </a>
@@ -320,18 +320,18 @@ Wiki
 </div>
 
 <div class="item">
-<a class="title">
+<a class="title active">
 <i class="grid icon retweet"></i>
 <i class="dropdown icon"></i>
 <strong>Reactive</strong>
 </a>
-<div class="content">
+<div class="content active">
 <div class="menu internal-links">
 <a class="item" href="/reactive/">
 <i class="grid icon home"></i>
 About
 </a>
-<a class="item" href="/reactive/releases/">
+<a class="item active" href="/reactive/releases/">
 <i class="grid icon tags"></i>
 Releases
 </a>
@@ -523,12 +523,12 @@ Menu
 </div>
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
-<a class="item active" href="/orm/">ORM</a>
+<a class="item" href="/orm/">ORM</a>
 <a class="item" href="/search/">Search</a>
 <a class="item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
 <a class="item" href="/tools/">Tools</a>
-<a class="item" href="/reactive/">Reactive</a>
+<a class="item active" href="/reactive/">Reactive</a>
 <a class="item" href="/others/">Others</a>
 <div class="right menu">
 <a class="item" href="https://in.relation.to/">Blog</a>
@@ -545,14 +545,8 @@ Follow us
 
 <script>
 var displayed_series = [];
-displayed_series.push('6.0');
-displayed_series.push('5.6');
-displayed_series.push('5.5');
-displayed_series.push('5.4');
-displayed_series.push('5.3');
-displayed_series.push('5.2');
-displayed_series.push('5.1');
-displayed_series.push('5.0');
+displayed_series.push('1.1');
+displayed_series.push('1.0');
 </script>
 <div class="jumbotron small">
 <div class="ui container">
@@ -561,34 +555,17 @@ displayed_series.push('5.0');
 <div class="column twelve wide middle aligned">
 <h1>
 <span>
-Hibernate ORM
+Hibernate Reactive
 </span>
 </h1>
 <h2>
 <span>
-Your relational data. Objectively.
+1.1 series
 </span>
+<span class="ui label tag green">stable</span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
-<div class="jumbotron-button">
-<a class="ui small right labeled icon button" href="/orm/documentation/getting-started">
-<i class="right arrow icon"></i>
-Getting started
-</a>
-</div>
-<div class="jumbotron-button">
-<a class="ui small right labeled icon button green" href="./releases/5.6/">
-<i class="right arrow icon"></i>
-Latest stable (5.6)
-</a>
-</div>
-<div class="jumbotron-button">
-<a class="ui small right labeled icon button orange" href="./releases/6.0/">
-<i class="right arrow icon"></i>
-Development (6.0)
-</a>
-</div>
 
 </div>
 </div>
@@ -599,8 +576,7 @@ Development (6.0)
 <div class="page-title small">
 <div class="ui container">
 <h4>
-Idiomatic persistence for Java and relational databases.
-
+Release with Vert.x 4.2
 </h4>
 </div>
 </div>
@@ -609,127 +585,50 @@ Idiomatic persistence for Java and relational databases.
 <div class="ui stackable grid">
 <div class="column three wide computer only print hidden">
 <div class="ui fluid vertical menu">
-<a class="item selected" href="/orm/">
+<a class="item" href="/reactive/">
 <i class="grid icon home"></i>
 About
 </a>
-<div class="ui dropdown link item">
+<div class="ui dropdown link item selected">
 Releases
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="/orm/releases/">
+<a class="item" href="/reactive/releases/">
 Overview
 </a>
-<a class="item" href="/orm/releases/6.0/">
-6.0
-&nbsp;&nbsp;
-<span class="ui label orange">development</span>
-</a>
-<a class="item" href="/orm/releases/5.6/">
-5.6
+<a class="item selected" href="/reactive/releases/1.1/">
+1.1
 &nbsp;&nbsp;
 <span class="ui label green">latest stable</span>
 </a>
-<a class="item" href="/orm/releases/5.5/">
-5.5
-</a>
-<a class="item" href="/orm/releases/5.4/">
-5.4
-</a>
-<a class="item" href="/orm/releases/5.3/">
-5.3
-</a>
-<a class="item" href="/orm/releases/5.2/">
-5.2
-</a>
-<a class="item" href="/orm/releases/5.1/">
-5.1
-</a>
-<a class="item" href="/orm/releases/5.0/">
-5.0
+<a class="item" href="/reactive/releases/1.0/">
+1.0
 </a>
 </div>
 </div>
-<!-- / Here we want to display all the known versions -->
-<div class="ui dropdown link item">
-Documentation
-<i class="icon dropdown"></i>
-<div class="menu">
-<a class="item" href="/orm/documentation/6.0/">
-6.0
-&nbsp;&nbsp;
-<span class="ui label orange">development</span>
-</a>
-<a class="item" href="/orm/documentation/5.6/">
-5.6
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
-</a>
-<a class="item" href="/orm/documentation/5.5/">
-5.5
-</a>
-<a class="item" href="/orm/documentation/5.4/">
-5.4
-</a>
-<a class="item" href="/orm/documentation/5.3/">
-5.3
-</a>
-<a class="item" href="/orm/documentation/5.2/">
-5.2
-</a>
-<a class="item" href="/orm/documentation/5.1/">
-5.1
-</a>
-<a class="item" href="/orm/documentation/5.0/">
-5.0
-</a>
-<a class="item" href="/orm/documentation/4.3/">
-4.3
-</a>
-<a class="item" href="/orm/documentation/4.2/">
-4.2
-</a>
-</div>
-</div>
-<a class="item" href="/orm/books/">
+<a class="item" href="/reactive/documentation/">
 <i class="grid icon book"></i>
-Books
+Documentation
 </a>
-<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-<i class="grid icon share"></i>
-Migration guides
-</a>
-<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<a class="item" href="/reactive/roadmap/">
 <i class="grid icon road"></i>
 Roadmap
 </a>
-<a class="item" href="/orm/tooling/">
-<i class="grid icon wrench"></i>
-Tooling
-</a>
-<a class="item" href="/orm/envers/">
-<i class="grid icon time"></i>
-Envers
-</a>
-<a class="item" href="/orm/contribute/">
-<i class="grid icon users"></i>
-Contribute
-</a>
-<a class="item" href="/orm/support/">
+<a class="item" href="/reactive/support/">
 <i class="grid icon doctor"></i>
 Paid support
 </a>
-<a class="item" href="/orm/faq/">
-<i class="grid icon help circle"></i>
+<a class="item" href="/reactive/faq/">
+<i class="grid icon circle help"></i>
 FAQ
 </a>
 </div>
 <div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<a class="item" href="https://github.com/hibernate/hibernate-reactive">
 <i class="grid icon code"></i>
 Source code
 </a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/issues">
 <i class="grid icon bug"></i>
 Issue tracker
 </a>
@@ -737,11 +636,11 @@ Issue tracker
 <i class="grid icon lock"></i>
 Security issue
 </a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-reactive">
 <i class="grid icon comments"></i>
 Forum
 </a>
-<a class="item" href="https://ci.hibernate.org/">
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/actions">
 <i class="grid icon treatment"></i>
 CI
 </a>
@@ -749,139 +648,213 @@ CI
 <hr>
 <div class="license">
 Released under the
-<a href="https://hibernate.org/license/">LGPL V2.1</a>
+<a href="https://raw.githubusercontent.com/hibernate/hibernate-reactive/main/LICENSE">ASL v2</a>
 </div>
 
 </div>
 <div class="column thirteen wide computer sixteen wide mobile">
-<div class="ui stackable grid">
-<div class="column eleven wide">
 <div class="content" id="content">
-<div class="feature-block">
-<div class="sect1">
-<h2 id="objectrelational-mapping"><a class="anchor" href="#objectrelational-mapping"></a>Object/Relational Mapping</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Hibernate ORM enables developers to more easily write applications whose data outlives the application process.  As an Object/Relational Mapping (ORM) framework, Hibernate is concerned with data persistence as it applies to relational databases (via JDBC).
-Unfamiliar with the notion of ORM? <a href="/orm/what-is-an-orm/">Read here</a>.</p>
+<div id="toc">
+<div id="toctitle">
+Quick links
 </div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="sect1">
-<h2 id="jpa-provider"><a class="anchor" href="#jpa-provider"></a>JPA Provider</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In addition to its own "native" API, Hibernate is also an implementation of the Java Persistence API (JPA) specification.  As such, it can be easily used in any environment supporting JPA including Java SE applications, Java EE application servers, Enterprise OSGi containers, etc.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="sect1">
-<h2 id="idiomatic-persistence"><a class="anchor" href="#idiomatic-persistence"></a>Idiomatic persistence</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Hibernate enables you to develop persistent classes following natural Object-oriented idioms including inheritance, polymorphism, association, composition, and the Java collections framework.  Hibernate requires no interfaces or base classes for persistent classes and enables any class or data structure to be persistent.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="sect1">
-<h2 id="high-performance"><a class="anchor" href="#high-performance"></a>High Performance</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Hibernate supports lazy initialization, numerous fetching strategies and optimistic locking with automatic versioning and time stamping. Hibernate requires no special database tables or fields and generates much of the SQL at system initialization time instead of at runtime.</p>
-</div>
-<div class="paragraph">
-<p>Hibernate consistently offers superior performance over straight JDBC code, both in terms of developer productivity and runtime performance.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="sect1">
-<h2 id="scalability"><a class="anchor" href="#scalability"></a>Scalability</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Hibernate was designed to work in an application server cluster and deliver a highly scalable architecture. Hibernate scales well in any environment: Use it to drive your in-house Intranet that serves hundreds of users or for mission-critical applications that serve hundreds of thousands.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="sect1">
-<h2 id="reliable"><a class="anchor" href="#reliable"></a>Reliable</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Hibernate is well known for its excellent stability and quality, proven by the acceptance and use by tens of thousands of Java developers.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="feature-block">
-<div class="sect1">
-<h2 id="extensibility"><a class="anchor" href="#extensibility"></a>Extensibility</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Hibernate is highly configurable and extensible.</p>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-<div class="column five wide">
-<div class="ui segment raised news" id="latest-news" style="display:none">
-<h3>Latest news</h3>
-<div id="feed"></div>
-<a class="ui right labeled icon button" href="http://in.relation.to/hibernate-orm/">
-<i class="right arrow icon"></i>
-Other news
+<ul>
+<li>
+<a class="item" href="#compatibility">
+Compatibility
 </a>
+</li>
+<li>
+<a class="item" href="#documentation">
+Documentation
+</a>
+</li>
+<li>
+<a class="item" href="#get-it">
+How to get it
+</a>
+</li>
+<li>
+<a class="item" href="#getting_started">
+Getting started
+</a>
+</li>
+<li>
+<a class="item" href="#whats-new">
+What's new
+</a>
+</li>
+<li>
+<a class="item" href="#releases">
+Releases in this series
+</a>
+</li>
+</ul>
 </div>
-<script>
-  $(document).ready(function() {
-    $.ajax({
-      url: "https://in.relation.to/feeds/hibernate-orm.json",
-      jsonpCallback: "getBlogEntries",
-      dataType: "jsonp",
-  
-      // Work with the response
-      success: function( data ) {
-        var feedDiv = $('#feed');
-        feedDiv.empty();
-        for (var i = 0; i < data.length; i++) {
-          var entry = data[i];
-          var entryDate = new Date(entry.date);
-          var dateString =
-              entryDate.getFullYear() + '-'
-              + ('0' + (entryDate.getMonth()+1)).slice(-2) + '-'
-              + ('0' + entryDate.getDate()).slice(-2);
-          feedDiv.append(
-            $('<div class="news-item"/>').append(
-              $('<h4/>').append(
-                $('<a href="' + entry.url + '" />').text(entry.title)
-              )
-            ).append(
-              $('<small/>').text(dateString)
-            ).append(
-              $('<p/>').text(entry.snippet)
-            ).append(
-              '<hr/>'
-            )
-          );
-        }
-        $('#latest-news').fadeIn();
-      }
-    });
-  });
-</script>
+<h2 id="compatibility">Compatibility</h2>
+<table class="ui collapsing table striped celled unstackable">
+<tr>
+<td>
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
+Java
+</a>
+</td>
+<td>
+11, 16 or 17
+</td>
+</tr>
+<tr>
+<td>
+<a href="/orm/">
+Hibernate ORM
+</a>
+</td>
+<td>
+5.6
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://vertx.io">
+Vert.x
+</a>
+</td>
+<td>
+4.2
+</td>
+</tr>
+</table>
+<p>
+Not compatible with your requirements? Have a look at the
+<a href="../">
+other series.
+</a>
+</p>
+<p>
+See also the
+<a href="/community/compatibility-policy">
+Compatibility policy.
+</a>
+</p>
+<h2 id="documentation">Documentation</h2>
+<p>
+Documentation for this specific series can be accessed through the links below:
+</p>
+<p>
+<a class="ui right labeled icon button" href="/reactive/documentation/1.1/reference/html_single/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button" href="/reactive/documentation/1.1/javadocs/">
+<i class="icon code outline"></i>
+API (JavaDoc)
+</a>
+</p>
+<p>
+You can find more documentation for all series on the
+<a href="../../documentation">
+documentation page.
+</a>
+</p>
+<h2 id="get-it">How to get it</h2>
+<div class="ui grid equal height stackable download-options">
+<div class="eleven wide column">
+<h3>Maven, Gradle...</h3>
+<p>
+Maven artifacts of Hibernate Reactive are published to
+<a href="https://search.maven.org">
+Maven Central
+</a>
+and to the
+<a href="https://repository.jboss.org/nexus/index.html">
+JBoss Maven repository.
+</a>
+Refer to the
+<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+</p>
+<p>
+You can find the Maven coordinates of all artifacts through the link below:
+<p>
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.reactive%20AND%20a%3Ahibernate-reactive-%2A%20AND%20v%3A1.1.0.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+</p>
+</p>
+</div>
+</div>
+<p>
+More information about specific releases (announcements, download links) can be found
+<a href="#releases">
+here.
+</a>
+</p>
+<h2 id="getting_started">Getting started</h2>
+<p>
+If you want to start using Hibernate Reactive, please refer to the getting started guide:
+</p>
+<p>
+<a class="ui right labeled icon button" href="/reactive/documentation/1.1/reference/html_single/#getting-started">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+<h2 id="whats-new">What's new</h2>
+<p>
+Latest release announcement (2021-11-09):
+<a href="https://in.relation.to/2021/11/09/hibernate-reactive-1_1_0_Final/">
+1.1.0.Final.
+</a>
+</p>
+<p>
+A detailed list of new features, improvements and fixes in this series can be found
+<a href="https://github.com/hibernate/hibernate-reactive/issues?q=is%3Aissue+is%3Aclosed+">
+on our issue tracker.
+</a>
+</p>
 
+<h2 id="releases">Releases in this series</h2>
+<div class="ui stackable grid series-versions">
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+1.1.0.Final
+</span>
+</p>
+<p>
+<small class="ui label">2021-11-09</small>
+</p>
 </div>
+<div class="thirteen wide column">
+<p>
+Upgrade to Vert.x 4.2
+</p>
+<p>
+<a class="ui small right labeled icon button" href="#get-it">
+<i class="right arrow icon"></i>
+How to get it
+</a>
+<a class="ui small right labeled icon button" href="#getting_started">
+<i class="right arrow icon"></i>
+Getting started
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.reactive%20AND%20a%3Ahibernate-reactive-%2A%20AND%20v%3A1.1.0.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2021/11/09/hibernate-reactive-1_1_0_Final/">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -899,13 +872,13 @@ Other news
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="." title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href="../search" title="Hibernate Search">Hibernate Search</a>
-<a class="item" href="../validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="../ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="../tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
-<a class="item" href="../others" title="Other projects">Other projects</a>
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../.." title="Hibernate Reactive">Hibernate Reactive</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -918,18 +891,18 @@ Other news
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../community" title="Community resources">Community resources</a>
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
 <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
-<a class="item" href="../community/license" title="License">License</a>
+<a class="item" href="../../../community/license" title="License">License</a>
 </div>
 </div>
 <div class="five wide column sponsor">
 <div class="logo">
 <a href="https://www.redhat.com/">
-<img src="../images/sponsored-by-redhat.svg" title="Red Hat">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
 </a>
 </div>
 </div>
