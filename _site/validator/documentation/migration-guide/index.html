@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Migration Guide - Hibernate Validator</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="author">
+<meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
+<meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
+<meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
+<meta content="Hibernate" property="og:site_name">
+<meta content="https://hibernate.org/validator/documentation/migration-guide/" property="og:url">
+<meta content="Migration Guide - Hibernate Validator" property="og:title">
+<meta content="Express validation rules in a standardized way using annotation-based constraints and benefit from transparent integration with a wide variety of frameworks.
+" property="og:description">
+<meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
+<meta content="Express validation rules in a standardized way using annotation-based constraints and benefit from transparent integration with a wide variety of frameworks.
+" name="description">
+<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1641370940" rel="stylesheet">
+<!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+<link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+<script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
+
+</head>
+<body class="pushable">
+<div class="ui vertical inverted sidebar left" id="mobile-menu">
+<div class="ui vertical fluid inverted text menu accordion">
+<div class="item">
+<a class="title">
+<i class="grid icon database"></i>
+<i class="dropdown icon"></i>
+<strong>ORM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/orm/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/orm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/orm/documentation/">
+<i class="grid icon folder open"></i>
+Documentation
+</a>
+<a class="item" href="/orm/books/">
+<i class="grid icon book"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="grid icon help circle"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon search"></i>
+<i class="dropdown icon"></i>
+<strong>Search</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/search/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/search/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/search/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/search/articles/">
+<i class="grid icon bookmark"></i>
+Articles
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-search">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/search">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title active">
+<i class="grid icon checkmark box"></i>
+<i class="dropdown icon"></i>
+<strong>Validator</strong>
+</a>
+<div class="content active">
+<div class="menu internal-links">
+<a class="item" href="/validator/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/validator/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item active" href="/validator/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon sitemap"></i>
+<i class="dropdown icon"></i>
+<strong>OGM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/ogm/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/ogm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/ogm/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/ogm/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/ogm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/ogm/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/ogm/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-ogm">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/OGM">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-ogm">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-ogm-master/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/ogm">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon retweet"></i>
+<i class="dropdown icon"></i>
+<strong>Reactive</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/reactive/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/reactive/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/reactive/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/reactive/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/reactive/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/reactive/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-reactive">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/issues">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-reactive">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/actions">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon wrench"></i>
+<i class="dropdown icon"></i>
+<strong>Tools</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/tools/">
+<i class="grid icon home"></i>
+About
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://tools.jboss.org/downloads/">
+<i class="grid icon cloud download"></i>
+Downloads
+</a>
+<a class="item" href="https://tools.jboss.org/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-tools">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HBX">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-tools">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/tools">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/view/Tools/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="/others/">
+Others
+</a>
+<div class="item">
+<a class="title">
+<i class="grid icon users"></i>
+<i class="dropdown icon"></i>
+<strong>Community</strong>
+</a>
+<div class="content">
+<div class="menu external-links">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<a class="item" href="/community/contributors/orm/">
+<i class="grid icon database"></i>
+Contributors to ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+<i class="grid icon search"></i>
+Contributors to Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+<i class="grid icon checkmark box"></i>
+Contributors to Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+<i class="grid icon sitemap"></i>
+Contributors to OGM
+</a>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/compatibility-policy/">
+<i class="grid icon history"></i>
+Compatibility policy
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+<a class="item" href="/community/contribute/guidelines/">
+Contribute - Guidelines
+</a>
+<a class="item" href="/community/contribute/intellij-idea/">
+Contribute - Set up IntelliJ IDEA
+</a>
+<a class="item" href="/community/contribute/eclipse-ide/">
+Contribute - Set up Eclipse IDE
+</a>
+<a class="item" href="/community/contribute/build-hibernate-orm/">
+Contribute - Build Hibernate ORM
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="https://in.relation.to/">
+Blog
+</a>
+<a class="item" href="https://discourse.hibernate.org/">
+Forums
+</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="icon twitter"></i>
+Follow us
+</a>
+</div>
+</div>
+
+<div class="pusher">
+<div class="mobile-menu-button-bar mobile only print hidden">
+<a class="item" id="mobile-menu-toggle">
+<i class="sidebar icon"></i>
+Menu
+</a>
+</div>
+<!-- begin accesibility skip to top -->
+<ul class="sr-only">
+<li>
+<a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+</li>
+<li>
+<a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+</li>
+</ul>
+<div class="ui container banner">
+<div class="logo">
+<a href="/">
+<img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="ui stackable menu mobile hidden print hidden" id="nav">
+<a class="item" href="/orm/">ORM</a>
+<a class="item" href="/search/">Search</a>
+<a class="item active" href="/validator/">Validator</a>
+<a class="item" href="/ogm/">OGM</a>
+<a class="item" href="/tools/">Tools</a>
+<a class="item" href="/reactive/">Reactive</a>
+<a class="item" href="/others/">Others</a>
+<div class="right menu">
+<a class="item" href="https://in.relation.to/">Blog</a>
+<a class="item" href="https://discourse.hibernate.org/">Forums</a>
+<a class="item" href="/community/">Community</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="twitter icon"></i>
+Follow us
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+var displayed_series = [];
+displayed_series.push('7.0');
+displayed_series.push('6.2');
+displayed_series.push('6.0');
+</script>
+<div class="jumbotron small">
+<div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide middle aligned">
+<h1>
+<span>
+Hibernate Validator
+</span>
+</h1>
+<h2>
+<span>
+Migration Guide
+</span>
+</h2>
+</div>
+<div class="column four wide middle aligned">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only print hidden">
+<div class="ui fluid vertical menu">
+<a class="item" href="/validator/">
+<i class="grid icon home"></i>
+About
+</a>
+<div class="ui dropdown link item">
+Releases
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/validator/releases/">
+Overview
+</a>
+<a class="item" href="/validator/releases/7.0/">
+7.0
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item" href="/validator/releases/6.2/">
+6.2
+</a>
+<a class="item" href="/validator/releases/6.0/">
+6.0
+</a>
+</div>
+</div>
+<a class="item selected" href="/validator/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="ui fluid vertical menu">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+<hr>
+<div class="license">
+Released under the
+<a href="https://raw.github.com/hibernate/hibernate-validator/master/license.txt">ASL v2</a>
+</div>
+
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page contains everything you need to know when upgrading from one Hibernate Validator version to another.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="7-0-x"><a class="anchor" href="#7-0-x"></a>7.0.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="7-0-0-cr1"><a class="anchor" href="#7-0-0-cr1"></a>7.0.0.CR1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Jakarta EE 9 (a.k.a. the big <code>jakarta.*</code> package change)</p>
+</li>
+<li>
+<p>XML namespaces changed</p>
+</li>
+<li>
+<p><code>@SafeHtml</code> constraint dropped</p>
+</li>
+<li>
+<p>Expression Language disabled for custom violations by default</p>
+</li>
+<li>
+<p>Expression Language Bean methods execution disabled for constraints by default</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="https://in.relation.to/2020/12/08/hibernate-validator-700-62-cr1-released/" class="bare">https://in.relation.to/2020/12/08/hibernate-validator-700-62-cr1-released/</a> for more details.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="6-2-x"><a class="anchor" href="#6-2-x"></a>6.2.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="6-2-0-cr1"><a class="anchor" href="#6-2-0-cr1"></a>6.2.0.CR1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@SafeHtml</code> constraint dropped</p>
+</li>
+<li>
+<p>Expression Language disabled for custom violations by default</p>
+</li>
+<li>
+<p>Expression Language Bean methods execution disabled for constraints by default</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="https://in.relation.to/2020/12/08/hibernate-validator-700-62-cr1-released/" class="bare">https://in.relation.to/2020/12/08/hibernate-validator-700-62-cr1-released/</a> for more details.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="6-1-x"><a class="anchor" href="#6-1-x"></a>6.1.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="6-1-7-final"><a class="anchor" href="#6-1-7-final"></a>6.1.7.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-1-6-final"><a class="anchor" href="#6-1-6-final"></a>6.1.6.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-1-5-final"><a class="anchor" href="#6-1-5-final"></a>6.1.5.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-1-4-final"><a class="anchor" href="#6-1-4-final"></a>6.1.4.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-1-3-final"><a class="anchor" href="#6-1-3-final"></a>6.1.3.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-1-2-final"><a class="anchor" href="#6-1-2-final"></a>6.1.2.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-1-1-final"><a class="anchor" href="#6-1-1-final"></a>6.1.1.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-1-0-final"><a class="anchor" href="#6-1-0-final"></a>6.1.0.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@SafeHtml</code> has been deprecated and marked for future removal.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="6-0-x"><a class="anchor" href="#6-0-x"></a>6.0.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="6-0-22-final"><a class="anchor" href="#6-0-22-final"></a>6.0.22.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-21-final"><a class="anchor" href="#6-0-21-final"></a>6.0.21.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-20-final"><a class="anchor" href="#6-0-20-final"></a>6.0.20.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-19-final"><a class="anchor" href="#6-0-19-final"></a>6.0.19.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-18-final"><a class="anchor" href="#6-0-18-final"></a>6.0.18.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@SafeHtml</code> has been deprecated and marked for future removal.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-17-final"><a class="anchor" href="#6-0-17-final"></a>6.0.17.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-16-final"><a class="anchor" href="#6-0-16-final"></a>6.0.16.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-15-final"><a class="anchor" href="#6-0-15-final"></a>6.0.15.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-14-final"><a class="anchor" href="#6-0-14-final"></a>6.0.14.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-13-final"><a class="anchor" href="#6-0-13-final"></a>6.0.13.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-12-final"><a class="anchor" href="#6-0-12-final"></a>6.0.12.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are using our CDI integration, be sure that all the beans you want to validate have a Bean Validation annotation (be it a constraint, <code>@Valid</code> or <code>@ValidateOnExecution</code>). If you need to add an annotation, just add a simple <code>@ValidateOnExecution</code> to the class. This limitation was present until 6.0.10.Final and is now back due to a nasty startup time regression of CDI applications.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-11-final"><a class="anchor" href="#6-0-11-final"></a>6.0.11.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>We removed the <code>StaticFieldELResolver</code> from our <code>javax.el</code> resolver list. This feature was added during the 6.x cycle and never documented. If you want to call methods from your EL expressions, just inject an object containing the methods as a variable.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-10-final"><a class="anchor" href="#6-0-10-final"></a>6.0.10.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A few validation messages have been changed to be more consistent. That being said, you should rely on the constraint annotation to categorize your violations rather than on the message.</p>
+</li>
+<li>
+<p>We fixed an issue with the <code>JPATraversableResolver</code> not being initialized correctly (and thus we we using the default one): the <code>JPATraversableResolver</code> is now used by default in any JPA environment as it should be (thus Hibernate Validator will not validate or cascade lazily loaded properties not already loaded). If it is not the behavior you want, you can override the <code>TraversableResolver</code> for your <code>ValidatorFactory</code>. This regression was introduced in 6.0.3.Final.</p>
+</li>
+<li>
+<p>We fixed the CDI extension to properly consider the annotations in the hierarchy of a class. Prior to 6.0.10.Final, if the considered class didn&#8217;t have any validation related annotations but its class hierarchies did, the annotations in the class hierarchy were ignored. This is no longer the case. Note: it worked OK if the considered class itself had at least one validation related annotation.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-9-final"><a class="anchor" href="#6-0-9-final"></a>6.0.9.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The constraint validator payload (incubating feature introduced in 6.0.8.Final) has been moved from the <code>HibernateConstraintValidatorInitializationContext</code> to the <code>HibernateConstraintValidatorContext</code>. See <a href="https://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#constraint-validator-payload">the documentation for more information</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-8-final"><a class="anchor" href="#6-0-8-final"></a>6.0.8.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-7-final"><a class="anchor" href="#6-0-7-final"></a>6.0.7.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-6-final"><a class="anchor" href="#6-0-6-final"></a>6.0.6.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To improve the compatibility with the version previously shipped in WildFly, we reintroduced a few things removed in earlier versions of 6.0:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the <code>hibernate.validator.constraint_mapping_contributor</code> property (you may now use the <code>hibernate.validator.constraint_mapping_contributors</code> property)</p>
+</li>
+<li>
+<p><code>ignoreAnnotations()</code> in the constraint declaration API (you may now use <code>ignoreAnnotations(boolean)</code>)</p>
+</li>
+<li>
+<p>These features are deprecated and planned for removal so they will be removed at some point</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-5-final"><a class="anchor" href="#6-0-5-final"></a>6.0.5.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-4-final"><a class="anchor" href="#6-0-4-final"></a>6.0.4.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-3-final"><a class="anchor" href="#6-0-3-final"></a>6.0.3.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-2-final"><a class="anchor" href="#6-0-2-final"></a>6.0.2.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-1-final"><a class="anchor" href="#6-0-1-final"></a>6.0.1.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Hibernate Validator now throws an exception in every case if trying to perform validation on a property or a method not present in a bean (before this version, no errors were thrown if the bean was totally unconstrained and an error was thrown when validating method parameters but not when validating return values). More generally, sanity checks on the various <code>Validator#validate&#8230;&#8203;()</code> methods parameters are now always applied, even if the bean is unconstrained.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="6-0-0-final"><a class="anchor" href="#6-0-0-final"></a>6.0.0.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The group id of Hibernate Validator has changed from <code>org.hibernate</code> to <code>org.hibernate.validator</code>. Refer to the artifacts via <code>org.hibernate.validator:hibernate-validator:6.0.0.Final</code>, <code>org.hibernate.validator:hibernate-validator-cdi:6.0.0.Final</code> and <code>org.hibernate.validator:hibernate-validator-annotation-processor:6.0.0.Final</code>, respectively.</strong></p>
+<div class="paragraph">
+<p>To ease migration, relocation artifacts will be provided for the HV 6 release family. Examine the output of your build, if you see messages like "[WARNING] The artifact org.hibernate:hibernate-validator:jar:6.0.0.Alpha1 has been relocated to org.hibernate.validator:hibernate-validator:jar:6.0.0.Alpha1", you are still using the old GAV coordinates and should upgrade to the new ones.</p>
+</div>
+<div class="paragraph">
+<p>Also make sure to not depend on HV 5.x and HV 6.x at the same time (as the group ids are different, the dependency resolution algorithm of your build tool fails to detect that these are two versions of the same logical artifact).</p>
+</div>
+</li>
+<li>
+<p>Removal/change of experimental features in the favor of equivalent functionality standardized in Bean Validation 2.0:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The experimental contract <code>org.hibernate.validator.spi.time.TimeProvider</code> and related methods <code>HibernateValidatorConfiguration#timeProvider()</code>, <code>HibernateValidatorContext#timeProvider()</code> and <code>HibernateConstraintValidatorContext#getTimeProvider()</code> and related constant <code>HibernateValidatorConfiguration#TIME_PROVIDER</code> have been removed. Use <code>javax.validation.ClockProvider</code> as defined by BV 2.0 instead (<a href="https://hibernate.atlassian.net/browse/HV-1135">HV-1135</a>).</p>
+</li>
+<li>
+<p>The experimental annotation <code>org.hibernate.validator.valuehandling.UnwrapValidatedValue</code>, enum <code>org.hibernate.validator.valuehandling.UnwrapMode</code> and the corresponding method <code>unwrapValidatedValue()</code> in the constraint declaration API have been removed in the favor of the new <code>javax.validation.valueextraction.Unwrapping</code> constraint payloads (<a href="https://hibernate.atlassian.net/browse/HV-1207">HV-1207</a>).</p>
+</li>
+<li>
+<p>The experimental contract <code>org.hibernate.validator.spi.valuehandling.ValidatedValueUnwrapper</code>, related methods <code>HibernateValidatorConfiguration#addValidationValueHandler()</code> and <code>HibernateValidatorContext#addValidationValueHandler()</code> and related constant <code>HibernateValidatorConfiguration.VALIDATED_VALUE_HANDLERS</code> have been removed. Implement the standardized interface <code>javax.validation.valueextraction.ValueExtractor</code> instead (<a href="https://hibernate.atlassian.net/browse/HV-1166">HV-1166</a>).</p>
+</li>
+<li>
+<p>When you have the following constraint definition <code>@NotNull Optional&lt;@NotNull String&gt; value</code> and set <code>value</code> to null, HV used to report 2 violations, one for each <code>@NotNull</code> defined. This is not the case anymore in HV 6.x, the value in the container is not extracted and validated anymore if the container is null (<a href="https://hibernate.atlassian.net/browse/HV-1240">HV-1240</a>).</p>
+</li>
+<li>
+<p>Property path nodes representing the element of a validated container (e.g. when validating <code>List&lt;@Email String emails</code>) are represented by the standardized node type <code>CONTAINER_ELEMENT</code> instead of <code>PROPERTY</code>* Further changes:</p>
+</li>
+<li>
+<p><code>org.hibernate.validator.cfg.defs.NotBlankDef</code>, <code>NotEmptyDef</code> and <code>EmailDef</code> create the standardized constraints <code>@NotBlank</code>, <code>@NotEmpty</code> and <code>@Email</code> now instead of the legacy HV-specific counter-parts (<a href="https://hibernate.atlassian.net/browse/HV-1368">HV-1368</a>)</p>
+</li>
+<li>
+<p>The parameter name provider implementation <code>org.hibernate.validator.parameternameprovider.ReflectionParameterNameProvider</code> has been removed as it got obsolete with Bean Validation 2.0 where retrieval of parameter names via reflection is the default behavior (<a href="https://hibernate.atlassian.net/browse/HV-1118">HV-1118</a>).</p>
+</li>
+<li>
+<p>An implementation of Expression Language 3.0 (JSR 341) is required now. EL 3.0 was the only version mandated by the BV 1.1 spec also before, but HV 5.x could work with EL 2 implementations. E.g. add the following dependency to your project: <code>org.glassfish:javax.el:3.0.1-b08</code>.</p>
+</li>
+<li>
+<p>The configuration option <code>hibernate.validator.constraint_mapping_contributor</code> (deprecated in 5.3) has been removed. It was replaced by <code>hibernate.validator.constraint_mapping_contributors</code> which accepts a comma separated list of contributors. The constant <code>o.h.v.HibernateValidatorConfiguration#CONSTRAINT_MAPPING_CONTRIBUTOR</code> has also been removed and replaced by <code>o.h.v.HibernateValidatorConfiguration#CONSTRAINT_MAPPING_CONTRIBUTORS</code>.</p>
+</li>
+<li>
+<p>The deprecated method <code>ignoreAnnotations()</code> has been removed from the constraint declaration API in favor of <code>ignoreAnnotations(boolean)</code> (<a href="https://hibernate.atlassian.net/browse/HV-1120">HV-1120</a>)</p>
+</li>
+<li>
+<p>All the implementation classes of the annotation-processor module have been relocated to the <code>org.hibernate.validator.ap.internal</code> package. These classes had never been intended for public usage, no migration impact is expected. The only user facing class of that module, <code>org.hibernate.validator.ap.ConstraintValidationProcessor</code>, remains unchanged (<a href="https://hibernate.atlassian.net/browse/HV-1396">HV-1396</a>).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="5-4-x"><a class="anchor" href="#5-4-x"></a>5.4.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="5-4-1-final"><a class="anchor" href="#5-4-1-final"></a>5.4.1.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-4-0-final"><a class="anchor" href="#5-4-0-final"></a>5.4.0.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-4-0-cr1"><a class="anchor" href="#5-4-0-cr1"></a>5.4.0.CR1</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-4-0-beta1"><a class="anchor" href="#5-4-0-beta1"></a>5.4.0.Beta1</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="5-3-x"><a class="anchor" href="#5-3-x"></a>5.3.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="5-3-4-final"><a class="anchor" href="#5-3-4-final"></a>5.3.4.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-3-3-final"><a class="anchor" href="#5-3-3-final"></a>5.3.3.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-3-2-final"><a class="anchor" href="#5-3-2-final"></a>5.3.2.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-3-1-final"><a class="anchor" href="#5-3-1-final"></a>5.3.1.Final</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>We changed slightly the way the <code>javax.el ExpressionFactory</code> is initialized. Before this release, if you used a <code>ResourceBundleMessageInterpolator</code>, HV could be initialized with only a dependency to the <code>javax.el</code> API as the <code>ExpressionFactory</code> was not initialized at bootstrap (and it would have failed at message interpolation). As we now initialize the <code>ExpressionFactory</code> at bootstrap, if the <code>ResourceBundleMessageInterpolator</code> is used, you also need to have a <code>javax.el</code> implementation available. So, in the end, either you don&#8217;t use <code>ResourceBundleMessageInterpolator</code> at all and then you don&#8217;t need any <code>javax.el</code> dependency or you use a <code>ResourceBundleMessageInterpolator</code> and the <code>javax.el</code> API and an implementation are required by HV.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-3-0-final"><a class="anchor" href="#5-3-0-final"></a>5.3.0.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-3-0-cr1"><a class="anchor" href="#5-3-0-cr1"></a>5.3.0.CR1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The (experimental) notion of <code>ConstraintDefinitionContributor</code> has been removed from the public API. Instead the new method <code>ConstraintMapping#constraintDefinition()</code> should be used when constraint definitions need to be added programmatically. This change makes the API for programmatic constraint definition and declaration consistent with the XML approach for achieving the same. The following elements have been removed:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Interface <code>o.h.v.spi.constraintdefinition.ConstraintDefinitionContributor</code></p>
+</li>
+<li>
+<p>Constant <code>o.h.v.HibernateValidatorConfiguration#CONSTRAINT_DEFINITION_CONTRIBUTORS</code></p>
+</li>
+<li>
+<p>Method <code>o.h.v.HibernateValidatorConfiguration#addConstraintDefinitionContributor()</code></p>
+</li>
+<li>
+<p>Method <code>o.h.v.HibernateValidatorConfiguration#getDefaultConstraintDefinitionContributor()</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The possibility to add constraint validators by means of the Java service loader mechanism (via a <code>META-INF/services/javax.validation.ConstraintValidator</code> file) remains in place.</p>
+</li>
+<li>
+<p>The configuration option <code>hibernate.validator.constraint_mapping_contributor</code> has been deprecated in favor of <code>hibernate.validator.constraint_mapping_contributors</code> which accepts a comma separated list of contributors. The constant <code>o.h.v.HibernateValidatorConfiguration#CONSTRAINT_MAPPING_CONTRIBUTOR</code> has been deprecated in favor of <code>o.h.v.HibernateValidatorConfiguration#CONSTRAINT_MAPPING_CONTRIBUTORS</code> (<a href="https://hibernate.atlassian.net/browse/HV-1065">HV-1065</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="5-2-x"><a class="anchor" href="#5-2-x"></a>5.2.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="5-2-4-final"><a class="anchor" href="#5-2-4-final"></a>5.2.4.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-2-3-final"><a class="anchor" href="#5-2-3-final"></a>5.2.3.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-2-2-final"><a class="anchor" href="#5-2-2-final"></a>5.2.2.Final</h3>
+<div class="paragraph">
+<p>The method <code>AnnotationProcessingOptions#ignoreAnnotations()</code> has been deprecated and scheduled for removal in a future release. Use <code>AnnotationIgnoreOptions#ignoreAnnotations(boolean)</code> instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-2-1-final"><a class="anchor" href="#5-2-1-final"></a>5.2.1.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-2-0-final"><a class="anchor" href="#5-2-0-final"></a>5.2.0.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="5-1-x"><a class="anchor" href="#5-1-x"></a>5.1.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="5-1-0-cr1"><a class="anchor" href="#5-1-0-cr1"></a>5.1.0.CR1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>@Mod10Check</code> and <code>@Mod11Check</code> constraints introduced in 5.1.0.Beta1 got an overhaul. Indeces are now always inclusive (especially the <code>endIndex</code>) and are always relative to the validated value, independent of <code>ignoreNonDigitCharacters</code>. Also <code>checkDigitPosition</code> got renamed into <code>checkDigitIndex</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-1-0-alpha1"><a class="anchor" href="#5-1-0-alpha1"></a>5.1.0.Alpha1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The programmatic constraint declaration API raises a <code>ValidationException</code> now in case the same element (type, property, method etc.) is configured more than once within the mappings used to configure one validator factory. While this was possible before, it was not recommended as it may have caused issues when e.g. configuring conflicting annotation ignore options (<a href="https://hibernate.atlassian.net/browse/HV-716">HV-716</a>). Instead select any element to be configured once and apply all required configurations subsequently.</p>
+</li>
+<li>
+<p>When building Hibernate Validator from the sources yourself, you need to use now JDK 7 and Maven 3.0.3 or later. Note that the created binaries are still Java 6 compatible (<a href="https://hibernate.atlassian.net/browse/HV-619">HV-619</a>, <a href="https://hibernate.atlassian.net/browse/HV-797">HV-797</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="5-0-x"><a class="anchor" href="#5-0-x"></a>5.0.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="5-0-1-final"><a class="anchor" href="#5-0-1-final"></a>5.0.1.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-final"><a class="anchor" href="#5-0-0-final"></a>5.0.0.Final</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-cr5"><a class="anchor" href="#5-0-0-cr5"></a>5.0.0.CR5</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The Hibernate Validator CDI portable extension has been extracted from the main JAR into a separate module (<a href="https://hibernate.atlassian.net/browse/HV-778">HV-778</a>). To make use of the extension, the dependency <code>org.hibernate:hibernate-validator-cdi:5.0.0.CR5</code> must be added to the classpath.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-cr4"><a class="anchor" href="#5-0-0-cr4"></a>5.0.0.CR4</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-cr3"><a class="anchor" href="#5-0-0-cr3"></a>5.0.0.CR3</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@ValidateExecutable</code> is reamed to <code>@ValidateOnExecution</code> and the <code>ExecutableType.IMPLICIT</code> is introduced - <a href="https://hibernate.atlassian.net/browse/BVAL-437">BVAL-437</a></p>
+</li>
+<li>
+<p><code>MethodDescriptor#areParametersConstrained</code> got renamed into <code>MethodDescriptor#hasConstrainedParameters</code> and <code>MethodDescriptor#isReturnValueConstrained</code> into <code>MethodDescriptor#hasConstrainedReturnValue</code> - <a href="https://hibernate.atlassian.net/browse/BVAL-432">BVAL-432</a></p>
+</li>
+<li>
+<p>XML config element <code>&lt;validated-executables&gt;&lt;/validated&gt;</code> is renamed to <code>&lt;default-validated-executable-types&gt;&lt;/default&gt;</code> and matching <code>BootstrapConfiguration#getValidatedExecutableTypes</code> to <code>BootstrapConfiguration#getDefaultValidatedExecutableTypes</code> - <a href="https://hibernate.atlassian.net/browse/BVAL-435">BVAL-435</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-cr2"><a class="anchor" href="#5-0-0-cr2"></a>5.0.0.CR2</h3>
+<div class="paragraph">
+<p>No migration concerns.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-cr1"><a class="anchor" href="#5-0-0-cr1"></a>5.0.0.CR1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Methods of <code>ParameterNameProvider</code> interface return now <code>List</code> instead of <code>String[]</code> - <a href="https://hibernate.atlassian.net/browse/BVAL-409">BVAL-409</a></p>
+</li>
+<li>
+<p><code>@CrossParameterConstraint</code> got replaced by <code>@SupportValidationTarget</code> - <a href="https://hibernate.atlassian.net/browse/BVAL-391">BVAL-391</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-beta1"><a class="anchor" href="#5-0-0-beta1"></a>5.0.0.Beta1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Renamed <code>javax.validation.MethodValidator</code> to <code>ExecutableValidator</code>; <code>j.v.Validator#forMethods()</code> renamed to <code>forExecutables()</code> (<a href="https://hibernate.atlassian.net/browse/BVAL-355">BVAL-355</a>)</p>
+</li>
+<li>
+<p>Made methods <code>j.v.ExecutableValidator#validateConstructorParameters()</code> and <code>validateConstructorReturnValue()</code> more usable (<a href="https://hibernate.atlassian.net/browse/BVAL-358">BVAL-358</a>)</p>
+</li>
+<li>
+<p>Deprecated <code>org.hibernate.validator.messageinterpolation.ValueFormatterMessageInterpolator</code>; the validated value can now be used within EL expressions (<a href="https://hibernate.atlassian.net/browse/BVAL-223">BVAL-223</a>)</p>
+</li>
+<li>
+<p>Removed annotation <code>javax.validation.cdi.MethodValidated</code> (<a href="https://hibernate.atlassian.net/browse/BVAL-376">BVAL-376</a>)</p>
+</li>
+<li>
+<p>Removed Maven archetype (<a href="https://hibernate.atlassian.net/browse/HV-650">HV-650</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-alpha2"><a class="anchor" href="#5-0-0-alpha2"></a>5.0.0.Alpha2</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>This release requires Bean Validation 1.1.0.Beta2</p>
+</li>
+<li>
+<p>Methods for method validation moved from <code>javax.validation.Validator</code> to <code>MethodValidator</code> (<a href="https://hibernate.atlassian.net/browse/BVAL-310">BVAL-310</a>)</p>
+</li>
+<li>
+<p><code>javax.validation.ConfigurationSource</code> renamed to <code>BootstrapConfiguration</code> (<a href="https://hibernate.atlassian.net/browse/BVAL-293">BVAL-293</a>)</p>
+</li>
+<li>
+<p>Removed types deprecated in Hibernate Validator 4.3.0 (<a href="https://hibernate.atlassian.net/browse/HV-584">HV-584</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="5-0-0-alpha1"><a class="anchor" href="#5-0-0-alpha1"></a>5.0.0.Alpha1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>This release requires Bean Validaton 1.1 as a dependency (more concretely 1.1.0.Alpha1)</p>
+</li>
+<li>
+<p>The custom method validation feature has been replaced by the method validation specfied by Bean Validation 1.1</p>
+</li>
+<li>
+<p>The deprecated classes and methods from <a href="https://hibernate.atlassian.net/browse/HV-561">HV-561</a> have been removed. This means if you are using any of the affected APIs you will need to migrate</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-3-x"><a class="anchor" href="#4-3-x"></a>4.3.x</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes changes made in different releases of version 4.3.0. It helps you to migrate from version 4.2.0.Final to 4.3.0.Final (yet to be released) or between releases of version 4.3.0. Hibernate Validator 4.3 requires Java 6!</p>
+</div>
+<div class="sect2">
+<h3 id="4-3-0-beta1"><a class="anchor" href="#4-3-0-beta1"></a>4.3.0.Beta1</h3>
+<div class="paragraph">
+<p><a href="https://hibernate.atlassian.net/browse/HV-561">HV-561</a> introduced several deprecations (see the JavaDoc for <a href="https://docs.jboss.org/hibernate/validator/4.3/api/index.html?deprecated-list.html">a complete deprecation list</a>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.hibernate.validator.group.DefaultGroupSequenceProvider</code> is deprecated and replaced by <code>org.hibernate.validator.group.spi.DefaultGroupSequenceProvider</code></p>
+</li>
+<li>
+<p><code>org.hibernate.validator.resourceloading.ResourceBundleLocator</code> is deprecated and replaced by <code>org.hibernate.validator.spi.resourceloading.ResourceBundleLocator</code></p>
+</li>
+<li>
+<p>The constructor of <code>org.hibernate.validator.cfg.ConstraintMapping</code> is deprecated. Instances of <code>ConstraintMapping</code> are now created via <code>HibernateValidatorConfiguration#createConstraintMapping()</code></p>
+</li>
+<li>
+<p>The package <code>org.hibernate.validator.method</code> with its containing classes is deprecated without alternative for now. In Hibernate Validator 5 this package will be removed to align with Bean Validation 1.1. The method level validation methods will then be available via <code>javax.validation.Validator</code>.</p>
+</li>
+<li>
+<p><code>org.hibernate.validator.internal.util.LazyValidatorFactory</code> is deprecated and will be removed in HV 5</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="4-3-0-alpha1"><a class="anchor" href="#4-3-0-alpha1"></a>4.3.0.Alpha1</h3>
+<div class="paragraph">
+<p>This is the first release after Hibernate Validator 4.2.0.Final and backwards compatible. However, the used logging framework has changed to JBoss Logging. This means <code>org.jboss.logging:jboss-logging</code> is now a required runtime dependency replacing <code>org.slf4j:slf4j-api</code>. You can still use slf4j, log4j or Java Logging though. JBoss Logging is only an additional layer which allows to internationalize (i18n) the logging and exception messages as well as provinding unique ids for these messages. Under the hood JBoss Logging will use the logging framework of your choice to log the messages.</p>
+</div>
+<div class="paragraph">
+<p><strong>Hibernate Validator now requires a Java 6 runtime.</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="4-2-x"><a class="anchor" href="#4-2-x"></a>4.2.x</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes changes made in different releases of version 4.2.0. It helps you to migrate from version 4.1.0.Final to 4.2.0.Final or between releases of version 4.2.0.</p>
+</div>
+<div class="sect2">
+<h3 id="4-2-0-final"><a class="anchor" href="#4-2-0-final"></a>4.2.0.Final</h3>
+<div class="paragraph">
+<p>This release doesn&#8217;t introduce modifications which can break your existing code if you have already migrated to version 4.2.0.CR1. If you migrate from version 4.1.0.Final the following sections gives you the changes introduced in the different releases leading to this Final version.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="4-2-0-cr1"><a class="anchor" href="#4-2-0-cr1"></a>4.2.0.CR1</h3>
+<div class="paragraph">
+<p>As you already know Hibernate Validator allows the configuration of constraints programmatically. The main feature of this release is the programmatic API allowing constraint configuration on method (<a href="https://hibernate.atlassian.net/browse/HV-431">HV-431</a>). To implement this in an unambiguous way we had to make yet some more changes to the programmatic API.</p>
+</div>
+<div class="paragraph">
+<p>Another minor modification which can impact your existing code (if you migrate from Beta2) is <a href="https://hibernate.atlassian.net/browse/HV-488">HV-488</a>. If you use the method metadata API you will see that the method of <code>MethodDescriptor</code> named <code>getParameterConstraints()</code> was renamed to <code>getParameterDescriptors()</code> to avoid confusion.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="4-2-0-beta2"><a class="anchor" href="#4-2-0-beta2"></a>4.2.0.Beta2</h3>
+<div class="paragraph">
+<p>The version Beta1 has introduced the possibility to specify constraints on methods. If you use this functionality the following changes will impact your code.</p>
+</div>
+<div class="paragraph">
+<p>A big change introduced in this release is <a href="https://hibernate.atlassian.net/browse/HV-421">HV-421</a> which defines the behavior of parameter constraint validation. Generally a logical AND is used to combine all constraints defined within a class hierarchy on a given field or method. Doing the same for method parameter constraints, however, causes ambiguities with the definition of Programming by contract where subtypes may only weaken preconditions defined by supertypes. For this release we chose a conservative alternative which prohibit multiple parameter constraints on the same parameter within a class hierarchy.</p>
+</div>
+<div class="paragraph">
+<p>Another minor modification is that the method <code>MethodValidator#validateParameters()</code> (allowing to validate all parameters of a method) was renamed to <code>MethodValidator#validateAllParameters()</code> (<a href="https://hibernate.atlassian.net/browse/HV-415">HV-415</a>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="4-2-0-beta1"><a class="anchor" href="#4-2-0-beta1"></a>4.2.0.Beta1</h3>
+<div class="paragraph">
+<p><a href="https://hibernate.atlassian.net/browse/BVTCK-12">BVTCK-12</a> resp. <a href="https://hibernate.atlassian.net/browse/HV-395">HV-395</a> required a change in the <code>javax.validation.Path</code> implementation. Unless you iterate over the <code>Path</code> instance returned by <code>Constraint.getPropertyPath()</code> you are not affected by this change.</p>
+</div>
+<div class="paragraph">
+<p>When creating own subclasses of <code>ConstraintDef</code> is it not necessary anymore to repeat the definitions of message, payload and groups. <code>ConstraintDef</code> uses now self-referential generic types.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
+
+<div class="ui inverted vertical footer segment print hidden">
+<div class="ui container">
+<div class="ui stackable inverted divided equal height stackable grid">
+<div class="three wide column">
+<h4 class="ui inverted header">Projects</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../.." title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
+</div>
+</div>
+<div class="three wide column">
+<h4 class="ui inverted header">Follow us</h4>
+<div class="ui inverted link list">
+<a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
+<a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+</div>
+</div>
+<div class="five wide column">
+<h4 class="ui inverted header">Contribute and community</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
+<a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
+<a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
+<a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+<a class="item" href="../../../community/license" title="License">License</a>
+</div>
+</div>
+<div class="five wide column sponsor">
+<div class="logo">
+<a href="https://www.redhat.com/">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span class="back-to-top computer only">
+<a href="javascript: void(0)">Back to top</a>
+</span>
+</div>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-45270411-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+  $(function() {
+    $('#mobile-menu').sidebar('setting', {
+      transition: 'push'
+    });
+    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
+  
+    $('.ui.accordion').accordion();
+  
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>150){
+        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
+      }
+      else {
+        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
+      }
+    });
+  
+      $('.back-to-top').click(function(e) {
+        $('body, html').animate({scrollTop:0}, 800);
+      });
+    });
+</script>
+</body>
+</html>

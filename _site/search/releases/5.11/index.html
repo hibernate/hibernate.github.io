@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>5.11 series - Hibernate Search</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="author">
+<meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
+<meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
+<meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
+<meta content="Hibernate" property="og:site_name">
+<meta content="https://hibernate.org/search/releases/5.11/" property="og:url">
+<meta content="5.11 series - Hibernate Search" property="og:title">
+<meta content="Automatic indexing of Hibernate ORM entities into Apache Lucene or Elasticsearch.
+Advanced search API: full-text, geospatial, aggregations and more.
+" property="og:description">
+<meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
+<meta content="Automatic indexing of Hibernate ORM entities into Apache Lucene or Elasticsearch.
+Advanced search API: full-text, geospatial, aggregations and more.
+" name="description">
+<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1641370938" rel="stylesheet">
+<!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+<link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+<script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
+
+</head>
+<body class="pushable">
+<div class="ui vertical inverted sidebar left" id="mobile-menu">
+<div class="ui vertical fluid inverted text menu accordion">
+<div class="item">
+<a class="title">
+<i class="grid icon database"></i>
+<i class="dropdown icon"></i>
+<strong>ORM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/orm/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/orm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/orm/documentation/">
+<i class="grid icon folder open"></i>
+Documentation
+</a>
+<a class="item" href="/orm/books/">
+<i class="grid icon book"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="grid icon help circle"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title active">
+<i class="grid icon search"></i>
+<i class="dropdown icon"></i>
+<strong>Search</strong>
+</a>
+<div class="content active">
+<div class="menu internal-links">
+<a class="item" href="/search/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item active" href="/search/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/search/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/search/articles/">
+<i class="grid icon bookmark"></i>
+Articles
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-search">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/search">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon checkmark box"></i>
+<i class="dropdown icon"></i>
+<strong>Validator</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/validator/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/validator/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/validator/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon sitemap"></i>
+<i class="dropdown icon"></i>
+<strong>OGM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/ogm/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/ogm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/ogm/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/ogm/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/ogm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/ogm/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/ogm/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-ogm">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/OGM">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-ogm">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-ogm-master/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/ogm">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon retweet"></i>
+<i class="dropdown icon"></i>
+<strong>Reactive</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/reactive/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/reactive/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/reactive/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/reactive/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/reactive/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/reactive/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-reactive">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/issues">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-reactive">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/actions">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon wrench"></i>
+<i class="dropdown icon"></i>
+<strong>Tools</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/tools/">
+<i class="grid icon home"></i>
+About
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://tools.jboss.org/downloads/">
+<i class="grid icon cloud download"></i>
+Downloads
+</a>
+<a class="item" href="https://tools.jboss.org/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-tools">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HBX">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-tools">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/tools">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/view/Tools/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="/others/">
+Others
+</a>
+<div class="item">
+<a class="title">
+<i class="grid icon users"></i>
+<i class="dropdown icon"></i>
+<strong>Community</strong>
+</a>
+<div class="content">
+<div class="menu external-links">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<a class="item" href="/community/contributors/orm/">
+<i class="grid icon database"></i>
+Contributors to ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+<i class="grid icon search"></i>
+Contributors to Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+<i class="grid icon checkmark box"></i>
+Contributors to Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+<i class="grid icon sitemap"></i>
+Contributors to OGM
+</a>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/compatibility-policy/">
+<i class="grid icon history"></i>
+Compatibility policy
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+<a class="item" href="/community/contribute/guidelines/">
+Contribute - Guidelines
+</a>
+<a class="item" href="/community/contribute/intellij-idea/">
+Contribute - Set up IntelliJ IDEA
+</a>
+<a class="item" href="/community/contribute/eclipse-ide/">
+Contribute - Set up Eclipse IDE
+</a>
+<a class="item" href="/community/contribute/build-hibernate-orm/">
+Contribute - Build Hibernate ORM
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="https://in.relation.to/">
+Blog
+</a>
+<a class="item" href="https://discourse.hibernate.org/">
+Forums
+</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="icon twitter"></i>
+Follow us
+</a>
+</div>
+</div>
+
+<div class="pusher">
+<div class="mobile-menu-button-bar mobile only print hidden">
+<a class="item" id="mobile-menu-toggle">
+<i class="sidebar icon"></i>
+Menu
+</a>
+</div>
+<!-- begin accesibility skip to top -->
+<ul class="sr-only">
+<li>
+<a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+</li>
+<li>
+<a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+</li>
+</ul>
+<div class="ui container banner">
+<div class="logo">
+<a href="/">
+<img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="ui stackable menu mobile hidden print hidden" id="nav">
+<a class="item" href="/orm/">ORM</a>
+<a class="item active" href="/search/">Search</a>
+<a class="item" href="/validator/">Validator</a>
+<a class="item" href="/ogm/">OGM</a>
+<a class="item" href="/tools/">Tools</a>
+<a class="item" href="/reactive/">Reactive</a>
+<a class="item" href="/others/">Others</a>
+<div class="right menu">
+<a class="item" href="https://in.relation.to/">Blog</a>
+<a class="item" href="https://discourse.hibernate.org/">Forums</a>
+<a class="item" href="/community/">Community</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="twitter icon"></i>
+Follow us
+</a>
+</div>
+</div>
+
+</div>
+
+<script>
+var displayed_series = [];
+displayed_series.push('6.1');
+displayed_series.push('6.0');
+displayed_series.push('5.11');
+displayed_series.push('5.10');
+</script>
+<div class="jumbotron small">
+<div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide middle aligned">
+<h1>
+<span>
+Hibernate Search
+</span>
+</h1>
+<h2>
+<span>
+5.11 series
+</span>
+<span class="ui label tag green">stable</span>
+</h2>
+</div>
+<div class="column four wide middle aligned">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="page-title small">
+<div class="ui container">
+<h4>
+ORM 5.4 compatibility.
+</h4>
+</div>
+</div>
+
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only print hidden">
+<div class="ui fluid vertical menu">
+<a class="item" href="/search/">
+<i class="grid icon home"></i>
+About
+</a>
+<div class="ui dropdown link item selected">
+Releases
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/search/releases/">
+Overview
+</a>
+<a class="item" href="/search/releases/6.1/">
+6.1
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
+</a>
+<a class="item" href="/search/releases/6.0/">
+6.0
+&nbsp;&nbsp;
+<span class="ui label green">latest stable</span>
+</a>
+<a class="item selected" href="/search/releases/5.11/">
+5.11
+</a>
+<a class="item" href="/search/releases/5.10/">
+5.10
+</a>
+</div>
+</div>
+<a class="item" href="/search/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/search/articles/">
+<i class="grid icon bookmark"></i>
+Articles
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="ui fluid vertical menu">
+<a class="item" href="https://github.com/hibernate/hibernate-search">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/search">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+<hr>
+<div class="license">
+Released under the
+<a href="https://raw.github.com/hibernate/hibernate-search/main/lgpl.txt">LGPL v2.1</a>
+</div>
+
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div id="toc">
+<div id="toctitle">
+Quick links
+</div>
+<ul>
+<li>
+<a class="item" href="#compatibility">
+Compatibility
+</a>
+</li>
+<li>
+<a class="item" href="#documentation">
+Documentation
+</a>
+</li>
+<li>
+<a class="item" href="#get-it">
+How to get it
+</a>
+</li>
+<li>
+<a class="item" href="#getting_started">
+Getting started
+</a>
+</li>
+<li>
+<a class="item" href="#migrate">
+Migrating
+</a>
+</li>
+<li>
+<a class="item" href="#whats-new">
+What's new
+</a>
+</li>
+<li>
+<a class="item" href="#releases">
+Releases in this series
+</a>
+</li>
+</ul>
+</div>
+<h2 id="compatibility">Compatibility</h2>
+<table class="ui collapsing table striped celled unstackable">
+<tr>
+<td>
+<a href="https://www.oracle.com/java/technologies/javase-downloads.html">
+Java
+</a>
+</td>
+<td>
+8, 11 or 17 (with 5.11.9+)
+</td>
+</tr>
+<tr>
+<td>
+<a href="/orm/">
+Hibernate ORM
+</a>
+</td>
+<td>
+5.4
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.elastic.co/products/elasticsearch">
+Elasticsearch server
+</a>
+</td>
+<td>
+2.0 - 5.6
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://lucene.apache.org/core/">
+Apache Lucene
+</a>
+</td>
+<td>
+5.5
+</td>
+</tr>
+</table>
+<p>
+Not compatible with your requirements? Have a look at the
+<a href="../">
+other series.
+</a>
+</p>
+<p>
+See also the
+<a href="/community/compatibility-policy">
+Compatibility policy.
+</a>
+</p>
+<h2 id="documentation">Documentation</h2>
+<p>
+Documentation for this specific series can be accessed through the links below:
+</p>
+<p>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.11/reference/en-US/html_single/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.11/reference/en-US/pdf/hibernate_search_reference.pdf">
+<i class="icon file pdf outline"></i>
+PDF
+</a>
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/5.11/api/">
+<i class="icon code outline"></i>
+API (JavaDoc)
+</a>
+</p>
+<p>
+You can find more documentation for all series on the
+<a href="../../documentation">
+documentation page.
+</a>
+</p>
+<h2 id="get-it">How to get it</h2>
+<div class="ui grid equal height stackable download-options">
+<div class="eleven wide column">
+<h3>Maven, Gradle...</h3>
+<p>
+Maven artifacts of Hibernate Search are published to
+<a href="https://search.maven.org">
+Maven Central
+</a>
+and to the
+<a href="https://repository.jboss.org/nexus/index.html">
+JBoss Maven repository.
+</a>
+Refer to the
+<a href="http://community.maven.jboss.org/wiki/MavenGettingStarted-Users">Maven Getting Started guide</a>
+on the JBoss Wiki for more information on how to configure the JBoss Maven repository.
+</p>
+<p>
+You can find the Maven coordinates of all artifacts through the link below:
+<p>
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.10.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+</p>
+</p>
+<p>
+Below are the Maven coordinates of the main artifacts.
+</p>
+<dl class="sparse">
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-orm%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-orm:5.11.10.Final
+</a>
+</dt>
+<dd>Hibernate ORM integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-elasticsearch:5.11.10.Final
+</a>
+</dt>
+<dd>Elasticsearch integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-elasticsearch-aws%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-elasticsearch-aws:5.11.10.Final
+</a>
+</dt>
+<dd>Amazon IAM authentication for Elasticsearch</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jgroups%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-backend-jgroups:5.11.10.Final
+</a>
+</dt>
+<dd>JGroups backend</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-backend-jms%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-backend-jms:5.11.10.Final
+</a>
+</dt>
+<dd>JMS backend</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-core%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-jsr352-core:5.11.10.Final
+</a>
+</dt>
+<dd>JSR 352 (Batch for Java) integration - Core</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jsr352-jberet%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-jsr352-jberet:5.11.10.Final
+</a>
+</dt>
+<dd>JSR 352 (Batch for Java) integration - JBeret specifics</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-engine%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-jbossmodules-engine:5.11.10.Final
+</a>
+</dt>
+<dd>WildFly feature pack - Engine</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-orm%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-jbossmodules-orm:5.11.10.Final
+</a>
+</dt>
+<dd>WildFly feature pack - Hibernate ORM integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.11.10.Final
+</a>
+</dt>
+<dd>WildFly feature pack - Elasticsearch integration</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-elasticsearch%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-jbossmodules-elasticsearch:5.11.10.Final
+</a>
+</dt>
+<dd>WildFly feature pack - Amazon IAM authentication for Elasticsearch</dd>
+<dt>
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate%7Chibernate-search-jbossmodules-jgroups%7C5.11.10.Final%7C">
+org.hibernate:hibernate-search-jbossmodules-jgroups:5.11.10.Final
+</a>
+</dt>
+<dd>WildFly feature pack - JGroups backend</dd>
+</dl>
+</div>
+<div class="five wide column divided">
+<h3>Zip archive</h3>
+<p>
+Direct download is available from SourceForge:
+</p>
+<p>
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.10.Final/hibernate-search-5.11.10.Final-dist.zip/download" title="Download">
+<i class="icon cloud download"></i>
+Download Zip archive
+</a>
+</p>
+</div>
+</div>
+<p>
+More information about specific releases (announcements, download links) can be found
+<a href="#releases">
+here.
+</a>
+</p>
+<h2 id="getting_started">Getting started</h2>
+<p>
+If you want to start using Hibernate Search, please refer to the getting started guide:
+</p>
+<p>
+<a class="ui right labeled icon button" href="/search/documentation/getting-started/5.11">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+<h2 id="migrate">Migrating</h2>
+<p>
+If you need to upgrade from a previous series, please refer to the migration guide:
+</p>
+<p>
+<a class="ui right labeled icon button" href="/search/documentation/migrate/5.11/">
+<i class="icon file text outline"></i>
+HTML
+</a>
+</p>
+<h2 id="whats-new">What's new</h2>
+<p>
+Latest release announcement (2021-10-18):
+<a href="https://in.relation.to/2021/10/19-hibernate-search-6-0-7-and-5-11-10-and-5-10-12">
+5.11.10.Final.
+</a>
+</p>
+<p>
+A detailed list of new features, improvements and fixes in this series can be found
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.10.Final%2C%205.11.9.Final%2C%205.11.8.Final%2C%205.11.7.Final%2C%205.11.6.Final%2C%205.11.5.Final%2C%205.11.4.Final%2C%205.11.3.Final%2C%205.11.2.Final%2C%205.11.1.Final%2C%205.11.0.Final%2C%205.11.0.CR1)%20ORDER%20BY%20updated">
+on our issue tracker.
+</a>
+</p>
+<div class="sect2">
+<h3 id="orm54"><a class="anchor" href="#orm54"></a>ORM 5.4</h3>
+<div class="paragraph">
+<p>Hibernate Search 5.11 is designed to work with Hibernate ORM 5.4.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jdk11"><a class="anchor" href="#jdk11"></a>JDK11 compatibility</h3>
+<div class="paragraph">
+<p>Hibernate Search 5.11 is designed to work with both JDK8 and JDK11.</p>
+</div>
+<div class="paragraph">
+<p>Support for JDK13 was introduced in version 5.11.3.Final.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wildfly"><a class="anchor" href="#wildfly"></a>Upgrade to WildFly 17</h3>
+<div id="wildfly-14" class="paragraph">
+<p>Hibernate Search&#8217;s JBoss modules of versions 5.11.3.Final and later target WildFly 17.</p>
+</div>
+<div class="paragraph">
+<p>Hibernate Search&#8217;s JBoss modules of versions 5.11.0.Final to 5.11.2.Final target WildFly 14.</p>
+</div>
+</div>
+<h2 id="releases">Releases in this series</h2>
+<div class="ui stackable grid series-versions">
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.10.Final
+</span>
+</p>
+<p>
+<small class="ui label">2021-10-18</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Bugfixes, upgrade to Hibernate ORM 5.4.32.Final, deprecations paving the way to Hibernate Search 6.
+</p>
+<p>
+<a class="ui small right labeled icon button" href="#get-it">
+<i class="level up alternate icon"></i>
+How to get it
+</a>
+<a class="ui small right labeled icon button" href="#getting_started">
+<i class="level up alternate icon"></i>
+Getting started
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.10.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.10.Final/hibernate-search-5.11.10.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.10.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2021/10/19-hibernate-search-6-0-7-and-5-11-10-and-5-10-12">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.9.Final
+</span>
+</p>
+<p>
+<small class="ui label">2021-05-05</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Upgrade to Avro 1.10, Jackson 2, ORM 5.4.30.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.9.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.9.Final/hibernate-search-5.11.9.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.9.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2021/05/06/hibernate-search-5-11-9-and-5-10-11">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.8.Final
+</span>
+</p>
+<p>
+<small class="ui label">2021-01-05</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Bugfix, upgrade to ORM 5.4.25.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.8.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.8.Final/hibernate-search-5.11.8.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.8.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2021/01/06/hibernate-search-5-11-8-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.7.Final
+</span>
+</p>
+<p>
+<small class="ui label">2020-11-18</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Upgrade to ORM 5.4.24.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.7.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.7.Final/hibernate-search-5.11.7.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.7.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2020/11/19/hibernate-search-5-11-7-Final-and-5-10-10">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.6.Final
+</span>
+</p>
+<p>
+<small class="ui label">2020-11-16</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Bugfix and upgrade to ORM 5.4.23.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.6.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.6.Final/hibernate-search-5.11.6.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.6.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2020/11/17/hibernate-search-5-11-6-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.5.Final
+</span>
+</p>
+<p>
+<small class="ui label">2020-02-19</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Bugfix and upgrade to ORM 5.4.12.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.5.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.5.Final/hibernate-search-5.11.5.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.5.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2020/02/19/hibernate-search-5-11-5-Final-and-5-10-9-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.4.Final
+</span>
+</p>
+<p>
+<small class="ui label">2019-11-22</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Bugfixes and upgrade to ORM 5.4.9.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.4.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.4.Final/hibernate-search-5.11.4.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.4.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/11/22/hibernate-search-5-11-4-Final-and-5-10-8-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.3.Final
+</span>
+</p>
+<p>
+<small class="ui label">2019-09-19</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Bugfixes and upgrade to ORM 5.4.5.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.3.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.3.Final/hibernate-search-5.11.3.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.3.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/09/19/hibernate-search-5-11-3-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.2.Final
+</span>
+</p>
+<p>
+<small class="ui label">2019-06-18</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Bugfix and upgrade to ORM 5.4.3.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.2.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.2.Final/hibernate-search-5.11.2.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.2.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/06/18/hibernate-search-5-11-2-Final-and-5-10-6-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.1.Final
+</span>
+</p>
+<p>
+<small class="ui label">2019-01-31</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Upgrade to ORM 5.4.1.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.1.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.1.Final/hibernate-search-5.11.1.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.1.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2019/02/01/hibernate-search-6-0-0-Alpha2-and-5-11-1-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version green">
+5.11.0.Final
+</span>
+</p>
+<p>
+<small class="ui label">2018-12-19</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Upgrade to ORM 5.4.0.Final
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.0.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.0.Final/hibernate-search-5.11.0.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.0.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2018/12/20/hibernate-search-5-11-0-Final/">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
+<span class="ui label version orange">
+5.11.0.CR1
+</span>
+</p>
+<p>
+<small class="ui label">2018-12-05</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Upgrade to ORM 5.4.0.CR2, JDK11 compatibility, upgrade to WildFly 14
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A5.11.0.CR1">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/5.11.0.CR1/hibernate-search-5.11.0.CR1-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(5.11.0.CR1)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="http://in.relation.to/2018/12/05/hibernate-search-5-11-0-CR1/">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
+
+<div class="ui inverted vertical footer segment print hidden">
+<div class="ui container">
+<div class="ui stackable inverted divided equal height stackable grid">
+<div class="three wide column">
+<h4 class="ui inverted header">Projects</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../.." title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
+</div>
+</div>
+<div class="three wide column">
+<h4 class="ui inverted header">Follow us</h4>
+<div class="ui inverted link list">
+<a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
+<a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+</div>
+</div>
+<div class="five wide column">
+<h4 class="ui inverted header">Contribute and community</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../community" title="Community resources">Community resources</a>
+<a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
+<a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
+<a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+<a class="item" href="../../../community/license" title="License">License</a>
+</div>
+</div>
+<div class="five wide column sponsor">
+<div class="logo">
+<a href="https://www.redhat.com/">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span class="back-to-top computer only">
+<a href="javascript: void(0)">Back to top</a>
+</span>
+</div>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-45270411-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+  $(function() {
+    $('#mobile-menu').sidebar('setting', {
+      transition: 'push'
+    });
+    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
+  
+    $('.ui.accordion').accordion();
+  
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>150){
+        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
+      }
+      else {
+        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
+      }
+    });
+  
+      $('.back-to-top').click(function(e) {
+        $('body, html').animate({scrollTop:0}, 800);
+      });
+    });
+</script>
+</body>
+</html>

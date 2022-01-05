@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Setting up IntelliJ IDEA to contribute to Hibernate projects - Hibernate</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="author">
+<meta CONTENT="default-src &#39;none&#39;; font-src &#39;self&#39; data: https://cdn.jsdelivr.net https://static.jboss.org https://in.relation.to https://staging.in.relation.to https://fonts.gstatic.com https://fonts.googleapis.com; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://hibernate.atlassian.net https://in.relation.to https://staging.in.relation.to https://www.redhat.com https://cdn.jsdelivr.net https://code.jquery.com www.google-analytics.com; img-src &#39;self&#39; data:  https://*.githubusercontent.com  www.google-analytics.com https://static.jboss.org https://cdn.jsdelivr.net; base-uri &#39;none&#39;; form-action &#39;none&#39;; object-src &#39;none&#39;; connect-src &#39;self&#39; https://api.github.com; frame-src https://hibernate.atlassian.net" HTTP-EQUIV="Content-Security-Policy">
+<meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
+<meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
+<meta content="Hibernate" property="og:site_name">
+<meta content="https://hibernate.org/community/contribute/intellij-idea/" property="og:url">
+<meta content="Setting up IntelliJ IDEA to contribute to Hibernate projects - Hibernate" property="og:title">
+<meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
+<link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1641370932" rel="stylesheet">
+<!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+<link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="https://static.jboss.org/hibernate/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+<script crossorigin="anonymous" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-KfrAxmzWxzKdfquWGNOhm/N9kEjIgoP2yBPMQmAjQ+Is0hp+3BlcWT6PcI7NuKEP" src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-wBo76R9TGH6DxuCcambHkpxJKY96xJq59OwZONC0A2v0rlNK9Kb75uRdSgxK5j9+" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.min.js" type="text/javascript"></script>
+<script crossorigin="anonymous" integrity="sha384-8tbVdDPB3bZ0bpwXcWj84BJ4lNn6EWyBX8/Uz+tVSAKxz2u+8lYENBTZMZOF29QA" src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/jquery.matchHeight.min.js" type="text/javascript"></script>
+
+</head>
+<body class="pushable">
+<div class="ui vertical inverted sidebar left" id="mobile-menu">
+<div class="ui vertical fluid inverted text menu accordion">
+<div class="item">
+<a class="title">
+<i class="grid icon database"></i>
+<i class="dropdown icon"></i>
+<strong>ORM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/orm/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/orm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/orm/documentation/">
+<i class="grid icon folder open"></i>
+Documentation
+</a>
+<a class="item" href="/orm/books/">
+<i class="grid icon book"></i>
+Books
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
+<i class="grid icon share"></i>
+Migration guides
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/orm/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/orm/envers/">
+<i class="grid icon time"></i>
+Envers
+</a>
+<a class="item" href="/orm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/orm/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/orm/faq/">
+<i class="grid icon help circle"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-orm">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon search"></i>
+<i class="dropdown icon"></i>
+<strong>Search</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/search/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/search/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/search/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/search/articles/">
+<i class="grid icon bookmark"></i>
+Articles
+</a>
+<a class="item" href="/search/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/search/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/search/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/search/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/search/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-search">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HSEARCH">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-search">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/search">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-search/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon checkmark box"></i>
+<i class="dropdown icon"></i>
+<strong>Validator</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/validator/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/validator/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/validator/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/validator/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/validator/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/validator/tooling/">
+<i class="grid icon wrench"></i>
+Tooling
+</a>
+<a class="item" href="/validator/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/validator/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-validator">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HV">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-validator">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon sitemap"></i>
+<i class="dropdown icon"></i>
+<strong>OGM</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/ogm/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/ogm/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/ogm/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/ogm/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/ogm/contribute/">
+<i class="grid icon users"></i>
+Contribute
+</a>
+<a class="item" href="/ogm/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/ogm/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-ogm">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/OGM">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-ogm">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://ci.hibernate.org/job/hibernate-ogm-master/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+<a class="item" href="https://community.jboss.org/en/hibernate/ogm">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon retweet"></i>
+<i class="dropdown icon"></i>
+<strong>Reactive</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/reactive/">
+<i class="grid icon home"></i>
+About
+</a>
+<a class="item" href="/reactive/releases/">
+<i class="grid icon tags"></i>
+Releases
+</a>
+<a class="item" href="/reactive/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="/reactive/roadmap/">
+<i class="grid icon road"></i>
+Roadmap
+</a>
+<a class="item" href="/reactive/support/">
+<i class="grid icon doctor"></i>
+Paid support
+</a>
+<a class="item" href="/reactive/faq/">
+<i class="grid icon circle help"></i>
+FAQ
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://github.com/hibernate/hibernate-reactive">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/issues">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-reactive">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-reactive/actions">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<div class="item">
+<a class="title">
+<i class="grid icon wrench"></i>
+<i class="dropdown icon"></i>
+<strong>Tools</strong>
+</a>
+<div class="content">
+<div class="menu internal-links">
+<a class="item" href="/tools/">
+<i class="grid icon home"></i>
+About
+</a>
+</div>
+<div class="menu external-links">
+<a class="item" href="https://tools.jboss.org/downloads/">
+<i class="grid icon cloud download"></i>
+Downloads
+</a>
+<a class="item" href="https://tools.jboss.org/documentation/">
+<i class="grid icon book"></i>
+Documentation
+</a>
+<a class="item" href="https://github.com/hibernate/hibernate-tools">
+<i class="grid icon code"></i>
+Source code
+</a>
+<a class="item" href="https://hibernate.atlassian.net/browse/HBX">
+<i class="grid icon bug"></i>
+Issue tracker
+</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/">
+<i class="grid icon lock"></i>
+Security issue
+</a>
+<a class="item" href="https://discourse.hibernate.org/c/hibernate-tools">
+<i class="grid icon comments"></i>
+Forum
+</a>
+<a class="item" href="https://community.jboss.org/en/tools">
+<i class="grid icon edit"></i>
+Wiki
+</a>
+<a class="item" href="https://ci.hibernate.org/view/Tools/">
+<i class="grid icon treatment"></i>
+CI
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="/others/">
+Others
+</a>
+<div class="item">
+<a class="title active">
+<i class="grid icon users"></i>
+<i class="dropdown icon"></i>
+<strong>Community</strong>
+</a>
+<div class="content active">
+<div class="menu external-links">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<a class="item" href="/community/contributors/orm/">
+<i class="grid icon database"></i>
+Contributors to ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+<i class="grid icon search"></i>
+Contributors to Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+<i class="grid icon checkmark box"></i>
+Contributors to Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+<i class="grid icon sitemap"></i>
+Contributors to OGM
+</a>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/compatibility-policy/">
+<i class="grid icon history"></i>
+Compatibility policy
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+<a class="item" href="/community/contribute/guidelines/">
+Contribute - Guidelines
+</a>
+<a class="item active" href="/community/contribute/intellij-idea/">
+Contribute - Set up IntelliJ IDEA
+</a>
+<a class="item" href="/community/contribute/eclipse-ide/">
+Contribute - Set up Eclipse IDE
+</a>
+<a class="item" href="/community/contribute/build-hibernate-orm/">
+Contribute - Build Hibernate ORM
+</a>
+</div>
+</div>
+</div>
+
+<a class="item" href="https://in.relation.to/">
+Blog
+</a>
+<a class="item" href="https://discourse.hibernate.org/">
+Forums
+</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="icon twitter"></i>
+Follow us
+</a>
+</div>
+</div>
+
+<div class="pusher">
+<div class="mobile-menu-button-bar mobile only print hidden">
+<a class="item" id="mobile-menu-toggle">
+<i class="sidebar icon"></i>
+Menu
+</a>
+</div>
+<!-- begin accesibility skip to top -->
+<ul class="sr-only">
+<li>
+<a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+</li>
+<li>
+<a accesskey="c" href="#content" title="Skip to content">Skip to content</a>
+</li>
+</ul>
+<div class="ui container banner">
+<div class="logo">
+<a href="/">
+<img alt="Hibernate" height="53" src="/images/hibernate-logo.svg" width="200">
+</a>
+</div>
+<div class="clearfix"></div>
+<div class="ui stackable menu mobile hidden print hidden" id="nav">
+<a class="item" href="/orm/">ORM</a>
+<a class="item" href="/search/">Search</a>
+<a class="item" href="/validator/">Validator</a>
+<a class="item" href="/ogm/">OGM</a>
+<a class="item" href="/tools/">Tools</a>
+<a class="item" href="/reactive/">Reactive</a>
+<a class="item" href="/others/">Others</a>
+<div class="right menu">
+<a class="item" href="https://in.relation.to/">Blog</a>
+<a class="item" href="https://discourse.hibernate.org/">Forums</a>
+<a class="item active" href="/community/">Community</a>
+<a class="item" href="https://twitter.com/hibernate/">
+<i class="twitter icon"></i>
+Follow us
+</a>
+</div>
+</div>
+
+</div>
+
+<div class="ui container-fluid">
+<div class="jumbotron small">
+<div class="ui container">
+<div class="ui grid stackable">
+<div class="column row">
+<div class="column twelve wide">
+<h1>
+<span>Community</span>
+</h1>
+<h2>
+<span>Setting up IntelliJ IDEA to contribute to Hibernate projects</span>
+</h2>
+</div>
+<div class="column four wide">
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://github.com/hibernate/">
+<i class="github icon"></i>
+Our GitHub organization
+</a>
+</div>
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/">
+<i class="bug icon"></i>
+Our issue tracker
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ui container page-content">
+<div class="ui stackable grid">
+<div class="column three wide computer only">
+<div class="ui fluid vertical menu">
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
+</a>
+<div class="ui dropdown link item">
+Contributors
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/community/contributors/orm/">
+Hibernate ORM
+</a>
+<a class="item" href="/community/contributors/search/">
+Hibernate Search
+</a>
+<a class="item" href="/community/contributors/validator/">
+Hibernate Validator
+</a>
+<a class="item" href="/community/contributors/ogm/">
+Hibernate OGM
+</a>
+</div>
+</div>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
+</a>
+<a class="item" href="/community/compatibility-policy/">
+<i class="grid icon history"></i>
+Compatibility policy
+</a>
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
+</a>
+<div class="ui dropdown link item selected">
+Contribute
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/community/contribute/guidelines/">
+Guidelines
+</a>
+<a class="item selected" href="/community/contribute/intellij-idea/">
+Set up IntelliJ IDEA
+</a>
+<a class="item" href="/community/contribute/eclipse-ide/">
+Set up Eclipse IDE
+</a>
+<a class="item" href="/community/contribute/build-hibernate-orm/">
+Build Hibernate ORM
+</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class="column thirteen wide computer sixteen wide mobile">
+<div class="content" id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Official website: <a href="http://www.jetbrains.com/idea/" class="bare">http://www.jetbrains.com/idea/</a></p>
+</div>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle">Contents</div>
+<ul class="sectlevel1">
+<li><a href="#build-system-integration">Build system integration</a>
+<ul class="sectlevel2">
+<li><a href="#identifying-the-build-system">Identifying the build system</a></li>
+<li><a href="#maven">Maven</a></li>
+<li><a href="#gradle">Gradle</a></li>
+</ul>
+</li>
+<li><a href="#code-style">Code style</a></li>
+<li><a href="#code-templates">Code templates</a></li>
+<li><a href="#debugging">Debugging</a></li>
+<li><a href="#memory-tuning">Memory Tuning</a></li>
+<li><a href="#annotation-processors-in-hibernate-orm">Annotation Processors in Hibernate ORM</a></li>
+<li><a href="#beyond">Beyond</a></li>
+</ul>
+</div>
+</div>
+<div class="sect1">
+<h2 id="build-system-integration"><a class="anchor" href="#build-system-integration"></a>Build system integration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="identifying-the-build-system"><a class="anchor" href="#identifying-the-build-system"></a>Identifying the build system</h3>
+<div class="paragraph">
+<p>Some of the Hibernate projects use Maven, some others use Gradle.
+After you check out the project from <a href="https://github.com/hibernate/">GitHub</a>,
+check if there is a <code>pom.xml</code> file in the root of the sources: that means it&#8217;s a Maven project.
+If there is a <code>build.gradle</code> file instead, then you will need to use Gradle to build it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="maven"><a class="anchor" href="#maven"></a>Maven</h3>
+<div class="paragraph">
+<p>Maven should work without configuration. Simply import the project as a Maven project.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="gradle"><a class="anchor" href="#gradle"></a>Gradle</h3>
+<div class="paragraph">
+<p>In general the IntelliJ IDEA support for importing Gradle projects should be the preferred means of importing the project.
+Support for this feature is massively better in 14.1 than in previous versions.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In my (Steve Ebersole&#8217;s) experience IntelliJ 12.1 is the absolute bare minimum to have Gradle import working.
+Each Hibernate project and its branches should identify any specific requirements for IntelliJ, JDK, etc.
+Typically speaking, I find using Java 8 to run IntelliJ 14.1 the best experience.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Note that automatic importing in IntelliJ IDEA 12 or 13 seems to be problematic on Mac OS X (mavericks).
+Here is a set of workarounds:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>edit <code>/Applications/IntelliJ\ IDEA\ 13.app/Contents/Info.plist</code>, look for <code>JVMSession</code> and change it to <code>1.7*</code>;
+this will make IntelliJ IDEA itself to run on JDK 7 - note that at the time of writing,
+it still did not solve the second gradle import problem and thus might be unnecessary.</p>
+</li>
+<li>
+<p>run <code>./gradlew idea</code> from the command line and open the project in IntelliJ IDEA.
+Note that you will need to add the generated source folders (apt, antlr, &#8230;&#8203;).
+See the Annotation processor section for more info.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-style"><a class="anchor" href="#code-style"></a>Code style</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download the settings from our GitHub repository:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For Hibernate ORM: <a href="https://raw.githubusercontent.com/hibernate/hibernate-ide-codestyles/master/intellij-14/hibernate_orm.xml"><code>hibernate_orm.xml</code></a>.</p>
+</li>
+<li>
+<p>For Hibernate Search, Validator, OGM: <a href="https://raw.githubusercontent.com/hibernate/hibernate-ide-codestyles/master/intellij-14/hibernate_noorm.xml"><code>intellij-14/hibernate_noorm.xmlhibernate-code-templates-search.xml</code></a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is <a href="http://musingsofaprogrammingaddict.blogspot.com/2010/03/import-code-style-settings-into.html">an article on how to set it up in IntelliJ IDEA</a>.</p>
+</div>
+<div class="paragraph">
+<p>The authoritative code style is defined by the CheckStyle checks file associated with the project;
+be sure to check against those prior to pushing.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-templates"><a class="anchor" href="#code-templates"></a>Code templates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The best approach to automatically apply the proper copyright/license headers to newly created files
+is to leverage the Copyright plugin (now a bundled plugin).</p>
+</div>
+<div class="paragraph">
+<p>Set up on profile per Hibernate project you want to deal with in the Copyright configuration ("Settings" &#8594; "Copyright")
+and then select the one to use for your IntelliJ IDEA project.</p>
+</div>
+<div class="paragraph">
+<p>Note you can define the profiles once and for all if you go through
+"Other settings" &#8594; "Settings for new projects" &#8594; "Copyright":
+they will be made available automatically in every new IntelliJ IDEA project.</p>
+</div>
+<div class="paragraph">
+<p>Here are the standard license headers for each project:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hibernate ORM:</p>
+<div class="literalblock">
+<div class="content">
+<pre>/*&#x000A; * Hibernate, Relational Persistence for Idiomatic Java&#x000A; *&#x000A; * License: GNU Lesser General Public License (LGPL), version 2.1 or later.&#x000A; * See the lgpl.txt file in the root directory or &lt;http://www.gnu.org/licenses/lgpl-2.1.html&gt;.&#x000A; */</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Hibernate Search:</p>
+<div class="literalblock">
+<div class="content">
+<pre>/*&#x000A; * Hibernate Search, full-text search for your domain model&#x000A; *&#x000A; * License: GNU Lesser General Public License (LGPL), version 2.1 or later&#x000A; * See the lgpl.txt file in the root directory or &lt;http://www.gnu.org/licenses/lgpl-2.1.html&gt;.&#x000A; */</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Hibernate Validator:</p>
+<div class="literalblock">
+<div class="content">
+<pre>/*&#x000A; * Hibernate Validator, declare and validate application constraints&#x000A; *&#x000A; * License: Apache License, Version 2.0&#x000A; * See the license.txt file in the root directory or &lt;http://www.apache.org/licenses/LICENSE-2.0&gt;.&#x000A; */</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Hibernate OGM:</p>
+<div class="literalblock">
+<div class="content">
+<pre>/*&#x000A; * Hibernate OGM, Domain model persistence for NoSQL datastores&#x000A; *&#x000A; * License: GNU Lesser General Public License (LGPL), version 2.1 or later&#x000A; * See the lgpl.txt file in the root directory or &lt;http://www.gnu.org/licenses/lgpl-2.1.html&gt;.&#x000A; */</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="debugging"><a class="anchor" href="#debugging"></a>Debugging</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This information is relative to IntelliJ IDEA version 9.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>One important aspect to debugging through Hibernate sources is to make sure that the mere act of debugging
+does not forces proxies to initialize just so the debugger can "show" them.
+In IntelliJ IDEA this is easily configured through what it calls "Data Type Renderers" and "Data Views".</p>
+</div>
+<div class="paragraph">
+<p>To access this configuration, open your Settings (Ctrl+Alt+S) and go to
+"IDE Settings" &#8594; "Debugger".
+Expand "Debugger" and you will find both "Data Type Renderers" and "Data Views":</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>"Data Views" is general configuration.  Here for sure you will want to disable the "Enable toString() object view".  In general, disable anything that would cause the debugger to force  initialization of the proxy.</p>
+</li>
+<li>
+<p>"Data Type Renderers". We will need to define 2 specific type renderers:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha">
+<li>
+<p>Entity Proxy renderer</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FQN: <code>org.hibernate.proxy.HibernateProxy</code></p>
+</li>
+<li>
+<p>Rendering: use expression &#8594; <code>((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().isUninitialized() ? ( ((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().getEntityName()+"@"+System.identityHashCode(this)+"[proxy;id="+((org.hibernate.proxy.HibernateProxy)this).getHibernateLazyInitializer().getIdentifier()+"]" ) : this.toString()</code></p>
+</li>
+<li>
+<p>Expanding: default; this will force the proxy to initialize (if not already) if the  user attempts to expand the node.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Collection Renderer</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FQN: <code>org.hibernate.collection.AbstractPersistentCollection</code></p>
+</li>
+<li>
+<p>Rendering: use expression &#8594; <code>((org.hibernate.collection.AbstractPersistentCollection)this).wasInitialized() ? this.toString() : ( ((org.hibernate.collection.AbstractPersistentCollection )this).getClass().getName()+"@"+ System.identityHashCode(this)+" [uninitialized]" )</code></p>
+</li>
+<li>
+<p>Expanding: default; again, this will force the collection to initialize (if not already) if the  user attempts  to expand the node.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="memory-tuning"><a class="anchor" href="#memory-tuning"></a>Memory Tuning</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you have issues with memory and GC when running IntelliJ, this might help:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://piotrga.wordpress.com/2007/06/26/intellij-ideaexevmoptions-revised-for-version-7-and-jdk-6/" class="bare">http://piotrga.wordpress.com/2007/06/26/intellij-ideaexevmoptions-revised-for-version-7-and-jdk-6/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="annotation-processors-in-hibernate-orm"><a class="anchor" href="#annotation-processors-in-hibernate-orm"></a>Annotation Processors in Hibernate ORM</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This applies to Hibernate ORM only.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>It&#8217;s currently recommended to explicitly disable the annotation processors in IntelliJ IDEA.
+From the project settings, "Java Compiler", make sure that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"-proc:none" is used as option to javac</p>
+</li>
+<li>
+<p>raise the maximum heap size</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Then in the module settings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>for hibernate-core module add these source folders:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>target/generated-src/jaxb/main</code></p>
+</li>
+<li>
+<p><code>target/generated-src/logging/main</code></p>
+</li>
+<li>
+<p><code>target/generated-src/antlr/main</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>for hibernate-entitymanager, add:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>target/generated-src/jpamodelgen/test</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beyond"><a class="anchor" href="#beyond"></a>Beyond</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to contribute to Hibernate projects, start <a href="../guidelines">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+  $(document).ready(function() {
+    $('.ui.menu .ui.dropdown').dropdown({ on: 'hover' });
+  });
+</script>
+
+<div class="ui inverted vertical footer segment print hidden">
+<div class="ui container">
+<div class="ui stackable inverted divided equal height stackable grid">
+<div class="three wide column">
+<h4 class="ui inverted header">Projects</h4>
+<div class="ui inverted link list">
+<a class="item" href="../../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
+<a class="item" href="../../../others" title="Other projects">Other projects</a>
+</div>
+</div>
+<div class="three wide column">
+<h4 class="ui inverted header">Follow us</h4>
+<div class="ui inverted link list">
+<a class="item" href="https://in.relation.to/" title="Blog">Blog</a>
+<a class="item" href="https://twitter.com/hibernate/" title="Twitter">Twitter</a>
+</div>
+</div>
+<div class="five wide column">
+<h4 class="ui inverted header">Contribute and community</h4>
+<div class="ui inverted link list">
+<a class="item" href="../.." title="Community resources">Community resources</a>
+<a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
+<a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
+<a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
+<a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
+<a class="item" href="../../license" title="License">License</a>
+</div>
+</div>
+<div class="five wide column sponsor">
+<div class="logo">
+<a href="https://www.redhat.com/">
+<img src="../../../images/sponsored-by-redhat.svg" title="Red Hat">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<span class="back-to-top computer only">
+<a href="javascript: void(0)">Back to top</a>
+</span>
+</div>
+<script>
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ 
+ga('create', 'UA-45270411-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+  $(function() {
+    $('#mobile-menu').sidebar('setting', {
+      transition: 'push'
+    });
+    $('#mobile-menu').sidebar('attach events', '#mobile-menu-toggle');
+  
+    $('.ui.accordion').accordion();
+  
+    $(window).scroll(function(e) {
+      if($(this).scrollTop()>150){
+        $('.back-to-top').fadeIn(1000); // Fading in the button on scroll after 150px
+      }
+      else {
+        $('.back-to-top').fadeOut(500); // Fading out the button on scroll if less than 150px
+      }
+    });
+  
+      $('.back-to-top').click(function(e) {
+        $('body, html').animate({scrollTop:0}, 800);
+      });
+    });
+</script>
+</body>
+</html>
