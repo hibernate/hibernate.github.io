@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Documentation - 5.4 - Hibernate ORM</title>
+<title>Hibernate organization keys - Hibernate</title>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="" name="author">
@@ -9,17 +9,13 @@
 <meta HTTP-EQUIV="X-XSS-Protection" content="1; mode=block">
 <meta HTTP-EQUIV="X-Content-Type-Options" content="nosniff">
 <meta content="Hibernate" property="og:site_name">
-<meta content="https://hibernate.org/orm/documentation/5.4/" property="og:url">
-<meta content="Documentation - 5.4 - Hibernate ORM" property="og:title">
-<meta content="Idiomatic persistence for Java and relational databases.
-" property="og:description">
+<meta content="https://hibernate.org/community/keys/" property="og:url">
+<meta content="Hibernate organization keys - Hibernate" property="og:title">
 <meta content="https://hibernate.org/images/hibernate_icon_whitebkg.svg" property="og:image">
-<meta content="Idiomatic persistence for Java and relational databases.
-" name="description">
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1643129889" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1643129886" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -36,12 +32,12 @@
 <div class="ui vertical inverted sidebar left" id="mobile-menu">
 <div class="ui vertical fluid inverted text menu accordion">
 <div class="item">
-<a class="title active">
+<a class="title">
 <i class="grid icon database"></i>
 <i class="dropdown icon"></i>
 <strong>ORM</strong>
 </a>
-<div class="content active">
+<div class="content">
 <div class="menu internal-links">
 <a class="item" href="/orm/">
 <i class="grid icon home"></i>
@@ -51,7 +47,7 @@ About
 <i class="grid icon tags"></i>
 Releases
 </a>
-<a class="item active" href="/orm/documentation/">
+<a class="item" href="/orm/documentation/">
 <i class="grid icon folder open"></i>
 Documentation
 </a>
@@ -431,12 +427,12 @@ CI
 Others
 </a>
 <div class="item">
-<a class="title">
+<a class="title active">
 <i class="grid icon users"></i>
 <i class="dropdown icon"></i>
 <strong>Community</strong>
 </a>
-<div class="content">
+<div class="content active">
 <div class="menu external-links">
 <a class="item" href="/community/">
 <i class="grid icon users"></i>
@@ -470,7 +466,7 @@ Compatibility policy
 <i class="grid icon legal"></i>
 Licenses
 </a>
-<a class="item" href="/community/keys/">
+<a class="item active" href="/community/keys/">
 <i class="grid icon key"></i>
 Keys
 </a>
@@ -527,7 +523,7 @@ Menu
 </div>
 <div class="clearfix"></div>
 <div class="ui stackable menu mobile hidden print hidden" id="nav">
-<a class="item active" href="/orm/">ORM</a>
+<a class="item" href="/orm/">ORM</a>
 <a class="item" href="/search/">Search</a>
 <a class="item" href="/validator/">Validator</a>
 <a class="item" href="/ogm/">OGM</a>
@@ -537,7 +533,7 @@ Menu
 <div class="right menu">
 <a class="item" href="https://in.relation.to/">Blog</a>
 <a class="item" href="https://discourse.hibernate.org/">Forums</a>
-<a class="item" href="/community/">Community</a>
+<a class="item active" href="/community/">Community</a>
 <a class="item" href="https://twitter.com/hibernate/">
 <i class="twitter icon"></i>
 Follow us
@@ -547,317 +543,112 @@ Follow us
 
 </div>
 
-<script>
-var displayed_series = [];
-displayed_series.push('6.0');
-displayed_series.push('5.6');
-displayed_series.push('5.5');
-displayed_series.push('5.4');
-displayed_series.push('5.3');
-displayed_series.push('5.2');
-displayed_series.push('5.1');
-displayed_series.push('5.0');
-</script>
+<div class="ui container-fluid">
 <div class="jumbotron small">
 <div class="ui container">
 <div class="ui grid stackable">
 <div class="column row">
-<div class="column twelve wide middle aligned">
+<div class="column twelve wide">
 <h1>
-<span>
-Hibernate ORM
-</span>
+<span>Community</span>
 </h1>
 <h2>
-<span>
-Documentation - 5.4
-</span>
+<span>Hibernate organization keys</span>
 </h2>
 </div>
-<div class="column four wide middle aligned">
+<div class="column four wide">
 <div class="jumbotron-button">
-<div class="ui segment raised" id="documentation-version-selector-container">
-<form class="ui form">
-<div class="field">
-<label>Other versions</label>
-<select class="ui fluid dropdown selection" onchange="location = this.options[this.selectedIndex].value;">
-<option value="/orm/documentation/6.0">
-6.0
-</option>
-<option value="/orm/documentation/5.6">
-5.6
-</option>
-<option value="/orm/documentation/5.5">
-5.5
-</option>
-<option selected value="/orm/documentation/5.4">
-5.4
-</option>
-<option value="/orm/documentation/5.3">
-5.3
-</option>
-<option value="/orm/documentation/5.2">
-5.2
-</option>
-<option value="/orm/documentation/5.1">
-5.1
-</option>
-<option value="/orm/documentation/5.0">
-5.0
-</option>
-<option value="/orm/documentation/4.3">
-4.3
-</option>
-<option value="/orm/documentation/4.2">
-4.2
-</option>
-</select>
+<a class="ui small labeled icon button" href="https://github.com/hibernate/">
+<i class="github icon"></i>
+Our GitHub organization
+</a>
 </div>
-</form>
-</div>
-</div>
-
+<div class="jumbotron-button">
+<a class="ui small labeled icon button" href="https://hibernate.atlassian.net/">
+<i class="bug icon"></i>
+Our issue tracker
+</a>
 </div>
 </div>
 </div>
 </div>
 </div>
-
-
+</div>
+</div>
 <div class="ui container page-content">
 <div class="ui stackable grid">
-<div class="column three wide computer only print hidden">
+<div class="column three wide computer only">
 <div class="ui fluid vertical menu">
-<a class="item" href="/orm/">
-<i class="grid icon home"></i>
-About
+<a class="item" href="/community/">
+<i class="grid icon users"></i>
+Community
 </a>
 <div class="ui dropdown link item">
-Releases
+Contributors
 <i class="icon dropdown"></i>
 <div class="menu">
-<a class="item" href="/orm/releases/">
-Overview
+<a class="item" href="/community/contributors/orm/">
+Hibernate ORM
 </a>
-<a class="item" href="/orm/releases/6.0/">
-6.0
-&nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<a class="item" href="/community/contributors/search/">
+Hibernate Search
 </a>
-<a class="item" href="/orm/releases/5.6/">
-5.6
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
+<a class="item" href="/community/contributors/validator/">
+Hibernate Validator
 </a>
-<a class="item" href="/orm/releases/5.5/">
-5.5
-</a>
-<a class="item" href="/orm/releases/5.4/">
-5.4
-</a>
-<a class="item" href="/orm/releases/5.3/">
-5.3
-</a>
-<a class="item" href="/orm/releases/5.2/">
-5.2
-</a>
-<a class="item" href="/orm/releases/5.1/">
-5.1
-</a>
-<a class="item" href="/orm/releases/5.0/">
-5.0
+<a class="item" href="/community/contributors/ogm/">
+Hibernate OGM
 </a>
 </div>
 </div>
-<!-- / Here we want to display all the known versions -->
-<div class="ui dropdown link item selected">
-Documentation
-<i class="icon dropdown"></i>
-<div class="menu">
-<a class="item" href="/orm/documentation/6.0/">
-6.0
-&nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<a class="item" href="/community/corporate-contributors/">
+<i class="grid icon building outline"></i>
+Corporate contributors
 </a>
-<a class="item" href="/orm/documentation/5.6/">
-5.6
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
+<a class="item" href="/community/compatibility-policy/">
+<i class="grid icon history"></i>
+Compatibility policy
 </a>
-<a class="item" href="/orm/documentation/5.5/">
-5.5
+<a class="item" href="/community/license/">
+<i class="grid icon legal"></i>
+Licenses
 </a>
-<a class="item selected" href="/orm/documentation/5.4/">
-5.4
+<a class="item active" href="/community/keys/">
+<i class="grid icon key"></i>
+Keys
 </a>
-<a class="item" href="/orm/documentation/5.3/">
-5.3
-</a>
-<a class="item" href="/orm/documentation/5.2/">
-5.2
-</a>
-<a class="item" href="/orm/documentation/5.1/">
-5.1
-</a>
-<a class="item" href="/orm/documentation/5.0/">
-5.0
-</a>
-<a class="item" href="/orm/documentation/4.3/">
-4.3
-</a>
-<a class="item" href="/orm/documentation/4.2/">
-4.2
-</a>
-</div>
-</div>
-<a class="item" href="/orm/books/">
-<i class="grid icon book"></i>
-Books
-</a>
-<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Migration-Guides">
-<i class="grid icon share"></i>
-Migration guides
-</a>
-<a class="item" href="https://github.com/hibernate/hibernate-orm/wiki/Roadmap">
-<i class="grid icon road"></i>
-Roadmap
-</a>
-<a class="item" href="/orm/tooling/">
-<i class="grid icon wrench"></i>
-Tooling
-</a>
-<a class="item" href="/orm/envers/">
-<i class="grid icon time"></i>
-Envers
-</a>
-<a class="item" href="/orm/contribute/">
-<i class="grid icon users"></i>
+<div class="ui dropdown link item">
 Contribute
+<i class="icon dropdown"></i>
+<div class="menu">
+<a class="item" href="/community/contribute/guidelines/">
+Guidelines
 </a>
-<a class="item" href="/orm/support/">
-<i class="grid icon doctor"></i>
-Paid support
+<a class="item" href="/community/contribute/intellij-idea/">
+Set up IntelliJ IDEA
 </a>
-<a class="item" href="/orm/faq/">
-<i class="grid icon help circle"></i>
-FAQ
+<a class="item" href="/community/contribute/eclipse-ide/">
+Set up Eclipse IDE
 </a>
-</div>
-<div class="ui fluid vertical menu">
-<a class="item" href="https://github.com/hibernate/hibernate-orm">
-<i class="grid icon code"></i>
-Source code
-</a>
-<a class="item" href="https://hibernate.atlassian.net/browse/HHH">
-<i class="grid icon bug"></i>
-Issue tracker
-</a>
-<a class="item" href="https://access.redhat.com/security/team/contact/">
-<i class="grid icon lock"></i>
-Security issue
-</a>
-<a class="item" href="https://discourse.hibernate.org/c/hibernate-orm">
-<i class="grid icon comments"></i>
-Forum
-</a>
-<a class="item" href="https://ci.hibernate.org/">
-<i class="grid icon treatment"></i>
-CI
+<a class="item" href="/community/contribute/build-hibernate-orm/">
+Build Hibernate ORM
 </a>
 </div>
-<hr>
-<div class="license">
-Released under the
-<a href="https://hibernate.org/license/">LGPL V2.1</a>
+</div>
 </div>
 
 </div>
 <div class="column thirteen wide computer sixteen wide mobile">
 <div class="content" id="content">
-<div class="sect1">
-<h2 id="guides-and-such"><a class="anchor" href="#guides-and-such"></a>Guides and such</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/quickstart/html_single/">Getting Started Guide</a></dt>
-<dd>
-<p>A quickstart-style guide with tutorials.  See also the Obtaining Hibernate section discussing the Hibernate artifacts and how to obtain them.</p>
-</dd>
-<dt class="hdlist1"><a href="https://github.com/hibernate/hibernate-orm/blob/master/migration-guide.adoc">Migration Guide</a></dt>
-<dd>
-<p>Migration guide covering migration to 5.4 from the previous version</p>
-</dd>
-<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html">User Guide</a></dt>
-<dd>
-<p>Guide covering most user facing concepts and APIs of Hibernate</p>
-</dd>
-<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/integrationguide/html_single/Hibernate_Integration_Guide.html">Integrations Guide</a></dt>
-<dd>
-<p>Guide covering topics of interest for developers looking to develop integrations with Hibernate.</p>
-</dd>
-<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/orm/5.4/javadocs/">Hibernate JavaDoc</a></dt>
-<dd>
-<p>The Hibernate JavaDocs</p>
-</dd>
-<dt class="hdlist1"><a href="https://docs.jboss.org/hibernate/orm/5.4/topical/html_single/wildfly/Wildfly.html">WildFly, updating in</a></dt>
-<dd>
-<p>Guide to update WildFly 12 to use the latest version of Hibernate ORM 5.4</p>
-</dd>
-<dt class="hdlist1"><a href="http://docs.jboss.org/hibernate/jpa/2.2/api/">JPA 2.2 JavaDoc</a></dt>
-<dd>
-<p>The JPA (2.2) JavaDocs</p>
-</dd>
-<dt class="hdlist1"><a href="/orm/faq/">FAQ</a></dt>
-<dd>
-<p>The FAQ</p>
-</dd>
-<dt class="hdlist1"><a href="https://github.com/hibernate/hibernate-orm/wiki/_pages">GitHub-hosted wiki</a></dt>
-<dd>
-<p>Wiki hosted at GitHub</p>
-</dd>
-<dt class="hdlist1"><a href="https://developer.jboss.org/en/hibernate">JBoss-Developer wiki</a></dt>
-<dd>
-<p>Old wiki hosted at JBoss.org. Mostly out-of-date content.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="presentations"><a class="anchor" href="#presentations"></a>Presentations</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>Brett did a few interesting presentations available on Slideshare:</p>
+<p>When we sign Maven artifacts of Hibernate libraries,
+we use a PGP key with the following fingerprint:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://www.slideshare.net/brmeyer/orm-jpa-hibernate-overview">Gentle introduction on ORMs and JPA</a></p>
-</li>
-<li>
-<p><a href="http://www.slideshare.net/brmeyer/hibernate-orm-performance-31550150">Hibernate ORM: tips, tricks and performance techniques</a></p>
-</li>
-<li>
-<p><a href="http://www.slideshare.net/brmeyer/hibernate-orm-features">Not Just ORM: Powerful Hibernate ORM Features and Capabilities</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If you are interested in <strong>Hibernate Performance Tuning</strong>, check out Vlad&#8217;s presentation:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.youtube.com/watch?v=BTdTEe9QL5k&amp;t=1s">Video</a></p>
-</li>
-<li>
-<p><a href="http://www.slideshare.net/VladMihalcea/high-performance-hibernate-devoxx-france">Slides</a></p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>894F 14D9 8D7F 20D5 E826  45E3 DFE1 0210 8BF9 381F</code></pre>
 </div>
 </div>
-</div>
-
 </div>
 
 </div>
@@ -875,13 +666,13 @@ Released under the
 <div class="three wide column">
 <h4 class="ui inverted header">Projects</h4>
 <div class="ui inverted link list">
-<a class="item" href="../.." title="Hibernate ORM">Hibernate ORM</a>
-<a class="item" href="../../../search" title="Hibernate Search">Hibernate Search</a>
-<a class="item" href="../../../validator" title="Hibernate Validator">Hibernate Validator</a>
-<a class="item" href="../../../ogm" title="Hibernate OGM">Hibernate OGM</a>
-<a class="item" href="../../../tools" title="Hibernate Tools">Hibernate Tools</a>
-<a class="item" href="../../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
-<a class="item" href="../../../others" title="Other projects">Other projects</a>
+<a class="item" href="../../orm" title="Hibernate ORM">Hibernate ORM</a>
+<a class="item" href="../../search" title="Hibernate Search">Hibernate Search</a>
+<a class="item" href="../../validator" title="Hibernate Validator">Hibernate Validator</a>
+<a class="item" href="../../ogm" title="Hibernate OGM">Hibernate OGM</a>
+<a class="item" href="../../tools" title="Hibernate Tools">Hibernate Tools</a>
+<a class="item" href="../../reactive" title="Hibernate Reactive">Hibernate Reactive</a>
+<a class="item" href="../../others" title="Other projects">Other projects</a>
 </div>
 </div>
 <div class="three wide column">
@@ -894,12 +685,12 @@ Released under the
 <div class="five wide column">
 <h4 class="ui inverted header">Contribute and community</h4>
 <div class="ui inverted link list">
-<a class="item" href="../../../community" title="Community resources">Community resources</a>
+<a class="item" href=".." title="Community resources">Community resources</a>
 <a class="item" href="https://github.com/hibernate/">Our GitHub organization</a>
 <a class="item" href="https://hibernate.atlassian.net/" title="Submit a bug">Submit a bug</a>
 <a class="item" href="https://discourse.hibernate.org/" title="Submit a bug">Our forums</a>
 <a class="item" href="https://access.redhat.com/security/team/contact/" title="Report a security issue">Report a security issue</a>
-<a class="item" href="../../../community/license" title="License">License</a>
+<a class="item" href="../license" title="License">License</a>
 </div>
 </div>
 <div class="five wide column sponsor">

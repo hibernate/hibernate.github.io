@@ -21,7 +21,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1642583386" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1643129894" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -472,6 +472,10 @@ Compatibility policy
 <i class="grid icon legal"></i>
 Licenses
 </a>
+<a class="item" href="/community/keys/">
+<i class="grid icon key"></i>
+Keys
+</a>
 <a class="item" href="/community/contribute/guidelines/">
 Contribute - Guidelines
 </a>
@@ -566,7 +570,7 @@ Hibernate Search
 <span>
 6.1 series
 </span>
-<span class="ui label tag orange">development</span>
+<span class="ui label tag green">stable</span>
 </h2>
 </div>
 <div class="column four wide middle aligned">
@@ -603,12 +607,10 @@ Overview
 <a class="item selected" href="/search/releases/6.1/">
 6.1
 &nbsp;&nbsp;
-<span class="ui label orange">development</span>
+<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/search/releases/6.0/">
 6.0
-&nbsp;&nbsp;
-<span class="ui label green">latest stable</span>
 </a>
 <a class="item" href="/search/releases/5.11/">
 5.11
@@ -759,7 +761,7 @@ Elasticsearch server
 <tr>
 <td>
 <a href="https://www.opensearch.org">
-OpenSearch
+OpenSearch server
 </a>
 </td>
 <td>
@@ -794,15 +796,15 @@ Compatibility policy.
 Documentation for this specific series can be accessed through the links below:
 </p>
 <p>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/">
 <i class="icon file text outline"></i>
 HTML
 </a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/pdf/hibernate_search_reference.pdf">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/pdf/hibernate_search_reference.pdf">
 <i class="icon file pdf outline"></i>
 PDF
 </a>
-<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/search/6.1/api/">
+<a class="ui right labeled icon button" href="https://docs.jboss.org/hibernate/stable/search/api/">
 <i class="icon code outline"></i>
 API (JavaDoc)
 </a>
@@ -833,7 +835,7 @@ on the JBoss Wiki for more information on how to configure the JBoss Maven repos
 <p>
 You can find the Maven coordinates of all artifacts through the link below:
 <p>
-<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.1.0.CR1">
+<a class="ui right labeled button primary icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.1.0.Final">
 <i class="icon cloud cubes"></i>
 Maven artifacts
 </a>
@@ -844,54 +846,60 @@ Below are the Maven coordinates of the main artifacts.
 </p>
 <dl class="sparse">
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-mapper-orm:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm:6.1.0.Final
 </a>
 </dt>
 <dd>Hibernate ORM mapper</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-coordination-outbox-polling%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-mapper-orm-coordination-outbox-polling:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-coordination-outbox-polling%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm-coordination-outbox-polling:6.1.0.Final
 </a>
 </dt>
 <dd>"outbox-polling" coordination strategy for the Hibernate ORM mapper</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-backend-lucene:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-lucene%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-backend-lucene:6.1.0.Final
 </a>
 </dt>
 <dd>Lucene backend</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-backend-elasticsearch:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-backend-elasticsearch:6.1.0.Final
 </a>
 </dt>
 <dd>Elasticsearch/OpenSearch backend</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch-aws%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-backend-elasticsearch-aws:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-backend-elasticsearch-aws%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-backend-elasticsearch-aws:6.1.0.Final
 </a>
 </dt>
 <dd>Amazon IAM authentication for Elasticsearch/OpenSearch</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-core%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-core:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-core%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-core:6.1.0.Final
 </a>
 </dt>
 <dd>Batch for Java (JSR-352) mass indexing job for the Hibernate ORM mapper - Core</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-jberet%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-jberet:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-mapper-orm-batch-jsr352-jberet%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-mapper-orm-batch-jsr352-jberet:6.1.0.Final
 </a>
 </dt>
 <dd>Batch for Java (JSR-352) mass indexing job for the Hibernate ORM mapper - JBeret specifics</dd>
 <dt>
-<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-v5migrationhelper-orm%7C6.1.0.CR1%7C">
-org.hibernate.search:hibernate-search-v5migrationhelper-orm:6.1.0.CR1
+<a class="ui label large blue" href="https://search.maven.org/#artifactdetails%7Corg.hibernate.search%7Chibernate-search-v5migrationhelper-orm%7C6.1.0.Final%7C">
+org.hibernate.search:hibernate-search-v5migrationhelper-orm:6.1.0.Final
 </a>
 </dt>
 <dd>Helper for migrating from Hibernate Search 5 to Hibernate Search 6 (Hibernate ORM mapper + Lucene backend)</dd>
 </dl>
+<p>
+To verify signed Maven artifacts, head to
+<a href="/community/keys/">
+this page.
+</a>
+</p>
 </div>
 <div class="five wide column divided">
 <h3>Zip archive</h3>
@@ -899,7 +907,7 @@ org.hibernate.search:hibernate-search-v5migrationhelper-orm:6.1.0.CR1
 Direct download is available from SourceForge:
 </p>
 <p>
-<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.1.0.CR1/hibernate-search-6.1.0.CR1-dist.zip/download" title="Download">
+<a class="ui right labeled button primary icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.1.0.Final/hibernate-search-6.1.0.Final-dist.zip/download" title="Download">
 <i class="icon cloud download"></i>
 Download Zip archive
 </a>
@@ -941,43 +949,15 @@ PDF
 </a>
 </p>
 <h2 id="whats-new">What's new</h2>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Hibernate Search 6.1 is still in development:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>some features may be incomplete;</p>
-</li>
-<li>
-<p>newly introduced features may change in a backward-incompatible way before the stable release.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>We encourage you to <a href="#get-it">give it a try</a> and to <a href="/community/">let us know</a>
-of any bugs or problems you encounter.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <p>
-Latest release announcement (2022-01-18):
-<a href="http://in.relation.to/2022/01/18/hibernate-search-6-1-0-CR1">
-6.1.0.CR1.
+Latest release announcement (2022-01-25):
+<a href="https://in.relation.to/2022/01/25/hibernate-search-6-1-0-Final">
+6.1.0.Final.
 </a>
 </p>
 <p>
 A detailed list of new features, improvements and fixes in this series can be found
-<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.1.0.CR1%2C%206.1.0.Beta2%2C%206.1.0.Beta1%2C%206.1.0.Alpha1)%20ORDER%20BY%20updated">
+<a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.1.0.Final%2C%206.1.0.CR1%2C%206.1.0.Beta2%2C%206.1.0.Beta1%2C%206.1.0.Alpha1)%20ORDER%20BY%20updated">
 on our issue tracker.
 </a>
 </p>
@@ -1008,7 +988,7 @@ on our issue tracker.
 <h3 id="async-indexing"><a class="anchor" href="#async-indexing"></a>Asynchronous, distributed automatic indexing</h3>
 <div class="paragraph">
 <p>While it&#8217;s technically possible to use Hibernate Search 6.0 and Elasticsearch in distributed applications,
-it suffers from a few <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#architecture-examples-no-coordination-elasticsearch-pros-and-cons">limitations</a>.</p>
+it suffers from a few <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#architecture-examples-no-coordination-elasticsearch-pros-and-cons">limitations</a>.</p>
 </div>
 <div class="paragraph">
 <p>The main goal of Hibernate Search 6.1 is to eliminate these limitations
@@ -1033,13 +1013,13 @@ which can improve the responsiveness of applications (less work to do on commit)
 </div>
 <div class="paragraph">
 <p>To learn more about an architecture based on <code>outbox-polling</code> coordination,
-head to <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#architecture-examples-outbox-polling-elasticsearch">this section of the documentation</a>.
-You can also get a quick overview of several architectures <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#architecture-examples-overview">here</a>.</p>
+head to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#architecture-examples-outbox-polling-elasticsearch">this section of the documentation</a>.
+You can also get a quick overview of several architectures <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#architecture-examples-overview">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>To jump right in and try the strategy,
 just set the following property
-(you will also need to <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#coordination-outbox-polling-schema">add tables to your database schema</a>):</p>
+(you will also need to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#coordination-outbox-polling-schema">add tables to your database schema</a>):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1047,7 +1027,7 @@ just set the following property
 </div>
 </div>
 <div class="paragraph">
-<p>Head to <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#coordination-outbox-polling">this section of the documentation</a>
+<p>Head to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#coordination-outbox-polling">this section of the documentation</a>
 for more information on how to configure coordination.</p>
 </div>
 <div class="admonitionblock note">
@@ -1084,7 +1064,7 @@ that you would have used with Elasticsearch.</p>
 </div>
 <div class="paragraph">
 <p>The only (minor) difference between using Elasticsearch and OpenSearch
-is if you <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#backend-elasticsearch-configuration-version">configure the Elasticsearch version explicitly</a>:
+is if you <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#backend-elasticsearch-configuration-version">configure the Elasticsearch version explicitly</a>:
 with OpenSearch, you need to prefix the version with <code>opensearch:</code>, e.g. <code>opensearch:1.0</code>.</p>
 </div>
 </div>
@@ -1092,7 +1072,7 @@ with OpenSearch, you need to prefix the version with <code>opensearch:</code>, e
 <h3 id="search-dsl"><a class="anchor" href="#search-dsl"></a>Search DSL improvements</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">New <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#search-dsl-predicate-terms"><code>terms</code> predicate</a></dt>
+<dt class="hdlist1">New <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-terms"><code>terms</code> predicate</a></dt>
 <dd>
 <p>Matches documents for which a given field contains some terms, any or all of them.</p>
 <div class="paragraph">
@@ -1104,7 +1084,7 @@ with OpenSearch, you need to prefix the version with <code>opensearch:</code>, e
 </div>
 </div>
 </dd>
-<dt class="hdlist1">New <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#search-dsl-predicate-regexp"><code>regexp</code> predicate</a></dt>
+<dt class="hdlist1">New <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-predicate-regexp"><code>regexp</code> predicate</a></dt>
 <dd>
 <p>Matches documents for which a given field contains a word matching the given regular expression.</p>
 <div class="listingblock">
@@ -1113,7 +1093,7 @@ with OpenSearch, you need to prefix the version with <code>opensearch:</code>, e
 </div>
 </div>
 </dd>
-<dt class="hdlist1">New <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#_id_return_identifiers_of_matched_entities"><code>id</code> projection</a></dt>
+<dt class="hdlist1">New <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#_id_return_identifiers_of_matched_entities"><code>id</code> projection</a></dt>
 <dd>
 <p>Returns the identifier of the matched entity.</p>
 <div class="listingblock">
@@ -1122,7 +1102,7 @@ with OpenSearch, you need to prefix the version with <code>opensearch:</code>, e
 </div>
 </div>
 </dd>
-<dt class="hdlist1"><a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#search-dsl-sort-common-missing">Configurable <code>.missing()</code> behavior</a> for <code>distance</code> sort</dt>
+<dt class="hdlist1"><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-sort-common-missing">Configurable <code>.missing()</code> behavior</a> for <code>distance</code> sort</dt>
 <dd>
 <p>Distance sorts now allow
 specifying the behavior when encountering documents with missing values
@@ -1133,7 +1113,7 @@ specifying the behavior when encountering documents with missing values
 </div>
 </div>
 </dd>
-<dt class="hdlist1"><a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#search-dsl-paths-relative">Relative field paths</a></dt>
+<dt class="hdlist1"><a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#search-dsl-paths-relative">Relative field paths</a></dt>
 <dd>
 <p>The Search DSL now allows creating factories (<code>SearchPredicateFactory</code>, etc.)
 that accept relative field paths.</p>
@@ -1153,7 +1133,7 @@ that accept relative field paths.</p>
 <h3 id="mass-indexing-filter"><a class="anchor" href="#mass-indexing-filter"></a>Conditional mass indexing</h3>
 <div class="paragraph">
 <p>Hibernate Search 6.1 introduces the ability
-to <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#mapper-orm-indexing-massindexer-conditional">apply the mass indexer to a subset of your entities</a>,
+to <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-indexing-massindexer-conditional">apply the mass indexer to a subset of your entities</a>,
 based on an HQL/JPQL "where" clause.</p>
 </div>
 <div class="listingblock">
@@ -1165,7 +1145,7 @@ based on an HQL/JPQL "where" clause.</p>
 <div class="sect2">
 <h3 id="named-predicates"><a class="anchor" href="#named-predicates"></a>Named predicates</h3>
 <div class="paragraph">
-<p>Hibernate Search 6.1 adds <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#mapper-orm-bridge-named-predicate">named predicates</a>,
+<p>Hibernate Search 6.1 adds <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#mapper-orm-bridge-named-predicate">named predicates</a>,
 a way to define the search logic as part of a custom binder/bridge.</p>
 </div>
 <div class="paragraph">
@@ -1177,7 +1157,7 @@ a way to define the search logic as part of a custom binder/bridge.</p>
 <h3 id="elasticsearch-custom-index-settings"><a class="anchor" href="#elasticsearch-custom-index-settings"></a>Custom ES index settings</h3>
 <div class="paragraph">
 <p>Starting with Hibernate Search 6.1,
-you can <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#_custom_index_settings">provide Hibernate Search with JSON files containing the desired settings of your indexes</a>,
+you can <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#_custom_index_settings">provide Hibernate Search with JSON files containing the desired settings of your indexes</a>,
 and Hibernate Search will automatically push these settings
 when it creates/updates the indexes.</p>
 </div>
@@ -1186,7 +1166,7 @@ when it creates/updates the indexes.</p>
 <h3 id="elasticsearch-custom-index-mapping"><a class="anchor" href="#elasticsearch-custom-index-mapping"></a>Custom ES index mapping</h3>
 <div class="paragraph">
 <p>Starting with Hibernate Search 6.1,
-you can <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#_custom_index_mapping">provide Hibernate Search with JSON files containing part of the desired mapping of your indexes</a>,
+you can <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#_custom_index_mapping">provide Hibernate Search with JSON files containing part of the desired mapping of your indexes</a>,
 and Hibernate Search will automatically merge this mapping with the one it generated,
 so that it gets pushed to Elasticsearch when it creates/updates the indexes.</p>
 </div>
@@ -1198,7 +1178,7 @@ for example <a href="https://www.elastic.co/guide/en/elasticsearch/reference/cur
 <div class="sect2">
 <h3 id="lucene-reader"><a class="anchor" href="#lucene-reader"></a>Access to Lucene&#8217;s <code>IndexReader</code></h3>
 <div class="paragraph">
-<p>Starting with Hibernate Search 6.1, you can now <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#_retrieving_a_lucene_indexreader">retrieve an <code>IndexReader</code></a>
+<p>Starting with Hibernate Search 6.1, you can now <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#_retrieving_a_lucene_indexreader">retrieve an <code>IndexReader</code></a>
 when using the Lucene backend:</p>
 </div>
 <div class="listingblock">
@@ -1215,7 +1195,7 @@ when using the Lucene backend:</p>
 <div class="paragraph">
 <p>Starting with version 6.1,
 Hibernate Search allows
-<a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#backend-lucene-search-caching">configuring the <code>QueryCache</code> and <code>QueryCachingPolicy</code></a>
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#backend-lucene-search-caching">configuring the <code>QueryCache</code> and <code>QueryCachingPolicy</code></a>
 in the Lucene backend,
 adding one more performance tweak for advanced Lucene users.</p>
 </div>
@@ -1225,7 +1205,7 @@ adding one more performance tweak for advanced Lucene users.</p>
 <div class="paragraph">
 <p>Starting with Hibernate Search 6.1,
 a <code>LuceneAnalysisConfigurer</code> can be implemented without referring to Lucene classes at all,
-<a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#backend-lucene-analysis-analyzers-component-by-factory-name">referring to tokenizers and filters using their name</a>
+<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#backend-lucene-analysis-analyzers-component-by-factory-name">referring to tokenizers and filters using their name</a>
 instead.</p>
 </div>
 <div class="paragraph">
@@ -1238,7 +1218,7 @@ but not to Lucene classes.</p>
 <div class="paragraph">
 <p>Starting with Hibernate Search 6.1,
 beside the traditional artifacts targeting Java EE (JPA, CDI, &#8230;&#8203;),
-Hibernate Search now provides <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#other-integrations-jakarta">alternative, experimental artifacts that target Jakarta EE 9.1</a>
+Hibernate Search now provides <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#other-integrations-jakarta">alternative, experimental artifacts that target Jakarta EE 9.1</a>
 (Jakarta Persistence 3, Jakarta CDI 3).</p>
 </div>
 <div class="paragraph">
@@ -1267,7 +1247,7 @@ still target Java EE.</p>
 <div class="paragraph">
 <p>Starting with Hibernate Search 6.1,
 beside the traditional artifacts targeting Hibernate ORM 5.x,
-Hibernate Search now provides <a href="https://docs.jboss.org/hibernate/search/6.1/reference/en-US/html_single/#other-integrations-orm6">alternative, experimental artifacts that target Hibernate ORM 6 and Jakarta EE 9.1</a>
+Hibernate Search now provides <a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#other-integrations-orm6">alternative, experimental artifacts that target Hibernate ORM 6 and Jakarta EE 9.1</a>
 (Jakarta Persistence 3, Jakarta CDI 3).</p>
 </div>
 <div class="paragraph">
@@ -1306,6 +1286,51 @@ that includes all the dependencies.</p>
 <div class="ui row">
 <div class="three wide column">
 <p>
+<span class="ui label version green">
+6.1.0.Final
+</span>
+</p>
+<p>
+<small class="ui label">2022-01-25</small>
+</p>
+</div>
+<div class="thirteen wide column">
+<p>
+Upgrade to Hibernate ORM 5.6.4.Final, small Jakarta EE compatibility improvements.
+</p>
+<p>
+<a class="ui small right labeled icon button" href="#get-it">
+<i class="level up alternate icon"></i>
+How to get it
+</a>
+<a class="ui small right labeled icon button" href="#getting_started">
+<i class="level up alternate icon"></i>
+Getting started
+</a>
+</p>
+<p>
+<a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.1.0.Final">
+<i class="icon cloud cubes"></i>
+Maven artifacts
+</a>
+<a class="ui small right labeled button icon" href="https://sourceforge.net/projects/hibernate/files/hibernate-search/6.1.0.Final/hibernate-search-6.1.0.Final-dist.zip/download">
+<i class="icon cloud download"></i>
+Download
+</a>
+<a class="ui small right labeled button icon" href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20in%20(6.1.0.Final)%20ORDER%20BY%20updated">
+<i class="icon bug"></i>
+Resolved issues
+</a>
+<a class="ui small right labeled button icon" href="https://in.relation.to/2022/01/25/hibernate-search-6-1-0-Final">
+<i class="icon announcement"></i>
+Release announcement
+</a>
+</p>
+</div>
+</div>
+<div class="ui row">
+<div class="three wide column">
+<p>
 <span class="ui label version orange">
 6.1.0.CR1
 </span>
@@ -1317,16 +1342,6 @@ that includes all the dependencies.</p>
 <div class="thirteen wide column">
 <p>
 Better defaults and optional operators for the regexp predicate, additional Maven artifacts compatible with Hibernate ORM 6, bugfixes.
-</p>
-<p>
-<a class="ui small right labeled icon button" href="#get-it">
-<i class="level up alternate icon"></i>
-How to get it
-</a>
-<a class="ui small right labeled icon button" href="#getting_started">
-<i class="level up alternate icon"></i>
-Getting started
-</a>
 </p>
 <p>
 <a class="ui small right labeled button icon" href="https://search.maven.org/#search%7Cga%7C1%7Cg%3Aorg.hibernate.search%20AND%20a%3Ahibernate-search-%2A%20AND%20v%3A6.1.0.CR1">
@@ -1341,7 +1356,7 @@ Download
 <i class="icon bug"></i>
 Resolved issues
 </a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2022/01/18/hibernate-search-6-1-0-CR1">
+<a class="ui small right labeled button icon" href="https://in.relation.to/2022/01/18/hibernate-search-6-1-0-CR1">
 <i class="icon announcement"></i>
 Release announcement
 </a>
@@ -1376,7 +1391,7 @@ Download
 <i class="icon bug"></i>
 Resolved issues
 </a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2022/01/05/hibernate-search-6-1-0-Beta2">
+<a class="ui small right labeled button icon" href="https://in.relation.to/2022/01/05/hibernate-search-6-1-0-Beta2">
 <i class="icon announcement"></i>
 Release announcement
 </a>
@@ -1411,7 +1426,7 @@ Download
 <i class="icon bug"></i>
 Resolved issues
 </a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2021/12/06/hibernate-search-6-1-0-Beta1">
+<a class="ui small right labeled button icon" href="https://in.relation.to/2021/12/06/hibernate-search-6-1-0-Beta1">
 <i class="icon announcement"></i>
 Release announcement
 </a>
@@ -1446,7 +1461,7 @@ Download
 <i class="icon bug"></i>
 Resolved issues
 </a>
-<a class="ui small right labeled button icon" href="http://in.relation.to/2021/09/10/hibernate-search-6-1-0-Alpha1">
+<a class="ui small right labeled button icon" href="https://in.relation.to/2021/09/10/hibernate-search-6-1-0-Alpha1">
 <i class="icon announcement"></i>
 Release announcement
 </a>
