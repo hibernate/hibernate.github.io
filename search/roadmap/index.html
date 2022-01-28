@@ -21,7 +21,7 @@ Advanced search API: full-text, geospatial, aggregations and more.
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1643307996" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1643372325" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -704,44 +704,11 @@ To learn more about what we introduced in our past releases, please consult the
 <div id="toc" class="toc">
 <div id="toctitle">Releases</div>
 <ul class="sectlevel1">
-<li><a href="#hibernate-search-6-1">Hibernate Search 6.1</a></li>
 <li><a href="#hibernate-search-6-2">Hibernate Search 6.2</a></li>
 <li><a href="#hibernate-search-6-3">Hibernate Search 6.3</a></li>
 <li><a href="#hibernate-search-6-4">Hibernate Search 6.4</a></li>
 <li><a href="#hibernate-search-6-x-or-later">Hibernate Search 6.x or later</a></li>
 </ul>
-</div>
-</div>
-<div class="sect1">
-<h2 id="hibernate-search-6-1"><a class="anchor" href="#hibernate-search-6-1"></a>Hibernate Search 6.1</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For a full list of issues currently planned for this series,
-see <a href="https://hibernate.atlassian.net/issues/?jql=project%20%3D%20HSEARCH%20AND%20fixVersion%20%3D%206.1-backlog%20ORDER%20BY%20created%20DESC">here</a>.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Restore the WildFly integration</dt>
-<dd>
-<p>The WildFly integration was removed in 6.0 to reduce the work load.
-We will restore it in 6.1.</p>
-</dd>
-<dt class="hdlist1">Safe, asynchronous, distributed automatic indexing for clustered applications</dt>
-<dd>
-<p>Hibernate Search 6.0 only allows single-node applications,
-or multi-node applications where each node works independently, simply sending events to an Elasticsearch cluster.</p>
-<div class="paragraph">
-<p>In rare cases where two concurrent transactions update different entities that affect the same index document,
-<a href="https://docs.jboss.org/hibernate/stable/search/reference/en-US/html_single/#limitations-parallel-embedded-update">this can lead to out-of-sync indexes</a>.</p>
-</div>
-<div class="paragraph">
-<p>Hibernate Search 6.1 will address this problem by introducing a way to coordinate automatic indexing
-between multiple application nodes.
-See <a href="https://hibernate.atlassian.net/browse/HSEARCH-3280">HSEARCH-3280</a>.</p>
-</div>
-</dd>
-</dl>
-</div>
 </div>
 </div>
 <div class="sect1">
