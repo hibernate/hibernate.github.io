@@ -19,7 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1644316539" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1644399360" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -729,7 +729,7 @@ Released under the
 <p>Do <strong>NOT</strong> update the changelog.txt and README.md, the release job does it for you.</p>
 </li>
 <li>
-<p>Go to CI, and select <a href="http://ci.hibernate.org/view/Validator/job/hibernate-validator-release/">the hibernate-validator-release job</a>. Click on Build with parameters.</p>
+<p>Go to CI, and select <a href="https://ci.hibernate.org/view/Validator/job/hibernate-validator-release/">the hibernate-validator-release job</a>. Click on Build with parameters.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -739,17 +739,14 @@ Released under the
 </div>
 </li>
 <li>
-<p>Release the artifacts on the JBoss Nexus repository manager. This is a two-steps process.</p>
+<p>Release the artifacts on the OSSRH repository manager. This is a two-steps process.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Log into <a href="https://repository.jboss.org/nexus/index.html">Nexus</a> and examine your <a href="https://repository.jboss.org/nexus/index.html#stagingRepositories">staging repository</a>. Click on the <code>Updated</code> column 2 times to have the repositories sorted correctly.</p>
+<p>Log into <a href="https://oss.sonatype.org/">OSSRH</a> and examine your <a href="https://oss.sonatype.org/#stagingRepositories">staging repository</a>.</p>
 </li>
 <li>
 <p>You can either <code>Drop</code> it in order to start over again or you can <code>Close</code> and <code>Release</code> it making the artifacts available in the live repository. (Click <code>Refresh</code> after each action)</p>
-</li>
-<li>
-<p>You can find more information in the description of <a href="https://developer.jboss.org/docs/DOC-14608">the JBoss project release process</a>. A Maven settings.xml for testing the artifacts in the staging repository can be found <a href="https://developer.jboss.org/wiki/MavenStagingSettings">here</a>.</p>
 </li>
 </ul>
 </div>
