@@ -19,7 +19,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1645516758" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1646067515" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -549,6 +549,7 @@ Follow us
 
 <script>
 var displayed_series = [];
+displayed_series.push('8.0');
 displayed_series.push('7.0');
 displayed_series.push('6.2');
 displayed_series.push('6.0');
@@ -592,6 +593,11 @@ Releases
 <div class="menu">
 <a class="item" href="/validator/releases/">
 Overview
+</a>
+<a class="item" href="/validator/releases/8.0/">
+8.0
+&nbsp;&nbsp;
+<span class="ui label orange">development</span>
 </a>
 <a class="item" href="/validator/releases/7.0/">
 7.0
@@ -666,6 +672,29 @@ Released under the
 <div class="sectionbody">
 <div class="paragraph">
 <p>This page contains everything you need to know when upgrading from one Hibernate Validator version to another.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="8-0-x"><a class="anchor" href="#8-0-x"></a>8.0.x</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="8-0-0-alpha1"><a class="anchor" href="#8-0-0-alpha1"></a>8.0.0.Alpha1</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Jakarta EE 10</p>
+</li>
+<li>
+<p>The EL implementation to use is now <code>org.glassfish.expressly:expressly</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span style="color:#070;font-weight:bold">&lt;dependency&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;groupId&gt;</span>org.glassfish.expressly<span style="color:#070;font-weight:bold">&lt;/groupId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;artifactId&gt;</span>expressly<span style="color:#070;font-weight:bold">&lt;/artifactId&gt;</span>&#x000A;   <span style="color:#070;font-weight:bold">&lt;version&gt;</span>5.0.0-M1<span style="color:#070;font-weight:bold">&lt;/version&gt;</span>&#x000A;<span style="color:#070;font-weight:bold">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
