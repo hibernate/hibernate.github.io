@@ -15,7 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1646914650" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1647428012" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -513,7 +513,6 @@ Follow us
 <div class="ui two column centered grid">
 <div class="column">
 <h2>Oh snap!</h2>
-<div class="dead-link">
 <div class="ui floating info icon message">
 <i class="icon hand paper"></i>
 <div class="content">
@@ -545,34 +544,9 @@ You can also fix the problem yourself by sending a pull request to this GitHub p
 .
 </p>
 </div>
-<div class="invalid-dtd" style="display:none;">
-<div class="ui floating info icon message">
-<i class="icon hand paper"></i>
-<div class="content">
-<div class="header">
-(Hand waving): This is not the page you are looking for!
-</div>
-<p>
-This DTD does not exist.
-</p>
-<p>
-For a list of available DTDs, see
-<a href="/dtd/">here.</a>
-</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-<script>
-  console.log(window.location.pathname)
-  if (/^\/dtd\/.*$/.test(window.location.pathname)) {
-    document.querySelector('.dead-link').style.display = 'none';
-    document.querySelector('.invalid-dtd').style.display = 'block';
-  }
-</script>
 
 <div class="ui inverted vertical footer segment print hidden">
 <div class="ui container">
