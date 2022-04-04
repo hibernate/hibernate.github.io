@@ -15,7 +15,7 @@
 <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.14/dist/semantic.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.7.1/slick/slick-theme.css" rel="stylesheet">
-<link href="/stylesheets/styles.css?t=1649053557" rel="stylesheet">
+<link href="/stylesheets/styles.css?t=1649086499" rel="stylesheet">
 <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
 <link href="https://static.jboss.org/hibernate/images/favicon.ico" rel="shortcut icon">
 <link href="https://static.jboss.org/hibernate/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
@@ -657,17 +657,17 @@ This page explains how Hibernate projects try to limit incompatible changes.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The API is the set of contracts exposed to the application. For example, <code>Session#save</code>.
-It is an interface for your application to interact with Hibernate.
+<p>The Application Programming Interface (API) is the set of contracts exposed to the application. For example, <code>Session#save</code>.
+It is an interface for your application to interact with a Hibernate library.
 This is code that we fully expect to be directly linked to your application bytecode by the compiler.</p>
 </li>
 <li>
-<p>An SPI is an "integration point" with Hibernate and the contracts needed to perform those integrations.
+<p>A Service Provider Interface (SPI) is an "integration point" with a Hibernate library and the contracts needed to perform those integrations.
 It is an interface for frameworks or third-party libraries (caching implementations, &#8230;&#8203;)
-to integrate with Hibernate.</p>
+to integrate with a Hibernate library.</p>
 </li>
 <li>
-<p>The internals are classes and code meant only for Hibernate usage internally.</p>
+<p>The internals are classes and code meant only for the Hibernate library&#8217;s usage internally.</p>
 </li>
 </ul>
 </div>
